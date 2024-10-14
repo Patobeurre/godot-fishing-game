@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtexun5ww3d2k"]
+
+[ext_resource type="PackedScene" uid="uid://xd5dbowxube6" path="res://models/Catchables/Fishes/clown_fish.glb" id="1_u4py6"]
+
+[node name="clown_fish" instance=ExtResource("1_u4py6")]
+
+[node name="clown_fish_merged" parent="." index="0"]
+transform = Transform3D(1.43407e-09, 0.0113969, 0.0219122, 4.72664e-10, 0.00375637, -0.066482, -0.02, 9.05975e-10, -2.31008e-16, -0.0484873, -0.0365539, 0)

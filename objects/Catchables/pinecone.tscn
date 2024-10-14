@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvlhd76utxlsa"]
+
+[ext_resource type="PackedScene" uid="uid://c6stgj0wpxe0i" path="res://models/Catchables/pinecone.glb" id="1_stjdx"]
+
+[node name="pinecone" instance=ExtResource("1_stjdx")]
+
+[node name="Cylinder_006" parent="." index="0"]
+transform = Transform3D(0.091, 0, 0, 0, 0.018, 0, 0, 0, 0.091, 0, -0.088983, 0)

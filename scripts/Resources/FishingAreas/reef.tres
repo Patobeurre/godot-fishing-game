@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=6 format=3 uid="uid://ckkxmebbhktu3"]
+
+[ext_resource type="Resource" uid="uid://c0d4soyvubcj0" path="res://scripts/Resources/Catchables/Fishes/TrueMussels.tres" id="1_l43c7"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_rlpfi"]
+[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="2_cja6n"]
+[ext_resource type="Resource" uid="uid://b6hwf8hmftnpf" path="res://scripts/Resources/Catchables/Anemone.tres" id="2_gbggg"]
+[ext_resource type="Resource" uid="uid://hgj47b8kfi7j" path="res://scripts/Resources/Catchables/Fishes/SeaUrchin.tres" id="4_tc14i"]
+
+[resource]
+script = ExtResource("2_cja6n")
+name = "Reef"
+type = 0
+waiting_time = 3.0
+catchables = Array[ExtResource("1_rlpfi")]([ExtResource("1_l43c7"), ExtResource("2_gbggg"), ExtResource("4_tc14i")])
+default_catchables = Array[ExtResource("1_rlpfi")]([ExtResource("1_l43c7")])

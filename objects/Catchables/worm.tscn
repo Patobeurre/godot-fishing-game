@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2fd3poip6bnf"]
+
+[ext_resource type="PackedScene" uid="uid://q3ruh068ojmi" path="res://models/Catchables/worm.glb" id="1_bc2t5"]
+
+[node name="worm" instance=ExtResource("1_bc2t5")]
+
+[node name="worm_merged" parent="." index="0"]
+transform = Transform3D(-0.015, 0.00672432, -0.0250955, 0, 0.0289778, 0.00776457, 0.0259808, 0.00388229, -0.0144889, 0.0170176, -0.0455141, 0.0168218)

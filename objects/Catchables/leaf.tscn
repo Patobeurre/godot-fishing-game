@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cowdm40mpv7ab"]
+
+[ext_resource type="PackedScene" uid="uid://le2fv11q5w4o" path="res://models/Catchables/leaf.glb" id="1_yif46"]
+[ext_resource type="Material" uid="uid://ccknb8mn645nw" path="res://materials/Material.066.tres" id="2_cq4n7"]
+
+[node name="leaf" instance=ExtResource("1_yif46")]
+
+[node name="leaf_merged" parent="." index="0"]
+transform = Transform3D(0.0469644, -0.0168523, -0.00844683, -0.0137644, -0.00556593, -0.0515446, 0.0228231, 0.0313213, -0.0137045, 0, 0, 0)
+material_override = ExtResource("2_cq4n7")

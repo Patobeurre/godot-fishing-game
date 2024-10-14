@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsbrgvalqqpsk"]
+
+[ext_resource type="PackedScene" uid="uid://cl0vnxoyo4vbl" path="res://models/Catchables/Fishes/pilchard.glb" id="1_cnkmw"]
+
+[node name="pilchard" instance=ExtResource("1_cnkmw")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="pilchard_merged" parent="." index="0"]
+transform = Transform3D(0.01, 2.62268e-10, -9.6165e-10, -4.37114e-10, 0.006, 1.11022e-16, 4.37114e-10, -1.62915e-17, 0.022, 0, -0.0339284, 0)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://duomkf5djv3gn"]
+
+[ext_resource type="PackedScene" uid="uid://fbvbe1hgs06p" path="res://models/Catchables/beetle.glb" id="1_c6agv"]
+
+[node name="beetle" instance=ExtResource("1_c6agv")]
+
+[node name="beetle_merged" parent="." index="0"]
+transform = Transform3D(-0.03, 0.03, 0.0424264, 0.0424264, 0.0424264, 9.14653e-10, -0.03, 0.03, -0.0424264, 0.0157096, -0.0269398, 0)

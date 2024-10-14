@@ -1,0 +1,140 @@
+[gd_scene load_steps=23 format=3 uid="uid://br5lsiu77q2dv"]
+
+[ext_resource type="Shader" uid="uid://mcfmtr4scwpq" path="res://materials/fire_shader.tres" id="1_y41uc"]
+[ext_resource type="Texture2D" uid="uid://bp5gw5mgprb0f" path="res://materials/GAP_Fire_Textures/Voronoi01.png" id="2_0ma78"]
+[ext_resource type="Texture2D" uid="uid://bqrqrntcjgd5q" path="res://materials/GAP_Fire_Textures/Flare00.PNG" id="3_1ngxc"]
+[ext_resource type="Texture2D" uid="uid://c0m7dgu1qw3g2" path="res://materials/GAP_Fire_Textures/Flame01.png" id="3_slnss"]
+[ext_resource type="Texture2D" uid="uid://bviyiiar7pp3c" path="res://materials/GAP_Fire_Textures/Flame02.png" id="4_6r0g5"]
+[ext_resource type="PackedScene" uid="uid://c2xklsnk575i1" path="res://objects/Decorations/campfire.tscn" id="6_qdndv"]
+[ext_resource type="AudioStream" uid="uid://cs287s216s0va" path="res://sounds/nature_fire_camp_fire_burn_sizzle_in_wind_11824.mp3" id="7_14fr4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ocpt3"]
+render_priority = 0
+shader = ExtResource("1_y41uc")
+shader_parameter/DissolveTiling = Vector2(1, 1)
+shader_parameter/DissolveSpeed = Vector2(0, 0)
+shader_parameter/DissolveAmount = 0.1
+shader_parameter/Texture2DParameter = ExtResource("3_1ngxc")
+shader_parameter/DissolveTexture = ExtResource("2_0ma78")
+
+[sub_resource type="Curve" id="Curve_wg0t8"]
+min_value = -200.0
+max_value = 200.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_43108"]
+curve = SubResource("Curve_wg0t8")
+
+[sub_resource type="Curve" id="Curve_j7wqo"]
+_data = [Vector2(0, 0.131868), 0.0, 0.0, 0, 0, Vector2(0.237668, 0.10989), 0.0, 0.0, 0, 0, Vector2(0.811659, 0.703297), 0.0, 0.0, 0, 0, Vector2(1, 0.912088), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_77fav"]
+curve = SubResource("Curve_j7wqo")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5clld"]
+emission_shape_offset = Vector3(0, 0.3, 0)
+emission_shape = 1
+emission_sphere_radius = 0.6
+angle_min = -360.0
+angle_max = 360.0
+gravity = Vector3(0, 5, 0)
+linear_accel_min = -54.83
+linear_accel_max = -54.83
+linear_accel_curve = SubResource("CurveTexture_43108")
+scale_max = 20.0
+scale_curve = SubResource("CurveTexture_77fav")
+color = Color(0.641934, 0.641934, 0.641934, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_oqnad"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_04h7t"]
+render_priority = 0
+shader = ExtResource("1_y41uc")
+shader_parameter/DissolveTiling = Vector2(0.25, 0.2)
+shader_parameter/DissolveSpeed = Vector2(0, 0.2)
+shader_parameter/DissolveAmount = 0.5
+shader_parameter/Texture2DParameter = ExtResource("3_slnss")
+shader_parameter/DissolveTexture = ExtResource("2_0ma78")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mwoq4"]
+gravity = Vector3(0, 0, 0)
+scale_min = 0.8
+scale_max = 0.8
+color = Color(4, 1.25, 0.6, 0.8)
+
+[sub_resource type="QuadMesh" id="QuadMesh_n7e16"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cr8ie"]
+render_priority = 0
+shader = ExtResource("1_y41uc")
+shader_parameter/DissolveTiling = Vector2(1, 1)
+shader_parameter/DissolveSpeed = Vector2(0, 0)
+shader_parameter/DissolveAmount = 0.1
+shader_parameter/Texture2DParameter = ExtResource("4_6r0g5")
+shader_parameter/DissolveTexture = ExtResource("2_0ma78")
+
+[sub_resource type="Curve" id="Curve_x532p"]
+_data = [Vector2(0.0044843, 0.175824), 0.0, 0.0, 0, 0, Vector2(0.246637, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0924736, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_k6i57"]
+curve = SubResource("Curve_x532p")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qtdc4"]
+emission_shape = 1
+emission_sphere_radius = 0.2
+angle_min = -360.0
+angle_max = 360.0
+gravity = Vector3(0, 3, 0)
+scale_min = 0.75
+scale_max = 1.5
+scale_curve = SubResource("CurveTexture_k6i57")
+color = Color(4, 1.5, 0.6, 0.8)
+
+[sub_resource type="QuadMesh" id="QuadMesh_mrqh5"]
+
+[node name="Fireplace" type="Node3D"]
+
+[node name="GPUParticles3D3" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.114947, 0)
+visible = false
+material_override = SubResource("ShaderMaterial_ocpt3")
+amount = 50
+lifetime = 3.0
+process_material = SubResource("ParticleProcessMaterial_5clld")
+draw_pass_1 = SubResource("QuadMesh_oqnad")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.276002, 0)
+layers = 2
+material_override = SubResource("ShaderMaterial_04h7t")
+amount = 1
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_mwoq4")
+draw_pass_1 = SubResource("QuadMesh_n7e16")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.114947, 0)
+material_override = SubResource("ShaderMaterial_cr8ie")
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_qtdc4")
+draw_pass_1 = SubResource("QuadMesh_mrqh5")
+
+[node name="campfire" parent="." instance=ExtResource("6_qdndv")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+light_color = Color(0.961718, 0.844057, 0.70427, 1)
+light_energy = 1.5
+light_specular = 0.2
+omni_range = 15.7312
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.459607, 0)
+stream = ExtResource("7_14fr4")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ccknb8mn645nw"]
+
+[ext_resource type="Texture2D" uid="uid://bakwh3gcl7pj6" path="res://materials/leaf_palette_v2.png" id="1_28hjr"]
+
+[resource]
+resource_name = "Material.066"
+cull_mode = 2
+albedo_texture = ExtResource("1_28hjr")

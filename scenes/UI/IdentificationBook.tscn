@@ -1,0 +1,77 @@
+[gd_scene load_steps=13 format=3 uid="uid://cnn40g63c2lde"]
+
+[ext_resource type="Script" path="res://scripts/UI/IdentificationBook.gd" id="1_3yd6e"]
+[ext_resource type="Texture2D" uid="uid://d0vhrkrd8i2uf" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-default.png" id="1_gtpcw"]
+[ext_resource type="Resource" uid="uid://bbo73vrpgv0wm" path="res://scripts/Resources/Identification/AnglerFish_ident.tres" id="2_i61st"]
+[ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="2_qybtt"]
+[ext_resource type="Resource" uid="uid://b6d0x1ipbejk4" path="res://scripts/Resources/Identification/Pilchard_ident.tres" id="3_1tal6"]
+[ext_resource type="PackedScene" uid="uid://c3gj6w6ybputg" path="res://objects/UI/book_page.tscn" id="3_31ef6"]
+[ext_resource type="Resource" uid="uid://cd6t38lg7vmoq" path="res://scripts/Resources/Identification/Eel_ident.tres" id="5_ramxg"]
+[ext_resource type="Resource" uid="uid://cmwcaxgyrha02" path="res://scripts/Resources/Identification/SmallFish_ident.tres" id="6_e0a3g"]
+[ext_resource type="Texture2D" uid="uid://d2odgxvvgxhvc" path="res://sprites/UI/letter_background.png" id="8_pu78d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjm21"]
+atlas = ExtResource("1_gtpcw")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eqflp"]
+texture = ExtResource("8_pu78d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f5dkw"]
+texture = ExtResource("8_pu78d")
+
+[node name="IdentificationBook" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3yd6e")
+entries = Array[ExtResource("2_qybtt")]([ExtResource("2_i61st"), ExtResource("3_1tal6"), ExtResource("5_ramxg"), ExtResource("6_e0a3g")])
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 130
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 130
+theme_override_constants/margin_bottom = 50
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_tjm21")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="PageLeft" type="Panel" parent="MarginContainer/MarginContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_eqflp")
+
+[node name="MarginContainer" parent="MarginContainer/MarginContainer/HSplitContainer/PageLeft" instance=ExtResource("3_31ef6")]
+layout_mode = 1
+
+[node name="PanelRight" type="Panel" parent="MarginContainer/MarginContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_f5dkw")

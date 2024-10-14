@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=10 format=3 uid="uid://dpdrl0ohcty7k"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_57rtu"]
+[ext_resource type="Resource" uid="uid://cdinhdv0bl53j" path="res://scripts/Resources/Catchables/Fishes/Shark.tres" id="1_qhseq"]
+[ext_resource type="Resource" uid="uid://l45j43d051lt" path="res://scripts/Resources/Catchables/Fishes/Squid.tres" id="2_nxbdl"]
+[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="2_u228g"]
+[ext_resource type="Resource" uid="uid://d2eanu31fp0x0" path="res://scripts/Resources/Catchables/Fishes/CommonFish.tres" id="3_hjill"]
+[ext_resource type="Resource" uid="uid://bm5o061am665" path="res://scripts/Resources/Catchables/Fishes/Pilchard.tres" id="4_kct0i"]
+[ext_resource type="Resource" uid="uid://bq7rfd0awtdhf" path="res://scripts/Resources/Catchables/Fishes/HammerShark.tres" id="5_ljdqa"]
+[ext_resource type="Resource" uid="uid://c0nhg67lt4noa" path="res://scripts/Resources/Catchables/Fishes/Whale.tres" id="7_hc7po"]
+[ext_resource type="Resource" uid="uid://ctotryrf5kh4e" path="res://scripts/Resources/Catchables/Fishes/JellyFish.tres" id="8_ibjr0"]
+
+[resource]
+script = ExtResource("2_u228g")
+name = "Deep Water"
+type = 1
+waiting_time = 3.0
+catchables = Array[ExtResource("1_57rtu")]([ExtResource("4_kct0i"), ExtResource("1_qhseq"), ExtResource("2_nxbdl"), ExtResource("3_hjill"), ExtResource("5_ljdqa"), ExtResource("7_hc7po"), ExtResource("8_ibjr0")])
+default_catchables = Array[ExtResource("1_57rtu")]([ExtResource("4_kct0i"), ExtResource("3_hjill")])

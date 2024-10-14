@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=5 format=3 uid="uid://btttncot63v31"]
+
+[ext_resource type="Texture2D" uid="uid://b4yfgmnag1afs" path="res://sprites/Catchables/Fishes/pike.png" id="1_fgdvl"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_qccg5"]
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_y31sx"]
+[ext_resource type="PackedScene" uid="uid://cit17jjrveyip" path="res://objects/Catchables/Fishes/pike.tscn" id="3_8ibe2"]
+
+[resource]
+script = ExtResource("1_qccg5")
+id = 17
+name = "Pike"
+description = "Carnivore that eat fishes smaller than him"
+notification_text = ""
+category = ExtResource("1_y31sx")
+tags = Array[int]([0, 2])
+image = ExtResource("1_fgdvl")
+scene = ExtResource("3_8ibe2")
+rarity = 30
+periods = Array[int]([0, 2])
+lures = Array[ExtResource("1_qccg5")]([])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([1, 4])

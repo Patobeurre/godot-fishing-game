@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=3 format=3 uid="uid://byqduaysqjavb"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_5cece"]
+[ext_resource type="Resource" uid="uid://bspir8uukoq7r" path="res://scripts/Resources/Categories/None.tres" id="1_iosha"]
+
+[resource]
+script = ExtResource("1_5cece")
+id = 0
+name = ""
+description = ""
+notification_text = ""
+category = ExtResource("1_iosha")
+tags = Array[int]([])
+rarity = 0
+periods = Array[int]([])
+lures = Array[ExtResource("1_5cece")]([])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([])

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://72tnl0umfs1r"]
+
+[ext_resource type="PackedScene" uid="uid://bo46254rv1a8b" path="res://models/Catchables/Fishes/shark.glb" id="1_m7xuj"]
+
+[node name="shark" instance=ExtResource("1_m7xuj")]
+
+[node name="fins_002" parent="." index="0"]
+transform = Transform3D(1.95646e-10, -0.00559481, 0.10299, -0.012, -6.5567e-10, 0, 4.86684e-10, -0.0139175, -0.0414018, -0.0593159, -0.120717, 0.038609)

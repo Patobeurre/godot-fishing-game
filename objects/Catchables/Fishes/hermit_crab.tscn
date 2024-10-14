@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://sydd3xkoqodj"]
+
+[ext_resource type="PackedScene" uid="uid://cohcqftm3x581" path="res://models/Catchables/Fishes/hermit_crab.glb" id="1_ssxg0"]
+
+[node name="hermit_crab" instance=ExtResource("1_ssxg0")]
+
+[node name="hermit_crab_merged" parent="." index="0"]
+transform = Transform3D(-1.74846e-09, 0, 0.04, 0, 0.034, 0, -0.04, 0, -1.74846e-09, -0.00553589, -0.00492233, 0.0232941)

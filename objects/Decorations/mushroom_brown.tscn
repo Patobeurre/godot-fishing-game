@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://1d26kh3wjujg"]
+
+[ext_resource type="PackedScene" uid="uid://d0087xii5ostn" path="res://models/Decorations/mushroom_brown.glb" id="1_58eo4"]
+[ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_xqo7m"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="3_1qs3i"]
+[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="4_od56i"]
+
+[sub_resource type="Resource" id="Resource_sf7cc"]
+script = ExtResource("4_od56i")
+name = "Mushrooms"
+waiting_time = 3.0
+catchables = Array[ExtResource("3_1qs3i")]([])
+
+[node name="mushroom_brown" instance=ExtResource("1_58eo4")]
+
+[node name="StaticBody3D" parent="Circle_006" index="0"]
+collision_layer = 4096
+collision_mask = 256
+script = ExtResource("2_xqo7m")
+fishTable = SubResource("Resource_sf7cc")

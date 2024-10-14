@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ov6nyr54t5gr"]
+
+[ext_resource type="PackedScene" uid="uid://r0lbjis1ivu4" path="res://models/Catchables/Fishes/jellyfish_robe.glb" id="1_u4h8u"]
+
+[node name="jellyfish_robe" instance=ExtResource("1_u4h8u")]
+
+[node name="jellyfish_robe_merged" parent="." index="0"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.0454945, 0)

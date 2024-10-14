@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=4 format=3 uid="uid://bn2lquxvu2uek"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_5pw0i"]
+[ext_resource type="Resource" uid="uid://bspir8uukoq7r" path="res://scripts/Resources/Categories/None.tres" id="1_kumjs"]
+[ext_resource type="PackedScene" uid="uid://c2kkralv56v04" path="res://objects/Catchables/lure.tscn" id="3_yy1dk"]
+
+[resource]
+script = ExtResource("1_5pw0i")
+id = 4
+name = "Lure"
+description = ""
+notification_text = ""
+category = ExtResource("1_kumjs")
+tags = Array[int]([])
+scene = ExtResource("3_yy1dk")
+rarity = 0
+periods = Array[int]([])
+lures = Array[ExtResource("1_5pw0i")]([])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([])

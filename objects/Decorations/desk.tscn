@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://ug82iwvm6vr"]
+
+[ext_resource type="PackedScene" uid="uid://b2vkut58qg3jf" path="res://models/Decorations/desk.glb" id="1_fehh8"]
+
+[node name="desk" instance=ExtResource("1_fehh8")]
+
+[node name="Cube_022" parent="." index="1"]
+layers = 1025
+
+[node name="Cube_077" parent="." index="2"]
+layers = 1025
+
+[node name="Cube_125" parent="." index="5"]
+layers = 1025
+
+[node name="Cube_126" parent="." index="6"]
+layers = 1025
+
+[node name="Cube_127" parent="." index="7"]
+layers = 1025

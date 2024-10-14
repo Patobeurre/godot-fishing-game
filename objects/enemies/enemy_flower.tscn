@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://i8r3w3yug1n4"]
+
+[ext_resource type="PackedScene" uid="uid://cgtnphnrnow2r" path="res://objects/enemies/test_anim.tscn" id="1_cpxps"]
+[ext_resource type="Script" path="res://scripts/enemy_flower.gd" id="1_y1f5t"]
+[ext_resource type="Material" uid="uid://mi4biohw11xn" path="res://materials/digit.tres" id="3_16uc4"]
+[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_vks5n"]
+[ext_resource type="Script" path="res://scripts/EnnemySM/DefaultState.gd" id="5_e5mpk"]
+[ext_resource type="Script" path="res://scripts/EnnemySM/AttackShootState.gd" id="6_6cbm0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hsmtb"]
+size = Vector3(0.359131, 1, 0.370392)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fuep1"]
+
+[node name="EnemyFlower" type="CharacterBody3D"]
+collision_layer = 32
+script = ExtResource("1_y1f5t")
+life = 200.0
+
+[node name="BaseMesh" parent="." instance=ExtResource("1_cpxps")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00524902, 0.454192, 0.00117493)
+shape = SubResource("BoxShape3D_hsmtb")
+
+[node name="StairSystem" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="RayCastFwd" type="RayCast3D" parent="StairSystem"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.05, -0.2)
+target_position = Vector3(0, -0.2, 0)
+debug_shape_custom_color = Color(0.835294, 0, 0.835294, 1)
+
+[node name="RayCastDown" type="RayCast3D" parent="StairSystem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.4)
+hit_from_inside = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StairSystem"]
+transform = Transform3D(0.063373, 0, 0, 0, 0.0596167, 0, 0, 0, 0.42352, 1.74846e-08, 0.044223, -0.2)
+material_override = ExtResource("3_16uc4")
+mesh = SubResource("BoxMesh_fuep1")
+
+[node name="BulletSpawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="FiniteStateMachine" type="Node" parent="."]
+script = ExtResource("4_vks5n")
+
+[node name="DefaultState" type="Node" parent="." node_paths=PackedStringArray("parent")]
+script = ExtResource("5_e5mpk")
+parent = NodePath("..")
+
+[node name="AttackState" type="Node" parent="." node_paths=PackedStringArray("parent")]
+script = ExtResource("6_6cbm0")
+parent = NodePath("..")
+
+[node name="AttackCD" type="Timer" parent="AttackState"]
+
+[connection signal="timeout" from="AttackState/AttackCD" to="AttackState" method="_on_attack_cd_timeout"]

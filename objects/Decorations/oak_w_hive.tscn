@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0htpimwul3ex"]
+
+[ext_resource type="PackedScene" uid="uid://bfx6epnty8fhg" path="res://objects/Decorations/oak.tscn" id="1_u0ebv"]
+[ext_resource type="PackedScene" uid="uid://dijroswt2q5ye" path="res://objects/Decorations/hive.tscn" id="2_jp8wn"]
+
+[node name="OakWHive" type="Node3D"]
+
+[node name="oak" parent="." instance=ExtResource("1_u0ebv")]
+
+[node name="hive" parent="." instance=ExtResource("2_jp8wn")]
+transform = Transform3D(1.04611, 0, -5.9081, 0, 6, 0, 5.9081, 0, 1.04611, 4.21817, 12.0096, -0.081049)

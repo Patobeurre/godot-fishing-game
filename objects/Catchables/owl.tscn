@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://conh8juoubpfq"]
+
+[ext_resource type="PackedScene" uid="uid://c885px4ovww1n" path="res://models/Catchables/owl.glb" id="1_es0iu"]
+
+[node name="owl" instance=ExtResource("1_es0iu")]
+
+[node name="owl_merged" parent="." index="0"]
+transform = Transform3D(0.4, 0, 4.26326e-14, 0, 0.332, 0, 1.06581e-14, 0, 0.332, 0.000962071, -0.283649, -0.0309764)

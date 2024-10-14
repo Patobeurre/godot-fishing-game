@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FlyerRes" load_steps=4 format=3 uid="uid://548cjswx7dc5"]
+
+[ext_resource type="Texture2D" uid="uid://caww7l41t6pvk" path="res://sprites/photo_cave_entrance.png" id="1_jg1rr"]
+[ext_resource type="Script" path="res://scripts/Resources/Documents/Flyer.gd" id="1_kg80y"]
+[ext_resource type="PackedScene" uid="uid://b0ogy101lbpfp" path="res://objects/UI/DocumentFlyer.tscn" id="2_ddlko"]
+
+[resource]
+script = ExtResource("1_kg80y")
+image = ExtResource("1_jg1rr")
+receive_day_count = 0
+scene = ExtResource("2_ddlko")

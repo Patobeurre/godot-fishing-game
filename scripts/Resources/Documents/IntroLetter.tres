@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="LetterRes" load_steps=3 format=3 uid="uid://bo50jorenpkf2"]
+
+[ext_resource type="Script" path="res://scripts/Resources/Documents/Letter.gd" id="1_80u43"]
+[ext_resource type="PackedScene" uid="uid://b6qea5cm4ewui" path="res://objects/UI/DocumentLetter.tscn" id="1_wfdcd"]
+
+[resource]
+script = ExtResource("1_80u43")
+header = "Welcome,"
+body = "I left you a long time ago, so you must have grown up a lot...
+This shelter is all I have left. I leave it to you.
+
+I've left you my fishing equipment in the cabin. It looks simple, but you'll be amazed at what it has to offer.
+
+I hope you enjoy this place os much as I do."
+footer = "Suzan"
+receive_day_count = 1
+scene = ExtResource("1_wfdcd")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dy2tqikphmkm5"]
+
+[ext_resource type="PackedScene" uid="uid://dwqe8ni7k35o6" path="res://models/Catchables/stick.glb" id="1_a80cw"]
+[ext_resource type="Material" uid="uid://ccknb8mn645nw" path="res://materials/Material.066.tres" id="2_cysfn"]
+
+[node name="stick" instance=ExtResource("1_a80cw")]
+
+[node name="stick_merged" parent="." index="0"]
+transform = Transform3D(0.0654571, -0.0593004, -0.0468915, -0.0377917, 0.0280532, -0.0882315, 0.0654763, 0.075475, -0.00404778, 0, -0.0299858, 0)
+material_override = ExtResource("2_cysfn")

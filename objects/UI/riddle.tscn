@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://g3b7dqstwc11"]
+
+[node name="Riddle" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1080.0
+offset_bottom = -520.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 2
+text = "C koi le chiffre avant 152 é apré 150 ?"

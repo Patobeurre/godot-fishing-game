@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnfmmuc36bstu"]
+
+[ext_resource type="PackedScene" uid="uid://d4nf5r8hqch1v" path="res://models/Catchables/Fishes/eel.glb" id="1_6er68"]
+
+[node name="eel" instance=ExtResource("1_6er68")]
+
+[node name="eel_merged" parent="." index="0"]
+transform = Transform3D(0.0146777, 0, -0.00309307, 0, 0.015, 0, 0.00309307, 0, 0.0146777, -0.0201344, -0.0963051, -0.0112514)

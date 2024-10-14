@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2kkralv56v04"]
+
+[ext_resource type="PackedScene" uid="uid://dyej7r4fpv01r" path="res://models/Catchables/lure.glb" id="1_727as"]
+
+[node name="lure" instance=ExtResource("1_727as")]
+
+[node name="lure_merged" parent="." index="0"]
+transform = Transform3D(0.13, 0, 0, 0, -5.68248e-09, 0.1, 0, -0.13, -4.37114e-09, 0, 0.000239717, 0)

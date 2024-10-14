@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwvo1g5miuqq0"]
+
+[ext_resource type="PackedScene" uid="uid://dxw8b8rl86n3r" path="res://models/Catchables/Fishes/sole.glb" id="1_te34s"]
+
+[node name="sole" instance=ExtResource("1_te34s")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0, 0, 0)
+
+[node name="fin_tail_001" parent="." index="0"]
+transform = Transform3D(0.0347329, -0.035967, -1.57217e-09, 0, -2.18557e-09, 0.05, -0.035967, -0.0347329, -1.51822e-09, 0, -0.17225, 0)

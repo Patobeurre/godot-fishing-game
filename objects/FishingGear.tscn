@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7ypwv6eb2jgw"]
+
+[ext_resource type="PackedScene" uid="uid://bxvv5ubkh10vp" path="res://models/bobber.glb" id="1_r66k0"]
+[ext_resource type="Script" path="res://scripts/fishing_gear.gd" id="1_yaurb"]
+[ext_resource type="Script" path="res://scripts/Interactable.gd" id="2_5ykev"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hqj45"]
+top_radius = 0.2
+bottom_radius = 0.2
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4xjmu"]
+radius = 0.6
+
+[node name="FishingGear" type="Node3D"]
+script = ExtResource("1_yaurb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.981121, 0.193395, 0, -0.193395, 0.981121, 0, 0.942775, 0.0702389)
+layers = 1025
+mesh = SubResource("CylinderMesh_hqj45")
+
+[node name="bobber" parent="." instance=ExtResource("1_r66k0")]
+transform = Transform3D(0.0819464, -0.283051, -0.955598, 0.387445, 0.892451, -0.231121, 0.918243, -0.351302, 0.1828, 0.494066, 0.307686, -0.0870139)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("2_5ykev")
+interact_text = "Pick up"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_4xjmu")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://0ontd173otm6"]
+
+[ext_resource type="PackedScene" uid="uid://c15enqwea7mpl" path="res://models/Catchables/true_mussels.glb" id="1_ne8bq"]
+
+[node name="true_mussels" instance=ExtResource("1_ne8bq")]
+
+[node name="moule_merged" parent="." index="0"]
+transform = Transform3D(0.00188292, -0.00100766, -0.0385639, -0.000227937, 0.0109503, -0.00366279, 0.0158872, 0.000276531, 0.00451798, -0.000779703, -0.00240019, -0.00156438)

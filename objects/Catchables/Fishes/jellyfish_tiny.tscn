@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://de63h5pvd50wq"]
+
+[ext_resource type="PackedScene" uid="uid://cle8pwwvawkdi" path="res://models/Catchables/Fishes/jellyfish_tiny.glb" id="1_wblxj"]
+
+[node name="jellyfish_tiny" instance=ExtResource("1_wblxj")]
+
+[node name="eye_shaded_016" parent="." index="0"]
+transform = Transform3D(-0.00706924, -0.00234678, 0.0130199, 0.00246417, 0.0142702, 0.00391007, -0.0129982, 0.00398163, -0.00633979, 0, -0.0320174, 0)

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://bm5o061am665"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_1bo17"]
+[ext_resource type="Texture2D" uid="uid://dfpo70coavqrx" path="res://sprites/Catchables/Fishes/pilchard.png" id="1_mhj16"]
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_myciu"]
+[ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="2_tbyv1"]
+[ext_resource type="PackedScene" uid="uid://dsbrgvalqqpsk" path="res://objects/Catchables/Fishes/pilchard.tscn" id="3_j2y2r"]
+
+[resource]
+script = ExtResource("1_1bo17")
+id = 23
+name = "Pilchard"
+description = "A really small fish. Common off the coasts."
+notification_text = ""
+category = ExtResource("1_myciu")
+tags = Array[int]([0, 1])
+image = ExtResource("1_mhj16")
+scene = ExtResource("3_j2y2r")
+rarity = 50
+periods = Array[int]([0, 1])
+lures = Array[ExtResource("1_1bo17")]([ExtResource("2_tbyv1")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([])

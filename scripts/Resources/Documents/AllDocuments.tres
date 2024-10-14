@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DocumentList" load_steps=6 format=3 uid="uid://qxf3v1qqjnw4"]
+
+[ext_resource type="Script" path="res://scripts/Resources/Documents/document.gd" id="1_2y5c5"]
+[ext_resource type="Script" path="res://scripts/Resources/all_documents.gd" id="1_4i1ue"]
+[ext_resource type="Resource" uid="uid://bo50jorenpkf2" path="res://scripts/Resources/Documents/IntroLetter.tres" id="2_7u6pm"]
+[ext_resource type="Resource" uid="uid://csb2wkhc88ges" path="res://scripts/Resources/Documents/NewProductFlyer.tres" id="3_pktf2"]
+[ext_resource type="Resource" uid="uid://c1tgk0rtylpqb" path="res://scripts/Resources/Documents/ConstructFlyer.tres" id="4_t881s"]
+
+[resource]
+script = ExtResource("1_4i1ue")
+document_list = Array[ExtResource("1_2y5c5")]([ExtResource("2_7u6pm"), ExtResource("3_pktf2"), ExtResource("4_t881s")])

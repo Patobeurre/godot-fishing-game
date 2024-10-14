@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://bcpyooewpt3g4"]
+
+[ext_resource type="Resource" uid="uid://eqi3uvm17to0" path="res://scripts/Resources/Categories/Insects.tres" id="1_gtbpy"]
+[ext_resource type="Texture2D" uid="uid://lueugsh6b6xw" path="res://sprites/Catchables/beetle.png" id="1_v7ge4"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_ysf08"]
+[ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="2_tj4gb"]
+[ext_resource type="PackedScene" uid="uid://duomkf5djv3gn" path="res://objects/Catchables/beetle.tscn" id="3_tdkou"]
+
+[resource]
+script = ExtResource("1_ysf08")
+id = 16
+name = "Beetle"
+description = ""
+notification_text = ""
+category = ExtResource("1_gtbpy")
+tags = Array[int]([4])
+image = ExtResource("1_v7ge4")
+scene = ExtResource("3_tdkou")
+rarity = 50
+periods = Array[int]([0, 1])
+lures = Array[ExtResource("1_ysf08")]([ExtResource("2_tj4gb")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([])

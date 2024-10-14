@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://dijroswt2q5ye"]
+
+[ext_resource type="PackedScene" uid="uid://btrfwnl0ddo6x" path="res://models/Decorations/hive.glb" id="1_xk8os"]
+[ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_rjd8w"]
+[ext_resource type="Resource" uid="uid://dkp5120ceyl7j" path="res://scripts/Resources/FishingAreas/hive.tres" id="3_q6shh"]
+
+[node name="hive" instance=ExtResource("1_xk8os")]
+
+[node name="StaticBody3D" parent="Cylinder_018" index="0"]
+script = ExtResource("2_rjd8w")
+fishTable = ExtResource("3_q6shh")

@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://l10vodvfwbn3"]
+
+[ext_resource type="PackedScene" uid="uid://632hi1oildxm" path="res://scenes/Tile_center_scene.tscn" id="2_d0yyu"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="5_sagce"]
+[ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="6_hm6hh"]
+[ext_resource type="Script" path="res://addons/DragDrop3D/Draggable.gd" id="6_rmtk4"]
+[ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="7_fmdk6"]
+[ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="10_u6ks1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tlheh"]
+font = ExtResource("7_fmdk6")
+font_size = 36
+outline_size = 12
+outline_color = Color(0, 0, 0, 0.470588)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kjkli"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sj7ri"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="TileCenterScene" parent="." instance=ExtResource("2_d0yyu")]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("5_sagce")
+
+[node name="Crosshair" type="TextureRect" parent="HUD"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("6_hm6hh")
+
+[node name="Health" type="Label" parent="HUD"]
+offset_left = 48.0
+offset_top = 627.0
+offset_right = 138.0
+offset_bottom = 672.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "100%"
+label_settings = SubResource("LabelSettings_tlheh")
+vertical_alignment = 2
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 5)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.943252, -0.297753, 0.147036, 0, 0.442774, 0.896633, -0.332079, -0.845751, 0.417647, 0, 8.81977, 0)
+light_color = Color(1, 0.972549, 0.803922, 1)
+light_energy = 0.8
+shadow_enabled = true
+shadow_bias = 0.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("10_u6ks1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 2)
+mesh = SubResource("BoxMesh_kjkli")
+skeleton = NodePath("")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D"]
+
+[node name="Draggable" type="Node" parent="MeshInstance3D/Area3D"]
+script = ExtResource("6_rmtk4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
+shape = SubResource("ConcavePolygonShape3D_sj7ri")

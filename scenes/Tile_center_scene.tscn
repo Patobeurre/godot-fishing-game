@@ -1,0 +1,102 @@
+[gd_scene load_steps=6 format=3 uid="uid://632hi1oildxm"]
+
+[ext_resource type="Script" path="res://scripts/Tile.gd" id="1_8kb67"]
+[ext_resource type="PackedScene" uid="uid://bc38f8x45kglo" path="res://models/Decorations/path_rocks.glb" id="3_628p1"]
+[ext_resource type="PackedScene" uid="uid://dphlxn03hhh1k" path="res://objects/Tiles/Base meshes/tile_base_fountain.tscn" id="4_1p2j2"]
+[ext_resource type="PackedScene" uid="uid://cqg071ykeo6d5" path="res://models/Decorations/bush_straight.glb" id="4_d8cla"]
+[ext_resource type="PackedScene" uid="uid://b107s8upaxuxk" path="res://models/Decorations/tile_center_deco.glb" id="5_jpsa8"]
+
+[node name="TileCenterScene" type="Node3D"]
+script = ExtResource("1_8kb67")
+
+[node name="BaseMesh" parent="." instance=ExtResource("4_1p2j2")]
+
+[node name="Decorations" type="Node3D" parent="."]
+visible = false
+
+[node name="path_rocks2" parent="Decorations" instance=ExtResource("3_628p1")]
+transform = Transform3D(0.96503, 0, 0.262139, 0, 1, 0, -0.262139, 0, 0.96503, 5.35237, 0.174333, 0.13285)
+
+[node name="path_rocks" parent="Decorations" instance=ExtResource("3_628p1")]
+transform = Transform3D(0.626713, 0, -0.77925, 0, 1, 0, 0.77925, 0, 0.626713, 7.22901, 0.174, -0.026398)
+
+[node name="path_rocks3" parent="Decorations" instance=ExtResource("3_628p1")]
+transform = Transform3D(-0.761493, 0, -0.648173, 0, 1, 0, 0.648173, 0, -0.761493, 9.0051, 0.174, -0.095306)
+
+[node name="bush_straight" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(0, 0, -0.4, 0, 0.4, 0, 0.4, 0, 0, 4.80543, 0.270609, -2.13852)
+
+[node name="bush_straight2" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(0, 0, -0.4, 0, 0.4, 0, 0.4, 0, 0, 7.24636, 0.270609, -2.13852)
+
+[node name="bush_straight3" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(0, 0, -0.4, 0, 0.4, 0, 0.4, 0, 0, 4.80543, 0.270609, 2.06265)
+
+[node name="bush_straight4" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(0, 0, -0.4, 0, 0.4, 0, 0.4, 0, 0, 7.24636, 0.270609, 2.06265)
+
+[node name="bush_straight5" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(0, 0, -0.4, 0, 0.4, 0, 0.4, 0, 0, -7.19457, 0.270609, -2.13852)
+
+[node name="bush_straight6" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(0, 0, -0.4, 0, 0.4, 0, 0.4, 0, 0, -4.75364, 0.270609, -2.13852)
+
+[node name="bush_straight7" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(0, 0, -0.4, 0, 0.4, 0, 0.4, 0, 0, -7.19457, 0.270609, 2.06265)
+
+[node name="bush_straight8" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(0, 0, -0.4, 0, 0.4, 0, 0.4, 0, 0, -4.75364, 0.270609, 2.06265)
+
+[node name="bush_straight9" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(-0.4, 0, 1.74846e-08, 0, 0.4, 0, -1.74846e-08, 0, -0.4, 2.12648, 0.270609, -7.2584)
+
+[node name="bush_straight10" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(-0.4, 0, 1.74846e-08, 0, 0.4, 0, -1.74846e-08, 0, -0.4, 2.12648, 0.270609, -4.81747)
+
+[node name="bush_straight11" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(-0.4, 0, 1.74846e-08, 0, 0.4, 0, -1.74846e-08, 0, -0.4, -2.07469, 0.270609, -7.2584)
+
+[node name="bush_straight12" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(-0.4, 0, 1.74846e-08, 0, 0.4, 0, -1.74846e-08, 0, -0.4, -2.07469, 0.270609, -4.81747)
+
+[node name="bush_straight13" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(-0.4, 0, 1.74846e-08, 0, 0.4, 0, -1.74846e-08, 0, -0.4, 2.12648, 0.270609, 4.7416)
+
+[node name="bush_straight14" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(-0.4, 0, 1.74846e-08, 0, 0.4, 0, -1.74846e-08, 0, -0.4, 2.12648, 0.270609, 7.18253)
+
+[node name="bush_straight15" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(-0.4, 0, 1.74846e-08, 0, 0.4, 0, -1.74846e-08, 0, -0.4, -2.07469, 0.270609, 4.7416)
+
+[node name="bush_straight16" parent="Decorations" instance=ExtResource("4_d8cla")]
+transform = Transform3D(-0.4, 0, 1.74846e-08, 0, 0.4, 0, -1.74846e-08, 0, -0.4, -2.07469, 0.270609, 7.18253)
+
+[node name="path_rocks4" parent="Decorations" instance=ExtResource("3_628p1")]
+transform = Transform3D(0.262139, 0, -0.96503, 0, 1, 0, 0.96503, 0, 0.262139, -0.166008, 0.174333, 5.34536)
+
+[node name="path_rocks5" parent="Decorations" instance=ExtResource("3_628p1")]
+transform = Transform3D(-0.77925, 0, -0.626713, 0, 1, 0, 0.626713, 0, -0.77925, -0.00675917, 0.174, 7.222)
+
+[node name="path_rocks6" parent="Decorations" instance=ExtResource("3_628p1")]
+transform = Transform3D(-0.648173, 0, 0.761493, 0, 1, 0, -0.761493, 0, -0.648173, 0.0621486, 0.174, 8.99808)
+
+[node name="path_rocks7" parent="Decorations" instance=ExtResource("3_628p1")]
+transform = Transform3D(0.96503, 0, 0.262139, 0, 1, 0, -0.262139, 0, 0.96503, -8.64763, 0.174333, 0.13285)
+
+[node name="path_rocks8" parent="Decorations" instance=ExtResource("3_628p1")]
+transform = Transform3D(0.626713, 0, -0.77925, 0, 1, 0, 0.77925, 0, 0.626713, -6.77099, 0.174, -0.026398)
+
+[node name="path_rocks9" parent="Decorations" instance=ExtResource("3_628p1")]
+transform = Transform3D(-0.761493, 0, -0.648173, 0, 1, 0, 0.648173, 0, -0.761493, -4.9949, 0.174, -0.095306)
+
+[node name="path_rocks10" parent="Decorations" instance=ExtResource("3_628p1")]
+transform = Transform3D(0.262139, 0, -0.96503, 0, 1, 0, 0.96503, 0, 0.262139, -0.166008, 0.174333, -8.65464)
+
+[node name="path_rocks11" parent="Decorations" instance=ExtResource("3_628p1")]
+transform = Transform3D(-0.77925, 0, -0.626713, 0, 1, 0, 0.626713, 0, -0.77925, -0.00675884, 0.174, -6.778)
+
+[node name="path_rocks12" parent="Decorations" instance=ExtResource("3_628p1")]
+transform = Transform3D(-0.648173, 0, 0.761493, 0, 1, 0, -0.761493, 0, -0.648173, 0.0621488, 0.174, -5.00192)
+
+[node name="tile_center_deco" parent="Decorations" instance=ExtResource("5_jpsa8")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)

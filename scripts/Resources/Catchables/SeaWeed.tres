@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://ddepi6wvt10p6"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_dgct0"]
+[ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="1_xl4j7"]
+[ext_resource type="Texture2D" uid="uid://day6ycfq8rn1v" path="res://sprites/Catchables/Fishes/seaweed.png" id="2_3j22u"]
+[ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="3_6afsa"]
+[ext_resource type="PackedScene" uid="uid://dd0j7w4ovcvlw" path="res://objects/Catchables/seaweed.tscn" id="4_ww7t5"]
+
+[resource]
+script = ExtResource("1_dgct0")
+id = 34
+name = "Seaweed"
+description = ""
+notification_text = ""
+category = ExtResource("1_xl4j7")
+tags = Array[int]([])
+image = ExtResource("2_3j22u")
+scene = ExtResource("4_ww7t5")
+rarity = 50
+periods = Array[int]([0, 1, 2, 3])
+lures = Array[ExtResource("1_dgct0")]([ExtResource("3_6afsa")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([7, 6])

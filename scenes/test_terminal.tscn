@@ -1,0 +1,78 @@
+[gd_scene load_steps=13 format=3 uid="uid://6eipmys83e51"]
+
+[ext_resource type="PackedScene" uid="uid://632hi1oildxm" path="res://scenes/Tile_center_scene.tscn" id="2_jahn7"]
+[ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_oktt4"]
+[ext_resource type="Resource" uid="uid://c56y8pqoyk15f" path="res://weapons/blaster.tres" id="3_f8jux"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="4_dmln6"]
+[ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="5_75hy6"]
+[ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="6_oc5p1"]
+[ext_resource type="PackedScene" uid="uid://b6d1eg7ckaf5o" path="res://objects/terminal_w_screen.tscn" id="9_8amr8"]
+[ext_resource type="Script" path="res://scripts/camera_handler.gd" id="9_i0yod"]
+[ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="10_427cv"]
+[ext_resource type="PackedScene" uid="uid://bmxy01yjt70hx" path="res://objects/terminal_desktop.tscn" id="10_rt4dp"]
+[ext_resource type="PackedScene" uid="uid://dsv8attwh05bo" path="res://objects/terminal_menu.tscn" id="11_yqeoe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tlheh"]
+font = ExtResource("6_oc5p1")
+font_size = 36
+outline_size = 12
+outline_color = Color(0, 0, 0, 0.470588)
+
+[node name="TestTerminal" type="Node3D"]
+script = ExtResource("9_i0yod")
+
+[node name="TileCenterScene" parent="." instance=ExtResource("2_jahn7")]
+
+[node name="Player" parent="." node_paths=PackedStringArray("crosshair") instance=ExtResource("2_oktt4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158282, 4.32978, -0.509748)
+weapons = Array[Resource("res://scripts/weapon.gd")]([ExtResource("3_f8jux")])
+crosshair = NodePath("../HUD/Crosshair")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("4_dmln6")
+
+[node name="Crosshair" type="TextureRect" parent="HUD"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("5_75hy6")
+
+[node name="Health" type="Label" parent="HUD"]
+offset_left = 48.0
+offset_top = 627.0
+offset_right = 138.0
+offset_bottom = 672.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "100%"
+label_settings = SubResource("LabelSettings_tlheh")
+vertical_alignment = 2
+
+[node name="Terminal" parent="." instance=ExtResource("9_8amr8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.164516, 0.2, -7.05956)
+
+[node name="Terminal_Desktop" parent="." instance=ExtResource("10_rt4dp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.84785, 0.2, -7.0816)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.943252, -0.297753, 0.147036, 0, 0.442774, 0.896633, -0.332079, -0.845751, 0.417647, 0, 8.81977, 0)
+light_color = Color(1, 0.972549, 0.803922, 1)
+light_energy = 0.8
+shadow_enabled = true
+shadow_bias = 0.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("10_427cv")
+
+[node name="Terminal_Menu" parent="." instance=ExtResource("11_yqeoe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7246, 0.200001, -7.03153)

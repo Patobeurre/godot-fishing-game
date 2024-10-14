@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpvpje0opov81"]
+
+[ext_resource type="PackedScene" uid="uid://dhvoqruhxwa1q" path="res://models/Decorations/dock.glb" id="1_w6mbw"]
+
+[node name="dock" instance=ExtResource("1_w6mbw")]
+
+[node name="StaticBody3D" parent="dock_merged_001" index="0"]
+collision_layer = 65
+metadata/footstep_sounds = "res://sounds/walking_wood.ogg"

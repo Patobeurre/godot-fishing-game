@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dws6xxw4qydik"]
+
+[ext_resource type="PackedScene" uid="uid://b0pt65iot4yka" path="res://models/Catchables/shell.glb" id="1_fw28j"]
+
+[node name="shell" instance=ExtResource("1_fw28j")]
+
+[node name="Cube_020" parent="." index="0"]
+transform = Transform3D(0.0306186, -0.0306186, -0.025, 0.0353553, 0.0353553, 0, 0.0176777, -0.0176777, 0.0433013, -0.0231582, -0.0309817, -0.0333531)

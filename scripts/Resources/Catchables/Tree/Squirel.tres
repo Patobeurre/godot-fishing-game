@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=5 format=3 uid="uid://cx10cu2bnwcgp"]
+
+[ext_resource type="Resource" uid="uid://catedw4i7v6px" path="res://scripts/Resources/Categories/Animals.tres" id="1_5lxkf"]
+[ext_resource type="Texture2D" uid="uid://bm4i11qs0h1hs" path="res://sprites/Catchables/squirel.png" id="1_rk2xl"]
+[ext_resource type="PackedScene" uid="uid://dy1h3kahosysb" path="res://objects/Catchables/squirel.tscn" id="3_5o45t"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="3_gddwk"]
+
+[resource]
+script = ExtResource("3_gddwk")
+id = 8
+name = "Squirel"
+description = "Litterally your best friend"
+notification_text = ""
+category = ExtResource("1_5lxkf")
+tags = Array[int]([])
+image = ExtResource("1_rk2xl")
+scene = ExtResource("3_5o45t")
+rarity = 5
+periods = Array[int]([0, 1])
+lures = Array[ExtResource("3_gddwk")]([])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([5])

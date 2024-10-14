@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dlnu60f66l260"]
+
+[ext_resource type="Shader" path="res://water_hotspring.gdshader" id="1_yxxng"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_0rq1i"]
+noise_type = 3
+frequency = 0.001
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_f707e"]
+noise = SubResource("FastNoiseLite_0rq1i")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8kwd2"]
+render_priority = 1
+shader = ExtResource("1_yxxng")
+shader_parameter/amplitude = 0.4
+shader_parameter/frequency = 4.0
+shader_parameter/rippleRate = 3.0
+shader_parameter/waveAmplitude = 0.1
+shader_parameter/waveFrequency = 4.0
+shader_parameter/blendingAmount = 0.6
+shader_parameter/noise = SubResource("NoiseTexture2D_f707e")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gpc2m"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_8kwd2")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_gpc2m")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

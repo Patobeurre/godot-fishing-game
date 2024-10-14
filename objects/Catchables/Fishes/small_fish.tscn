@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cs0vfc6pvn5br"]
+
+[ext_resource type="PackedScene" uid="uid://dkhlpuqs4iosb" path="res://models/Catchables/Fishes/small_fish.glb" id="1_kg454"]
+
+[node name="small_fish" instance=ExtResource("1_kg454")]
+
+[node name="smallfish_merged" parent="." index="0"]
+transform = Transform3D(1.14641e-16, -2.62268e-09, 0.06, -0.06, -2.62268e-09, 0, 2.62268e-09, -0.06, -2.62268e-09, -0.0200916, -0.00833693, 0)

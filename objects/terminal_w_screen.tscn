@@ -1,0 +1,136 @@
+[gd_scene load_steps=11 format=3 uid="uid://b6d1eg7ckaf5o"]
+
+[ext_resource type="PackedScene" uid="uid://u4w5m3it5vpr" path="res://models/terminal_w_screen.glb" id="1_h5vuh"]
+[ext_resource type="Script" path="res://scripts/terminal.gd" id="2_856mp"]
+[ext_resource type="FontFile" uid="uid://bhx0bwnbe77ci" path="res://fonts/Modeseven-L3n5.ttf" id="2_mfid3"]
+[ext_resource type="Shader" path="res://materials/outline.gdshader" id="3_mxali"]
+[ext_resource type="Shader" path="res://materials/CRT.gdshader" id="3_ugwvq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bj66r"]
+render_priority = 0
+shader = ExtResource("3_mxali")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_xv2cq"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0osfw"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_xv2cq")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.05
+
+[sub_resource type="Theme" id="Theme_5sy7i"]
+default_base_scale = 1.0
+default_font = ExtResource("2_mfid3")
+default_font_size = 10
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kpf10"]
+shader = ExtResource("3_ugwvq")
+
+[node name="terminal_w_screen" instance=ExtResource("1_h5vuh")]
+script = ExtResource("2_856mp")
+
+[node name="Cube" parent="." index="0"]
+transform = Transform3D(0.2, 0, 0, 0, 0.02, 0, 0, 0, 0.2, 0, 0, 0)
+material_overlay = SubResource("ShaderMaterial_bj66r")
+
+[node name="Plane" parent="." index="1"]
+transform = Transform3D(0.2, 0, 0, 0, 0.0792129, -0.191244, 0, 0.191244, 0.0792129, 0, 0.780362, 0.0744154)
+material_override = SubResource("StandardMaterial3D_0osfw")
+
+[node name="SubViewport" type="SubViewport" parent="." index="2"]
+disable_3d = true
+size = Vector2i(258, 258)
+
+[node name="ColorRect2" type="ColorRect" parent="SubViewport" index="0"]
+offset_right = 258.0
+offset_bottom = 258.0
+color = Color(0.0747591, 0.0651024, 0.0251987, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SubViewport" index="1"]
+anchors_preset = -1
+anchor_right = 0.202
+anchor_bottom = 0.358
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 205.884
+offset_bottom = 165.636
+horizontal_scroll_mode = 0
+
+[node name="Control" type="Control" parent="SubViewport/ScrollContainer" index="0"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SubViewport/ScrollContainer/Control" index="0"]
+layout_mode = 2
+offset_right = 248.0
+offset_bottom = 248.0
+theme = SubResource("Theme_5sy7i")
+theme_override_colors/default_color = Color(0.223529, 1, 0.2, 1)
+theme_override_fonts/normal_font = ExtResource("2_mfid3")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Insert text here
+Insert text here
+Insert text here
+Insert text here
+Insert text here"
+autowrap_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="SubViewport" index="2"]
+material = SubResource("ShaderMaterial_kpf10")
+offset_right = 258.0
+offset_bottom = 258.0
+color = Color(1, 1, 1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 0.911338, 0.411658, 0, -0.411658, 0.911338, 0, 0.870147, 0.272076)
+
+[node name="DebugUI" type="Node" parent="." index="4"]
+
+[node name="ColorRect2" type="ColorRect" parent="DebugUI" index="0"]
+visible = false
+custom_minimum_size = Vector2(512, 512)
+offset_right = 258.0
+offset_bottom = 258.0
+color = Color(0.0747591, 0.0651024, 0.0251987, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="DebugUI" index="1"]
+visible = false
+anchors_preset = -1
+anchor_right = 0.202
+anchor_bottom = 0.358
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 205.884
+offset_bottom = 165.636
+horizontal_scroll_mode = 0
+
+[node name="Control" type="Control" parent="DebugUI/ScrollContainer" index="0"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DebugUI/ScrollContainer/Control" index="0"]
+layout_mode = 2
+offset_right = 512.0
+offset_bottom = 512.0
+theme = SubResource("Theme_5sy7i")
+theme_override_colors/default_color = Color(0.223529, 1, 0.2, 1)
+theme_override_fonts/normal_font = ExtResource("2_mfid3")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Insert text here
+Insert text here
+Insert text here
+Insert text here
+Insert text here"
+autowrap_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="DebugUI" index="2"]
+visible = false
+material = SubResource("ShaderMaterial_kpf10")
+anchors_preset = -1
+anchor_right = 0.399
+anchor_bottom = 0.727
+offset_right = 1.27997
+offset_bottom = 3.09995
+color = Color(1, 1, 1, 0)

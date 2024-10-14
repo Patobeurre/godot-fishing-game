@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://hj2sqxyfeimm"]
+
+[ext_resource type="Script" path="res://scripts/map_genenartion.gd" id="1_glyg1"]
+[ext_resource type="PackedScene" uid="uid://blclbjg7bi6bp" path="res://models/tile_center_wireframe.tscn" id="2_5e70e"]
+[ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="3_fyd38"]
+[ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="4_sxlg7"]
+[ext_resource type="Resource" uid="uid://cu2gtxlcmbb34" path="res://weapons/blaster-repeater.tres" id="5_6mryh"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="6_bhs1i"]
+[ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="7_mi1eo"]
+[ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="8_y847g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mvclu"]
+font = ExtResource("8_y847g")
+font_size = 36
+outline_size = 12
+outline_color = Color(0, 0, 0, 0.470588)
+
+[node name="Generation" type="Node3D"]
+script = ExtResource("1_glyg1")
+tile = ExtResource("2_5e70e")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.953491, 0.247527, -0.172004, 0, 0.570642, 0.821199, 0.301421, -0.783006, 0.544102, 0, 288.721, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("3_fyd38")
+
+[node name="Player" parent="." node_paths=PackedStringArray("crosshair") instance=ExtResource("4_sxlg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 20, 100)
+movement_speed = 20
+weapons = Array[Resource("res://scripts/weapon.gd")]([ExtResource("5_6mryh")])
+crosshair = NodePath("../HUD/Crosshair")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("6_bhs1i")
+
+[node name="Crosshair" type="TextureRect" parent="HUD"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("7_mi1eo")
+
+[node name="Health" type="Label" parent="HUD"]
+offset_left = 48.0
+offset_top = 627.0
+offset_right = 138.0
+offset_bottom = 672.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "100%"
+label_settings = SubResource("LabelSettings_mvclu")
+vertical_alignment = 2

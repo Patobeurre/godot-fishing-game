@@ -1,0 +1,233 @@
+[gd_scene load_steps=18 format=3 uid="uid://blclbjg7bi6bp"]
+
+[ext_resource type="PackedScene" uid="uid://b2158wingfo7f" path="res://models/tile_center.glb" id="1_nlreo"]
+[ext_resource type="Shader" path="res://materials/wireframe.gdshader" id="2_iydst"]
+[ext_resource type="Script" path="res://models/tile_center_wireframe.gd" id="2_pmwhd"]
+[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_sg5vr"]
+[ext_resource type="Script" path="res://scripts/TileSM/DefaultState.gd" id="5_iy600"]
+[ext_resource type="Script" path="res://scripts/TileSM/CompletedState.gd" id="6_3kk0i"]
+[ext_resource type="Shader" path="res://materials/kinetic_pupils.gdshader" id="7_b382f"]
+[ext_resource type="PackedScene" uid="uid://cr5ar4w70tct6" path="res://scenes/digit_counter_node.tscn" id="8_hyngx"]
+[ext_resource type="Script" path="res://scripts/counters.gd" id="8_njci2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tsn46"]
+render_priority = 0
+shader = ExtResource("2_iydst")
+shader_parameter/albedo = Color(0, 0, 0.0392157, 1)
+shader_parameter/outline_width = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2rphl"]
+margin = 0.0
+size = Vector3(80, 40.4087, 80)
+
+[sub_resource type="GDScript" id="GDScript_5mdgk"]
+script/source = "extends StateMachineState
+
+@export var mesh: Node3D
+@export var boundaries: Node3D
+@export var counters: Node3D
+@onready var base_surface: StandardMaterial3D = preload(\"res://materials/base_surface.tres\")
+@onready var outline_shader: Shader = preload(\"res://materials/outline.gdshader\")
+
+@export var TIME_PERIOD := 5.
+var time := 0.
+
+signal timer_changed(value)
+signal timer_timeout
+
+# Called when the state machine enters this state.
+func on_enter():
+	mesh.material_override = base_surface
+	var outline = ShaderMaterial.new()
+	outline.shader = outline_shader
+	mesh.material_overlay = outline
+	
+	_activate_boundaries(true)
+	
+	time = TIME_PERIOD
+
+
+func _activate_boundaries(activate: bool):
+	boundaries.visible = activate
+	var coll_bounds: Array = boundaries.find_children(\"\", \"CollisionShape3D\", true)
+	for coll in coll_bounds:
+		coll.set_deferred(\"disabled\", not activate)
+
+
+# Called every frame when this state is active.
+func on_process(delta):
+	if time > 0:
+		time -= delta
+		timer_changed.emit(time)
+	else:
+		timer_timeout.emit()
+
+
+# Called every physics frame when this state is active.
+func on_physics_process(delta):
+	pass
+
+
+# Called when there is an input event while this state is active.
+func on_input(event: InputEvent):
+	pass
+
+
+# Called when the state machine exits this state.
+func on_exit():
+	_activate_boundaries(false)
+	pass
+
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6x44x"]
+shader = ExtResource("7_b382f")
+shader_parameter/size = 20.0
+shader_parameter/speed1 = 2.0
+shader_parameter/speed2 = 0.0
+shader_parameter/color = Vector3(1, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8qod"]
+size = Vector3(100, 100, 2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_qh0rg"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0yt53"]
+resource_local_to_scene = true
+transparency = 1
+albedo_color = Color(0.854902, 0.439216, 0.541176, 0.278431)
+albedo_texture = SubResource("ViewportTexture_qh0rg")
+subsurf_scatter_strength = 0.82
+
+[sub_resource type="QuadMesh" id="QuadMesh_x1b4n"]
+resource_local_to_scene = true
+size = Vector2(100, 100)
+
+[node name="tile_center" instance=ExtResource("1_nlreo")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+script = ExtResource("2_pmwhd")
+
+[node name="Cylinder" parent="." index="0"]
+material_overlay = SubResource("ShaderMaterial_tsn46")
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+shape = SubResource("BoxShape3D_2rphl")
+
+[node name="FiniteStateMachine" type="Node" parent="." index="2"]
+script = ExtResource("4_sg5vr")
+
+[node name="DefaultState" type="Node" parent="FiniteStateMachine" index="0" node_paths=PackedStringArray("area")]
+script = ExtResource("5_iy600")
+area = NodePath("../../Area3D")
+
+[node name="PlayableState" type="Node" parent="FiniteStateMachine" index="1" node_paths=PackedStringArray("mesh", "boundaries")]
+script = SubResource("GDScript_5mdgk")
+mesh = NodePath("../../Cylinder")
+boundaries = NodePath("../../Boundaries")
+
+[node name="CompletedState" type="Node" parent="FiniteStateMachine" index="2"]
+script = ExtResource("6_3kk0i")
+
+[node name="SubViewport" type="SubViewport" parent="." index="3"]
+disable_3d = true
+size = Vector2i(1024, 1024)
+
+[node name="ColorRect" type="ColorRect" parent="SubViewport" index="0"]
+material = SubResource("ShaderMaterial_6x44x")
+offset_right = 1024.0
+offset_bottom = 1024.0
+
+[node name="Boundaries" type="Node3D" parent="." index="4"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Boundaries" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -50)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundaries/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_x8qod")
+disabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Boundaries/StaticBody3D" index="1"]
+material_override = SubResource("StandardMaterial3D_0yt53")
+mesh = SubResource("QuadMesh_x1b4n")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Boundaries" index="1"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 50, 0, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundaries/StaticBody3D2" index="0"]
+shape = SubResource("BoxShape3D_x8qod")
+disabled = true
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Boundaries/StaticBody3D2" index="1"]
+material_override = SubResource("StandardMaterial3D_0yt53")
+mesh = SubResource("QuadMesh_x1b4n")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Boundaries" index="2"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 50)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundaries/StaticBody3D3" index="0"]
+shape = SubResource("BoxShape3D_x8qod")
+disabled = true
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Boundaries/StaticBody3D3" index="1"]
+material_override = SubResource("StandardMaterial3D_0yt53")
+mesh = SubResource("QuadMesh_x1b4n")
+skeleton = NodePath("../../StaticBody3D2/MeshInstance3D2")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="Boundaries" index="3"]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -50, 0, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundaries/StaticBody3D4" index="0"]
+shape = SubResource("BoxShape3D_x8qod")
+disabled = true
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Boundaries/StaticBody3D4" index="1"]
+material_override = SubResource("StandardMaterial3D_0yt53")
+mesh = SubResource("QuadMesh_x1b4n")
+skeleton = NodePath("../../StaticBody3D2/MeshInstance3D2")
+
+[node name="Counters" type="Node3D" parent="." index="5"]
+visible = false
+script = ExtResource("8_njci2")
+
+[node name="Counter1" parent="Counters" index="0" instance=ExtResource("8_hyngx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14, -58)
+value = 10
+SPACING = 25
+SCALE_SIZE = 3.0
+
+[node name="Counter2" parent="Counters" index="1" instance=ExtResource("8_hyngx")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 14, 58)
+value = 0
+SPACING = 25
+SCALE_SIZE = 3.0
+
+[node name="Counter3" parent="Counters" index="2" instance=ExtResource("8_hyngx")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 58, 14, 0)
+value = 0
+SPACING = 25
+SCALE_SIZE = 3.0
+
+[node name="Counter4" parent="Counters" index="3" instance=ExtResource("8_hyngx")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -58, 14, 0)
+value = 0
+SPACING = 25
+SCALE_SIZE = 3.0
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

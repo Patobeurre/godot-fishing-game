@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=3 format=3 uid="uid://q0nfk0g5488"]
+
+[ext_resource type="Resource" uid="uid://d2eanu31fp0x0" path="res://scripts/Resources/Catchables/Fishes/CommonFish.tres" id="1_01juv"]
+[ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_elpvj"]
+
+[resource]
+script = ExtResource("1_elpvj")
+matching_catchable = ExtResource("1_01juv")
+name = "Litoria cuniculus"
+size = "SMALL"
+habitat = "Ocean"
+description = ""

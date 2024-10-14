@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://k2w6cbfymx6d"]
+
+[ext_resource type="PackedScene" uid="uid://crh3k6rxvy3yb" path="res://models/Catchables/Fishes/squid.glb" id="1_m3erl"]
+
+[node name="squid" instance=ExtResource("1_m3erl")]
+
+[node name="squid_merged" parent="." index="0"]
+transform = Transform3D(0.00953645, 0.0276149, -0.00681726, 0.0108352, -0.0101749, -0.0260589, -0.0262994, 0.00582143, -0.0132082, 0, -0.261929, 0)

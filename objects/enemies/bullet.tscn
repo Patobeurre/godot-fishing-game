@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://c04t1xnc857u8"]
+
+[ext_resource type="Shader" uid="uid://c30ubrkd880mj" path="res://objects/enemies/bullet.tres" id="1_f8hmx"]
+[ext_resource type="Script" path="res://objects/enemies/bullet.gd" id="1_sqpi1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nnte0"]
+render_priority = 0
+shader = ExtResource("1_f8hmx")
+
+[sub_resource type="SphereMesh" id="SphereMesh_7q62w"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_s4126"]
+radius = 0.354344
+
+[node name="Bullet" type="RigidBody3D"]
+collision_layer = 16
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_sqpi1")
+
+[node name="Sphere" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_nnte0")
+cast_shadow = 0
+mesh = SubResource("SphereMesh_7q62w")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+collision_layer = 16
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_s4126")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("SphereShape3D_s4126")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

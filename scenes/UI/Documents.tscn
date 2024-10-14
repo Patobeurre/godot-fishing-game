@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhev5ajqkerru"]
+
+[ext_resource type="Script" path="res://scripts/UI/Documents.gd" id="1_6drjt"]
+[ext_resource type="PackedScene" uid="uid://b0ogy101lbpfp" path="res://objects/UI/DocumentFlyer.tscn" id="2_onr0w"]
+
+[node name="Documents" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6drjt")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="DocumentFlyer" parent="MarginContainer" instance=ExtResource("2_onr0w")]
+layout_mode = 2
+
+[node name="ShowingTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="ShowingTimer" to="." method="_on_showing_timer_timeout"]

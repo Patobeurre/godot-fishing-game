@@ -1,0 +1,98 @@
+[gd_scene load_steps=15 format=3 uid="uid://ds0clkn0j8opl"]
+
+[ext_resource type="Script" path="res://scripts/fishing_area.gd" id="1_3bwpl"]
+[ext_resource type="Resource" uid="uid://csju71d6rfls" path="res://scripts/Resources/FishingAreas/island_A_water.tres" id="2_hr583"]
+[ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="3_2hp5v"]
+[ext_resource type="PackedScene" uid="uid://r03nc1e8rsjx" path="res://models/Islands/island_water_deep.tscn" id="4_lkk7p"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_feswd"]
+noise_type = 3
+frequency = 0.001
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_473c0"]
+width = 1
+height = 1
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_feswd")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_jloe0"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_wamqa"]
+width = 1
+height = 1
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_jloe0")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_1vlb1"]
+noise_type = 3
+frequency = 0.02
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_rs3ak"]
+seamless = true
+noise = SubResource("FastNoiseLite_1vlb1")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j2ej8"]
+render_priority = 0
+shader = ExtResource("3_2hp5v")
+shader_parameter/albedo = Color(0, 0.33467, 0.491748, 1)
+shader_parameter/albedo2 = Color(0, 0.475, 0.765, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/roughness = 0.6
+shader_parameter/wave_direction = Vector2(2, 0)
+shader_parameter/wave_direction2 = Vector2(0, 1)
+shader_parameter/time_scale = 0.025
+shader_parameter/noise_scale = 10.0
+shader_parameter/height_scale = 0.3
+shader_parameter/color_deep = Color(0.255622, 0.500334, 1, 1)
+shader_parameter/color_shallow = Color(0.422646, 0.886977, 1, 1)
+shader_parameter/beers_law = 1.5
+shader_parameter/depth_offset = 0.2
+shader_parameter/edge_scale = 1.0
+shader_parameter/near = 1.0
+shader_parameter/far = 100.0
+shader_parameter/edge_color = Color(1, 1, 1, 1)
+shader_parameter/wave = SubResource("NoiseTexture2D_rs3ak")
+shader_parameter/texture_normal = SubResource("NoiseTexture2D_473c0")
+shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_wamqa")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cxmay"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_r2aj3"]
+material = SubResource("StandardMaterial3D_cxmay")
+size = Vector2(500, 500)
+subdivide_width = 100
+subdivide_depth = 100
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_unb4q"]
+size = Vector3(288.224, 6.71576, 225.156)
+
+[node name="Water" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 4096
+collision_mask = 256
+script = ExtResource("1_3bwpl")
+fishTable = ExtResource("2_hr583")
+
+[node name="WaterSurface" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.596641, 0, 0, 0, 0.5, 0, 0, 0, 0.448938, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_j2ej8")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_r2aj3")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93637, -3.33426, 0.665283)
+shape = SubResource("BoxShape3D_unb4q")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.405, 0, 0, 0, 0.5, 0, 0, 0, 0.32, 0, -0.957544, 0)
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_r2aj3")
+skeleton = NodePath("../..")
+
+[node name="island_water_deep" parent="." instance=ExtResource("4_lkk7p")]
+transform = Transform3D(0.176, 0, 0, 0, 0.16, 0, 0, 0, 0.16, 0.0657387, -0.954984, 0.0301056)

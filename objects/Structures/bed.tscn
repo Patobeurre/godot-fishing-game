@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://jpcqna82x0yo"]
+
+[ext_resource type="PackedScene" uid="uid://nsrgjj6r4op1" path="res://models/Decorations/bed.glb" id="1_y17hi"]
+[ext_resource type="Script" path="res://scripts/Interactable.gd" id="2_lkr33"]
+[ext_resource type="Script" path="res://scripts/bed.gd" id="2_u8yuc"]
+
+[node name="bed" instance=ExtResource("1_y17hi")]
+script = ExtResource("2_u8yuc")
+
+[node name="bed_merged_001" parent="." index="0"]
+transform = Transform3D(-1.296, 0, -2.34606e-07, 0, 0.0864, 0, 4.2229e-07, 0, -0.72, 0, 0, 0)
+layers = 1025
+
+[node name="StaticBody3D" parent="bed_merged_001" index="0"]
+collision_layer = 33
+collision_mask = 306
+script = ExtResource("2_lkr33")
+interact_text = "Sleep"

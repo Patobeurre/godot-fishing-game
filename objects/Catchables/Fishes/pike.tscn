@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cit17jjrveyip"]
+
+[ext_resource type="PackedScene" uid="uid://ca82yt6qowcee" path="res://models/Catchables/Fishes/pike.glb" id="1_puv8h"]
+
+[node name="pike" instance=ExtResource("1_puv8h")]
+
+[node name="brochet_merged" parent="." index="0"]
+transform = Transform3D(-2.09815e-09, 0.3, -3.14722e-09, 0, -1.31134e-08, -0.072, -0.048, -1.31134e-08, 1.37569e-16, 0, -0.038443, 0)

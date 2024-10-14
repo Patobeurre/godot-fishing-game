@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bskjo5nspsyq"]
+
+[ext_resource type="PackedScene" uid="uid://dn2w4bgf3q1w2" path="res://models/Catchables/lizard.glb" id="1_ne2fu"]
+
+[node name="lizard" instance=ExtResource("1_ne2fu")]
+
+[node name="lizard_merged" parent="." index="0"]
+transform = Transform3D(0.0510168, 0.0608165, -0.0608165, -3.09086e-09, 0.0707107, 0.0707107, 0.0860075, -0.0360743, 0.0360743, 0.0693087, -0.105385, -0.0498765)

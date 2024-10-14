@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd0j7w4ovcvlw"]
+
+[ext_resource type="PackedScene" uid="uid://cq7i618rstlhq" path="res://models/Catchables/seaweed.glb" id="1_pandh"]
+
+[node name="seaweed" instance=ExtResource("1_pandh")]
+
+[node name="seaweed_merged" parent="." index="0"]
+transform = Transform3D(-0.1, 8.74228e-09, 0, -8.71162e-09, -0.0996493, -0.00836778, -7.31535e-10, -0.00836778, 0.0996493, 0, 0.0532423, 0)

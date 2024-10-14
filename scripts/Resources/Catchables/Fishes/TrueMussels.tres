@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://c0d4soyvubcj0"]
+
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_t6n3g"]
+[ext_resource type="Texture2D" uid="uid://oicsgaiyryoo" path="res://sprites/Catchables/true_mussel.png" id="2_dvvpv"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="3_3x57v"]
+[ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="4_hcfk8"]
+[ext_resource type="Resource" uid="uid://cx10cu2bnwcgp" path="res://scripts/Resources/Catchables/Tree/Squirel.tres" id="5_vvnfw"]
+[ext_resource type="PackedScene" uid="uid://0ontd173otm6" path="res://objects/Catchables/true_mussels.tscn" id="6_p78d2"]
+
+[resource]
+script = ExtResource("3_3x57v")
+id = 10
+name = "True mussels"
+description = ""
+notification_text = ""
+category = ExtResource("1_t6n3g")
+tags = Array[int]([5])
+image = ExtResource("2_dvvpv")
+scene = ExtResource("6_p78d2")
+rarity = 30
+periods = Array[int]([0, 1, 2, 3])
+lures = Array[ExtResource("3_3x57v")]([ExtResource("4_hcfk8"), ExtResource("5_vvnfw")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([])

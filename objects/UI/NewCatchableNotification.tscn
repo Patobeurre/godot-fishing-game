@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5anvnexsv82j"]
+
+[ext_resource type="Script" path="res://scripts/UI/Components/CatchableNotification.gd" id="1_37ari"]
+[ext_resource type="Texture2D" uid="uid://bu8l0k82mtflf" path="res://sprites/star.png" id="2_yg610"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q615l"]
+
+[node name="NewCatchableNotification" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -880.0
+offset_bottom = -600.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_37ari")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.025
+offset_bottom = -2.5
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_q615l")
+
+[node name="StaryBackground" type="Sprite2D" parent="MarginContainer/HBoxContainer/PanelContainer"]
+position = Vector2(40, 40)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_yg610")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Image" type="TextureRect" parent="MarginContainer/HBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+expand_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+alignment = 1
+
+[node name="Title" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "New entry found !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_font_sizes/bold_italics_font_size = 22
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 0

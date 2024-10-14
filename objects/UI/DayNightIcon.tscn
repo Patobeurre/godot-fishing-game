@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://lpgi0l7bbas2"]
+
+[ext_resource type="Texture2D" uid="uid://bgkqwnurukqem" path="res://sprites/UI/day_night_cycle_icons.png" id="1_t8yvv"]
+[ext_resource type="Script" path="res://objects/UI/day_night_icon.gd" id="2_bulsc"]
+
+[node name="NinePatchRect" type="NinePatchRect"]
+custom_minimum_size = Vector2(30, 30)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_t8yvv")
+region_rect = Rect2(0, 0, 100, 100)
+script = ExtResource("2_bulsc")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://uuiuhl1tnd24"]
+
+[ext_resource type="PackedScene" uid="uid://b2158wingfo7f" path="res://models/tile_center.glb" id="1_m4j4g"]
+[ext_resource type="Shader" path="res://materials/outline.gdshader" id="2_byym4"]
+[ext_resource type="Material" uid="uid://b6l8i5v3dexay" path="res://materials/base_surface.tres" id="2_m8mht"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_71m5v"]
+render_priority = 0
+shader = ExtResource("2_byym4")
+
+[node name="tile_center" instance=ExtResource("1_m4j4g")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="Cylinder" parent="." index="0"]
+material_override = ExtResource("2_m8mht")
+material_overlay = SubResource("ShaderMaterial_71m5v")

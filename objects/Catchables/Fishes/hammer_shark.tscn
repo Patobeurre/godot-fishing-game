@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx7yogcsge776"]
+
+[ext_resource type="PackedScene" uid="uid://dhsu35webhox2" path="res://models/Catchables/Fishes/hammer_shark.glb" id="1_g14ec"]
+
+[node name="hammer_shark" instance=ExtResource("1_g14ec")]
+
+[node name="hammershark_merged" parent="." index="0"]
+transform = Transform3D(-5.24537e-09, 0.565, -5.94475e-09, 0, -2.46969e-08, -0.136, -0.12, -2.46969e-08, 2.59853e-16, -0.0854112, -0.0751278, 0.00388443)

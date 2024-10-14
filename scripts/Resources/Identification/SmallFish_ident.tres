@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=3 format=3 uid="uid://cmwcaxgyrha02"]
+
+[ext_resource type="Resource" uid="uid://0p05cl1jeynr" path="res://scripts/Resources/Catchables/Fishes/SmallFish.tres" id="1_0xknn"]
+[ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_q7rab"]
+
+[resource]
+script = ExtResource("1_q7rab")
+matching_catchable = ExtResource("1_0xknn")
+name = "Simia aculeatus"
+size = "SMALL"
+habitat = "Coast"
+description = "Colored with orangeish stripes."

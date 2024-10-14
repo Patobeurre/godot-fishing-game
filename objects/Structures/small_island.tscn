@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfn5mamim21hs"]
+
+[ext_resource type="PackedScene" uid="uid://dwgpnffvid0ye" path="res://models/Islands/small_island.glb" id="1_q8al3"]
+
+[node name="small_island" instance=ExtResource("1_q8al3")]

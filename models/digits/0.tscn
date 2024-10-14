@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq26rsfes86p5"]
+
+[ext_resource type="PackedScene" uid="uid://dokct8d1hbiif" path="res://models/digits/0.glb" id="1_tmlof"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gejnk"]
+albedo_color = Color(0.552941, 0, 0.152941, 1)
+
+[node name="0" instance=ExtResource("1_tmlof")]
+
+[node name="Cube" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_gejnk")

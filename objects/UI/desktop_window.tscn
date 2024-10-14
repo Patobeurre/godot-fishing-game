@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://mb27qmslhd63"]
+
+[ext_resource type="Texture2D" uid="uid://cbp1mt66dr7j7" path="res://sprites/window_texture.png" id="1_bfhlu"]
+[ext_resource type="Texture2D" uid="uid://dccfbs8f6s7xm" path="res://sprites/window_close_btn.png" id="2_3uldw"]
+[ext_resource type="Script" path="res://objects/UI/desktop_window.gd" id="2_6y3ml"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o5f8p"]
+texture = ExtResource("1_bfhlu")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ptbv0"]
+size = Vector2(14, 14)
+
+[node name="Window" type="Panel"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 251.0
+offset_bottom = 251.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_o5f8p")
+script = ExtResource("2_6y3ml")
+
+[node name="CloseBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 5.0
+offset_right = 241.0
+offset_bottom = 19.0
+texture_normal = ExtResource("2_3uldw")
+
+[node name="Area2D" type="Area2D" parent="CloseBtn"]
+position = Vector2(-227, -5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CloseBtn/Area2D"]
+position = Vector2(234, 12)
+shape = SubResource("RectangleShape2D_ptbv0")
+
+[node name="Title" type="Label" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 79.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.223529, 1, 0.2, 1)
+theme_override_font_sizes/font_size = 10
+text = "simulation.exe"
+horizontal_alignment = 1
+
+[node name="Content" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 26.0
+offset_right = 241.0
+offset_bottom = 241.0

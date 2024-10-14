@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d28x74dk5ipyc"]
+
+[ext_resource type="PackedScene" uid="uid://blj0812mol3q3" path="res://models/Catchables/Fishes/moray_eel.glb" id="1_o1dk4"]
+
+[node name="moray_eel" instance=ExtResource("1_o1dk4")]
+
+[node name="moray_eel_merged" parent="." index="0"]
+transform = Transform3D(-3.50236e-10, -0.149786, 0.00801248, -6.54735e-09, 0.00801248, 0.149786, -0.15, 2.30756e-16, -6.55671e-09, -0.0357869, -0.0770517, 0)

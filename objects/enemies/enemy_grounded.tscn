@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://bly5wbmxjnxgx"]
+
+[ext_resource type="Script" path="res://scripts/enemy_ground.gd" id="1_1i0uf"]
+[ext_resource type="PackedScene" uid="uid://bysppry1gbbdi" path="res://objects/enemies/enemy_ground.tscn" id="1_cwl1a"]
+[ext_resource type="Material" uid="uid://mi4biohw11xn" path="res://materials/digit.tres" id="2_cem0g"]
+[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_ra88p"]
+[ext_resource type="Script" path="res://scripts/EnnemySM/FollowState.gd" id="5_ascmo"]
+[ext_resource type="Script" path="res://scripts/EnnemySM/AttackState.gd" id="6_7evbb"]
+[ext_resource type="Script" path="res://scripts/EnnemySM/DefaultState.gd" id="7_3fc7d"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vc5lv"]
+radius = 0.209817
+height = 0.419633
+
+[sub_resource type="BoxMesh" id="BoxMesh_ts6ry"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+collision_layer = 32
+axis_lock_angular_y = true
+floor_stop_on_slope = false
+script = ExtResource("1_1i0uf")
+attack_range = 2.0
+
+[node name="enemy_ground" parent="." instance=ExtResource("1_cwl1a")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 0, 0.216442, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22784, 0)
+visible = false
+shape = SubResource("CapsuleShape3D_vc5lv")
+
+[node name="StairSystem" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="RayCastFwd" type="RayCast3D" parent="StairSystem"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.05, -0.2)
+target_position = Vector3(0, -0.2, 0)
+debug_shape_custom_color = Color(0.835294, 0, 0.835294, 1)
+
+[node name="RayCastDown" type="RayCast3D" parent="StairSystem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.4)
+hit_from_inside = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StairSystem"]
+transform = Transform3D(0.063373, 0, 0, 0, 0.0596167, 0, 0, 0, 0.42352, 1.74846e-08, 0.044223, -0.2)
+material_override = ExtResource("2_cem0g")
+mesh = SubResource("BoxMesh_ts6ry")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
+
+[node name="FiniteStateMachine" type="Node" parent="."]
+script = ExtResource("4_ra88p")
+
+[node name="FollowState" type="Node" parent="." node_paths=PackedStringArray("parent")]
+script = ExtResource("5_ascmo")
+parent = NodePath("..")
+movement_speed = 1.0
+STEP_HEIGHT = 0.25
+
+[node name="AttackState" type="Node" parent="." node_paths=PackedStringArray("parent")]
+script = ExtResource("6_7evbb")
+parent = NodePath("..")
+
+[node name="AttackCD" type="Timer" parent="AttackState"]
+
+[node name="DefaultState" type="Node" parent="." node_paths=PackedStringArray("parent")]
+script = ExtResource("7_3fc7d")
+parent = NodePath("..")

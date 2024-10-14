@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=4 format=3 uid="uid://d4b4iafq1r6d0"]
+
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_0k37k"]
+[ext_resource type="Texture2D" uid="uid://jr4cc0bo5pnd" path="res://sprites/unknown.png" id="1_550va"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_uldcd"]
+
+[resource]
+script = ExtResource("1_uldcd")
+id = 0
+name = "???"
+description = ""
+notification_text = ""
+category = ExtResource("1_0k37k")
+tags = Array[int]([])
+image = ExtResource("1_550va")
+rarity = 0
+periods = Array[int]([])
+lures = Array[ExtResource("1_uldcd")]([])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([])

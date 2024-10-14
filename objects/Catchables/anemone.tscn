@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dakyhjkvbh4yq"]
+
+[ext_resource type="PackedScene" uid="uid://dkd743ktkk6mh" path="res://models/Catchables/anemone.glb" id="1_wkb11"]
+
+[node name="anemone" instance=ExtResource("1_wkb11")]
+
+[node name="anemone_merged" parent="." index="0"]
+transform = Transform3D(0.187939, 0, 0.0684041, 0, 0.2, 0, -0.0684041, 0, 0.187939, 0, -0.0471162, 0)

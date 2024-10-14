@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://co0wky0yojob1"]
+
+[ext_resource type="PackedScene" uid="uid://oiqngwuynihh" path="res://models/Catchables/Fishes/sea_urchin.glb" id="1_je73f"]
+
+[node name="sea_urchin" instance=ExtResource("1_je73f")]
+
+[node name="sea_urchin_merged" parent="." index="0"]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, -0.0727146, 0)

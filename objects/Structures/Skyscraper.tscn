@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcx7famjo1lr1"]
+
+[ext_resource type="Script" path="res://scripts/City/skyscraper.gd" id="1_g6s6p"]
+
+[node name="Skyscraper" type="Node3D"]
+script = ExtResource("1_g6s6p")

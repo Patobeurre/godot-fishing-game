@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=3 uid="uid://657bdl7aknok"]
+
+[ext_resource type="PackedScene" uid="uid://dbt524mdusvvq" path="res://models/Decorations/mailbox.glb" id="1_wcunj"]
+[ext_resource type="Script" path="res://scripts/mailbox.gd" id="2_5v4vj"]
+[ext_resource type="Shader" uid="uid://c52n5cpdlsqf2" path="res://materials/bilboard.tres" id="2_44r4y"]
+[ext_resource type="Script" path="res://scripts/Interactable.gd" id="3_xrbwv"]
+[ext_resource type="Texture2D" uid="uid://p3h4g383ijtm" path="res://sprites/mail_texture.png" id="5_ashi7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5i23c"]
+render_priority = 0
+shader = ExtResource("2_44r4y")
+shader_parameter/Texture2DParameter = ExtResource("5_ashi7")
+
+[sub_resource type="QuadMesh" id="QuadMesh_88yn2"]
+size = Vector2(0.4, 0.25)
+
+[sub_resource type="Animation" id="Animation_6dpi3"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 3.32929, 0)
+
+[sub_resource type="Animation" id="Animation_ktfnw"]
+resource_name = "up_and_down"
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0.0333333, 1, 0, 3.2, 0, 0.5, 1, 0, 3.4, 0, 1, 1, 0, 3.2, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ut1hw"]
+_data = {
+"RESET": SubResource("Animation_6dpi3"),
+"up_and_down": SubResource("Animation_ktfnw")
+}
+
+[node name="mailbox2" instance=ExtResource("1_wcunj")]
+script = ExtResource("2_5v4vj")
+
+[node name="mailbox" parent="." index="0"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="StaticBody3D" parent="mailbox" index="0"]
+collision_layer = 33
+script = ExtResource("3_xrbwv")
+interact_text = "Read mail"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(-4.37114e-08, -4.37114e-08, -1, -1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0, 3.32929, 0)
+layers = 4
+material_override = SubResource("ShaderMaterial_5i23c")
+ignore_occlusion_culling = true
+gi_mode = 0
+mesh = SubResource("QuadMesh_88yn2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_ut1hw")
+}
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="3"]
+transform = Transform3D(1.25176e-07, -0.258819, -0.965926, 4.52534e-08, 0.965926, -0.258819, 1, -1.13135e-08, 1.32623e-07, -3, 3.2, 0)
+layers = 4
+light_color = Color(0.877616, 0.877616, 0.877616, 1)
+light_energy = 0.5
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+light_cull_mask = 4293918724
+spot_angle = 28.1718
+
+[node name="letter" parent="." index="4"]
+transform = Transform3D(-0.093794, 0, 0.379948, 0, 0.3, 0, -0.284961, 0, -0.125059, -0.01, 1.8, 0.017)

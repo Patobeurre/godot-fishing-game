@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://r03nc1e8rsjx"]
+
+[ext_resource type="PackedScene" uid="uid://d3bnpbobqy0rg" path="res://models/Islands/island_water_deep.glb" id="1_70jxr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_htfbn"]
+shading_mode = 0
+albedo_color = Color(0, 0.251758, 0.359683, 1)
+
+[node name="island_water_deep" instance=ExtResource("1_70jxr")]
+
+[node name="Plane_001" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_htfbn")
+cast_shadow = 0

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6isc32q3x12e"]
+
+[ext_resource type="PackedScene" uid="uid://c8b3dj78vyu27" path="res://models/digits/6.glb" id="1_we817"]
+[ext_resource type="Material" uid="uid://mi4biohw11xn" path="res://materials/digit.tres" id="2_yi7pt"]
+
+[node name="6" instance=ExtResource("1_we817")]
+
+[node name="Cube_006" parent="." index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+material_override = ExtResource("2_yi7pt")

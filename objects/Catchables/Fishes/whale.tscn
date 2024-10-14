@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuuyabi06oael"]
+
+[ext_resource type="PackedScene" uid="uid://cex68oq3d5brf" path="res://models/Catchables/Fishes/whale.glb" id="1_kpvqi"]
+
+[node name="whale" instance=ExtResource("1_kpvqi")]
+
+[node name="whale_merged" parent="." index="0"]
+transform = Transform3D(-1.31134e-08, 1.413, -1.47744e-08, 0, -6.17642e-08, -0.338, -0.3, -6.17642e-08, 6.45812e-16, 0, -0.225154, 0)

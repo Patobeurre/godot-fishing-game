@@ -1,0 +1,49 @@
+[gd_scene load_steps=13 format=3 uid="uid://tx87nknr18ww"]
+
+[ext_resource type="PackedScene" uid="uid://djxobsr234p40" path="res://models/chest.glb" id="1_wccmy"]
+[ext_resource type="Script" path="res://scripts/chest.gd" id="2_044pl"]
+[ext_resource type="Script" path="res://scripts/chest_content_area.gd" id="3_0lud5"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="4_2bxtc"]
+[ext_resource type="Resource" uid="uid://cx10cu2bnwcgp" path="res://scripts/Resources/Catchables/Tree/Squirel.tres" id="4_6d8m4"]
+[ext_resource type="Script" path="res://scripts/Resources/Documents/document.gd" id="5_4pthk"]
+[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="6_7nwq4"]
+[ext_resource type="Resource" uid="uid://548cjswx7dc5" path="res://scripts/Resources/Documents/PhotoCaveEntrance.tres" id="6_41nii"]
+[ext_resource type="Script" path="res://scripts/Resources/all_documents.gd" id="7_07fq0"]
+
+[sub_resource type="Resource" id="Resource_cy4me"]
+script = ExtResource("7_07fq0")
+document_list = Array[ExtResource("5_4pthk")]([ExtResource("6_41nii")])
+
+[sub_resource type="Resource" id="Resource_6jth5"]
+script = ExtResource("6_7nwq4")
+name = ""
+waiting_time = 0.01
+catchables = Array[ExtResource("4_2bxtc")]([])
+default_catchables = Array[ExtResource("4_2bxtc")]([])
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_13mks"]
+points = PackedVector3Array(-1.37065, -1, -1.20512, -1.37065, -1, 1.20512, -1.37065, -0.250137, -1.20512, 1.37065, -1, -1.20512, -1.37065, -0.250137, 1.20512, 1.37065, -1, 1.20512, -1.37065, 0.0127687, -1.20442, 1.37065, -0.250137, -1.20512, -1.37065, 0.0127687, 1.20418, 1.37065, -0.250137, 1.20512, -1.37065, 0.225381, -1.15204, 1.37065, 0.0127687, -1.20442, -1.37065, 0.225381, 1.1518, 1.37065, 0.0127687, 1.20418, -1.37065, 0.445117, -1.09495, 1.37065, 0.225381, -1.15204, -1.37065, 0.445117, 1.09471, 1.37065, 0.225381, 1.1518, -1.37065, 0.662909, -0.934278, 1.37065, 0.445117, -1.09495, -1.37065, 0.662909, 0.934042, 1.37065, 0.445117, 1.09471, -1.37065, 0.876169, -0.772431, 1.37065, 0.662909, -0.934278, -1.37065, 0.876169, 0.772195, 1.37065, 0.662909, 0.934042, -1.37065, 0.987332, -0.608461, 1.37065, 0.876169, -0.772431, -1.37065, 0.987332, 0.608225, 1.37065, 0.876169, 0.772195, -1.37065, 1.09612, -0.442603, 1.37065, 0.987332, -0.608461, -1.37065, 1.09612, 0.442367, 1.37065, 0.987332, 0.608225, -1.37065, 1.15181, -0.225548, 1.37065, 1.09612, -0.442603, -1.37065, 1.15181, 0.225312, 1.37065, 1.09612, 0.442367, -1.37065, 1.20512, 0, 1.37065, 1.15181, -0.225548, 1.37065, 1.15181, 0.225312, 1.37065, 1.20512, 0)
+
+[node name="chest" instance=ExtResource("1_wccmy")]
+script = ExtResource("2_044pl")
+
+[node name="Cube_169" parent="." index="0"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -2, 0)
+
+[node name="StaticBody3D" parent="Cube_169" index="0"]
+collision_layer = 1
+collision_mask = 2
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_169/StaticBody3D" index="1"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+collision_layer = 4097
+collision_mask = 258
+script = ExtResource("3_0lud5")
+key_catchable = ExtResource("4_6d8m4")
+content_document = SubResource("Resource_cy4me")
+fishTable = SubResource("Resource_6jth5")
+is_one_shot = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_169/StaticBody3D/StaticBody3D" index="0"]
+transform = Transform3D(-4.80825e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.80825e-08, 0, 0.10076, 0)
+shape = SubResource("ConvexPolygonShape3D_13mks")

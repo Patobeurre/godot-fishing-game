@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2wcrm6l6k8v1"]
+
+[ext_resource type="PackedScene" uid="uid://b3mrwd8yghkb6" path="res://models/digits/8.glb" id="1_a7282"]
+[ext_resource type="Material" uid="uid://mi4biohw11xn" path="res://materials/digit.tres" id="2_yxcr8"]
+
+[node name="8" instance=ExtResource("1_a7282")]
+
+[node name="Cube_008" parent="." index="0"]
+material_override = ExtResource("2_yxcr8")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://v68cy5668k0s"]
+
+[ext_resource type="PackedScene" uid="uid://hmfod34qpelb" path="res://models/Decorations/map_frame.glb" id="1_cds6x"]
+
+[node name="map_frame" instance=ExtResource("1_cds6x")]
+
+[node name="map_merged" parent="." index="0"]
+transform = Transform3D(3.7749e-08, 0.31, -1.62606e-08, 0, -1.35505e-08, -0.372, -0.5, 2.34044e-08, -1.22764e-15, 0, 0, 0)
+layers = 1025

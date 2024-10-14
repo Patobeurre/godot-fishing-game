@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://7dtt4lrqv2bn"]
+
+[ext_resource type="Texture2D" uid="uid://d3jtjl81kb80f" path="res://sprites/hit_debug.png" id="1_g36ma"]
+[ext_resource type="Script" path="res://sprites/hit_debug.gd" id="2_irreu"]
+
+[node name="HitDebug" type="Sprite3D"]
+billboard = 1
+texture = ExtResource("1_g36ma")
+script = ExtResource("2_irreu")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

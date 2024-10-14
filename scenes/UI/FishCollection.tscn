@@ -1,0 +1,303 @@
+[gd_scene load_steps=21 format=3 uid="uid://u2so53vo6ln8"]
+
+[ext_resource type="Script" path="res://scripts/UI/FishCollection.gd" id="1_vadpx"]
+[ext_resource type="PackedScene" uid="uid://dvudi6kooo44u" path="res://objects/UI/FishEntry.tscn" id="2_87y58"]
+[ext_resource type="Texture2D" uid="uid://d0vhrkrd8i2uf" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-default.png" id="2_l2ux7"]
+[ext_resource type="Texture2D" uid="uid://lkseiwb1yb1a" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-double.png" id="3_m8178"]
+[ext_resource type="Script" path="res://scripts/UI/Components/CategoryBtn.gd" id="3_opvk5"]
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="4_bdkwx"]
+[ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="5_xbkqn"]
+[ext_resource type="Resource" uid="uid://eqi3uvm17to0" path="res://scripts/Resources/Categories/Insects.tres" id="6_8mn7x"]
+[ext_resource type="Resource" uid="uid://catedw4i7v6px" path="res://scripts/Resources/Categories/Animals.tres" id="7_il0o0"]
+[ext_resource type="Resource" uid="uid://dsaa6q3411ycd" path="res://scripts/Resources/Categories/Secrets.tres" id="8_ae5mx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0u3x"]
+atlas = ExtResource("2_l2ux7")
+region = Rect2(0, 128, 256, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0ohe"]
+atlas = ExtResource("2_l2ux7")
+region = Rect2(0, 128, 256, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10pm0"]
+atlas = ExtResource("2_l2ux7")
+region = Rect2(0, 128, 256, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5c7k5"]
+atlas = ExtResource("2_l2ux7")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oweff"]
+atlas = ExtResource("3_m8178")
+region = Rect2(0, 0, 512, 128)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eua3l"]
+content_margin_left = 32.0
+content_margin_right = 32.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wr7vg"]
+atlas = ExtResource("3_m8178")
+region = Rect2(1120, 944, 32, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c2sir"]
+texture = SubResource("AtlasTexture_wr7vg")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+expand_margin_left = 32.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2e7hj"]
+bg_color = Color(0, 0, 0, 0.521569)
+expand_margin_left = 32.0
+
+[sub_resource type="Theme" id="Theme_2ayyg"]
+ScrollContainer/styles/panel = SubResource("StyleBoxEmpty_eua3l")
+VScrollBar/styles/grabber = SubResource("StyleBoxTexture_c2sir")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_c2sir")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_c2sir")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_2e7hj")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_2e7hj")
+
+[node name="FishCollection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_vadpx")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="HSplitContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 150
+
+[node name="Categories" type="VBoxContainer" parent="HSplitContainer/MarginContainer2"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BtnFishes" type="TextureButton" parent="HSplitContainer/MarginContainer2/Categories"]
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+action_mode = 0
+texture_normal = SubResource("AtlasTexture_t0u3x")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_opvk5")
+category = ExtResource("4_bdkwx")
+
+[node name="CenterContainer" type="CenterContainer" parent="HSplitContainer/MarginContainer2/Categories/BtnFishes"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HSplitContainer/MarginContainer2/Categories/BtnFishes/CenterContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Fishes"
+fit_content = true
+autowrap_mode = 0
+
+[node name="BtnNature" type="TextureButton" parent="HSplitContainer/MarginContainer2/Categories"]
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+size_flags_vertical = 0
+action_mode = 0
+texture_normal = SubResource("AtlasTexture_n0ohe")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_opvk5")
+category = ExtResource("5_xbkqn")
+
+[node name="CenterContainer" type="CenterContainer" parent="HSplitContainer/MarginContainer2/Categories/BtnNature"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HSplitContainer/MarginContainer2/Categories/BtnNature/CenterContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Natural"
+fit_content = true
+autowrap_mode = 0
+
+[node name="BtnInsect" type="TextureButton" parent="HSplitContainer/MarginContainer2/Categories"]
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+size_flags_vertical = 0
+action_mode = 0
+texture_normal = SubResource("AtlasTexture_10pm0")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_opvk5")
+category = ExtResource("6_8mn7x")
+
+[node name="CenterContainer" type="CenterContainer" parent="HSplitContainer/MarginContainer2/Categories/BtnInsect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HSplitContainer/MarginContainer2/Categories/BtnInsect/CenterContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Insects
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="BtnAnimal" type="TextureButton" parent="HSplitContainer/MarginContainer2/Categories"]
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+size_flags_vertical = 0
+action_mode = 0
+texture_normal = SubResource("AtlasTexture_10pm0")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_opvk5")
+category = ExtResource("7_il0o0")
+
+[node name="CenterContainer" type="CenterContainer" parent="HSplitContainer/MarginContainer2/Categories/BtnAnimal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HSplitContainer/MarginContainer2/Categories/BtnAnimal/CenterContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Animals"
+fit_content = true
+autowrap_mode = 0
+
+[node name="BtnSecret" type="TextureButton" parent="HSplitContainer/MarginContainer2/Categories"]
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+size_flags_vertical = 0
+action_mode = 0
+texture_normal = SubResource("AtlasTexture_10pm0")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_opvk5")
+category = ExtResource("8_ae5mx")
+
+[node name="CenterContainer" type="CenterContainer" parent="HSplitContainer/MarginContainer2/Categories/BtnSecret"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HSplitContainer/MarginContainer2/Categories/BtnSecret/CenterContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "???"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 50
+
+[node name="NinePatchRect" type="NinePatchRect" parent="HSplitContainer/MarginContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_5c7k5")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="VSplitContainer" type="VSplitContainer" parent="HSplitContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="HSplitContainer/MarginContainer/VSplitContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HSplitContainer/MarginContainer/VSplitContainer/CenterContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_oweff")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="HSplitContainer/MarginContainer/VSplitContainer/CenterContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Encyclopedia"
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/MarginContainer/VSplitContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme = SubResource("Theme_2ayyg")
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="FishEntry" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_87y58")]
+layout_mode = 2
+
+[node name="FishEntry2" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_87y58")]
+layout_mode = 2
+
+[node name="FishEntry3" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_87y58")]
+layout_mode = 2
+
+[node name="FishEntry4" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_87y58")]
+layout_mode = 2
+
+[connection signal="pressed" from="HSplitContainer/MarginContainer2/Categories/BtnFishes" to="." method="_on_btn_fishes_pressed"]
+[connection signal="pressed" from="HSplitContainer/MarginContainer2/Categories/BtnNature" to="." method="_on_btn_nature_pressed"]
+[connection signal="pressed" from="HSplitContainer/MarginContainer2/Categories/BtnInsect" to="." method="_on_btn_insect_pressed"]
+[connection signal="pressed" from="HSplitContainer/MarginContainer2/Categories/BtnAnimal" to="." method="_on_btn_animal_pressed"]
+[connection signal="pressed" from="HSplitContainer/MarginContainer2/Categories/BtnSecret" to="." method="_on_btn_secret_pressed"]

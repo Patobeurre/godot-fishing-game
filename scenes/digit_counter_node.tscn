@@ -1,0 +1,18 @@
+[gd_scene load_steps=12 format=3 uid="uid://cr5ar4w70tct6"]
+
+[ext_resource type="Script" path="res://scripts/digit_counter.gd" id="1_gp3kg"]
+[ext_resource type="PackedScene" uid="uid://bq26rsfes86p5" path="res://models/digits/0.tscn" id="2_mmrnk"]
+[ext_resource type="PackedScene" uid="uid://b8j2f68ik6s5u" path="res://models/digits/1.tscn" id="3_rurf3"]
+[ext_resource type="PackedScene" uid="uid://c1nmf5bc3aqqy" path="res://models/digits/2.tscn" id="4_idomp"]
+[ext_resource type="PackedScene" uid="uid://cp8p44lt75hky" path="res://models/digits/3.tscn" id="5_21p5g"]
+[ext_resource type="PackedScene" uid="uid://b5ben773namrn" path="res://models/digits/4.tscn" id="6_oea2g"]
+[ext_resource type="PackedScene" uid="uid://dmaohk7nxi024" path="res://models/digits/5.tscn" id="7_1q8sr"]
+[ext_resource type="PackedScene" uid="uid://b6isc32q3x12e" path="res://models/digits/6.tscn" id="8_mihbe"]
+[ext_resource type="PackedScene" uid="uid://dk5afi28f16af" path="res://models/digits/7.tscn" id="9_gjbmm"]
+[ext_resource type="PackedScene" uid="uid://b2wcrm6l6k8v1" path="res://models/digits/8.tscn" id="10_4xnbx"]
+[ext_resource type="PackedScene" uid="uid://ci5vyfpinddt5" path="res://models/digits/9.tscn" id="11_xynd6"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_gp3kg")
+value = 251634
+digits_meshes = Array[PackedScene]([ExtResource("2_mmrnk"), ExtResource("3_rurf3"), ExtResource("4_idomp"), ExtResource("5_21p5g"), ExtResource("6_oea2g"), ExtResource("7_1q8sr"), ExtResource("8_mihbe"), ExtResource("9_gjbmm"), ExtResource("10_4xnbx"), ExtResource("11_xynd6")])

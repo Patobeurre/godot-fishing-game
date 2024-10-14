@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=3 uid="uid://m3tt8vwpks8u"]
+
+[ext_resource type="Script" path="res://scripts/UI/LureCollection.gd" id="1_fuwy6"]
+[ext_resource type="Texture2D" uid="uid://d0vhrkrd8i2uf" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-default.png" id="2_d73lc"]
+[ext_resource type="Texture2D" uid="uid://lkseiwb1yb1a" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-double.png" id="3_ulj0l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op13t"]
+atlas = ExtResource("2_d73lc")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2adld"]
+atlas = ExtResource("3_ulj0l")
+region = Rect2(0, 0, 512, 128)
+
+[node name="LureCollection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_fuwy6")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 50
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_op13t")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="VSplitContainer" type="VSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VSplitContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VSplitContainer/CenterContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_2adld")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VSplitContainer/CenterContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Lure Collection"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VSplitContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VSplitContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 7

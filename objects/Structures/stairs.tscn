@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://bahahtd4te64k"]
+
+[ext_resource type="PackedScene" uid="uid://beatvmyq7sl5d" path="res://models/Structures/stairs.glb" id="1_s2uoj"]
+
+[node name="stairs" instance=ExtResource("1_s2uoj")]
+
+[node name="Cube_156" parent="." index="0"]
+transform = Transform3D(0.2, 0, 0, 0, 0.05, 0, 0, 0, 0.6, -1, 0.22252, -0.5)
+
+[node name="Cube_179" parent="." index="1"]
+transform = Transform3D(0.2, 0, 0, 0, 0.05, 0, 0, 0, 0.6, -0.6, -0.0774795, -0.5)
+
+[node name="Cube_180" parent="." index="2"]
+transform = Transform3D(0.2, 0, 0, 0, 0.05, 0, 0, 0, 0.6, -0.2, -0.377479, -0.5)
+
+[node name="Cube_181" parent="." index="3"]
+transform = Transform3D(0.2, 0, 0, 0, 0.05, 0, 0, 0, 0.6, 0.2, -0.67748, -0.5)
+
+[node name="Cube_182" parent="." index="4"]
+transform = Transform3D(0.2, 0, 0, 0, 0.05, 0, 0, 0, 0.6, 1, -1.27748, -0.5)
+
+[node name="Cube_183" parent="." index="5"]
+transform = Transform3D(0.2, 0, 0, 0, 0.05, 0, 0, 0, 0.6, 0.6, -0.977479, -0.5)
+
+[node name="collision" parent="." index="6"]
+transform = Transform3D(1.2, 0, 0, 0, 1, 0, 0, 0, 0.6, 0, -0.777479, -0.5)
+visible = false

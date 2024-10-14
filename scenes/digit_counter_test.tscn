@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy488cid1oeo2"]
+
+[ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_30gwl"]
+[ext_resource type="PackedScene" uid="uid://cr5ar4w70tct6" path="res://scenes/digit_counter_node.tscn" id="2_vmba8"]
+
+[node name="Digit-counter" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 33.8186)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_30gwl")
+
+[node name="Node3D" parent="." instance=ExtResource("2_vmba8")]

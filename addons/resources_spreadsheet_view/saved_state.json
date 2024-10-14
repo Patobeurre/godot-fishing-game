@@ -1,0 +1,59 @@
+{
+  "hidden_columns": {
+    "res://scripts/Resources/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://scripts/Resources/Catchable/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://scripts/Resources/Catchables/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://scripts/Resources/Catchables/Birds/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://scripts/Resources/Catchables/Fishes/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://scripts/Resources/Catchables/Tree/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://scripts/Resources/Document/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://scripts/Resources/Documents/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://scripts/Resources/Identification/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    }
+  },
+  "recent_paths": [
+    "res://scripts/Resources/Catchables/Tree/",
+    "res://scripts/Resources/Catchables/",
+    "res://scripts/Resources/Catchables/Fishes/",
+    "res://scripts/Resources/",
+    "res://scripts/Resources/Identification/",
+    "res://scripts/Resources/Catchables/Birds/",
+    "res://scripts/Resources/Documents/",
+    "res://scripts/Resources/Document/",
+    "res://scripts/Resources/Catchable/"
+  ],
+  "table_functions": {
+    "filter": [
+      "return true"
+    ],
+    "process": [
+      "return value"
+    ]
+  }
+}

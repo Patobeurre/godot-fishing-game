@@ -1,0 +1,85 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3h8dbli33h2x"]
+
+[ext_resource type="PackedScene" uid="uid://d311niu0yc017" path="res://models/Structures/test_house.glb" id="1_btod8"]
+[ext_resource type="PackedScene" uid="uid://jpcqna82x0yo" path="res://objects/Structures/bed.tscn" id="2_fchod"]
+[ext_resource type="PackedScene" uid="uid://bhftgu4ii2mh3" path="res://objects/Structures/bookshelve.tscn" id="3_5xcf1"]
+[ext_resource type="PackedScene" uid="uid://v68cy5668k0s" path="res://objects/Decorations/map_frame.tscn" id="4_o6kp1"]
+[ext_resource type="PackedScene" uid="uid://ug82iwvm6vr" path="res://objects/Decorations/desk.tscn" id="5_o7upv"]
+[ext_resource type="PackedScene" uid="uid://c7ypwv6eb2jgw" path="res://objects/FishingGear.tscn" id="6_w6ikm"]
+
+[node name="test_house" instance=ExtResource("1_btod8")]
+
+[node name="wood_log_078" parent="." index="0"]
+layers = 1025
+
+[node name="wood_log_071" parent="." index="1"]
+layers = 1025
+
+[node name="wood_log_064" parent="." index="2"]
+layers = 1025
+
+[node name="wood_log_047" parent="." index="3"]
+layers = 1025
+
+[node name="Cube_174" parent="." index="5"]
+layers = 1025
+
+[node name="StaticBody3D" parent="Cube_174" index="0"]
+collision_mask = 274
+
+[node name="floor_001" parent="." index="6"]
+layers = 1025
+
+[node name="StaticBody3D" parent="floor_001" index="0"]
+collision_layer = 65
+metadata/footstep_sounds = "res://sounds/walking_wood.ogg"
+
+[node name="Cube_171" parent="." index="7"]
+layers = 1025
+
+[node name="Cube_167" parent="." index="8"]
+layers = 1025
+
+[node name="Cube_162" parent="." index="9"]
+layers = 1025
+
+[node name="Cube_157" parent="." index="13"]
+layers = 1025
+
+[node name="Cube_156" parent="." index="14"]
+layers = 1025
+
+[node name="collision" parent="." index="15"]
+visible = false
+
+[node name="StaticBody3D" parent="collision" index="0"]
+collision_layer = 65
+metadata/footstep_sounds = "res://sounds/walking_wood.ogg"
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="16"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2.56797, 0)
+light_color = Color(1, 0.968179, 0.628576, 1)
+light_indirect_energy = 0.0
+light_specular = 0.0
+light_bake_mode = 1
+light_cull_mask = 4293919744
+shadow_enabled = true
+spot_range = 10.0
+spot_angle = 114.65
+spot_angle_attenuation = 1.51572
+
+[node name="bed" parent="." index="17" instance=ExtResource("2_fchod")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -2.01171, 0.310571, 2.58952)
+
+[node name="bookshelve" parent="." index="18" instance=ExtResource("3_5xcf1")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.00801, 0.29784, 0.204633)
+mass = 80.0
+
+[node name="map_frame" parent="." index="19" instance=ExtResource("4_o6kp1")]
+transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, 2.36388, 1.77737, 3.34916)
+
+[node name="desk" parent="." index="20" instance=ExtResource("5_o7upv")]
+transform = Transform3D(-2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, 1.86757, 0.410706, 2.8794)
+
+[node name="FishingGear" parent="." index="21" instance=ExtResource("6_w6ikm")]
+transform = Transform3D(0.353526, 0, -0.484788, 0, 0.6, 0, 0.484788, 0, 0.353526, 3.20427, 0.30923, -3.17496)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2xklsnk575i1"]
+
+[ext_resource type="PackedScene" uid="uid://br03s31rbquho" path="res://models/Decorations/campfire.glb" id="1_nsaua"]
+
+[node name="campfire" instance=ExtResource("1_nsaua")]
+
+[node name="collider" parent="." index="20"]
+visible = false

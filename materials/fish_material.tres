@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dl5hyapbyi5mp"]
+
+[ext_resource type="Texture2D" uid="uid://curx4la1f2ttp" path="res://materials/fish_palette.png" id="1_rqil6"]
+
+[resource]
+resource_name = "Material.080"
+cull_mode = 2
+albedo_texture = ExtResource("1_rqil6")

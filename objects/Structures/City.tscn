@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxyg0pmqu6sbf"]
+
+[ext_resource type="Script" path="res://scripts/City/city.gd" id="1_iq1r5"]
+[ext_resource type="PackedScene" uid="uid://bcx7famjo1lr1" path="res://objects/Structures/Skyscraper.tscn" id="1_kvg4i"]
+
+[node name="City" type="Node3D"]
+script = ExtResource("1_iq1r5")
+
+[node name="Skyscrapers" type="Node3D" parent="."]
+
+[node name="Skyscraper" parent="Skyscrapers" instance=ExtResource("1_kvg4i")]
+max_size = 8
+starting_day = 5
+
+[node name="Skyscraper2" parent="Skyscrapers" instance=ExtResource("1_kvg4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
+max_size = 6
+starting_day = 2
+
+[node name="Skyscraper3" parent="Skyscrapers" instance=ExtResource("1_kvg4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
+max_size = 3
+starting_day = 4
+
+[node name="Skyscraper4" parent="Skyscrapers" instance=ExtResource("1_kvg4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.964061, 0, 2.01933)
+max_size = 4
+starting_day = 4
+
+[node name="Skyscraper5" parent="Skyscrapers" instance=ExtResource("1_kvg4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14289, 0, -2.27071)
+max_size = 3
+starting_day = 6

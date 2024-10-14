@@ -1,0 +1,183 @@
+[gd_scene load_steps=12 format=3 uid="uid://cgtnphnrnow2r"]
+
+[ext_resource type="PackedScene" uid="uid://cj51g6iwjr8fm" path="res://objects/enemies/test_anim.glb" id="1_7u08g"]
+[ext_resource type="Script" path="res://objects/enemies/head.gd" id="2_3g5pb"]
+[ext_resource type="Script" path="res://objects/enemies/bodyshot.gd" id="2_bwwxj"]
+[ext_resource type="Material" uid="uid://b6l8i5v3dexay" path="res://materials/base_surface.tres" id="2_m4br1"]
+[ext_resource type="Material" uid="uid://mi4biohw11xn" path="res://materials/digit.tres" id="4_55ktm"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nc62d"]
+points = PackedVector3Array(0.220303, 5.18283, -0.553429, 0.0295341, 5.20198, 0.612864, 0.105626, 5.18281, 0.590693, -0.0468847, 4.55352, -0.0189969, -0.524335, 5.48832, -0.0381684, 0.545534, 5.45047, 0.0381956, 0.524756, 4.83998, 0.0380789, 0.0294605, 5.77512, 0.0381762, -0.53973, 4.8793, -0.0568093, -0.333231, 5.18284, -0.515448, -0.180191, 4.89714, 0.533485, 0.105809, 5.69827, -0.30543, -0.445619, 5.42975, 0.341991, 0.16206, 4.82254, -0.492985, 0.450174, 4.877, 0.324918, 0.19988, 5.44821, 0.51188, 0.581234, 5.18278, -0.209221, -0.19854, 4.87897, -0.512706, -0.425532, 4.84165, 0.32205, -0.160404, 5.50524, -0.493344, 0.258974, 4.62826, 0.191265, -0.257546, 5.69952, 0.191353, -0.257546, 5.69952, -0.191353, 0.276645, 4.65038, -0.209168, 0.426535, 5.48538, -0.321552, 0.581234, 5.18278, 0.209222, 0.315501, 5.69782, 0.0189989, -0.122947, 4.6304, -0.285749, -0.578584, 5.20167, 0.208865, -0.577349, 5.12594, -0.208419, 0.450174, 4.877, -0.324918, -0.0850429, 4.62911, 0.305587, 0.16206, 4.82254, 0.492985, -0.160404, 5.50524, 0.493345, -0.3682, 5.20153, 0.492127, -0.314076, 4.62943, 0.0190132, -0.44562, 5.42975, -0.34199, 0.105809, 5.69827, 0.305431, -0.425532, 4.84165, -0.32205, 0.426534, 5.48538, 0.321553, 0.369308, 5.12617, 0.49139, 0.0295342, 5.20198, -0.612864, 0.164138, 5.43262, -0.537722, 0.389986, 5.14491, -0.474539, -0.539729, 4.8793, 0.0568099, -0.0277851, 5.12563, -0.613428)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_87kux"]
+points = PackedVector3Array(-0.382719, 0.249883, -0.92388, -0.52018, -0.45, -0.52018, -0.92388, 0.249883, -0.382719, -0.382719, 0.85, -0.92388, 0.382538, 0.249883, -0.92388, -0.52018, -0.45, 0.519999, 0.519999, -0.45, -0.52018, -0.92388, 0.249883, 0.382538, -0.92388, 0.85, -0.382719, 0.382538, 0.85, -0.92388, 0.92388, 0.249883, -0.382719, -0.382719, 0.249883, 0.92388, 0.519999, -0.45, 0.519999, -0.92388, 0.85, 0.382538, 0.92388, 0.85, -0.382719, 0.92388, 0.249883, 0.382538, -0.382719, 0.85, 0.92388, 0.382538, 0.249883, 0.92388, 0.92388, 0.85, 0.382538, 0.382538, 0.85, 0.92388)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gfl2h"]
+points = PackedVector3Array(0.877685, 1.835, 0.363411, 0.363411, 1.835, 0.877686, 0.877685, 1.26489, 0.363411, 0.877685, 1.835, -0.363583, -0.363583, 1.835, 0.877686, 0.363411, 1.26489, 0.877686, 0.493999, 0.6, 0.493999, 0.877685, 1.26489, -0.363583, 0.363411, 1.835, -0.877686, -0.363583, 1.26489, 0.877686, -0.877686, 1.835, 0.363411, -0.494171, 0.6, 0.493999, 0.493999, 0.6, -0.494171, 0.363411, 1.26489, -0.877686, -0.363583, 1.835, -0.877686, -0.877686, 1.26489, 0.363411, -0.877686, 1.835, -0.363583, -0.494171, 0.6, -0.494171, -0.363583, 1.26489, -0.877686, -0.877686, 1.26489, -0.363583)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tpcdc"]
+points = PackedVector3Array(0.831492, 2.82, 0.344284, 0.344284, 2.82, 0.831492, 0.831492, 2.27989, 0.344284, 0.831492, 2.82, -0.344447, -0.344447, 2.82, 0.831492, 0.344284, 2.27989, 0.831492, 0.467999, 1.65, 0.467999, 0.831492, 2.27989, -0.344447, 0.344284, 2.82, -0.831492, -0.344447, 2.27989, 0.831492, -0.831492, 2.82, 0.344284, -0.468162, 1.65, 0.467999, 0.467999, 1.65, -0.468162, 0.344284, 2.27989, -0.831492, -0.344447, 2.82, -0.831492, -0.831492, 2.27989, 0.344284, -0.831492, 2.82, -0.344447, -0.468162, 1.65, -0.468162, -0.344447, 2.27989, -0.831492, -0.831492, 2.27989, -0.344447)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qloid"]
+points = PackedVector3Array(-0.325311, 3.2949, -0.785298, -0.442153, 2.7, -0.442153, -0.785298, 3.2949, -0.325311, -0.325311, 3.805, -0.785298, 0.325158, 3.2949, -0.785298, -0.442153, 2.7, 0.441999, 0.441999, 2.7, -0.442153, -0.785298, 3.2949, 0.325157, -0.785298, 3.805, -0.325311, 0.325158, 3.805, -0.785298, 0.785144, 3.2949, -0.325311, -0.325311, 3.2949, 0.785298, 0.441999, 2.7, 0.441999, -0.785298, 3.805, 0.325157, 0.785144, 3.805, -0.325311, 0.785144, 3.2949, 0.325157, -0.325311, 3.805, 0.785298, 0.325158, 3.2949, 0.785298, 0.785144, 3.805, 0.325157, 0.325158, 3.805, 0.785298)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dwove"]
+points = PackedVector3Array(-0.306175, 4.30991, -0.739104, -0.416144, 3.75, -0.416144, -0.739104, 4.30991, -0.306175, -0.306175, 4.79, -0.739104, 0.306031, 4.30991, -0.739104, -0.416144, 3.75, 0.415999, 0.415999, 3.75, -0.416144, -0.739104, 4.30991, 0.306031, -0.739104, 4.79, -0.306175, 0.306031, 4.79, -0.739104, 0.739104, 4.30991, -0.306175, -0.306175, 4.30991, 0.739104, 0.415999, 3.75, 0.415999, -0.739104, 4.79, 0.306031, 0.739104, 4.79, -0.306175, 0.739104, 4.30991, 0.306031, -0.306175, 4.79, 0.739104, 0.306031, 4.30991, 0.739104, 0.739104, 4.79, 0.306031, 0.306031, 4.79, 0.739104)
+
+[node name="test_anim" instance=ExtResource("1_7u08g")]
+
+[node name="Skeleton3D" parent="Armature_001" index="0"]
+bones/0/rotation = Quaternion(0.00502496, -8.53742e-18, -1.77482e-18, 0.999987)
+bones/1/rotation = Quaternion(-0.0113494, -3.14269e-17, 4.66657e-18, 0.999936)
+bones/2/rotation = Quaternion(0.00857746, 1.06517e-18, -3.59112e-18, 0.999963)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(-0.00260875, 3.60057e-19, 1.31702e-18, 0.999997)
+bones/4/rotation = Quaternion(-0.000311716, 0.707107, -0.000311716, 0.707107)
+bones/4/scale = Vector3(1, 1, 1)
+bones/6/rotation = Quaternion(0.814821, 0.0104517, 0.00756473, 0.579569)
+bones/6/scale = Vector3(1, 1, 1)
+bones/8/rotation = Quaternion(5.64897e-08, 7.27832e-09, 0.816018, 0.578027)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/rotation = Quaternion(0.498238, -0.501756, 0.498238, 0.501756)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/rotation = Quaternion(-0.816018, 3.18484e-07, 6.82676e-07, 0.578026)
+bones/11/rotation = Quaternion(0.707107, -8.85116e-08, -1.41897e-07, 0.707107)
+bones/12/rotation = Quaternion(-0.819152, 5.17698e-08, 3.76947e-07, 0.573577)
+
+[node name="Cube" parent="Armature_001/Skeleton3D" index="0"]
+material_override = ExtResource("2_m4br1")
+
+[node name="Cube_001" parent="Armature_001/Skeleton3D" index="1"]
+material_override = ExtResource("2_m4br1")
+
+[node name="Cube_002" parent="Armature_001/Skeleton3D" index="2"]
+material_override = ExtResource("2_m4br1")
+
+[node name="Cube_003" parent="Armature_001/Skeleton3D" index="3"]
+material_override = ExtResource("2_m4br1")
+
+[node name="Cylinder_002" parent="Armature_001/Skeleton3D" index="4"]
+material_override = ExtResource("2_m4br1")
+
+[node name="StaticBody3D" parent="Armature_001/Skeleton3D/Cylinder_002" index="0"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="Cylinder_008" parent="Armature_001/Skeleton3D" index="5"]
+material_override = ExtResource("2_m4br1")
+
+[node name="StaticBody3D" parent="Armature_001/Skeleton3D/Cylinder_008" index="0"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="Cylinder_009" parent="Armature_001/Skeleton3D" index="6"]
+material_override = ExtResource("2_m4br1")
+
+[node name="StaticBody3D" parent="Armature_001/Skeleton3D/Cylinder_009" index="0"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="Cylinder_010" parent="Armature_001/Skeleton3D" index="7"]
+material_override = ExtResource("2_m4br1")
+
+[node name="StaticBody3D" parent="Armature_001/Skeleton3D/Cylinder_010" index="0"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="Cylinder_011" parent="Armature_001/Skeleton3D" index="8"]
+material_override = ExtResource("2_m4br1")
+
+[node name="StaticBody3D" parent="Armature_001/Skeleton3D/Cylinder_011" index="0"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="Icosphere" parent="Armature_001/Skeleton3D" index="9"]
+material_override = ExtResource("4_55ktm")
+
+[node name="StaticBody3D" parent="Armature_001/Skeleton3D/Icosphere" index="0"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="HeadBone" type="BoneAttachment3D" parent="Armature_001/Skeleton3D" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+bone_name = "IK"
+bone_idx = 13
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Armature_001/Skeleton3D/HeadBone" index="0"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("2_3g5pb")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Armature_001/Skeleton3D/HeadBone/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+shape = SubResource("ConvexPolygonShape3D_nc62d")
+
+[node name="Body1" type="BoneAttachment3D" parent="Armature_001/Skeleton3D" index="11"]
+transform = Transform3D(1, 3.4638e-18, -1.70925e-17, -3.6354e-18, 0.99995, -0.0100498, 1.70568e-17, 0.0100498, 0.99995, 0, 0.25, 0)
+bone_name = "body1"
+bone_idx = 0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Armature_001/Skeleton3D/Body1" index="0"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("2_bwwxj")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Armature_001/Skeleton3D/Body1/StaticBody3D" index="0"]
+transform = Transform3D(1, -3.63539e-18, 1.70568e-17, 3.46379e-18, 0.99995, 0.0100498, -1.70925e-17, -0.0100498, 0.99995, 9.08847e-19, -0.249987, 0.00251245)
+shape = SubResource("ConvexPolygonShape3D_87kux")
+
+[node name="Body2" type="BoneAttachment3D" parent="Armature_001/Skeleton3D" index="12"]
+transform = Transform3D(1, -4.76833e-18, -7.99651e-17, 5.77942e-18, 0.99992, 0.012649, 7.98984e-17, -0.012649, 0.99992, 3.4638e-18, 1.24995, 0.0100498)
+bone_name = "body2"
+bone_idx = 1
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Armature_001/Skeleton3D/Body2" index="0"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("2_bwwxj")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Armature_001/Skeleton3D/Body2/StaticBody3D" index="0"]
+transform = Transform3D(1, 5.77944e-18, 7.98984e-17, -4.76835e-18, 0.99992, -0.012649, -7.99651e-17, 0.012649, 0.99992, -1.14908e-17, -1.24972, -0.0258595)
+shape = SubResource("ConvexPolygonShape3D_gfl2h")
+
+[node name="Body3" type="BoneAttachment3D" parent="Armature_001/Skeleton3D" index="13"]
+transform = Transform3D(1, 1.06088e-18, -7.78029e-17, -1.41144e-18, 0.99999, -0.00450581, 7.77973e-17, 0.00450581, 0.99999, -1.30451e-18, 2.24987, -0.00259924)
+bone_name = "body3"
+bone_idx = 2
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Armature_001/Skeleton3D/Body3" index="0"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("2_bwwxj")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Armature_001/Skeleton3D/Body3/StaticBody3D" index="0"]
+transform = Transform3D(1, -1.41141e-18, 7.77973e-17, 1.06086e-18, 0.99999, 0.00450582, -7.78029e-17, -0.00450582, 0.99999, 4.68225e-18, -2.24984, 0.0127367)
+shape = SubResource("ConvexPolygonShape3D_tpcdc")
+
+[node name="Body4" type="BoneAttachment3D" parent="Armature_001/Skeleton3D" index="14"]
+transform = Transform3D(1, -1.16911e-18, -7.70831e-17, 1.22396e-18, 1, 0.000711679, 7.70822e-17, -0.000711679, 1, -2.43579e-19, 3.24986, 0.00190657)
+bone_name = "body4"
+bone_idx = 3
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Armature_001/Skeleton3D/Body4" index="0"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("2_bwwxj")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Armature_001/Skeleton3D/Body4/StaticBody3D" index="0"]
+transform = Transform3D(1, -1.41141e-18, 7.77973e-17, 1.06086e-18, 0.99999, 0.00450582, -7.78029e-17, -0.00450582, 0.99999, 4.68225e-18, -2.24984, 0.0127367)
+shape = SubResource("ConvexPolygonShape3D_qloid")
+
+[node name="Body5" type="BoneAttachment3D" parent="Armature_001/Skeleton3D" index="15"]
+transform = Transform3D(7.70841e-17, -1.10115e-18, 1, -0.00159334, 0.999999, 1.22396e-18, -0.999999, -0.00159334, 7.70822e-17, -1.41262e-18, 4.24986, 0.00119477)
+bone_name = "body5"
+bone_idx = 4
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Armature_001/Skeleton3D/Body5" index="0"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("2_bwwxj")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Armature_001/Skeleton3D/Body5/StaticBody3D" index="0"]
+transform = Transform3D(1, 1.22399e-18, 7.70822e-17, -1.16913e-18, 1, -0.000711677, -7.70831e-17, 0.000711677, 1, -3.88112e-18, -3.24986, -0.00421943)
+shape = SubResource("ConvexPolygonShape3D_dwove")

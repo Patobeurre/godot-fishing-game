@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b68u4vwwaaj8p"]
+
+[ext_resource type="Texture2D" uid="uid://dv6mohrvqtin0" path="res://sprites/fishing_game_bar.png" id="1_fui78"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h23q4"]
+radius = 20.0
+height = 126.667
+
+[node name="FishingGameBar" type="Sprite2D"]
+position = Vector2(517, 500)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_fui78")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.57079
+shape = SubResource("CapsuleShape2D_h23q4")
