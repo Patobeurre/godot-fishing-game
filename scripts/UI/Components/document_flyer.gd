@@ -1,7 +1,7 @@
 extends Node
 
 
-@onready var texture_rect = $CenterContainer/TextureRect
+@onready var texture_rect = $MarginContainer/TextureRect
 
 
 func fill_content(document :FlyerRes):

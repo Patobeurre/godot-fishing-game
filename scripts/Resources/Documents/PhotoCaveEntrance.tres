@@ -7,5 +7,6 @@
 [resource]
 script = ExtResource("1_kg80y")
 image = ExtResource("1_jg1rr")
-receive_day_count = 0
+receive_day_count = -1
+name = "Polaroid of a cave entrance"
 scene = ExtResource("2_ddlko")

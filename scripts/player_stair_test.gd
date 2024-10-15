@@ -498,7 +498,7 @@ func _on_safe_position_timer_timeout() -> void:
 
 func set_stats(stats :CharacterStats) -> void:
 	character_stats = stats
+	safe_position = character_stats.position
 	global_position = character_stats.position
 	global_rotation = character_stats.rotation
 	rotation_target = character_stats.rotation
-	safe_position = character_stats.position

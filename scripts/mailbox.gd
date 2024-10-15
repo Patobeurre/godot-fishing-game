@@ -10,16 +10,25 @@ extends Node3D
 func _ready() -> void:
 	interact_body.interact_performed.connect(interact)
 	MailManager.mail_received.connect(on_mail_received)
+	SignalBus.savegame_loaded.connect(on_mail_received)
+	
 	animation_player.play("up_and_down")
+	display_mail_billboard(false)
 
 
 func on_mail_received():
-	mail_billboard.visible = true
-	letter_mesh.visible = true
+	if not MailManager.has_pending_mail() :
+		return
+	
+	display_mail_billboard(true)
+
+
+func display_mail_billboard(enabled :bool):
+	mail_billboard.visible = enabled
+	letter_mesh.visible = enabled
+
 
 func interact():
 	if MailManager.has_pending_mail():
-		SignalBus.update_document_list.emit(MailManager.pending_mails)
-		mail_billboard.visible = false
-		letter_mesh.visible = false
+		display_mail_billboard(false)
 		UiManager.open("Documents")

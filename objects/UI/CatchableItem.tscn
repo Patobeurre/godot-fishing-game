@@ -4,15 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://lkseiwb1yb1a" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-double.png" id="2_0uwnl"]
 [ext_resource type="Texture2D" uid="uid://cpxour8a7ihec" path="res://icon.png" id="2_wo6d6"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kmk6s"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1e6jx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t6l36"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iytqh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nih7y"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t6l36"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1e6jx"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kmk6s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1p10y"]
 atlas = ExtResource("2_0uwnl")
@@ -32,11 +32,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_type_variation = &"FlatButton"
 theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_kmk6s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1e6jx")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_t6l36")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_iytqh")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_nih7y")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_t6l36")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_1e6jx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kmk6s")
 action_mode = 0
 script = ExtResource("1_4jl6m")
 

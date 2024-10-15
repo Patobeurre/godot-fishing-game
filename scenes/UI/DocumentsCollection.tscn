@@ -1,0 +1,123 @@
+[gd_scene load_steps=12 format=3 uid="uid://cgettvm74710g"]
+
+[ext_resource type="Texture2D" uid="uid://d0vhrkrd8i2uf" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-default.png" id="1_8qqoe"]
+[ext_resource type="Script" path="res://scripts/UI/DocumentsCollection.gd" id="1_jppik"]
+[ext_resource type="Texture2D" uid="uid://lkseiwb1yb1a" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-double.png" id="2_qq58t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ml2bc"]
+atlas = ExtResource("1_8qqoe")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_er8xw"]
+atlas = ExtResource("2_qq58t")
+region = Rect2(0, 0, 512, 128)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eua3l"]
+content_margin_left = 32.0
+content_margin_right = 32.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qa1hm"]
+atlas = ExtResource("2_qq58t")
+region = Rect2(1120, 944, 32, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c2sir"]
+texture = SubResource("AtlasTexture_qa1hm")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+expand_margin_left = 32.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2e7hj"]
+bg_color = Color(0, 0, 0, 0.521569)
+expand_margin_left = 32.0
+
+[sub_resource type="Theme" id="Theme_mhgqr"]
+ScrollContainer/styles/panel = SubResource("StyleBoxEmpty_eua3l")
+VScrollBar/styles/grabber = SubResource("StyleBoxTexture_c2sir")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_c2sir")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_c2sir")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_2e7hj")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_2e7hj")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nw43b"]
+
+[node name="DocumentsCollection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jppik")
+unique_id = "DocumentsCollection"
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="NinePatchRect" type="NinePatchRect" parent="HSplitContainer/MarginContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_ml2bc")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="VSplitContainer" type="VSplitContainer" parent="HSplitContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="HSplitContainer/MarginContainer/VSplitContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HSplitContainer/MarginContainer/VSplitContainer/CenterContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_er8xw")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="HSplitContainer/MarginContainer/VSplitContainer/CenterContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Documents"
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/MarginContainer/VSplitContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 30
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme = SubResource("Theme_mhgqr")
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="PanelContainer" type="PanelContainer" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nw43b")

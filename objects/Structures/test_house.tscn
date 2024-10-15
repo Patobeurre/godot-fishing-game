@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://jpcqna82x0yo" path="res://objects/Structures/bed.tscn" id="2_fchod"]
 [ext_resource type="PackedScene" uid="uid://bhftgu4ii2mh3" path="res://objects/Structures/bookshelve.tscn" id="3_5xcf1"]
 [ext_resource type="PackedScene" uid="uid://v68cy5668k0s" path="res://objects/Decorations/map_frame.tscn" id="4_o6kp1"]
-[ext_resource type="PackedScene" uid="uid://ug82iwvm6vr" path="res://objects/Decorations/desk.tscn" id="5_o7upv"]
+[ext_resource type="PackedScene" uid="uid://ug82iwvm6vr" path="res://objects/Structures/desk.tscn" id="5_o7upv"]
 [ext_resource type="PackedScene" uid="uid://c7ypwv6eb2jgw" path="res://objects/FishingGear.tscn" id="6_w6ikm"]
 
 [node name="test_house" instance=ExtResource("1_btod8")]

@@ -6,6 +6,7 @@ const SAVE_GAME_PATH := "user://save"
 @export var time_stats :TimeStats = TimeStats.new()
 @export var character_stats :CharacterStats = CharacterStats.new()
 @export var fishing_stats :FishingStats = FishingStats.new()
+@export var mail_stats :MailStats = MailStats.new()
 
 
 func write_savegame() -> void:

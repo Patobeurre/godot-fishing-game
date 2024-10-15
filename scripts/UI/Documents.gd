@@ -4,14 +4,9 @@ extends MainUI
 @onready var container = $MarginContainer
 @onready var showing_await_timer :Timer = $ShowingTimer
 
-var documents_to_read :DocumentList
 var current_document :DocumentRes
 
 var is_document_shown :bool = false
-
-
-func _on_ready():
-	SignalBus.update_document_list.connect(on_update_document_list)
 
 
 func _on_process(delta):
@@ -32,20 +27,16 @@ func _on_input(event):
 
 
 func try_read_next_document() -> bool:
-	if documents_to_read.document_list.is_empty():
+	if not MailManager.has_pending_mail():
 		return false
 	
-	current_document = documents_to_read.document_list.pop_front()
+	current_document = MailManager.get_next_mail()
 	
 	if current_document == null:
 		return false
 	
 	show_document()
 	return true
-
-
-func on_update_document_list(new_documents :DocumentList):
-	documents_to_read = new_documents
 
 
 func clear_document():

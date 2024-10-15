@@ -2,31 +2,44 @@ extends Node
 
 
 var mail_list :DocumentList = preload("res://scripts/Resources/Documents/AllDocuments.tres")
-var pending_mails :DocumentList
+var mail_stats :MailStats
 
 signal mail_received
 
 
 func _ready() -> void:
-	pending_mails = DocumentList.new()
 	TimeManager.new_day.connect(on_new_day)
-	on_new_day(1)
 
 
 func on_new_day(day_count :int):
 	var available_mails = mail_list.document_list.filter(func (mail): 
 		return mail.receive_day_count == day_count)
 	
-	pending_mails.document_list.append_array(available_mails)
+	mail_stats.add_pending_mails(available_mails)
+	
 	if not available_mails.is_empty():
 		mail_received.emit()
 
 
 func get_next_mail() -> DocumentRes:
-	if not has_pending_mail(): return null
+	if not mail_stats.has_pending_mail(): return null
 	
-	var mail = pending_mails.document_list.pop_front()
+	var mail = mail_stats.pop_first()
+	mail_stats.add_to_inventory(mail)
 	return mail
 
+
+func get_inventory_mails() -> DocumentList:
+	return mail_stats.inventory_mails
+
+
+func get_pending_mails() -> DocumentList:
+	return mail_stats.pending_mails
+
+
 func has_pending_mail() -> bool:
-	return not pending_mails.document_list.is_empty()
+	return mail_stats.has_pending_mail()
+
+
+func set_stats(stats :MailStats) -> void:
+	mail_stats = stats

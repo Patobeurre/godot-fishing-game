@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba6jwiv0ibfwx"]
+
+[ext_resource type="Script" path="res://scripts/UI/Components/document_entry.gd" id="1_b171u"]
+[ext_resource type="Texture2D" uid="uid://lkseiwb1yb1a" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-double.png" id="1_tr4ue"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pi0g"]
+atlas = ExtResource("1_tr4ue")
+region = Rect2(784, 144, 96, 96)
+
+[node name="DocumentEntry" type="Button"]
+offset_right = 137.0
+offset_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+action_mode = 0
+text = "Document name"
+script = ExtResource("1_b171u")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 2
+offset_right = 1149.0
+offset_bottom = 61.0
+texture = SubResource("AtlasTexture_3pi0g")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 2
+offset_right = 1149.0
+offset_bottom = 61.0
+theme_override_constants/margin_left = 30
+
+[node name="Name" type="RichTextLabel" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Document name"
+fit_content = true
+autowrap_mode = 0

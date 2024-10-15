@@ -31,7 +31,7 @@ region = Rect2(384, 0, 64, 64)
 atlas = ExtResource("3_m8178")
 region = Rect2(0, 0, 512, 128)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eua3l"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2fayl"]
 content_margin_left = 32.0
 content_margin_right = 32.0
 
@@ -39,7 +39,7 @@ content_margin_right = 32.0
 atlas = ExtResource("3_m8178")
 region = Rect2(1120, 944, 32, 128)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c2sir"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lw23d"]
 texture = SubResource("AtlasTexture_wr7vg")
 texture_margin_left = 20.0
 texture_margin_top = 20.0
@@ -49,17 +49,17 @@ expand_margin_left = 32.0
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2e7hj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldhhv"]
 bg_color = Color(0, 0, 0, 0.521569)
 expand_margin_left = 32.0
 
 [sub_resource type="Theme" id="Theme_2ayyg"]
-ScrollContainer/styles/panel = SubResource("StyleBoxEmpty_eua3l")
-VScrollBar/styles/grabber = SubResource("StyleBoxTexture_c2sir")
-VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_c2sir")
-VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_c2sir")
-VScrollBar/styles/scroll = SubResource("StyleBoxFlat_2e7hj")
-VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_2e7hj")
+ScrollContainer/styles/panel = SubResource("StyleBoxEmpty_2fayl")
+VScrollBar/styles/grabber = SubResource("StyleBoxTexture_lw23d")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_lw23d")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_lw23d")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_ldhhv")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_ldhhv")
 
 [node name="FishCollection" type="Control"]
 layout_mode = 3

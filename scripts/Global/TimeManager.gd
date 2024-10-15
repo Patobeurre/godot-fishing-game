@@ -10,16 +10,14 @@ const MIDNIGHT_DAY_TIME :float = 600
 
 #var day_count :int = 1
 
-var time_stats :TimeStats = TimeStats.new()
+var time_stats :TimeStats
 var current_period :TimePeriod.ETimePeriod
 
 signal new_day(int)
 
 
-func _ready():
-	current_period = get_time_period()
-
 func _physics_process(delta):
+	if time_stats == null: return
 	set_time_of_day(time_stats.time_of_day + rateOfTime * delta)
 	
 	if time_stats.time_of_day > MAX_TIME_RANGE:
@@ -32,14 +30,7 @@ func _physics_process(delta):
 func set_time_of_day(newTimeOfDay :float):
 	_update_day_count(time_stats.time_of_day, newTimeOfDay)
 	time_stats.set_time_of_day(newTimeOfDay)
-	_update_current_period()
 
-
-func _update_current_period():
-	var newPeriod = get_time_period()
-	if current_period != newPeriod:
-		current_period = newPeriod
-		SignalBus.save_requested.emit()
 
 func _update_day_count(begin :float, end :float):
 	if end < begin:
@@ -47,13 +38,13 @@ func _update_day_count(begin :float, end :float):
 	
 	if begin < NEW_DAY_TIME and end > NEW_DAY_TIME:
 		time_stats.set_day_count(time_stats.day_count + 1)
-		SignalBus.save_requested.emit()
-		new_day.emit(time_stats.day_count)
 
 
 func get_time_period() -> TimePeriod.ETimePeriod:
-	return TimePeriod.to_period(time_stats.time_of_day)
+	return time_stats.current_period
 
 
 func set_stats(stats :TimeStats):
 	time_stats = stats
+	if time_stats.day_count == 0:
+		time_stats.set_day_count(1)

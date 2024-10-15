@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FlyerRes" load_steps=4 format=3 uid="uid://hkf52pgr842j"]
+
+[ext_resource type="Texture2D" uid="uid://blt56u874p24s" path="res://sprites/Documents/Fishing Mag/1.png" id="1_cjujp"]
+[ext_resource type="PackedScene" uid="uid://b0ogy101lbpfp" path="res://objects/UI/DocumentFlyer.tscn" id="2_ey3yg"]
+[ext_resource type="Script" path="res://scripts/Resources/Documents/Flyer.gd" id="3_pctga"]
+
+[resource]
+script = ExtResource("3_pctga")
+image = ExtResource("1_cjujp")
+receive_day_count = 1
+name = "Fishing Mag N°1"
+scene = ExtResource("2_ey3yg")

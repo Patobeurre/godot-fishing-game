@@ -14,7 +14,7 @@ static func to_value(period :ETimePeriod) -> float:
 	elif period == ETimePeriod.DAY:
 		return 1400
 	elif period == ETimePeriod.DAWN:
-		return 1100
+		return 1180
 	elif period == ETimePeriod.NIGHT:
 		return 200
 	

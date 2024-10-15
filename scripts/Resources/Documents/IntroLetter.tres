@@ -11,7 +11,8 @@ This shelter is all I have left. I leave it to you.
 
 I've left you my fishing equipment in the cabin. It looks simple, but you'll be amazed at what it has to offer.
 
-I hope you enjoy this place os much as I do."
+I hope you'll enjoy this place as much as I did."
 footer = "Suzan"
 receive_day_count = 1
+name = "Welcome letter from Suzan"
 scene = ExtResource("1_wfdcd")
