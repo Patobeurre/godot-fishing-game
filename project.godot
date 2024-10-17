@@ -174,6 +174,11 @@ open_collection_menu={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://translation/translation.en.translation", "res://translation/translation.fr.translation")
+rendering/text_driver="ICU / HarfBuzz / Graphite (Built-in)"
+
 [layer_names]
 
 3d_physics/layer_1="Wall"

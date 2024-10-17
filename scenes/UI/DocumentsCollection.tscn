@@ -96,7 +96,7 @@ stretch_mode = 4
 [node name="Label" type="Label" parent="HSplitContainer/MarginContainer/VSplitContainer/CenterContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
-text = "Documents"
+text = "MENU_TITLE_DOCUMENTS"
 
 [node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/MarginContainer/VSplitContainer"]
 layout_mode = 2

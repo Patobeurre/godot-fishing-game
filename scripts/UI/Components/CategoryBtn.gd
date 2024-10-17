@@ -7,7 +7,8 @@ extends TextureButton
 
 
 func _ready():
-	label.text = category.name
+	pass
+	#label.text = category.name
 
 
 func update(categories :Array[CategoryRes]):

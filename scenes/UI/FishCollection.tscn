@@ -114,7 +114,7 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
-text = "Fishes"
+text = "MENU_ENCYCLOPEDIA_FISHES_TAB"
 fit_content = true
 autowrap_mode = 0
 
@@ -142,7 +142,7 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
-text = "Natural"
+text = "MENU_ENCYCLOPEDIA_NATURE_TAB"
 fit_content = true
 autowrap_mode = 0
 
@@ -170,8 +170,7 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
-text = "Insects
-"
+text = "MENU_ENCYCLOPEDIA_INSECTS_TAB"
 fit_content = true
 autowrap_mode = 0
 
@@ -199,7 +198,7 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
-text = "Animals"
+text = "MENU_ENCYCLOPEDIA_ANIMALS_TAB"
 fit_content = true
 autowrap_mode = 0
 
@@ -261,10 +260,13 @@ texture = SubResource("AtlasTexture_oweff")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="HSplitContainer/MarginContainer/VSplitContainer/CenterContainer"]
+[node name="Label" type="RichTextLabel" parent="HSplitContainer/MarginContainer/VSplitContainer/CenterContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Encyclopedia"
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "MENU_TITLE_ENCYCLOPEDIA"
+fit_content = true
+autowrap_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/MarginContainer/VSplitContainer"]
 layout_mode = 2
