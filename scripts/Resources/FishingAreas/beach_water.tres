@@ -10,7 +10,7 @@
 
 [resource]
 script = ExtResource("4_ahlbq")
-name = "Beach"
+name = "FA_BEACH"
 type = 1
 waiting_time = 3.0
 catchables = Array[ExtResource("1_bfp5d")]([ExtResource("1_j6f7q"), ExtResource("2_dglp3"), ExtResource("3_kurre"), ExtResource("4_lk623"), ExtResource("6_t0ihl")])

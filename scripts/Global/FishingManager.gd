@@ -122,6 +122,13 @@ func get_collected_catchables() -> Array[CollectedCatchable]:
 	return fishing_stats.catchables
 
 
+func get_catchables() -> Array[CatchableRes]:
+	var catchables :Array[CatchableRes] = []
+	for collected_catchable in fishing_stats.catchables:
+		catchables.append(collected_catchable.catchable)
+	return catchables
+
+
 func get_all_collected_by_category(category : CategoryRes.ELureCategory) -> Array[CollectedCatchable]:
 	var collected_lures :Array[CollectedCatchable] = fishing_stats.catchables.filter(func (elem):
 		return elem.catchable.category.tag == category)

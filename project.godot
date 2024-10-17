@@ -176,7 +176,7 @@ open_collection_menu={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://translation/translation.en.translation", "res://translation/translation.fr.translation")
+locale/translations=PackedStringArray("res://translation/translation.en.translation", "res://translation/translation.fr.translation", "res://translation/translation-resources.en.translation", "res://translation/translation-resources.fr.translation")
 rendering/text_driver="ICU / HarfBuzz / Graphite (Built-in)"
 
 [layer_names]

@@ -20,13 +20,13 @@ func init(catchable :CollectedCatchable):
 
 func update():
 	image.texture = collected_catchable.catchable.image
-	description.text = collected_catchable.catchable.description
+	description.text = tr(collected_catchable.catchable.description)
 	lures.text = ""
 	for lure in collected_catchable.lure_used:
-		lures.text += lure.name + ", "
+		lures.text += tr(lure.name) + ", "
 	locations.text = ""
 	for location in collected_catchable.areas_found_in:
-		locations.text += location.name + ", "
+		locations.text += tr(location.name) + ", "
 	for period in collected_catchable.periods:
 		var icon = day_night_icon_scene.instantiate()
 		periods_container.add_child(icon)

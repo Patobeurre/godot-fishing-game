@@ -8,7 +8,7 @@
 
 [resource]
 script = ExtResource("4_vbn1w")
-name = ""
+name = "FA_CAVE_LAKE"
 type = 1
 waiting_time = 3.0
 catchables = Array[ExtResource("1_is3we")]([ExtResource("2_53j1g"), ExtResource("3_bomrq"), ExtResource("4_hg5tl")])

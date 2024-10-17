@@ -15,7 +15,7 @@ func _ready():
 func populate_list(areaRes :FishingAreaRes):
 	clear_list()
 	
-	var lure_collection = FishingManager.lure_collection.keys()
+	var lure_collection = FishingManager.get_catchables()
 	
 	for catchable in areaRes.catchables:
 		var entry = area_info_entry.instantiate() as AreaInfoEntry
@@ -35,7 +35,7 @@ func clear_list():
 
 func activate(areaRes :FishingAreaRes):
 	populate_list(areaRes)
-	label.text = areaRes.name
+	label.text = tr(areaRes.name)
 	visible = true
 
 

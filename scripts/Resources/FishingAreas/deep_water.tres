@@ -12,7 +12,7 @@
 
 [resource]
 script = ExtResource("2_u228g")
-name = "Deep Water"
+name = "FA_DEEP"
 type = 1
 waiting_time = 3.0
 catchables = Array[ExtResource("1_57rtu")]([ExtResource("4_kct0i"), ExtResource("1_qhseq"), ExtResource("2_nxbdl"), ExtResource("3_hjill"), ExtResource("5_ljdqa"), ExtResource("7_hc7po"), ExtResource("8_ibjr0")])
