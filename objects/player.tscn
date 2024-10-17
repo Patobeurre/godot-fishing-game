@@ -59,7 +59,7 @@ stretch = true
 transparent_bg = true
 handle_input_locally = false
 msaa_3d = 1
-size = Vector2i(1280, 700)
+size = Vector2i(1280, 800)
 render_target_update_mode = 0
 
 [node name="CameraItem" type="Camera3D" parent="Body/Head/Camera/SubViewportContainer/SubViewport"]
@@ -85,7 +85,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.292484, -0.165401, -0.24084
 [node name="RayCastInteract" type="RayCast3D" parent="Body/Head/Camera"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 target_position = Vector3(0, -2, 0)
-collision_mask = 289
+collision_mask = 32
 
 [node name="Foot" type="Node3D" parent="Body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.55, 0)
