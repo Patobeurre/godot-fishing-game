@@ -7,6 +7,6 @@
 script = ExtResource("1_w71sp")
 matching_catchable = ExtResource("1_430vi")
 name = "Enhydra leucas"
-size = "MEDIUM"
-habitat = "Reefs"
-description = ""
+size = "F_SIZE_MEDIUM"
+habitat = "FA_REEF"
+description = "F_EEL_IDENT_DESCR"

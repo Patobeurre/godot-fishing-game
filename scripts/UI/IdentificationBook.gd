@@ -3,40 +3,64 @@ extends MainUI
 
 @onready var page_container_left = $MarginContainer/MarginContainer/HSplitContainer/PageLeft
 @onready var page_container_right = $MarginContainer/MarginContainer/HSplitContainer/PageRight
+@onready var selection_panel = $PanelContainer
+@onready var selection_menu_left = $PanelContainer/MarginContainer2/HBoxContainer/PanelContainer/SelectionPanelLeft
+@onready var selection_menu_right = $PanelContainer/MarginContainer2/HBoxContainer/PanelContainer2/SelectionPanelRight
 @onready var book_page = preload("res://objects/UI/book_page.tscn")
 
-var current_page_idx = 0
 @export var entries :Array[IdentificationCatchable] = []
-
-
-func _ready():
-	is_activated = true
-	update_visible_pages()
+var current_page_idx = 0
+var selected_page :IdentificationPage = null
 
 
 func _on_process(delta):
+	if not is_preventing_input:
+		if Input.is_action_just_pressed("ui_cancel") or \
+		Input.is_action_just_pressed("open_identification_book"):
+			UiManager.close(unique_id)
+	
 	if Input.is_action_just_pressed("ui_left"):
 		previous_page()
 	if Input.is_action_just_pressed("ui_right"):
 		next_page()
 
 
+func _on_input(event):
+	if Input.is_action_just_released("open_identification_book"):
+		is_preventing_input = false
+	
+	if not is_activated:
+		if Input.is_action_just_pressed("open_identification_book"):
+			is_preventing_input = true
+
+
+func _on_page_clicked(page :IdentificationPage):
+	selected_page = page
+	selection_menu_right.visible = not page.is_page_right
+	selection_menu_left.visible = page.is_page_right
+	selection_panel.visible = true
+
+
 func update_visible_pages():
 	var start_idx = current_page_idx * 2
 	
 	for child in page_container_left.get_children():
+		child.disconnect("btn_fish_clicked", _on_page_clicked)
 		page_container_left.remove_child(child)
 	for child in page_container_right.get_children():
+		child.disconnect("btn_fish_clicked", _on_page_clicked)
 		page_container_right.remove_child(child)
 	
 	var page = book_page.instantiate()
 	page_container_left.add_child(page)
-	page.init(entries[start_idx])
+	page.btn_fish_clicked.connect(_on_page_clicked)
+	page.init(entries[start_idx], false)
 	
 	if start_idx < entries.size() - 1:
 		page = book_page.instantiate()
 		page_container_right.add_child(page)
-		page.init(entries[start_idx+1])
+		page.btn_fish_clicked.connect(_on_page_clicked)
+		page.init(entries[start_idx+1], true)
 
 
 func previous_page():
@@ -52,7 +76,17 @@ func next_page():
 		update_visible_pages()
 
 
+func init_selection_menus() -> void:
+	selection_panel.hide()
+	selection_menu_left.populate()
+	selection_menu_right.populate()
+	selection_menu_left.item_clicked.connect(_on_fish_selected)
+	selection_menu_right.item_clicked.connect(_on_fish_selected)
+
+
 func _on_activate():
+	init_selection_menus()
+	update_visible_pages()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	SignalBus.enable_player_camera.emit(false)
 	SignalBus.enable_player_fishing.emit(false)
@@ -63,3 +97,13 @@ func _on_deactivate():
 	SignalBus.enable_player_camera.emit(true)
 	SignalBus.enable_player_fishing.emit(true)
 	SignalBus.enable_player_movements.emit(true)
+
+
+func _on_panel_container_gui_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("mouse_left"):
+		selection_panel.visible = false
+
+
+func _on_fish_selected(catchable :CollectedCatchable) -> void:
+	selected_page.set_selected_catchable(catchable.catchable)
+	selection_panel.visible = false

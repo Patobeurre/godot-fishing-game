@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3gj6w6ybputg"]
+[gd_scene load_steps=6 format=3 uid="uid://c3gj6w6ybputg"]
 
 [ext_resource type="Script" path="res://objects/UI/book_page_content.gd" id="1_ho80q"]
+[ext_resource type="Texture2D" uid="uid://c88orwk43qerc" path="res://sprites/UI/identification_picture_empty.png" id="2_3xqpy"]
 [ext_resource type="FontFile" uid="uid://bap0e5iqwtj5k" path="res://fonts/Handanidemo.ttf" id="2_32fp0"]
+[ext_resource type="Texture2D" uid="uid://c2nepnanarbi6" path="res://sprites/UI/identification_picture_frame.png" id="2_wfds3"]
+[ext_resource type="Texture2D" uid="uid://dwnons7hqfqhm" path="res://sprites/Catchables/Fishes/common_fish.png" id="3_jokxw"]
 
 [node name="MarginContainer" type="MarginContainer"]
 anchors_preset = 15
@@ -21,18 +24,39 @@ theme_override_constants/separation = 20
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 30
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
+[node name="BtnFishImage" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 200)
 layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 100
-theme_override_font_sizes/bold_font_size = 100
-bbcode_enabled = true
-text = "?"
-fit_content = true
-scroll_active = false
-autowrap_mode = 0
+action_mode = 0
+texture_normal = ExtResource("2_3xqpy")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PictureFish" type="TextureRect" parent="VBoxContainer/HBoxContainer/BtnFishImage"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_jokxw")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/BtnFishImage"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wfds3")
+expand_mode = 4
+stretch_mode = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -41,6 +65,7 @@ alignment = 1
 
 [node name="Name" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 8
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_32fp0")
 theme_override_fonts/bold_italics_font = ExtResource("2_32fp0")
@@ -54,10 +79,10 @@ fit_content = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 8
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_32fp0")
 theme_override_fonts/bold_font = ExtResource("2_32fp0")
@@ -84,6 +109,7 @@ layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+size_flags_vertical = 0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_32fp0")
 theme_override_fonts/bold_font = ExtResource("2_32fp0")
@@ -120,3 +146,5 @@ on
 multiple
 lines"
 fit_content = true
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/BtnFishImage" to="." method="_on_btn_fish_image_pressed"]

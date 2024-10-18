@@ -9,8 +9,8 @@
 [resource]
 script = ExtResource("1_dlws0")
 id = 20
-name = "Eel"
-description = "Wander near rock formations."
+name = "F_EEL_NAME"
+description = "F_EEL_DESCR"
 notification_text = ""
 category = ExtResource("1_lq6ae")
 tags = Array[int]([0, 2])

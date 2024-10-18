@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c01w527p8doon"
+
+[deps]
+
+files=["res://translation/translation-fishes.fr.translation", "res://translation/translation-fishes.en.translation"]
+
+source_file="res://translation/translation-fishes.csv"
+dest_files=["res://translation/translation-fishes.fr.translation", "res://translation/translation-fishes.en.translation"]
+
+[params]
+
+compress=true
+delimiter=1

@@ -10,8 +10,8 @@
 [resource]
 script = ExtResource("3_3x57v")
 id = 10
-name = "True mussels"
-description = ""
+name = "F_MUSSELS_NAME"
+description = "F_MUSSELS_DESCR"
 notification_text = ""
 category = ExtResource("1_t6n3g")
 tags = Array[int]([5])

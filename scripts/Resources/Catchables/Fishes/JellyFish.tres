@@ -9,8 +9,8 @@
 [resource]
 script = ExtResource("1_6lcac")
 id = 37
-name = "Jellyfish"
-description = ""
+name = "F_JELLYFISH_NAME"
+description = "F_JELLYFISH_DESCR"
 notification_text = ""
 category = ExtResource("1_wkaw4")
 tags = Array[int]([2, 0])

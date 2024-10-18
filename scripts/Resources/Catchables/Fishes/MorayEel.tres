@@ -8,8 +8,8 @@
 [resource]
 script = ExtResource("1_vq4ty")
 id = 30
-name = "Moray eel"
-description = ""
+name = "F_MORAYEEL_NAME"
+description = "F_MORAYEEL_DESCR"
 notification_text = ""
 category = ExtResource("1_1wk6n")
 tags = Array[int]([0, 3])

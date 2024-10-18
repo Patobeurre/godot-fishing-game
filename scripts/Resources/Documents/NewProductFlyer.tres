@@ -8,5 +8,5 @@
 script = ExtResource("1_6d7ab")
 image = ExtResource("1_k2ej4")
 receive_day_count = 6
-name = "Ad new product"
+name = "FLYER_AD_NEW_PRODUCT"
 scene = ExtResource("2_4jn2s")

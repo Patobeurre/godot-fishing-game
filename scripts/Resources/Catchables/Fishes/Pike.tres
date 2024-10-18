@@ -8,8 +8,8 @@
 [resource]
 script = ExtResource("1_qccg5")
 id = 17
-name = "Pike"
-description = "Carnivore that eat fishes smaller than him"
+name = "F_PIKE_NAME"
+description = "F_PIKE_DESCR"
 notification_text = ""
 category = ExtResource("1_y31sx")
 tags = Array[int]([0, 2])

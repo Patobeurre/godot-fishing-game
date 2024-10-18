@@ -7,6 +7,6 @@
 script = ExtResource("1_n0wsm")
 matching_catchable = ExtResource("1_sk7e6")
 name = "Lepisor caroditus"
-size = "SMALL"
-habitat = "Off shore"
-description = "This really small fish moves in shoals off the coast. Can only be seen in daylight."
+size = "F_SIZE_SMALL"
+habitat = "FA_DEEP"
+description = "F_PILCHARD_IDENT_DESCR"

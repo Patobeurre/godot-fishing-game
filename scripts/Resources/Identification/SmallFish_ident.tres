@@ -7,6 +7,6 @@
 script = ExtResource("1_q7rab")
 matching_catchable = ExtResource("1_0xknn")
 name = "Simia aculeatus"
-size = "SMALL"
-habitat = "Coast"
-description = "Colored with orangeish stripes."
+size = "F_SIZE_SMALL"
+habitat = "FA_COAST"
+description = "F_SMALLFISH_IDENT_DESCR"

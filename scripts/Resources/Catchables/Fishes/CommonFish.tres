@@ -9,9 +9,8 @@
 [resource]
 script = ExtResource("1_dxu1y")
 id = 12
-name = "Common fish"
-description = "A slightly common fish.
-Can be found at any time of the day."
+name = "F_COMMONFISH_NAME"
+description = "F_COMMONFISH_DESCR"
 notification_text = ""
 category = ExtResource("1_fw1px")
 tags = Array[int]([0, 1])

@@ -7,6 +7,6 @@
 script = ExtResource("1_7ac1h")
 matching_catchable = ExtResource("1_06yxm")
 name = "Cibelus lagotricha"
-size = "SMALL"
-habitat = "Coast"
-description = "Love hiding inside sea anemones."
+size = "F_SIZE_SMALL"
+habitat = "FA_COAST"
+description = "F_CLOWNFISH_IDENT_DESCR"

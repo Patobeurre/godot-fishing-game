@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=3 format=3 uid="uid://dhjfm1e75tp4p"]
+
+[ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_3ae4k"]
+[ext_resource type="Resource" uid="uid://duoe66f700yxp" path="res://scripts/Resources/Catchables/Fishes/JellyFishTiny.tres" id="1_kxj8k"]
+
+[resource]
+script = ExtResource("1_3ae4k")
+matching_catchable = ExtResource("1_kxj8k")
+name = "Vivaius cyclotis"
+size = "F_SIZE_SMALL"
+habitat = "FA_CAVE_LAKE"
+description = "F_TINYJELLYFISH_IDENT_DESCR"

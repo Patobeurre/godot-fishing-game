@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c2p8gphrnq8qi"]
+[gd_scene load_steps=27 format=3 uid="uid://c2p8gphrnq8qi"]
 
 [ext_resource type="Script" path="res://scripts/Global/SaveManager.gd" id="1_bdda1"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_kt14l"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dvixv20hvw8h3" path="res://scenes/UI/TimeChanger.tscn" id="11_rtxa3"]
 [ext_resource type="PackedScene" uid="uid://c16mj6fl3mn6n" path="res://scenes/UI/Notifications.tscn" id="12_c2lfr"]
 [ext_resource type="PackedScene" uid="uid://bhev5ajqkerru" path="res://scenes/UI/Documents.tscn" id="13_f4pdh"]
+[ext_resource type="PackedScene" uid="uid://cnn40g63c2lde" path="res://scenes/UI/IdentificationBook.tscn" id="13_tksfk"]
 [ext_resource type="PackedScene" uid="uid://u2so53vo6ln8" path="res://scenes/UI/FishCollection.tscn" id="13_xggdi"]
 [ext_resource type="PackedScene" uid="uid://bljwxjxf7scis" path="res://scenes/island_test_path.tscn" id="14_mu13i"]
 [ext_resource type="PackedScene" uid="uid://b3h8dbli33h2x" path="res://objects/Structures/test_house.tscn" id="15_wb0wr"]
@@ -116,6 +117,7 @@ visible = false
 unique_id = "FishingMiniGame"
 
 [node name="DocumentsCollection" parent="." instance=ExtResource("9_31afb")]
+visible = false
 
 [node name="FishCollection" parent="." instance=ExtResource("13_xggdi")]
 visible = false
@@ -128,6 +130,9 @@ unique_id = "LureCollection"
 [node name="Documents" parent="." instance=ExtResource("13_f4pdh")]
 visible = false
 unique_id = "Documents"
+
+[node name="IdentificationBook" parent="." instance=ExtResource("13_tksfk")]
+visible = false
 
 [node name="Notifications" parent="." instance=ExtResource("12_c2lfr")]
 mouse_filter = 2

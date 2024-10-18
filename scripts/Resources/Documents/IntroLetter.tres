@@ -5,14 +5,9 @@
 
 [resource]
 script = ExtResource("1_80u43")
-header = "Welcome,"
-body = "I left you a long time ago, so you must have grown up a lot...
-This shelter is all I have left. I leave it to you.
-
-I've left you my fishing equipment in the cabin. It looks simple, but you'll be amazed at what it has to offer.
-
-I hope you'll enjoy this place as much as I did."
-footer = "Suzan"
+header = "LETTER_WELCOME_HEADER"
+body = "LETTER_WELCOME_BODY"
+footer = "LETTER_WELCOME_FOOTER"
 receive_day_count = 1
-name = "Welcome letter from Suzan"
+name = "LETTER_WELCOME_NAME"
 scene = ExtResource("1_wfdcd")

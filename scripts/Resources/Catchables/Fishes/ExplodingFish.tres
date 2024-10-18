@@ -10,8 +10,8 @@
 [resource]
 script = ExtResource("1_qmdo2")
 id = 39
-name = "Bomb fish"
-description = ""
+name = "F_BOMBFISH_NAME"
+description = "F_BOMBFISH_DESCR"
 notification_text = ""
 category = ExtResource("1_ogs10")
 tags = Array[int]([0, 1])

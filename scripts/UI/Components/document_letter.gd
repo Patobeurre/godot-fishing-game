@@ -7,6 +7,6 @@ extends Node
 
 
 func fill_content(document :LetterRes):
-	header.text = document.header
-	body.text = document.body
-	footer.text = document.footer
+	header.text = tr(document.header)
+	body.text = tr(document.body)
+	footer.text = tr(document.footer)

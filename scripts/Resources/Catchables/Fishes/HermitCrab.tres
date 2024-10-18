@@ -9,8 +9,8 @@
 [resource]
 script = ExtResource("1_vx1fj")
 id = 22
-name = "Hermit Crab"
-description = "Very discrete. Hide inside seashells."
+name = "F_HERMITCRAB_NAME"
+description = "F_HERMITCRAB_DESCR"
 notification_text = ""
 category = ExtResource("1_d82uc")
 tags = Array[int]([0, 7])

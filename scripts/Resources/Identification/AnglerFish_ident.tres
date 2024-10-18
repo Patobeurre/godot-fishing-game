@@ -7,6 +7,6 @@
 script = ExtResource("2_dwdxs")
 matching_catchable = ExtResource("1_0ax2j")
 name = "Chaetodontidae ajaja"
-size = "MEDIUM"
-habitat = "Caves"
-description = "Exclusively carnivorous, this fish essentially lives alone. It doesn't hesitate to eat its own congeners."
+size = "F_SIZE_MEDIUM"
+habitat = "FA_CAVE_LAKE"
+description = "F_ANGLERFISH_IDENT_DESCR"

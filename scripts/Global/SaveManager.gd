@@ -17,7 +17,6 @@ func save():
 
 func _create_or_load_save() -> void:
 	if SaveGameStats.save_exists():
-		print("try load")
 		save_game_res = SaveGameStats.load_savegame()
 	else:
 		save_game_res = SaveGameStats.new()

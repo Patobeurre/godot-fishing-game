@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_elpvj")
 matching_catchable = ExtResource("1_01juv")
-name = "Litoria cuniculus"
-size = "SMALL"
-habitat = "Ocean"
-description = ""
+name = "Litoria populiaris"
+size = "F_SIZE_SMALL"
+habitat = "FA_OCEAN"
+description = "F_COMMONFISH_IDENT_DESCR"

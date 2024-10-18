@@ -1,14 +1,20 @@
-[gd_scene load_steps=13 format=3 uid="uid://cnn40g63c2lde"]
+[gd_scene load_steps=22 format=3 uid="uid://cnn40g63c2lde"]
 
 [ext_resource type="Script" path="res://scripts/UI/IdentificationBook.gd" id="1_3yd6e"]
 [ext_resource type="Texture2D" uid="uid://d0vhrkrd8i2uf" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-default.png" id="1_gtpcw"]
 [ext_resource type="Resource" uid="uid://bbo73vrpgv0wm" path="res://scripts/Resources/Identification/AnglerFish_ident.tres" id="2_i61st"]
 [ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="2_qybtt"]
 [ext_resource type="Resource" uid="uid://b6d0x1ipbejk4" path="res://scripts/Resources/Identification/Pilchard_ident.tres" id="3_1tal6"]
-[ext_resource type="PackedScene" uid="uid://c3gj6w6ybputg" path="res://objects/UI/book_page.tscn" id="3_31ef6"]
 [ext_resource type="Resource" uid="uid://cd6t38lg7vmoq" path="res://scripts/Resources/Identification/Eel_ident.tres" id="5_ramxg"]
 [ext_resource type="Resource" uid="uid://cmwcaxgyrha02" path="res://scripts/Resources/Identification/SmallFish_ident.tres" id="6_e0a3g"]
+[ext_resource type="Resource" uid="uid://dhjfm1e75tp4p" path="res://scripts/Resources/Identification/TinyJellyfish_ident.tres" id="7_dxnrx"]
 [ext_resource type="Texture2D" uid="uid://d2odgxvvgxhvc" path="res://sprites/UI/letter_background.png" id="8_pu78d"]
+[ext_resource type="Resource" uid="uid://dnpf7cf4n5v83" path="res://scripts/Resources/Identification/Shark_ident.tres" id="8_y46rh"]
+[ext_resource type="Resource" uid="uid://bghfn7jj74m74" path="res://scripts/Resources/Identification/MorayEel_ident.tres" id="9_su20b"]
+[ext_resource type="Resource" uid="uid://cywvo0shumkgj" path="res://scripts/Resources/Identification/HammerShark_ident.tres" id="10_mjs5c"]
+[ext_resource type="PackedScene" uid="uid://l8ex4o3caxlb" path="res://objects/UI/IdentificationPageSelection.tscn" id="10_r087v"]
+[ext_resource type="Resource" uid="uid://q0nfk0g5488" path="res://scripts/Resources/Identification/CommonFish_ident.tres" id="11_vchvr"]
+[ext_resource type="Resource" uid="uid://17aidk77sqot" path="res://scripts/Resources/Identification/ClownFish_ident.tres" id="12_wxc8g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjm21"]
 atlas = ExtResource("1_gtpcw")
@@ -20,6 +26,12 @@ texture = ExtResource("8_pu78d")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f5dkw"]
 texture = ExtResource("8_pu78d")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x2dnc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t8kjh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lw3i5"]
+
 [node name="IdentificationBook" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -28,7 +40,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3yd6e")
-entries = Array[ExtResource("2_qybtt")]([ExtResource("2_i61st"), ExtResource("3_1tal6"), ExtResource("5_ramxg"), ExtResource("6_e0a3g")])
+entries = Array[ExtResource("2_qybtt")]([ExtResource("2_i61st"), ExtResource("3_1tal6"), ExtResource("5_ramxg"), ExtResource("6_e0a3g"), ExtResource("7_dxnrx"), ExtResource("8_y46rh"), ExtResource("9_su20b"), ExtResource("10_mjs5c"), ExtResource("11_vchvr"), ExtResource("12_wxc8g")])
+unique_id = "IdentificationBook"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -62,16 +75,55 @@ theme_override_constants/margin_bottom = 20
 [node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 5
+dragger_visibility = 1
 
 [node name="PageLeft" type="Panel" parent="MarginContainer/MarginContainer/HSplitContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_eqflp")
 
-[node name="MarginContainer" parent="MarginContainer/MarginContainer/HSplitContainer/PageLeft" instance=ExtResource("3_31ef6")]
-layout_mode = 1
-
-[node name="PanelRight" type="Panel" parent="MarginContainer/MarginContainer/HSplitContainer"]
+[node name="PageRight" type="Panel" parent="MarginContainer/MarginContainer/HSplitContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_f5dkw")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_x2dnc")
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_t8kjh")
+
+[node name="SelectionPanelLeft" parent="PanelContainer/MarginContainer2/HBoxContainer/PanelContainer" instance=ExtResource("10_r087v")]
+visible = false
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lw3i5")
+
+[node name="SelectionPanelRight" parent="PanelContainer/MarginContainer2/HBoxContainer/PanelContainer2" instance=ExtResource("10_r087v")]
+visible = false
+layout_mode = 2
+
+[connection signal="gui_input" from="PanelContainer" to="." method="_on_panel_container_gui_input"]

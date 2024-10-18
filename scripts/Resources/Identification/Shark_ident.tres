@@ -7,6 +7,6 @@
 script = ExtResource("2_m8ept")
 matching_catchable = ExtResource("1_h226q")
 name = "Susynnis macrocosus"
-size = "BIG"
-habitat = "Deep water"
-description = "A large jaw with numerous teeth."
+size = "F_SIZE_BIG"
+habitat = "FA_DEEP"
+description = "F_SHARK_IDENT_DESCR"

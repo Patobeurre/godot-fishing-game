@@ -1,0 +1,89 @@
+key;fr;en
+F_SIZE_SMALL;Petite;Small
+F_SIZE_MEDIUM;Moyenne;Medium
+F_SIZE_BIG;Grande;Large
+;;
+F_RARITY_COMMON;Commun;Common
+F_RARITY_UNCOMMON;Peu commun;Uncommon
+F_RARITY_RARE;Rare;Rare
+F_RARITY_LEGENDARY;Légendaire;Legendary
+;;
+F_TINYJELLYFISH_NAME;Petite méduse;Tiny jellyfish
+F_TINYJELLYFISH_DESCR;Une minuscule méduse.;A tiny jellyfish
+F_TINYJELLYFISH_IDENT_DESCR;Sa très petite taille en fait une proie de choix pour les grandes baleines.;Its very small size makes it a prime target for whales.
+;;
+F_ANGLERFISH_NAME;Lotte de mer;Anglerfish
+F_ANGLERFISH_DESCR;Un poisson à l’apparence étrange. Possède une large mâchoire composée de nombreuses longues dents acérées.A weird looking fish. Has a wide jaw containing a huge amount of long and sharp teeths;
+F_ANGLERFISH_IDENT_DESCR;Exclusivement carnivore, ce poisson vie essentiellement seul.\nIl n’hésite pas à manger ses propres congénères;Exclusively carnivorous, this fish essentially lives alone.\nIt doesn't hesitate to eat its own congeners.
+;;
+F_CLOWNFISH_NAME;Poisson clown;Clownfish
+F_CLOWNFISH_DESCR;Petit poisson à rayures oranges et blanches. N’ai pas particulièrement drôle…;Small fish with orange and white stripes. Isn’t particularily funny…
+F_CLOWNFISH_IDENT_DESCR;Adore se cacher dans des anémones.;Love hiding inside sea anemones.
+;;
+F_COMMONFISH_NAME;Poisson commun;Common fish
+F_COMMONFISH_DESCR;Un poisson commun. Peu être trouvé à n’importe quelle période de la journée.;A slightly common fish. Can be found at any time of the day.
+F_COMMONFISH_IDENT_DESCR;;
+;;
+F_EEL_NAME;Anguille;Eel
+F_EEL_DESCR;Serpente autour des formations rocheuses.;Wander near rock formations.
+F_EEL_IDENT_DESCR;;
+;;
+F_PILCHARD_NAME;Sardine;Pilchard
+F_PILCHARD_DESCR;Un très petit poisson. Commun au large des côtes;A really small fish. Common off the coasts.
+F_PILCHARD_IDENT_DESCR;Ce très petit poisson se déplace en banc dans les eaux profondes. Peut être observé uniquement lorsque le soleil est levé.;This really small fish moves in shoals in deep waters. Can only be seen in daylight.
+;;
+F_SHARK_NAME;Requin;Shark
+F_SHARK_DESCR;Un prédateur mortel notoire.;A notorious deadly predator.
+F_SHARK_IDENT_DESCR;Une large mâchoire aux nombreuses dents.;A large jaw with numerous teeth.
+;;
+F_HAMMERSHARK_NAME;Requin marteau;Hammershark
+F_HAMMERSHARK_DESCR;;
+F_HAMMERSHARK_IDENT_DESCR;;
+;;
+F_MORAYEEL_NAME;Murène;Moray eel
+F_MORAYEEL_DESCR;;
+F_MORAYEEL_IDENT_DESCR;;
+;;
+F_SMALLFISH_NAME;Petit poisson;Small fish
+F_SMALLFISH_DESCR;;
+F_SMALLFISH_IDENT_DESCR;Un poisson coloré avec des rayures orangées;Colored with orangeish stripes.
+;;
+F_SOLE_NAME;Sole;Sole
+F_SOLE_DESCR;;
+F_SOLE_IDENT_DESCR;;
+;;
+F_URCHIN_NAME;Oursin;Sea urchin
+F_URCHIN_DESCR;;
+F_URCHIN_IDENT_DESCR;;
+;;
+F_PIKE_NAME;Brochet;Pike
+F_PIKE_DESCR;Carnivore se nourrissant  d’insectes ou de poissons plus petits que lui.;Carnivore that eat fishes smaller than him
+F_PIKE_IDENT_DESCR;;
+;;
+F_WHALE_NAME;Baleine;Whale
+F_WHALE_DESCR;;
+F_WHALE_IDENT_DESCR;;
+;;
+F_JELLYFISHROBE_NAME;Méduse à longue robe;Jellyfish with long dress
+F_JELLYFISHROBE_DESCR;;
+F_JELLYFISHROBE_IDENT_DESCR;;
+;;
+F_JELLYFISH_NAME;Méduse;Jellyfish
+F_JELLYFISH_DESCR;;
+F_JELLYFISH_IDENT_DESCR;;
+;;
+F_HERMITCRAB_NAME;Bernard l’ermite;Hermit crab
+F_HERMITCRAB_DESCR;Très discret. Se cache dans des coquilles vides.;Very discrete. Hide inside seashells.
+F_HERMITCRAB_IDENT_DESCR;;
+;;
+F_SQUID_NAME;Calamar;Squid
+F_SQUID_DESCR;;
+F_SQUID_IDENT_DESCR;;
+;;
+F_MUSSELS_NAME;Moule;True mussels
+F_MUSSELS_DESCR;;
+F_MUSSELS_IDENT_DESCR;;
+;;
+F_BOMBFISH_NAME;Poisson bombe;Bomb fish
+F_BOMBFISH_DESCR;;
+F_BOMBFISH_IDENT_DESCR;;
