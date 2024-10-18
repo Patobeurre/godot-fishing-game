@@ -86,6 +86,7 @@ var is_in_air :bool = false
 var is_dashing :bool = false
 var is_dash_enabled :bool = true
 var is_climbing_step :bool = false
+var is_interacting :bool = false
 
 var is_movement_enabled :bool = true
 var is_camera_enabled :bool = true
@@ -330,6 +331,10 @@ func handle_menu_inputs(_event):
 	if default_fishing_state.is_current_state():
 		if Input.is_action_just_pressed("mouse_right"):
 			UiManager.open("LureCollection")
+	
+	if default_fishing_state.is_current_state():
+		if Input.is_action_just_pressed("open_identification_book"):
+			UiManager.open("IdentificationBook")
 
 
 func handle_interaction():
@@ -338,6 +343,7 @@ func handle_interaction():
 	if raycast_interact.is_colliding() and \
 		coll.is_in_group("Interactable"):
 		
+		is_interacting = true
 		if default_fishing_state.is_current_state():
 			enable_fishing_controls(false)
 			enable_hud(false)
@@ -346,9 +352,11 @@ func handle_interaction():
 			if Input.is_action_just_pressed("interact"):
 				coll.interact()
 	else:
-		$InteractUI.hide()
-		enable_fishing_controls(true)
-		enable_hud(true)
+		if is_interacting:
+			is_interacting = false
+			$InteractUI.hide()
+			enable_fishing_controls(true)
+			enable_hud(true)
 
 
 func enable_hud(enabled :bool):
