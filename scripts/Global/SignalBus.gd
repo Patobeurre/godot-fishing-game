@@ -16,6 +16,8 @@ signal close_lure_collection()
 signal new_lure_registered(CatchableRes)
 signal cancel_fishing
 
+signal time_period_changed(ETimePeriod)
+
 signal update_document_list(DocumentList)
 
 signal player_pos_update(Vector3)

@@ -16,10 +16,7 @@ catchables = Array[ExtResource("2_anaco")]([ExtResource("3_1kpb3"), ExtResource(
 default_catchables = Array[ExtResource("2_anaco")]([])
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_qwu4a"]
-radius = 2.0
-
-[sub_resource type="Animation" id="Animation_buqpl"]
-resource_name = "sunk"
+radius = 3.0
 
 [sub_resource type="Animation" id="Animation_8m1n1"]
 length = 0.001
@@ -40,6 +37,9 @@ tracks/0/path = NodePath("RigidBody3D")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, 0, -1, 0, 1, 1, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_buqpl"]
+resource_name = "sunk"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2fcv2"]
 _data = {

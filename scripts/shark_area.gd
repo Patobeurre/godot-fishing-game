@@ -6,19 +6,27 @@ class_name SharkArea
 @onready var orbit_center = $OrbitCenter
 @onready var animation_player = $AnimationPlayer
 
-@export var speed :float = 5.0
+@export var orbit_center_global :Node3D
+@export var SPEED_ON_CATCHING :float = 5.0
+@export var SPEED_ON_WANDERING :float = 0.2
 
-var body_entered :Node3D
+var body_entered :Node3D = null
 var is_shark_orbiting :bool = false
+var is_catching :bool = false
 
 
 func _ready():
+	SignalBus.time_period_changed.connect(_on_time_period_changed)
 	animation_player.play("emerge")
 
 
 func _process(delta):
 	if is_shark_orbiting:
-		orbit_center.rotate(Vector3(0, 1, 0), deg_to_rad(10) * speed * delta)
+		orbit_center.rotate(Vector3(0, 1, 0), deg_to_rad(10) * SPEED_ON_CATCHING * delta)
+	if not is_catching:
+		if orbit_center_global == null: return
+		shark_dorsal.look_at(orbit_center_global.global_position)
+		orbit_center_global.rotate(Vector3(0, 1, 0), deg_to_rad(10) * SPEED_ON_WANDERING * delta)
 
 
 func get_fish_table():
@@ -34,13 +42,14 @@ func prepare():
 		return
 	
 	FishingManager.pick_catchable(fishTable)
-	_start_orbiting()
+	_start_orbiting(body_entered.global_position, SPEED_ON_CATCHING)
 
 
-func _start_orbiting():
-	orbit_center.global_position = body_entered.global_position
+func _start_orbiting(orbit_pos :Vector3, orbit_speed :float):
+	is_catching = true
+	orbit_center.global_position = orbit_pos
 	shark_dorsal.reparent(orbit_center)
-	var look_at_pos = body_entered.global_position
+	var look_at_pos = orbit_pos
 	look_at_pos.y = shark_dorsal.global_position.y
 	shark_dorsal.look_at(look_at_pos)
 	is_shark_orbiting = true
@@ -69,6 +78,8 @@ func _shark_retreive_position():
 	tween.play()
 	
 	await tween.finished
+	
+	is_catching = false
 
 
 func perform():
@@ -102,6 +113,12 @@ func disable_collision():
 	if self_node is Area3D:
 		self_node.monitoring = false
 		self_node.monitorable = false
+
+
+func _on_time_period_changed(period :TimePeriod.ETimePeriod):
+	#TODO
+	#activate/deactivate area
+	pass
 
 
 func _on_body_entered(body: Node3D) -> void:

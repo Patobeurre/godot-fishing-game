@@ -20,4 +20,5 @@ func _update_current_period():
 	var newPeriod = TimePeriod.to_period(time_of_day)
 	if current_period != newPeriod:
 		current_period = newPeriod
+		SignalBus.time_period_changed.emit(current_period)
 		SignalBus.save_requested.emit()
