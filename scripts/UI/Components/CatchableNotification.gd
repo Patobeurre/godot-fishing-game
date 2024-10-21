@@ -25,4 +25,4 @@ func set_catchable(newCatchable :CatchableRes):
 
 func update():
 	image_container.texture = catchable.image
-	label.text = "[b][i]" + catchable.name + "[/i][/b]"
+	label.text = "[b][i]" + tr(catchable.name) + "[/i][/b]"

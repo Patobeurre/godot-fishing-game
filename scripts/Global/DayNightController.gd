@@ -31,7 +31,7 @@ func updateLightnings():
 	var distance = sunMoonParent.global_position.distance_to(sunNode.global_position)
 	
 	sunLight.light_energy = (sunPosition.y + sunLightOffset) / (distance*2)
-	moonLight.light_energy = (moonPosition.y + moonLightOffset) / (distance*10)
+	moonLight.light_energy = (moonPosition.y + moonLightOffset) / (distance*2)
 
 func updateRotation():
 	var hourMapped = remap(TimeManager.time_stats.time_of_day, 0.0, 2400.0, 0.0, 1.0)

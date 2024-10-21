@@ -417,7 +417,7 @@ parent = NodePath("../StaticBody3D")
 transform = Transform3D(33.3403, 0, 0, 0, 36.4968, 0, 0, 0, 33.3574, -3.58728, -4.63402, 0)
 shape = SubResource("ConcavePolygonShape3D_nqrp0")
 
-[node name="Area3D2" type="Area3D" parent="." index="42" node_paths=PackedStringArray("chest", "parent")]
+[node name="ChestArea" type="Area3D" parent="." index="42" node_paths=PackedStringArray("chest", "parent")]
 transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, -29.6339, 9.13895, -16.7619)
 collision_layer = 4096
 collision_mask = 256
@@ -428,16 +428,20 @@ fishTable = SubResource("Resource_f88y3")
 is_one_shot = true
 parent = NodePath("../Icosphere/StaticBody3D")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ChestArea" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.296535)
 shape = SubResource("CylinderShape3D_iajhe")
 
-[node name="chest" parent="Area3D2" index="1" instance=ExtResource("17_o656k")]
+[node name="chest" parent="ChestArea" index="1" instance=ExtResource("17_o656k")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 
-[node name="SharkArea" parent="." index="43" node_paths=PackedStringArray("parent") instance=ExtResource("25_venrc")]
-transform = Transform3D(0.882956, 0, 0.469456, 0, 1, 0, -0.469456, 0, 0.882956, 11.8976, 3.65762, 27.6673)
-parent = NodePath("../Water/StaticBody3D")
+[node name="Node3D" type="Node3D" parent="." index="43"]
+transform = Transform3D(0.882956, 0, 0.469456, 0, 1, 0, -0.469456, 0, 0.882956, -8.64148, 3.658, -2.91553)
+
+[node name="SharkArea" parent="Node3D" index="0" node_paths=PackedStringArray("orbit_center_global", "parent") instance=ExtResource("25_venrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.77781, -0.000380039, 36.6455)
+orbit_center_global = NodePath("..")
+parent = NodePath("../../Water/StaticBody3D")
 
 [node name="Plane_016" parent="." index="63"]
 transform = Transform3D(-10.0595, 0, 4.87956, 0, 27.6839, 0, -3.89745, 0, -12.5943, -12.3941, 10.985, -12.1217)
@@ -514,13 +518,14 @@ parameters/looping = true
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13208, 17.6385, 7.12812)
 light_color = Color(0.999999, 0.994024, 0.632184, 1)
+shadow_enabled = true
 omni_range = 50.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lights" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.2879, 17.6385, -9.69703)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.2879, 24.3317, -9.69703)
 light_color = Color(0.999999, 0.996242, 0.684138, 1)
 shadow_enabled = true
-omni_range = 50.0
+omni_range = 51.0088
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Lights" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.462, 9.633, -9.567)
@@ -534,7 +539,7 @@ omni_range = 7.29556
 [connection signal="area_entered" from="Water/AreaReefWater" to="Water/AreaReefWater" method="_on_area_entered"]
 [connection signal="area_exited" from="Water/AreaReefWater" to="Water/AreaReefWater" method="_on_area_exited"]
 [connection signal="area_entered" from="Water/AreaDeepWater" to="Water/AreaDeepWater" method="_on_area_entered"]
-[connection signal="area_entered" from="Area3D2" to="Area3D2" method="_on_area_entered"]
-[connection signal="area_exited" from="Area3D2" to="Area3D2" method="_on_area_exited"]
-[connection signal="area_entered" from="SharkArea" to="SharkArea" method="_on_area_entered"]
-[connection signal="area_exited" from="SharkArea" to="SharkArea" method="_on_area_exited"]
+[connection signal="area_entered" from="ChestArea" to="ChestArea" method="_on_area_entered"]
+[connection signal="area_exited" from="ChestArea" to="ChestArea" method="_on_area_exited"]
+[connection signal="area_entered" from="Node3D/SharkArea" to="Node3D/SharkArea" method="_on_area_entered"]
+[connection signal="area_exited" from="Node3D/SharkArea" to="Node3D/SharkArea" method="_on_area_exited"]
