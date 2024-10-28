@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=2 format=3 uid="uid://din2id4r5dmcn"]
+
+[ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_81lcm"]
+
+[resource]
+script = ExtResource("1_81lcm")
+name = "F_SUNFISH_NAME"
+size = "?"
+habitat = "?"
+description = "F_SUNFISH_IDENT_DESCR"
