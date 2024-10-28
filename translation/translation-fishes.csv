@@ -18,7 +18,7 @@ F_ANGLERFISH_IDENT_DESCR;Exclusivement carnivore, ce poisson vie essentiellement
 ;;
 F_CLOWNFISH_NAME;Poisson clown;Clownfish
 F_CLOWNFISH_DESCR;Petit poisson à rayures oranges et blanches. N’ai pas particulièrement drôle…;Small fish with orange and white stripes. Isn’t particularily funny…
-F_CLOWNFISH_IDENT_DESCR;Adore se cacher dans des anémones.;Love hiding inside sea anemones.
+F_CLOWNFISH_IDENT_DESCR;Ce poisson coloré adore se cacher dans des anémones.;This colorful fish love hiding inside sea anemones.
 ;;
 F_COMMONFISH_NAME;Poisson commun;Common fish
 F_COMMONFISH_DESCR;Un poisson commun. Peu être trouvé à n’importe quelle période de la journée.;A slightly common fish. Can be found at any time of the day.
@@ -26,7 +26,7 @@ F_COMMONFISH_IDENT_DESCR;;
 ;;
 F_EEL_NAME;Anguille;Eel
 F_EEL_DESCR;Serpente autour des formations rocheuses.;Wander near rock formations.
-F_EEL_IDENT_DESCR;;
+F_EEL_IDENT_DESCR;Ce poisson migrateur se reproduit au grand large. Au stade adulte il est lucifuge (repoussé par la lumière).;This migratory fish breeds in the open sea. As an adult, it is lucifugic (repelled by light).
 ;;
 F_PILCHARD_NAME;Sardine;Pilchard
 F_PILCHARD_DESCR;Un très petit poisson. Commun au large des côtes;A really small fish. Common off the coasts.
@@ -37,24 +37,24 @@ F_SHARK_DESCR;Un prédateur mortel notoire.;A notorious deadly predator.
 F_SHARK_IDENT_DESCR;Une large mâchoire aux nombreuses dents.;A large jaw with numerous teeth.
 ;;
 F_HAMMERSHARK_NAME;Requin marteau;Hammershark
-F_HAMMERSHARK_DESCR;;
-F_HAMMERSHARK_IDENT_DESCR;;
+F_HAMMERSHARK_DESCR;Un requin à l’allure débonnaire.;A debonair-looking shark.
+F_HAMMERSHARK_IDENT_DESCR;La forme atypique de sa tête lui donne une grande portance et lui permet de prendre des virages serrés.;The atypical shape of its head gives it great lift and enables it to take tight turns.
 ;;
 F_MORAYEEL_NAME;Murène;Moray eel
-F_MORAYEEL_DESCR;;
-F_MORAYEEL_IDENT_DESCR;;
+F_MORAYEEL_DESCR;A l’aspect d’un gros serpent au corps robuste. Se cache dans des cavités rocheuses.;Looks like a big snake with a strong body. Hides in rocky cavities
+F_MORAYEEL_IDENT_DESCR;Ne possède pas de nageoire pectorales, seulement dorsales.;Has no pectoral fins, only dorsal.
 ;;
 F_SMALLFISH_NAME;Petit poisson;Small fish
 F_SMALLFISH_DESCR;;
 F_SMALLFISH_IDENT_DESCR;Un poisson coloré avec des rayures orangées;Colored with orangeish stripes.
 ;;
 F_SOLE_NAME;Sole;Sole
-F_SOLE_DESCR;;
+F_SOLE_DESCR;Un poisson plat vivant proche  des plages.;
 F_SOLE_IDENT_DESCR;;
 ;;
 F_URCHIN_NAME;Oursin;Sea urchin
-F_URCHIN_DESCR;;
-F_URCHIN_IDENT_DESCR;;
+F_URCHIN_DESCR;Une sphère recouverte de piquants.;A sphere covered with spikes.
+F_URCHIN_IDENT_DESCR;Bien que difficile à observée, cet animale possède une bouche… ainsi qu’un anus à l’opposé.;Although difficult to observe, this animal has a mouth... and an anus at the opposite.
 ;;
 F_PIKE_NAME;Brochet;Pike
 F_PIKE_DESCR;Carnivore se nourrissant  d’insectes ou de poissons plus petits que lui.;Carnivore that eat fishes smaller than him
