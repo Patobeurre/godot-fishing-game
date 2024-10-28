@@ -72,6 +72,7 @@ var bobber = null
 @onready var catch_fishing_state: StateMachineState = $CatchFishingState
 @onready var play_fishing_state: StateMachineState = $PlayingFishingState
 @onready var area_info_fishing_state: StateMachineState = $AreaInfoFishingState
+@onready var in_menu_state: StateMachineState = $MenuState
 
 @onready var safe_position_timer :Timer = $SafePositionTimer
 var safe_position :Vector3 = Vector3.ZERO
@@ -483,6 +484,7 @@ func enable_fishing_controls(enabled :bool):
 	if not ProgressVariables.progress["fishing_gear_obtained"]:
 		return
 	fishing_sm.is_input_disabled = not enabled
+
 
 func _on_dash_cd_timeout():
 	is_dash_enabled = true

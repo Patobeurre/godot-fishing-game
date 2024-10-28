@@ -101,6 +101,7 @@ axis_stretch_vertical = 1
 
 [node name="VSplitContainer" type="VSplitContainer" parent="HSplitContainer/MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="HSplitContainer/MarginContainer/VSplitContainer"]
 layout_mode = 2
@@ -153,7 +154,7 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_6mh38")
 
-[node name="ClickOutside" type="PanelContainer" parent="DocumentPreview"]
+[node name="ClickOutsidePreview" type="PanelContainer" parent="DocumentPreview"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_3ndlv")
 
@@ -166,4 +167,4 @@ theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 50
 
 [connection signal="gui_input" from="ClickOutside" to="." method="_on_click_outside_gui_input"]
-[connection signal="gui_input" from="DocumentPreview/ClickOutside" to="." method="_on_click_outside_gui_input"]
+[connection signal="gui_input" from="DocumentPreview/ClickOutsidePreview" to="." method="_on_click_outside_preview_gui_input"]

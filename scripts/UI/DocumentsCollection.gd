@@ -61,6 +61,12 @@ func _on_deactivate():
 
 func _on_click_outside_gui_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("mouse_left"):
+		#UiManager.close(unique_id)
+		pass
+
+
+func _on_click_outside_preview_gui_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("mouse_left"):
 		for node in document_view.get_children():
 			document_view.remove_child(node)
 		document_preview.visible = false

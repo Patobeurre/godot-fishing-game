@@ -27,6 +27,7 @@ var width
 var height
 var bar_container_width
 var is_cursor_inside_area :bool = false
+var areas_cursor_is_in :Array = []
 
 
 func _on_ready():
@@ -69,8 +70,12 @@ func _on_deactivate():
 
 func _on_area_2d_area_entered(area):
 	is_cursor_inside_area = true
+	areas_cursor_is_in.append(area)
 	
 
 
 func _on_area_2d_area_exited(area):
-	is_cursor_inside_area = false
+	var idx := areas_cursor_is_in.find(area)
+	areas_cursor_is_in.remove_at(idx)
+	if areas_cursor_is_in.is_empty():
+		is_cursor_inside_area = false

@@ -24,6 +24,7 @@ func open(id :String):
 		if ui.unique_id == id:
 			current_ui = ui
 			current_ui.activate()
+			SignalBus.ui_opened.emit()
 			return
 
 
@@ -32,6 +33,7 @@ func close(id :String):
 		return
 	
 	current_ui.deactivate()
+	SignalBus.ui_closed.emit()
 	current_ui = null
 
 

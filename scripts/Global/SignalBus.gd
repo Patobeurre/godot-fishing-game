@@ -26,5 +26,8 @@ signal enable_player_movements(bool)
 signal enable_player_camera(bool)
 signal enable_player_fishing(bool)
 
+signal ui_opened
+signal ui_closed
+
 signal save_requested
 signal savegame_loaded
