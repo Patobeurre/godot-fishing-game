@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://duregve5lp1xp"]
 
 [ext_resource type="PackedScene" uid="uid://vdy8loabq7mv" path="res://models/Structures/sealed_door.glb" id="1_jhj68"]
-[ext_resource type="Script" path="res://scripts/sealed_door.gd" id="2_1lpk4"]
-[ext_resource type="Script" path="res://scripts/sealed_door_symbol.gd" id="3_1756q"]
+[ext_resource type="Script" path="res://scripts/SealedDoorSM/sealed_door.gd" id="2_1lpk4"]
+[ext_resource type="Script" path="res://scripts/SealedDoorSM/sealed_door_symbol.gd" id="3_1756q"]
 [ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_om7b5"]
 [ext_resource type="Script" path="res://scripts/SealedDoorSM/default_state.gd" id="5_b4cdj"]
 [ext_resource type="Script" path="res://scripts/SealedDoorSM/dragged_state.gd" id="6_sfaui"]
