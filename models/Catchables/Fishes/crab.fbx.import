@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b0pt65iot4yka"
-path="res://.godot/imported/shell.glb-30562b20142570954ad132e165c085e2.scn"
+uid="uid://dwwhcaq2jmb4s"
+path="res://.godot/imported/crab.fbx-d487ed1d16079354f3f862f53e25dd28.scn"
 
 [deps]
 
-source_file="res://models/Catchables/shell.glb"
-dest_files=["res://.godot/imported/shell.glb-30562b20142570954ad132e165c085e2.scn"]
+source_file="res://models/Catchables/Fishes/crab.fbx"
+dest_files=["res://.godot/imported/crab.fbx-d487ed1d16079354f3f862f53e25dd28.scn"]
 
 [params]
 
@@ -27,10 +27,11 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-gltf/naming_version=1
-gltf/embedded_image_handling=3
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=3

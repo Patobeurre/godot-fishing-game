@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ca3vpq4jg8lbk"]
+
+[ext_resource type="Texture2D" uid="uid://dv6dewxmp6gj5" path="res://models/Catchables/Fishes/crab_fish_palette.png" id="1_0peru"]
+
+[resource]
+resource_name = "Material.176"
+cull_mode = 2
+albedo_texture = ExtResource("1_0peru")
