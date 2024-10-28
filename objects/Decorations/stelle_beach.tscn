@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c814n74rnu164"]
+
+[ext_resource type="PackedScene" uid="uid://uoyqutkqv4a4" path="res://models/Decorations/stelle_beach.glb" id="1_uusw5"]
+
+[node name="stelle_beach" instance=ExtResource("1_uusw5")]

@@ -79,7 +79,7 @@ mass = 80.0
 transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, 2.36388, 1.77737, 3.34916)
 
 [node name="desk" parent="." index="20" instance=ExtResource("5_o7upv")]
-transform = Transform3D(-2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, 1.86757, 0.410706, 2.8794)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.62193, 0.183799, 3.19002)
 
 [node name="FishingGear" parent="." index="21" instance=ExtResource("6_w6ikm")]
 transform = Transform3D(0.353526, 0, -0.484788, 0, 0.6, 0, 0.484788, 0, 0.353526, 3.20427, 0.30923, -3.17496)

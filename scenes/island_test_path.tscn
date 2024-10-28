@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://bljwxjxf7scis"]
+[gd_scene load_steps=57 format=3 uid="uid://bljwxjxf7scis"]
 
 [ext_resource type="PackedScene" uid="uid://cpyj3we54n0w4" path="res://models/Islands/island_test_path.glb" id="1_ag4d6"]
 [ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_ugmgj"]
@@ -15,8 +15,11 @@
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="11_rdjfq"]
 [ext_resource type="PackedScene" uid="uid://5wsxsmap8wpb" path="res://objects/Decorations/twin_trees.tscn" id="12_1f1s5"]
 [ext_resource type="Resource" uid="uid://bwyftdfcsih5o" path="res://scripts/Resources/FishingAreas/reef_water.tres" id="12_eoqe2"]
+[ext_resource type="PackedScene" uid="uid://cj5ta23ek4ni3" path="res://objects/Decorations/stelle_forest.tscn" id="13_gdiaa"]
 [ext_resource type="Resource" uid="uid://dpdrl0ohcty7k" path="res://scripts/Resources/FishingAreas/deep_water.tres" id="13_rsfs4"]
 [ext_resource type="Script" path="res://scripts/chest_area.gd" id="14_s0t0q"]
+[ext_resource type="PackedScene" uid="uid://dfo6rjwsvceum" path="res://objects/Decorations/stelle_reef.tscn" id="14_s4qx7"]
+[ext_resource type="PackedScene" uid="uid://c814n74rnu164" path="res://objects/Decorations/stelle_beach.tscn" id="15_5wqmp"]
 [ext_resource type="Resource" uid="uid://byqduaysqjavb" path="res://scripts/Resources/Catchables/Chest/chest.tres" id="15_u7t32"]
 [ext_resource type="Resource" uid="uid://bxj0i587fl3c6" path="res://scripts/Resources/FishingAreas/cave_water.tres" id="16_c6dmk"]
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="16_hbdwo"]
@@ -335,6 +338,17 @@ visible = false
 
 [node name="twin_trees2" parent="Decorations" index="7" instance=ExtResource("12_1f1s5")]
 transform = Transform3D(-2.18557e-07, 0, 5, 0, 5, 0, -5, 0, -2.18557e-07, 60, 1.8797, -70)
+
+[node name="Stelles" type="Node3D" parent="Decorations" index="8"]
+
+[node name="stelle_forest" parent="Decorations/Stelles" index="0" instance=ExtResource("13_gdiaa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0.258819, 0.965926, 1.13133e-08, -0.965926, 0.258819, -4.22219e-08, -4.79883, 51.6904, -49.403)
+
+[node name="stelle_reef" parent="Decorations/Stelles" index="1" instance=ExtResource("14_s4qx7")]
+transform = Transform3D(-0.591241, -0.0216043, 0.806206, 0.206306, 0.96233, 0.177085, -0.779662, 0.271024, -0.564511, -163.927, 27.8162, -24.7106)
+
+[node name="stelle_beach" parent="Decorations/Stelles" index="2" instance=ExtResource("15_5wqmp")]
+transform = Transform3D(-0.586379, 0.139171, -0.797992, 0.282114, 0.958541, -0.0401318, 0.759323, -0.248657, -0.60133, 58.8837, 4.17976, 63.0809)
 
 [node name="Water" type="Node3D" parent="." index="41"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.634, 0)
