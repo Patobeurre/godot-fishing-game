@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dqbthko1jthwh"]
 
-[ext_resource type="Script" path="res://scripts/shark_area.gd" id="1_7gpjf"]
+[ext_resource type="Script" path="res://models/Catchables/shark_area.gd" id="1_7gpjf"]
 [ext_resource type="PackedScene" uid="uid://c58bkyjaals63" path="res://models/Decorations/shark_dorsal.glb" id="1_kstmr"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="2_anaco"]
 [ext_resource type="Resource" uid="uid://cdinhdv0bl53j" path="res://scripts/Resources/Catchables/Fishes/Shark.tres" id="3_1kpb3"]

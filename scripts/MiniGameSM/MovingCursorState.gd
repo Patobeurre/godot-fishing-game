@@ -12,8 +12,6 @@ var min_bar_pos
 var max_bar_pos
 var bar_offset = 55
 
-var max_score :float = 100.0
-
 var score :float
 var bar_counter :int
 var is_cursor_moving :bool = false
@@ -25,7 +23,7 @@ var is_win = false
 func on_enter():
 	controller = get_parent()
 	stats = CatchableRes.get_minigame_difficulty(controller.catchable.rarity)
-	score = max_score
+	score = stats.max_score
 	bar_counter = stats.nb_bar_to_spawn
 	min_bar_pos = controller.min_cursor_pos + bar_offset
 	max_bar_pos = controller.max_cursor_pos - bar_offset
@@ -50,11 +48,11 @@ func on_process(delta):
 		if controller.is_cursor_inside_area:
 			bar.queue_free()
 			bar_counter -= 1
-			var current_score = (max_score / stats.nb_bar_to_spawn) * (stats.nb_bar_to_spawn - bar_counter)
+			var current_score = (stats.max_score / stats.nb_bar_to_spawn) * (stats.nb_bar_to_spawn - bar_counter)
 			SignalBus.minigame_score_updated.emit(current_score)
 			if bar_counter > 0:
 				spawn_bar()
-			score = max_score
+			score = stats.max_score
 			Audio.play(
 				"sounds/FishEffectsComplete/zapsplat_sport_fishing_reel_wind_clicks_spool_002_78261.mp3, \
 				sounds/FishEffectsComplete/zapsplat_sport_fishing_reel_wind_clicks_spool_short_hard_001_78262.mp3, \
@@ -66,7 +64,7 @@ func on_process(delta):
 	
 	score -= stats.deceleration_rate * delta
 	
-	bar.modulate.a = score / max_score
+	bar.modulate.a = score / stats.max_score
 	
 
 

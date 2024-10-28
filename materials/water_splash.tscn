@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://3gh01g8y3wuq"]
+
+[ext_resource type="Texture2D" uid="uid://bqrqrntcjgd5q" path="res://materials/GAP_Fire_Textures/Flare00.PNG" id="1_3ws88"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mkpdg"]
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 0.0
+emission_ring_radius = 2.0
+emission_ring_inner_radius = 0.0
+spread = 20.0
+initial_velocity_min = 5.0
+initial_velocity_max = 10.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_00a01"]
+albedo_texture = ExtResource("1_3ws88")
+
+[sub_resource type="QuadMesh" id="QuadMesh_eqnmp"]
+material = SubResource("StandardMaterial3D_00a01")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+amount = 20
+lifetime = 2.0
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_mkpdg")
+draw_pass_1 = SubResource("QuadMesh_eqnmp")

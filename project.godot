@@ -61,6 +61,14 @@ movie_writer/movie_file="D:/Godot/test.avi"
 
 enabled=PackedStringArray("res://addons/DragDrop3D/plugin.cfg", "res://addons/finite_state_machine/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg")
 
+[importer_defaults]
+
+animation_library={
+"fbx/embedded_image_handling": 3,
+"fbx/importer": 1,
+"gltf/embedded_image_handling": 3
+}
+
 [input]
 
 ui_left={

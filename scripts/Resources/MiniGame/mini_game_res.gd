@@ -2,6 +2,7 @@ extends Resource
 class_name MiniGameRes
 
 @export_group("Common properties")
+@export var max_score :float = 100.0
 @export var acceleration_rate :float = 30.0
 @export var deceleration_rate :float = 20.0
 @export var miss_deceleration_rate :float = 40.0
@@ -13,3 +14,8 @@ class_name MiniGameRes
 @export_group("Moving cursor")
 @export var cursor_speed :float = 1.0
 @export var nb_bar_to_spawn :int = 3
+
+@export_group("Moving dots")
+@export var dot_initial_offset :float= 200.0
+@export var dot_speed :float = 10.0
+@export var dot_speed_offset :float = 3.0

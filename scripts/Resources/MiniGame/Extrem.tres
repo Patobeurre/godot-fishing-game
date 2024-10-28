@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_h7wm5")
+max_score = 100.0
 acceleration_rate = 10.0
 deceleration_rate = 25.0
 miss_deceleration_rate = 50.0
@@ -11,3 +12,6 @@ bar_move_interval = 0.8
 bar_speed = 7.0
 cursor_speed = 1.2
 nb_bar_to_spawn = 5
+dot_initial_offset = 200.0
+dot_speed = 100.0
+dot_speed_offset = 10.0

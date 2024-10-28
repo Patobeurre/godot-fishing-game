@@ -14,7 +14,6 @@ var min_bar_pos
 var max_bar_pos
 var bar_offset = 55
 
-var max_score :float = 100.0
 var stats :MiniGameRes
 
 var score :float
@@ -33,7 +32,7 @@ func init():
 	stats = CatchableRes.get_minigame_difficulty(controller.catchable.rarity)
 	min_bar_pos = controller.min_cursor_pos + bar_offset
 	max_bar_pos = controller.max_cursor_pos - bar_offset
-	score = max_score / 2
+	score = stats.max_score / 2
 	bar = bar_scene.instantiate()
 	controller.bars.add_child(bar)
 	bar.position = controller.bar_container.global_position
@@ -64,7 +63,7 @@ func on_process(delta):
 		score -= stats.deceleration_rate * delta
 		audio_player.stream_paused = true
 	
-	bar.modulate.a = score / max_score
+	bar.modulate.a = score / stats.max_score
 
 
 func end_game():
@@ -87,7 +86,7 @@ func get_random_step():
 
 
 func check_win():
-	if score >= max_score:
+	if score >= stats.max_score:
 		is_win = true
 		end_game()
 	if score <= 0:

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5owq854a2nbn"]
+[gd_scene load_steps=4 format=3 uid="uid://b5owq854a2nbn"]
 
 [ext_resource type="Texture2D" uid="uid://d2u1mkoiiget1" path="res://sprites/fishing_game_dot.png" id="1_ai8rj"]
+[ext_resource type="Script" path="res://scripts/UI/Components/fishing_game_dot.gd" id="2_kucv7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rxx57"]
 radius = 18.1108
@@ -8,6 +9,7 @@ radius = 18.1108
 [node name="FishingGameDot" type="Sprite2D"]
 position = Vector2(580, 499)
 texture = ExtResource("1_ai8rj")
+script = ExtResource("2_kucv7")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 256

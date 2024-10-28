@@ -48,7 +48,8 @@ func load_minigame():
 	catchable = FishingManager.picked_catchable
 	
 	if catchable.category.tag == CategoryRes.ELureCategory.FISH:
-		minigame_sm.set_current_state(moving_bar_state)
+		minigame_sm.set_current_state(moving_dots_state)
+		#minigame_sm.set_current_state(moving_bar_state)
 	else:
 		minigame_sm.set_current_state(moving_cursor_state)
 

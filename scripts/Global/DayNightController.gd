@@ -18,7 +18,7 @@ var moonPosition : Vector3 = Vector3.ZERO
 func _ready():
 	SignalBus.player_pos_update.connect(updatePosition)
 	TimeManager.new_day.connect(on_new_day)
-	skyRotation -= 5
+	skyRotation += 140
 
 
 func updateLightnings():
@@ -48,4 +48,4 @@ func _physics_process(delta):
 
 
 func on_new_day(day_count :int):
-	skyRotation -= 5
+	skyRotation -= 10

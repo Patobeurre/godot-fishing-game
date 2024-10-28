@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_rmm6a")
+max_score = 100.0
 acceleration_rate = 20.0
 deceleration_rate = 20.0
 miss_deceleration_rate = 30.0
@@ -11,3 +12,6 @@ bar_move_interval = 1.5
 bar_speed = 5.0
 cursor_speed = 0.8
 nb_bar_to_spawn = 3
+dot_initial_offset = 200.0
+dot_speed = 100.0
+dot_speed_offset = 10.0
