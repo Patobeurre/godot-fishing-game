@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://bljwxjxf7scis"]
+[gd_scene load_steps=58 format=3 uid="uid://bljwxjxf7scis"]
 
 [ext_resource type="PackedScene" uid="uid://cpyj3we54n0w4" path="res://models/Islands/island_test_path.glb" id="1_ag4d6"]
 [ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_ugmgj"]
@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://dqbthko1jthwh" path="res://objects/Decorations/shark_area.tscn" id="25_venrc"]
 [ext_resource type="AudioStream" uid="uid://clto7prcddqvr" path="res://sounds/ambient/nature_ocean_waves_gentle_lap_beach.mp3" id="26_2emjj"]
 [ext_resource type="AudioStream" uid="uid://b8gj5ncbhekta" path="res://sounds/ambient/water_ocean_waves_calm_onto_stoney_beach_and_rocks_001.mp3" id="27_on43m"]
+[ext_resource type="PackedScene" uid="uid://duregve5lp1xp" path="res://objects/Structures/sealed_door.tscn" id="32_08t1t"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p0ivc"]
 points = PackedVector3Array(2.4222, -1, -0.0972824, 2.35109, 1, 0.15625, 2.40265, -1, 0.179091, 2.40265, -1, -0.370991, 2.35109, 1, -0.373656, 2.36929, 1, -0.109845, 2.29717, 1, 0.413209, 2.3457, -1, 0.445567, 2.3457, -1, -0.629473, 2.29717, 1, -0.623762, 1.94806, 1, 1.40678, 1.97771, -1, 1.46541, 2.25337, -1, -0.938585, 2.20956, 1, -0.922215, 1.78428, 1, 1.82363, 1.80484, -1, 1.907, 2.12902, -1, -1.35314, 2.09161, 1, -1.31279, 1.5002, 1, 1.81639, 1.49953, -1, 1.90052, 1.97771, -1, -1.72735, 1.94806, 1, -1.66492, 0.220323, -1, 1.49434, 0.297493, 1, 1.43343, 1.80484, -1, -1.92531, 1.78428, 1, -1.85222, -0.272689, 1, 1.12356, -0.337727, -1, 1.17381, 1.4911, -1, -1.98203, 1.49245, 1, -1.90589, -0.517678, 1, 0.918752, -0.544637, -1, 0.96786, 0.991349, -1, -1.9531, 1.02842, 1, -1.88229, -0.635961, 1, 0.770287, -0.669322, -1, 0.811019, 0.428244, -1, -1.72811, 0.498674, 1, -1.67444, -0.89443, 1, 0.401027, -0.778506, -1, 0.629435, -0.112283, -1, -1.50884, -0.0250034, 1, -1.46278, -0.886005, -1, 0.428436, -0.994852, 1, 0.201932, -0.512287, -1, -1.31736, -0.438486, 1, -1.26787, -0.969915, -1, 0.218682, -1.02046, 1, 0.00626242, -1.00024, -1, 0.0108306, -0.707402, -1, -0.962187, -0.670333, 1, -0.919931, -0.981709, 1, -0.183316, -0.981035, -1, -0.19093, -0.924085, -1, -0.38165)
@@ -545,6 +546,9 @@ omni_range = 51.0088
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.462, 9.633, -9.567)
 light_color = Color(0, 0.610949, 0.812539, 1)
 omni_range = 7.29556
+
+[node name="sealed_door" parent="." index="75" instance=ExtResource("32_08t1t")]
+transform = Transform3D(0.6, 0, 8.94072e-08, 0, 0.6, 0, -8.94072e-08, 0, 0.6, 3.69408, 4.98657, -14.8096)
 
 [connection signal="area_entered" from="Area3D" to="Area3D" method="_on_area_entered"]
 [connection signal="area_exited" from="Area3D" to="Area3D" method="_on_area_exited"]
