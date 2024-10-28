@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://duregve5lp1xp"]
+
+[ext_resource type="PackedScene" uid="uid://vdy8loabq7mv" path="res://models/Structures/sealed_door.glb" id="1_jhj68"]
+[ext_resource type="Script" path="res://scripts/sealed_door.gd" id="2_1lpk4"]
+[ext_resource type="Script" path="res://scripts/sealed_door_symbol.gd" id="3_1756q"]
+[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_om7b5"]
+[ext_resource type="Script" path="res://scripts/SealedDoorSM/default_state.gd" id="5_b4cdj"]
+[ext_resource type="Script" path="res://scripts/SealedDoorSM/dragged_state.gd" id="6_sfaui"]
+
+[node name="sealed_door" instance=ExtResource("1_jhj68")]
+transform = Transform3D(1, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 1, 0, 0, 0)
+script = ExtResource("2_1lpk4")
+
+[node name="StaticBody3D" parent="Cylinder_010" index="0"]
+script = ExtResource("3_1756q")
+
+[node name="StaticBody3D" parent="Cylinder_012" index="0"]
+script = ExtResource("3_1756q")
+
+[node name="StaticBody3D" parent="Cylinder_011" index="0"]
+script = ExtResource("3_1756q")
+
+[node name="Camera3D" type="Camera3D" parent="." index="17"]
+transform = Transform3D(-5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.96046e-08, 1, 1.7, 0)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="18"]
+transform = Transform3D(0.229339, -0.796102, 0.560023, 0.326943, 0.604935, 0.726059, -0.916794, 0.0165818, 0.399015, 3.89012, 2.30417, 3.89012)
+shadow_enabled = true
+
+[node name="FiniteStateMachine" type="Node" parent="." index="19"]
+script = ExtResource("4_om7b5")
+
+[node name="DefaultState" type="Node" parent="." index="20"]
+script = ExtResource("5_b4cdj")
+
+[node name="DraggedState" type="Node" parent="." index="21"]
+script = ExtResource("6_sfaui")
