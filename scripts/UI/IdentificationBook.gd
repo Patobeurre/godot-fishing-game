@@ -13,6 +13,11 @@ var current_page_idx = 0
 var selected_page :IdentificationPage = null
 
 
+func _on_ready():
+	selection_menu_left.item_clicked.connect(_on_fish_selected)
+	selection_menu_right.item_clicked.connect(_on_fish_selected)
+
+
 func _on_process(delta):
 	if not is_preventing_input:
 		if Input.is_action_just_pressed("ui_cancel") or \
@@ -80,8 +85,6 @@ func init_selection_menus() -> void:
 	selection_panel.hide()
 	selection_menu_left.populate()
 	selection_menu_right.populate()
-	selection_menu_left.item_clicked.connect(_on_fish_selected)
-	selection_menu_right.item_clicked.connect(_on_fish_selected)
 
 
 func _on_activate():

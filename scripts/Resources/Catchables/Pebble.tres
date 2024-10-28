@@ -10,7 +10,7 @@
 script = ExtResource("1_d1lig")
 id = 29
 name = "Pebble"
-description = "A small rock."
+description = "F_MORAYEEL_DESCR"
 notification_text = ""
 category = ExtResource("1_eojxp")
 tags = Array[int]([])
