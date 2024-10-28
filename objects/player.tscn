@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dl2ed4gkybggf"]
+[gd_scene load_steps=21 format=3 uid="uid://dl2ed4gkybggf"]
 
 [ext_resource type="Script" path="res://scripts/player_stair_test.gd" id="1_awcpd"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_fg077"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://scripts/UI/AreaInfoUI.gd" id="14_mbniq"]
 [ext_resource type="Script" path="res://scripts/FishingSM/AreaInfoFishingState.gd" id="14_sxfw8"]
 [ext_resource type="PackedScene" uid="uid://c5xb58gno5o6x" path="res://objects/UI/AreaInfoEntry.tscn" id="15_usy7x"]
+[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/state_machine_state.gd" id="16_0e28c"]
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="16_n382o"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
@@ -164,6 +165,9 @@ script = ExtResource("13_p57dx")
 
 [node name="AreaInfoFishingState" type="Node" parent="."]
 script = ExtResource("14_sxfw8")
+
+[node name="MenuState" type="Node" parent="."]
+script = ExtResource("16_0e28c")
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3

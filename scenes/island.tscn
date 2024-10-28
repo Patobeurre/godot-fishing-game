@@ -104,7 +104,6 @@ mesh = SubResource("SphereMesh_fw2m2")
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0)
 light_color = Color(0.716018, 0.603813, 1, 1)
 light_energy = 0.105
-light_negative = true
 light_cull_mask = 4294967291
 
 [node name="TimeChanger" parent="." instance=ExtResource("11_rtxa3")]
