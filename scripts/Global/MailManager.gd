@@ -1,7 +1,7 @@
 extends Node
 
 
-var mail_list :DocumentList = preload("res://scripts/Resources/Documents/AllDocuments.tres")
+var mail_list :DocumentList = preload("res://scripts/Resources/Documents/AllMailList.tres")
 var mail_stats :MailStats
 
 signal mail_received

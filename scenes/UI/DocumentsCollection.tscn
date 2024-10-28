@@ -1,8 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cgettvm74710g"]
+[gd_scene load_steps=15 format=3 uid="uid://cgettvm74710g"]
 
 [ext_resource type="Texture2D" uid="uid://d0vhrkrd8i2uf" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-default.png" id="1_8qqoe"]
 [ext_resource type="Script" path="res://scripts/UI/DocumentsCollection.gd" id="1_jppik"]
 [ext_resource type="Texture2D" uid="uid://lkseiwb1yb1a" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-double.png" id="2_qq58t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o6tgn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ml2bc"]
 atlas = ExtResource("1_8qqoe")
@@ -44,6 +46,10 @@ VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_2e7hj")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nw43b"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6mh38"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ndlv"]
+
 [node name="DocumentsCollection" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -51,8 +57,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_jppik")
 unique_id = "DocumentsCollection"
+
+[node name="ClickOutside" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_o6tgn")
 
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
 layout_mode = 1
@@ -61,10 +77,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="HSplitContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
@@ -72,6 +90,7 @@ theme_override_constants/margin_bottom = 50
 
 [node name="NinePatchRect" type="NinePatchRect" parent="HSplitContainer/MarginContainer"]
 layout_mode = 2
+mouse_filter = 0
 texture = SubResource("AtlasTexture_ml2bc")
 patch_margin_left = 10
 patch_margin_top = 10
@@ -120,4 +139,31 @@ theme_override_constants/separation = 10
 [node name="PanelContainer" type="PanelContainer" parent="HSplitContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_nw43b")
+
+[node name="DocumentPreview" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6mh38")
+
+[node name="ClickOutside" type="PanelContainer" parent="DocumentPreview"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_3ndlv")
+
+[node name="View" type="MarginContainer" parent="DocumentPreview"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 50
+
+[connection signal="gui_input" from="ClickOutside" to="." method="_on_click_outside_gui_input"]
+[connection signal="gui_input" from="DocumentPreview/ClickOutside" to="." method="_on_click_outside_gui_input"]
