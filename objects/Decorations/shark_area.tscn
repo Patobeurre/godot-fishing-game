@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dqbthko1jthwh"]
+[gd_scene load_steps=17 format=3 uid="uid://dqbthko1jthwh"]
 
 [ext_resource type="Script" path="res://models/Catchables/shark_area.gd" id="1_7gpjf"]
 [ext_resource type="PackedScene" uid="uid://c58bkyjaals63" path="res://models/Decorations/shark_dorsal.glb" id="1_kstmr"]
@@ -6,6 +6,10 @@
 [ext_resource type="Resource" uid="uid://cdinhdv0bl53j" path="res://scripts/Resources/Catchables/Fishes/Shark.tres" id="3_1kpb3"]
 [ext_resource type="Resource" uid="uid://bq7rfd0awtdhf" path="res://scripts/Resources/Catchables/Fishes/HammerShark.tres" id="4_rgpdx"]
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="5_bmlv8"]
+[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="7_4ep7s"]
+[ext_resource type="Script" path="res://scripts/SharkAreaSM/catching_state.gd" id="9_h0m2g"]
+[ext_resource type="Script" path="res://scripts/SharkAreaSM/retreive_position_state.gd" id="10_ff3eu"]
+[ext_resource type="Script" path="res://scripts/SharkAreaSM/default_orbiting_state.gd" id="12_qtqvx"]
 
 [sub_resource type="Resource" id="Resource_s21m3"]
 script = ExtResource("5_bmlv8")
@@ -73,6 +77,20 @@ shape = SubResource("CylinderShape3D_qwu4a")
 libraries = {
 "": SubResource("AnimationLibrary_2fcv2")
 }
+
+[node name="FiniteStateMachine" type="Node" parent="."]
+script = ExtResource("7_4ep7s")
+
+[node name="CatchingState" type="Node" parent="."]
+script = ExtResource("9_h0m2g")
+
+[node name="OrbitCenter" type="Node3D" parent="CatchingState"]
+
+[node name="RetreivePositionState" type="Node" parent="."]
+script = ExtResource("10_ff3eu")
+
+[node name="DefaultOrbitingState" type="Node" parent="."]
+script = ExtResource("12_qtqvx")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
