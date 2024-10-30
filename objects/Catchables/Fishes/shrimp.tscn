@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3olfp7slcj60"]
+
+[ext_resource type="PackedScene" uid="uid://1qfqp24kpw8a" path="res://models/Catchables/Fishes/shrimp.glb" id="1_p7y0v"]
+
+[node name="shrimp" instance=ExtResource("1_p7y0v")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, 0)
+
+[node name="shrimp_merged" parent="." index="0"]
+transform = Transform3D(-0.036, -6.03983e-09, 2.44209e-16, 0, -1.74846e-09, -0.037, 5.43585e-09, -0.04, 1.61732e-09, 0, 0, 0)

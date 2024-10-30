@@ -90,4 +90,12 @@ F_BOMBFISH_IDENT_DESCR;;
 ;;
 F_SUNFISH_NAME;???;???
 F_SUNFISH_DESCR;Il brûle lentement ma peau;Burn slightly in my hands
-F_SUNFISH_IDENT_DESCR;Quand les deux amoureux contemple l’astre, contemple avec eux. Et voit par leur œil la beauté du monde,;When the two lovers contemplate the star, contemplate with them. And see throught their eye the beauty of the world,
+F_SUNFISH_IDENT_DESCR;Quand les deux amoureux contemple l’astre, contemple avec eux. Et voit par leur œil la beauté du monde.;When the two lovers contemplate the star, contemplate with them. And see throught their eye the beauty of the world,
+;;
+F_HIDDENFISH_NAME;Poisson camouflage;Camouflaged fish
+F_HIDDENFISH_DESCR;Se cachant efficacement à l'intérieur d'une touffe d'algues.;Hidding efficiently inside clump of seaweed.
+F_HIDDENFISH_IDENT_DESCR;;
+;;
+F_SHRIMP_NAME;Crevette;Shrimp
+F_SHRIMP_DESCR;;
+F_SHRIMP_IDENT_DESCR;;

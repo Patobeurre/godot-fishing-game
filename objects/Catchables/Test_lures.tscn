@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://d2cy4arr18ptt"]
+[gd_scene load_steps=38 format=3 uid="uid://d2cy4arr18ptt"]
 
 [ext_resource type="PackedScene" uid="uid://dmyqppx7y0tw7" path="res://objects/bobber.tscn" id="1_dkc2c"]
 [ext_resource type="PackedScene" uid="uid://0ontd173otm6" path="res://objects/Catchables/true_mussels.tscn" id="2_vjnp4"]
@@ -36,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://ov6nyr54t5gr" path="res://objects/Catchables/Fishes/jellyfish_robe.tscn" id="34_pu8ra"]
 [ext_resource type="PackedScene" uid="uid://ctnvtno1easny" path="res://objects/Catchables/Fishes/exploding_fish.tscn" id="35_4gfa0"]
 [ext_resource type="PackedScene" uid="uid://de63h5pvd50wq" path="res://objects/Catchables/Fishes/jellyfish_tiny.tscn" id="36_8sjbl"]
+[ext_resource type="PackedScene" uid="uid://c3olfp7slcj60" path="res://objects/Catchables/Fishes/shrimp.tscn" id="37_qvp8j"]
 
 [node name="TestLures" type="Node3D"]
 
@@ -146,3 +147,6 @@ visible = false
 visible = false
 
 [node name="jellyfish_tiny" parent="." instance=ExtResource("36_8sjbl")]
+visible = false
+
+[node name="shrimp" parent="." instance=ExtResource("37_qvp8j")]

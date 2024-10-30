@@ -31,7 +31,54 @@ animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"Material.202": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/Palettes/Material.213.tres"
+},
+"Material.203": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/Palettes/Material.213.tres"
+},
+"Material.204": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/Palettes/Material.213.tres"
+},
+"Material.218": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/Palettes/Material.213.tres"
+},
+"Material.219": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/Palettes/Material.213.tres"
+},
+"Material.220": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/Palettes/Material.213.tres"
+},
+"Material.221": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/Palettes/Material.213.tres"
+},
+"Material.222": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/Palettes/Material.213.tres"
+},
+"Material.223": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/Palettes/Material.213.tres"
+},
+"Material.224": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/Palettes/Material.213.tres"
+},
+"Material.226": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/Palettes/Material.213.tres"
+}
+}
+}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=3

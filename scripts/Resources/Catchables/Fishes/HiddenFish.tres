@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://lio1nhp8ucd2"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_84jei"]
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_iew03"]
+[ext_resource type="Texture2D" uid="uid://sej7tapoqc4n" path="res://sprites/Catchables/Fishes/hiddenfish.png" id="2_u2rln"]
+[ext_resource type="Resource" uid="uid://ddepi6wvt10p6" path="res://scripts/Resources/Catchables/SeaWeed.tres" id="4_j08hj"]
+[ext_resource type="PackedScene" uid="uid://d2sf8bk5w6snk" path="res://objects/Catchables/Fishes/hidden_fish.tscn" id="5_plmvo"]
+
+[resource]
+script = ExtResource("1_84jei")
+id = 41
+name = "F_HIDDENFISH_NAME"
+description = "F_HIDDENFISH_DESCR"
+notification_text = ""
+category = ExtResource("1_iew03")
+tags = Array[int]([0, 1])
+image = ExtResource("2_u2rln")
+scene = ExtResource("5_plmvo")
+rarity = 15
+periods = Array[int]([0, 1, 2, 3])
+lures = Array[ExtResource("1_84jei")]([ExtResource("4_j08hj")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([])

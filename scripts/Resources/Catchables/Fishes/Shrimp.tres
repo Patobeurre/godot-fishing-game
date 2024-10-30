@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://dw3vqqivyjq34"]
+
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_uajtj"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_yvgjr"]
+[ext_resource type="Texture2D" uid="uid://d31m56mp82d31" path="res://sprites/Catchables/Fishes/shrimp.png" id="2_qmnyw"]
+[ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="4_kpsxy"]
+[ext_resource type="PackedScene" uid="uid://c3olfp7slcj60" path="res://objects/Catchables/Fishes/shrimp.tscn" id="5_pmoaf"]
+
+[resource]
+script = ExtResource("1_yvgjr")
+id = 42
+name = "F_SHRIMP_NAME"
+description = "F_SHRIMP_DESCR"
+notification_text = ""
+category = ExtResource("1_uajtj")
+tags = Array[int]([0, 7])
+image = ExtResource("2_qmnyw")
+scene = ExtResource("5_pmoaf")
+rarity = 30
+periods = Array[int]([0, 2])
+lures = Array[ExtResource("1_yvgjr")]([ExtResource("4_kpsxy")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([])
