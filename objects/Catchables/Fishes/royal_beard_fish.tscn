@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsakck0gxgtpp"]
+
+[ext_resource type="PackedScene" uid="uid://dtamt3d25aslc" path="res://models/Catchables/Fishes/royal_beard_fish.glb" id="1_nn3ob"]
+
+[node name="royal_beard_fish" instance=ExtResource("1_nn3ob")]
+
+[node name="royal_beard_fish_merged" parent="." index="0"]
+transform = Transform3D(-0.0453729, 0.00288726, 0.142944, -0.00096935, -0.149972, 0.00272153, 0.14297, -0.000100525, 0.0453832, -0.0308529, -0.0829899, 0)

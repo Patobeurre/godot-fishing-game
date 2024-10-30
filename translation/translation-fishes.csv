@@ -99,3 +99,11 @@ F_HIDDENFISH_IDENT_DESCR;;
 F_SHRIMP_NAME;Crevette;Shrimp
 F_SHRIMP_DESCR;;
 F_SHRIMP_IDENT_DESCR;;
+;;
+F_OCTOPUS_NAME;Pieuvre;Octopus
+F_OCTOPUS_DESCR;Essaie d’enrouler ses tentacules autour de mon bras.;Tries to wrap around his tentacules around my arm.
+F_OCTOPUS_IDENT_DESCR;;
+;;
+F_ROYALBEARDFISH_NAME;Poisson royal à barbe;Royal beard fish
+F_ROYALBEARDFISH_DESCR;;
+F_ROYALBEARDFISH_IDENT_DESCR;;

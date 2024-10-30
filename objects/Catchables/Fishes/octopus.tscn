@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckf8gv048tone"]
+
+[ext_resource type="PackedScene" uid="uid://u4l0xmog3c8x" path="res://models/Catchables/Fishes/octopus.glb" id="1_mdeah"]
+
+[node name="octopus" instance=ExtResource("1_mdeah")]
+
+[node name="octopus_merged" parent="." index="0"]
+transform = Transform3D(0.00748116, -0.00165215, 0.0290052, 0.00201423, 0.0299089, 0.00118411, -0.0289823, 0.00165215, 0.00756936, 0, -0.1268, 0)

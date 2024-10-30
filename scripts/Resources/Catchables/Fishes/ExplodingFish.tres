@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://ds8oniim37aio"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://ds8oniim37aio"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_ogs10"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_qmdo2"]
 [ext_resource type="Texture2D" uid="uid://dqhlsag4ferkm" path="res://sprites/Catchables/Fishes/bombfish.png" id="2_mm7gk"]
 [ext_resource type="PackedScene" uid="uid://ctnvtno1easny" path="res://objects/Catchables/Fishes/exploding_fish.tscn" id="3_07jya"]
-[ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="3_aamxf"]
 [ext_resource type="Resource" uid="uid://b7skhevbmqmuu" path="res://scripts/Resources/Catchables/Pebble.tres" id="4_ox2xp"]
 
 [resource]
@@ -18,7 +17,7 @@ tags = Array[int]([0, 1])
 image = ExtResource("2_mm7gk")
 scene = ExtResource("3_07jya")
 rarity = 5
-periods = Array[int]([2, 3])
-lures = Array[ExtResource("1_qmdo2")]([ExtResource("3_aamxf"), ExtResource("4_ox2xp")])
+periods = Array[int]([2, 3, 1, 0])
+lures = Array[ExtResource("1_qmdo2")]([ExtResource("4_ox2xp")])
 lure_ids = Array[int]([])
 lure_tags = Array[int]([])
