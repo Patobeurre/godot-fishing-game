@@ -3,6 +3,7 @@ extends Node3D
 
 @onready var symbol = $Cylinder_010/StaticBody3D
 @onready var camera = $Camera3D
+@onready var interact_body = $base_door/StaticBody3D
 
 @onready var state_machine = $FiniteStateMachine
 @onready var default_state = $DefaultState
@@ -14,6 +15,7 @@ var current_angle :float = 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	interact_body.interact_performed.connect(_on_interact_performed)
 	state_machine.set_current_state(default_state)
 
 
@@ -68,5 +70,7 @@ func raycast_at_mouse_position(mask :int = 255):
 	raycast_param.to = ray_end
 	raycast_param.collision_mask = mask
 	return get_world_3d().direct_space_state.intersect_ray(raycast_param)
-	
-	
+
+
+func _on_interact_performed():
+	SignalBus.interact_request.emit(camera)

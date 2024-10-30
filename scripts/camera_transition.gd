@@ -2,8 +2,11 @@ extends Node
 
 
 @onready var camera_tmp : Camera3D = $CameraTmp
+
 var is_transitioning : bool = false
 var is_zooming : bool = false
+
+signal end_camera_transition
 
 
 func transition_camera(from :Camera3D, to :Camera3D, duration :float = 1.0):
@@ -22,6 +25,8 @@ func transition_camera(from :Camera3D, to :Camera3D, duration :float = 1.0):
 	
 	to.make_current()
 	is_transitioning = false
+	
+	end_camera_transition.emit()
 
 
 func zoom_camera(camera :Camera3D, value :float, duration :float = 1.0):

@@ -132,7 +132,6 @@ unique_id = "Documents"
 visible = false
 
 [node name="Notifications" parent="." instance=ExtResource("12_c2lfr")]
-mouse_filter = 2
 
 [node name="test_house" parent="." instance=ExtResource("15_wb0wr")]
 transform = Transform3D(0.896192, 0, -0.443666, 0, 1, 0, 0.443666, 0, 0.896192, -2.60755, 2.69963, -6.04292)

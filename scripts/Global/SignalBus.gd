@@ -26,6 +26,9 @@ signal enable_player_movements(bool)
 signal enable_player_camera(bool)
 signal enable_player_fishing(bool)
 
+signal interact_request(Camera3D)
+signal end_camera_interaction(Camera3D)
+
 signal ui_opened
 signal ui_closed
 

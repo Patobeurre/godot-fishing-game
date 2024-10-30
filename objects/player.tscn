@@ -17,7 +17,7 @@
 [ext_resource type="Script" path="res://scripts/UI/AreaInfoUI.gd" id="14_mbniq"]
 [ext_resource type="Script" path="res://scripts/FishingSM/AreaInfoFishingState.gd" id="14_sxfw8"]
 [ext_resource type="PackedScene" uid="uid://c5xb58gno5o6x" path="res://objects/UI/AreaInfoEntry.tscn" id="15_usy7x"]
-[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/state_machine_state.gd" id="16_0e28c"]
+[ext_resource type="Script" path="res://scripts/in_menu_state.gd" id="16_2w7jl"]
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="16_n382o"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
@@ -60,7 +60,7 @@ stretch = true
 transparent_bg = true
 handle_input_locally = false
 msaa_3d = 1
-size = Vector2i(1280, 800)
+size = Vector2i(1920, 800)
 render_target_update_mode = 0
 
 [node name="CameraItem" type="Camera3D" parent="Body/Head/Camera/SubViewportContainer/SubViewport"]
@@ -166,8 +166,8 @@ script = ExtResource("13_p57dx")
 [node name="AreaInfoFishingState" type="Node" parent="."]
 script = ExtResource("14_sxfw8")
 
-[node name="MenuState" type="Node" parent="."]
-script = ExtResource("16_0e28c")
+[node name="InteractionState" type="Node" parent="."]
+script = ExtResource("16_2w7jl")
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3

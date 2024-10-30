@@ -72,7 +72,7 @@ var bobber = null
 @onready var catch_fishing_state: StateMachineState = $CatchFishingState
 @onready var play_fishing_state: StateMachineState = $PlayingFishingState
 @onready var area_info_fishing_state: StateMachineState = $AreaInfoFishingState
-@onready var in_menu_state: StateMachineState = $MenuState
+@onready var in_interaction_state: StateMachineState = $InteractionState
 
 @onready var safe_position_timer :Timer = $SafePositionTimer
 var safe_position :Vector3 = Vector3.ZERO
@@ -171,6 +171,10 @@ func _ready():
 	SignalBus.enable_player_movements.connect(enable_movements_controls)
 	SignalBus.enable_player_fishing.connect(enable_fishing_controls)
 	
+	SignalBus.interact_request.connect(_on_interact_requested)
+	SignalBus.end_camera_interaction.connect(_on_end_camera_interaction)
+	CameraTransition.end_camera_transition.connect(_on_end_camera_transition)
+	
 	SignalBus.bobber_enter_fishing_area.connect(_on_bobber_enter_fishing_area)
 	SignalBus.bobber_collide_wall.connect(_on_bobber_collide_wall)
 	SignalBus.bobber_return_to_player.connect(retreive_fishing_state.destroy_bobber)
@@ -198,7 +202,8 @@ func _physics_process(delta):
 	
 	handle_controls(delta)
 	
-	handle_interaction()
+	if default_fishing_state.is_current_state():
+		handle_interaction()
 	
 	if not is_climbing_step:
 		
@@ -365,6 +370,7 @@ func enable_hud(enabled :bool):
 		$HUD.show()
 	else:
 		$HUD.hide()
+		$InteractUI.hide()
 
 
 func handle_controls(_delta):
@@ -492,6 +498,34 @@ func _on_dash_cd_timeout():
 
 func _on_dash_duration_timeout():
 	is_dashing = false
+
+
+func _on_interact_requested(target_camera :Camera3D):
+	if CameraTransition.is_transitioning:
+		return
+	fishing_sm.set_current_state(in_interaction_state)
+	enable_player(false)
+	CameraTransition.transition_camera(camera, target_camera)
+
+
+func _on_end_camera_interaction(target_camera :Camera3D):
+	if CameraTransition.is_transitioning:
+		return
+	CameraTransition.transition_camera(target_camera, camera)
+	fishing_sm.set_current_state(default_fishing_state)
+
+
+func _on_end_camera_transition():
+	if in_interaction_state.is_current_state():
+		return
+	enable_player(true)
+
+
+func enable_player(enabled :bool) -> void:
+	enable_fishing_controls(enabled)
+	enable_movements_controls(enabled)
+	enable_camera_controls(enabled)
+	enable_hud(enabled)
 
 
 func on_update_progress_variable(name :String):
