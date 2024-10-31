@@ -19,11 +19,15 @@ func _ready() -> void:
 	state_machine.set_current_state(default_state)
 
 
-func get_initial_intersection():
+func start_dragging():
 	initial_intersection = raycast_at_mouse_position(512)
 	if initial_intersection.has("collider"):
 		if initial_intersection["collider"].is_in_group("Symbol"):
 			state_machine.set_current_state(dragged_state)
+
+
+func stop_dragging():
+	state_machine.set_current_state(default_state)
 
 
 func end_rotation():

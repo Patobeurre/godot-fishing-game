@@ -13,7 +13,7 @@ func on_enter() -> void:
 # Called every frame when this state is active.
 func on_process(delta: float) -> void:
 	if not Input.is_action_pressed("mouse_left"):
-		controller.state_machine.set_current_state(controller.default_state)
+		controller.stop_dragging()
 
 
 # Called every physics frame when this state is active.

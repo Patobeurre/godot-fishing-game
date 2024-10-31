@@ -18,7 +18,7 @@ func on_process(delta: float) -> void:
 # Called every physics frame when this state is active.
 func on_physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("mouse_left"):
-		controller.get_initial_intersection()
+		controller.start_dragging()
 
 
 # Called when there is an input event while this state is active.

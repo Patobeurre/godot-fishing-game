@@ -13,11 +13,15 @@ const MIDNIGHT_DAY_TIME :float = 600
 var time_stats :TimeStats
 var current_period :TimePeriod.ETimePeriod
 
+var is_running = true
+
 signal new_day(int)
 
 
 func _physics_process(delta):
+	if not is_running: return
 	if time_stats == null: return
+	
 	set_time_of_day(time_stats.time_of_day + rateOfTime * delta)
 	
 	if time_stats.time_of_day > MAX_TIME_RANGE:
@@ -25,6 +29,14 @@ func _physics_process(delta):
 	if time_stats.time_of_day >= MIDNIGHT_DAY_TIME and \
 		time_stats.time_of_day < (MIDNIGHT_DAY_TIME + delta):
 		Audio.play("sounds/gear_mechanism.ogg")
+
+
+func stop():
+	is_running = false
+
+
+func resume():
+	is_running = true
 
 
 func set_time_of_day(newTimeOfDay :float):
@@ -42,6 +54,10 @@ func _update_day_count(begin :float, end :float):
 
 func get_time_period() -> TimePeriod.ETimePeriod:
 	return time_stats.current_period
+
+
+func get_time_ratio() -> float:
+	return time_stats.time_of_day / MAX_TIME_RANGE
 
 
 func set_stats(stats :TimeStats):
