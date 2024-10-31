@@ -3,6 +3,7 @@ extends Node
 
 var registered_uis :Array[MainUI] = []
 var current_ui :MainUI = null
+var is_menu_opened :bool = false
 
 signal register(MainUI)
 signal unregister(MainUI)
@@ -24,6 +25,7 @@ func open(id :String):
 		if ui.unique_id == id:
 			current_ui = ui
 			current_ui.activate()
+			is_menu_opened = true
 			SignalBus.ui_opened.emit()
 			return
 
@@ -33,6 +35,7 @@ func close(id :String):
 		return
 	
 	current_ui.deactivate()
+	is_menu_opened = false
 	SignalBus.ui_closed.emit()
 	current_ui = null
 

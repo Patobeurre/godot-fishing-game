@@ -202,7 +202,8 @@ func _physics_process(delta):
 	
 	handle_controls(delta)
 	
-	if default_fishing_state.is_current_state():
+	if default_fishing_state.is_current_state() and \
+		not UiManager.is_menu_opened:
 		handle_interaction()
 	
 	if not is_climbing_step:
@@ -350,13 +351,12 @@ func handle_interaction():
 		coll.is_in_group("Interactable"):
 		
 		is_interacting = true
-		if default_fishing_state.is_current_state():
-			enable_fishing_controls(false)
-			enable_hud(false)
-			label_interact.text = coll.interact_text
-			$InteractUI.show()
-			if Input.is_action_just_pressed("interact"):
-				coll.interact()
+		enable_fishing_controls(false)
+		enable_hud(false)
+		label_interact.text = coll.interact_text
+		$InteractUI.show()
+		if Input.is_action_just_pressed("interact"):
+			coll.interact()
 	else:
 		if is_interacting:
 			is_interacting = false
