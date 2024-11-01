@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dvixv20hvw8h3"]
+[gd_scene load_steps=10 format=3 uid="uid://dvixv20hvw8h3"]
 
 [ext_resource type="Script" path="res://scripts/UI/TimeChanger.gd" id="1_7cw6t"]
+[ext_resource type="Texture2D" uid="uid://8ggihh27mlrr" path="res://sprites/blob_shadow.png" id="2_8gjxc"]
 [ext_resource type="Texture2D" uid="uid://376kuruoy34p" path="res://sprites/UI/clock/clock_background.png" id="2_l43bl"]
 [ext_resource type="Texture2D" uid="uid://o1euhrx7dop7" path="res://sprites/UI/clock/clock_needle.png" id="3_it2gh"]
 [ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_s4gue"]
@@ -9,7 +10,7 @@
 [ext_resource type="Script" path="res://addons/finite_state_machine/scripts/state_machine_state.gd" id="7_rgqup"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nksjp"]
-size = Vector2(143, 52)
+size = Vector2(143, 49.9997)
 
 [node name="TimeChanger" type="Control"]
 layout_mode = 3
@@ -21,6 +22,14 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_7cw6t")
 unique_id = "TimeChanger"
+
+[node name="ClickOutside" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -53,8 +62,16 @@ text = "DUSK"
 layout_mode = 2
 text = "NIGHT"
 
-[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+[node name="ShadowBackground" type="TextureRect" parent="CenterContainer"]
+custom_minimum_size = Vector2(700, 700)
 layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_8gjxc")
+stretch_mode = 5
+
+[node name="ClockBackground" type="TextureRect" parent="CenterContainer"]
+layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("2_l43bl")
 
 [node name="ClockHand2" type="Sprite2D" parent="CenterContainer"]
@@ -68,11 +85,12 @@ texture = ExtResource("3_it2gh")
 [node name="Area2D" type="Area2D" parent="CenterContainer/ClockHand"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CenterContainer/ClockHand/Area2D"]
-position = Vector2(79.5, -1)
+position = Vector2(81, 0.000153267)
 shape = SubResource("RectangleShape2D_nksjp")
 
 [node name="Button" type="Button" parent="CenterContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
 action_mode = 0
 text = "Sleep"
 
@@ -88,6 +106,7 @@ script = ExtResource("6_41i7l")
 [node name="PassingTimeState" type="Node" parent="."]
 script = ExtResource("7_rgqup")
 
+[connection signal="gui_input" from="ClickOutside" to="." method="_on_click_outside_gui_input"]
 [connection signal="button_down" from="CenterContainer/VBoxContainer/btnDawn" to="." method="_on_btn_dawn_button_down"]
 [connection signal="button_down" from="CenterContainer/VBoxContainer/btnDay" to="." method="_on_btn_day_button_down"]
 [connection signal="button_down" from="CenterContainer/VBoxContainer/btnDusk" to="." method="_on_btn_dusk_button_down"]

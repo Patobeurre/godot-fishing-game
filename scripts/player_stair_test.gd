@@ -80,6 +80,7 @@ var safe_position :Vector3 = Vector3.ZERO
 var character_stats :CharacterStats
 
 @onready var area_info_ui :AreaInfoUI = $AreaInfoUI
+@onready var hud := $HUD
 
 
 var is_jumping :bool = false
@@ -170,6 +171,7 @@ func _ready():
 	SignalBus.enable_player_camera.connect(enable_camera_controls)
 	SignalBus.enable_player_movements.connect(enable_movements_controls)
 	SignalBus.enable_player_fishing.connect(enable_fishing_controls)
+	SignalBus.enable_player_hud.connect(enable_hud)
 	
 	SignalBus.interact_request.connect(_on_interact_requested)
 	SignalBus.end_camera_interaction.connect(_on_end_camera_interaction)
@@ -340,6 +342,8 @@ func handle_menu_inputs(_event):
 			UiManager.open("LureCollection")
 	
 	if default_fishing_state.is_current_state():
+		if ProgressVariables.check_variable("identification_book_obtained", false):
+			return
 		if Input.is_action_just_pressed("open_identification_book"):
 			UiManager.open("IdentificationBook")
 
@@ -352,7 +356,7 @@ func handle_interaction():
 		
 		is_interacting = true
 		enable_fishing_controls(false)
-		enable_hud(false)
+		hud.enable_crosshair(false)
 		label_interact.text = coll.interact_text
 		$InteractUI.show()
 		if Input.is_action_just_pressed("interact"):
@@ -362,14 +366,14 @@ func handle_interaction():
 			is_interacting = false
 			$InteractUI.hide()
 			enable_fishing_controls(true)
-			enable_hud(true)
+			hud.enable_crosshair(true)
 
 
 func enable_hud(enabled :bool):
 	if enabled:
-		$HUD.show()
+		hud.show()
 	else:
-		$HUD.hide()
+		hud.hide()
 		$InteractUI.hide()
 
 
@@ -487,7 +491,7 @@ func enable_camera_controls(enabled :bool):
 	is_camera_enabled = enabled
 
 func enable_fishing_controls(enabled :bool):
-	if not ProgressVariables.progress["fishing_gear_obtained"]:
+	if ProgressVariables.check_variable("fishing_gear_obtained", false):
 		return
 	fishing_sm.is_input_disabled = not enabled
 
@@ -529,7 +533,7 @@ func enable_player(enabled :bool) -> void:
 
 
 func on_update_progress_variable(name :String):
-	if ProgressVariables.progress["fishing_gear_obtained"]:
+	if ProgressVariables.check_variable("fishing_gear_obtained", true):
 		enable_fishing_controls(true)
 
 
