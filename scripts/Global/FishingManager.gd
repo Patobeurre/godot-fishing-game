@@ -1,8 +1,12 @@
 extends Node
 
+
+const NB_VERIFIED_FOR_VALIDATION :int = 3
+
 var picked_catchable: CatchableRes = null
 var picked_catchable_period = null
 var current_catchable_area :CatchableArea = null
+var verified_list :Array[IdentifiedRes] = []
 
 var fishing_stats :FishingStats
 
@@ -103,6 +107,25 @@ func pick_catchable(fishTable: FishingAreaRes):
 	print(picked_catchable.name)
 
 
+func verify_identification_list() -> void:
+	var unidentified_list := get_identification_list().filter(func (item) : 
+		return not item.is_correctly_identified)
+	
+	verified_list = []
+	
+	for item :IdentifiedRes in unidentified_list:
+		if item.verify():
+			verified_list.append(item)
+	
+	print(verified_list.size())
+	if verified_list.size() >= NB_VERIFIED_FOR_VALIDATION:
+		for item :IdentifiedRes in verified_list:
+			item.is_correctly_identified = true
+		SignalBus.validate_identification.emit()
+	
+	SignalBus.save_requested.emit()
+
+
 # Lure Collection
 
 func add_lure(lure :CatchableRes):
@@ -145,10 +168,15 @@ func get_all_collected_categories() -> Array[CategoryRes]:
 	return categories
 
 
+func get_identification_list() -> Array[IdentifiedRes]:
+	return fishing_stats.identification_list
+
+
 func set_up_all_lures():
 	for catchable in all_lures.catchables:
 		for lure_id in catchable.lure_ids:
 			catchable.lures.append(get_catchable_by_id(lure_id))
+
 
 func get_catchable_by_id(id :int):
 	var matching_lures = all_lures.catchables.filter(func (catchable):

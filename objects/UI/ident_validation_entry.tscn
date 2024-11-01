@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwpkxnq2by1ql"]
+
+[ext_resource type="Script" path="res://scripts/UI/Components/ident_validation_entry.gd" id="1_r0uam"]
+[ext_resource type="Texture2D" uid="uid://cra6bwu35rah3" path="res://sprites/Catchables/Fishes/octopus.png" id="1_u8fbp"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+alignment = 1
+script = ExtResource("1_r0uam")
+
+[node name="Image" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_u8fbp")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Name" type="RichTextLabel" parent="."]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 40
+text = "Octopus"
+fit_content = true
+autowrap_mode = 0

@@ -9,20 +9,20 @@ class_name IdentificationPage
 @onready var habitat = $VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Habitat
 @onready var description = $VBoxContainer/Description
 
-var identification_catchable :IdentificationCatchable = null
+var identification_catchable :IdentifiedRes = null
 var is_page_right :bool = false
 
 signal btn_fish_clicked(IdentificationPage)
 
 
-func init(catchable :IdentificationCatchable, page_right :bool):
-	identification_catchable = catchable
-	name_label.text = identification_catchable.name
-	size_label.text = identification_catchable.size
-	habitat.text = identification_catchable.habitat
-	description.text = identification_catchable.description
+func init(identified_catchable :IdentifiedRes, page_right :bool):
+	identification_catchable = identified_catchable
+	name_label.text = identification_catchable.catchable.name
+	size_label.text = identification_catchable.catchable.size
+	habitat.text = identification_catchable.catchable.habitat
+	description.text = identification_catchable.catchable.description
 	is_page_right = page_right
-	picture.texture = catchable.get_picture()
+	picture.texture = identification_catchable.get_picture()
 
 
 func set_selected_catchable(catchable :CatchableRes) -> void:

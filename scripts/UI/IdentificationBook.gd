@@ -6,16 +6,21 @@ extends MainUI
 @onready var selection_panel = $PanelContainer
 @onready var selection_menu_left = $PanelContainer/MarginContainer2/HBoxContainer/PanelContainer/SelectionPanelLeft
 @onready var selection_menu_right = $PanelContainer/MarginContainer2/HBoxContainer/PanelContainer2/SelectionPanelRight
-@onready var book_page = preload("res://objects/UI/book_page.tscn")
+@onready var validation_container = $ValidationPanel
+@onready var validation_entries = $ValidationPanel/MarginContainer/MarginContainer/NewlyValidatedEntries
 
-@export var entries :Array[IdentificationCatchable] = []
+@onready var book_page = preload("res://objects/UI/book_page.tscn")
+@onready var validation_entry = preload("res://objects/UI/ident_validation_entry.tscn")
+
 var current_page_idx = 0
 var selected_page :IdentificationPage = null
 
 
 func _on_ready():
+	validation_container.visible = false
 	selection_menu_left.item_clicked.connect(_on_fish_selected)
 	selection_menu_right.item_clicked.connect(_on_fish_selected)
+	SignalBus.validate_identification.connect(_on_validate_identification)
 
 
 func _on_process(delta):
@@ -59,13 +64,13 @@ func update_visible_pages():
 	var page = book_page.instantiate()
 	page_container_left.add_child(page)
 	page.btn_fish_clicked.connect(_on_page_clicked)
-	page.init(entries[start_idx], false)
+	page.init(FishingManager.get_identification_list()[start_idx], false)
 	
-	if start_idx < entries.size() - 1:
+	if start_idx < FishingManager.get_identification_list().size() - 1:
 		page = book_page.instantiate()
 		page_container_right.add_child(page)
 		page.btn_fish_clicked.connect(_on_page_clicked)
-		page.init(entries[start_idx+1], true)
+		page.init(FishingManager.get_identification_list()[start_idx+1], true)
 
 
 func previous_page():
@@ -75,7 +80,7 @@ func previous_page():
 		update_visible_pages()
 
 func next_page():
-	if current_page_idx < (entries.size() - 1) / 2:
+	if current_page_idx < (FishingManager.get_identification_list().size() - 1) / 2:
 		Audio.play("sounds/book/bookFlip1.ogg, sounds/book/bookFlip2.ogg, sounds/book/bookFlip3.ogg")
 		current_page_idx += 1
 		update_visible_pages()
@@ -110,3 +115,22 @@ func _on_panel_container_gui_input(event: InputEvent) -> void:
 func _on_fish_selected(catchable :CollectedCatchable) -> void:
 	selected_page.set_selected_catchable(catchable.catchable)
 	selection_panel.visible = false
+	FishingManager.verify_identification_list()
+
+
+func _on_validate_identification():
+	var newly_identified_list = FishingManager.verified_list
+	
+	for child in validation_entries.get_children():
+		validation_entries.remove_child(child)
+		
+	for item in newly_identified_list:
+		var entry = validation_entry.instantiate() as IdentificationValidatedEntry
+		validation_entries.add_child(entry)
+		entry.init(item.catchable)
+	
+	validation_container.visible = true
+
+
+func _on_validation_panel_gui_input(event: InputEvent) -> void:
+	validation_container.visible = false

@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=2 format=3 uid="uid://cwr102vtasflp"]
+[gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=3 format=3 uid="uid://cwr102vtasflp"]
 
 [ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_8qnmw"]
+[ext_resource type="Resource" uid="uid://ctotryrf5kh4e" path="res://scripts/Resources/Catchables/Fishes/JellyFish.tres" id="1_xxkau"]
 
 [resource]
 script = ExtResource("1_8qnmw")
+matching_catchable = ExtResource("1_xxkau")
 name = ""
 size = "F_SIZE_MEDIUM"
-habitat = ""
-description = ""
+habitat = "FA_DEEP"
+description = "F_JELLYFISH_IDENT_DESCR"

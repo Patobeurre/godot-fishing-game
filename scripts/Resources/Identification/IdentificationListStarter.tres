@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="IdentificationList" load_steps=18 format=3 uid="uid://c5c2ib36j572a"]
+
+[ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_p3i1o"]
+[ext_resource type="Script" path="res://scripts/Resources/IdentificationList.gd" id="2_5bvt1"]
+[ext_resource type="Resource" uid="uid://bbo73vrpgv0wm" path="res://scripts/Resources/Identification/AnglerFish_ident.tres" id="2_psmfy"]
+[ext_resource type="Resource" uid="uid://17aidk77sqot" path="res://scripts/Resources/Identification/ClownFish_ident.tres" id="3_nuqlw"]
+[ext_resource type="Resource" uid="uid://q0nfk0g5488" path="res://scripts/Resources/Identification/CommonFish_ident.tres" id="4_pegb1"]
+[ext_resource type="Resource" uid="uid://cd6t38lg7vmoq" path="res://scripts/Resources/Identification/Eel_ident.tres" id="5_te1q7"]
+[ext_resource type="Resource" uid="uid://cywvo0shumkgj" path="res://scripts/Resources/Identification/HammerShark_ident.tres" id="6_1kjyr"]
+[ext_resource type="Resource" uid="uid://m68dn84bt35g" path="res://scripts/Resources/Identification/JellyfishRobe_ident.tres" id="7_8ef35"]
+[ext_resource type="Resource" uid="uid://cwr102vtasflp" path="res://scripts/Resources/Identification/JellyFish_ident.tres" id="8_ivf0n"]
+[ext_resource type="Resource" uid="uid://bghfn7jj74m74" path="res://scripts/Resources/Identification/MorayEel_ident.tres" id="9_3djqq"]
+[ext_resource type="Resource" uid="uid://b6d0x1ipbejk4" path="res://scripts/Resources/Identification/Pilchard_ident.tres" id="10_dulu7"]
+[ext_resource type="Resource" uid="uid://dhfofwvm0b7nv" path="res://scripts/Resources/Identification/RoyalBeardFish_ident.tres" id="11_wp7lo"]
+[ext_resource type="Resource" uid="uid://xcmwrcwyu4s7" path="res://scripts/Resources/Identification/SeaUrchin_ident.tres" id="12_2psow"]
+[ext_resource type="Resource" uid="uid://dnpf7cf4n5v83" path="res://scripts/Resources/Identification/Shark_ident.tres" id="13_j4pup"]
+[ext_resource type="Resource" uid="uid://cmwcaxgyrha02" path="res://scripts/Resources/Identification/SmallFish_ident.tres" id="14_wee4s"]
+[ext_resource type="Resource" uid="uid://c6mo0vcklfkh3" path="res://scripts/Resources/Identification/Sole_ident.tres" id="15_0f8t7"]
+[ext_resource type="Resource" uid="uid://dhjfm1e75tp4p" path="res://scripts/Resources/Identification/TinyJellyfish_ident.tres" id="16_ru3ee"]
+
+[resource]
+script = ExtResource("2_5bvt1")
+entries = Array[ExtResource("1_p3i1o")]([ExtResource("2_psmfy"), ExtResource("3_nuqlw"), ExtResource("4_pegb1"), ExtResource("5_te1q7"), ExtResource("6_1kjyr"), ExtResource("7_8ef35"), ExtResource("9_3djqq"), ExtResource("10_dulu7"), ExtResource("8_ivf0n"), ExtResource("11_wp7lo"), ExtResource("12_2psow"), ExtResource("15_0f8t7"), ExtResource("14_wee4s"), ExtResource("13_j4pup"), ExtResource("16_ru3ee")])

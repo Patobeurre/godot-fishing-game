@@ -19,6 +19,7 @@ signal cancel_fishing
 signal time_period_changed(ETimePeriod)
 
 signal update_document_list(DocumentList)
+signal validate_identification()
 
 signal player_pos_update(Vector3)
 

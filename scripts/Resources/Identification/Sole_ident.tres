@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=2 format=3 uid="uid://c6mo0vcklfkh3"]
+[gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=3 format=3 uid="uid://c6mo0vcklfkh3"]
 
 [ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_cs443"]
+[ext_resource type="Resource" uid="uid://ckn0dd4qsktng" path="res://scripts/Resources/Catchables/Fishes/Sole.tres" id="1_lc2n4"]
 
 [resource]
 script = ExtResource("1_cs443")
+matching_catchable = ExtResource("1_lc2n4")
 name = ""
 size = "F_SIZE_MEDIUM"
 habitat = "FA_BEACH"
