@@ -11,6 +11,7 @@ enum ELureTag {
 	BIRD,
 	CRUSTACEAN,
 	BOOKWORM,
+	MULTIPLE_LEGS,
 }
 
 @export var id :int
