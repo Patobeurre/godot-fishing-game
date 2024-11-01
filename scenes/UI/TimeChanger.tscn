@@ -24,6 +24,7 @@ script = ExtResource("1_7cw6t")
 unique_id = "TimeChanger"
 
 [node name="ClickOutside" type="PanelContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -71,7 +72,7 @@ stretch_mode = 5
 
 [node name="ClockBackground" type="TextureRect" parent="CenterContainer"]
 layout_mode = 2
-mouse_filter = 0
+mouse_filter = 2
 texture = ExtResource("2_l43bl")
 
 [node name="ClockHand2" type="Sprite2D" parent="CenterContainer"]
