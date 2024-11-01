@@ -3,7 +3,7 @@ extends Node
 
 var progress :Dictionary = {
 	"fishing_gear_obtained" : true,
-	"identification_book_obtained" : false,
+	"identification_book_obtained" : true,
 }
 
 signal progress_variable_updated(String)
