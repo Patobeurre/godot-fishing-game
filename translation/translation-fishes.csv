@@ -21,7 +21,7 @@ F_CLOWNFISH_DESCR;Petit poisson à rayures oranges et blanches. N’ai pas parti
 F_CLOWNFISH_IDENT_DESCR;Ce poisson coloré adore se cacher dans des anémones.;This colorful fish love hiding inside sea anemones.
 ;;
 F_COMMONFISH_NAME;Poisson commun;Common fish
-F_COMMONFISH_DESCR;Un poisson commun. Peu être trouvé à n’importe quelle période de la journée.;A slightly common fish. Can be found at any time of the day.
+F_COMMONFISH_DESCR;Peu être trouvé à n’importe quelle période de la journée.;Can be found at any time of the day.
 F_COMMONFISH_IDENT_DESCR;;
 ;;
 F_EEL_NAME;Anguille;Eel
@@ -61,7 +61,7 @@ F_PIKE_DESCR;Carnivore se nourrissant  d’insectes ou de poissons plus petits q
 F_PIKE_IDENT_DESCR;;
 ;;
 F_WHALE_NAME;Baleine;Whale
-F_WHALE_DESCR;;
+F_WHALE_DESCR;Sans doute le plus gros poisson des océans.;Probably the biggest fish in the ocean.
 F_WHALE_IDENT_DESCR;;
 ;;
 F_JELLYFISHROBE_NAME;Méduse à longue robe;Jellyfish with long dress

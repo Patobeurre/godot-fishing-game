@@ -25,6 +25,9 @@ signal player_pos_update(Vector3)
 signal enable_player_movements(bool)
 signal enable_player_camera(bool)
 signal enable_player_fishing(bool)
+signal enable_player_hud(bool)
+
+signal hide_sun(bool)
 
 signal interact_request(Camera3D)
 signal end_camera_interaction(Camera3D)

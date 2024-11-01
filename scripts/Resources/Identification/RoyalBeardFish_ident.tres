@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=2 format=3 uid="uid://dhfofwvm0b7nv"]
+
+[ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_ijsnd"]
+
+[resource]
+script = ExtResource("1_ijsnd")
+name = "Dasyperidae vineensis"
+size = "F_SIZE_SMALL"
+habitat = "FA_COAST"
+description = "F_ROYALBEARDFISH_IDENT_DESCR"

@@ -21,9 +21,9 @@ func _on_ready():
 
 
 func init_clock():
-	var angle = (TimeManager.get_time_ratio() * 720) - 90
+	var angle = (TimeManager.get_time_ratio() * 360)
 	min_rotation = angle + 1
-	max_rotation = angle + 719
+	max_rotation = angle + 359
 	hand.rotation_degrees = min_rotation
 	hand_current_time.rotation_degrees = angle
 	state_machine.set_current_state(default_state)
@@ -81,6 +81,7 @@ func _on_activate():
 	SignalBus.enable_player_camera.emit(false)
 	SignalBus.enable_player_fishing.emit(false)
 	SignalBus.enable_player_movements.emit(false)
+	SignalBus.enable_player_hud.emit(false)
 
 func _on_deactivate():
 	TimeManager.resume()
@@ -88,6 +89,7 @@ func _on_deactivate():
 	SignalBus.enable_player_camera.emit(true)
 	SignalBus.enable_player_fishing.emit(true)
 	SignalBus.enable_player_movements.emit(true)
+	SignalBus.enable_player_hud.emit(true)
 
 
 func _on_btn_dusk_button_down():
@@ -107,7 +109,7 @@ func _on_btn_night_button_down():
 
 
 func animate_time_passing():
-	var anim_duration = (hand.rotation_degrees - min_rotation) / 720
+	var anim_duration = (hand.rotation_degrees - min_rotation) / 360
 	anim_duration *= max_anim_duration
 	
 	var tween := get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_LINEAR)
@@ -116,7 +118,7 @@ func animate_time_passing():
 	
 	await tween.finished
 	
-	var new_time = fmod((hand.rotation_degrees + 90), 720) / 720 * 2400
+	var new_time = fmod((hand.rotation_degrees), 360) / 360 * 2400
 	TimeManager.set_time_of_day(new_time)
 	UiManager.close(unique_id)
 
@@ -124,3 +126,9 @@ func animate_time_passing():
 func _on_button_pressed() -> void:
 	state_machine.set_current_state(passing_time_state)
 	animate_time_passing()
+
+
+func _on_click_outside_gui_input(event: InputEvent) -> void:
+	if Input.is_action_just_released("mouse_left"):
+		#UiManager.close(unique_id)
+		pass

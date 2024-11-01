@@ -175,7 +175,10 @@ fov = 130.0
 [node name="CameraPosition" type="Node3D" parent="." index="4"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.373152, 1.8, -0.0766185)
 
-[node name="Sun" type="MeshInstance3D" parent="." index="5"]
+[node name="SunSpawnPosition" type="Node3D" parent="." index="5"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2, 1.5, 0)
+
+[node name="Sun" type="MeshInstance3D" parent="." index="6"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2, 1.5, 0)
 material_override = SubResource("StandardMaterial3D_3jspp")
 mesh = SubResource("SphereMesh_drbwq")
@@ -204,14 +207,14 @@ draw_pass_1 = SubResource("QuadMesh_pvlqo")
 
 [node name="particules" type="Node3D" parent="Sun" index="3"]
 
-[node name="SpotLight3D" type="SpotLight3D" parent="." index="6"]
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="7"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.29698, 1.80048, 0)
 visible = false
 layers = 4
 light_cull_mask = 4293918724
 spot_angle = 40.3484
 
-[node name="Area3D" type="Area3D" parent="." index="7"]
+[node name="Area3D" type="Area3D" parent="." index="8"]
 collision_layer = 2
 collision_mask = 2
 
@@ -219,13 +222,13 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.72, -0.660483, 1.0909, -0.206911)
 shape = SubResource("BoxShape3D_c0hi0")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="8"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="9"]
 libraries = {
 "": SubResource("AnimationLibrary_rxxud")
 }
 speed_scale = 8.0
 
-[node name="RayCast3D" type="RayCast3D" parent="." index="9"]
+[node name="RayCast3D" type="RayCast3D" parent="." index="10"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 1.83919, 0)
 target_position = Vector3(0, -200, 0)
 collision_mask = 128

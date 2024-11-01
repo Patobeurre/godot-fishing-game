@@ -17,8 +17,9 @@ var moonPosition : Vector3 = Vector3.ZERO
 
 func _ready():
 	SignalBus.player_pos_update.connect(updatePosition)
+	SignalBus.hide_sun.connect(_on_hide_sun)
 	TimeManager.new_day.connect(on_new_day)
-	skyRotation += 140
+	#skyRotation -= 10
 
 
 func updateLightnings():
@@ -40,6 +41,10 @@ func updateRotation():
 
 func updatePosition(target_pos :Vector3):
 	sunMoonParent.global_position = Vector3(target_pos.x, 0, target_pos.z)
+
+
+func _on_hide_sun(enabled :bool):
+	sunNode.visible = not enabled
 
 
 func _physics_process(delta):

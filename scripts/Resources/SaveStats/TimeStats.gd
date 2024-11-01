@@ -3,7 +3,7 @@ class_name TimeStats
 
 
 @export var day_count :int = 0
-@export var time_of_day :float = 1300
+@export var time_of_day :float = 0
 @export var current_period :TimePeriod.ETimePeriod = TimePeriod.ETimePeriod.DAY
 
 

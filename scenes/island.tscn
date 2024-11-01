@@ -32,8 +32,7 @@ emission_energy_multiplier = 2.0
 radius = 6.0
 height = 12.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_g52ys"]
-size = Vector3(1, 2.81006, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_0p4vy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a87mm"]
 albedo_color = Color(0.521141, 0.521141, 0.52114, 1)
@@ -65,7 +64,7 @@ sunLightOffset = 10.0
 moonLightOffset = 5.0
 
 [node name="Sun&Moon" type="Node3D" parent="WorldEnvironment"]
-transform = Transform3D(0.997684, 0.0680153, -2.97304e-09, 0, -4.37114e-08, -1, -0.0680153, 0.997684, -4.36102e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="Sun" type="Node3D" parent="WorldEnvironment/Sun&Moon"]
 transform = Transform3D(1, -8.90954e-15, -7.45058e-09, 4.996e-15, 1, 4.44089e-16, 7.45058e-09, 0, 1, 0, 0, 100)
@@ -81,8 +80,8 @@ collision_layer = 128
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WorldEnvironment/Sun&Moon/Sun/MeshInstance3D/StaticBody3D"]
-transform = Transform3D(50.0001, 1.37091e-06, 7.49623e-13, 0, 10, -1.81899e-12, -7.81597e-13, -4.83169e-13, 20, 5.96046e-07, 9.05029, 0)
-shape = SubResource("BoxShape3D_g52ys")
+transform = Transform3D(20, 0, 8.88178e-15, 0, 40, 0, -8.88178e-15, 0, 20, 0, 0, 0)
+shape = SubResource("BoxShape3D_0p4vy")
 
 [node name="SunLight" type="DirectionalLight3D" parent="WorldEnvironment/Sun&Moon/Sun"]
 visible = false

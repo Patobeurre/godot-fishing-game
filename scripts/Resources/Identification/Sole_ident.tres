@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=2 format=3 uid="uid://c6mo0vcklfkh3"]
+
+[ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_cs443"]
+
+[resource]
+script = ExtResource("1_cs443")
+name = ""
+size = "F_SIZE_MEDIUM"
+habitat = "FA_BEACH"
+description = "F_SOLE_IDENT_DESCR"
