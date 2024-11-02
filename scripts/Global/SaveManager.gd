@@ -21,6 +21,7 @@ func _create_or_load_save() -> void:
 	else:
 		save_game_res = SaveGameStats.new()
 	
+	ProgressVariables.set_stats(save_game_res.progress_variables_stats)
 	MailManager.set_stats(save_game_res.mail_stats)
 	TimeManager.set_stats(save_game_res.time_stats)
 	FishingManager.set_stats(save_game_res.fishing_stats)

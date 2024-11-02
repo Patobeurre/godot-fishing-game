@@ -1,22 +1,36 @@
 extends Node
 
 
-var progress :Dictionary = {
-	"fishing_gear_obtained" : true,
-	"identification_book_obtained" : true,
-}
+var stats :ProgressVariablesStats = ProgressVariablesStats.new()
 
 signal progress_variable_updated(String)
 
 
+func _ready() -> void:
+	SignalBus.savegame_loaded.connect(_on_savegame_loaded)
+
+
 func update_progress_variable(name :String, value):
-	if not progress.has(name):
+	if not stats.progress.has(name):
 		return
 	
-	if progress[name] != value:
-		progress[name] = value
+	if stats.progress[name] != value:
+		stats.progress[name] = value
 		progress_variable_updated.emit(name)
 
 
+func update_all():
+	for key in stats.progress.keys():
+		progress_variable_updated.emit(key)
+
+
 func check_variable(name :String, value) -> bool:
-	return progress[name] == value
+	return stats.progress[name] == value
+
+
+func set_stats(new_stats :ProgressVariablesStats):
+	stats = new_stats
+
+
+func _on_savegame_loaded():
+	update_all()
