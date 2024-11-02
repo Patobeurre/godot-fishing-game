@@ -60,23 +60,17 @@ _subresources={
 "physics/layer": 1025,
 "physics/shape_type": 3
 },
-"PATH:Cube_126": {
-"generate/physics": true,
-"physics/layer": 1025,
-"physics/shape_type": 3
-},
 "PATH:Cube_127": {
 "generate/physics": true,
 "physics/layer": 1025,
 "physics/shape_type": 3
 },
 "PATH:Cube_128": {
+"generate/physics": true,
 "mesh_instance/layers": 1025,
-"physics/layer": 1025,
-"physics/shape_type": 3
-},
-"PATH:Icosphere": {
-"mesh_instance/layers": 1025
+"physics/layer": 1056,
+"physics/mask": 0,
+"physics/shape_type": 2
 }
 }
 }

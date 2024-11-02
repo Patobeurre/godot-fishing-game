@@ -7,7 +7,7 @@
 [node name="desk" instance=ExtResource("1_fehh8")]
 script = ExtResource("2_phekl")
 
-[node name="Cube_022" parent="." index="1"]
+[node name="Cube_022" parent="." index="0"]
 layers = 1025
 
 [node name="StaticBody3D" parent="Cube_022" index="0"]
@@ -16,14 +16,18 @@ collision_mask = 33
 script = ExtResource("2_6fflh")
 interact_text = "View documents"
 
-[node name="Cube_077" parent="." index="2"]
+[node name="Cube_127" parent="." index="2"]
 layers = 1025
 
-[node name="Cube_125" parent="." index="5"]
+[node name="StaticBody3D" parent="Cube_128" index="0"]
+script = ExtResource("2_6fflh")
+interact_text = "Open"
+
+[node name="CollisionShape3D" parent="Cube_128/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999997, -0.184814, 0, 0)
+
+[node name="Cube_077" parent="." index="5"]
 layers = 1025
 
-[node name="Cube_126" parent="." index="6"]
-layers = 1025
-
-[node name="Cube_127" parent="." index="7"]
+[node name="Cube_125" parent="." index="7"]
 layers = 1025
