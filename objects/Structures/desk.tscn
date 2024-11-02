@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ug82iwvm6vr"]
+[gd_scene load_steps=5 format=3 uid="uid://ug82iwvm6vr"]
 
 [ext_resource type="PackedScene" uid="uid://b2vkut58qg3jf" path="res://models/Decorations/desk.glb" id="1_fehh8"]
 [ext_resource type="Script" path="res://scripts/Interactable.gd" id="2_6fflh"]
 [ext_resource type="Script" path="res://scripts/desk.gd" id="2_phekl"]
+[ext_resource type="PackedScene" uid="uid://bj3p382eqnc25" path="res://objects/identification_book.tscn" id="4_imch5"]
 
 [node name="desk" instance=ExtResource("1_fehh8")]
 script = ExtResource("2_phekl")
@@ -25,6 +26,9 @@ interact_text = "Open"
 
 [node name="CollisionShape3D" parent="Cube_128/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999997, -0.184814, 0, 0)
+
+[node name="identification_book" parent="Cube_128" index="1" instance=ExtResource("4_imch5")]
+transform = Transform3D(-0.195901, 0, -2.6581, 0, 6, 0, 2.39199, 0, -0.217695, -0.0374725, -0.273, 0)
 
 [node name="Cube_077" parent="." index="5"]
 layers = 1025
