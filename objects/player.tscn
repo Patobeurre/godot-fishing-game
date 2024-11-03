@@ -65,7 +65,7 @@ stretch = true
 transparent_bg = true
 handle_input_locally = false
 msaa_3d = 1
-size = Vector2i(1280, 800)
+size = Vector2i(1920, 1080)
 render_target_update_mode = 0
 
 [node name="CameraItem" type="Camera3D" parent="Body/Head/Camera/SubViewportContainer/SubViewport"]

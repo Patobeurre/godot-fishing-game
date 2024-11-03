@@ -3,7 +3,9 @@ extends WorldEnvironment
 @export_range(0, 360, 10.0) var skyRotation : float = 0.0
 @export var sunLightOffset :float = 30
 @export var moonLightOffset :float = 15
+@export var sky_color_gradient :Gradient
 
+@onready var ambientLights = $AmbientLights
 @onready var sunMoonParent = $"Sun&Moon"
 @onready var sunNode = $"Sun&Moon/Sun"
 @onready var moonNode = $"Sun&Moon/Moon"
@@ -31,8 +33,17 @@ func updateLightnings():
 	
 	var distance = sunMoonParent.global_position.distance_to(sunNode.global_position)
 	
-	sunLight.light_energy = (sunPosition.y + sunLightOffset) / (distance*2)
-	moonLight.light_energy = (moonPosition.y + moonLightOffset) / (distance*2)
+	sunLight.light_energy = min((sunPosition.y + sunLightOffset) / (distance), 0.8)
+	moonLight.light_energy = min((moonPosition.y + moonLightOffset) / (distance*2), 0.8)
+	
+	environment.background_color = sky_color_gradient.sample(TimeManager.get_time_ratio())
+	
+	var light_color = sunLight.light_color
+	if moonLight.visible:
+		light_color = moonLight.light_color
+	
+	for light :OmniLight3D in ambientLights.get_children():
+		light.light_color = light_color
 
 func updateRotation():
 	var hourMapped = remap(TimeManager.time_stats.time_of_day, 0.0, 2400.0, 0.0, 1.0)

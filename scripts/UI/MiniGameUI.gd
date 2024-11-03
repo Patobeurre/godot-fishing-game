@@ -31,8 +31,8 @@ var areas_cursor_is_in :Array = []
 
 
 func _on_ready():
-	width = get_viewport().size.x
-	height = get_viewport().size.y
+	width = size.x
+	height = size.y
 	bar_container_width = bar_container.texture.get_width() * bar_container.scale.x
 	
 	bar_container_offset_top *= bar_container.scale.x
