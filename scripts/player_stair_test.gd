@@ -341,6 +341,9 @@ func handle_menu_inputs(_event):
 	if Input.is_action_just_pressed("open_collection_menu"):
 		UiManager.open("FishCollection")
 	
+	if Input.is_action_just_pressed("open_settings"):
+		UiManager.open("SettingsMenu")
+	
 	if default_fishing_state.is_current_state():
 		if Input.is_action_just_pressed("mouse_right"):
 			UiManager.open("LureCollection")
