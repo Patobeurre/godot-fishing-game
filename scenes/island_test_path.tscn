@@ -523,21 +523,7 @@ parameters/looping = true
 
 [node name="Lights" type="Node3D" parent="." index="74"]
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Lights" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13208, 17.6385, 7.12812)
-light_color = Color(0.999999, 0.994024, 0.632184, 1)
-light_energy = 0.5
-shadow_enabled = true
-omni_range = 50.0
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="Lights" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.2879, 24.3317, -9.69703)
-light_color = Color(0.999999, 0.996242, 0.684138, 1)
-light_energy = 0.5
-shadow_enabled = true
-omni_range = 51.0088
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Lights" index="2"]
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.462, 9.633, -9.567)
 light_color = Color(0, 0.610949, 0.812539, 1)
 omni_range = 7.29556

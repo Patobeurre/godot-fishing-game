@@ -22,9 +22,9 @@ var is_activated :bool = false
 
 
 func _ready():
+	SignalBus.savegame_loaded.connect(_on_savegame_loaded)
 	SignalBus.time_period_changed.connect(_on_time_period_changed)
 	animation_player.animation_finished.connect(_on_animation_finished)
-	#_on_time_period_changed(TimeManager.get_time_period())
 	
 	state_machine.set_current_state(default_orbiting_state)
 
@@ -123,3 +123,7 @@ func _on_body_entered(body: Node3D) -> void:
 func _on_body_exited(body: Node3D) -> void:
 	if catching_state.is_current_state():
 		state_machine.set_current_state(retreive_position_state)
+
+
+func _on_savegame_loaded() -> void:
+	_on_time_period_changed(TimeManager.get_time_period())

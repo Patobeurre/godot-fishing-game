@@ -1,10 +1,11 @@
-[gd_scene load_steps=27 format=3 uid="uid://c2p8gphrnq8qi"]
+[gd_scene load_steps=28 format=3 uid="uid://c2p8gphrnq8qi"]
 
 [ext_resource type="Script" path="res://scripts/Global/SaveManager.gd" id="1_bdda1"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_kt14l"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="3_17nmi"]
 [ext_resource type="Resource" uid="uid://c56y8pqoyk15f" path="res://weapons/blaster.tres" id="4_6sa5j"]
 [ext_resource type="Script" path="res://scripts/Global/DayNightController.gd" id="7_a2ued"]
+[ext_resource type="Gradient" uid="uid://crcfh5wou42yc" path="res://scripts/Resources/SkyGradientColors.tres" id="7_velma"]
 [ext_resource type="PackedScene" uid="uid://cgettvm74710g" path="res://scenes/UI/DocumentsCollection.tscn" id="9_31afb"]
 [ext_resource type="PackedScene" uid="uid://f86v14046ito" path="res://scenes/UI/FishingMiniGame.tscn" id="10_4guto"]
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="10_alhia"]
@@ -62,6 +63,7 @@ script = ExtResource("7_a2ued")
 skyRotation = 3.9
 sunLightOffset = 10.0
 moonLightOffset = 5.0
+sky_color_gradient = ExtResource("7_velma")
 
 [node name="Sun&Moon" type="Node3D" parent="WorldEnvironment"]
 
@@ -104,6 +106,18 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 
 light_color = Color(0.716018, 0.603813, 1, 1)
 light_energy = 0.105
 light_cull_mask = 4294967291
+
+[node name="AmbientLights" type="Node3D" parent="WorldEnvironment"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment/AmbientLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 10.2196, 7.66573)
+light_energy = 3.0
+omni_range = 50.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="WorldEnvironment/AmbientLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.9202, 16.8487, 2.65423)
+light_energy = 3.0
+omni_range = 50.0
 
 [node name="TimeChanger" parent="." instance=ExtResource("11_rtxa3")]
 visible = false
