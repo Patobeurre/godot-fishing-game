@@ -64,10 +64,9 @@ sunLightOffset = 10.0
 moonLightOffset = 5.0
 
 [node name="Sun&Moon" type="Node3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="Sun" type="Node3D" parent="WorldEnvironment/Sun&Moon"]
-transform = Transform3D(1, -8.90954e-15, -7.45058e-09, 4.996e-15, 1, 4.44089e-16, 7.45058e-09, 0, 1, 0, 0, 100)
+transform = Transform3D(1, -8.90954e-15, -7.45058e-09, 4.996e-15, 1, 4.44089e-16, 7.45058e-09, 0, 1, 0, -100, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="WorldEnvironment/Sun&Moon/Sun"]
 transform = Transform3D(1, -8.90954e-15, -7.45058e-09, 4.996e-15, 1, 4.44089e-16, 7.45058e-09, 0, 1, 0, 0, 0)
@@ -80,7 +79,7 @@ collision_layer = 128
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WorldEnvironment/Sun&Moon/Sun/MeshInstance3D/StaticBody3D"]
-transform = Transform3D(20, 0, 8.88178e-15, 0, 40, 0, -8.88178e-15, 0, 20, 0, 0, 0)
+transform = Transform3D(20, 0, 1.77636e-14, 0, 20, 0, -8.88178e-15, 0, 40, 0, 0, 0)
 shape = SubResource("BoxShape3D_0p4vy")
 
 [node name="SunLight" type="DirectionalLight3D" parent="WorldEnvironment/Sun&Moon/Sun"]
@@ -91,7 +90,7 @@ light_cull_mask = 4294967291
 shadow_bias = 0.0
 
 [node name="Moon" type="Node3D" parent="WorldEnvironment/Sun&Moon"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -100)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="WorldEnvironment/Sun&Moon/Moon"]
 transform = Transform3D(1, -8.88178e-16, 0, 0, 1, -1.98627e-16, 0, -1.98627e-16, 1, 0, 0, 0)

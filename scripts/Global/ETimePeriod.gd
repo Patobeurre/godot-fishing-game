@@ -10,27 +10,27 @@ enum ETimePeriod {
 
 static func to_value(period :ETimePeriod) -> float:
 	if period == ETimePeriod.DUSK:
-		return 2300
+		return 1650
 	elif period == ETimePeriod.DAY:
-		return 1400
+		return 900
 	elif period == ETimePeriod.DAWN:
-		return 1180
+		return 550
 	elif period == ETimePeriod.NIGHT:
-		return 200
+		return 2000
 	
 	return 0
 
 static func to_period(value :float) -> ETimePeriod:
-	if value >= 2300:
-		return ETimePeriod.DUSK
-	elif value >= 1400:
-		return ETimePeriod.DAY
-	elif value >= 1100:
-		return ETimePeriod.DAWN
-	elif value >= 200:
+	if value >= to_value(ETimePeriod.NIGHT):
 		return ETimePeriod.NIGHT
-	else:
+	elif value >= to_value(ETimePeriod.DUSK):
 		return ETimePeriod.DUSK
+	elif value >= to_value(ETimePeriod.DAY):
+		return ETimePeriod.DAY
+	elif value >= to_value(ETimePeriod.DAWN):
+		return ETimePeriod.DAWN
+	else:
+		return ETimePeriod.NIGHT
 	
 static func to_text(period :ETimePeriod) -> String:
 	if period == ETimePeriod.DUSK:

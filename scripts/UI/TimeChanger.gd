@@ -21,7 +21,7 @@ func _on_ready():
 
 
 func init_clock():
-	var angle = (TimeManager.get_time_ratio() * 360)
+	var angle = (TimeManager.get_time_ratio() * 360) + 90
 	min_rotation = angle + 1
 	max_rotation = angle + 359
 	hand.rotation_degrees = min_rotation
@@ -118,7 +118,8 @@ func animate_time_passing():
 	
 	await tween.finished
 	
-	var new_time = fmod((hand.rotation_degrees), 360) / 360 * 2400
+	var new_time = fmod((hand.rotation_degrees) - 90, 360) / 360 * 2400
+	print(new_time)
 	TimeManager.set_time_of_day(new_time)
 	UiManager.close(unique_id)
 

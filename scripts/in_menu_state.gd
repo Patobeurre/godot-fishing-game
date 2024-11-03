@@ -9,7 +9,7 @@ func on_enter() -> void:
 # Called every frame when this state is active.
 func on_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
-		SignalBus.end_camera_interaction.emit(get_viewport().get_camera_3d())
+		SignalBus.end_camera_interaction.emit()
 
 
 # Called every physics frame when this state is active.

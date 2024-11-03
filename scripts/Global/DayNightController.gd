@@ -1,6 +1,6 @@
 extends WorldEnvironment
 
-@export_range(0, 360, 0.1) var skyRotation : float = 0.0
+@export_range(0, 360, 10.0) var skyRotation : float = 0.0
 @export var sunLightOffset :float = 30
 @export var moonLightOffset :float = 15
 
@@ -18,8 +18,7 @@ var moonPosition : Vector3 = Vector3.ZERO
 func _ready():
 	SignalBus.player_pos_update.connect(updatePosition)
 	SignalBus.hide_sun.connect(_on_hide_sun)
-	TimeManager.new_day.connect(on_new_day)
-	#skyRotation -= 10
+	TimeManager.rotation_changed.connect(_on_rotation_changed)
 
 
 func updateLightnings():
@@ -38,6 +37,7 @@ func updateRotation():
 	var hourMapped = remap(TimeManager.time_stats.time_of_day, 0.0, 2400.0, 0.0, 1.0)
 	sunMoonParent.rotation_degrees.y = skyRotation
 	sunMoonParent.rotation_degrees.x = hourMapped * 360.0
+	sunMoonParent.rotation_degrees.z = 0
 
 func updatePosition(target_pos :Vector3):
 	sunMoonParent.global_position = Vector3(target_pos.x, 0, target_pos.z)
@@ -52,5 +52,5 @@ func _physics_process(delta):
 	updateLightnings()
 
 
-func on_new_day(day_count :int):
-	skyRotation -= 10
+func _on_rotation_changed(rotation :float):
+	skyRotation = rotation

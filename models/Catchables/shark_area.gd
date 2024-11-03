@@ -24,7 +24,7 @@ var is_activated :bool = false
 func _ready():
 	SignalBus.time_period_changed.connect(_on_time_period_changed)
 	animation_player.animation_finished.connect(_on_animation_finished)
-	_on_time_period_changed(TimeManager.current_period)
+	#_on_time_period_changed(TimeManager.get_time_period())
 	
 	state_machine.set_current_state(default_orbiting_state)
 

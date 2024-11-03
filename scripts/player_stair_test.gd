@@ -6,6 +6,8 @@ class_name Character
 @export var movement_speed = 5
 @export var jump_strength = 8
 @export var dash_speed = 30
+@export var zoom_value = 10
+
 @export var STEP_HEIGHT: float = 0.2
 
 @export var push_force :float = 80.0
@@ -256,12 +258,14 @@ func _physics_process(delta):
 	
 	if raycast_footstep.is_colliding():
 		var coll = raycast_footstep.get_collider()
-		var footstep_sounds = coll.get_meta("footstep_sounds")
-		if footstep_sounds != footstep_sounds_path:
-			footstep_sounds_path = footstep_sounds
-			sound_footsteps.stream = load(footstep_sounds)
-			sound_footsteps.playing = true
-			sound_footsteps.stream.loop = true
+		#var footstep_sounds = coll.get_meta("footstep_sounds")
+		
+		#if footstep_sounds != null and \
+		#	footstep_sounds != footstep_sounds_path:
+		#	footstep_sounds_path = footstep_sounds
+		#	sound_footsteps.stream = load(footstep_sounds)
+		#	sound_footsteps.playing = true
+		#	sound_footsteps.stream.loop = true
 	
 	if is_on_floor():
 		if abs(velocity.x) > 1 or abs(velocity.z) > 1:
@@ -401,6 +405,8 @@ func handle_controls(_delta):
 	
 	#movement_velocity = Vector3(input.x, 0, input.y).normalized() * movement_speed
 	
+	#action_zoom()
+	
 	action_dash()
 	
 	# Rotation
@@ -439,6 +445,13 @@ func handle_gravity(delta):
 		
 		jump_single = true
 		gravity = 0
+
+
+# Zooming
+
+func action_zoom():
+	if Input.is_action_just_pressed("zoom"):
+		CameraTransition.zoom_camera(camera, camera.fov - zoom_value, 1)
 
 # Jumping
 
@@ -512,10 +525,10 @@ func _on_interact_requested(target_camera :Camera3D):
 	CameraTransition.transition_camera(camera, target_camera)
 
 
-func _on_end_camera_interaction(target_camera :Camera3D):
+func _on_end_camera_interaction():
 	if CameraTransition.is_transitioning:
 		return
-	CameraTransition.transition_camera(target_camera, camera)
+	CameraTransition.transition_camera(get_viewport().get_camera_3d(), camera)
 	fishing_sm.set_current_state(default_fishing_state)
 
 

@@ -16,6 +16,7 @@ signal close_lure_collection()
 signal new_lure_registered(CatchableRes)
 signal cancel_fishing
 
+signal time_changed(float)
 signal time_period_changed(ETimePeriod)
 
 signal update_document_list(DocumentList)
@@ -31,7 +32,7 @@ signal enable_player_hud(bool)
 signal hide_sun(bool)
 
 signal interact_request(Camera3D)
-signal end_camera_interaction(Camera3D)
+signal end_camera_interaction()
 
 signal ui_opened
 signal ui_closed
