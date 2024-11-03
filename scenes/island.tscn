@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://c2p8gphrnq8qi"]
+[gd_scene load_steps=29 format=3 uid="uid://c2p8gphrnq8qi"]
 
 [ext_resource type="Script" path="res://scripts/Global/SaveManager.gd" id="1_bdda1"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_kt14l"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bljwxjxf7scis" path="res://scenes/island_test_path.tscn" id="14_mu13i"]
 [ext_resource type="PackedScene" uid="uid://b3h8dbli33h2x" path="res://objects/Structures/test_house.tscn" id="15_wb0wr"]
 [ext_resource type="PackedScene" uid="uid://657bdl7aknok" path="res://objects/Decorations/mailbox.tscn" id="16_gbnfo"]
+[ext_resource type="PackedScene" uid="uid://14nyo1d1mork" path="res://scenes/UI/Settings/settings_menu.tscn" id="16_t2ii6"]
 [ext_resource type="PackedScene" uid="uid://dpvpje0opov81" path="res://objects/Decorations/dock.tscn" id="17_hisp1"]
 [ext_resource type="AudioStream" uid="uid://dre45x7pkgmd0" path="res://sounds/ambient/nature_ocean_distant_waves_surf_light_breeze_trees_84763.mp3" id="17_ibg65"]
 [ext_resource type="PackedScene" uid="uid://cmpyaw5yxt3rj" path="res://objects/Structures/oil_tank_rigidbody.tscn" id="17_lq0ty"]
@@ -145,6 +146,8 @@ unique_id = "Documents"
 visible = false
 
 [node name="Notifications" parent="." instance=ExtResource("12_c2lfr")]
+
+[node name="SettingsMenu" parent="." instance=ExtResource("16_t2ii6")]
 
 [node name="test_house" parent="." instance=ExtResource("15_wb0wr")]
 transform = Transform3D(0.896192, 0, -0.443666, 0, 1, 0, 0.443666, 0, 0.896192, -2.60755, 2.69963, -6.04292)
