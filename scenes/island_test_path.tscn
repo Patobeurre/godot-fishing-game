@@ -345,14 +345,14 @@ transform = Transform3D(-2.18557e-07, 0, 5, 0, 5, 0, -5, 0, -2.18557e-07, 60, 1.
 
 [node name="Stelles" type="Node3D" parent="Decorations" index="8"]
 
-[node name="stelle_forest" parent="Decorations/Stelles" index="0" instance=ExtResource("13_gdiaa")]
+[node name="stelle_forest_180" parent="Decorations/Stelles" index="0" instance=ExtResource("13_gdiaa")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0.258819, 0.965926, 1.13133e-08, -0.965926, 0.258819, -4.22219e-08, -4.79883, 51.6904, -49.403)
 
-[node name="stelle_reef" parent="Decorations/Stelles" index="1" instance=ExtResource("14_s4qx7")]
-transform = Transform3D(-0.591241, -0.0216043, 0.806206, 0.206306, 0.96233, 0.177085, -0.779662, 0.271024, -0.564511, -163.927, 27.8162, -24.7106)
+[node name="stelle_reef_220" parent="Decorations/Stelles" index="1" instance=ExtResource("14_s4qx7")]
+transform = Transform3D(-0.656943, 0.00209925, 0.753937, 0.206306, 0.96233, 0.177085, -0.725165, 0.271876, -0.632629, -163.927, 27.8162, -24.7106)
 
-[node name="stelle_beach" parent="Decorations/Stelles" index="2" instance=ExtResource("15_5wqmp")]
-transform = Transform3D(-0.586379, 0.139171, -0.797992, 0.282114, 0.958541, -0.0401318, 0.759323, -0.248657, -0.60133, 58.8837, 4.17976, 63.0809)
+[node name="stelle_beach_330" parent="Decorations/Stelles" index="2" instance=ExtResource("15_5wqmp")]
+transform = Transform3D(-0.517968, 0.116969, -0.847365, 0.282114, 0.958541, -0.0401318, 0.80754, -0.25984, -0.529492, 58.8837, 4.17976, 63.0809)
 
 [node name="Water" type="Node3D" parent="." index="41"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.634, 0)

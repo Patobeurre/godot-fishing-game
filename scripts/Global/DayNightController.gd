@@ -16,6 +16,7 @@ var moonPosition : Vector3 = Vector3.ZERO
 
 
 func _ready():
+	SignalBus.savegame_loaded.connect(_on_savegame_loaded)
 	SignalBus.player_pos_update.connect(updatePosition)
 	SignalBus.hide_sun.connect(_on_hide_sun)
 	TimeManager.rotation_changed.connect(_on_rotation_changed)
@@ -54,3 +55,7 @@ func _physics_process(delta):
 
 func _on_rotation_changed(rotation :float):
 	skyRotation = rotation
+
+
+func _on_savegame_loaded() -> void:
+	_on_rotation_changed(TimeManager.time_stats.rotation)
