@@ -20,4 +20,4 @@ rarity = 15
 periods = Array[int]([3])
 lures = Array[ExtResource("1_7s2ip")]([ExtResource("2_qlx2t")])
 lure_ids = Array[int]([])
-lure_tags = Array[int]([4])
+lure_tags = Array[int]([4, 1])

@@ -133,4 +133,5 @@ func _on_validate_identification():
 
 
 func _on_validation_panel_gui_input(event: InputEvent) -> void:
-	validation_container.visible = false
+	if Input.is_action_just_pressed("mouse_left"):
+		validation_container.visible = false

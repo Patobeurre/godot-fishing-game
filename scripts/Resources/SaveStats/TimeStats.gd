@@ -8,7 +8,7 @@ const temperature_curve :Curve = preload("res://scripts/Resources/TemperatureCur
 const humidity_curve :Curve = preload("res://scripts/Resources/HumidityCurve.tres")
 
 @export var day_count :int = 0
-@export var time_of_day :float = 0
+@export var time_of_day :float = 900
 @export var current_period :TimePeriod.ETimePeriod = TimePeriod.ETimePeriod.DAY
 @export var rotation = 0
 @export var temperature :float = 0
