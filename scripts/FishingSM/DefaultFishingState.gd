@@ -22,7 +22,7 @@ func spawn_basket():
 		controller.hook_spawner.rotation = Vector3.ZERO
 	
 	basket.global_position = controller.hook_spawner.global_position
-	basket.global_rotation = controller.hook_spawner.global_rotation
+	basket.global_rotation.y = controller.hook_spawner.global_rotation.y
 	basket.linear_velocity = controller.velocity
 	basket.apply_impulse(-basket.transform.basis.z * 5)
 
@@ -49,8 +49,8 @@ func handle_hotkey_inputs():
 		if basket == null:
 			spawn_basket()
 		else:
-			print("add lures")
-			FishingManager.add_lures(basket.catchables)
+			FishingManager.add_lures(basket.pop_all())
+			#basket.queue_free()
 
 
 # Called when the state machine exits this state.

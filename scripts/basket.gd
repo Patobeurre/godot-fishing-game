@@ -46,6 +46,11 @@ func _on_timer_timeout() -> void:
 	is_activated = true
 
 
+func pop_all() -> Array[CollectedCatchable]:
+	var collected_catchables = catchables.duplicate()
+	catchables.clear()
+	return collected_catchables
+
 func _on_body_entered(body: Node) -> void:
 	linear_velocity = Vector3.ZERO
 	gravity_scale = 0

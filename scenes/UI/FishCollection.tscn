@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://u2so53vo6ln8"]
+[gd_scene load_steps=19 format=3 uid="uid://u2so53vo6ln8"]
 
 [ext_resource type="Script" path="res://scripts/UI/FishCollection.gd" id="1_vadpx"]
 [ext_resource type="PackedScene" uid="uid://dvudi6kooo44u" path="res://objects/UI/FishEntry.tscn" id="2_87y58"]
@@ -6,22 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://lkseiwb1yb1a" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-double.png" id="3_m8178"]
 [ext_resource type="Script" path="res://scripts/UI/Components/CategoryBtn.gd" id="3_opvk5"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="4_bdkwx"]
+[ext_resource type="Theme" uid="uid://c10x1hpnodnbi" path="res://themes/Main_theme.tres" id="5_epbqp"]
 [ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="5_xbkqn"]
 [ext_resource type="Resource" uid="uid://eqi3uvm17to0" path="res://scripts/Resources/Categories/Insects.tres" id="6_8mn7x"]
 [ext_resource type="Resource" uid="uid://catedw4i7v6px" path="res://scripts/Resources/Categories/Animals.tres" id="7_il0o0"]
 [ext_resource type="Resource" uid="uid://dsaa6q3411ycd" path="res://scripts/Resources/Categories/Secrets.tres" id="8_ae5mx"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t0u3x"]
-atlas = ExtResource("2_l2ux7")
-region = Rect2(0, 128, 256, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n0ohe"]
-atlas = ExtResource("2_l2ux7")
-region = Rect2(0, 128, 256, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_10pm0"]
-atlas = ExtResource("2_l2ux7")
-region = Rect2(0, 128, 256, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5c7k5"]
 atlas = ExtResource("2_l2ux7")
@@ -70,6 +59,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("5_epbqp")
 script = ExtResource("1_vadpx")
 
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
@@ -83,21 +73,18 @@ theme_override_constants/separation = 0
 
 [node name="MarginContainer2" type="MarginContainer" parent="HSplitContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 50
+theme_override_constants/margin_left = 200
 theme_override_constants/margin_top = 150
 
 [node name="Categories" type="VBoxContainer" parent="HSplitContainer/MarginContainer2"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 40
 
-[node name="BtnFishes" type="TextureButton" parent="HSplitContainer/MarginContainer2/Categories"]
-custom_minimum_size = Vector2(128, 40)
+[node name="BtnFishes" type="Button" parent="HSplitContainer/MarginContainer2/Categories"]
+custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
 action_mode = 0
-texture_normal = SubResource("AtlasTexture_t0u3x")
-ignore_texture_size = true
-stretch_mode = 0
 script = ExtResource("3_opvk5")
 category = ExtResource("4_bdkwx")
 
@@ -112,20 +99,18 @@ grow_vertical = 2
 [node name="RichTextLabel" type="RichTextLabel" parent="HSplitContainer/MarginContainer2/Categories/BtnFishes/CenterContainer"]
 layout_mode = 2
 mouse_filter = 2
+theme = ExtResource("5_epbqp")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "MENU_ENCYCLOPEDIA_FISHES_TAB"
 fit_content = true
 autowrap_mode = 0
 
-[node name="BtnNature" type="TextureButton" parent="HSplitContainer/MarginContainer2/Categories"]
-custom_minimum_size = Vector2(128, 40)
+[node name="BtnNature" type="Button" parent="HSplitContainer/MarginContainer2/Categories"]
+custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
 size_flags_vertical = 0
 action_mode = 0
-texture_normal = SubResource("AtlasTexture_n0ohe")
-ignore_texture_size = true
-stretch_mode = 0
 script = ExtResource("3_opvk5")
 category = ExtResource("5_xbkqn")
 
@@ -146,14 +131,11 @@ text = "MENU_ENCYCLOPEDIA_NATURE_TAB"
 fit_content = true
 autowrap_mode = 0
 
-[node name="BtnInsect" type="TextureButton" parent="HSplitContainer/MarginContainer2/Categories"]
-custom_minimum_size = Vector2(128, 40)
+[node name="BtnInsect" type="Button" parent="HSplitContainer/MarginContainer2/Categories"]
+custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
 size_flags_vertical = 0
 action_mode = 0
-texture_normal = SubResource("AtlasTexture_10pm0")
-ignore_texture_size = true
-stretch_mode = 0
 script = ExtResource("3_opvk5")
 category = ExtResource("6_8mn7x")
 
@@ -174,14 +156,11 @@ text = "MENU_ENCYCLOPEDIA_INSECTS_TAB"
 fit_content = true
 autowrap_mode = 0
 
-[node name="BtnAnimal" type="TextureButton" parent="HSplitContainer/MarginContainer2/Categories"]
-custom_minimum_size = Vector2(128, 40)
+[node name="BtnAnimal" type="Button" parent="HSplitContainer/MarginContainer2/Categories"]
+custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
 size_flags_vertical = 0
 action_mode = 0
-texture_normal = SubResource("AtlasTexture_10pm0")
-ignore_texture_size = true
-stretch_mode = 0
 script = ExtResource("3_opvk5")
 category = ExtResource("7_il0o0")
 
@@ -202,14 +181,11 @@ text = "MENU_ENCYCLOPEDIA_ANIMALS_TAB"
 fit_content = true
 autowrap_mode = 0
 
-[node name="BtnSecret" type="TextureButton" parent="HSplitContainer/MarginContainer2/Categories"]
-custom_minimum_size = Vector2(128, 40)
+[node name="BtnSecret" type="Button" parent="HSplitContainer/MarginContainer2/Categories"]
+custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
 size_flags_vertical = 0
 action_mode = 0
-texture_normal = SubResource("AtlasTexture_10pm0")
-ignore_texture_size = true
-stretch_mode = 0
 script = ExtResource("3_opvk5")
 category = ExtResource("8_ae5mx")
 

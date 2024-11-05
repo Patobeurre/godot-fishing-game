@@ -1,0 +1,38 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://c10x1hpnodnbi"]
+
+[ext_resource type="Texture2D" uid="uid://ukygk3tjqgbu" path="res://sprites/UI/kenney_ui-pack/PNG/Grey/Double/button_rectangle_depth_gloss.png" id="1_e04wq"]
+[ext_resource type="Texture2D" uid="uid://d3l2dbukj0ij7" path="res://sprites/UI/kenney_ui-pack/PNG/Grey/Double/button_square_depth_gradient.png" id="1_pte82"]
+[ext_resource type="Texture2D" uid="uid://pqfgho4oipby" path="res://sprites/UI/kenney_ui-pack/PNG/Grey/Double/button_square_flat.png" id="2_v65ip"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c7um0"]
+texture = ExtResource("1_e04wq")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h0nho"]
+texture = ExtResource("2_v65ip")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ttag4"]
+texture = ExtResource("1_pte82")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[resource]
+default_font_size = 30
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/styles/hover = SubResource("StyleBoxTexture_c7um0")
+Button/styles/hover_pressed = SubResource("StyleBoxTexture_h0nho")
+Button/styles/normal = SubResource("StyleBoxTexture_ttag4")
+Button/styles/pressed = SubResource("StyleBoxTexture_h0nho")

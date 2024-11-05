@@ -1,4 +1,4 @@
-extends TextureButton
+extends Button
 
 
 @onready var label :RichTextLabel = $CenterContainer/RichTextLabel

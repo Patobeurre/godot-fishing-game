@@ -26,7 +26,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.199266, 0)
 shape = SubResource("CylinderShape3D_t47q2")
 
 [node name="Timer" type="Timer" parent="." index="2"]
-wait_time = 15.0
+wait_time = 12.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
