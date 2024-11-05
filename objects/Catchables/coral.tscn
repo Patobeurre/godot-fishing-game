@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://clh7nthnskyta"]
+
+[ext_resource type="PackedScene" uid="uid://dvo2afa52smsk" path="res://models/Catchables/coral.glb" id="1_nq2uu"]
+
+[node name="coral" instance=ExtResource("1_nq2uu")]
+
+[node name="Cube_117" parent="." index="0"]
+transform = Transform3D(0.101171, -0.183722, -0.2145, -0.190512, -0.212598, 0.0922356, -0.208493, 0.105111, -0.188367, 0, 0.0158902, 0)

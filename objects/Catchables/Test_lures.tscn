@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://d2cy4arr18ptt"]
+[gd_scene load_steps=42 format=3 uid="uid://d2cy4arr18ptt"]
 
 [ext_resource type="PackedScene" uid="uid://dmyqppx7y0tw7" path="res://objects/bobber.tscn" id="1_dkc2c"]
 [ext_resource type="PackedScene" uid="uid://0ontd173otm6" path="res://objects/Catchables/true_mussels.tscn" id="2_vjnp4"]
@@ -39,6 +39,8 @@
 [ext_resource type="PackedScene" uid="uid://c3olfp7slcj60" path="res://objects/Catchables/Fishes/shrimp.tscn" id="37_qvp8j"]
 [ext_resource type="PackedScene" uid="uid://ckf8gv048tone" path="res://objects/Catchables/Fishes/octopus.tscn" id="38_bdsw2"]
 [ext_resource type="PackedScene" uid="uid://bsakck0gxgtpp" path="res://objects/Catchables/Fishes/royal_beard_fish.tscn" id="39_yihvy"]
+[ext_resource type="PackedScene" uid="uid://clh7nthnskyta" path="res://objects/Catchables/coral.tscn" id="40_45ex6"]
+[ext_resource type="PackedScene" uid="uid://u7ampbbdwgks" path="res://objects/Catchables/Fishes/muskie.tscn" id="41_djix6"]
 
 [node name="TestLures" type="Node3D"]
 
@@ -158,3 +160,9 @@ visible = false
 visible = false
 
 [node name="royal_beard_fish" parent="." instance=ExtResource("39_yihvy")]
+visible = false
+
+[node name="coral" parent="." instance=ExtResource("40_45ex6")]
+visible = false
+
+[node name="muskie" parent="." instance=ExtResource("41_djix6")]

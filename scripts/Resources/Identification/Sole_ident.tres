@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_cs443")
 matching_catchable = ExtResource("1_lc2n4")
-name = ""
+name = "Moloch suspectum"
 size = "F_SIZE_MEDIUM"
 habitat = "FA_BEACH"
 description = "F_SOLE_IDENT_DESCR"

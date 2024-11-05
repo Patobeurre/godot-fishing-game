@@ -49,16 +49,16 @@ F_SMALLFISH_DESCR;;
 F_SMALLFISH_IDENT_DESCR;Un poisson coloré avec des rayures orangées;Colored with orangeish stripes.
 ;;
 F_SOLE_NAME;Sole;Sole
-F_SOLE_DESCR;Un poisson plat vivant proche  des plages.;
-F_SOLE_IDENT_DESCR;;
+F_SOLE_DESCR;Un poisson plat vivant proche des plages.;A flatfish living close to the beach.
+F_SOLE_IDENT_DESCR;S’enfouie dans le sable et attend.;Buries in the sand and wait.
 ;;
 F_URCHIN_NAME;Oursin;Sea urchin
 F_URCHIN_DESCR;Une sphère recouverte de piquants.;A sphere covered with spikes.
 F_URCHIN_IDENT_DESCR;Bien que difficile à observée, cet animale possède une bouche… ainsi qu’un anus à l’opposé.;Although difficult to observe, this animal has a mouth... and an anus at the opposite.
 ;;
 F_PIKE_NAME;Brochet;Pike
-F_PIKE_DESCR;Carnivore se nourrissant  d’insectes ou de poissons plus petits que lui.;Carnivore that eat fishes smaller than him
-F_PIKE_IDENT_DESCR;;
+F_PIKE_DESCR;Carnivore se nourrissant d’insectes ou de poissons plus petits que lui.;Carnivore that eat fishes smaller than him,
+F_PIKE_IDENT_DESCR;Se montre uniquement lorsque la lumière est de faible intensité.;Only shows up when the light is dimmed,
 ;;
 F_WHALE_NAME;Baleine;Whale
 F_WHALE_DESCR;Sans doute le plus gros poisson des océans.;Probably the biggest fish in the ocean.
@@ -105,5 +105,18 @@ F_OCTOPUS_DESCR;Essaie d’enrouler ses tentacules autour de mon bras.;Tries to 
 F_OCTOPUS_IDENT_DESCR;;
 ;;
 F_ROYALBEARDFISH_NAME;Poisson royal à barbe;Royal beard fish
-F_ROYALBEARDFISH_DESCR;;
+F_ROYALBEARDFISH_DESCR;Une aura de pouvoir et de détermination émane de ce poisson.;An aura of power and determination emanates from this fish.
 F_ROYALBEARDFISH_IDENT_DESCR;;
+;;
+F_MUSKIE_NAME;Maskinongé;Muskie
+F_MUSKIE_DESCR;Un corps allongé.;An elongated body.
+F_MUSKIE_IDENT_DESCR;Ressemble fortement à [i]Helogale platyrhynchos[/i]. Se différencie par sa paire de nageoire supplémentaire.;Strongly resembles [i]Helogale platyrhynchos[/i]. Distinguished by its extra pair of fins.
+;;
+;;
+;;
+;;
+F_CORAL_NAME;Corail;Coral
+F_CORAL_DESCR;;
+;;
+F_SEAWEED_NAME;Algues;Seaweed
+F_SEAWEED_DESCR;;

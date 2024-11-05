@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://cxldl4urf7kh"]
+
+[ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="1_0pq6n"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_awve4"]
+[ext_resource type="Texture2D" uid="uid://b4fossbie0jbl" path="res://sprites/Catchables/coral.png" id="2_f28ue"]
+[ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="4_m08aw"]
+[ext_resource type="PackedScene" uid="uid://clh7nthnskyta" path="res://objects/Catchables/coral.tscn" id="5_ej2gt"]
+
+[resource]
+script = ExtResource("1_awve4")
+id = 45
+name = "F_CORAL_NAME"
+description = "F_CORAL_DESCR"
+notification_text = ""
+category = ExtResource("1_0pq6n")
+tags = Array[int]([])
+image = ExtResource("2_f28ue")
+scene = ExtResource("5_ej2gt")
+rarity = 30
+price = 15
+periods = Array[int]([0, 1, 2, 3])
+lures = Array[ExtResource("1_awve4")]([ExtResource("4_m08aw")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([])

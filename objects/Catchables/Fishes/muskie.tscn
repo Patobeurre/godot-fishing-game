@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://u7ampbbdwgks"]
+
+[ext_resource type="PackedScene" uid="uid://cvoo1jhvynlin" path="res://models/Catchables/Fishes/musky.glb" id="1_ep8pm"]
+
+[node name="muskie" instance=ExtResource("1_ep8pm")]
+
+[node name="brochet_long_merged" parent="." index="0"]
+transform = Transform3D(-2.79753e-09, 0.4, -4.15258e-09, 0, -1.74846e-08, -0.095, -0.064, -1.74846e-08, 1.81515e-16, 0, -0.0600274, 0)
