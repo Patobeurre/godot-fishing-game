@@ -5,14 +5,14 @@ extends CatchableArea
 
 
 func prepare():
-	if FishingManager.current_lure == key_catchable:
+	if FishingManager.fishing_stats.current_lure == key_catchable:
 		FishingManager.picked_catchable = key_catchable
 	else:
 		FishingManager.cancel()
 
 
 func perform():
-	if FishingManager.current_lure == key_catchable:
+	if FishingManager.fishing_stats.current_lure == key_catchable:
 		FishingManager.cancel()
 		on_finished(true)
 		

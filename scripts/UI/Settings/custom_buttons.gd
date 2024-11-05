@@ -129,12 +129,3 @@ func _ready():
 		is_button_down = false
 	)
 	button.pressed.connect(func(): pressed.emit())
-
-func _exit_tree():
-	if Engine.is_editor_hint(): return
-	SignalBus.clear_signal(button.mouse_exited)
-	SignalBus.clear_signal(button.mouse_entered)
-	SignalBus.clear_signal(button.button_down)
-	SignalBus.clear_signal(button.button_up)
-	SignalBus.clear_signal(button.pressed)
-	SignalBus.clear_signal(pressed)
