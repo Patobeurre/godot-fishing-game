@@ -21,6 +21,8 @@ signal time_period_changed(ETimePeriod)
 
 signal update_document_list(DocumentList)
 signal validate_identification()
+signal fish_selled(CollectedCatchable)
+signal money_changed(int)
 
 signal player_pos_update(Vector3)
 

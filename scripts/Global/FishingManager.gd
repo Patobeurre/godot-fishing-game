@@ -141,9 +141,19 @@ func add_lure(lure :CatchableRes):
 		SignalBus.new_lure_registered.emit(lure)
 
 
-func get_collected_catchables() -> Array[CollectedCatchable]:
-	return fishing_stats.catchables
+func remove_lure(lure :CollectedCatchable):
+	var idx = fishing_stats.catchables.find(lure)
+	if idx < 0: return
+	
+	var collected_lure = fishing_stats.catchables[idx]
+	if collected_lure.amount > 0:
+		collected_lure.amount -= 1
+		fishing_stats.update_money(collected_lure.catchable.price)
+		SignalBus.fish_selled.emit(collected_lure)
 
+
+func get_collected_catchables() -> Array[CollectedCatchable]:
+	return fishing_stats.catchables.filter(func (catchable): return catchable.amount > 0)
 
 func get_catchables() -> Array[CatchableRes]:
 	var catchables :Array[CatchableRes] = []

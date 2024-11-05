@@ -6,7 +6,7 @@ class_name CollectedCatchable
 @export var lure_used :Array[CatchableRes] = []
 @export var areas_found_in :Array[FishingAreaRes] = []
 @export var periods :Array[TimePeriod.ETimePeriod]
-@export var amount :int = 0
+@export var amount :int = 1
 
 
 static func create(new_catchable :CatchableRes) -> CollectedCatchable:

@@ -23,6 +23,7 @@ enum ELureTag {
 @export var image: Texture2D
 @export var scene: PackedScene
 @export var rarity: Rarity.ERarity
+@export var price: int
 @export var periods: Array[TimePeriod.ETimePeriod]
 @export var lures: Array[CatchableRes]
 @export var lure_ids: Array[int]

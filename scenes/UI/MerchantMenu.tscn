@@ -1,0 +1,167 @@
+[gd_scene load_steps=12 format=3 uid="uid://2s07dga841f4"]
+
+[ext_resource type="Script" path="res://scripts/UI/MerchantMenu.gd" id="1_05alv"]
+[ext_resource type="Texture2D" uid="uid://d0vhrkrd8i2uf" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-default.png" id="2_lvlfm"]
+[ext_resource type="Texture2D" uid="uid://lkseiwb1yb1a" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-double.png" id="3_b64ku"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fw1b"]
+atlas = ExtResource("2_lvlfm")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixhpo"]
+atlas = ExtResource("3_b64ku")
+region = Rect2(0, 0, 512, 128)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1pi82"]
+content_margin_left = 32.0
+content_margin_right = 32.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r45ts"]
+atlas = ExtResource("3_b64ku")
+region = Rect2(1120, 944, 32, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_45nrm"]
+texture = SubResource("AtlasTexture_r45ts")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+expand_margin_left = 32.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djtvn"]
+bg_color = Color(0, 0, 0, 0.521569)
+expand_margin_left = 32.0
+
+[sub_resource type="Theme" id="Theme_pano3"]
+ScrollContainer/styles/panel = SubResource("StyleBoxEmpty_1pi82")
+VScrollBar/styles/grabber = SubResource("StyleBoxTexture_45nrm")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_45nrm")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_45nrm")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_djtvn")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_djtvn")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qf0em"]
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_05alv")
+unique_id = "MerchantMenu"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 400
+theme_override_constants/margin_bottom = 100
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_7fw1b")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="VSplitContainer" type="VSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+dragger_visibility = 1
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/VSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SellMenuTab" type="CenterContainer" parent="MarginContainer/VSplitContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="SellMenuBtn" type="TextureButton" parent="MarginContainer/VSplitContainer/HSplitContainer/SellMenuTab"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_ixhpo")
+stretch_mode = 5
+
+[node name="Label" type="RichTextLabel" parent="MarginContainer/VSplitContainer/HSplitContainer/SellMenuTab"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 52
+bbcode_enabled = true
+text = "MENU_TITLE_SHOP_SELL"
+fit_content = true
+autowrap_mode = 0
+
+[node name="BuyMenuTab" type="CenterContainer" parent="MarginContainer/VSplitContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 0
+
+[node name="BuyMenuBtn" type="TextureButton" parent="MarginContainer/VSplitContainer/HSplitContainer/BuyMenuTab"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_ixhpo")
+stretch_mode = 5
+
+[node name="Label" type="RichTextLabel" parent="MarginContainer/VSplitContainer/HSplitContainer/BuyMenuTab"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 52
+bbcode_enabled = true
+text = "MENU_TITLE_SHOP_BUY"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VSplitContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VSplitContainer/MarginContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme = SubResource("Theme_pano3")
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VSplitContainer/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GlobalMoneyLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -202.0
+offset_top = -83.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 60
+theme_override_font_sizes/bold_font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qf0em")
+bbcode_enabled = true
+text = "[b]128[/b] [img]res://sprites/coins.png[/img]"
+fit_content = true
+autowrap_mode = 0
+
+[connection signal="pressed" from="MarginContainer/VSplitContainer/HSplitContainer/SellMenuTab/SellMenuBtn" to="." method="_on_sell_menu_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VSplitContainer/HSplitContainer/BuyMenuTab/BuyMenuBtn" to="." method="_on_buy_menu_btn_pressed"]

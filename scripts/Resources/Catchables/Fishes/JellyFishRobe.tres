@@ -3,7 +3,7 @@
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_5fy61"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_e5a1w"]
 [ext_resource type="Texture2D" uid="uid://lf30jy2y2sl7" path="res://sprites/Catchables/Fishes/jellyfish_robe.png" id="2_b1vnk"]
-[ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="3_cqj10"]
+[ext_resource type="Resource" uid="uid://c0d4soyvubcj0" path="res://scripts/Resources/Catchables/Fishes/TrueMussels.tres" id="4_grq7e"]
 [ext_resource type="PackedScene" uid="uid://ov6nyr54t5gr" path="res://objects/Catchables/Fishes/jellyfish_robe.tscn" id="4_s3ujp"]
 
 [resource]
@@ -17,7 +17,8 @@ tags = Array[int]([0, 2, 9])
 image = ExtResource("2_b1vnk")
 scene = ExtResource("4_s3ujp")
 rarity = 15
-periods = Array[int]([0, 2])
-lures = Array[ExtResource("1_e5a1w")]([ExtResource("3_cqj10")])
+price = 45
+periods = Array[int]([3, 2])
+lures = Array[ExtResource("1_e5a1w")]([ExtResource("4_grq7e")])
 lure_ids = Array[int]([])
 lure_tags = Array[int]([7, 1])
