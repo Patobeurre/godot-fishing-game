@@ -36,3 +36,4 @@ Button/styles/hover = SubResource("StyleBoxTexture_c7um0")
 Button/styles/hover_pressed = SubResource("StyleBoxTexture_h0nho")
 Button/styles/normal = SubResource("StyleBoxTexture_ttag4")
 Button/styles/pressed = SubResource("StyleBoxTexture_h0nho")
+Label/font_sizes/font_size = 20
