@@ -1,0 +1,340 @@
+[gd_scene load_steps=62 format=3 uid="uid://dlkks82dwpwbt"]
+
+[ext_resource type="PackedScene" uid="uid://dpj1l8s865bid" path="res://models/Structures/aquarium.glb" id="1_ify1k"]
+[ext_resource type="Script" path="res://scripts/Aquarium/aquarium.gd" id="2_lv4tf"]
+[ext_resource type="Script" path="res://scripts/Aquarium/site.gd" id="2_mnper"]
+[ext_resource type="Script" path="res://scripts/Interactable.gd" id="2_p6dib"]
+[ext_resource type="PackedScene" uid="uid://sc84ulwrasjn" path="res://objects/Catchables/Fishes/anglerfish.tscn" id="2_v24tt"]
+[ext_resource type="PackedScene" uid="uid://bnfmmuc36bstu" path="res://objects/Catchables/Fishes/eel.tscn" id="3_e78la"]
+[ext_resource type="PackedScene" uid="uid://dakyhjkvbh4yq" path="res://objects/Catchables/anemone.tscn" id="3_lb1ln"]
+[ext_resource type="PackedScene" uid="uid://dtexun5ww3d2k" path="res://objects/Catchables/Fishes/clown_fish.tscn" id="4_cp6n1"]
+[ext_resource type="PackedScene" uid="uid://sydd3xkoqodj" path="res://objects/Catchables/Fishes/hermit_crab.tscn" id="5_200ku"]
+[ext_resource type="Script" path="res://scripts/Aquarium/fish.gd" id="5_wlgjx"]
+[ext_resource type="PackedScene" uid="uid://d2sf8bk5w6snk" path="res://objects/Catchables/Fishes/hidden_fish.tscn" id="6_rqmy5"]
+[ext_resource type="Resource" uid="uid://3ovutb4lao07" path="res://scripts/Resources/Catchables/Fishes/Anglerfish.tres" id="6_u0cnc"]
+[ext_resource type="PackedScene" uid="uid://bnypgplnop4a8" path="res://objects/Catchables/Fishes/jellyfish.tscn" id="7_gad3d"]
+[ext_resource type="Resource" uid="uid://c1af81d13ra1f" path="res://scripts/Resources/Catchables/Fishes/Eel.tres" id="8_avgcf"]
+[ext_resource type="PackedScene" uid="uid://ov6nyr54t5gr" path="res://objects/Catchables/Fishes/jellyfish_robe.tscn" id="8_brug5"]
+[ext_resource type="PackedScene" uid="uid://de63h5pvd50wq" path="res://objects/Catchables/Fishes/jellyfish_tiny.tscn" id="9_qhxb5"]
+[ext_resource type="PackedScene" uid="uid://d28x74dk5ipyc" path="res://objects/Catchables/Fishes/moray_eel.tscn" id="10_kwuou"]
+[ext_resource type="Resource" uid="uid://cx5sdiudeae1t" path="res://scripts/Resources/Catchables/Fishes/MorayEel.tres" id="10_yu7yc"]
+[ext_resource type="PackedScene" uid="uid://ckf8gv048tone" path="res://objects/Catchables/Fishes/octopus.tscn" id="11_7hh7t"]
+[ext_resource type="PackedScene" uid="uid://bsakck0gxgtpp" path="res://objects/Catchables/Fishes/royal_beard_fish.tscn" id="12_2f4jb"]
+[ext_resource type="Resource" uid="uid://ctotryrf5kh4e" path="res://scripts/Resources/Catchables/Fishes/JellyFish.tres" id="12_jgu3h"]
+[ext_resource type="PackedScene" uid="uid://0ontd173otm6" path="res://objects/Catchables/true_mussels.tscn" id="13_7drh8"]
+[ext_resource type="PackedScene" uid="uid://co0wky0yojob1" path="res://objects/Catchables/Fishes/sea_urchin.tscn" id="13_p561w"]
+[ext_resource type="Resource" uid="uid://b67rtymghjo5n" path="res://scripts/Resources/Catchables/Fishes/JellyFishRobe.tres" id="14_ii0ho"]
+[ext_resource type="PackedScene" uid="uid://c3olfp7slcj60" path="res://objects/Catchables/Fishes/shrimp.tscn" id="14_q05fl"]
+[ext_resource type="PackedScene" uid="uid://dwvo1g5miuqq0" path="res://objects/Catchables/Fishes/sole.tscn" id="15_2rai0"]
+[ext_resource type="PackedScene" uid="uid://cx7yogcsge776" path="res://objects/Catchables/Fishes/hammer_shark.tscn" id="16_1gyhw"]
+[ext_resource type="PackedScene" uid="uid://k2w6cbfymx6d" path="res://objects/Catchables/Fishes/squid.tscn" id="16_fj66j"]
+[ext_resource type="Resource" uid="uid://duoe66f700yxp" path="res://scripts/Resources/Catchables/Fishes/JellyFishTiny.tres" id="16_lpk3n"]
+[ext_resource type="PackedScene" uid="uid://72tnl0umfs1r" path="res://objects/Catchables/Fishes/shark.tscn" id="17_fxu4a"]
+[ext_resource type="PackedScene" uid="uid://cuuyabi06oael" path="res://objects/Catchables/Fishes/whale.tscn" id="17_woct7"]
+[ext_resource type="Resource" uid="uid://l45j43d051lt" path="res://scripts/Resources/Catchables/Fishes/Squid.tres" id="18_q0taw"]
+[ext_resource type="PackedScene" uid="uid://cs0vfc6pvn5br" path="res://objects/Catchables/Fishes/small_fish.tscn" id="19_qorwu"]
+[ext_resource type="PackedScene" uid="uid://bm531nn8kofqh" path="res://objects/Catchables/Fishes/common_fish.tscn" id="20_2vykv"]
+[ext_resource type="Resource" uid="uid://b6hwf8hmftnpf" path="res://scripts/Resources/Catchables/Anemone.tres" id="20_ybk4u"]
+[ext_resource type="PackedScene" uid="uid://dsbrgvalqqpsk" path="res://objects/Catchables/Fishes/pilchard.tscn" id="21_vj7pj"]
+[ext_resource type="Resource" uid="uid://m3esr6ufsrya" path="res://scripts/Resources/Catchables/Fishes/HermitCrab.tres" id="22_0uwwq"]
+[ext_resource type="PackedScene" uid="uid://cit17jjrveyip" path="res://objects/Catchables/Fishes/pike.tscn" id="22_wyr3c"]
+[ext_resource type="Resource" uid="uid://dw3vqqivyjq34" path="res://scripts/Resources/Catchables/Fishes/Shrimp.tres" id="24_3ldmf"]
+[ext_resource type="Resource" uid="uid://c0d4soyvubcj0" path="res://scripts/Resources/Catchables/Fishes/TrueMussels.tres" id="26_4w2jx"]
+[ext_resource type="Resource" uid="uid://hgj47b8kfi7j" path="res://scripts/Resources/Catchables/Fishes/SeaUrchin.tres" id="28_qcb55"]
+[ext_resource type="Resource" uid="uid://c0nhg67lt4noa" path="res://scripts/Resources/Catchables/Fishes/Whale.tres" id="30_q4mc8"]
+[ext_resource type="Resource" uid="uid://0p05cl1jeynr" path="res://scripts/Resources/Catchables/Fishes/SmallFish.tres" id="31_koetm"]
+[ext_resource type="Resource" uid="uid://bq7rfd0awtdhf" path="res://scripts/Resources/Catchables/Fishes/HammerShark.tres" id="32_x8hk1"]
+[ext_resource type="Resource" uid="uid://d2eanu31fp0x0" path="res://scripts/Resources/Catchables/Fishes/CommonFish.tres" id="33_hws16"]
+[ext_resource type="Resource" uid="uid://cdinhdv0bl53j" path="res://scripts/Resources/Catchables/Fishes/Shark.tres" id="34_i1fsq"]
+[ext_resource type="Resource" uid="uid://bm5o061am665" path="res://scripts/Resources/Catchables/Fishes/Pilchard.tres" id="35_rnscv"]
+[ext_resource type="Resource" uid="uid://btttncot63v31" path="res://scripts/Resources/Catchables/Fishes/Pike.tres" id="37_tu6rj"]
+[ext_resource type="Resource" uid="uid://ckn0dd4qsktng" path="res://scripts/Resources/Catchables/Fishes/Sole.tres" id="39_0elae"]
+[ext_resource type="Resource" uid="uid://6yh568jbps3l" path="res://scripts/Resources/Catchables/Fishes/ClownFish.tres" id="46_uu4h0"]
+[ext_resource type="PackedScene" uid="uid://dd0j7w4ovcvlw" path="res://objects/Catchables/seaweed.tscn" id="48_ckvyc"]
+[ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="52_qfiu0"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_cffoc"]
+noise_type = 3
+frequency = 0.001
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_eng4h"]
+width = 1
+height = 1
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_cffoc")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_uiha1"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_r2xuf"]
+width = 1
+height = 1
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_uiha1")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_bvyi5"]
+noise_type = 3
+frequency = 0.02
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hwj1l"]
+seamless = true
+noise = SubResource("FastNoiseLite_bvyi5")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bj7gf"]
+render_priority = 0
+shader = ExtResource("52_qfiu0")
+shader_parameter/albedo = Color(0, 0.33467, 0.491748, 1)
+shader_parameter/albedo2 = Color(0, 0.371098, 0.604246, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/roughness = 0.8
+shader_parameter/wave_direction = Vector2(2, 0)
+shader_parameter/wave_direction2 = Vector2(0, 1)
+shader_parameter/time_scale = 0.015
+shader_parameter/noise_scale = 30.0
+shader_parameter/height_scale = 0.2
+shader_parameter/color_deep = Color(0.255622, 0.500334, 1, 1)
+shader_parameter/color_shallow = Color(0.422646, 0.886977, 1, 1)
+shader_parameter/beers_law = 1.5
+shader_parameter/depth_offset = 0.2
+shader_parameter/edge_scale = 1.0
+shader_parameter/near = 1.0
+shader_parameter/far = 100.0
+shader_parameter/edge_color = Color(0.446777, 0.446777, 0.446777, 1)
+shader_parameter/wave = SubResource("NoiseTexture2D_hwj1l")
+shader_parameter/texture_normal = SubResource("NoiseTexture2D_eng4h")
+shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_r2xuf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dwrxe"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fb5us"]
+material = SubResource("StandardMaterial3D_dwrxe")
+size = Vector2(500, 500)
+subdivide_width = 200
+subdivide_depth = 200
+
+[node name="aquarium" instance=ExtResource("1_ify1k")]
+script = ExtResource("2_lv4tf")
+
+[node name="Catchables" type="Node3D" parent="." index="0"]
+
+[node name="Rock" type="Node3D" parent="Catchables" index="0"]
+transform = Transform3D(1.00531, 0, 0, 0, 1.00531, 0, 0, 0, 1.00531, 0, 0, 0)
+script = ExtResource("2_mnper")
+
+[node name="anglerfish" parent="Catchables/Rock" index="0" instance=ExtResource("2_v24tt")]
+transform = Transform3D(1.05369, 0, 0.835699, 0.0350044, 1.47997, -0.0401989, -0.87496, 0.059209, 1.0048, -0.175321, -0.0491455, 0.624915)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("6_u0cnc")
+
+[node name="eel" parent="Catchables/Rock" index="1" instance=ExtResource("3_e78la")]
+transform = Transform3D(1.27654, 0, 1.53963, 0, 2, 0, -1.53963, 0, 1.27654, -0.0384444, 0.316403, 0.669456)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("8_avgcf")
+
+[node name="moray_eel" parent="Catchables/Rock" index="2" instance=ExtResource("10_kwuou")]
+transform = Transform3D(-3.24097e-08, 0.741448, 0.943533, -1.2, -5.24537e-08, -2.70001e-15, 4.12431e-08, -0.943533, 0.741448, 0.393073, -0.300682, -0.231571)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("10_yu7yc")
+
+[node name="Jellyfish" type="Node3D" parent="Catchables" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35753, 0.963015, 0.667592)
+script = ExtResource("2_mnper")
+
+[node name="jellyfish" parent="Catchables/Jellyfish" index="0" instance=ExtResource("7_gad3d")]
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("12_jgu3h")
+
+[node name="jellyfish_robe" parent="Catchables/Jellyfish" index="1" instance=ExtResource("8_brug5")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("14_ii0ho")
+
+[node name="jellyfish_tiny" parent="Catchables/Jellyfish" index="2" instance=ExtResource("9_qhxb5")]
+transform = Transform3D(0.565025, 0, -0.825074, 0, 1, 0, 0.825074, 0, 0.565025, 0, -0.302995, 0)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("16_lpk3n")
+
+[node name="squid" parent="Catchables/Jellyfish" index="3" instance=ExtResource("16_fj66j")]
+transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, 0, 0, 0)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("18_q0taw")
+
+[node name="Anemone&Clownfish" type="Node3D" parent="Catchables" index="2"]
+script = ExtResource("2_mnper")
+
+[node name="anemone" parent="Catchables/Anemone&Clownfish" index="0" instance=ExtResource("3_lb1ln")]
+transform = Transform3D(0.989791, 0.142525, 0, -0.142525, 0.989791, 0, 0, 0, 1, -0.281301, -0.280365, -0.502935)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("20_ybk4u")
+
+[node name="Crustacean" type="Node3D" parent="Catchables" index="3"]
+transform = Transform3D(0.968964, 0, -0.247202, 0, 1, 0, 0.247202, 0, 0.968964, 0.183274, 0, 0)
+script = ExtResource("2_mnper")
+
+[node name="hermit_crab" parent="Catchables/Crustacean" index="0" instance=ExtResource("5_200ku")]
+transform = Transform3D(-0.564844, -0.644733, -0.515043, 0.0156354, 0.615671, -0.787848, 0.825049, -0.453064, -0.337678, 0, -0.338746, -0.835658)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("22_0uwwq")
+
+[node name="shrimp" parent="Catchables/Crustacean" index="1" instance=ExtResource("14_q05fl")]
+transform = Transform3D(-0.644497, 0, -0.764607, 0, 1, 0, 0.764607, 0, -0.644497, 0, -0.336756, -0.854406)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("24_3ldmf")
+
+[node name="AttachToRock" type="Node3D" parent="Catchables" index="4"]
+script = ExtResource("2_mnper")
+
+[node name="true_mussels" parent="Catchables/AttachToRock" index="0" instance=ExtResource("13_7drh8")]
+transform = Transform3D(0.682937, 0.1765, 0.970796, 0.269972, 1.10217, -0.390305, -0.949059, 0.440534, 0.587552, 0.00864032, -0.282134, 0.905881)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("26_4w2jx")
+
+[node name="sea_urchin" parent="Catchables/AttachToRock" index="1" instance=ExtResource("13_p561w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0774499, -0.315896, 0.910822)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("28_qcb55")
+
+[node name="BigFishes" type="Node3D" parent="Catchables" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.21409, 0)
+script = ExtResource("2_mnper")
+
+[node name="whale" parent="Catchables/BigFishes" index="0" instance=ExtResource("17_woct7")]
+transform = Transform3D(-7.86805e-08, 0, -1.8, 0, 1.8, 0, 1.8, 0, -7.86805e-08, 0.124668, 0.754339, 0.479717)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("30_q4mc8")
+
+[node name="hammer_shark" parent="Catchables/BigFishes" index="1" instance=ExtResource("16_1gyhw")]
+transform = Transform3D(0.517106, 0.0234726, -1.93185, -0.0906911, 1.99794, 3.96423e-09, 1.92986, 0.0876009, 0.517638, 0, 0.234073, 0.410345)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("32_x8hk1")
+
+[node name="shark" parent="Catchables/BigFishes" index="2" instance=ExtResource("17_fxu4a")]
+transform = Transform3D(-0.465874, 0, -1.73867, -0.0759002, 1.79828, 0.0203374, 1.73701, 0.0785777, -0.46543, 0, 0.271933, 0.521234)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("34_i1fsq")
+
+[node name="SmallFish" type="Node3D" parent="Catchables" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.206936, 0.229798, -0.0600214)
+script = ExtResource("2_mnper")
+
+[node name="small_fish" parent="Catchables/SmallFish" index="0" instance=ExtResource("19_qorwu")]
+transform = Transform3D(0.6, 0, -1.03923, 0, 1.2, 0, 1.03923, 0, 0.6, 0, 0, 0)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("31_koetm")
+
+[node name="common_fish" parent="Catchables/SmallFish" index="1" instance=ExtResource("20_2vykv")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("33_hws16")
+
+[node name="pilchard" parent="Catchables/SmallFish" index="2" instance=ExtResource("21_vj7pj")]
+transform = Transform3D(1.15911, 0.310583, -1.3576e-08, 0, -5.24537e-08, -1.2, -0.310583, 1.15911, -5.06664e-08, 0, 0, 0)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("35_rnscv")
+
+[node name="MediumFish" type="Node3D" parent="Catchables" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.632418, -0.657262)
+script = ExtResource("2_mnper")
+
+[node name="pike" parent="Catchables/MediumFish" index="0" instance=ExtResource("22_wyr3c")]
+transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, 0.072156, 0, 0.146534)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("37_tu6rj")
+
+[node name="Sole" type="Node3D" parent="Catchables" index="8"]
+script = ExtResource("2_mnper")
+
+[node name="sole" parent="Catchables/Sole" index="0" instance=ExtResource("15_2rai0")]
+transform = Transform3D(0.479233, 1.10936, -0.479233, -0.919239, -3.04422e-08, -0.919239, -0.784433, 0.677739, 0.784433, 0.131489, -0.419043, -0.735666)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("39_0elae")
+
+[node name="ClownFish" type="Node3D" parent="Catchables" index="9"]
+script = ExtResource("2_mnper")
+
+[node name="clown_fish" parent="Catchables/ClownFish" index="0" instance=ExtResource("4_cp6n1")]
+transform = Transform3D(0.823404, 0, -0.567456, 0, 1, 0, 0.567456, 0, 0.823404, -0.180456, -0.128612, -0.417072)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("46_uu4h0")
+
+[node name="HiddenFish" type="Node3D" parent="Catchables" index="10"]
+script = ExtResource("2_mnper")
+
+[node name="hidden_fish" parent="Catchables/HiddenFish" index="0" instance=ExtResource("6_rqmy5")]
+transform = Transform3D(0.202635, 3.0597e-08, 0.221222, 4.52987e-08, -0.3, -1.85856e-16, 0.221222, 3.34036e-08, -0.202635, -0.239624, -0.319522, 0.141237)
+visible = false
+script = ExtResource("5_wlgjx")
+
+[node name="BeardFish" type="Node3D" parent="Catchables" index="11"]
+script = ExtResource("2_mnper")
+
+[node name="royal_beard_fish" parent="Catchables/BeardFish" index="0" instance=ExtResource("12_2f4jb")]
+transform = Transform3D(-0.585269, 0, -0.810839, 0, 1, 0, 0.810839, 0, -0.585269, -0.342157, 0.322395, 0.174658)
+visible = false
+script = ExtResource("5_wlgjx")
+
+[node name="Octopus" type="Node3D" parent="Catchables" index="12"]
+script = ExtResource("2_mnper")
+
+[node name="octopus" parent="Catchables/Octopus" index="0" instance=ExtResource("11_7hh7t")]
+transform = Transform3D(0.603914, 0, -1.03696, 0, 1.2, 0, 1.03696, 0, 0.603914, 0.0837858, -0.135948, -0.104211)
+visible = false
+script = ExtResource("5_wlgjx")
+
+[node name="Cube_224" parent="." index="1"]
+transform = Transform3D(-0.624, 0, -9.70202e-07, 0, 0.6912, 0, 5.40541e-07, 0, -1.12, 0, 0, -1.7484e-08)
+
+[node name="StaticBody3D" parent="Cube_224" index="0"]
+script = ExtResource("2_p6dib")
+interact_text = "Aquarium"
+
+[node name="Cube_225" parent="." index="2"]
+transform = Transform3D(0.610584, 0, 0, 0, 0.576, 0, 0, 0, 1.10292, 0, 0, -1.7484e-08)
+
+[node name="Icosphere" parent="." index="3"]
+transform = Transform3D(0.3744, 0, 0, 0, 0.48384, 0, 0, 0, 0.393582, 0, 0, -8.42412e-08)
+
+[node name="Node3D" type="Node3D" parent="." index="4"]
+
+[node name="seaweed" parent="Node3D" index="0" instance=ExtResource("48_ckvyc")]
+transform = Transform3D(2, 0, 0, 0, -2, 3.01992e-07, 0, -3.01992e-07, -2, -0.507385, -0.320098, 0.331582)
+
+[node name="seaweed2" parent="Node3D" index="1" instance=ExtResource("48_ckvyc")]
+transform = Transform3D(1.33948, 1.01941e-07, 0.675124, 0, -1.5, 2.26494e-07, 0.675124, -2.02256e-07, -1.33948, -0.403505, -0.357943, 0.187665)
+
+[node name="seaweed3" parent="Node3D" index="2" instance=ExtResource("48_ckvyc")]
+transform = Transform3D(0.260017, 2.53673e-07, 1.68, 0, -1.7, 2.56693e-07, 1.68, -3.92615e-08, -0.260017, -0.45963, -0.346255, 0.030174)
+
+[node name="seaweed4" parent="Node3D" index="3" instance=ExtResource("48_ckvyc")]
+transform = Transform3D(1.30564, 1.39644e-07, 0.924823, 0, -1.6, 2.41593e-07, 0.924823, -1.97147e-07, -1.30564, -0.199022, -0.360901, 0.279371)
+
+[node name="WaterSurface" type="MeshInstance3D" parent="." index="5"]
+transform = Transform3D(0.00243542, 0, 0, 0, 0.5, 0, 0, 0, 0.00445914, 0, 0.691762, 0)
+material_override = SubResource("ShaderMaterial_bj7gf")
+transparency = 0.65
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_fb5us")
+skeleton = NodePath("../../..")
