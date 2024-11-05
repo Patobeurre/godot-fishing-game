@@ -17,6 +17,7 @@ tags = Array[int]([])
 image = ExtResource("2_lpic7")
 scene = ExtResource("4_aojrf")
 rarity = 50
+price = 0
 periods = Array[int]([0, 1, 2, 3])
 lures = Array[ExtResource("1_d1lig")]([ExtResource("3_ufkbl")])
 lure_ids = Array[int]([])

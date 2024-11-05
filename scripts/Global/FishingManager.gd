@@ -61,11 +61,11 @@ func on_minigame_ended(succeeded :bool):
 func get_waiting_time():
 	return current_catchable_area.get_fish_table().waiting_time
 
-func pick_catchable(fishTable: FishingAreaRes):
-	print("pick catchable from " + fishTable.name)
-	picked_catchable = null
-	var current_period = TimeManager.get_time_period()
-	
+
+func get_catchable_from_fishtable( \
+		fishTable: FishingAreaRes, \
+		current_period :TimePeriod.ETimePeriod):
+			
 	var rng = RandomNumberGenerator.new()
 	var randomNumber = rng.randi_range(0, 100)
 	var rarity = Rarity.get_rarity(randomNumber)
@@ -102,9 +102,17 @@ func pick_catchable(fishTable: FishingAreaRes):
 		
 		if available_catchables.is_empty(): return
 	
-	picked_catchable = available_catchables.pick_random()
+	return available_catchables.pick_random()
+
+
+func pick_catchable(fishTable: FishingAreaRes):
+	print("pick catchable from " + fishTable.name)
+	picked_catchable = null
+	var current_period = TimeManager.get_time_period()
+	
+	picked_catchable = get_catchable_from_fishtable(fishTable, current_period)
+	
 	picked_catchable_period = current_period
-	print(picked_catchable.name)
 
 
 func verify_identification_list() -> void:
@@ -139,6 +147,18 @@ func add_lure(lure :CatchableRes):
 		collected_lure.update(fishing_stats.current_lure, current_catchable_area.get_fish_table(), picked_catchable_period)
 		fishing_stats.catchables.append(collected_lure)
 		SignalBus.new_lure_registered.emit(lure)
+
+
+func add_lures(lures :Array[CollectedCatchable]):
+	print(lures.size())
+	for lure :CollectedCatchable in lures:
+		if fishing_stats.contains(lure.catchable):
+			var collected_lure :CollectedCatchable = fishing_stats.catchables.filter(func (elem): \
+			return elem.catchable == lure.catchable)[0]
+			collected_lure.merge(lure)
+		else:
+			fishing_stats.catchables.append(lure)
+		print(lure.catchable.name)
 
 
 func remove_lure(lure :CollectedCatchable):

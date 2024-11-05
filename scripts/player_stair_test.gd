@@ -64,6 +64,7 @@ var footstep_sounds_path :String = ""
 
 @onready var bobber_scene = preload("res://objects/bobber.tscn")
 var bobber = null
+@onready var basket_scene = preload("res://objects/basket.tscn")
 
 @onready var fishing_sm: FiniteStateMachine = $FishingStateMachine
 @onready var default_fishing_state: StateMachineState = $DefaultFishingState
@@ -388,18 +389,6 @@ func handle_controls(_delta):
 	
 	if not is_movement_enabled:
 		return
-	
-	# Mouse capture
-	
-	if Input.is_action_just_pressed("mouse_capture"):
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-		is_camera_enabled = true
-	
-	if Input.is_action_just_pressed("mouse_capture_exit"):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		is_camera_enabled = false
-		
-		input_mouse = Vector2.ZERO
 	
 	# Movement
 	

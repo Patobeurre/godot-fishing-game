@@ -15,6 +15,24 @@ static func create(new_catchable :CatchableRes) -> CollectedCatchable:
 	return collected_catchable
 
 
+func merge(other :CollectedCatchable) -> CollectedCatchable:
+	var new_lure_used = other.lure_used.filter(func (elem): 
+		return not lure_used.has(elem))
+	lure_used.append_array(new_lure_used)
+	
+	var new_areas = other.areas_found_in.filter(func (elem): 
+		return not areas_found_in.has(elem))
+	areas_found_in.append_array(new_areas)
+	
+	var new_periods = other.periods.filter(func (elem): 
+		return not periods.has(elem))
+	periods.append_array(new_periods)
+	
+	amount += other.amount
+	
+	return self
+
+
 func update(lure :CatchableRes, area :FishingAreaRes, period :TimePeriod.ETimePeriod):
 	update_lures(lure)
 	update_areas(area)
@@ -22,6 +40,7 @@ func update(lure :CatchableRes, area :FishingAreaRes, period :TimePeriod.ETimePe
 
 
 func update_lures(lure :CatchableRes):
+	if lure == null: return
 	if not lure_used.has(lure):
 		lure_used.append(lure)
 	
