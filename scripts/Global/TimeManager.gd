@@ -15,7 +15,7 @@ func _physics_process(delta):
 	if not is_running: return
 	if time_stats == null: return
 	
-	set_time_of_day(time_stats.time_of_day + rateOfTime * delta)
+	set_time_of_day(time_stats.time_of_day + rateOfTime * delta * 2)
 	
 	if time_stats.time_of_day > time_stats.MAX_TIME_RANGE:
 		time_stats.set_time_of_day(0.1)
