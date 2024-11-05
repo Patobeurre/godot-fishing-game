@@ -12,7 +12,7 @@ var is_selected :bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	custom_minimum_size = Vector2(130, 130)
+	custom_minimum_size = Vector2(200, 200)
 	update()
 
 

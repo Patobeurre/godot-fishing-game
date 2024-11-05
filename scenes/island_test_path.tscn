@@ -42,7 +42,7 @@ noise_type = 3
 frequency = 0.001
 fractal_type = 2
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_eng4h"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_og5bs"]
 width = 1
 height = 1
 seamless = true
@@ -51,7 +51,7 @@ noise = SubResource("FastNoiseLite_5lqru")
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_yvrm6"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_r2xuf"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4bjeq"]
 width = 1
 height = 1
 seamless = true
@@ -62,7 +62,7 @@ noise = SubResource("FastNoiseLite_yvrm6")
 noise_type = 3
 frequency = 0.02
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hwj1l"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_n7mtk"]
 seamless = true
 noise = SubResource("FastNoiseLite_ehire")
 
@@ -86,14 +86,14 @@ shader_parameter/edge_scale = 1.0
 shader_parameter/near = 1.0
 shader_parameter/far = 100.0
 shader_parameter/edge_color = Color(0.446777, 0.446777, 0.446777, 1)
-shader_parameter/wave = SubResource("NoiseTexture2D_hwj1l")
-shader_parameter/texture_normal = SubResource("NoiseTexture2D_eng4h")
-shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_r2xuf")
+shader_parameter/wave = SubResource("NoiseTexture2D_n7mtk")
+shader_parameter/texture_normal = SubResource("NoiseTexture2D_og5bs")
+shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_4bjeq")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dwrxe"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qhyd"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_i1a6c"]
-material = SubResource("StandardMaterial3D_dwrxe")
+material = SubResource("StandardMaterial3D_8qhyd")
 size = Vector2(500, 500)
 subdivide_width = 200
 subdivide_depth = 200

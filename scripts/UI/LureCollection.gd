@@ -1,7 +1,7 @@
 extends MainUI
 
 
-@onready var grid_container :GridContainer = $MarginContainer/VSplitContainer/MarginContainer/GridContainer
+@onready var grid_container :GridContainer = $MarginContainer/VSplitContainer/MarginContainer/ScrollContainer/GridContainer
 @onready var catchable_item_container = preload("res://objects/UI/CatchableItem.tscn")
 
 var selected_lure :CatchableItem = null

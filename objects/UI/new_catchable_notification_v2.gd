@@ -5,6 +5,7 @@ extends Control
 @export var anim_image_duration :float = 1.0
 @export var anim_label_duration :float = 1.0
 @export var stay_visible_duration :float = 1.0
+@export var max_scale := Vector2(13, 13)
 
 @onready var container = $CenterContainer2/Panel
 @onready var stary_background :Sprite2D = $CenterContainer2/Panel/StaryBackground
@@ -39,7 +40,7 @@ func perform_animation():
 	visible = true
 	container.scale = Vector2.ZERO
 	var tween := get_tree().create_tween().bind_node(container).set_trans(Tween.TRANS_ELASTIC)
-	tween.tween_property(container, "scale", Vector2(8,8), anim_image_duration)
+	tween.tween_property(container, "scale", max_scale, anim_image_duration)
 	container.visible = true
 	tween.play()
 	
@@ -49,7 +50,7 @@ func perform_animation():
 	var target_pos = initial_pos
 	var target_modulate = label.modulate
 	target_modulate.a = 1
-	target_pos.y += 120
+	target_pos.y += 200
 	var tween_label = get_tree().create_tween().bind_node(label).set_trans(Tween.TRANS_ELASTIC)
 	tween_label.parallel().tween_property(label, "position", target_pos, anim_label_duration)
 	tween_label.parallel().tween_property(label, "modulate", target_modulate, anim_label_duration)
