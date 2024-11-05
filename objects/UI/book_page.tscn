@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3gj6w6ybputg"]
+[gd_scene load_steps=7 format=3 uid="uid://c3gj6w6ybputg"]
 
 [ext_resource type="Script" path="res://objects/UI/book_page_content.gd" id="1_ho80q"]
 [ext_resource type="Texture2D" uid="uid://c88orwk43qerc" path="res://sprites/UI/identification_picture_empty.png" id="2_3xqpy"]
-[ext_resource type="FontFile" uid="uid://bap0e5iqwtj5k" path="res://fonts/Handanidemo.ttf" id="2_32fp0"]
 [ext_resource type="Texture2D" uid="uid://c2nepnanarbi6" path="res://sprites/UI/identification_picture_frame.png" id="2_wfds3"]
 [ext_resource type="Texture2D" uid="uid://dwnons7hqfqhm" path="res://sprites/Catchables/Fishes/common_fish.png" id="3_jokxw"]
+[ext_resource type="Texture2D" uid="uid://db4ng2so3xrmj" path="res://sprites/UI/verified.png" id="5_64dmm"]
+[ext_resource type="Theme" uid="uid://bbhf8pjialv1y" path="res://themes/Handwrite_foont_theme.tres" id="5_78esf"]
 
 [node name="MarginContainer" type="MarginContainer"]
 anchors_preset = 15
@@ -12,10 +13,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 20
+theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
 script = ExtResource("1_ho80q")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -27,7 +28,7 @@ layout_mode = 2
 theme_override_constants/separation = 30
 
 [node name="BtnFishImage" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(150, 200)
+custom_minimum_size = Vector2(200, 230)
 layout_mode = 2
 action_mode = 0
 texture_normal = ExtResource("2_3xqpy")
@@ -58,6 +59,20 @@ texture = ExtResource("2_wfds3")
 expand_mode = 4
 stretch_mode = 5
 
+[node name="VerifiedImage" type="TextureRect" parent="VBoxContainer/HBoxContainer/BtnFishImage"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("5_64dmm")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -66,13 +81,9 @@ alignment = 1
 [node name="Name" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
+theme = ExtResource("5_78esf")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("2_32fp0")
-theme_override_fonts/bold_italics_font = ExtResource("2_32fp0")
-theme_override_font_sizes/bold_italics_font_size = 60
-theme_override_font_sizes/italics_font_size = 20
-theme_override_font_sizes/normal_font_size = 50
-theme_override_font_sizes/bold_font_size = 20
+theme_override_font_sizes/bold_italics_font_size = 65
 bbcode_enabled = true
 text = "[b][i]Latin fish name[/i][/b]"
 fit_content = true
@@ -80,66 +91,39 @@ fit_content = true
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("2_32fp0")
-theme_override_fonts/bold_font = ExtResource("2_32fp0")
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 30
-bbcode_enabled = true
-text = "Size : "
-fit_content = true
-autowrap_mode = 0
-
 [node name="Size" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("5_78esf")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("2_32fp0")
-theme_override_fonts/bold_font = ExtResource("2_32fp0")
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 30
 bbcode_enabled = true
+text = "SIZE"
 fit_content = true
 autowrap_mode = 0
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("2_32fp0")
-theme_override_fonts/bold_font = ExtResource("2_32fp0")
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 30
-bbcode_enabled = true
-text = "Habitat : "
-fit_content = true
-autowrap_mode = 0
-
 [node name="Habitat" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+theme = ExtResource("5_78esf")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("2_32fp0")
-theme_override_fonts/bold_font = ExtResource("2_32fp0")
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 30
 bbcode_enabled = true
+text = "HABITAT"
 fit_content = true
 autowrap_mode = 0
 
-[node name="Description" type="RichTextLabel" parent="VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Description" type="RichTextLabel" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("5_78esf")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = -5
-theme_override_fonts/normal_font = ExtResource("2_32fp0")
-theme_override_font_sizes/bold_italics_font_size = 50
-theme_override_font_sizes/italics_font_size = 20
-theme_override_font_sizes/normal_font_size = 40
-theme_override_font_sizes/bold_font_size = 20
 bbcode_enabled = true
 text = "Description
 on

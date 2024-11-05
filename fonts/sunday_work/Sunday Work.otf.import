@@ -1,0 +1,34 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://dmxlaybavhk2v"
+path="res://.godot/imported/Sunday Work.otf-eb12f9b10bd18b7162f6270c1e6e2cb5.fontdata"
+
+[deps]
+
+source_file="res://fonts/sunday_work/Sunday Work.otf"
+dest_files=["res://.godot/imported/Sunday Work.otf-eb12f9b10bd18b7162f6270c1e6e2cb5.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}
