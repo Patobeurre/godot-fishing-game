@@ -44,7 +44,6 @@ func populate_grid():
 		if FishingManager.get_current_lure() == lure.catchable:
 			selected_lure = item
 			item.set_selected(true)
-	
 
 
 func on_change_selected_lure(item :CatchableItem):

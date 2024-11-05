@@ -15,6 +15,8 @@ extends Control
 
 var catchable :CatchableRes
 
+signal animation_finished
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -71,3 +73,5 @@ func perform_animation():
 	
 	await tween.finished
 	visible = false
+	
+	animation_finished.emit()

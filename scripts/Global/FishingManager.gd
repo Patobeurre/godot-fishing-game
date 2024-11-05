@@ -10,6 +10,7 @@ var verified_list :Array[IdentifiedRes] = []
 
 var fishing_stats :FishingStats
 
+var default_lure :CatchableRes = preload("res://scripts/Resources/Catchables/Lure.tres")
 var all_lures :FishingAreaRes = preload("res://scripts/Resources/FishingAreas/all.tres")
 
 
@@ -112,6 +113,7 @@ func pick_catchable(fishTable: FishingAreaRes):
 	
 	picked_catchable = get_catchable_from_fishtable(fishTable, current_period)
 	
+	print(picked_catchable.name)
 	picked_catchable_period = current_period
 
 
@@ -150,7 +152,6 @@ func add_lure(lure :CatchableRes):
 
 
 func add_lures(lures :Array[CollectedCatchable]):
-	print(lures.size())
 	for lure :CollectedCatchable in lures:
 		if fishing_stats.contains(lure.catchable):
 			var collected_lure :CollectedCatchable = fishing_stats.catchables.filter(func (elem): \
@@ -158,6 +159,7 @@ func add_lures(lures :Array[CollectedCatchable]):
 			collected_lure.merge(lure)
 		else:
 			fishing_stats.catchables.append(lure)
+			SignalBus.new_lure_registered.emit(lure.catchable)
 		print(lure.catchable.name)
 
 
@@ -169,6 +171,9 @@ func remove_lure(lure :CollectedCatchable):
 	if collected_lure.amount > 0:
 		collected_lure.amount -= 1
 		fishing_stats.update_money(collected_lure.catchable.price)
+		if collected_lure.catchable == get_current_lure() and \
+			collected_lure.amount < 1:
+			set_current_lure(default_lure)
 		SignalBus.fish_selled.emit(collected_lure)
 
 
