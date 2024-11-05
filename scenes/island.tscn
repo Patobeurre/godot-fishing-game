@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://c2p8gphrnq8qi"]
+[gd_scene load_steps=31 format=3 uid="uid://c2p8gphrnq8qi"]
 
 [ext_resource type="Script" path="res://scripts/Global/SaveManager.gd" id="1_bdda1"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_kt14l"]
@@ -18,11 +18,13 @@
 [ext_resource type="PackedScene" uid="uid://bljwxjxf7scis" path="res://scenes/island_test_path.tscn" id="14_mu13i"]
 [ext_resource type="PackedScene" uid="uid://b3h8dbli33h2x" path="res://objects/Structures/test_house.tscn" id="15_wb0wr"]
 [ext_resource type="PackedScene" uid="uid://657bdl7aknok" path="res://objects/Decorations/mailbox.tscn" id="16_gbnfo"]
+[ext_resource type="PackedScene" uid="uid://2s07dga841f4" path="res://scenes/UI/MerchantMenu.tscn" id="16_mrvhy"]
 [ext_resource type="PackedScene" uid="uid://14nyo1d1mork" path="res://scenes/UI/Settings/settings_menu.tscn" id="16_t2ii6"]
 [ext_resource type="PackedScene" uid="uid://dpvpje0opov81" path="res://objects/Decorations/dock.tscn" id="17_hisp1"]
 [ext_resource type="AudioStream" uid="uid://dre45x7pkgmd0" path="res://sounds/ambient/nature_ocean_distant_waves_surf_light_breeze_trees_84763.mp3" id="17_ibg65"]
 [ext_resource type="PackedScene" uid="uid://cmpyaw5yxt3rj" path="res://objects/Structures/oil_tank_rigidbody.tscn" id="17_lq0ty"]
 [ext_resource type="PackedScene" uid="uid://dahpw84nqrsxd" path="res://objects/SmallIsland.tscn" id="20_2eoqe"]
+[ext_resource type="PackedScene" uid="uid://dv3vmywlgreuo" path="res://objects/Structures/merchant_boat.tscn" id="24_i5qoo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rmnfe"]
 albedo_color = Color(0.878036, 0.868155, 0.689148, 1)
@@ -147,6 +149,8 @@ visible = false
 
 [node name="Notifications" parent="." instance=ExtResource("12_c2lfr")]
 
+[node name="MerchantMenu" parent="." instance=ExtResource("16_mrvhy")]
+
 [node name="SettingsMenu" parent="." instance=ExtResource("16_t2ii6")]
 
 [node name="test_house" parent="." instance=ExtResource("15_wb0wr")]
@@ -171,3 +175,9 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 81.874
 
 [node name="SmallIsland" parent="." instance=ExtResource("20_2eoqe")]
 transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, -68, 0, -22)
+
+[node name="ShopSpawn" type="Node3D" parent="."]
+transform = Transform3D(0.313992, 0, -0.949425, 0, 1, 0, 0.949425, 0, 0.313992, 19.525, 0.436, -10.172)
+
+[node name="merchant_boat" parent="ShopSpawn" instance=ExtResource("24_i5qoo")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)

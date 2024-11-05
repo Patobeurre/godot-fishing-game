@@ -202,25 +202,25 @@ stretch_mode = 5
 [node name="FishCollection" type="Node2D" parent="HUD"]
 
 [node name="Book" type="Sprite2D" parent="HUD/FishCollection"]
-position = Vector2(60, 100)
-scale = Vector2(0.15, 0.15)
+position = Vector2(96, 160)
+scale = Vector2(0.24, 0.24)
 texture = ExtResource("18_ibvvf")
 
 [node name="Tab" type="Sprite2D" parent="HUD/FishCollection"]
-position = Vector2(100, 80)
-scale = Vector2(0.25, 0.25)
+position = Vector2(160, 128)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("19_tjo8l")
 
 [node name="IdentificationBook" type="Node2D" parent="HUD"]
 
 [node name="Livre" type="Sprite2D" parent="HUD/IdentificationBook"]
-position = Vector2(60, 200)
-scale = Vector2(0.15, 0.15)
+position = Vector2(96, 320)
+scale = Vector2(0.24, 0.24)
 texture = ExtResource("20_r8qkj")
 
 [node name="I" type="Sprite2D" parent="HUD/IdentificationBook"]
-position = Vector2(100, 170)
-scale = Vector2(0.3, 0.3)
+position = Vector2(160, 272)
+scale = Vector2(0.48, 0.48)
 texture = ExtResource("21_5um6n")
 
 [node name="InteractUI" type="Control" parent="."]
@@ -247,7 +247,7 @@ layout_mode = 2
 [node name="TextInteract" type="RichTextLabel" parent="InteractUI/CenterContainer/MarginContainer"]
 layout_mode = 2
 mouse_filter = 1
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 30
 text = "-E- interact"
 fit_content = true
 autowrap_mode = 0
