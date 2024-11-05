@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=5 format=3 uid="uid://bdnjdhsc78l1l"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_dk3gw"]
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_tjuyr"]
+[ext_resource type="Texture2D" uid="uid://bv0osyiq5ma72" path="res://sprites/Catchables/Fishes/ray.png" id="2_deg1j"]
+[ext_resource type="PackedScene" uid="uid://lv6xerrtm24p" path="res://objects/Catchables/Fishes/ray.tscn" id="4_2wujb"]
+
+[resource]
+script = ExtResource("1_dk3gw")
+id = 47
+name = "F_RAY_NAME"
+description = "F_RAY_DESCR"
+notification_text = ""
+category = ExtResource("1_tjuyr")
+tags = Array[int]([0, 2])
+image = ExtResource("2_deg1j")
+scene = ExtResource("4_2wujb")
+rarity = 30
+price = 41
+periods = Array[int]([0, 1])
+lures = Array[ExtResource("1_dk3gw")]([])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([4, 1])

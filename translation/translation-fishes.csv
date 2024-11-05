@@ -112,8 +112,9 @@ F_MUSKIE_NAME;Maskinongé;Muskie
 F_MUSKIE_DESCR;Un corps allongé.;An elongated body.
 F_MUSKIE_IDENT_DESCR;Ressemble fortement à [i]Helogale platyrhynchos[/i]. Se différencie par sa paire de nageoire supplémentaire.;Strongly resembles [i]Helogale platyrhynchos[/i]. Distinguished by its extra pair of fins.
 ;;
-;;
-;;
+F_RAY_NAME;Raie;Ray
+F_RAY_DESCR;;
+F_RAY_IDENT_DESCR;;
 ;;
 F_CORAL_NAME;Corail;Coral
 F_CORAL_DESCR;;
