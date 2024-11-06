@@ -1,7 +1,8 @@
 extends Node
 
 
-const rateOfTime : float = 100 / 60
+const NEW_DAY_TIME :float = 600
+const rateOfTime :float = 100 / 60
 
 var time_stats :TimeStats
 
@@ -18,7 +19,8 @@ func _physics_process(delta):
 	set_time_of_day(time_stats.time_of_day + rateOfTime * delta * 2)
 	
 	if time_stats.time_of_day > time_stats.MAX_TIME_RANGE:
-		time_stats.set_time_of_day(0.1)
+		time_stats.time_of_day = 0
+		time_stats.set_day_count(time_stats.day_count + 1)
 		Audio.play("sounds/gear_mechanism.ogg")
 
 

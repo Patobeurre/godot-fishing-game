@@ -69,7 +69,6 @@ func _on_body_entered(body: Node) -> void:
 	
 	if body.has_method("get_fish_table"):
 		current_area = body
-		if current_area.get_fish_table().type == FishingAreaRes.EAreaType.WATER:
-			init()
+		init()
 	else:
 		queue_free()
