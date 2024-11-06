@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv6df770xtu10"]
+
+[ext_resource type="PackedScene" uid="uid://cghdntosh8d55" path="res://models/Catchables/Fishes/hidden_fish.glb" id="1_t3qlx"]
+
+[node name="hidden_fish" instance=ExtResource("1_t3qlx")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 0.00417552, 0.0570245, 0)
+
+[node name="Plane_037" parent="." index="0"]
+transform = Transform3D(0.0431074, 0.0498612, -0.587608, 0.00558569, -0.589183, -0.0495851, 0.589693, 0.00193594, 0.0434246, 0, 0, 0)
+
+[node name="Plane_038" parent="." index="1"]
+transform = Transform3D(-0.0114872, 0.0868087, -0.120108, -0.0756797, 0.0372854, 0.0716344, 0.0446111, 0.0856053, 0.0905957, 0, 0, 0)
+
+[node name="Icosphere_023" parent="." index="3"]
+transform = Transform3D(-0.0727991, -6.3643e-09, 0.0498822, -7.71501e-09, 0.0882494, 0, 0.0498822, 4.36085e-09, 0.0727991, 0, 0, 0)
+
+[node name="Plane_042" parent="." index="5"]
+transform = Transform3D(-1.74846e-08, 0.4, 0, -0.4, -1.74846e-08, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="Plane_041" parent="." index="6"]
+transform = Transform3D(0.0114872, -0.0868087, 0.120108, -0.0756797, 0.0372854, 0.0716344, 0.0446111, 0.0856052, 0.0905957, 0, 0, 0)

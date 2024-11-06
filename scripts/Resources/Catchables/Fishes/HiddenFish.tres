@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_iew03"]
 [ext_resource type="Texture2D" uid="uid://sej7tapoqc4n" path="res://sprites/Catchables/Fishes/hiddenfish.png" id="2_u2rln"]
 [ext_resource type="Resource" uid="uid://ddepi6wvt10p6" path="res://scripts/Resources/Catchables/SeaWeed.tres" id="4_j08hj"]
-[ext_resource type="PackedScene" uid="uid://d2sf8bk5w6snk" path="res://objects/Catchables/Fishes/hidden_fish.tscn" id="5_plmvo"]
+[ext_resource type="PackedScene" uid="uid://bv6df770xtu10" path="res://objects/Catchables/Fishes/hidden_fish_v2.tscn" id="5_kpg3l"]
 
 [resource]
 script = ExtResource("1_84jei")
@@ -15,7 +15,7 @@ notification_text = ""
 category = ExtResource("1_iew03")
 tags = Array[int]([0, 1])
 image = ExtResource("2_u2rln")
-scene = ExtResource("5_plmvo")
+scene = ExtResource("5_kpg3l")
 rarity = 50
 price = 26
 periods = Array[int]([0, 1, 2, 3])
