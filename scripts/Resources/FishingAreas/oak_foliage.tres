@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=8 format=3 uid="uid://sr6j6sdqibtl"]
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=7 format=3 uid="uid://sr6j6sdqibtl"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_4h2rn"]
 [ext_resource type="Resource" uid="uid://b44dgc5i6q2u1" path="res://scripts/Resources/Catchables/Tree/Leaf.tres" id="1_qbl4j"]
@@ -6,7 +6,6 @@
 [ext_resource type="Resource" uid="uid://cx10cu2bnwcgp" path="res://scripts/Resources/Catchables/Tree/Squirel.tres" id="3_o8cuq"]
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="3_pbfsw"]
 [ext_resource type="Resource" uid="uid://cmy83gqx0obf7" path="res://scripts/Resources/Catchables/Birds/Owl.tres" id="4_kcoeo"]
-[ext_resource type="Resource" uid="uid://ot25y882xj1f" path="res://scripts/Resources/Catchables/Tree/Stick.tres" id="6_1hhjt"]
 
 [resource]
 script = ExtResource("3_pbfsw")
@@ -14,4 +13,4 @@ name = "FA_OAK_FOLIAGE"
 type = 0
 waiting_time = 3.0
 catchables = Array[ExtResource("1_4h2rn")]([ExtResource("1_qbl4j"), ExtResource("2_uc3ca"), ExtResource("3_o8cuq"), ExtResource("4_kcoeo")])
-default_catchables = Array[ExtResource("1_4h2rn")]([ExtResource("1_qbl4j"), ExtResource("6_1hhjt")])
+default_catchables = Array[ExtResource("1_4h2rn")]([ExtResource("1_qbl4j")])

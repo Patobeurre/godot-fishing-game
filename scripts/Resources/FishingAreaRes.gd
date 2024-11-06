@@ -4,7 +4,6 @@ class_name FishingAreaRes
 enum EAreaType {
 	NONE,
 	WATER,
-	
 }
 
 @export var name :String
@@ -13,32 +12,43 @@ enum EAreaType {
 @export var catchables: Array[CatchableRes]
 @export var default_catchables: Array[CatchableRes]
 
+var modifier :FishingAreaModifierRes = FishingAreaModifierRes.new()
 
-func pick_random(period :TimePeriod.ETimePeriod):
-	var rng = RandomNumberGenerator.new()
-	var randomNumber = rng.randi_range(0, 100)
-	var rarity = Rarity.get_rarity(randomNumber)
+
+func pick_catchable(
+		period :TimePeriod.ETimePeriod,
+		rarity :int,
+		lure :CatchableRes,
+		tag :CatchableRes.ELureTag,
+		allow_default :bool,
+		permissive_rarity :bool):
 	
-	var available_catchables = catchables.filter(func (catchable):
-		return catchable.periods.has(period))
+	var list := CatchableList.create(catchables)
 	
-	if available_catchables.is_empty():
-		available_catchables = default_catchables
+	if period != null:
+		list.filter_by_period(period)
+	if lure != null:
+		list.filter_by_lure(lure)
+	if tag != CatchableRes.ELureTag.NONE:
+		list.filter_by_tags(tag)
+	if rarity != null:
+		list.filter_by_rarity(rarity, permissive_rarity)
 	
-	if available_catchables.is_empty():
+	if list.is_empty():
+		if allow_default:
+			return default_catchables.pick_random()
 		return null
 	
-	var available_catchables_rarity = available_catchables.filter(func (catchable):
-		return catchable.rarity >= rarity)
-	available_catchables_rarity.sort_custom(func (a, b):
-		return a.rarity < b.rarity)
-	
-	if not available_catchables_rarity.is_empty():
-		available_catchables = available_catchables_rarity
-		var best_rarity_found = available_catchables.front().rarity
-		available_catchables = available_catchables.filter(func (catchable):
-			return catchable.rarity == best_rarity_found)
-		
-		if available_catchables.is_empty(): return null
-	
-	return available_catchables.pick_random()
+	return list.pick_random()
+
+
+func get_waiting_time() -> float:
+	return waiting_time * modifier.waiting_time_factor
+
+
+func get_rarity(min :int = 0, max :int = 100) -> int:
+	var rng = RandomNumberGenerator.new()
+	var randomNumber = rng.randi_range(min, max) * modifier.rarity_factor
+	if randomNumber < min:
+		randomNumber = min
+	return Rarity.get_rarity(randomNumber)

@@ -7,7 +7,9 @@ class_name CatchableArea
 @export var fishTable :FishingAreaRes
 @export var is_one_shot :bool = false
 @export var parent :CatchableArea
+
 var subFishingAreaEntered :CatchableArea
+var modifier : FishingAreaModifierRes = null
 
 
 func _ready():
@@ -37,6 +39,10 @@ func enter_sub_fishing_area(subArea :CatchableArea):
 func exit_sub_fishing_area(subArea :CatchableArea):
 	if subFishingAreaEntered == subArea:
 		subFishingAreaEntered = null
+
+
+func set_modifier(modifier :FishingAreaModifierRes):
+	fishTable.modifier = modifier
 
 
 func _remove_sub_area():

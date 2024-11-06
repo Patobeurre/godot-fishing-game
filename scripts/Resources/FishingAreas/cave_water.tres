@@ -1,15 +1,16 @@
-[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=6 format=3 uid="uid://bxj0i587fl3c6"]
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=7 format=3 uid="uid://bxj0i587fl3c6"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_is3we"]
 [ext_resource type="Resource" uid="uid://3ovutb4lao07" path="res://scripts/Resources/Catchables/Fishes/Anglerfish.tres" id="2_53j1g"]
 [ext_resource type="Resource" uid="uid://duoe66f700yxp" path="res://scripts/Resources/Catchables/Fishes/JellyFishTiny.tres" id="3_bomrq"]
-[ext_resource type="Resource" uid="uid://c1af81d13ra1f" path="res://scripts/Resources/Catchables/Fishes/Eel.tres" id="4_hg5tl"]
+[ext_resource type="Resource" uid="uid://cx5sdiudeae1t" path="res://scripts/Resources/Catchables/Fishes/MorayEel.tres" id="4_rfwp6"]
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="4_vbn1w"]
+[ext_resource type="Resource" uid="uid://b7skhevbmqmuu" path="res://scripts/Resources/Catchables/Pebble.tres" id="5_ne3ig"]
 
 [resource]
 script = ExtResource("4_vbn1w")
 name = "FA_CAVE_LAKE"
 type = 1
 waiting_time = 3.0
-catchables = Array[ExtResource("1_is3we")]([ExtResource("2_53j1g"), ExtResource("3_bomrq"), ExtResource("4_hg5tl")])
-default_catchables = Array[ExtResource("1_is3we")]([])
+catchables = Array[ExtResource("1_is3we")]([ExtResource("2_53j1g"), ExtResource("3_bomrq"), ExtResource("4_rfwp6")])
+default_catchables = Array[ExtResource("1_is3we")]([ExtResource("5_ne3ig")])

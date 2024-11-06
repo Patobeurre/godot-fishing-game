@@ -174,7 +174,6 @@ autoplay = true
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 81.8746, 0.0236204, 34.6458)
 
 [node name="CenterRotate" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="SmallIsland" parent="CenterRotate" node_paths=PackedStringArray("center_rotation") instance=ExtResource("20_2eoqe")]
 transform = Transform3D(-1.49012e-07, 0, 1, 0, 1, 0, -1, 0, -1.49012e-07, -62, 0, -19)

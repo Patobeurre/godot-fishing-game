@@ -3,8 +3,8 @@ class_name BasketRes
 
 
 @export var max_size :int = 5
-@export var frequency :float = 10.0
-@export var max_rarity :Rarity.ERarity = Rarity.ERarity.COMMON
+@export var time_interval :float = 10.0
+@export var min_rarity :Rarity.ERarity = Rarity.ERarity.COMMON
 
 @export var catchables :Array[CollectedCatchable] = []
 @export var fish_table :FishingAreaRes
@@ -17,36 +17,22 @@ func pick_catchable(period :TimePeriod.ETimePeriod):
 	if get_size() >= max_size:
 		return
 	
-	var rng = RandomNumberGenerator.new()
-	var randomNumber = rng.randi_range(max_rarity, 100)
-	var rarity = Rarity.get_rarity(randomNumber)
+	var current_period = TimeManager.get_time_period()
+	var rarity = fish_table.get_rarity(min_rarity)
 	
-	var available_catchables = fish_table.catchables.filter(func (catchable):
-		return catchable.periods.has(period))
-	
-	if available_catchables.is_empty():
-		available_catchables = fish_table.default_catchables
-	
-	if available_catchables.is_empty():
-		return null
-	
-	var available_catchables_rarity = available_catchables.filter(func (catchable):
-		return catchable.rarity >= rarity)
-	available_catchables_rarity.sort_custom(func (a, b):
-		return a.rarity < b.rarity)
-	
-	if not available_catchables_rarity.is_empty():
-		available_catchables = available_catchables_rarity
-		var best_rarity_found = available_catchables.front().rarity
-		available_catchables = available_catchables.filter(func (catchable):
-			return catchable.rarity == best_rarity_found)
-		
-		if available_catchables.is_empty(): return null
-	
-	return available_catchables.pick_random()
+	return fish_table.pick_catchable(
+		current_period,
+		rarity,
+		null,
+		CatchableRes.ELureTag.NONE,
+		true,
+		false)
 
 
 func add_new_catchable(period :TimePeriod.ETimePeriod):
+	if get_size() >= max_size:
+		return
+	
 	var picked_catchable = pick_catchable(period)
 	
 	if picked_catchable == null:

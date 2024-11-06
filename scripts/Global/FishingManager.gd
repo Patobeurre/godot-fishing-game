@@ -60,58 +60,22 @@ func on_minigame_ended(succeeded :bool):
 
 
 func get_waiting_time():
-	return current_catchable_area.get_fish_table().waiting_time
-
-
-func get_catchable_from_fishtable( \
-		fishTable: FishingAreaRes, \
-		current_period :TimePeriod.ETimePeriod):
-			
-	var rng = RandomNumberGenerator.new()
-	var randomNumber = rng.randi_range(0, 100)
-	var rarity = Rarity.get_rarity(randomNumber)
-	
-	print(rarity)
-	print(fishTable.catchables)
-	
-	var available_catchables = fishTable.catchables.filter(func (catchable):
-		print(catchable.periods)
-		return \
-			(catchable.lures.has(fishing_stats.current_lure) or \
-			fishing_stats.current_lure.tags.any(func (tag) :
-				return catchable.lure_tags.has(tag))) and \
-			catchable.periods.has(current_period))
-	
-	print(available_catchables)
-	
-	if available_catchables.is_empty():
-		available_catchables = fishTable.default_catchables
-	
-	if available_catchables.is_empty():
-		return
-	
-	var available_catchables_rarity = available_catchables.filter(func (catchable):
-		return catchable.rarity >= rarity)
-	available_catchables_rarity.sort_custom(func (a, b):
-		return a.rarity < b.rarity)
-	
-	if not available_catchables_rarity.is_empty():
-		available_catchables = available_catchables_rarity
-		var best_rarity_found = available_catchables.front().rarity
-		available_catchables = available_catchables.filter(func (catchable):
-			return catchable.rarity == best_rarity_found)
-		
-		if available_catchables.is_empty(): return
-	
-	return available_catchables.pick_random()
+	return current_catchable_area.get_fish_table().get_waiting_time()
 
 
 func pick_catchable(fishTable: FishingAreaRes):
 	print("pick catchable from " + fishTable.name)
 	picked_catchable = null
 	var current_period = TimeManager.get_time_period()
+	var rarity = fishTable.get_rarity()
 	
-	picked_catchable = get_catchable_from_fishtable(fishTable, current_period)
+	picked_catchable = fishTable.pick_catchable(
+		current_period,
+		rarity,
+		fishing_stats.current_lure,
+		CatchableRes.ELureTag.NONE,
+		true, 
+		true)
 	
 	print(picked_catchable.name)
 	picked_catchable_period = current_period
@@ -150,6 +114,7 @@ func add_lure(lure :CatchableRes):
 		collected_lure.update(fishing_stats.current_lure, current_catchable_area.get_fish_table(), picked_catchable_period)
 		fishing_stats.catchables.append(collected_lure)
 		SignalBus.new_lure_registered.emit(lure)
+	remove_lure(fishing_stats.get_catchable_by_res(fishing_stats.current_lure))
 
 
 func add_lures(lures :Array[CollectedCatchable]):

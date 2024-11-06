@@ -34,3 +34,10 @@ func contains(catchable :CatchableRes) -> bool:
 		if c.catchable == catchable:
 			return true
 	return false
+
+
+func get_catchable_by_res(catchable :CatchableRes) -> CollectedCatchable:
+	var collected_catchable = catchables.filter(func (c): c.catchable == catchable)
+	if not collected_catchable.is_empty():
+		return collected_catchable[0]
+	return null
