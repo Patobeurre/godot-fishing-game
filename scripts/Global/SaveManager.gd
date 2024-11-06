@@ -25,5 +25,6 @@ func _create_or_load_save() -> void:
 	MailManager.set_stats(save_game_res.mail_stats)
 	TimeManager.set_stats(save_game_res.time_stats)
 	FishingManager.set_stats(save_game_res.fishing_stats)
+	BasketManager.set_stats(save_game_res.basket_stats)
 	character.set_stats(save_game_res.character_stats)
 	SignalBus.savegame_loaded.emit()

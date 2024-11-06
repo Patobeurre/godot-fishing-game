@@ -13,6 +13,7 @@ signal catching_started
 signal catching_finished(bool)
 signal open_lure_collection()
 signal close_lure_collection()
+signal lure_added(CollectedCatchable)
 signal new_lure_registered(CatchableRes)
 signal cancel_fishing
 

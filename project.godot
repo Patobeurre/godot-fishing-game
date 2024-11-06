@@ -44,6 +44,7 @@ UiManager="*res://scripts/Global/UIManager.gd"
 TimeManager="*res://scripts/Global/TimeManager.gd"
 MailManager="*res://scripts/Global/MailManager.gd"
 ProgressVariables="*res://scripts/Global/ProgressVariables.gd"
+BasketManager="*res://scripts/Global/BasketManager.gd"
 
 [display]
 

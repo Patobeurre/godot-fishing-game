@@ -1,55 +1,67 @@
 extends RigidBody3D
+class_name Basket
 
 
+@onready var interact_body = $StaticBody3D
+@onready var interact_collision = $StaticBody3D/CollisionShape3D
 @onready var timer :Timer = $Timer
 
-var catchables :Array[CollectedCatchable] = []
+var basket_res :BasketRes = BasketRes.new()
 
 var current_area = null
 var is_activated = false
 
 
 func _ready() -> void:
-	pass
+	interact_body.interact_performed.connect(_on_interact)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func load_from_resource(res :BasketRes):
+	basket_res = res
+	global_position = res.position
+	global_rotation = res.rotation
+	is_activated = true
+
+
+func init():
+	basket_res.fish_table = current_area.get_fish_table()
+	basket_res.position = global_position
+	basket_res.rotation = global_rotation
+	BasketManager.register(basket_res)
+	is_activated = true
+
+
 func _process(delta: float) -> void:
 	if is_activated:
 		is_activated = false
 		timer.start()
 
 
-func contains(catchable :CatchableRes) -> bool:
-	for c in catchables:
-		if c.catchable == catchable:
-			return true
-	return false
-
-
-func add_lure(lure :CatchableRes, current_period :TimePeriod.ETimePeriod):
-	if contains(lure):
-		var collected_lure :CollectedCatchable = catchables.filter(func (elem):
-			return elem.catchable == lure)[0]
-		collected_lure.update(null, current_area.get_fish_table(), current_period)
-		collected_lure.amount += 1
-	else:
-		var collected_lure = CollectedCatchable.create(lure)
-		collected_lure.update(null, current_area.get_fish_table(), current_period)
-		catchables.append(collected_lure)
+func retreive_basket():
+	timer.stop()
+	is_activated = false
+	FishingManager.add_lures(basket_res.catchables.duplicate(true))
+	BasketManager.unregister(basket_res)
+	interact_body.interact_performed.disconnect(_on_interact)
+	interact_collision.disabled = true
+	queue_free()
 
 
 func _on_timer_timeout() -> void:
 	var current_period = TimeManager.get_time_period()
-	var catchable = current_area.get_fish_table().pick_random(current_period)
-	add_lure(catchable, current_period)
+	basket_res.add_new_catchable(current_period)
 	is_activated = true
 
 
 func pop_all() -> Array[CollectedCatchable]:
-	var collected_catchables = catchables.duplicate()
-	catchables.clear()
+	var collected_catchables = basket_res.catchables.duplicate()
+	basket_res.catchables.clear()
 	return collected_catchables
+
+
+func _on_interact() -> void:
+	retreive_basket()
+
 
 func _on_body_entered(body: Node) -> void:
 	linear_velocity = Vector3.ZERO
@@ -58,6 +70,6 @@ func _on_body_entered(body: Node) -> void:
 	if body.has_method("get_fish_table"):
 		current_area = body
 		if current_area.get_fish_table().type == FishingAreaRes.EAreaType.WATER:
-			is_activated = true
+			init()
 	else:
 		queue_free()

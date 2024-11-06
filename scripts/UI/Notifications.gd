@@ -13,7 +13,8 @@ var is_in_animation :bool = false
 
 
 func _ready():
-	SignalBus.new_lure_registered.connect(on_new_lure_registered)
+	SignalBus.new_lure_registered.connect(_on_new_lure_registered)
+	SignalBus.lure_added.connect(_on_lure_added)
 	catchable_notification.animation_finished.connect(_on_animation_finished)
 
 
@@ -36,6 +37,11 @@ func _on_animation_finished():
 	is_in_animation = false
 
 
-func on_new_lure_registered(catchable :CatchableRes):
+func _on_new_lure_registered(catchable :CatchableRes):
 	notification_queue.append(catchable)
-	
+
+
+func _on_lure_added(catchable :CollectedCatchable):
+	print(catchable.catchable.name)
+	print(catchable.amount)
+	pass

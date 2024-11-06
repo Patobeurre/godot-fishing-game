@@ -144,6 +144,7 @@ func add_lure(lure :CatchableRes):
 			return elem.catchable == lure)[0]
 		collected_lure.update(fishing_stats.current_lure, current_catchable_area.get_fish_table(), picked_catchable_period)
 		collected_lure.amount += 1
+		SignalBus.lure_added.emit(CollectedCatchable.create(lure))
 	else:
 		var collected_lure = CollectedCatchable.create(lure)
 		collected_lure.update(fishing_stats.current_lure, current_catchable_area.get_fish_table(), picked_catchable_period)
@@ -157,6 +158,7 @@ func add_lures(lures :Array[CollectedCatchable]):
 			var collected_lure :CollectedCatchable = fishing_stats.catchables.filter(func (elem): \
 			return elem.catchable == lure.catchable)[0]
 			collected_lure.merge(lure)
+			SignalBus.lure_added.emit(lure)
 		else:
 			fishing_stats.catchables.append(lure)
 			SignalBus.new_lure_registered.emit(lure.catchable)
