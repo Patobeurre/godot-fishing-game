@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="1_eojxp"]
 [ext_resource type="Texture2D" uid="uid://tcjd2507bn7q" path="res://sprites/Catchables/pebble.png" id="2_lpic7"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="3_ufkbl"]
-[ext_resource type="PackedScene" uid="uid://caf4mjdsb6omr" path="res://objects/Catchables/CatchablePlaceholder.tscn" id="4_aojrf"]
+[ext_resource type="PackedScene" uid="uid://bn713msd3ggec" path="res://objects/Catchables/peeble.tscn" id="5_iflsp"]
 
 [resource]
 script = ExtResource("1_d1lig")
@@ -15,7 +15,7 @@ notification_text = ""
 category = ExtResource("1_eojxp")
 tags = Array[int]([])
 image = ExtResource("2_lpic7")
-scene = ExtResource("4_aojrf")
+scene = ExtResource("5_iflsp")
 rarity = 50
 price = 0
 periods = Array[int]([0, 1, 2, 3])

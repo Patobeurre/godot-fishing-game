@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn713msd3ggec"]
+
+[ext_resource type="PackedScene" uid="uid://dqgj5dcnskyv6" path="res://models/Catchables/peeble.glb" id="1_ydlur"]
+
+[node name="peeble" instance=ExtResource("1_ydlur")]
+
+[node name="pebble" parent="." index="0"]
+transform = Transform3D(0.166297, 0.0257244, -0.104856, -0.0310855, 0.137616, 0.0196006, 0.106673, 0, 0.169177, -0.00722229, -0.0332934, 0.00271583)
