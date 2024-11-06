@@ -32,12 +32,10 @@ func populate_grid():
 		grid_container.remove_child(node)
 	
 	var lure_collection = FishingManager.get_collected_catchables()
-	#lure_collection = lure_collection.filter(func (elem):
-	#	return elem.tags.has(CatchableRes.ELureTag.FISH))
 	
 	for lure in lure_collection:
 		var item = catchable_item_container.instantiate() as CatchableItem
-		item.set_catchable(lure.catchable)
+		item.set_catchable(lure)
 		item.pressed.connect(on_change_selected_lure.bind(item))
 		grid_container.add_child(item)
 		
@@ -50,7 +48,7 @@ func on_change_selected_lure(item :CatchableItem):
 	selected_lure.set_selected(false)
 	selected_lure = item
 	selected_lure.set_selected(true)
-	FishingManager.set_current_lure(selected_lure.catchable)
+	FishingManager.set_current_lure(selected_lure.catchable.catchable)
 
 
 func _on_activate():

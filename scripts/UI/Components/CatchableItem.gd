@@ -2,34 +2,32 @@ extends Button
 class_name CatchableItem
 
 
-@onready var texture_rect :TextureRect = $MarginContainer/VBoxContainer/TextureRect
-@onready var label :Label = $MarginContainer/VBoxContainer/Label
+@onready var texture_rect :TextureRect = $MarginContainer/TextureRect
+@onready var name_label := $MarginContainer2/NameLabel
+@onready var amount_label := $MarginContainer/TextureRect/AmountLabel
 @onready var background_texture_selected :TextureRect = $TextureRectSelected
 
-var catchable :CatchableRes
+var catchable :CollectedCatchable
 var is_selected :bool = false
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	custom_minimum_size = Vector2(200, 200)
 	update()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-func set_catchable(lure :CatchableRes):
+func set_catchable(lure :CollectedCatchable):
 	catchable = lure
+
 
 func set_selected(selected :bool):
 	is_selected = selected
 	update()
-	
+
 
 func update():
-	label.text = catchable.name
-	texture_rect.texture = catchable.image
+	name_label.text = catchable.catchable.name
+	texture_rect.texture = catchable.catchable.image
+	amount_label.text = "x" + str(catchable.amount)
 	disabled = is_selected
 	background_texture_selected.visible = is_selected

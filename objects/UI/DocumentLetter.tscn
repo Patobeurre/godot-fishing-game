@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://b6qea5cm4ewui"]
 
+[ext_resource type="Theme" uid="uid://bbhf8pjialv1y" path="res://themes/Handwrite_foont_theme.tres" id="1_ek6xe"]
 [ext_resource type="Script" path="res://scripts/UI/Components/document_letter.gd" id="1_fudbq"]
 [ext_resource type="Texture2D" uid="uid://d2odgxvvgxhvc" path="res://sprites/UI/letter_background.png" id="2_uvtn4"]
-[ext_resource type="FontFile" uid="uid://bap0e5iqwtj5k" path="res://fonts/Handanidemo.ttf" id="3_w8i47"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1jsuk"]
 
@@ -18,6 +18,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("1_ek6xe")
 script = ExtResource("1_fudbq")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
@@ -45,8 +46,6 @@ theme_override_constants/separation = 50
 [node name="Header" type="RichTextLabel" parent="PanelContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("3_w8i47")
-theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
 text = "Header"
 fit_content = true
@@ -55,8 +54,6 @@ fit_content = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("3_w8i47")
-theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
 text = "Body"
 fit_content = true
@@ -67,8 +64,6 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("3_w8i47")
-theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
 text = "Footer"
 fit_content = true
