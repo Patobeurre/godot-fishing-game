@@ -34,7 +34,7 @@ func init():
 func _process(delta: float) -> void:
 	if is_activated:
 		is_activated = false
-		timer.start()
+		timer.start(basket_res.time_interval)
 
 
 func retreive_basket():
