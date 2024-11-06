@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://fcjbcit80olj"]
+
+[ext_resource type="PackedScene" uid="uid://cov4tayr3dlwv" path="res://models/Catchables/Fishes/ray_variant.glb" id="1_vxckm"]
+
+[node name="ray_variant" instance=ExtResource("1_vxckm")]
+
+[node name="ray_variant_merged" parent="." index="0"]
+transform = Transform3D(0.0020214, -0.0338014, -0.0212927, 0.0232549, -0.0163398, 0.0281464, -0.0324827, -0.0138014, 0.0188255, -0.105131, -0.360661, -0.0836879)
