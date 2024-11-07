@@ -17,7 +17,7 @@ func spawn_basket(type :BasketTypeRes.EBasketType):
 		return
 	basket_res.set_available(false)
 	
-	var basket = controller.basket_scene.instantiate()
+	var basket = basket_res.basket_type_res.scene.instantiate()
 	get_tree().root.add_child(basket)
 	basket.set_res(basket_res)
 	
@@ -36,7 +36,6 @@ func on_process(delta):
 	pass
 
 
-# Called every physics frame when this state is active.
 func on_physics_process(delta):
 	pass
 
@@ -53,10 +52,9 @@ func handle_hotkey_inputs():
 	if Input.is_action_just_pressed("hotkey1"):
 		if BasketManager.has_available_baskets(BasketTypeRes.EBasketType.SIMPLE):
 			spawn_basket(BasketTypeRes.EBasketType.SIMPLE)
-		else:
-			pass
-			#FishingManager.add_lures(basket.pop_all())
-			#basket.queue_free()
+	if Input.is_action_just_pressed("hotkey2"):
+		if BasketManager.has_available_baskets(BasketTypeRes.EBasketType.MEDIUM):
+			spawn_basket(BasketTypeRes.EBasketType.MEDIUM)
 
 
 # Called when the state machine exits this state.

@@ -64,7 +64,6 @@ var footstep_sounds_path :String = ""
 
 @onready var bobber_scene = preload("res://objects/bobber.tscn")
 var bobber = null
-@onready var basket_scene = preload("res://objects/basket.tscn")
 
 @onready var fishing_sm: FiniteStateMachine = $FishingStateMachine
 @onready var default_fishing_state: StateMachineState = $DefaultFishingState

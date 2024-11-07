@@ -1,0 +1,129 @@
+[gd_scene load_steps=13 format=3 uid="uid://dbcx1cd8ip7yu"]
+
+[ext_resource type="PackedScene" uid="uid://crx04463dftqv" path="res://models/basket_medium.glb" id="1_4jfeu"]
+[ext_resource type="Script" path="res://scripts/basket.gd" id="2_hndqe"]
+[ext_resource type="Script" path="res://scripts/Interactable.gd" id="3_gupcc"]
+[ext_resource type="Shader" uid="uid://c52n5cpdlsqf2" path="res://materials/bilboard.tres" id="4_8xjf1"]
+[ext_resource type="Texture2D" uid="uid://b0lrujkw80knu" path="res://sprites/catch_texture.png" id="5_jh7ml"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7h64s"]
+size = Vector3(0.745605, 0.0828857, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5d7x7"]
+points = PackedVector3Array(1, 1, 0.521336, 0.999804, 0.450049, 0.528944, 1, 0.899922, 0.522549, 1, 0.899922, 0.395314, 0.980619, 1, 0.200381, -1, 1, 0.521336, 0.999804, 0.100063, 0.531369, -1, 0.450049, 0.528944, 1, -0.850009, 0.522549, 1, -0.850009, 0.395314, 0.980619, -0.95487, 0.200271, 0.923845, -0.95487, 0.0149308, 0.923845, 1, 0.0151514, -0.980814, 1, 0.200381, -1, 0.899922, 0.395314, 0.999804, -0.0499583, 0.531369, -1, 0.100063, 0.531369, 1, -0.95487, 0.521226, 0.999804, -0.399944, 0.528944, 0.831441, -0.95487, -0.155966, 0.831441, 1, -0.155635, -0.924041, -0.95487, 0.0149308, -0.980814, -0.95487, 0.200271, -0.924041, 1, 0.0151514, -1, -0.850009, 0.395314, -1, -0.0499583, 0.531369, -1, -0.95487, 0.521226, -1, -0.399944, 0.528944, 0.70693, -0.95487, -0.305693, 0.70693, 1, -0.305252, -0.831637, -0.95487, -0.155966, -0.831637, 1, -0.155635, 0.555403, -0.95487, -0.428518, 0.555403, 1, -0.428187, -0.707126, -0.95487, -0.305693, -0.707126, 1, -0.305252, 0.382537, -0.95487, -0.51981, 0.382537, 1, -0.519369, -0.555599, 1, -0.428187, -0.555599, -0.95487, -0.428518, 0.194988, -0.95487, -0.576041, 0.194988, 1, -0.5756, -0.382733, -0.95487, -0.51981, -0.382733, 1, -0.519369, 0, -0.95487, -0.595005, 0, 1, -0.594564, -0.195184, -0.95487, -0.576041, -0.195184, 1, -0.5756)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_khw4a"]
+render_priority = 0
+shader = ExtResource("4_8xjf1")
+shader_parameter/Texture2DParameter = ExtResource("5_jh7ml")
+
+[sub_resource type="QuadMesh" id="QuadMesh_t0ptr"]
+lightmap_size_hint = Vector2i(4, 3)
+size = Vector2(0.5, 0.25)
+
+[sub_resource type="Animation" id="Animation_fcuif"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Billboard:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Billboard")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, -0.000317127, 0)
+
+[sub_resource type="Animation" id="Animation_dc0ey"]
+resource_name = "billboard"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Billboard")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.000317127, 0, 0.2, 1, 0, 0.257561, 0)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Billboard:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n5cj3"]
+_data = {
+"RESET": SubResource("Animation_fcuif"),
+"billboard": SubResource("Animation_dc0ey")
+}
+
+[node name="basket_medium" instance=ExtResource("1_4jfeu")]
+collision_layer = 256
+collision_mask = 4113
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("2_hndqe")
+
+[node name="Cylinder_013" parent="." index="0"]
+transform = Transform3D(-1.68289e-08, 0.5, -1.68289e-08, 0, -2.18557e-08, -0.385, -0.385, -2.18557e-08, 7.35614e-16, 0, 0, 1.19209e-07)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00512695, 0.115478, 0)
+shape = SubResource("BoxShape3D_7h64s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2"]
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("3_gupcc")
+interact_text = "Pick up"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(-1.68289e-08, 0.5, -1.68289e-08, 0, -2.18557e-08, -0.385, -0.385, -2.18557e-08, 7.35614e-16, 0, 0, 1.19209e-07)
+shape = SubResource("ConvexPolygonShape3D_5d7x7")
+
+[node name="Billboard" type="Node3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.000317127, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Billboard" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.324538, 0)
+layers = 4
+material_override = SubResource("ShaderMaterial_khw4a")
+mesh = SubResource("QuadMesh_t0ptr")
+skeleton = NodePath("../..")
+
+[node name="SpotLight3D" type="OmniLight3D" parent="Billboard" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.137399, 0.250565)
+layers = 4
+light_energy = 0.5
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+light_cull_mask = 4293918724
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
+libraries = {
+"": SubResource("AnimationLibrary_n5cj3")
+}
+
+[node name="Timer" type="Timer" parent="." index="5"]
+wait_time = 2.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

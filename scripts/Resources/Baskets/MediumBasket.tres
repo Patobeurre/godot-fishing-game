@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BasketTypeRes" load_steps=3 format=3 uid="uid://bblnvk56gee6"]
+
+[ext_resource type="PackedScene" uid="uid://dbcx1cd8ip7yu" path="res://objects/Baskets/basket_medium.tscn" id="1_qckyu"]
+[ext_resource type="Script" path="res://scripts/Resources/Baskets/basket_type_res.gd" id="1_vjsfb"]
+
+[resource]
+script = ExtResource("1_vjsfb")
+scene = ExtResource("1_qckyu")
+name = "B_MEDIUM_NAME"
+description = "B_MEDIUM_DESCR"
+price = 500
+type = 1
+max_size = 8
+time_interval = 10.0
+min_rarity = 30

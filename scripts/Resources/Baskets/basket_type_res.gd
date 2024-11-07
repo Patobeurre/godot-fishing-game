@@ -10,6 +10,7 @@ enum EBasketType {
 }
 
 @export var image :Texture2D
+@export var scene :PackedScene
 @export var name :String
 @export var description :String
 @export var price :int

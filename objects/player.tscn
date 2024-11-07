@@ -225,13 +225,8 @@ scale = Vector2(0.48, 0.48)
 texture = ExtResource("21_5um6n")
 
 [node name="HotkeyBar" parent="HUD" instance=ExtResource("23_qs3ip")]
-layout_mode = 0
-anchors_preset = 0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
+layout_mode = 1
+offset_top = -100.0
 
 [node name="InteractUI" type="Control" parent="."]
 visible = false

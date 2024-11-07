@@ -1,8 +1,6 @@
 extends Node
 
 
-@onready var basket_scene = preload("res://objects/basket.tscn")
-
 var basket_stats :BasketStats
 
 signal basket_added(BasketRes)
@@ -48,7 +46,7 @@ func has_available_baskets(type :BasketTypeRes.EBasketType) -> bool:
 
 func _instantiate_registered_baskets():
 	for res :BasketRes in basket_stats.get_registered_baskets():
-		var basket_node = basket_scene.instantiate()
+		var basket_node = res.basket_type_res.scene.instantiate()
 		add_child(basket_node)
 		basket_node.load_from_resource(res)
 
