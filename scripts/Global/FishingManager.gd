@@ -77,7 +77,6 @@ func pick_catchable(fishTable: FishingAreaRes):
 		true, 
 		true)
 	
-	print(picked_catchable.name)
 	picked_catchable_period = current_period
 
 
@@ -131,6 +130,9 @@ func add_lures(lures :Array[CollectedCatchable]):
 
 
 func remove_lure(lure :CollectedCatchable):
+	if lure.catchable == default_lure:
+		return
+	
 	var idx = fishing_stats.catchables.find(lure)
 	if idx < 0: return
 	

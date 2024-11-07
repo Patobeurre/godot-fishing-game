@@ -25,9 +25,15 @@ func set_selected(selected :bool):
 	update()
 
 
+func _update_amount_text():
+	amount_label.text = ""
+	if catchable.amount > 1:
+		amount_label.text = "x" + str(catchable.amount)
+
+
 func update():
 	name_label.text = catchable.catchable.name
 	texture_rect.texture = catchable.catchable.image
-	amount_label.text = "x" + str(catchable.amount)
+	_update_amount_text()
 	disabled = is_selected
 	background_texture_selected.visible = is_selected

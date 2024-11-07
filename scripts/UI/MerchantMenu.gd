@@ -6,6 +6,7 @@ extends MainUI
 @onready var sell_menu_btn = $MarginContainer/VSplitContainer/HSplitContainer/SellMenuTab
 @onready var buy_menu_btn = $MarginContainer/VSplitContainer/HSplitContainer/BuyMenuTab
 @onready var sell_fish_entry_scene = preload("res://objects/UI/SellFishEntry.tscn")
+@onready var buy_basket_entry_scene = preload("res://objects/UI/BuyBasketEntry.tscn")
 
 var is_sell_menu_visible :bool = true
 
@@ -23,10 +24,14 @@ func _on_process(delta: float) -> void:
 func _sell_fish(collected_catchable :CollectedCatchable):
 	FishingManager.remove_lure(collected_catchable)
 
+func _buy_basket(basket :BasketTypeRes):
+	if FishingManager.fishing_stats.try_pay(basket.price):
+		BasketManager.add_new_basket(basket)
+
 
 func _clear_entries():
 	for fish_entry in container.get_children():
-		fish_entry.btn_sell_pressed.disconnect(_sell_fish)
+		#fish_entry.btn_sell_pressed.disconnect(_sell_fish)
 		container.remove_child(fish_entry)
 
 
@@ -34,6 +39,11 @@ func display_buy_menu():
 	is_sell_menu_visible = false
 	
 	_clear_entries()
+	
+	var basket_entry = buy_basket_entry_scene.instantiate()
+	container.add_child(basket_entry)
+	basket_entry.btn_buy_basket_pressed.connect(_buy_basket)
+	basket_entry.init(preload("res://scripts/Resources/Baskets/SimpleBasket.tres"))
 
 
 func display_sell_menu():

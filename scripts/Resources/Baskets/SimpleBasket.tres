@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BasketTypeRes" load_steps=3 format=3 uid="uid://bgtvhe3m28kdr"]
+
+[ext_resource type="Texture2D" uid="uid://dnwkudatwj6u5" path="res://sprites/simple_basket.png" id="1_1y0mi"]
+[ext_resource type="Script" path="res://scripts/Resources/Baskets/basket_type_res.gd" id="1_2ahbg"]
+
+[resource]
+script = ExtResource("1_2ahbg")
+image = ExtResource("1_1y0mi")
+name = "B_SIMPLE_NAME"
+description = "B_SIMPLE_DESCR"
+price = 100
+type = 0
+max_size = 5
+time_interval = 15.0
+min_rarity = 50

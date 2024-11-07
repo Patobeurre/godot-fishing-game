@@ -4,9 +4,11 @@ class_name Basket
 
 @onready var interact_body = $StaticBody3D
 @onready var interact_collision = $StaticBody3D/CollisionShape3D
+@onready var billboard = $Billboard
+@onready var animation_player :AnimationPlayer = $AnimationPlayer
 @onready var timer :Timer = $Timer
 
-var basket_res :BasketRes = BasketRes.new()
+var basket_res :BasketRes = null
 
 var current_area = null
 var is_activated = false
@@ -14,6 +16,7 @@ var is_activated = false
 
 func _ready() -> void:
 	interact_body.interact_performed.connect(_on_interact)
+	billboard.visible = false
 
 
 func load_from_resource(res :BasketRes):
@@ -34,7 +37,7 @@ func init():
 func _process(delta: float) -> void:
 	if is_activated:
 		is_activated = false
-		timer.start(basket_res.time_interval)
+		timer.start(basket_res.basket_type_res.time_interval)
 
 
 func retreive_basket():
@@ -49,14 +52,20 @@ func retreive_basket():
 
 func _on_timer_timeout() -> void:
 	var current_period = TimeManager.get_time_period()
-	basket_res.add_new_catchable(current_period)
-	is_activated = true
+	if not basket_res.is_full():
+		basket_res.add_new_catchable(current_period)
+		animation_player.play("billboard")
+		is_activated = true
 
 
 func pop_all() -> Array[CollectedCatchable]:
 	var collected_catchables = basket_res.catchables.duplicate()
 	basket_res.catchables.clear()
 	return collected_catchables
+
+
+func set_res(res :BasketRes):
+	basket_res = res
 
 
 func _on_interact() -> void:

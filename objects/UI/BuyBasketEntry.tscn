@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://e13xdcwcibc3"]
+
+[ext_resource type="Script" path="res://objects/UI/buy_basket_entry.gd" id="1_dwjb2"]
+[ext_resource type="Texture2D" uid="uid://dnwkudatwj6u5" path="res://sprites/simple_basket.png" id="1_npr3k"]
+
+[node name="PanelContainer" type="PanelContainer"]
+custom_minimum_size = Vector2(0, 200)
+script = ExtResource("1_dwjb2")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ImageTexture" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_npr3k")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="NameLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "SIMPLE BASKET"
+fit_content = true
+autowrap_mode = 0
+
+[node name="DescriptionLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "Catch common fishes"
+fit_content = true
+autowrap_mode = 0
+
+[node name="QuantityPosessedLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "X 2"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+
+[node name="BtnBuy" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 40
+action_mode = 0
+text = "BUY"
+icon_alignment = 2
+
+[node name="DisabledPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 2
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/BtnBuy" to="." method="_on_btn_buy_pressed"]

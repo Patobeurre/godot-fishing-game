@@ -4,7 +4,6 @@ extends StateMachineState
 @export var basket_speed :float = 5.0
 
 @onready var controller = get_parent()
-var basket = null
 
 
 func on_enter():
@@ -12,9 +11,15 @@ func on_enter():
 	FishingManager.reset()
 
 
-func spawn_basket():
-	basket = controller.basket_scene.instantiate()
+func spawn_basket(type :BasketTypeRes.EBasketType):
+	var basket_res = BasketManager.pick_available_basket(type)
+	if basket_res == null:
+		return
+	basket_res.set_available(false)
+	
+	var basket = controller.basket_scene.instantiate()
 	get_tree().root.add_child(basket)
+	basket.set_res(basket_res)
 	
 	if controller.raycast.is_colliding():
 		controller.hook_spawner.look_at(controller.raycast.get_collision_point())
@@ -46,10 +51,11 @@ func on_input(event: InputEvent):
 
 func handle_hotkey_inputs():
 	if Input.is_action_just_pressed("hotkey1"):
-		if basket == null:
-			spawn_basket()
+		if BasketManager.has_available_baskets(BasketTypeRes.EBasketType.SIMPLE):
+			spawn_basket(BasketTypeRes.EBasketType.SIMPLE)
 		else:
-			FishingManager.add_lures(basket.pop_all())
+			pass
+			#FishingManager.add_lures(basket.pop_all())
 			#basket.queue_free()
 
 

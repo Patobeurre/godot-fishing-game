@@ -5,15 +5,29 @@ extends Node
 
 var basket_stats :BasketStats
 
+signal basket_added(BasketRes)
+
 
 func _ready() -> void:
 	SignalBus.savegame_loaded.connect(_on_savegame_loaded)
 
 
+func add_new_basket(basket_type :BasketTypeRes):
+	var basket_res = BasketRes.new()
+	basket_res.basket_type_res = basket_type
+	basket_stats.add_basket(basket_res)
+	basket_added.emit(basket_res)
+
+
+func pick_available_basket(type :BasketTypeRes.EBasketType):
+	var picked_basket = basket_stats.get_available_baskets(type).pick_random()
+	return picked_basket
+
+
 func register(basket :BasketRes):
-	if basket_stats.baskets.has(basket):
+	if not basket_stats.baskets.has(basket):
 		return
-	basket_stats.baskets.append(basket)
+	basket.set_registered(true)
 	SignalBus.save_requested.emit()
 
 
@@ -22,15 +36,26 @@ func unregister(basket :BasketRes):
 	if idx < 0: 
 		print("basket not found")
 		return
-	basket_stats.baskets.remove_at(idx)
+	basket.clear_catchables()
+	basket.set_registered(false)
+	basket.set_available(true)
 	SignalBus.save_requested.emit()
 
 
-func _on_savegame_loaded():
-	for res :BasketRes in basket_stats.baskets:
+func has_available_baskets(type :BasketTypeRes.EBasketType) -> bool:
+	return not basket_stats.get_available_baskets(type).is_empty()
+
+
+func _instantiate_registered_baskets():
+	for res :BasketRes in basket_stats.get_registered_baskets():
 		var basket_node = basket_scene.instantiate()
 		add_child(basket_node)
 		basket_node.load_from_resource(res)
+
+
+func _on_savegame_loaded():
+	basket_stats.recheck_available_baskets()
+	_instantiate_registered_baskets()
 
 
 func set_stats(stats :BasketStats):
