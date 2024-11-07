@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_s4gue"]
 [ext_resource type="Script" path="res://scripts/SealedDoorSM/default_state.gd" id="5_yrlca"]
 [ext_resource type="Script" path="res://scripts/SealedDoorSM/dragged_state.gd" id="6_41i7l"]
-[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/state_machine_state.gd" id="7_rgqup"]
+[ext_resource type="Script" path="res://scripts/UI/passing_time_state.gd" id="8_ndvdc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nksjp"]
 size = Vector2(143, 49.9997)
@@ -105,7 +105,7 @@ script = ExtResource("5_yrlca")
 script = ExtResource("6_41i7l")
 
 [node name="PassingTimeState" type="Node" parent="."]
-script = ExtResource("7_rgqup")
+script = ExtResource("8_ndvdc")
 
 [connection signal="gui_input" from="ClickOutside" to="." method="_on_click_outside_gui_input"]
 [connection signal="button_down" from="CenterContainer/VBoxContainer/btnDawn" to="." method="_on_btn_dawn_button_down"]

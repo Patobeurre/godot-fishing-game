@@ -37,6 +37,21 @@ func _on_process(delta):
 		not is_preventing_input:
 		UiManager.close(unique_id)
 
+func animate_time_passing():
+	var anim_duration = (hand.rotation_degrees - min_rotation) / 360
+	anim_duration *= max_anim_duration
+	
+	var tween := get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_LINEAR)
+	tween.tween_property(hand_current_time, "rotation_degrees", hand.rotation_degrees, anim_duration)
+	tween.play()
+	
+	await tween.finished
+	
+	var new_time = fmod((hand.rotation_degrees) - 90, 360) / 360 * 2400
+	print(new_time)
+	TimeManager.set_time_of_day(new_time)
+	UiManager.close(unique_id)
+
 
 func _on_input(event):
 	if Input.is_action_just_released("ui_cancel"):
@@ -106,22 +121,6 @@ func _on_btn_dawn_button_down():
 
 func _on_btn_night_button_down():
 	TimeManager.set_time_of_day(TimePeriod.to_value(TimePeriod.ETimePeriod.NIGHT))
-
-
-func animate_time_passing():
-	var anim_duration = (hand.rotation_degrees - min_rotation) / 360
-	anim_duration *= max_anim_duration
-	
-	var tween := get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_LINEAR)
-	tween.tween_property(hand_current_time, "rotation_degrees", hand.rotation_degrees, anim_duration)
-	tween.play()
-	
-	await tween.finished
-	
-	var new_time = fmod((hand.rotation_degrees) - 90, 360) / 360 * 2400
-	print(new_time)
-	TimeManager.set_time_of_day(new_time)
-	UiManager.close(unique_id)
 
 
 func _on_button_pressed() -> void:
