@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dl2ed4gkybggf"]
+[gd_scene load_steps=27 format=3 uid="uid://dl2ed4gkybggf"]
 
 [ext_resource type="Script" path="res://scripts/player_stair_test.gd" id="1_awcpd"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_fg077"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://dc4jgdvefokog" path="res://sprites/UI/TAB.png" id="19_tjo8l"]
 [ext_resource type="Texture2D" uid="uid://xkew2pa6s43u" path="res://sprites/UI/livre.png" id="20_r8qkj"]
 [ext_resource type="Texture2D" uid="uid://cggdw3uay3xls" path="res://sprites/UI/I.png" id="21_5um6n"]
+[ext_resource type="PackedScene" uid="uid://djup3hpi0f343" path="res://objects/UI/hotkey_bar.tscn" id="23_qs3ip"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
 radius = 0.3
@@ -91,7 +92,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.292484, -0.165401, -0.24084
 [node name="RayCastInteract" type="RayCast3D" parent="Body/Head/Camera"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 target_position = Vector3(0, -2, 0)
-collision_mask = 32
+collision_mask = 49
 
 [node name="Foot" type="Node3D" parent="Body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.55, 0)
@@ -222,6 +223,15 @@ texture = ExtResource("20_r8qkj")
 position = Vector2(160, 272)
 scale = Vector2(0.48, 0.48)
 texture = ExtResource("21_5um6n")
+
+[node name="HotkeyBar" parent="HUD" instance=ExtResource("23_qs3ip")]
+layout_mode = 0
+anchors_preset = 0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="InteractUI" type="Control" parent="."]
 visible = false
