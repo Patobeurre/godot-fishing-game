@@ -17,9 +17,9 @@ var input_mouse :Vector2 = Vector2.ZERO
 var bar_counter :int
 var is_win = false
 var is_click_performed :bool = false
+var is_started :bool = false
 
 
-# Called when the state machine enters this state.
 func on_enter():
 	controller = get_parent()
 	stats = CatchableRes.get_minigame_difficulty(controller.catchable.rarity)
@@ -33,6 +33,7 @@ func init():
 	controller.cursor.position.x = controller.bar_container.position.x
 	score = stats.max_score
 	_spawn_dots()
+	is_started = true
 
 
 func _spawn_dots():
@@ -46,8 +47,9 @@ func _spawn_dots():
 		dot.init(stats.dot_speed, stats.dot_speed_offset)
 
 
-# Called every frame when this state is active.
 func on_process(delta :float):
+	if not is_started:
+		return
 	
 	check_win()
 	
@@ -120,4 +122,4 @@ func on_input(event: InputEvent):
 
 # Called when the state machine exits this state.
 func on_exit():
-	pass
+	is_started = false

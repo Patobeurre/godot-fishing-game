@@ -55,6 +55,7 @@ func load_minigame():
 	else:
 		minigame_sm.set_current_state(moving_cursor_state)
 
+
 func _on_activate():
 	SignalBus.enable_player_camera.emit(false)
 	SignalBus.enable_player_fishing.emit(false)
@@ -72,7 +73,6 @@ func _on_deactivate():
 func _on_area_2d_area_entered(area):
 	is_cursor_inside_area = true
 	areas_cursor_is_in.append(area)
-	
 
 
 func _on_area_2d_area_exited(area):

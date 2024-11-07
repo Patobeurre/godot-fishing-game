@@ -52,16 +52,16 @@ func on_process(delta):
 	
 	check_win()
 	
-	if Input.is_action_pressed("shoot"):
-		if controller.is_cursor_inside_area:
-			score += stats.acceleration_rate * delta
-			audio_player.stream_paused = false
-		else:
-			score -= stats.miss_deceleration_rate * delta
-			audio_player.stream_paused = true
+	#if Input.is_action_pressed("shoot"):
+	if controller.is_cursor_inside_area:
+		score += stats.acceleration_rate * delta
+		audio_player.stream_paused = false
 	else:
-		score -= stats.deceleration_rate * delta
+		score -= stats.miss_deceleration_rate * delta
 		audio_player.stream_paused = true
+	#else:
+	#	score -= stats.deceleration_rate * delta
+	#	audio_player.stream_paused = true
 	
 	bar.modulate.a = score / stats.max_score
 
