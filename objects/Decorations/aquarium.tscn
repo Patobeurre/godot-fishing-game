@@ -302,6 +302,7 @@ script = ExtResource("2_mnper")
 
 [node name="hidden_fish2" parent="Catchables/HiddenFish" index="0" instance=ExtResource("51_w6eau")]
 transform = Transform3D(0.216499, 3.26904e-08, 0.207673, 4.52987e-08, -0.3, -4.72542e-16, 0.207673, 3.13578e-08, -0.216499, -0.249265, -0.403031, 0.117588)
+visible = false
 script = ExtResource("5_wlgjx")
 catchable = ExtResource("52_kde51")
 
