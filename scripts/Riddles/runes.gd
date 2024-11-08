@@ -5,6 +5,7 @@ extends StaticBody3D
 @export var angle :float = 180
 @export var group_name = "Rune"
 @export var is_up :bool = false
+@export var matching_value :int = 0
 
 
 func _ready() -> void:

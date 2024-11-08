@@ -13,9 +13,10 @@ transform = Transform3D(30, 5.24537e-06, 1.31134e-06, 1.31134e-06, -2.5034e-05, 
 [node name="StaticBody3D" parent="a" index="0"]
 collision_layer = 512
 script = ExtResource("3_3ssvm")
+matching_value = 1
 
 [node name="base_bottom" parent="." index="1"]
-transform = Transform3D(49.9998, -86.6027, 2.98023e-06, -2.98023e-06, 0, -100, -86.6027, -49.9998, 1.19209e-05, -2.89503e-08, -8.47033e-22, 0)
+transform = Transform3D(49.9998, -86.6027, -3.78552e-06, 0, 4.37114e-06, -100, -86.6027, -49.9998, -2.18556e-06, -2.89503e-08, -8.47033e-22, 0)
 
 [node name="StaticBody3D" parent="base_bottom" index="0"]
 collision_layer = 512
@@ -30,29 +31,33 @@ transform = Transform3D(-15, -25.9808, 3.57628e-06, 1.78814e-06, -3.57628e-06, -
 [node name="StaticBody3D" parent="c" index="0"]
 collision_layer = 512
 script = ExtResource("3_3ssvm")
+matching_value = 3
 
 [node name="b" parent="." index="3"]
-transform = Transform3D(-15, 25.9808, -2.68221e-06, 2.68221e-06, 0, -30, -25.9808, -15, 0, -2.98023e-08, -7.10543e-15, -5.96046e-08)
+transform = Transform3D(15, -25.9808, 5.95267e-08, -1.37087e-06, -2.27131e-06, 30, -25.9808, -15, 8.19277e-14, -2.98023e-08, -7.10543e-15, -5.96046e-08)
 
 [node name="StaticBody3D" parent="b" index="0"]
 collision_layer = 512
 script = ExtResource("3_3ssvm")
+matching_value = 2
 
 [node name="1" parent="." index="4"]
-transform = Transform3D(15, 25.9808, -5.36442e-06, -5.36442e-06, 7.15256e-06, 30, 25.9808, -15, 7.15256e-06, -3.51104e-08, -1.9516e-14, 0)
+transform = Transform3D(-15, 25.9808, -1.14992e-05, 6.67576e-06, -9.42387e-06, -30, -25.9808, -15, 1.06944e-06, -3.51104e-08, -1.9516e-14, 0)
 
 [node name="StaticBody3D" parent="1" index="0"]
 collision_layer = 512
 script = ExtResource("3_3ssvm")
 is_up = true
+matching_value = 1
 
 [node name="3" parent="." index="5"]
-transform = Transform3D(-30, -4.52987e-06, 2.61165e-06, 2.61164e-06, 2.14577e-05, 30, -4.52987e-06, 30, -2.5034e-05, -5.86313e-08, -1.0516e-14, 0)
+transform = Transform3D(15, 25.9808, -2.29859e-05, 2.61164e-06, 2.14577e-05, 30, 25.9808, -15, 1.02552e-05, -5.86313e-08, -1.0516e-14, 0)
 
 [node name="StaticBody3D" parent="3" index="0"]
 collision_layer = 512
 script = ExtResource("3_3ssvm")
 is_up = true
+matching_value = 3
 
 [node name="base_top" parent="." index="6"]
 transform = Transform3D(100, -0.000181993, 1.30766e-05, -1.30766e-05, -3.57628e-05, 100, 0.000181993, 100, 3.57628e-05, -3.46843e-08, -1.76214e-14, 0)
@@ -66,12 +71,13 @@ group_name = "Base"
 is_up = true
 
 [node name="2" parent="." index="7"]
-transform = Transform3D(15, -25.9808, 2.86102e-05, 0, 3.21865e-05, 30, -25.9808, -15, 1.60933e-05, -3.32477e-08, 3.41056e-15, 0)
+transform = Transform3D(-30, 1.43051e-05, -3.67891e-07, 6.24185e-13, 3.21865e-05, 30, 1.43051e-05, 30, -3.28238e-05, -3.32477e-08, 3.41056e-15, 0)
 
 [node name="StaticBody3D" parent="2" index="0"]
 collision_layer = 512
 script = ExtResource("3_3ssvm")
 is_up = true
+matching_value = 2
 
 [node name="Camera3D" type="Camera3D" parent="." index="8"]
 transform = Transform3D(1, 0, 0, 0, 0.990624, 0.136615, 0, -0.136615, 0.990624, 0, 0.351868, 3)

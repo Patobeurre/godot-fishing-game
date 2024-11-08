@@ -13,13 +13,18 @@ extends Node3D
 @onready var rune_3 = $"3"
 @onready var base_top = $base_top
 
-var lower_runes :Array = [$a, $b, $c]
-var upper_runes :Array = [$"1", $"2", $"3"]
+var upper_runes :Array = [$"3", $b, $"2"]
+var lower_runes :Array = [$a, $"1", $c]
 
 var is_rotating :bool = false
+var is_completed :bool = false
 
 
 func _ready() -> void:
+	_reparent_runes()
+
+
+func _reparent_runes():
 	for rune in lower_runes:
 		rune.reparent(base_bottom)
 	for rune in upper_runes:
@@ -29,12 +34,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if is_rotating: return
 	
+	if check_completion():
+		return #is_completed = true
+	
 	if Input.is_action_just_released("mouse_left"):
 		var intersection = raycast_at_mouse_position(512)
 		if intersection.has("collider"):
 			var collider = intersection["collider"]
 			if collider.is_in_group("Base"):
-				collider.perform_rotation()
+				_reparent_runes()
+				#collider.perform_rotation()
+				animation_rotation_base(collider.get_parent())
 				if collider.is_up:
 					upper_runes = cycle(1, upper_runes)
 				else:
@@ -48,8 +58,26 @@ func _process(delta: float) -> void:
 				animation_rotation_runes(idx)
 
 
+func animation_rotation_base(base :Node3D):
+	is_rotating = true
+	
+	var target_rotation = base.transform.basis.get_euler()
+	print(target_rotation)
+	target_rotation.y += deg_to_rad(60)
+	print(target_rotation)
+	
+	var tween := get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_CUBIC)
+	tween.tween_property(base, "basis", target_rotation, 0.5)
+	tween.play()
+	
+	await tween.finished
+	
+	is_rotating = false
+
+
 func animation_rotation_runes(idx :int):
 	if is_rotating: return
+	if idx != 1: return
 	
 	is_rotating = true
 	
@@ -67,6 +95,7 @@ func animation_rotation_runes(idx :int):
 	lower_runes[idx].reparent(base_bottom)
 	
 	is_rotating = false
+
 
 func raycast_at_mouse_position(mask :int = 255):
 	var mouse_pos = camera.get_viewport().get_mouse_position()
@@ -86,3 +115,41 @@ func cycle(times : int, arr : Array) -> Array:
 	for i in arr.size():
 		temp_arr[(i + times) % arr.size()] = arr[i]
 	return temp_arr
+
+
+func check_completion() -> bool:
+	for i in range(upper_runes.size()):
+		if upper_runes[i].find_child("StaticBody3D").matching_value != lower_runes[i].find_child("StaticBody3D").matching_value:
+			return false
+	return true
+
+
+
+
+
+func test_tween(idx :int):
+	if is_rotating: return
+	if idx != 1: return
+	
+	is_rotating = true
+	
+	var target_rotation = rotation_tmp_node.global_rotation
+	target_rotation.z += deg_to_rad(180)
+	
+	upper_runes[idx].reparent(rotation_tmp_node)
+	lower_runes[idx].reparent(rotation_tmp_node)
+	
+	var tween := get_tree().create_tween().bind_node(rotation_tmp_node).set_trans(Tween.TRANS_CUBIC)
+	tween.tween_property(rotation_tmp_node, "global_rotation", target_rotation, 0.5)
+	tween.play()
+	
+	await tween.finished
+	
+	var tmp = upper_runes[idx]
+	upper_runes[idx] = lower_runes[idx]
+	lower_runes[idx] = tmp
+	
+	upper_runes[idx].reparent(base_top)
+	lower_runes[idx].reparent(base_bottom)
+	
+	is_rotating = false
