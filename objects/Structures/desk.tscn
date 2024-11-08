@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://ug82iwvm6vr"]
+[gd_scene load_steps=11 format=3 uid="uid://ug82iwvm6vr"]
 
-[ext_resource type="PackedScene" uid="uid://b2vkut58qg3jf" path="res://models/Decorations/desk.glb" id="1_fehh8"]
+[ext_resource type="PackedScene" uid="uid://cf2vdkl28dunc" path="res://models/Decorations/desk.glb" id="1_fehh8"]
 [ext_resource type="Script" path="res://scripts/Interactable.gd" id="2_6fflh"]
 [ext_resource type="Script" path="res://scripts/desk.gd" id="2_phekl"]
 [ext_resource type="PackedScene" uid="uid://bj3p382eqnc25" path="res://objects/identification_book.tscn" id="4_imch5"]
+[ext_resource type="Script" path="res://scripts/SealedDoorSM/sealed_door_symbol.gd" id="5_peeyc"]
+[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="6_igiv4"]
+[ext_resource type="Script" path="res://scripts/SealedDoorSM/default_state.gd" id="7_85rmj"]
+[ext_resource type="Script" path="res://scripts/SealedDoorSM/dragged_state.gd" id="8_tusxu"]
+[ext_resource type="Script" path="res://scripts/SealedDoorSM/completed_state.gd" id="9_1hmjc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u5ir3"]
+size = Vector3(0.329132, 2.37158, 2.11719)
 
 [node name="desk" instance=ExtResource("1_fehh8")]
 script = ExtResource("2_phekl")
@@ -12,7 +20,6 @@ script = ExtResource("2_phekl")
 layers = 1025
 
 [node name="StaticBody3D" parent="Cube_022" index="0"]
-collision_layer = 1057
 collision_mask = 33
 script = ExtResource("2_6fflh")
 interact_text = "View documents"
@@ -20,18 +27,59 @@ interact_text = "View documents"
 [node name="Cube_127" parent="." index="2"]
 layers = 1025
 
-[node name="StaticBody3D" parent="Cube_128" index="0"]
-script = ExtResource("2_6fflh")
-interact_text = "Open"
+[node name="Cube_128" parent="." index="3"]
+layers = 1025
 
-[node name="CollisionShape3D" parent="Cube_128/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999997, -0.184814, 0, 0)
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_128" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 1.13687e-13, 0, 1, 0, 0, 0)
+collision_layer = 1057
+script = ExtResource("2_6fflh")
+interact_text = "Drawer"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_128/StaticBody3D" index="0"]
+transform = Transform3D(1.00003, 0, 1.76783e-11, 0, 1, 0, -4.43379e-12, 0, 0.999997, 0.00642371, -0.116455, 0.034178)
+shape = SubResource("BoxShape3D_u5ir3")
 
 [node name="identification_book" parent="Cube_128" index="1" instance=ExtResource("4_imch5")]
-transform = Transform3D(-0.195901, 0, -2.6581, 0, 6, 0, 2.39199, 0, -0.217695, -0.0374725, -0.273, 0)
+transform = Transform3D(-0.195901, 0, -2.6581, 0, 6, 0, 2.39199, 0, -0.217695, 0.865163, -0.273, 9.53674e-07)
+
+[node name="Cube_168" parent="." index="4"]
+layers = 1025
 
 [node name="Cube_077" parent="." index="5"]
 layers = 1025
 
 [node name="Cube_125" parent="." index="7"]
 layers = 1025
+
+[node name="Cylinder_014" parent="." index="8"]
+transform = Transform3D(3.0598e-09, 0.007, -6.1196e-09, 0.07, -3.0598e-10, 0, -2.67496e-16, -6.1196e-10, -0.07, 0.318149, 0.398772, 0.85506)
+layers = 1025
+
+[node name="StaticBody3D" parent="Cylinder_014" index="0"]
+collision_layer = 512
+script = ExtResource("5_peeyc")
+custom_modifier = -1.0
+
+[node name="Cylinder_015" parent="." index="9"]
+transform = Transform3D(-3.0598e-09, 0.007, 0, -0.07, -3.0598e-10, 0, 0, 0, 0.07, 0.318149, 0.398772, 0.71506)
+layers = 1025
+
+[node name="StaticBody3D" parent="Cylinder_015" index="0"]
+collision_layer = 512
+script = ExtResource("5_peeyc")
+
+[node name="Camera3D" type="Camera3D" parent="." index="10"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.51659, 0.397395, 0.784513)
+
+[node name="FiniteStateMachine" type="Node" parent="." index="11"]
+script = ExtResource("6_igiv4")
+
+[node name="DefaultState" type="Node" parent="." index="12"]
+script = ExtResource("7_85rmj")
+
+[node name="DraggedState" type="Node" parent="." index="13"]
+script = ExtResource("8_tusxu")
+
+[node name="CompletedState" type="Node" parent="." index="14"]
+script = ExtResource("9_1hmjc")

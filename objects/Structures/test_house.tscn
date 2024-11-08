@@ -57,17 +57,16 @@ visible = false
 collision_layer = 65
 metadata/footstep_sounds = "res://sounds/walking_wood.ogg"
 
-[node name="SpotLight3D" type="SpotLight3D" parent="." index="16"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2.56797, 0)
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="16"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2.28748, 0)
 light_color = Color(1, 0.968179, 0.628576, 1)
+light_energy = 0.5
 light_indirect_energy = 0.0
 light_specular = 0.0
 light_bake_mode = 1
 light_cull_mask = 4293919744
 shadow_enabled = true
-spot_range = 10.0
-spot_angle = 114.65
-spot_angle_attenuation = 1.51572
+omni_range = 10.0
 
 [node name="bed" parent="." index="17" instance=ExtResource("2_fchod")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -2.01171, 0.310571, 2.58952)
@@ -80,7 +79,7 @@ mass = 80.0
 transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, 2.36388, 1.77737, 3.34916)
 
 [node name="desk" parent="." index="20" instance=ExtResource("5_o7upv")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.62193, 0.183799, 3.19002)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 1.62193, 0.391024, 2.7883)
 
 [node name="FishingGear" parent="." index="21" instance=ExtResource("6_w6ikm")]
 transform = Transform3D(0.353526, 0, -0.484788, 0, 0.6, 0, 0.484788, 0, 0.353526, 3.20427, 0.30923, -3.17496)

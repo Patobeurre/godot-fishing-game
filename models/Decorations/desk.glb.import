@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b2vkut58qg3jf"
+uid="uid://cf2vdkl28dunc"
 path="res://.godot/imported/desk.glb-3aa4f0a8408aab904a180a1952723b76.scn"
 
 [deps]
@@ -35,42 +35,54 @@ _subresources={
 "nodes": {
 "PATH:Cube_022": {
 "generate/physics": true,
-"physics/layer": 1025,
-"physics/shape_type": 3
+"physics/layer": 1057,
+"physics/shape_type": 1
 },
 "PATH:Cube_077": {
 "generate/physics": true,
 "physics/layer": 1025,
-"physics/shape_type": 3
+"physics/shape_type": 1
 },
 "PATH:Cube_078": {
 "generate/physics": true,
-"mesh_instance/layers": 1025,
 "physics/layer": 1025,
-"physics/shape_type": 3
+"physics/shape_type": 1
 },
 "PATH:Cube_092": {
 "generate/physics": true,
-"mesh_instance/layers": 1025,
 "physics/layer": 1025,
-"physics/shape_type": 3
+"physics/shape_type": 1
 },
 "PATH:Cube_125": {
 "generate/physics": true,
 "physics/layer": 1025,
-"physics/shape_type": 3
+"physics/shape_type": 1
 },
 "PATH:Cube_127": {
 "generate/physics": true,
 "physics/layer": 1025,
-"physics/shape_type": 3
+"physics/shape_type": 1
 },
 "PATH:Cube_128": {
-"generate/physics": true,
-"mesh_instance/layers": 1025,
 "physics/layer": 1056,
+"physics/shape_type": 1
+},
+"PATH:Cube_168": {
+"generate/physics": true,
+"physics/layer": 1025,
+"physics/shape_type": 1
+},
+"PATH:Cylinder_014": {
+"generate/physics": true,
+"physics/layer": 1536,
 "physics/mask": 0,
-"physics/shape_type": 2
+"physics/shape_type": 1
+},
+"PATH:Cylinder_015": {
+"generate/physics": true,
+"physics/layer": 1536,
+"physics/mask": 0,
+"physics/shape_type": 1
 }
 }
 }
