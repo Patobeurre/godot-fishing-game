@@ -27,11 +27,14 @@ func _update():
 	image.texture = basket_res.image
 	name_label.text = tr(basket_res.name)
 	description_label.text = tr(basket_res.description)
-	quantity_label.text = "X ?"
+	_update_quantity_label()
 	buy_btn.text = str(basket_res.price)
 	buy_btn.icon = preload("res://sprites/coins.png")
 	_update_buy_btn()
 
+
+func _update_quantity_label():
+	quantity_label.text = "X " + str(BasketManager.count_basket_type(basket_res.type))
 
 func _update_buy_btn() -> void:
 	buy_btn.disabled = FishingManager.fishing_stats.money < basket_res.price

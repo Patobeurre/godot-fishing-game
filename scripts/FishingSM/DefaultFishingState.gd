@@ -5,6 +5,8 @@ extends StateMachineState
 
 @onready var controller = get_parent()
 
+var is_preventing_input :bool = false
+
 
 func on_enter():
 	print("default state")
@@ -12,6 +14,7 @@ func on_enter():
 
 
 func spawn_basket(type :BasketTypeRes.EBasketType):
+	print("spawn basket")
 	var basket_res = BasketManager.pick_available_basket(type)
 	if basket_res == null:
 		return
@@ -42,20 +45,25 @@ func on_physics_process(delta):
 
 # Called when there is an input event while this state is active.
 func on_input(event: InputEvent):
-	handle_hotkey_inputs()
+	handle_hotkey_inputs(event)
 	
 	if Input.is_action_just_pressed("shoot"):
 		controller.fishing_sm.set_current_state(controller.fire_fishing_state)
 
 
-func handle_hotkey_inputs():
-	if Input.is_action_just_pressed("hotkey1"):
+func handle_hotkey_inputs(event: InputEvent):
+	if is_preventing_input:
+		return
+	is_preventing_input = true
+	
+	if event.is_action_pressed("hotkey1"):
 		if BasketManager.has_available_baskets(BasketTypeRes.EBasketType.SIMPLE):
 			spawn_basket(BasketTypeRes.EBasketType.SIMPLE)
-	if Input.is_action_just_pressed("hotkey2"):
+	if event.is_action_pressed("hotkey2"):
 		if BasketManager.has_available_baskets(BasketTypeRes.EBasketType.MEDIUM):
 			spawn_basket(BasketTypeRes.EBasketType.MEDIUM)
-
+	
+	is_preventing_input = false
 
 # Called when the state machine exits this state.
 func on_exit():

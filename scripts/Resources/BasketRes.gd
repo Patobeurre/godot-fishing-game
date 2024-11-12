@@ -73,6 +73,8 @@ func contains(catchable :CatchableRes) -> bool:
 
 func set_available(available :bool):
 	is_available = available
+	SignalBus.basket_available.emit(available)
+
 
 func set_registered(registered :bool):
 	is_registered = registered

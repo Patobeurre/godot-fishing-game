@@ -113,7 +113,7 @@ func add_lure(lure :CatchableRes):
 		collected_lure.update(fishing_stats.current_lure, current_catchable_area.get_fish_table(), picked_catchable_period)
 		fishing_stats.catchables.append(collected_lure)
 		SignalBus.new_lure_registered.emit(lure)
-	remove_lure(fishing_stats.get_catchable_by_res(fishing_stats.current_lure))
+	#remove_lure(fishing_stats.get_catchable_by_res(fishing_stats.current_lure))
 
 
 func add_lures(lures :Array[CollectedCatchable]):

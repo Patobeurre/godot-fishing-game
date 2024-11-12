@@ -2,16 +2,13 @@
 
 [ext_resource type="Script" path="res://scripts/UI/Components/hotkey_bar.gd" id="1_i257c"]
 [ext_resource type="Texture2D" uid="uid://d0vhrkrd8i2uf" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-default.png" id="1_oamcy"]
-[ext_resource type="Texture2D" uid="uid://lkseiwb1yb1a" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-double.png" id="2_u2dof"]
-[ext_resource type="Texture2D" uid="uid://dnwkudatwj6u5" path="res://sprites/simple_basket.png" id="3_u2yj1"]
+[ext_resource type="PackedScene" uid="uid://bqs1313ryotje" path="res://objects/UI/Hotbar_item.tscn" id="3_3r575"]
+[ext_resource type="Resource" uid="uid://bgtvhe3m28kdr" path="res://scripts/Resources/Baskets/SimpleBasket.tres" id="4_23t0w"]
+[ext_resource type="Resource" uid="uid://bblnvk56gee6" path="res://scripts/Resources/Baskets/MediumBasket.tres" id="5_o7oln"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_livm4"]
 atlas = ExtResource("1_oamcy")
 region = Rect2(384, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0p3cf"]
-atlas = ExtResource("2_u2dof")
-region = Rect2(768, 128, 128, 128)
 
 [node name="HotkeyBar" type="CenterContainer"]
 anchors_preset = 12
@@ -39,49 +36,12 @@ theme_override_constants/margin_bottom = 100
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 150
 
-[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer"]
+[node name="SimpleBasket" parent="MarginContainer/HBoxContainer" instance=ExtResource("3_3r575")]
 layout_mode = 2
+basket_res = ExtResource("4_23t0w")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("AtlasTexture_0p3cf")
-
-[node name="TextureRect2" type="TextureRect" parent="MarginContainer/HBoxContainer/Panel"]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 3
-texture = ExtResource("3_u2yj1")
-expand_mode = 2
-stretch_mode = 4
-
-[node name="AmountLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/Panel/TextureRect2"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -45.0
-offset_top = -55.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/normal_font_size = 40
-bbcode_enabled = true
-text = "x2"
-fit_content = true
-autowrap_mode = 0
+[node name="MediumBasket" parent="MarginContainer/HBoxContainer" instance=ExtResource("3_3r575")]
+layout_mode = 2
+basket_res = ExtResource("5_o7oln")

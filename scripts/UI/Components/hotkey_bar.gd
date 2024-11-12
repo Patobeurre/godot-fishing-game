@@ -1,12 +1,9 @@
 extends CenterContainer
 
 
-@onready var amount_label = $MarginContainer/HBoxContainer/Panel/TextureRect2/AmountLabel
+@onready var container := $MarginContainer/HBoxContainer
+@onready var hotbar_item_scene = preload("res://objects/UI/Hotbar_item.tscn")
 
 
 func _ready() -> void:
-	BasketManager.basket_added.connect(_on_basket_added)
-
-
-func _on_basket_added(basket :BasketRes):
 	pass

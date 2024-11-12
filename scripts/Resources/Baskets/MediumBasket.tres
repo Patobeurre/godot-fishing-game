@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="BasketTypeRes" load_steps=3 format=3 uid="uid://bblnvk56gee6"]
+[gd_resource type="Resource" script_class="BasketTypeRes" load_steps=4 format=3 uid="uid://bblnvk56gee6"]
 
+[ext_resource type="Texture2D" uid="uid://n3t0m4sgabe3" path="res://sprites/medium_basket.png" id="1_necw4"]
 [ext_resource type="PackedScene" uid="uid://dbcx1cd8ip7yu" path="res://objects/Baskets/basket_medium.tscn" id="1_qckyu"]
 [ext_resource type="Script" path="res://scripts/Resources/Baskets/basket_type_res.gd" id="1_vjsfb"]
 
 [resource]
 script = ExtResource("1_vjsfb")
+image = ExtResource("1_necw4")
 scene = ExtResource("1_qckyu")
 name = "B_MEDIUM_NAME"
 description = "B_MEDIUM_DESCR"

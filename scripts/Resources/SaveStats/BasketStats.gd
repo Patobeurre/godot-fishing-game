@@ -17,6 +17,19 @@ func get_available_baskets(type) -> Array[BasketRes]:
 			b.basket_type_res.type == type)
 
 
+func count_basket_type(type) -> int:
+	return baskets.filter(func (b) :
+		return b.basket_type_res.type == type).size()
+
+
+func get_basket_types() -> Array[BasketTypeRes.EBasketType]:
+	var types :Array[BasketTypeRes.EBasketType] = []
+	for basket in baskets:
+		if not types.has(basket.basket_type_res.type):
+			types.append(basket.basket_type_res.type)
+	return types
+
+
 func get_registered_baskets() -> Array[BasketRes]:
 	return baskets.filter(func (b) :
 		return b.is_registered == true)
