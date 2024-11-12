@@ -4,16 +4,19 @@ extends Node3D
 @onready var desk_body = $Cube_022/StaticBody3D
 @onready var drawer_body = $Cube_128/StaticBody3D
 @onready var drawer_mesh = $Cube_128
+@onready var left_symbol = $Cylinder_014
+@onready var right_symbol = $Cylinder_015
 @onready var drawer_camera = $Camera3D
 
 @onready var state_machine := $FiniteStateMachine
+@onready var inactive_state := $InactiveState
 @onready var default_state := $DefaultState
 @onready var dragged_state := $DraggedState
 @onready var completed_state := $CompletedState
 
 var drawer_pos_offset :float = 0.4
 var is_drawer_opened :bool = false
-var is_interacting :bool = false
+var is_animated :bool = false
 
 var initial_intersection :Dictionary = {}
 var current_angle :float = 0.0
@@ -21,12 +24,16 @@ var current_angle :float = 0.0
 
 func _ready() -> void:
 	SignalBus.savegame_loaded.connect(_on_savegame_loaded)
+	SignalBus.end_interaction.connect(_set_inactive)
 	desk_body.interact_performed.connect(interact_desk)
 	drawer_body.interact_performed.connect(interact_drawer)
-	state_machine.set_current_state(default_state)
+	_set_inactive()
 
 
 func start_dragging():
+	if completed_state.is_current_state():
+		return
+	
 	initial_intersection = raycast_at_mouse_position(512)
 	if initial_intersection.has("collider"):
 		if initial_intersection["collider"].is_in_group("Symbol"):
@@ -34,27 +41,32 @@ func start_dragging():
 
 
 func stop_dragging():
-	if _check_completion():
-		state_machine.set_current_state(completed_state)
-		on_completed()
-	else:
+	if not completed_state.is_current_state():
 		state_machine.set_current_state(default_state)
 
 
-func on_completed():
-	$Cylinder_014.reparent(drawer_mesh)
-	$Cylinder_015.reparent(drawer_mesh)
+func end_rotation():
+	if completed_state.is_current_state():
+		return
 	
-	ProgressVariables.update_progress_variable("drawer_riddle_completed", true)
+	initial_intersection["collider"].lock_rotation(current_angle)
+	if _check_completion():
+		state_machine.set_current_state(completed_state)
+		on_completed()
+
+
+func on_completed():
+	_place_completed_symbols()
+	
+	#ProgressVariables.update_progress_variable("drawer_riddle_completed", true)
 	SignalBus.end_camera_interaction.emit()
 	anim_open_drawer()
 
 
-func end_rotation():
-	initial_intersection["collider"].lock_rotation(current_angle)
-
-
 func drag_to_new_rotation():
+	if completed_state.is_current_state():
+		return
+	
 	var intersection = raycast_at_mouse_position(1)
 	
 	var center_3d = initial_intersection["collider"].global_position
@@ -97,9 +109,9 @@ func raycast_at_mouse_position(mask :int = 255):
 
 
 func anim_open_drawer():
-	if is_interacting: return
+	if is_animated: return
 	
-	is_interacting = true
+	is_animated = true
 	var target_pos :Vector3 = drawer_mesh.position
 	
 	if is_drawer_opened:
@@ -116,12 +128,14 @@ func anim_open_drawer():
 	await tween.finished
 	
 	is_drawer_opened = not is_drawer_opened
-	is_interacting = false
+	is_animated = false
 
 
 func _check_completion() -> bool:
-	var a :int = abs(rad_to_deg($Cylinder_014.rotation.x))
-	var b :int = abs(rad_to_deg($Cylinder_015.rotation.x))
+	var a :int = abs(rad_to_deg(left_symbol.rotation.x))
+	var b :int = abs(rad_to_deg(right_symbol.rotation.x))
+	print(a)
+	print(b)
 	
 	if a <= 175 or a >= 185:
 		return false
@@ -129,6 +143,18 @@ func _check_completion() -> bool:
 		return false
 	
 	return true
+
+
+func _set_inactive():
+	if not completed_state.is_current_state():
+		state_machine.set_current_state(inactive_state)
+
+
+func _place_completed_symbols():
+	left_symbol.rotation.x = deg_to_rad(180)
+	right_symbol.rotation.x = deg_to_rad(180)
+	left_symbol.reparent(drawer_mesh)
+	right_symbol.reparent(drawer_mesh)
 
 
 func interact_desk():
@@ -140,15 +166,13 @@ func interact_drawer():
 		anim_open_drawer()
 	else:
 		SignalBus.interact_request.emit(drawer_camera)
+		state_machine.set_current_state(default_state)
 
 
 func _on_savegame_loaded():
 	if ProgressVariables.check_variable("drawer_riddle_completed", true):
 		state_machine.set_current_state(completed_state)
 		
-		$Cylinder_014.rotate_x(deg_to_rad(180))
-		$Cylinder_015.rotate_x(deg_to_rad(180))
-		$Cylinder_014.reparent(drawer_mesh)
-		$Cylinder_015.reparent(drawer_mesh)
+		_place_completed_symbols()
 		
 		drawer_body.interact_text = "Open"

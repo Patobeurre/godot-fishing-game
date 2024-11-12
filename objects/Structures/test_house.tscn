@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b3h8dbli33h2x"]
+[gd_scene load_steps=9 format=3 uid="uid://b3h8dbli33h2x"]
 
 [ext_resource type="PackedScene" uid="uid://d311niu0yc017" path="res://models/Structures/test_house.glb" id="1_btod8"]
 [ext_resource type="PackedScene" uid="uid://jpcqna82x0yo" path="res://objects/Structures/bed.tscn" id="2_fchod"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ug82iwvm6vr" path="res://objects/Structures/desk.tscn" id="5_o7upv"]
 [ext_resource type="PackedScene" uid="uid://c7ypwv6eb2jgw" path="res://objects/FishingGear.tscn" id="6_w6ikm"]
 [ext_resource type="PackedScene" uid="uid://dlkks82dwpwbt" path="res://objects/Decorations/aquarium.tscn" id="7_6fh1t"]
+[ext_resource type="PackedScene" uid="uid://snu48fhdllig" path="res://objects/Riddles/sunflowers/sunflower_frame.tscn" id="8_e3rwx"]
 
 [node name="test_house" instance=ExtResource("1_btod8")]
 
@@ -86,3 +87,6 @@ transform = Transform3D(0.353526, 0, -0.484788, 0, 0.6, 0, 0.484788, 0, 0.353526
 
 [node name="aquarium" parent="." index="22" instance=ExtResource("7_6fh1t")]
 transform = Transform3D(-3.49691e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.49691e-08, -1.14323, 1.16538, -2.78619)
+
+[node name="sunflower_frame" parent="." index="23" instance=ExtResource("8_e3rwx")]
+transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 1.77371, 1.30004, -3.28703)

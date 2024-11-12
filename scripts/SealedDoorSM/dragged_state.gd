@@ -12,7 +12,7 @@ func on_enter() -> void:
 
 # Called every frame when this state is active.
 func on_process(delta: float) -> void:
-	if not Input.is_action_pressed("mouse_left"):
+	if Input.is_action_just_released("mouse_left"):
 		controller.stop_dragging()
 
 

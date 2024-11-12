@@ -2,6 +2,7 @@ extends StaticBody3D
 
 
 @export var custom_modifier :float = 1
+@export var clamp_angle :float = 10
 
 var parent_node
 var initial_rotation :Vector3
@@ -15,7 +16,7 @@ func _ready() -> void:
 
 
 func lock_rotation(angle :float):
-	angle = snapped(angle, deg_to_rad(10.0))
+	angle = snapped(angle, deg_to_rad(clamp_angle))
 	apply_rotation(angle)
 	initial_rotation = parent_node.rotation
 

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7pr5m83m6wc8"]
+
+[ext_resource type="PackedScene" uid="uid://65mgvmh4h2o5" path="res://models/Decorations/flower_pots/potB.glb" id="1_vwg87"]
+[ext_resource type="PackedScene" uid="uid://b74gnc1bpv6cg" path="res://objects/Decorations/SunflowerPots/sunflower.tscn" id="2_yu4rl"]
+
+[node name="potB" instance=ExtResource("1_vwg87")]
+
+[node name="sunflower" parent="." index="2" instance=ExtResource("2_yu4rl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.36095, 0)

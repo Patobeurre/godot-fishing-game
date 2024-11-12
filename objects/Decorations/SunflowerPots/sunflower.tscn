@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b74gnc1bpv6cg"]
+
+[ext_resource type="PackedScene" uid="uid://djki2aatxc30h" path="res://models/Decorations/flower_pots/sunflower.glb" id="1_dx5xs"]
+
+[node name="sunflower" instance=ExtResource("1_dx5xs")]

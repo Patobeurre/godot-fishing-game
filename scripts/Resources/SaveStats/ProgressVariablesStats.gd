@@ -6,4 +6,5 @@ class_name ProgressVariablesStats
 	"fishing_gear_obtained" : false,
 	"identification_book_obtained" : false,
 	"drawer_riddle_completed" : false,
+	"sunflower_riddle_completed" : false,
 }

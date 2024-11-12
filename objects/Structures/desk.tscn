@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ug82iwvm6vr"]
+[gd_scene load_steps=12 format=3 uid="uid://ug82iwvm6vr"]
 
 [ext_resource type="PackedScene" uid="uid://cf2vdkl28dunc" path="res://models/Decorations/desk.glb" id="1_fehh8"]
 [ext_resource type="Script" path="res://scripts/Interactable.gd" id="2_6fflh"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scripts/SealedDoorSM/default_state.gd" id="7_85rmj"]
 [ext_resource type="Script" path="res://scripts/SealedDoorSM/dragged_state.gd" id="8_tusxu"]
 [ext_resource type="Script" path="res://scripts/SealedDoorSM/completed_state.gd" id="9_1hmjc"]
+[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/state_machine_state.gd" id="10_e0qmu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u5ir3"]
 size = Vector3(0.329132, 2.37158, 2.11719)
@@ -23,6 +24,9 @@ layers = 1025
 collision_mask = 33
 script = ExtResource("2_6fflh")
 interact_text = "View documents"
+
+[node name="Cube_092" parent="." index="1"]
+layers = 1025
 
 [node name="Cube_127" parent="." index="2"]
 layers = 1025
@@ -83,3 +87,6 @@ script = ExtResource("8_tusxu")
 
 [node name="CompletedState" type="Node" parent="." index="14"]
 script = ExtResource("9_1hmjc")
+
+[node name="InactiveState" type="Node" parent="." index="15"]
+script = ExtResource("10_e0qmu")

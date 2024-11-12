@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://d8mt452ryhx"]
+
+[ext_resource type="PackedScene" uid="uid://kvf3yq35figd" path="res://models/Decorations/sunflower_riddle/sunflower_bottom_right.glb" id="1_3i72i"]
+
+[node name="sunflower_bottom_right" instance=ExtResource("1_3i72i")]

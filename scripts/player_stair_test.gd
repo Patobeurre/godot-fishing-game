@@ -521,6 +521,7 @@ func _on_end_camera_interaction():
 		return
 	CameraTransition.transition_camera(get_viewport().get_camera_3d(), camera)
 	fishing_sm.set_current_state(default_fishing_state)
+	SignalBus.end_interaction.emit()
 
 
 func _on_end_camera_transition():

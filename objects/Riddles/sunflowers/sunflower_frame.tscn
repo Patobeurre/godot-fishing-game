@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://snu48fhdllig"]
+
+[ext_resource type="PackedScene" uid="uid://badi24rrp3en7" path="res://models/Decorations/sunflower_riddle/sunflower_frame.glb" id="1_6d0e6"]
+[ext_resource type="Script" path="res://scripts/SealedDoorSM/sealed_door_symbol.gd" id="2_2tydl"]
+[ext_resource type="Script" path="res://scripts/Riddles/sunflower_frame.gd" id="2_cohgd"]
+[ext_resource type="Script" path="res://scripts/Interactable.gd" id="3_w3byu"]
+[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_rcdje"]
+[ext_resource type="Script" path="res://scripts/SealedDoorSM/default_state.gd" id="5_vc2sm"]
+[ext_resource type="Script" path="res://scripts/SealedDoorSM/dragged_state.gd" id="6_l7mj4"]
+[ext_resource type="Script" path="res://scripts/SealedDoorSM/completed_state.gd" id="7_4bj63"]
+
+[node name="sunflower_frame" instance=ExtResource("1_6d0e6")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("2_cohgd")
+
+[node name="Plane_037" parent="." index="0"]
+layers = 1025
+
+[node name="Plane_038" parent="." index="1"]
+layers = 1025
+
+[node name="StaticBody3D" parent="Plane_038" index="0"]
+collision_layer = 33
+script = ExtResource("3_w3byu")
+interact_text = "Picture"
+
+[node name="Cylinder_017" parent="." index="2"]
+layers = 1025
+
+[node name="StaticBody3D" parent="Cylinder_017" index="0"]
+script = ExtResource("2_2tydl")
+custom_modifier = -1.0
+clamp_angle = 45.0
+
+[node name="Cylinder_016" parent="." index="3"]
+layers = 1025
+
+[node name="StaticBody3D" parent="Cylinder_016" index="0"]
+script = ExtResource("2_2tydl")
+custom_modifier = -1.0
+clamp_angle = 45.0
+
+[node name="Cylinder_018" parent="." index="4"]
+layers = 1025
+
+[node name="StaticBody3D" parent="Cylinder_018" index="0"]
+script = ExtResource("2_2tydl")
+custom_modifier = -1.0
+clamp_angle = 45.0
+
+[node name="FiniteStateMachine" type="Node" parent="." index="5"]
+script = ExtResource("4_rcdje")
+
+[node name="DefaultState" type="Node" parent="." index="6"]
+script = ExtResource("5_vc2sm")
+
+[node name="DraggedState" type="Node" parent="." index="7"]
+script = ExtResource("6_l7mj4")
+
+[node name="CompletedState" type="Node" parent="." index="8"]
+script = ExtResource("7_4bj63")
+
+[node name="Camera3D" type="Camera3D" parent="." index="9"]
+transform = Transform3D(-1.39091e-08, 0, 1, 0, 1, 0, -1, 0, -1.39091e-08, 1.1325, 0, -4.95032e-08)

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckoq1mw5irsq2"]
+
+[ext_resource type="PackedScene" uid="uid://edrqulfn2bmg" path="res://models/Decorations/sunflower_riddle/pot_purple.glb" id="1_vx724"]
+[ext_resource type="PackedScene" uid="uid://d8mt452ryhx" path="res://objects/Riddles/sunflowers/sunflower_bottom_right.tscn" id="2_kl65q"]
+
+[node name="pot_purple2" instance=ExtResource("1_vx724")]
+
+[node name="sunflower_bottom_right" parent="." index="2" instance=ExtResource("2_kl65q")]
+transform = Transform3D(0.890357, -0.131397, 0, 0.131397, 0.890357, 0, 0, 0, 0.9, -0.142658, 2.18208, 0)

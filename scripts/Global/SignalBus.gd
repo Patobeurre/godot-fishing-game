@@ -17,6 +17,9 @@ signal lure_added(CollectedCatchable)
 signal new_lure_registered(CatchableRes)
 signal cancel_fishing
 
+signal basket_added(BasketRes)
+signal basket_available(bool)
+
 signal time_changed(float)
 signal time_period_changed(ETimePeriod)
 
@@ -36,6 +39,7 @@ signal hide_sun(bool)
 
 signal interact_request(Camera3D)
 signal end_camera_interaction()
+signal end_interaction()
 
 signal ui_opened
 signal ui_closed

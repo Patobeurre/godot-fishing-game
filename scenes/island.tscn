@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://c2p8gphrnq8qi"]
+[gd_scene load_steps=34 format=3 uid="uid://c2p8gphrnq8qi"]
 
 [ext_resource type="Script" path="res://scripts/Global/SaveManager.gd" id="1_bdda1"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_kt14l"]
@@ -25,6 +25,9 @@
 [ext_resource type="PackedScene" uid="uid://cmpyaw5yxt3rj" path="res://objects/Structures/oil_tank_rigidbody.tscn" id="17_lq0ty"]
 [ext_resource type="PackedScene" uid="uid://dahpw84nqrsxd" path="res://objects/SmallIsland.tscn" id="20_2eoqe"]
 [ext_resource type="PackedScene" uid="uid://dv3vmywlgreuo" path="res://objects/Structures/merchant_boat.tscn" id="24_i5qoo"]
+[ext_resource type="PackedScene" uid="uid://i6b4wm6daqyx" path="res://objects/Riddles/sunflowers/pot_blue.tscn" id="26_rvvqy"]
+[ext_resource type="PackedScene" uid="uid://cxn7ui1hlg4wb" path="res://objects/Riddles/sunflowers/pot_green.tscn" id="27_h0xm0"]
+[ext_resource type="PackedScene" uid="uid://ckoq1mw5irsq2" path="res://objects/Riddles/sunflowers/pot_purple.tscn" id="28_6fqse"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rmnfe"]
 albedo_color = Color(0.878036, 0.868155, 0.689148, 1)
@@ -170,7 +173,7 @@ stream = ExtResource("17_ibg65")
 volume_db = -30.0
 autoplay = true
 
-[node name="Node3D" parent="." instance=ExtResource("17_lq0ty")]
+[node name="Boat" parent="." instance=ExtResource("17_lq0ty")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 81.8746, 0.0236204, 34.6458)
 
 [node name="CenterRotate" type="Node3D" parent="."]
@@ -184,3 +187,14 @@ transform = Transform3D(0.313992, 0, -0.949425, 0, 1, 0, 0.949425, 0, 0.313992, 
 
 [node name="merchant_boat" parent="ShopSpawn" instance=ExtResource("24_i5qoo")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+
+[node name="SunFlowers" type="Node3D" parent="."]
+
+[node name="pot_blue" parent="SunFlowers" instance=ExtResource("26_rvvqy")]
+transform = Transform3D(0.146129, 0, -0.262004, 0, 0.3, 0, 0.262004, 0, 0.146129, -1.73252, 2.31505, -0.956486)
+
+[node name="pot_green" parent="SunFlowers" instance=ExtResource("27_h0xm0")]
+transform = Transform3D(0.29295, 0, -0.0646558, 0, 0.3, 0, 0.0646558, 0, 0.29295, 0.081183, 2.36389, -1.80763)
+
+[node name="pot_purple2" parent="." instance=ExtResource("28_6fqse")]
+transform = Transform3D(0.209865, 0, -0.214375, 0, 0.3, 0, 0.214375, 0, 0.209865, 0.570171, 2.4075, -3.0508)
