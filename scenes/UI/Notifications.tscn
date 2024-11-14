@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c16mj6fl3mn6n"]
+[gd_scene load_steps=4 format=3 uid="uid://c16mj6fl3mn6n"]
 
 [ext_resource type="Script" path="res://scripts/UI/Notifications.gd" id="1_opbhg"]
 [ext_resource type="PackedScene" uid="uid://fk7torkrtd4v" path="res://objects/UI/NewCatchableNotificationV2.tscn" id="3_pb1vq"]
+[ext_resource type="PackedScene" uid="uid://4yhaf6dvuodd" path="res://objects/UI/notification_multiple_item.tscn" id="3_ryma6"]
 
 [node name="Notifications" type="Control"]
 layout_mode = 3
@@ -19,7 +20,7 @@ layout_mode = 1
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MultipleNotificationContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -27,3 +28,10 @@ anchor_bottom = 1.0
 offset_top = -40.0
 offset_right = 40.0
 grow_vertical = 0
+theme_override_constants/separation = -10
+
+[node name="HBoxContainer" parent="MultipleNotificationContainer" instance=ExtResource("3_ryma6")]
+layout_mode = 2
+
+[node name="HBoxContainer2" parent="MultipleNotificationContainer" instance=ExtResource("3_ryma6")]
+layout_mode = 2

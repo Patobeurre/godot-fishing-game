@@ -2,6 +2,8 @@ extends Control
 
 
 @onready var catchable_notification = $NewCatchableNotificationV2
+@onready var multiple_notification_container = $MultipleNotificationContainer
+@onready var notification_multiple_item_scene = preload("res://objects/UI/notification_multiple_item.tscn")
 @onready var timer = $Timer
 
 @export var top_offset :float = 120
@@ -42,6 +44,6 @@ func _on_new_lure_registered(catchable :CatchableRes):
 
 
 func _on_lure_added(catchable :CollectedCatchable):
-	print(catchable.catchable.name)
-	print(catchable.amount)
-	pass
+	var item = notification_multiple_item_scene.instantiate()
+	multiple_notification_container.add_child(item)
+	item.init(catchable)

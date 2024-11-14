@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://4yhaf6dvuodd"]
+
+[ext_resource type="Script" path="res://objects/UI/notification_multiple_item.gd" id="1_jcvrx"]
+[ext_resource type="Texture2D" uid="uid://cra6bwu35rah3" path="res://sprites/Catchables/Fishes/octopus.png" id="1_nxn2e"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+theme_override_constants/separation = 20
+script = ExtResource("1_jcvrx")
+
+[node name="Image" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("1_nxn2e")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+text = "OCTOPUS"
+
+[node name="QuantityLabel" type="Label" parent="."]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+
+[node name="DisplayTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="DisplayTimer" to="." method="_on_display_timer_timeout"]
