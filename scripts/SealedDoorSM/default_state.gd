@@ -17,13 +17,13 @@ func on_process(delta: float) -> void:
 
 # Called every physics frame when this state is active.
 func on_physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("mouse_left"):
-		controller.start_dragging()
+	pass
 
 
 # Called when there is an input event while this state is active.
 func on_input(event: InputEvent) -> void:
-	pass
+	if event.is_action_pressed("mouse_left"):
+		controller.start_dragging()
 
 
 # Called when the state machine exits this state.

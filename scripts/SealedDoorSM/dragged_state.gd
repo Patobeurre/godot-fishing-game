@@ -12,8 +12,7 @@ func on_enter() -> void:
 
 # Called every frame when this state is active.
 func on_process(delta: float) -> void:
-	if Input.is_action_just_released("mouse_left"):
-		controller.stop_dragging()
+	pass
 
 
 # Called every physics frame when this state is active.
@@ -25,6 +24,8 @@ func on_physics_process(delta: float) -> void:
 func on_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		controller.drag_to_new_rotation()
+	elif event.is_action_released("mouse_left"):
+		controller.stop_dragging()
 
 
 # Called when the state machine exits this state.

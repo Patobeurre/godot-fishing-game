@@ -37,7 +37,8 @@ func start_dragging():
 	initial_intersection = raycast_at_mouse_position(512)
 	if initial_intersection.has("collider"):
 		if initial_intersection["collider"].is_in_group("Symbol"):
-			state_machine.set_current_state(dragged_state)
+			if not completed_state.is_current_state():
+				state_machine.set_current_state(dragged_state)
 
 
 func stop_dragging():
@@ -166,7 +167,8 @@ func interact_drawer():
 		anim_open_drawer()
 	else:
 		SignalBus.interact_request.emit(drawer_camera)
-		state_machine.set_current_state(default_state)
+		if not completed_state.is_current_state():
+			state_machine.set_current_state(default_state)
 
 
 func _on_savegame_loaded():
