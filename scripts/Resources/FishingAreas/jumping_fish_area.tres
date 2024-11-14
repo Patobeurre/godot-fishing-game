@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=4 format=3 uid="uid://knyj2kthccft"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_0e46k"]
+[ext_resource type="Resource" uid="uid://d2eanu31fp0x0" path="res://scripts/Resources/Catchables/Fishes/CommonFish.tres" id="2_fbgpp"]
+[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="3_1lvjh"]
+
+[resource]
+script = ExtResource("3_1lvjh")
+name = "FA_JUMPING_FISH"
+type = 1
+waiting_time = 3.0
+catchables = Array[ExtResource("1_0e46k")]([ExtResource("2_fbgpp")])
+default_catchables = Array[ExtResource("1_0e46k")]([])

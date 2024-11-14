@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://bljwxjxf7scis"]
+[gd_scene load_steps=61 format=3 uid="uid://bljwxjxf7scis"]
 
 [ext_resource type="PackedScene" uid="uid://cpyj3we54n0w4" path="res://models/Islands/island_test_path.glb" id="1_ag4d6"]
 [ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_ugmgj"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://dqbthko1jthwh" path="res://objects/Decorations/shark_area.tscn" id="25_venrc"]
 [ext_resource type="AudioStream" uid="uid://clto7prcddqvr" path="res://sounds/ambient/nature_ocean_waves_gentle_lap_beach.mp3" id="26_2emjj"]
 [ext_resource type="AudioStream" uid="uid://b8gj5ncbhekta" path="res://sounds/ambient/water_ocean_waves_calm_onto_stoney_beach_and_rocks_001.mp3" id="27_on43m"]
+[ext_resource type="PackedScene" uid="uid://17pakbt4asjj" path="res://objects/Decorations/area_jumping_fish.tscn" id="30_clu7f"]
 [ext_resource type="Script" path="res://scripts/audio_sounds_node.gd" id="31_ebkd6"]
 [ext_resource type="PackedScene" uid="uid://duregve5lp1xp" path="res://objects/Structures/sealed_door.tscn" id="32_08t1t"]
 
@@ -462,13 +463,20 @@ transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 2.23298,
 orbit_center_global = NodePath("..")
 parent = NodePath("../../Water/StaticBody3D")
 
-[node name="stump" parent="." index="71" instance=ExtResource("25_h2sow")]
+[node name="AreaJumpingFish" parent="." index="44" node_paths=PackedStringArray("parent") instance=ExtResource("30_clu7f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.186, 3.91759, 27.5969)
+radius = 1.5
+scale_offset = 0.3
+is_one_shot = false
+parent = NodePath("../Water/StaticBody3D")
+
+[node name="stump" parent="." index="72" instance=ExtResource("25_h2sow")]
 transform = Transform3D(0.8, 0, 0, 0, 0.794356, -0.0948618, 0, 0.0948618, 0.794356, -23, 9, -9)
 
-[node name="stump2" parent="." index="72" instance=ExtResource("25_h2sow")]
+[node name="stump2" parent="." index="73" instance=ExtResource("25_h2sow")]
 transform = Transform3D(0.248196, 0, -0.546259, 0, 0.6, 0, 0.546259, 0, 0.248196, -41.6938, 9.09167, -10.6786)
 
-[node name="Sounds" type="Node3D" parent="." index="73"]
+[node name="Sounds" type="Node3D" parent="." index="74"]
 script = ExtResource("31_ebkd6")
 
 [node name="BeachAudio1" type="AudioStreamPlayer3D" parent="Sounds" index="0"]
@@ -517,17 +525,17 @@ volume_db = -30.0
 unit_size = 20.0
 parameters/looping = true
 
-[node name="Lights" type="Node3D" parent="." index="74"]
+[node name="Lights" type="Node3D" parent="." index="75"]
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Lights" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.462, 9.633, -9.567)
 light_color = Color(0, 0.610949, 0.812539, 1)
 omni_range = 7.29556
 
-[node name="sealed_door" parent="." index="75" instance=ExtResource("32_08t1t")]
+[node name="sealed_door" parent="." index="76" instance=ExtResource("32_08t1t")]
 transform = Transform3D(0.6, 0, 8.94072e-08, 0, 0.6, 0, -8.94072e-08, 0, 0.6, 3.69408, 4.98657, -14.8096)
 
-[node name="Plane_016" parent="." index="79"]
+[node name="Plane_016" parent="." index="80"]
 transform = Transform3D(-10.0595, 0, 4.87956, 0, 27.6839, 0, -3.89745, 0, -12.5943, -12.3941, 10.985, -12.1217)
 layers = 1025
 

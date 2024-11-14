@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://17pakbt4asjj"]
+
+[ext_resource type="Script" path="res://scripts/JumpingFishAreaSM/area_jumping_fish.gd" id="1_5uyv0"]
+[ext_resource type="Resource" uid="uid://knyj2kthccft" path="res://scripts/Resources/FishingAreas/jumping_fish_area.tres" id="2_rfgq4"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1aook"]
+height = 4.0
+radius = 3.0
+
+[node name="AreaJumpingFish" type="Area3D"]
+collision_layer = 4096
+collision_mask = 256
+script = ExtResource("1_5uyv0")
+radius = 1.0
+fishTable = ExtResource("2_rfgq4")
+is_one_shot = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_1aook")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

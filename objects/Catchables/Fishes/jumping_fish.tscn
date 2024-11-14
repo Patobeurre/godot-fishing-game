@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctmb0bsom34n3"]
+
+[ext_resource type="PackedScene" uid="uid://cdl3hl42gn3e7" path="res://models/Catchables/Fishes/jumping_fish.glb" id="1_ijxuj"]
+
+[node name="jumping_fish" instance=ExtResource("1_ijxuj")]
+
+[node name="Armature" parent="." index="0"]
+transform = Transform3D(0.2, 0, 0, 0, -0.2, 3.01992e-08, 0, -3.01992e-08, -0.2, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/rotation = Quaternion(0.0928267, -0.691396, 0.691396, 0.187953)
+bones/1/rotation = Quaternion(-0.000877614, 8.99357e-07, 0.0127572, 0.999918)
+bones/2/rotation = Quaternion(0.000664938, 6.86767e-07, -0.00966539, 0.999953)
+bones/3/rotation = Quaternion(-0.000148081, 4.96372e-07, 0.00215245, 0.999998)
+bones/4/rotation = Quaternion(-7.04858e-05, 1.91387e-07, 0.00102459, 0.999999)
+bones/5/rotation = Quaternion(-4.81494e-07, 3.53903e-08, 6.96164e-06, 1)
+bones/6/position = Vector3(-6.10737, 0.420152, -15.0003)
