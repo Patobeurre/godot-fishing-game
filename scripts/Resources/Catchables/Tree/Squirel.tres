@@ -8,14 +8,15 @@
 [resource]
 script = ExtResource("3_gddwk")
 id = 8
-name = "Squirel"
-description = "Litterally your best friend"
+name = "F_SQUIREL_NAME"
+description = "F_SQUIREL_DESCR"
 notification_text = ""
 category = ExtResource("1_5lxkf")
 tags = Array[int]([])
 image = ExtResource("1_rk2xl")
 scene = ExtResource("3_5o45t")
 rarity = 5
+price = 0
 periods = Array[int]([0, 1])
 lures = Array[ExtResource("3_gddwk")]([])
 lure_ids = Array[int]([])

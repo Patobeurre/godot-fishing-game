@@ -9,8 +9,8 @@
 [resource]
 script = ExtResource("1_i47no")
 id = 21
-name = "Shell"
-description = "An empty shell. If you listen closely, you can hear the sounds of the sea.s"
+name = "F_SHELL_NAME"
+description = "F_SHELL_DESCR"
 notification_text = ""
 category = ExtResource("1_no2at")
 tags = Array[int]([])

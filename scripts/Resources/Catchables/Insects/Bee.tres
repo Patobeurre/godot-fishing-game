@@ -9,8 +9,8 @@
 [resource]
 script = ExtResource("1_3ctec")
 id = 27
-name = "Bee"
-description = ""
+name = "F_BEE_NAME"
+description = "F_BEE_DESCR"
 notification_text = ""
 category = ExtResource("1_bbx3w")
 tags = Array[int]([4, 9])

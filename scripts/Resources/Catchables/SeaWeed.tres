@@ -9,8 +9,8 @@
 [resource]
 script = ExtResource("1_dgct0")
 id = 34
-name = "Seaweed"
-description = ""
+name = "F_SEAWEED_NAME"
+description = "F_SEAWEED_DESCR"
 notification_text = ""
 category = ExtResource("1_xl4j7")
 tags = Array[int]([9])

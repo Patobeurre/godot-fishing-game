@@ -9,8 +9,8 @@
 [resource]
 script = ExtResource("1_7s2ip")
 id = 19
-name = "Owl"
-description = ""
+name = "F_OWL_NAME"
+description = "F_OWL_DESCR"
 notification_text = ""
 category = ExtResource("1_yuq4k")
 tags = Array[int]([6])

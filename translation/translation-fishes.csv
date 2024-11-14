@@ -8,6 +8,9 @@ F_RARITY_UNCOMMON;Peu commun;Uncommon
 F_RARITY_RARE;Rare;Rare
 F_RARITY_LEGENDARY;Légendaire;Legendary
 ;;
+F_LURE_NAME;Leurre générique;Generic lure
+F_LURE_DESCR;;
+;;
 F_TINYJELLYFISH_NAME;Petite méduse;Tiny jellyfish
 F_TINYJELLYFISH_DESCR;Une minuscule méduse.;A tiny jellyfish
 F_TINYJELLYFISH_IDENT_DESCR;Sa très petite taille en fait une proie de choix pour les grandes baleines.;Its very small size makes it a prime target for whales.
@@ -116,8 +119,59 @@ F_RAY_NAME;Raie;Ray
 F_RAY_DESCR;;
 F_RAY_IDENT_DESCR;;
 ;;
+F_ANEMONE_NAME;Anemone;Anemone
+F_ANEMONE_DESCR;;
+;;
 F_CORAL_NAME;Corail;Coral
 F_CORAL_DESCR;;
 ;;
 F_SEAWEED_NAME;Algues;Seaweed
 F_SEAWEED_DESCR;;
+;;
+F_BUTTERFLY_NAME;Papillon;Butterfly
+F_BUTTERFLY_DESCR;;
+;;
+F_SNAKE_NAME;Serpent;Snake
+F_SNAKE_DESCR;;
+;;
+F_OWL_NAME;Chouette;Owl
+F_OWL_DESCR;;
+;;
+F_HONEY_NAME;Miel;Honey
+F_HONEY_DESCR;;
+;;
+F_BEE_NAME;Abeille;Bee
+F_BEE_DESCR;;
+;;
+F_BEETLE_NAME;Scarabée;Scarabée
+F_BEETLE_DESCR;;
+;;
+F_BOOKWORM_NAME;Rat de bibliothèque;Book Worm
+F_BOOKWORM_DESCR;Un ver extrêmement intelligent.;A highly intellectual worm.
+;;
+F_WORM_NAME;Ver de terre;Worm
+F_WORM_DESCR;;
+;;
+F_LIZARD_NAME;Lézard;Lizard
+F_LIZARD_DESCR;Aime bronzer sur les rochers.;Like to sunbathe on the rocks.
+;;
+F_SHELL_NAME;Coquillage;Seashell
+F_SHELL_DESCR;Une coquille vide. Si j’écoute attentivement, je peux entendre les sons de la mer.;An empty shell. If you listen closely, you can hear the sounds of the sea.
+;;
+F_PEBBLE_NAME;Caillou;Pebble
+F_PEBBLE_DESCR;Un simple caillou.;A simple pebble.
+;;
+F_ACORN_NAME;Gland;Acorn
+F_ACORN_DESCR;;
+;;
+F_LEAF_NAME;Feuille;Leaf
+F_LEAF_DESCR;;
+;;
+F_PINECONE_NAME;Pomme de pin;Pinecone
+F_PINECONE_DESCR;;
+;;
+F_SQUIREL_NAME;Ecureuil;Squirel
+F_SQUIREL_DESCR;Littéralement ton meilleur ami.;Literally your best friend.
+;;
+F_STICK_NAME;Bâton;Stick
+F_STICK_DESCR;;

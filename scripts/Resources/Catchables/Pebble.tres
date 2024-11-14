@@ -9,8 +9,8 @@
 [resource]
 script = ExtResource("1_d1lig")
 id = 29
-name = "Pebble"
-description = "F_MORAYEEL_DESCR"
+name = "F_PEBBLE_NAME"
+description = "F_PEBBLE_DESCR"
 notification_text = ""
 category = ExtResource("1_eojxp")
 tags = Array[int]([])

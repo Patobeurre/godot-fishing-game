@@ -10,14 +10,15 @@
 [resource]
 script = ExtResource("1_8nfqb")
 id = 7
-name = "Pinecone"
-description = ""
+name = "F_PINECONE_NAME"
+description = "F_PINECONE_DESCR"
 notification_text = ""
 category = ExtResource("1_gr638")
 tags = Array[int]([5])
 image = ExtResource("1_jib5m")
 scene = ExtResource("2_gpgin")
 rarity = 15
+price = 0
 periods = Array[int]([0, 1, 2, 3])
 lures = Array[ExtResource("1_8nfqb")]([ExtResource("2_cvsp4"), ExtResource("3_vooem")])
 lure_ids = Array[int]([])

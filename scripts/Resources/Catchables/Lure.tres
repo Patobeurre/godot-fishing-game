@@ -7,13 +7,14 @@
 [resource]
 script = ExtResource("1_5pw0i")
 id = 4
-name = "Lure"
-description = ""
+name = "F_LURE_NAME"
+description = "s"
 notification_text = ""
 category = ExtResource("1_kumjs")
 tags = Array[int]([])
 scene = ExtResource("3_yy1dk")
 rarity = 0
+price = 0
 periods = Array[int]([])
 lures = Array[ExtResource("1_5pw0i")]([])
 lure_ids = Array[int]([])

@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://d2cy4arr18ptt"]
+[gd_scene load_steps=48 format=3 uid="uid://d2cy4arr18ptt"]
 
 [ext_resource type="PackedScene" uid="uid://dmyqppx7y0tw7" path="res://objects/bobber.tscn" id="1_dkc2c"]
 [ext_resource type="PackedScene" uid="uid://0ontd173otm6" path="res://objects/Catchables/true_mussels.tscn" id="2_vjnp4"]
@@ -45,6 +45,8 @@
 [ext_resource type="PackedScene" uid="uid://fcjbcit80olj" path="res://objects/Catchables/Fishes/ray_variant.tscn" id="43_yshii"]
 [ext_resource type="PackedScene" uid="uid://bv6df770xtu10" path="res://objects/Catchables/Fishes/hidden_fish_v2.tscn" id="44_jeltf"]
 [ext_resource type="PackedScene" uid="uid://bn713msd3ggec" path="res://objects/Catchables/peeble.tscn" id="45_bvdg2"]
+[ext_resource type="PackedScene" uid="uid://c5gg6temsi7w5" path="res://objects/Catchables/butterfly.tscn" id="46_ht6wk"]
+[ext_resource type="PackedScene" uid="uid://2nxkt61iymg6" path="res://objects/Catchables/snake.tscn" id="47_yhotx"]
 
 [node name="TestLures" type="Node3D"]
 
@@ -182,3 +184,8 @@ visible = false
 visible = false
 
 [node name="peeble" parent="." instance=ExtResource("45_bvdg2")]
+visible = false
+
+[node name="butterfly" parent="." instance=ExtResource("46_ht6wk")]
+
+[node name="snake" parent="." instance=ExtResource("47_yhotx")]

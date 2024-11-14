@@ -9,14 +9,15 @@
 [resource]
 script = ExtResource("2_6qfjg")
 id = 6
-name = "Leaf"
-description = ""
+name = "F_LEAF_NAME"
+description = "F_LEAF_DESCR"
 notification_text = ""
 category = ExtResource("1_5immf")
 tags = Array[int]([])
 image = ExtResource("1_akiod")
 scene = ExtResource("2_yucf6")
 rarity = 50
+price = 0
 periods = Array[int]([0, 1, 2, 3])
 lures = Array[ExtResource("2_6qfjg")]([ExtResource("1_2y733")])
 lure_ids = Array[int]([])

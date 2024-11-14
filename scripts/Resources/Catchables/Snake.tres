@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=5 format=3 uid="uid://d3c0hndjlsfts"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_gouqy"]
+[ext_resource type="Resource" uid="uid://catedw4i7v6px" path="res://scripts/Resources/Categories/Animals.tres" id="1_v33oa"]
+[ext_resource type="Texture2D" uid="uid://bt13q2d74pt5e" path="res://sprites/Catchables/snake.png" id="2_pub4o"]
+[ext_resource type="PackedScene" uid="uid://2nxkt61iymg6" path="res://objects/Catchables/snake.tscn" id="4_hei0u"]
+
+[resource]
+script = ExtResource("1_gouqy")
+id = 49
+name = "F_SNAKE_NAME"
+description = "F_SNAKE_DESCR"
+notification_text = ""
+category = ExtResource("1_v33oa")
+tags = Array[int]([9])
+image = ExtResource("2_pub4o")
+scene = ExtResource("4_hei0u")
+rarity = 50
+price = 0
+periods = Array[int]([0, 1, 2, 3])
+lures = Array[ExtResource("1_gouqy")]([])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([1, 6])
