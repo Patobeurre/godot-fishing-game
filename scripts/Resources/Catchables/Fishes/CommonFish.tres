@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://d2eanu31fp0x0"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://d2eanu31fp0x0"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_dxu1y"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_fw1px"]
 [ext_resource type="Texture2D" uid="uid://dwnons7hqfqhm" path="res://sprites/Catchables/Fishes/common_fish.png" id="1_xgro6"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="2_6pidu"]
 [ext_resource type="PackedScene" uid="uid://bm531nn8kofqh" path="res://objects/Catchables/Fishes/common_fish.tscn" id="3_qxy6c"]
+[ext_resource type="Texture2D" uid="uid://cvqqsj4cksu5y" path="res://sprites/Catchables/Fishes/commonfish_shadow.png" id="6_3k1ym"]
 
 [resource]
 script = ExtResource("1_dxu1y")
@@ -15,10 +16,11 @@ notification_text = ""
 category = ExtResource("1_fw1px")
 tags = Array[int]([0, 1])
 image = ExtResource("1_xgro6")
+shadow = ExtResource("6_3k1ym")
 scene = ExtResource("3_qxy6c")
 rarity = 50
 price = 10
 periods = Array[int]([0, 1, 2, 3])
 lures = Array[ExtResource("1_dxu1y")]([ExtResource("2_6pidu")])
 lure_ids = Array[int]([])
-lure_tags = Array[int]([])
+lure_tags = Array[int]([6])

@@ -22,6 +22,7 @@ enum ELureTag {
 @export var category: CategoryRes
 @export var tags: Array[ELureTag]
 @export var image: Texture2D
+@export var shadow: Texture2D
 @export var scene: PackedScene
 @export var rarity: Rarity.ERarity
 @export var price: int

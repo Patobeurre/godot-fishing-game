@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4j0bcir26pue"]
+
+[ext_resource type="PackedScene" uid="uid://debge5wflq0ro" path="res://models/Catchables/Fishes/tetrahedra.glb" id="1_em6wj"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="tetrahedra" parent="." instance=ExtResource("1_em6wj")]
+transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0, -0.119543, 0)

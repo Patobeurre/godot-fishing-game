@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=5 format=3 uid="uid://btttncot63v31"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://btttncot63v31"]
 
 [ext_resource type="Texture2D" uid="uid://b4yfgmnag1afs" path="res://sprites/Catchables/Fishes/pike.png" id="1_fgdvl"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_qccg5"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_y31sx"]
 [ext_resource type="PackedScene" uid="uid://cit17jjrveyip" path="res://objects/Catchables/Fishes/pike.tscn" id="3_8ibe2"]
+[ext_resource type="Texture2D" uid="uid://d30mxku8yv6d5" path="res://sprites/Catchables/Fishes/pike_shadow.png" id="5_g57so"]
 
 [resource]
 script = ExtResource("1_qccg5")
@@ -14,6 +15,7 @@ notification_text = ""
 category = ExtResource("1_y31sx")
 tags = Array[int]([0, 2])
 image = ExtResource("1_fgdvl")
+shadow = ExtResource("5_g57so")
 scene = ExtResource("3_8ibe2")
 rarity = 30
 price = 25

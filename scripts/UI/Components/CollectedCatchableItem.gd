@@ -23,6 +23,11 @@ func init(catchable :CollectedCatchable):
 	update()
 
 
+func init_shadow(catchable :CatchableRes):
+	collected_catchable = CollectedCatchable.create(catchable)
+	update_shadow()
+
+
 func update():
 	image.texture = collected_catchable.catchable.image
 	name_label.text = tr(collected_catchable.catchable.name)
@@ -38,6 +43,15 @@ func update():
 		var icon = day_night_icon_scene.instantiate()
 		periods_container.add_child(icon)
 		icon.init(period)
+
+
+func update_shadow():
+	image.texture = collected_catchable.catchable.shadow
+	name_label.text = "???"
+	description.text = "???"
+	rarity.text = ""
+	lures.text = ""
+	locations.text = ""
 
 
 func _on_panel_click_gui_input(event: InputEvent) -> void:

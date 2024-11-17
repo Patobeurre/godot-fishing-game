@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oicsgaiyryoo"
-path="res://.godot/imported/true_mussel.png-8a259d2e6f15f5c040a86d934292ff66.ctex"
+uid="uid://dixh68t8epg0l"
+path="res://.godot/imported/ray_shadow.png-85443357488ddc99e1b9214389b1c9d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Catchables/true_mussel.png"
-dest_files=["res://.godot/imported/true_mussel.png-8a259d2e6f15f5c040a86d934292ff66.ctex"]
+source_file="res://sprites/Catchables/Fishes/ray_shadow.png"
+dest_files=["res://.godot/imported/ray_shadow.png-85443357488ddc99e1b9214389b1c9d7.ctex"]
 
 [params]
 

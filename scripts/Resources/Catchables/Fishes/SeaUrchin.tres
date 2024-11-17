@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://hgj47b8kfi7j"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://hgj47b8kfi7j"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_avhfx"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_mavdq"]
 [ext_resource type="Texture2D" uid="uid://oyyac0dido4o" path="res://sprites/Catchables/Fishes/sea_urchin.png" id="2_q2p02"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="3_48cbk"]
 [ext_resource type="PackedScene" uid="uid://co0wky0yojob1" path="res://objects/Catchables/Fishes/sea_urchin.tscn" id="4_3xh74"]
+[ext_resource type="Texture2D" uid="uid://dyr2jq633w7tf" path="res://sprites/Catchables/Fishes/seaurchin_shadow.png" id="6_3t85n"]
 
 [resource]
 script = ExtResource("1_mavdq")
@@ -15,6 +16,7 @@ notification_text = ""
 category = ExtResource("1_avhfx")
 tags = Array[int]([7, 0])
 image = ExtResource("2_q2p02")
+shadow = ExtResource("6_3t85n")
 scene = ExtResource("4_3xh74")
 rarity = 30
 price = 34

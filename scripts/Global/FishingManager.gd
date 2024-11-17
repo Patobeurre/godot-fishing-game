@@ -156,11 +156,24 @@ func get_catchables() -> Array[CatchableRes]:
 	return catchables
 
 
-func get_all_collected_by_category(category : CategoryRes.ELureCategory) -> Array[CollectedCatchable]:
+func get_all_collected_by_category(category :CategoryRes.ELureCategory) -> Array[CollectedCatchable]:
 	var collected_lures :Array[CollectedCatchable] = fishing_stats.catchables.filter(func (elem):
 		return elem.catchable.category.tag == category)
 	
 	return collected_lures
+
+
+func get_all_remaining_fishes() -> Array[CatchableRes]:
+	var remaining_fishes = all_lures.catchables.filter(func (catchable):
+		return catchable.category.tag == CategoryRes.ELureCategory.FISH and \
+			not fishing_stats.contains(catchable))
+	
+	return remaining_fishes
+
+
+func get_nb_total_catchable_by_category(category :CategoryRes.ELureCategory) -> int:
+	return all_lures.catchables.filter(func (catchable):
+		return catchable.category.tag == category).size()
 
 
 func get_all_collected_categories() -> Array[CategoryRes]:

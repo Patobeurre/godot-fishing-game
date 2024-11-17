@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=5 format=3 uid="uid://bq7rfd0awtdhf"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://bq7rfd0awtdhf"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_lw7th"]
 [ext_resource type="Texture2D" uid="uid://blyd78etsuw4v" path="res://sprites/Catchables/Fishes/hammer_shark.png" id="1_olceu"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_sb8ta"]
 [ext_resource type="PackedScene" uid="uid://cx7yogcsge776" path="res://objects/Catchables/Fishes/hammer_shark.tscn" id="2_45qly"]
+[ext_resource type="Texture2D" uid="uid://ci8ck021lpv7w" path="res://sprites/Catchables/Fishes/hammershark_shadow.png" id="5_3wsnd"]
 
 [resource]
 script = ExtResource("1_lw7th")
@@ -14,6 +15,7 @@ notification_text = ""
 category = ExtResource("1_sb8ta")
 tags = Array[int]([0, 3])
 image = ExtResource("1_olceu")
+shadow = ExtResource("5_3wsnd")
 scene = ExtResource("2_45qly")
 rarity = 15
 price = 65

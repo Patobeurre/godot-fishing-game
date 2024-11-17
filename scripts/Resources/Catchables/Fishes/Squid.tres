@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://l45j43d051lt"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://l45j43d051lt"]
 
 [ext_resource type="Texture2D" uid="uid://r4yd6jn8rdwd" path="res://sprites/Catchables/Fishes/squid.png" id="1_ehcjq"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_elejv"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_u33yt"]
 [ext_resource type="Resource" uid="uid://c0d4soyvubcj0" path="res://scripts/Resources/Catchables/Fishes/TrueMussels.tres" id="2_qlckf"]
 [ext_resource type="PackedScene" uid="uid://k2w6cbfymx6d" path="res://objects/Catchables/Fishes/squid.tscn" id="3_tlmep"]
+[ext_resource type="Texture2D" uid="uid://bgp7h7oa30n8b" path="res://sprites/Catchables/Fishes/squid_shadow.png" id="6_iunre"]
 
 [resource]
 script = ExtResource("1_elejv")
@@ -15,6 +16,7 @@ notification_text = ""
 category = ExtResource("1_u33yt")
 tags = Array[int]([0])
 image = ExtResource("1_ehcjq")
+shadow = ExtResource("6_iunre")
 scene = ExtResource("3_tlmep")
 rarity = 30
 price = 32

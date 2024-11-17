@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=5 format=3 uid="uid://drwlqix3iakro"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://drwlqix3iakro"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_1qq7r"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_hfj7a"]
 [ext_resource type="Texture2D" uid="uid://cra6bwu35rah3" path="res://sprites/Catchables/Fishes/octopus.png" id="2_ur1pb"]
 [ext_resource type="PackedScene" uid="uid://ckf8gv048tone" path="res://objects/Catchables/Fishes/octopus.tscn" id="4_ts5en"]
+[ext_resource type="Texture2D" uid="uid://bcqbsyis2b42c" path="res://sprites/Catchables/Fishes/octopus_shadow.png" id="5_pfknk"]
 
 [resource]
 script = ExtResource("1_hfj7a")
@@ -14,6 +15,7 @@ notification_text = ""
 category = ExtResource("1_1qq7r")
 tags = Array[int]([0, 2, 9])
 image = ExtResource("2_ur1pb")
+shadow = ExtResource("5_pfknk")
 scene = ExtResource("4_ts5en")
 rarity = 15
 price = 70

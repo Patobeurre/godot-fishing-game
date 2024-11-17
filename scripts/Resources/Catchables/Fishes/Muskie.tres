@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=5 format=3 uid="uid://crl02r3tu7cqn"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://crl02r3tu7cqn"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_rvgfw"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_x0ccx"]
 [ext_resource type="Texture2D" uid="uid://ckiqlse8hsbj6" path="res://sprites/Catchables/Fishes/muskie.png" id="2_gjg34"]
 [ext_resource type="PackedScene" uid="uid://u7ampbbdwgks" path="res://objects/Catchables/Fishes/muskie.tscn" id="4_s2qgn"]
+[ext_resource type="Texture2D" uid="uid://do3nxruqu08sn" path="res://sprites/Catchables/Fishes/muskie_shadow.png" id="5_in30k"]
 
 [resource]
 script = ExtResource("1_x0ccx")
@@ -14,6 +15,7 @@ notification_text = ""
 category = ExtResource("1_rvgfw")
 tags = Array[int]([0, 2])
 image = ExtResource("2_gjg34")
+shadow = ExtResource("5_in30k")
 scene = ExtResource("4_s2qgn")
 rarity = 30
 price = 30

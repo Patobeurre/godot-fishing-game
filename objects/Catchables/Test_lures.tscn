@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://d2cy4arr18ptt"]
+[gd_scene load_steps=50 format=3 uid="uid://d2cy4arr18ptt"]
 
 [ext_resource type="PackedScene" uid="uid://dmyqppx7y0tw7" path="res://objects/bobber.tscn" id="1_dkc2c"]
 [ext_resource type="PackedScene" uid="uid://0ontd173otm6" path="res://objects/Catchables/true_mussels.tscn" id="2_vjnp4"]
@@ -48,6 +48,7 @@
 [ext_resource type="PackedScene" uid="uid://c5gg6temsi7w5" path="res://objects/Catchables/butterfly.tscn" id="46_ht6wk"]
 [ext_resource type="PackedScene" uid="uid://2nxkt61iymg6" path="res://objects/Catchables/snake.tscn" id="47_yhotx"]
 [ext_resource type="PackedScene" uid="uid://ctmb0bsom34n3" path="res://objects/Catchables/Fishes/jumping_fish.tscn" id="48_5dfek"]
+[ext_resource type="PackedScene" uid="uid://d4j0bcir26pue" path="res://objects/Catchables/Fishes/tetrahedra.tscn" id="49_32uyh"]
 
 [node name="TestLures" type="Node3D"]
 
@@ -194,3 +195,7 @@ visible = false
 visible = false
 
 [node name="jumping_fish" parent="." instance=ExtResource("48_5dfek")]
+visible = false
+
+[node name="Node3D" parent="." instance=ExtResource("49_32uyh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -0.0821287, 0)

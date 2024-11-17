@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=16 format=3 uid="uid://rrtvjxp4gxm"]
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=50 format=3 uid="uid://rrtvjxp4gxm"]
 
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="1_15s8k"]
 [ext_resource type="Resource" uid="uid://f0ooky57hn72" path="res://scripts/Resources/Catchables/Tree/Acorn.tres" id="1_f7ye5"]
@@ -6,72 +6,54 @@
 [ext_resource type="Resource" uid="uid://bby1s0rugy260" path="res://scripts/Resources/Catchables/Tree/Pinecone.tres" id="3_f0iho"]
 [ext_resource type="Resource" uid="uid://cx10cu2bnwcgp" path="res://scripts/Resources/Catchables/Tree/Squirel.tres" id="4_vfdm2"]
 [ext_resource type="Resource" uid="uid://ot25y882xj1f" path="res://scripts/Resources/Catchables/Tree/Stick.tres" id="5_n6vb3"]
-[ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="6_0i2l2"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="7_nbig8"]
 [ext_resource type="Resource" uid="uid://3ovutb4lao07" path="res://scripts/Resources/Catchables/Fishes/Anglerfish.tres" id="9_cn5cx"]
 [ext_resource type="Resource" uid="uid://clpf0htwtcdc4" path="res://scripts/Resources/Catchables/Insects/Bee.tres" id="10_82gi1"]
+[ext_resource type="Resource" uid="uid://6yh568jbps3l" path="res://scripts/Resources/Catchables/Fishes/ClownFish.tres" id="10_iur7x"]
 [ext_resource type="Resource" uid="uid://c0d4soyvubcj0" path="res://scripts/Resources/Catchables/Fishes/TrueMussels.tres" id="10_orxvh"]
-
-[sub_resource type="Resource" id="Resource_5or8p"]
-script = ExtResource("7_nbig8")
-id = 0
-name = "fish C"
-description = ""
-notification_text = ""
-tags = Array[int]([])
-rarity = 50
-price = 0
-periods = Array[int]([0, 1, 2])
-lures = Array[ExtResource("7_nbig8")]([ExtResource("6_0i2l2")])
-lure_ids = Array[int]([])
-lure_tags = Array[int]([])
-
-[sub_resource type="Resource" id="Resource_4wnba"]
-script = ExtResource("7_nbig8")
-id = 1
-name = "fish U"
-description = ""
-notification_text = ""
-tags = Array[int]([])
-rarity = 30
-price = 0
-periods = Array[int]([1, 0])
-lures = Array[ExtResource("7_nbig8")]([ExtResource("6_0i2l2")])
-lure_ids = Array[int]([])
-lure_tags = Array[int]([])
-
-[sub_resource type="Resource" id="Resource_ojmtc"]
-script = ExtResource("7_nbig8")
-id = 2
-name = "fish R"
-description = ""
-notification_text = ""
-tags = Array[int]([])
-rarity = 15
-price = 0
-periods = Array[int]([1])
-lures = Array[ExtResource("7_nbig8")]([ExtResource("6_0i2l2"), SubResource("Resource_5or8p")])
-lure_ids = Array[int]([])
-lure_tags = Array[int]([])
-
-[sub_resource type="Resource" id="Resource_y3vke"]
-script = ExtResource("7_nbig8")
-id = 3
-name = "fish L"
-description = ""
-notification_text = ""
-tags = Array[int]([])
-rarity = 5
-price = 0
-periods = Array[int]([1, 3])
-lures = Array[ExtResource("7_nbig8")]([ExtResource("6_0i2l2")])
-lure_ids = Array[int]([])
-lure_tags = Array[int]([])
+[ext_resource type="Resource" uid="uid://d2eanu31fp0x0" path="res://scripts/Resources/Catchables/Fishes/CommonFish.tres" id="11_ekaux"]
+[ext_resource type="Resource" uid="uid://c1af81d13ra1f" path="res://scripts/Resources/Catchables/Fishes/Eel.tres" id="12_lxyca"]
+[ext_resource type="Resource" uid="uid://ds8oniim37aio" path="res://scripts/Resources/Catchables/Fishes/ExplodingFish.tres" id="13_48ymn"]
+[ext_resource type="Resource" uid="uid://bq7rfd0awtdhf" path="res://scripts/Resources/Catchables/Fishes/HammerShark.tres" id="14_3utbs"]
+[ext_resource type="Resource" uid="uid://m3esr6ufsrya" path="res://scripts/Resources/Catchables/Fishes/HermitCrab.tres" id="15_6ttdi"]
+[ext_resource type="Resource" uid="uid://lio1nhp8ucd2" path="res://scripts/Resources/Catchables/Fishes/HiddenFish.tres" id="16_yykic"]
+[ext_resource type="Resource" uid="uid://ctotryrf5kh4e" path="res://scripts/Resources/Catchables/Fishes/JellyFish.tres" id="17_ctjbu"]
+[ext_resource type="Resource" uid="uid://b67rtymghjo5n" path="res://scripts/Resources/Catchables/Fishes/JellyFishRobe.tres" id="18_jjijm"]
+[ext_resource type="Resource" uid="uid://duoe66f700yxp" path="res://scripts/Resources/Catchables/Fishes/JellyFishTiny.tres" id="19_j8fw8"]
+[ext_resource type="Resource" uid="uid://cx5sdiudeae1t" path="res://scripts/Resources/Catchables/Fishes/MorayEel.tres" id="20_i2lus"]
+[ext_resource type="Resource" uid="uid://crl02r3tu7cqn" path="res://scripts/Resources/Catchables/Fishes/Muskie.tres" id="21_tjtar"]
+[ext_resource type="Resource" uid="uid://drwlqix3iakro" path="res://scripts/Resources/Catchables/Fishes/Octopus.tres" id="22_sh5u6"]
+[ext_resource type="Resource" uid="uid://btttncot63v31" path="res://scripts/Resources/Catchables/Fishes/Pike.tres" id="23_uuvrv"]
+[ext_resource type="Resource" uid="uid://bm5o061am665" path="res://scripts/Resources/Catchables/Fishes/Pilchard.tres" id="24_1rmwa"]
+[ext_resource type="Resource" uid="uid://bdnjdhsc78l1l" path="res://scripts/Resources/Catchables/Fishes/Ray.tres" id="25_bo5wh"]
+[ext_resource type="Resource" uid="uid://bmwupnkufkp8y" path="res://scripts/Resources/Catchables/Fishes/RayVariant.tres" id="26_lue84"]
+[ext_resource type="Resource" uid="uid://boh11y8ocee74" path="res://scripts/Resources/Catchables/Fishes/RoyalBeardFish.tres" id="27_xd1jb"]
+[ext_resource type="Resource" uid="uid://hgj47b8kfi7j" path="res://scripts/Resources/Catchables/Fishes/SeaUrchin.tres" id="28_p7i6w"]
+[ext_resource type="Resource" uid="uid://b6hwf8hmftnpf" path="res://scripts/Resources/Catchables/Anemone.tres" id="29_275f3"]
+[ext_resource type="Resource" uid="uid://cdinhdv0bl53j" path="res://scripts/Resources/Catchables/Fishes/Shark.tres" id="29_insch"]
+[ext_resource type="Resource" uid="uid://dw3vqqivyjq34" path="res://scripts/Resources/Catchables/Fishes/Shrimp.tres" id="30_chj6n"]
+[ext_resource type="Resource" uid="uid://cxldl4urf7kh" path="res://scripts/Resources/Catchables/Coral.tres" id="30_v0t77"]
+[ext_resource type="Resource" uid="uid://0p05cl1jeynr" path="res://scripts/Resources/Catchables/Fishes/SmallFish.tres" id="31_2mi00"]
+[ext_resource type="Resource" uid="uid://b6l2br0ff8gre" path="res://scripts/Resources/Catchables/Honey.tres" id="31_sqtue"]
+[ext_resource type="Resource" uid="uid://ckn0dd4qsktng" path="res://scripts/Resources/Catchables/Fishes/Sole.tres" id="32_3b74e"]
+[ext_resource type="Resource" uid="uid://cbaiokykhuhmg" path="res://scripts/Resources/Catchables/Lizard.tres" id="32_vc3yk"]
+[ext_resource type="Resource" uid="uid://l45j43d051lt" path="res://scripts/Resources/Catchables/Fishes/Squid.tres" id="33_ehr33"]
+[ext_resource type="Resource" uid="uid://b7skhevbmqmuu" path="res://scripts/Resources/Catchables/Pebble.tres" id="33_xapho"]
+[ext_resource type="Resource" uid="uid://ddepi6wvt10p6" path="res://scripts/Resources/Catchables/SeaWeed.tres" id="34_dtcst"]
+[ext_resource type="Resource" uid="uid://c0nhg67lt4noa" path="res://scripts/Resources/Catchables/Fishes/Whale.tres" id="34_r8wr5"]
+[ext_resource type="Resource" uid="uid://ccluuofosbbi5" path="res://scripts/Resources/Catchables/Shell.tres" id="35_62cmh"]
+[ext_resource type="Resource" uid="uid://d3c0hndjlsfts" path="res://scripts/Resources/Catchables/Snake.tres" id="36_fsr3v"]
+[ext_resource type="Resource" uid="uid://bcpyooewpt3g4" path="res://scripts/Resources/Catchables/Insects/Beetle.tres" id="43_kc6l2"]
+[ext_resource type="Resource" uid="uid://prfpa0vi0mta" path="res://scripts/Resources/Catchables/Insects/BookWorm.tres" id="44_g22ml"]
+[ext_resource type="Resource" uid="uid://dcpvdafn7juyp" path="res://scripts/Resources/Catchables/Insects/Butterfly.tres" id="45_qwvm8"]
+[ext_resource type="Resource" uid="uid://cjjmht2jv5pua" path="res://scripts/Resources/Catchables/Insects/Worm.tres" id="46_3vhrs"]
+[ext_resource type="Resource" uid="uid://cmy83gqx0obf7" path="res://scripts/Resources/Catchables/Birds/Owl.tres" id="47_28pa2"]
+[ext_resource type="Resource" uid="uid://cre4u8vky03vd" path="res://scripts/Resources/Catchables/Fishes/Tetrahedra.tres" id="48_yw0mj"]
 
 [resource]
 script = ExtResource("1_15s8k")
 name = ""
 type = 0
 waiting_time = 3.0
-catchables = Array[ExtResource("7_nbig8")]([ExtResource("1_f7ye5"), ExtResource("2_iw83r"), ExtResource("3_f0iho"), ExtResource("4_vfdm2"), ExtResource("5_n6vb3"), SubResource("Resource_5or8p"), SubResource("Resource_4wnba"), SubResource("Resource_ojmtc"), SubResource("Resource_y3vke"), ExtResource("10_orxvh"), ExtResource("9_cn5cx"), ExtResource("10_82gi1")])
+catchables = Array[ExtResource("7_nbig8")]([ExtResource("10_orxvh"), ExtResource("9_cn5cx"), ExtResource("10_iur7x"), ExtResource("11_ekaux"), ExtResource("12_lxyca"), ExtResource("13_48ymn"), ExtResource("14_3utbs"), ExtResource("15_6ttdi"), ExtResource("16_yykic"), ExtResource("17_ctjbu"), ExtResource("18_jjijm"), ExtResource("19_j8fw8"), ExtResource("20_i2lus"), ExtResource("21_tjtar"), ExtResource("22_sh5u6"), ExtResource("23_uuvrv"), ExtResource("24_1rmwa"), ExtResource("25_bo5wh"), ExtResource("26_lue84"), ExtResource("27_xd1jb"), ExtResource("28_p7i6w"), ExtResource("29_insch"), ExtResource("30_chj6n"), ExtResource("31_2mi00"), ExtResource("32_3b74e"), ExtResource("33_ehr33"), ExtResource("34_r8wr5"), ExtResource("29_275f3"), ExtResource("30_v0t77"), ExtResource("31_sqtue"), ExtResource("32_vc3yk"), ExtResource("33_xapho"), ExtResource("34_dtcst"), ExtResource("35_62cmh"), ExtResource("36_fsr3v"), ExtResource("1_f7ye5"), ExtResource("2_iw83r"), ExtResource("3_f0iho"), ExtResource("4_vfdm2"), ExtResource("5_n6vb3"), ExtResource("10_82gi1"), ExtResource("43_kc6l2"), ExtResource("44_g22ml"), ExtResource("45_qwvm8"), ExtResource("46_3vhrs"), ExtResource("47_28pa2"), ExtResource("48_yw0mj")])
 default_catchables = Array[ExtResource("7_nbig8")]([])

@@ -4,9 +4,12 @@ extends MainUI
 @onready var container = $HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/ScrollContainer/VBoxContainer
 @onready var fish_entry_scene :PackedScene = preload("res://objects/UI/FishEntry.tscn")
 @onready var category_container = $HSplitContainer/MarginContainer2/Categories
+@onready var remaining_fishes_label = $HSplitContainer/MarginContainer/NinePatchRect/RemainingFishesLabel
 
 var category_filter :CategoryRes.ELureCategory = CategoryRes.ELureCategory.FISH
 var fish_category :CategoryRes = preload("res://scripts/Resources/Categories/Fishes.tres")
+
+var nb_collected_by_category :int = 0
 
 
 func _on_ready():
@@ -33,10 +36,26 @@ func populate():
 	for node in container.get_children():
 		container.remove_child(node)
 	
-	for catchable in FishingManager.get_all_collected_by_category(category_filter):
+	var catchables_of_category = FishingManager.get_all_collected_by_category(category_filter)
+	nb_collected_by_category = catchables_of_category.size()
+	
+	_update_remaining_catchable()
+	
+	for catchable in catchables_of_category:
 		var item = fish_entry_scene.instantiate() as CollectedItem
 		container.add_child(item)
 		item.init(catchable)
+	
+	if category_filter == CategoryRes.ELureCategory.FISH:
+		for catchable in FishingManager.get_all_remaining_fishes():
+			var item = fish_entry_scene.instantiate() as CollectedItem
+			container.add_child(item)
+			item.init_shadow(catchable)
+
+
+func _update_remaining_catchable():
+	remaining_fishes_label.text = str(nb_collected_by_category) \
+		+ "/" + str(FishingManager.get_nb_total_catchable_by_category(category_filter))
 
 
 func update_category_list():

@@ -129,10 +129,9 @@ transform = Transform3D(1.00531, 0, 0, 0, 1.00531, 0, 0, 0, 1.00531, 0, 0, 0)
 script = ExtResource("2_mnper")
 
 [node name="anglerfish" parent="Catchables/Rock" index="0" instance=ExtResource("2_v24tt")]
-transform = Transform3D(1.05369, 0, 0.835699, 0.0350044, 1.47997, -0.0401989, -0.87496, 0.059209, 1.0048, -0.175321, -0.0491455, 0.624915)
-visible = false
-script = ExtResource("5_wlgjx")
+transform = Transform3D(0.757602, 0.00792746, 0.828635, 0.0294332, 1.245, -0.0338186, -0.867339, 0.0491738, 0.722648, -0.203269, -0.0164872, 0.671265)
 catchable = ExtResource("6_u0cnc")
+animation_name = "Armature_003Action"
 
 [node name="eel" parent="Catchables/Rock" index="1" instance=ExtResource("3_e78la")]
 transform = Transform3D(1.27654, 0, 1.53963, 0, 2, 0, -1.53963, 0, 1.27654, -0.0384444, 0.316403, 0.669456)

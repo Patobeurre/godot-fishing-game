@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://bmwupnkufkp8y"]
+
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_b1t51"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_e7bki"]
+[ext_resource type="Texture2D" uid="uid://d03cdmm2udq5q" path="res://sprites/Catchables/Fishes/ray_variant.png" id="2_t3akw"]
+[ext_resource type="PackedScene" uid="uid://fcjbcit80olj" path="res://objects/Catchables/Fishes/ray_variant.tscn" id="4_x8qap"]
+[ext_resource type="Texture2D" uid="uid://dpbm741d6k52v" path="res://sprites/Catchables/Fishes/rayvariant_shadow.png" id="5_rdm7i"]
+
+[resource]
+script = ExtResource("1_e7bki")
+id = 50
+name = "F_RAYVARIANT_NAME"
+description = "F_RAYVARIANT_DESCR"
+notification_text = ""
+category = ExtResource("1_b1t51")
+tags = Array[int]([0, 2])
+image = ExtResource("2_t3akw")
+shadow = ExtResource("5_rdm7i")
+scene = ExtResource("4_x8qap")
+rarity = 30
+price = 41
+periods = Array[int]([2, 3])
+lures = Array[ExtResource("1_e7bki")]([])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([1, 4])

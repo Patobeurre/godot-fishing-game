@@ -223,6 +223,19 @@ patch_margin_bottom = 10
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[node name="RemainingFishesLabel" type="RichTextLabel" parent="HSplitContainer/MarginContainer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -97.0
+offset_bottom = 42.0
+grow_horizontal = 0
+bbcode_enabled = true
+text = "10/200"
+fit_content = true
+autowrap_mode = 0
+
 [node name="VSplitContainer" type="VSplitContainer" parent="HSplitContainer/MarginContainer"]
 layout_mode = 2
 

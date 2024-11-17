@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d167burb3u3vi"
-path="res://.godot/imported/sole.png-ea5d76fdeb1f1bad0def5d58c77f7cad.ctex"
+uid="uid://bb6u8v2m6kl5l"
+path="res://.godot/imported/tetrahedra_shadow.png-353b3d61207dbb19b0a5310e69270d90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Catchables/sole.png"
-dest_files=["res://.godot/imported/sole.png-ea5d76fdeb1f1bad0def5d58c77f7cad.ctex"]
+source_file="res://sprites/Catchables/Fishes/tetrahedra_shadow.png"
+dest_files=["res://.godot/imported/tetrahedra_shadow.png-353b3d61207dbb19b0a5310e69270d90.ctex"]
 
 [params]
 

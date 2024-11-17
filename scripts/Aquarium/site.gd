@@ -21,6 +21,8 @@ func _display_catchable(node :Node3D):
 	for child in children_scenes:
 		if child == node:
 			child.visible = true
+			if child.has_method("play_animation"):
+				child.play_animation()
 		else:
 			child.visible = false
 

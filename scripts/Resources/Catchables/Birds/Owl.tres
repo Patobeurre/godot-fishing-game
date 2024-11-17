@@ -1,9 +1,8 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://cmy83gqx0obf7"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=5 format=3 uid="uid://cmy83gqx0obf7"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_7s2ip"]
 [ext_resource type="Texture2D" uid="uid://b7a87rccjfgpt" path="res://sprites/Catchables/owl.png" id="1_b07dr"]
 [ext_resource type="Resource" uid="uid://catedw4i7v6px" path="res://scripts/Resources/Categories/Animals.tres" id="1_yuq4k"]
-[ext_resource type="Resource" uid="uid://cjjmht2jv5pua" path="res://scripts/Resources/Catchables/Insects/Worm.tres" id="2_qlx2t"]
 [ext_resource type="PackedScene" uid="uid://conh8juoubpfq" path="res://objects/Catchables/owl.tscn" id="3_rdyvv"]
 
 [resource]
@@ -19,6 +18,6 @@ scene = ExtResource("3_rdyvv")
 rarity = 15
 price = 0
 periods = Array[int]([3])
-lures = Array[ExtResource("1_7s2ip")]([ExtResource("2_qlx2t")])
+lures = Array[ExtResource("1_7s2ip")]([])
 lure_ids = Array[int]([])
 lure_tags = Array[int]([4, 1])

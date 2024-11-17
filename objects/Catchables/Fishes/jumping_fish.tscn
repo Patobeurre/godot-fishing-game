@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctmb0bsom34n3"]
+[gd_scene load_steps=3 format=3 uid="uid://ctmb0bsom34n3"]
 
 [ext_resource type="PackedScene" uid="uid://cdl3hl42gn3e7" path="res://models/Catchables/Fishes/jumping_fish.glb" id="1_ijxuj"]
+[ext_resource type="Script" path="res://objects/Catchables/Fishes/jumping_fish.gd" id="2_fnbub"]
 
 [node name="jumping_fish" instance=ExtResource("1_ijxuj")]
+script = ExtResource("2_fnbub")
 
 [node name="Armature" parent="." index="0"]
 transform = Transform3D(0.2, 0, 0, 0, -0.2, 3.01992e-08, 0, -3.01992e-08, -0.2, 0, 0, 0)
