@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=4 format=3 uid="uid://c52n5cpdlsqf2"]
+[gd_resource type="VisualShader" load_steps=5 format=3 uid="uid://c52n5cpdlsqf2"]
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_ljbu0"]
 output_port_for_preview = 0
@@ -8,6 +8,10 @@ source = 5
 [sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_07k8o"]
 parameter_name = "Texture2DParameter"
 
+[sub_resource type="VisualShaderNodeBooleanParameter" id="VisualShaderNodeBooleanParameter_jg817"]
+parameter_name = "NoDepth"
+default_value_enabled = true
+
 [sub_resource type="VisualShaderNodeBillboard" id="VisualShaderNodeBillboard_4ks84"]
 
 [resource]
@@ -15,6 +19,7 @@ code = "shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
 
 uniform sampler2D Texture2DParameter;
+uniform bool NoDepth = false;
 
 
 
@@ -40,13 +45,19 @@ void fragment() {
 	float n_out2p4 = n_out2p0.a;
 
 
+// BooleanParameter:5
+	bool n_out5p0 = NoDepth;
+
+
 // Output:0
 	ALBEDO = vec3(n_out2p0.xyz);
 	ALPHA = n_out2p4;
+	DEPTH = (n_out5p0 ? 1.0 : 0.0);
 
 
 }
 "
+graph_offset = Vector2(-143.898, 870.708)
 nodes/vertex/2/node = SubResource("VisualShaderNodeBillboard_4ks84")
 nodes/vertex/2/position = Vector2(-140, 380)
 nodes/vertex/connections = PackedInt32Array(2, 0, 0, 10)
@@ -54,4 +65,6 @@ nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_ljbu0")
 nodes/fragment/2/position = Vector2(-200, 300)
 nodes/fragment/3/node = SubResource("VisualShaderNodeTexture2DParameter_07k8o")
 nodes/fragment/3/position = Vector2(-640, 340)
-nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0, 2, 4, 0, 1, 3, 0, 2, 2)
+nodes/fragment/5/node = SubResource("VisualShaderNodeBooleanParameter_jg817")
+nodes/fragment/5/position = Vector2(0, 900)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0, 2, 4, 0, 1, 3, 0, 2, 2, 5, 0, 0, 23)

@@ -107,6 +107,7 @@ shadow_mesh = SubResource("ArrayMesh_iti55")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l4xp6"]
 render_priority = 0
 shader = ExtResource("2_4ca3n")
+shader_parameter/NoDepth = true
 shader_parameter/Texture2DParameter = ExtResource("3_12fqs")
 
 [sub_resource type="QuadMesh" id="QuadMesh_cigvi"]
@@ -203,6 +204,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.324538, 0)
 layers = 4
 material_override = SubResource("ShaderMaterial_l4xp6")
+cast_shadow = 0
 mesh = SubResource("QuadMesh_cigvi")
 skeleton = NodePath("../..")
 
