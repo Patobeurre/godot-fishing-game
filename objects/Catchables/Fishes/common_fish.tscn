@@ -4,5 +4,15 @@
 
 [node name="common_fish" instance=ExtResource("1_h6tg2")]
 
-[node name="common_fish_merged_001" parent="." index="0"]
-transform = Transform3D(-1.74846e-10, 0, 0.004, 0, 0.04, 0, -0.004, 0, -1.74846e-10, 0, -0.0376254, 0)
+[node name="Skeleton3D" parent="Armature_004" index="0"]
+bones/0/rotation = Quaternion(-0.698515, 7.85804e-17, 7.85761e-17, 0.715595)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/rotation = Quaternion(-0.0120819, 6.66073e-22, -1.11044e-16, 0.999927)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/rotation = Quaternion(-0.0147156, 4.35187e-22, 3.2248e-18, 0.999892)
+bones/3/rotation = Quaternion(0.0147102, 5.23184e-22, -3.30189e-18, 0.999892)
+bones/4/rotation = Quaternion(7.41264e-06, 9.00763e-27, -3.03078e-20, 1)
+bones/5/rotation = Quaternion(5.76821e-06, 5.0193e-27, -2.42872e-20, 1)
+bones/6/rotation = Quaternion(4.12123e-06, 1.70517e-27, -1.70532e-20, 1)
+bones/7/rotation = Quaternion(2.30828e-06, 2.25959e-28, -9.71762e-21, 1)
+bones/8/scale = Vector3(1, 1, 1)

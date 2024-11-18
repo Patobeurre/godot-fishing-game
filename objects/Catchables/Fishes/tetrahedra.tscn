@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://debge5wflq0ro" path="res://models/Catchables/Fishes/tetrahedra.glb" id="1_em6wj"]
 
-[node name="Node3D" type="Node3D"]
+[node name="TetrahedraFish" type="Node3D"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="tetrahedra" parent="." instance=ExtResource("1_em6wj")]

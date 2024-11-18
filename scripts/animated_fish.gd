@@ -2,7 +2,7 @@ extends Node3D
 class_name AnimatedFish
 
 
-@onready var animation_player := $anglerfish/AnimationPlayer
+@onready var animation_player := $fish/AnimationPlayer
 
 @export var catchable :CatchableRes
 @export var animation_name :String

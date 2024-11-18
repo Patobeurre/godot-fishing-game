@@ -32,7 +32,6 @@
 [ext_resource type="PackedScene" uid="uid://cuuyabi06oael" path="res://objects/Catchables/Fishes/whale.tscn" id="17_woct7"]
 [ext_resource type="Resource" uid="uid://l45j43d051lt" path="res://scripts/Resources/Catchables/Fishes/Squid.tres" id="18_q0taw"]
 [ext_resource type="PackedScene" uid="uid://cs0vfc6pvn5br" path="res://objects/Catchables/Fishes/small_fish.tscn" id="19_qorwu"]
-[ext_resource type="PackedScene" uid="uid://bm531nn8kofqh" path="res://objects/Catchables/Fishes/common_fish.tscn" id="20_2vykv"]
 [ext_resource type="Resource" uid="uid://b6hwf8hmftnpf" path="res://scripts/Resources/Catchables/Anemone.tres" id="20_ybk4u"]
 [ext_resource type="PackedScene" uid="uid://clh7nthnskyta" path="res://objects/Catchables/coral.tscn" id="21_sjdmj"]
 [ext_resource type="PackedScene" uid="uid://dsbrgvalqqpsk" path="res://objects/Catchables/Fishes/pilchard.tscn" id="21_vj7pj"]
@@ -50,6 +49,7 @@
 [ext_resource type="Resource" uid="uid://bm5o061am665" path="res://scripts/Resources/Catchables/Fishes/Pilchard.tres" id="35_rnscv"]
 [ext_resource type="Resource" uid="uid://btttncot63v31" path="res://scripts/Resources/Catchables/Fishes/Pike.tres" id="37_tu6rj"]
 [ext_resource type="Resource" uid="uid://ckn0dd4qsktng" path="res://scripts/Resources/Catchables/Fishes/Sole.tres" id="39_0elae"]
+[ext_resource type="PackedScene" uid="uid://byxixi66f0aen" path="res://objects/Catchables/Fishes/commonfish.tscn" id="39_gwmf4"]
 [ext_resource type="PackedScene" uid="uid://u7ampbbdwgks" path="res://objects/Catchables/Fishes/muskie.tscn" id="45_ku23q"]
 [ext_resource type="Resource" uid="uid://crl02r3tu7cqn" path="res://scripts/Resources/Catchables/Fishes/Muskie.tres" id="46_7okg4"]
 [ext_resource type="Resource" uid="uid://6yh568jbps3l" path="res://scripts/Resources/Catchables/Fishes/ClownFish.tres" id="46_uu4h0"]
@@ -130,6 +130,7 @@ script = ExtResource("2_mnper")
 
 [node name="anglerfish" parent="Catchables/Rock" index="0" instance=ExtResource("2_v24tt")]
 transform = Transform3D(0.757602, 0.00792746, 0.828635, 0.0294332, 1.245, -0.0338186, -0.867339, 0.0491738, 0.722648, -0.203269, -0.0164872, 0.671265)
+visible = false
 catchable = ExtResource("6_u0cnc")
 animation_name = "Armature_003Action"
 
@@ -250,10 +251,9 @@ visible = false
 script = ExtResource("5_wlgjx")
 catchable = ExtResource("31_koetm")
 
-[node name="common_fish" parent="Catchables/SmallFish" index="1" instance=ExtResource("20_2vykv")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+[node name="CommonFish" parent="Catchables/SmallFish" index="1" instance=ExtResource("39_gwmf4")]
+transform = Transform3D(0.27354, 0, -0.961861, 0, 1, 0, 0.961861, 0, 0.27354, 0, 0, 0)
 visible = false
-script = ExtResource("5_wlgjx")
 catchable = ExtResource("33_hws16")
 
 [node name="pilchard" parent="Catchables/SmallFish" index="2" instance=ExtResource("21_vj7pj")]
