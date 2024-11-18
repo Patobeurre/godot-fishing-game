@@ -4,9 +4,12 @@ extends Node3D
 @onready var desk_body = $Cube_022/StaticBody3D
 @onready var drawer_body = $Cube_128/StaticBody3D
 @onready var drawer_mesh = $Cube_128
-@onready var left_symbol = $Cylinder_014
-@onready var right_symbol = $Cylinder_015
+@onready var left_symbol_mesh = $Cylinder_014
+@onready var right_symbol_mesh = $Cylinder_015
 @onready var drawer_camera = $Camera3D
+
+@onready var left_symbol = $Cylinder_014/StaticBody3D
+@onready var right_symbol = $Cylinder_015/StaticBody3D
 
 @onready var state_machine := $FiniteStateMachine
 @onready var inactive_state := $InactiveState
@@ -59,7 +62,7 @@ func end_rotation():
 func on_completed():
 	_place_completed_symbols()
 	
-	#ProgressVariables.update_progress_variable("drawer_riddle_completed", true)
+	ProgressVariables.update_progress_variable("drawer_riddle_completed", true)
 	SignalBus.end_camera_interaction.emit()
 	anim_open_drawer()
 
@@ -133,17 +136,7 @@ func anim_open_drawer():
 
 
 func _check_completion() -> bool:
-	var a :int = abs(rad_to_deg(left_symbol.rotation.x))
-	var b :int = abs(rad_to_deg(right_symbol.rotation.x))
-	print(a)
-	print(b)
-	
-	if a <= 175 or a >= 185:
-		return false
-	if b <= 175 or b >= 185:
-		return false
-	
-	return true
+	return left_symbol.check_completion() && right_symbol.check_completion()
 
 
 func _set_inactive():
@@ -152,10 +145,8 @@ func _set_inactive():
 
 
 func _place_completed_symbols():
-	left_symbol.rotation.x = deg_to_rad(180)
-	right_symbol.rotation.x = deg_to_rad(180)
-	left_symbol.reparent(drawer_mesh)
-	right_symbol.reparent(drawer_mesh)
+	left_symbol.set_completed(drawer_mesh)
+	right_symbol.set_completed(drawer_mesh)
 
 
 func interact_desk():

@@ -31,6 +31,7 @@ layers = 1025
 script = ExtResource("2_2tydl")
 custom_modifier = -1.0
 clamp_angle = 45.0
+validation_angle = -135.0
 
 [node name="Cylinder_016" parent="." index="3"]
 layers = 1025
@@ -39,6 +40,7 @@ layers = 1025
 script = ExtResource("2_2tydl")
 custom_modifier = -1.0
 clamp_angle = 45.0
+validation_angle = 180.0
 
 [node name="Cylinder_018" parent="." index="4"]
 layers = 1025
@@ -47,6 +49,7 @@ layers = 1025
 script = ExtResource("2_2tydl")
 custom_modifier = -1.0
 clamp_angle = 45.0
+validation_angle = 45.0
 
 [node name="FiniteStateMachine" type="Node" parent="." index="5"]
 script = ExtResource("4_rcdje")

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="LetterRes" load_steps=3 format=3 uid="uid://d1ogbambho8mr"]
+
+[ext_resource type="Script" path="res://scripts/Resources/Documents/Letter.gd" id="1_0mggl"]
+[ext_resource type="PackedScene" uid="uid://b6qea5cm4ewui" path="res://objects/UI/DocumentLetter.tscn" id="1_l475h"]
+
+[resource]
+script = ExtResource("1_0mggl")
+header = "LETTER_SUNFLOWER_HEADER"
+body = "LETTER_SUNFLOWER_BODY"
+footer = ""
+receive_day_count = 0
+name = "LETTER_SUNFLOWER_NAME"
+scene = ExtResource("1_l475h")

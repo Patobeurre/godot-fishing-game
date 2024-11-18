@@ -11,3 +11,7 @@ LETTER_TWINTREES_FOOTER;;
 ;;
 FLYER_AD_NEW_PRODUCT;[PUB] nouveau produit !;[AD] new product
 FLYER_AD_CONSTRUCT;[PUB] immobilier;[AD] real-estate
+;;
+LETTER_SUNFLOWER_NAME;Observations sur les tournesols;Sunflowers observations
+LETTER_SUNFLOWER_HEADER;Rapport du 10/05/94 – 10h28;Report of 10/05/95 – 10h28
+LETTER_SUNFLOWER_BODY;Température du sol : 12°C\nHauteur : 1,3m\nRayon de la fleur : 18cm\n\nJ’ai noté un comportement inhabituel pour ce type de plante, les tournesols ici ne suivent pas le soleil. Peut-être que la position anormalement variable de ce dernier ne leur permet pas de le faire ?;Ground temperature : 12°C\nHeight : 1,3m\nFlower radius : 18cm\n\nI noticed an unusual behavior for this type of plant: the sunflowers here don't follow the sun. Perhaps the sun's abnormally variable position prevents them from doing so?

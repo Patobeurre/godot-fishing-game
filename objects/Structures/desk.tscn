@@ -64,6 +64,7 @@ layers = 1025
 collision_layer = 512
 script = ExtResource("5_peeyc")
 custom_modifier = -1.0
+validation_angle = 180.0
 
 [node name="Cylinder_015" parent="." index="9"]
 transform = Transform3D(-3.0598e-09, 0.007, 0, -0.07, -3.0598e-10, 0, 0, 0, 0.07, 0.318149, 0.398772, 0.71506)
@@ -72,6 +73,7 @@ layers = 1025
 [node name="StaticBody3D" parent="Cylinder_015" index="0"]
 collision_layer = 512
 script = ExtResource("5_peeyc")
+validation_angle = 180.0
 
 [node name="Camera3D" type="Camera3D" parent="." index="10"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.51659, 0.397395, 0.784513)

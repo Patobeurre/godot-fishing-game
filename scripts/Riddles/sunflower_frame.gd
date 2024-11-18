@@ -4,6 +4,10 @@ extends Node3D
 @onready var interact_body = $Plane_038/StaticBody3D
 @onready var camera = $Camera3D
 
+@onready var blue_flower = $Cylinder_017/StaticBody3D
+@onready var green_flower = $Cylinder_016/StaticBody3D
+@onready var purple_flower = $Cylinder_018/StaticBody3D
+
 @onready var state_machine := $FiniteStateMachine
 @onready var default_state := $DefaultState
 @onready var dragged_state := $DraggedState
@@ -11,6 +15,8 @@ extends Node3D
 
 var initial_intersection :Dictionary = {}
 var current_angle :float = 0.0
+
+@onready var document = preload("res://scripts/Resources/Documents/SunflowerNote.tres")
 
 
 func _ready() -> void:
@@ -30,7 +36,12 @@ func stop_dragging():
 
 
 func on_completed():
+	_place_completed_symbols()
+	
 	ProgressVariables.update_progress_variable("sunflower_riddle_completed", true)
+	var documents = DocumentList.create([document])
+	MailManager.add_documents_to_inventory(documents)
+	SignalBus.show_documents_request.emit(documents)
 	SignalBus.end_camera_interaction.emit()
 
 
@@ -84,22 +95,15 @@ func raycast_at_mouse_position(mask :int = 255):
 
 
 func _check_completion() -> bool:	
-	var angle_blue :int = fmod(rad_to_deg($Cylinder_016.rotation.x), 360)
-	var angle_green :int = fmod(rad_to_deg($Cylinder_017.rotation.x), 360)
-	var angle_purple :int = fmod(rad_to_deg($Cylinder_018.rotation.x), 360)
-	
-	print(angle_blue)
-	print(angle_green)
-	print(angle_purple)
-	
-	if angle_blue <= -185 or angle_blue >= -175:
-		return false
-	if angle_green <= -140 or angle_green >= -130:
-		return false
-	if angle_purple <= 40 or angle_purple >= 50:
-		return false
-	
-	return true
+	return blue_flower.check_completion() and \
+		green_flower.check_completion() and \
+		purple_flower.check_completion()
+
+
+func _place_completed_symbols():
+	blue_flower.set_completed(self)
+	green_flower.set_completed(self)
+	purple_flower.set_completed(self)
 
 
 func _on_interact():
