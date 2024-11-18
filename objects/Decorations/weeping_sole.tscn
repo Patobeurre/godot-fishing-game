@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://batlao0a2j2mi"]
+
+[ext_resource type="PackedScene" uid="uid://cpyc3atl7grw8" path="res://models/Decorations/weeping_sole.glb" id="1_hx616"]
+
+[node name="weeping_sole" instance=ExtResource("1_hx616")]

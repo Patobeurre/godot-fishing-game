@@ -9,6 +9,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5i23c"]
 render_priority = 0
 shader = ExtResource("2_44r4y")
+shader_parameter/NoDepth = true
 shader_parameter/Texture2DParameter = ExtResource("5_ashi7")
 
 [sub_resource type="QuadMesh" id="QuadMesh_88yn2"]
