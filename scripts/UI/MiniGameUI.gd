@@ -45,8 +45,15 @@ func _on_ready():
 	max_cursor_pos = (width / 2) + (bar_container_width / 2) - bar_container_lateral_offset
 
 
+func _remove_bars():
+	for child in bars.get_children():
+		bars.remove_child(child)
+
+
 func load_minigame():
 	catchable = FishingManager.picked_catchable
+	
+	_remove_bars()
 	
 	if catchable.tags.has(CatchableRes.ELureTag.MULTIPLE_LEGS):
 		minigame_sm.set_current_state(moving_dots_state)
