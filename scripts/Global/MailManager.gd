@@ -21,6 +21,11 @@ func on_new_day(day_count :int):
 		mail_received.emit()
 
 
+func add_documents_to_inventory(documents :DocumentList):
+	for document in documents.document_list:
+		mail_stats.add_to_inventory(document)
+
+
 func get_next_mail() -> DocumentRes:
 	if not mail_stats.has_pending_mail(): return null
 	

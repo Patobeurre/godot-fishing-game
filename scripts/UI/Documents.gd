@@ -4,9 +4,15 @@ extends MainUI
 @onready var container = $MarginContainer
 @onready var showing_await_timer :Timer = $ShowingTimer
 
+
+var documents_to_show :DocumentList
 var current_document :DocumentRes
 
 var is_document_shown :bool = false
+
+
+func _on_ready() -> void:
+	SignalBus.show_documents_request.connect(_on_show_documents_request)
 
 
 func _on_process(delta):
@@ -27,10 +33,10 @@ func _on_input(event):
 
 
 func try_read_next_document() -> bool:
-	if not MailManager.has_pending_mail():
+	if documents_to_show.document_list.is_empty():
 		return false
 	
-	current_document = MailManager.get_next_mail()
+	current_document = documents_to_show.document_list.pop_front()
 	
 	if current_document == null:
 		return false
@@ -56,6 +62,11 @@ func show_document():
 
 func _on_showing_timer_timeout() -> void:
 	is_document_shown = false
+
+
+func _on_show_documents_request(documents :DocumentList):
+	documents_to_show = documents
+	UiManager.open(unique_id)
 
 
 func _on_activate():

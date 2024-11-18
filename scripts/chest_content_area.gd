@@ -21,7 +21,9 @@ func perform():
 		
 		await get_tree().create_timer(1).timeout
 		
-		UiManager.open("Documents")
+		#UiManager.open("Documents")
+		MailManager.add_documents_to_inventory(content_document)
+		SignalBus.show_documents_request.emit(content_document)
 	
 	FishingManager.cancel()
 

@@ -145,7 +145,6 @@ unique_id = "LureCollection"
 
 [node name="Documents" parent="." instance=ExtResource("13_f4pdh")]
 visible = false
-unique_id = "Documents"
 
 [node name="IdentificationBook" parent="." instance=ExtResource("13_tksfk")]
 visible = false

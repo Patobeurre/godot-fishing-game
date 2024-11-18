@@ -31,4 +31,6 @@ func display_mail_billboard(enabled :bool):
 func interact():
 	if MailManager.has_pending_mail():
 		display_mail_billboard(false)
-		UiManager.open("Documents")
+		MailManager.add_documents_to_inventory(MailManager.get_pending_mails())
+		SignalBus.show_documents_request.emit(MailManager.get_pending_mails())
+		#UiManager.open("Documents")

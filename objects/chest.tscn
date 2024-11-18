@@ -17,6 +17,7 @@ document_list = Array[ExtResource("5_4pthk")]([ExtResource("6_41nii")])
 [sub_resource type="Resource" id="Resource_6jth5"]
 script = ExtResource("6_7nwq4")
 name = ""
+type = 0
 waiting_time = 0.01
 catchables = Array[ExtResource("4_2bxtc")]([])
 default_catchables = Array[ExtResource("4_2bxtc")]([])

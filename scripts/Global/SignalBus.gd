@@ -17,6 +17,8 @@ signal lure_added(CollectedCatchable)
 signal new_lure_registered(CatchableRes)
 signal cancel_fishing
 
+signal show_documents_request(DocumentList)
+
 signal basket_added(BasketRes)
 signal basket_available(bool)
 
