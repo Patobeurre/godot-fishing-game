@@ -8,7 +8,7 @@
 script = ExtResource("1_5pw0i")
 id = 4
 name = "F_LURE_NAME"
-description = "s"
+description = ""
 notification_text = ""
 category = ExtResource("1_kumjs")
 tags = Array[int]([])

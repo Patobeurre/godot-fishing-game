@@ -360,14 +360,14 @@ func handle_interaction():
 	
 	if raycast_interact.is_colliding() and \
 		coll.is_in_group("Interactable"):
-		
-		is_interacting = true
-		enable_fishing_controls(false)
-		hud.enable_crosshair(false)
-		label_interact.text = coll.interact_text
-		$InteractUI.show()
-		if Input.is_action_just_pressed("interact"):
-			coll.interact()
+		if not coll.is_disabled():
+			is_interacting = true
+			enable_fishing_controls(false)
+			hud.enable_crosshair(false)
+			label_interact.text = coll.interact_text
+			$InteractUI.show()
+			if Input.is_action_just_pressed("interact"):
+				coll.interact()
 	else:
 		if is_interacting:
 			is_interacting = false

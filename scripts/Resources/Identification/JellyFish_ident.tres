@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_8qnmw")
 matching_catchable = ExtResource("1_xxkau")
-name = ""
+name = "Pelophylax sphotis"
 size = "F_SIZE_MEDIUM"
 habitat = "FA_DEEP"
 description = "F_JELLYFISH_IDENT_DESCR"

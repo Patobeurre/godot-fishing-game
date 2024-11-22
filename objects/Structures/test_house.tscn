@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b3h8dbli33h2x"]
+[gd_scene load_steps=11 format=3 uid="uid://b3h8dbli33h2x"]
 
 [ext_resource type="PackedScene" uid="uid://d311niu0yc017" path="res://models/Structures/test_house.glb" id="1_btod8"]
 [ext_resource type="PackedScene" uid="uid://jpcqna82x0yo" path="res://objects/Structures/bed.tscn" id="2_fchod"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://c7ypwv6eb2jgw" path="res://objects/FishingGear.tscn" id="6_w6ikm"]
 [ext_resource type="PackedScene" uid="uid://dlkks82dwpwbt" path="res://objects/Decorations/aquarium.tscn" id="7_6fh1t"]
 [ext_resource type="PackedScene" uid="uid://snu48fhdllig" path="res://objects/Riddles/sunflowers/sunflower_frame.tscn" id="8_e3rwx"]
+[ext_resource type="PackedScene" uid="uid://4y6jtwn8tan1" path="res://objects/Riddles/platon_fish_support.tscn" id="9_m8otl"]
+[ext_resource type="PackedScene" uid="uid://cgvg72p4n8rdf" path="res://objects/Riddles/platon_fish_riddle.tscn" id="10_q43r1"]
 
 [node name="test_house" instance=ExtResource("1_btod8")]
 
@@ -80,7 +82,7 @@ mass = 80.0
 transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, 2.36388, 1.77737, 3.34916)
 
 [node name="desk" parent="." index="20" instance=ExtResource("5_o7upv")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 1.62193, 0.391024, 2.7883)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 1.85669, 0.391024, 2.7883)
 
 [node name="FishingGear" parent="." index="21" instance=ExtResource("6_w6ikm")]
 transform = Transform3D(0.353526, 0, -0.484788, 0, 0.6, 0, 0.484788, 0, 0.353526, 3.20427, 0.30923, -3.17496)
@@ -89,4 +91,10 @@ transform = Transform3D(0.353526, 0, -0.484788, 0, 0.6, 0, 0.484788, 0, 0.353526
 transform = Transform3D(-3.49691e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.49691e-08, -1.14323, 1.16538, -2.78619)
 
 [node name="sunflower_frame" parent="." index="23" instance=ExtResource("8_e3rwx")]
-transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 1.77371, 1.30004, -3.28703)
+transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 1.77371, 1.24325, -3.29821)
+
+[node name="platon_fish_support" parent="." index="24" instance=ExtResource("9_m8otl")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1.78217, 1.25138, -3.37413)
+
+[node name="PlatonFishRiddle" parent="." index="25" instance=ExtResource("10_q43r1")]
+transform = Transform3D(-2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, -0.0636902, 1.27773, 3.44313)

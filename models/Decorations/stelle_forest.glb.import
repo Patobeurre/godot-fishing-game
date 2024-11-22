@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bf27qa7lyx2ux"
+uid="uid://b0ntvbhb0xvat"
 path="res://.godot/imported/stelle_forest.glb-d239b404d663e1fb81bf39f911f544e7.scn"
 
 [deps]
@@ -33,7 +33,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:Cube_126": {
+"PATH:stelle_forest_merged": {
 "generate/physics": true,
 "physics/shape_type": 1
 }

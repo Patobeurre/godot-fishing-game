@@ -68,12 +68,12 @@ F_WHALE_DESCR;Sans doute le plus gros poisson des océans.;Probably the biggest 
 F_WHALE_IDENT_DESCR;;
 ;;
 F_JELLYFISHROBE_NAME;Méduse à longue robe;Jellyfish with long dress
-F_JELLYFISHROBE_DESCR;;
-F_JELLYFISHROBE_IDENT_DESCR;;
+F_JELLYFISHROBE_DESCR;Son coeur est protégé par de nombreux filament électrifiés.;His heart is protected by numerous electrified filaments.
+F_JELLYFISHROBE_IDENT_DESCR;Contrairement à [i]Pelophylax sphotis[/i], ce specimen ne sort que la nuit.;Unlike [i]Pelophylax sphotis[/i], this specimen only comes out at night.
 ;;
 F_JELLYFISH_NAME;Méduse;Jellyfish
-F_JELLYFISH_DESCR;;
-F_JELLYFISH_IDENT_DESCR;;
+F_JELLYFISH_DESCR;Son chapeau s’écrase lorsqu’on appuie dessus.;His hat squishes when pressed.
+F_JELLYFISH_IDENT_DESCR;Son ombrelle gélatineuse cache une chair rosée très tendre. \n\nNote : La chair est très goûteuse et se marie très bien avec du citron ! \n\nErratum : ne PAS manger la chair, risque élevé d’indigestion;Its gelatinous umbrella hides very tender pink flesh. \n\nNote: The flesh is very tasty and goes very well with lemon! \n\nErratum : Do NOT eat the flesh, as there is a high risk of indigestion.
 ;;
 F_HERMITCRAB_NAME;Bernard l’ermite;Hermit crab
 F_HERMITCRAB_DESCR;Très discret. Se cache dans des coquilles vides.;Very discrete. Hide inside seashells.
@@ -88,8 +88,8 @@ F_MUSSELS_DESCR;;
 F_MUSSELS_IDENT_DESCR;;
 ;;
 F_BOMBFISH_NAME;Poisson bombe;Bomb fish
-F_BOMBFISH_DESCR;;
-F_BOMBFISH_IDENT_DESCR;;
+F_BOMBFISH_DESCR;Un poisson à la forme étrange…;A weird shaped fish…
+F_BOMBFISH_IDENT_DESCR;Ce poisson semble tout pouvoir digérer. Même les cailloux, qui compose sa principale source d’alimentation. \n\nNote : N’approchez JAMAIS ce spécimen d’une formation rocheuse !! L’excès de roche cause chez lui une réaction… détonante.;This fish seems to be able to digest anything. Even rocks, its main source of nourishment. \n\nNote: NEVER approach this specimen near a rock formation !! Excessive rock exposure causes an explosive reaction,
 ;;
 F_SUNFISH_NAME;???;???
 F_SUNFISH_DESCR;Il brûle lentement ma peau;Burn slightly in my hands
@@ -100,7 +100,7 @@ F_HIDDENFISH_DESCR;Se cachant efficacement à l'intérieur d'une touffe d'algues
 F_HIDDENFISH_IDENT_DESCR;;
 ;;
 F_SHRIMP_NAME;Crevette;Shrimp
-F_SHRIMP_DESCR;;
+F_SHRIMP_DESCR;Semble agiter ses pattes en rythme.;Appears to be waving its paws rhythmically.
 F_SHRIMP_IDENT_DESCR;;
 ;;
 F_OCTOPUS_NAME;Pieuvre;Octopus
@@ -119,8 +119,16 @@ F_RAY_NAME;Raie;Ray
 F_RAY_DESCR;;
 F_RAY_IDENT_DESCR;;
 ;;
+F_TETRAHEDRA_NAME;Poisson tetra;Tetra fish
+F_TETRAHEDRA_DESCR;Un poisson à la forme étrange…;A weird shaped fish…
+F_TETRAHEDRA_IDENT_DESCR;Comme d’autre espèces, ce poisson s’enfouit dans le sable en journée. Cette technique, habituellement pratiquée à des fins de camouflage, semble totalement inefficace pour lui. En effet, sa forme particulière l’empêche de s’enfoncer dans le sable. Se nourrit d’aliment sucrés.;Like other species, this fish buries itself in the sand during the day. This technique, usually practiced for camouflage purposes, seems totally ineffective for this fish. Indeed, its particular shape prevents it from burrowing into the sand. Feeds on sweet foods.
+;;
+F_CUBE_NAME;Poisson anguleux;Angular fish
+F_CUBE_DESCR;Un poisson à la forme étrange…;A weird shaped fish…
+F_CUBE_IDENT_DESCR;Sa forme l’empêche de se mouvoir, mais lui apporte une protection efficace contre d’éventuels prédateurs : il est très difficile à ingérer sans douleur. \nVivant au grand large, il se nourrit de toute chose inanimée qui lui passe devant.;Its shape prevents it from moving, but provides effective protection against potential predators: it is very difficult to ingest without pain. \nLiving in the open sea, it feeds on anything inanimate that passes by.
+;;
 F_ANEMONE_NAME;Anemone;Anemone
-F_ANEMONE_DESCR;;
+F_ANEMONE_DESCR;Peut servir de refuge pour certains poissons.;Can serve as a refuge for certain fish.
 ;;
 F_CORAL_NAME;Corail;Coral
 F_CORAL_DESCR;;
@@ -146,7 +154,7 @@ F_BEE_DESCR;;
 F_BEETLE_NAME;Scarabée;Scarabée
 F_BEETLE_DESCR;;
 ;;
-F_BOOKWORM_NAME;Rat de bibliothèque;Book Worm
+F_BOOKWORM_NAME;Ver de bibliothèque;Book Worm
 F_BOOKWORM_DESCR;Un ver extrêmement intelligent.;A highly intellectual worm.
 ;;
 F_WORM_NAME;Ver de terre;Worm
@@ -175,3 +183,6 @@ F_SQUIREL_DESCR;Littéralement ton meilleur ami.;Literally your best friend.
 ;;
 F_STICK_NAME;Bâton;Stick
 F_STICK_DESCR;;
+;;
+F_FLOWER_NAME;Fleur;Flower
+F_FLOWER_DESCR;;

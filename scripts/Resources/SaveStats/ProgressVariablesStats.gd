@@ -7,4 +7,8 @@ class_name ProgressVariablesStats
 	"identification_book_obtained" : false,
 	"drawer_riddle_completed" : false,
 	"sunflower_riddle_completed" : false,
+	"platon_riddle_completed" : false,
+	"tetra_placed" : false,
+	"cube_placed" : false,
+	"sphere_placed" : false,
 }

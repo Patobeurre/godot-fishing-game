@@ -12,6 +12,8 @@ enum ELureTag {
 	CRUSTACEAN,
 	BOOKWORM,
 	MULTIPLE_LEGS,
+	SWEET,
+	STATIC,
 	NONE,
 }
 

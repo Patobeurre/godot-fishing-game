@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://b4kdes1c7wbcd"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_puopm"]
+[ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="1_ukb8m"]
+[ext_resource type="Texture2D" uid="uid://bd6syyxo841jg" path="res://sprites/Catchables/flower.png" id="2_1erj4"]
+[ext_resource type="Resource" uid="uid://clpf0htwtcdc4" path="res://scripts/Resources/Catchables/Insects/Bee.tres" id="3_2a8eg"]
+[ext_resource type="Resource" uid="uid://dcpvdafn7juyp" path="res://scripts/Resources/Catchables/Insects/Butterfly.tres" id="4_xbfsj"]
+[ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="6_4oxc4"]
+[ext_resource type="PackedScene" uid="uid://cbsjamylvqinu" path="res://objects/Catchables/flower.tscn" id="6_48d5f"]
+
+[resource]
+script = ExtResource("1_puopm")
+id = 52
+name = "F_FLOWER_NAME"
+description = "F_FLOWER_DESCR"
+notification_text = ""
+category = ExtResource("1_ukb8m")
+tags = Array[int]([11])
+image = ExtResource("2_1erj4")
+scene = ExtResource("6_48d5f")
+rarity = 15
+price = 0
+periods = Array[int]([0, 1, 2, 3])
+lures = Array[ExtResource("1_puopm")]([ExtResource("3_2a8eg"), ExtResource("4_xbfsj"), ExtResource("6_4oxc4")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([])

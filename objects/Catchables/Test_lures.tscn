@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://d2cy4arr18ptt"]
+[gd_scene load_steps=52 format=3 uid="uid://d2cy4arr18ptt"]
 
 [ext_resource type="PackedScene" uid="uid://dmyqppx7y0tw7" path="res://objects/bobber.tscn" id="1_dkc2c"]
 [ext_resource type="PackedScene" uid="uid://0ontd173otm6" path="res://objects/Catchables/true_mussels.tscn" id="2_vjnp4"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://k2w6cbfymx6d" path="res://objects/Catchables/Fishes/squid.tscn" id="8_lwn0k"]
 [ext_resource type="PackedScene" uid="uid://dwvo1g5miuqq0" path="res://objects/Catchables/Fishes/sole.tscn" id="9_2akmk"]
 [ext_resource type="PackedScene" uid="uid://cs0vfc6pvn5br" path="res://objects/Catchables/Fishes/small_fish.tscn" id="10_6lhj8"]
-[ext_resource type="PackedScene" uid="uid://bm531nn8kofqh" path="res://objects/Catchables/Fishes/common_fish.tscn" id="11_sypm8"]
 [ext_resource type="PackedScene" uid="uid://byxixi66f0aen" path="res://objects/Catchables/Fishes/commonfish.tscn" id="12_430fv"]
 [ext_resource type="PackedScene" uid="uid://d2fd3poip6bnf" path="res://objects/Catchables/worm.tscn" id="12_mpemc"]
 [ext_resource type="PackedScene" uid="uid://duomkf5djv3gn" path="res://objects/Catchables/beetle.tscn" id="13_rbrgt"]
@@ -50,6 +49,8 @@
 [ext_resource type="PackedScene" uid="uid://2nxkt61iymg6" path="res://objects/Catchables/snake.tscn" id="47_yhotx"]
 [ext_resource type="PackedScene" uid="uid://ctmb0bsom34n3" path="res://objects/Catchables/Fishes/jumping_fish.tscn" id="48_5dfek"]
 [ext_resource type="PackedScene" uid="uid://d4j0bcir26pue" path="res://objects/Catchables/Fishes/tetrahedra.tscn" id="49_32uyh"]
+[ext_resource type="PackedScene" uid="uid://cbsjamylvqinu" path="res://objects/Catchables/flower.tscn" id="50_bigdk"]
+[ext_resource type="PackedScene" uid="uid://dnd21dd2s6v4g" path="res://objects/Catchables/Fishes/cubefish.tscn" id="51_aoy0e"]
 
 [node name="TestLures" type="Node3D"]
 
@@ -83,10 +84,8 @@ visible = false
 [node name="small_fish" parent="." instance=ExtResource("10_6lhj8")]
 visible = false
 
-[node name="common_fish" parent="." instance=ExtResource("11_sypm8")]
+[node name="common_fish" parent="." instance=ExtResource("12_430fv")]
 visible = false
-
-[node name="Node3D2" parent="." instance=ExtResource("12_430fv")]
 
 [node name="worm" parent="." instance=ExtResource("12_mpemc")]
 visible = false
@@ -200,6 +199,11 @@ visible = false
 [node name="jumping_fish" parent="." instance=ExtResource("48_5dfek")]
 visible = false
 
-[node name="Node3D" parent="." instance=ExtResource("49_32uyh")]
+[node name="tetrahedra" parent="." instance=ExtResource("49_32uyh")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -0.0821287, 0)
 visible = false
+
+[node name="flower" parent="." instance=ExtResource("50_bigdk")]
+visible = false
+
+[node name="CubeFish" parent="." instance=ExtResource("51_aoy0e")]

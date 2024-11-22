@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbsjamylvqinu"]
+
+[ext_resource type="PackedScene" uid="uid://dfpmbgon6tqux" path="res://models/Catchables/flower.glb" id="1_mka3u"]
+
+[node name="flower" instance=ExtResource("1_mka3u")]
+
+[node name="flower_merged_010" parent="." index="0"]
+transform = Transform3D(-0.0611259, 0.0207476, -0.0179488, -0.0175393, 0.00415133, 0.0645301, -0.0210949, -0.0635713, -0.00164396, 0, -0.132385, 0.0437217)
+
+[node name="Cube_018" parent="." index="1"]
+transform = Transform3D(2.49143e-08, -2.80436e-16, 0.33, -0.122118, 0.306573, 9.21966e-09, -0.306573, -0.122118, 2.31456e-08, 0, -0.132385, 0.0437217)

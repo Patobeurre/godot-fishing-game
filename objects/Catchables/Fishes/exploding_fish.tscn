@@ -5,4 +5,5 @@
 [node name="exploding_fish" instance=ExtResource("1_auvtx")]
 
 [node name="Cube_050" parent="." index="0"]
-transform = Transform3D(-5.24537e-09, 0, 0.12, 0, 0.12, 0, -0.12, 0, -5.24537e-09, -0.0228767, -0.0934296, 0)
+transform = Transform3D(-3.49691e-09, 0, 0.08, 0, 0.08, 0, -0.08, 0, -3.49691e-09, -0.00796024, -0.0655817, 0)
+layers = 1025

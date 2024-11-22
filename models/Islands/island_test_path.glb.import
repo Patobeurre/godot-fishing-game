@@ -39,23 +39,23 @@ _subresources={
 "physics/mask": 257,
 "physics/shape_type": 2
 },
-"PATH:Plane_016": {
-"generate/physics": true,
-"physics/shape_type": 2
-},
-"PATH:Plane_018": {
-"generate/physics": true,
-"physics/shape_type": 2
-},
-"PATH:Plane_019": {
-"generate/physics": true,
-"physics/shape_type": 2
-},
-"PATH:Plane_020": {
-"generate/physics": true,
-"physics/shape_type": 2
-},
 "PATH:main_island": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:mountain_central": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:mountain_middle": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:mountain_small_down": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:mountain_small_up": {
 "generate/physics": true,
 "physics/shape_type": 2
 },

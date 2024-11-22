@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://4y6jtwn8tan1"]
+
+[ext_resource type="PackedScene" uid="uid://bbjcwlxc3l14i" path="res://models/Decorations/platon_fish_riddle/platon_fish_support.glb" id="1_sj211"]
+
+[node name="platon_fish_support" instance=ExtResource("1_sj211")]
+
+[node name="Cube_231" parent="." index="0"]
+transform = Transform3D(0.12, 0, 0, 0, 0.132, 0, 0, 0, 0.396, -0.0396103, 0, 0)
+layers = 1025
