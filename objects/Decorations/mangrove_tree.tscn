@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfol5m2msmymx"]
+
+[ext_resource type="PackedScene" uid="uid://d05lqdx5i4p8k" path="res://models/Decorations/mangrove_tree.glb" id="1_hvmno"]
+
+[node name="mangrove_tree" instance=ExtResource("1_hvmno")]

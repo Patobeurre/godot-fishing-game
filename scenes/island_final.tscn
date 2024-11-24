@@ -1,0 +1,332 @@
+[gd_scene load_steps=49 format=3 uid="uid://deqhnbp03hvqw"]
+
+[ext_resource type="Script" path="res://scripts/Global/SaveManager.gd" id="1_h358c"]
+[ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_iqhaf"]
+[ext_resource type="Script" path="res://scripts/weapon.gd" id="3_madii"]
+[ext_resource type="Resource" uid="uid://c56y8pqoyk15f" path="res://weapons/blaster.tres" id="4_6nvj3"]
+[ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="5_0cdmg"]
+[ext_resource type="Script" path="res://scripts/Global/DayNightController.gd" id="6_b15dy"]
+[ext_resource type="Gradient" uid="uid://crcfh5wou42yc" path="res://scripts/Resources/SkyGradientColors.tres" id="7_rcwhr"]
+[ext_resource type="PackedScene" uid="uid://dvixv20hvw8h3" path="res://scenes/UI/TimeChanger.tscn" id="8_m4l16"]
+[ext_resource type="PackedScene" uid="uid://f86v14046ito" path="res://scenes/UI/FishingMiniGame.tscn" id="9_he07t"]
+[ext_resource type="PackedScene" uid="uid://cgettvm74710g" path="res://scenes/UI/DocumentsCollection.tscn" id="10_g30ng"]
+[ext_resource type="PackedScene" uid="uid://u2so53vo6ln8" path="res://scenes/UI/FishCollection.tscn" id="11_i0vku"]
+[ext_resource type="PackedScene" uid="uid://m3tt8vwpks8u" path="res://scenes/UI/LureCollection.tscn" id="12_iga3f"]
+[ext_resource type="PackedScene" uid="uid://bhev5ajqkerru" path="res://scenes/UI/Documents.tscn" id="13_14xus"]
+[ext_resource type="PackedScene" uid="uid://cnn40g63c2lde" path="res://scenes/UI/IdentificationBook.tscn" id="14_60woi"]
+[ext_resource type="PackedScene" uid="uid://c16mj6fl3mn6n" path="res://scenes/UI/Notifications.tscn" id="15_fip7h"]
+[ext_resource type="PackedScene" uid="uid://2s07dga841f4" path="res://scenes/UI/MerchantMenu.tscn" id="16_ayp74"]
+[ext_resource type="PackedScene" uid="uid://14nyo1d1mork" path="res://scenes/UI/Settings/settings_menu.tscn" id="17_teh18"]
+[ext_resource type="PackedScene" uid="uid://b3h8dbli33h2x" path="res://objects/Structures/test_house.tscn" id="18_45p4s"]
+[ext_resource type="Script" path="res://scripts/fishing_area.gd" id="19_348kd"]
+[ext_resource type="PackedScene" uid="uid://657bdl7aknok" path="res://objects/Decorations/mailbox.tscn" id="20_d03gf"]
+[ext_resource type="Resource" uid="uid://csju71d6rfls" path="res://scripts/Resources/FishingAreas/island_A_water.tres" id="20_gxfyh"]
+[ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="21_ctxr5"]
+[ext_resource type="PackedScene" uid="uid://dpvpje0opov81" path="res://objects/Decorations/dock.tscn" id="21_fy6e0"]
+[ext_resource type="AudioStream" uid="uid://dre45x7pkgmd0" path="res://sounds/ambient/nature_ocean_distant_waves_surf_light_breeze_trees_84763.mp3" id="22_mtkru"]
+[ext_resource type="PackedScene" uid="uid://r03nc1e8rsjx" path="res://models/Islands/island_water_deep.tscn" id="22_txpv3"]
+[ext_resource type="PackedScene" uid="uid://cmpyaw5yxt3rj" path="res://objects/Structures/oil_tank_rigidbody.tscn" id="23_uc0xf"]
+[ext_resource type="PackedScene" uid="uid://dahpw84nqrsxd" path="res://objects/SmallIsland.tscn" id="24_kkqss"]
+[ext_resource type="PackedScene" uid="uid://dv3vmywlgreuo" path="res://objects/Structures/merchant_boat.tscn" id="25_ea634"]
+[ext_resource type="PackedScene" uid="uid://i6b4wm6daqyx" path="res://objects/Riddles/sunflowers/pot_blue.tscn" id="26_arhl4"]
+[ext_resource type="PackedScene" uid="uid://cxn7ui1hlg4wb" path="res://objects/Riddles/sunflowers/pot_green.tscn" id="27_5gwjp"]
+[ext_resource type="PackedScene" uid="uid://d3avs62j1llal" path="res://objects/terrain.tscn" id="28_2oe2w"]
+[ext_resource type="PackedScene" uid="uid://ckoq1mw5irsq2" path="res://objects/Riddles/sunflowers/pot_purple.tscn" id="28_wff56"]
+[ext_resource type="PackedScene" uid="uid://cfol5m2msmymx" path="res://objects/Decorations/mangrove_tree.tscn" id="33_ryfee"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rmnfe"]
+albedo_color = Color(0.878036, 0.868155, 0.689148, 1)
+emission_enabled = true
+emission = Color(0.806015, 1, 0.203698, 1)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_uuogx"]
+radius = 6.0
+height = 12.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0p4vy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a87mm"]
+albedo_color = Color(0.521141, 0.521141, 0.52114, 1)
+emission_enabled = true
+emission = Color(0.970076, 0.750323, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_fw2m2"]
+radius = 3.0
+height = 6.0
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_kudf1"]
+noise_type = 3
+frequency = 0.001
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6irtd"]
+width = 1
+height = 1
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_kudf1")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_em15s"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vukg6"]
+width = 1
+height = 1
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_em15s")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_d38pm"]
+noise_type = 3
+frequency = 0.02
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5nj5m"]
+seamless = true
+noise = SubResource("FastNoiseLite_d38pm")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qo21j"]
+render_priority = 0
+shader = ExtResource("21_ctxr5")
+shader_parameter/albedo = Color(0, 0.33467, 0.491748, 1)
+shader_parameter/albedo2 = Color(0, 0.371098, 0.604246, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/roughness = 0.8
+shader_parameter/wave_direction = Vector2(2, 0)
+shader_parameter/wave_direction2 = Vector2(0, 1)
+shader_parameter/time_scale = 0.025
+shader_parameter/noise_scale = 10.0
+shader_parameter/height_scale = 0.3
+shader_parameter/color_deep = Color(0.255622, 0.500334, 1, 1)
+shader_parameter/color_shallow = Color(0.422646, 0.886977, 1, 1)
+shader_parameter/beers_law = 1.5
+shader_parameter/depth_offset = 0.2
+shader_parameter/edge_scale = 1.0
+shader_parameter/near = 1.0
+shader_parameter/far = 100.0
+shader_parameter/edge_color = Color(0.446777, 0.446777, 0.446777, 1)
+shader_parameter/wave = SubResource("NoiseTexture2D_5nj5m")
+shader_parameter/texture_normal = SubResource("NoiseTexture2D_6irtd")
+shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_vukg6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aw46j"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xt6dl"]
+material = SubResource("StandardMaterial3D_aw46j")
+size = Vector2(500, 500)
+subdivide_width = 200
+subdivide_depth = 200
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ia2oh"]
+size = Vector3(288.224, 6.71576, 225.156)
+
+[node name="TestIsland" type="Node3D" node_paths=PackedStringArray("character")]
+script = ExtResource("1_h358c")
+character = NodePath("Player")
+
+[node name="PlayerPos" type="Node3D" parent="."]
+transform = Transform3D(-0.34366, 0, 0.939094, 0, 1, 0, -0.939094, 0, -0.34366, 7.825, 1.181, -0.695)
+
+[node name="Player" parent="." instance=ExtResource("2_iqhaf")]
+transform = Transform3D(-0.43823, 0, 0.898863, 0, 1, 0, -0.898863, 0, -0.43823, 17.9111, 0.68726, -12.7492)
+collision_mask = 21
+push_force = 8.0
+weapons = Array[ExtResource("3_madii")]([ExtResource("4_6nvj3")])
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("5_0cdmg")
+script = ExtResource("6_b15dy")
+skyRotation = 3.9
+sunLightOffset = 10.0
+moonLightOffset = 5.0
+sky_color_gradient = ExtResource("7_rcwhr")
+
+[node name="Sun&Moon" type="Node3D" parent="WorldEnvironment"]
+
+[node name="Sun" type="Node3D" parent="WorldEnvironment/Sun&Moon"]
+transform = Transform3D(1, -8.90954e-15, -7.45058e-09, 4.996e-15, 1, 4.44089e-16, 7.45058e-09, 0, 1, 0, -100, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WorldEnvironment/Sun&Moon/Sun"]
+transform = Transform3D(1, -8.90954e-15, -7.45058e-09, 4.996e-15, 1, 4.44089e-16, 7.45058e-09, 0, 1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_rmnfe")
+cast_shadow = 0
+mesh = SubResource("SphereMesh_uuogx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WorldEnvironment/Sun&Moon/Sun/MeshInstance3D"]
+collision_layer = 128
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WorldEnvironment/Sun&Moon/Sun/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(20, 0, 1.77636e-14, 0, 20, 0, -8.88178e-15, 0, 40, 0, 0, 0)
+shape = SubResource("BoxShape3D_0p4vy")
+
+[node name="SunLight" type="DirectionalLight3D" parent="WorldEnvironment/Sun&Moon/Sun"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+visible = false
+light_color = Color(1, 0.938811, 0.584199, 1)
+light_energy = -0.9
+light_cull_mask = 4294967291
+shadow_bias = 0.0
+
+[node name="Moon" type="Node3D" parent="WorldEnvironment/Sun&Moon"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WorldEnvironment/Sun&Moon/Moon"]
+transform = Transform3D(1, -8.88178e-16, 0, 0, 1, -1.98627e-16, 0, -1.98627e-16, 1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_a87mm")
+cast_shadow = 0
+mesh = SubResource("SphereMesh_fw2m2")
+
+[node name="MoonLight" type="DirectionalLight3D" parent="WorldEnvironment/Sun&Moon/Moon"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+light_color = Color(0.716018, 0.603813, 1, 1)
+light_energy = 0.105
+light_cull_mask = 4294967291
+
+[node name="AmbientLights" type="Node3D" parent="WorldEnvironment"]
+
+[node name="test_house" parent="." instance=ExtResource("18_45p4s")]
+transform = Transform3D(0.903088, 0, -0.429456, 0, 1, 0, 0.429456, 0, 0.903088, -5.94357, 2.69963, -3.5226)
+
+[node name="mailbox2" parent="." instance=ExtResource("20_d03gf")]
+transform = Transform3D(0.299812, 0, -0.0106111, 0, 0.3, 0, 0.0106111, 0, 0.299812, 14.1269, 0.762848, -12.4724)
+
+[node name="dock" parent="." instance=ExtResource("21_fy6e0")]
+transform = Transform3D(0.378296, 0, 0.12997, 0, 0.4, 0, -0.12997, 0, 0.378296, 17.2968, 0.307227, -12.2917)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_mtkru")
+volume_db = -30.0
+autoplay = true
+
+[node name="Boat" parent="." instance=ExtResource("23_uc0xf")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 81.8746, 0.0236204, 34.6458)
+
+[node name="CenterRotate" type="Node3D" parent="."]
+
+[node name="SmallIsland" parent="CenterRotate" node_paths=PackedStringArray("center_rotation") instance=ExtResource("24_kkqss")]
+transform = Transform3D(-0.448914, 0, 0.893575, 0, 1, 0, -0.893575, 0, -0.448914, -41.1676, 0, 8.7647)
+center_rotation = NodePath("..")
+
+[node name="ShopSpawn" type="Node3D" parent="."]
+transform = Transform3D(0.313992, 0, -0.949425, 0, 1, 0, 0.949425, 0, 0.313992, 19.525, 0.436, -10.172)
+
+[node name="merchant_boat" parent="ShopSpawn" instance=ExtResource("25_ea634")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+
+[node name="SunFlowers" type="Node3D" parent="."]
+
+[node name="pot_blue" parent="SunFlowers" instance=ExtResource("26_arhl4")]
+transform = Transform3D(0.0620916, 0, -0.293504, 0, 0.3, 0, 0.293504, 0, 0.0620916, -4.22272, 2.31505, 1.94463)
+
+[node name="pot_green" parent="SunFlowers" instance=ExtResource("27_5gwjp")]
+transform = Transform3D(0.260717, 0, -0.148415, 0, 0.3, 0, 0.148415, 0, 0.260717, -2.23842, 2.36389, 1.66805)
+
+[node name="pot_purple2" parent="SunFlowers" instance=ExtResource("28_wff56")]
+transform = Transform3D(0.137064, 0, -0.266859, 0, 0.3, 0, 0.266859, 0, 0.137064, -1.40359, 2.4075, 0.625149)
+
+[node name="terrain" parent="." instance=ExtResource("28_2oe2w")]
+transform = Transform3D(-2.59808, 0, 1.5, 0, 3, 0, -1.5, 0, -2.59808, 0, 0, 0)
+
+[node name="Water" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Water"]
+collision_layer = 4096
+collision_mask = 256
+script = ExtResource("19_348kd")
+fishTable = ExtResource("20_gxfyh")
+
+[node name="WaterSurface" type="MeshInstance3D" parent="Water/StaticBody3D"]
+transform = Transform3D(0.596641, 0, 0, 0, 0.5, 0, 0, 0, 0.448938, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_qo21j")
+transparency = 0.65
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_xt6dl")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Water/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93637, -3.33426, 0.665283)
+shape = SubResource("BoxShape3D_ia2oh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Water"]
+transform = Transform3D(0.405, 0, 0, 0, 0.5, 0, 0, 0, 0.32, 0, -0.957544, 0)
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_xt6dl")
+skeleton = NodePath("../..")
+
+[node name="island_water_deep" parent="Water" instance=ExtResource("22_txpv3")]
+transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -3.52783, -0.954984, 0.0301056)
+
+[node name="UI" type="Node" parent="."]
+
+[node name="TimeChanger" parent="UI" instance=ExtResource("8_m4l16")]
+visible = false
+
+[node name="FishingMiniGame" parent="UI" instance=ExtResource("9_he07t")]
+visible = false
+unique_id = "FishingMiniGame"
+
+[node name="DocumentsCollection" parent="UI" instance=ExtResource("10_g30ng")]
+visible = false
+
+[node name="FishCollection" parent="UI" instance=ExtResource("11_i0vku")]
+visible = false
+unique_id = "FishCollection"
+
+[node name="LureCollection" parent="UI" instance=ExtResource("12_iga3f")]
+visible = false
+unique_id = "LureCollection"
+
+[node name="Documents" parent="UI" instance=ExtResource("13_14xus")]
+visible = false
+
+[node name="IdentificationBook" parent="UI" instance=ExtResource("14_60woi")]
+visible = false
+
+[node name="Notifications" parent="UI" instance=ExtResource("15_fip7h")]
+
+[node name="MerchantMenu" parent="UI" instance=ExtResource("16_ayp74")]
+
+[node name="SettingsMenu" parent="UI" instance=ExtResource("17_teh18")]
+
+[node name="Decorations" type="Node3D" parent="."]
+
+[node name="Mangrove" type="Node3D" parent="Decorations"]
+
+[node name="MangroveTrees" type="Node3D" parent="Decorations/Mangrove"]
+transform = Transform3D(-0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866025, 0, 0, 0)
+
+[node name="mangrove_tree" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
+transform = Transform3D(1.49315, 0, -2.60202, 0, 3, 0, 2.60202, 0, 1.49315, -2.69534, 1.00892, 22.2384)
+
+[node name="mangrove_tree2" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
+transform = Transform3D(2.22326, 0, 1.14329, 0, 2.5, 0, -1.14329, 0, 2.22326, -0.95411, 0.820469, 22.5993)
+
+[node name="mangrove_tree3" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
+transform = Transform3D(1.5658, 0, -1.24429, 0, 2, 0, 1.24429, 0, 1.5658, -1.89889, 0.647181, 24.7997)
+
+[node name="mangrove_tree4" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
+transform = Transform3D(0.901096, 0, -2.43886, 0, 2.6, 0, 2.43886, 0, 0.901096, -4.78203, 0.383272, 24.7997)
+
+[node name="mangrove_tree5" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
+transform = Transform3D(2.94464, 0, -0.57366, 0, 3, 0, 0.57366, 0, 2.94464, 4.76229, 0.78828, 28.1416)
+
+[node name="mangrove_tree6" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
+transform = Transform3D(0.732782, 0, 2.4946, 0, 2.6, 0, -2.4946, 0, 0.732782, 0.301018, 0.383272, 28.7757)
+
+[node name="mangrove_tree7" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
+transform = Transform3D(3.71635, 0, 1.47944, 0, 4, 0, -1.47944, 0, 3.71635, 7.87327, 1.01049, 24.9663)
+
+[node name="mangrove_tree8" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
+transform = Transform3D(-1.89411, 0, 0.642151, 0, 2, 0, -0.642151, 0, -1.89411, 6.48428, 0.458247, 18.3778)
+
+[node name="mangrove_tree9" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
+transform = Transform3D(1.98026, 0, 0.280282, 0, 2, 0, -0.280282, 0, 1.98026, 6.96806, 0.458247, 17.4565)
+
+[node name="mangrove_tree10" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
+transform = Transform3D(1.09492, 0, -1.67366, 0, 2, 0, 1.67366, 0, 1.09492, 9.33323, 0.538737, 23.3354)
+
+[node name="mangrove_tree11" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
+transform = Transform3D(2.97308, 0, 1.18355, 0, 3.2, 0, -1.18355, 0, 2.97308, 16.6952, 0.982594, 17.8855)
+
+[node name="mangrove_tree12" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
+transform = Transform3D(0.882687, 0, -2.55164, 0, 2.7, 0, 2.55164, 0, 0.882687, 14.9269, 0.85311, 17.7586)

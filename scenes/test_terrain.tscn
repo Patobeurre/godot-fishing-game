@@ -1,0 +1,142 @@
+[gd_scene load_steps=18 format=3 uid="uid://rskn073vnoj"]
+
+[ext_resource type="PackedScene" uid="uid://d3avs62j1llal" path="res://objects/terrain.tscn" id="1_noune"]
+[ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_kn71f"]
+[ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="3_ouj2p"]
+[ext_resource type="PackedScene" uid="uid://b3h8dbli33h2x" path="res://objects/Structures/test_house.tscn" id="4_j5q5u"]
+[ext_resource type="PackedScene" uid="uid://cfol5m2msmymx" path="res://objects/Decorations/mangrove_tree.tscn" id="5_g5flu"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o35m5"]
+
+[sub_resource type="Sky" id="Sky_7da0v"]
+sky_material = SubResource("ProceduralSkyMaterial_o35m5")
+
+[sub_resource type="Environment" id="Environment_ije1p"]
+background_mode = 2
+sky = SubResource("Sky_7da0v")
+ambient_light_source = 2
+ambient_light_color = Color(0.620436, 0.680418, 0.688548, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_y0v0r"]
+noise_type = 3
+frequency = 0.001
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_og5bs"]
+width = 1
+height = 1
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_y0v0r")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_lp4c6"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4bjeq"]
+width = 1
+height = 1
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_lp4c6")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_1xl5s"]
+noise_type = 3
+frequency = 0.02
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_n7mtk"]
+seamless = true
+noise = SubResource("FastNoiseLite_1xl5s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x6yqy"]
+render_priority = 0
+shader = ExtResource("3_ouj2p")
+shader_parameter/albedo = Color(0, 0.33467, 0.491748, 1)
+shader_parameter/albedo2 = Color(0, 0.371098, 0.604246, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/roughness = 0.8
+shader_parameter/wave_direction = Vector2(2, 0)
+shader_parameter/wave_direction2 = Vector2(0, 1)
+shader_parameter/time_scale = 0.025
+shader_parameter/noise_scale = 10.0
+shader_parameter/height_scale = 0.3
+shader_parameter/color_deep = Color(0.255622, 0.500334, 1, 1)
+shader_parameter/color_shallow = Color(0.422646, 0.886977, 1, 1)
+shader_parameter/beers_law = 1.5
+shader_parameter/depth_offset = 0.2
+shader_parameter/edge_scale = 1.0
+shader_parameter/near = 1.0
+shader_parameter/far = 100.0
+shader_parameter/edge_color = Color(0.446777, 0.446777, 0.446777, 1)
+shader_parameter/wave = SubResource("NoiseTexture2D_n7mtk")
+shader_parameter/texture_normal = SubResource("NoiseTexture2D_og5bs")
+shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_4bjeq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qhyd"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_l4wfy"]
+material = SubResource("StandardMaterial3D_8qhyd")
+size = Vector2(500, 500)
+subdivide_width = 200
+subdivide_depth = 200
+
+[node name="TestTerrain" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ije1p")
+
+[node name="terrain" parent="." instance=ExtResource("1_noune")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.803753, 0.462321, -0.374487, 0, 0.629429, 0.777058, 0.594963, -0.624563, 0.505905, 0, 8.96023, 5.95446)
+
+[node name="Player" parent="." instance=ExtResource("2_kn71f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.56974, 3.91896, 0)
+
+[node name="WaterSurface" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.596641, 0, 0, 0, 0.5, 0, 0, 0, 0.448938, 0, -0.104936, 0)
+material_override = SubResource("ShaderMaterial_x6yqy")
+transparency = 0.65
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_l4wfy")
+skeleton = NodePath("../../..")
+
+[node name="test_house" parent="." instance=ExtResource("4_j5q5u")]
+transform = Transform3D(-0.99315, 0, -0.116844, 0, 1, 0, 0.116844, 0, -0.99315, 6.99611, 2.69483, 1.01159)
+
+[node name="MangroveTrees" type="Node3D" parent="."]
+
+[node name="mangrove_tree" parent="MangroveTrees" instance=ExtResource("5_g5flu")]
+transform = Transform3D(1.49315, 0, -2.60202, 0, 3, 0, 2.60202, 0, 1.49315, -2.69534, 1.00892, 22.2384)
+
+[node name="mangrove_tree2" parent="MangroveTrees" instance=ExtResource("5_g5flu")]
+transform = Transform3D(2.22326, 0, 1.14329, 0, 2.5, 0, -1.14329, 0, 2.22326, -0.95411, 0.820469, 22.5993)
+
+[node name="mangrove_tree3" parent="MangroveTrees" instance=ExtResource("5_g5flu")]
+transform = Transform3D(1.5658, 0, -1.24429, 0, 2, 0, 1.24429, 0, 1.5658, -1.89889, 0.647181, 24.7997)
+
+[node name="mangrove_tree4" parent="MangroveTrees" instance=ExtResource("5_g5flu")]
+transform = Transform3D(0.901096, 0, -2.43886, 0, 2.6, 0, 2.43886, 0, 0.901096, -4.78203, 0.383272, 24.7997)
+
+[node name="mangrove_tree5" parent="MangroveTrees" instance=ExtResource("5_g5flu")]
+transform = Transform3D(2.94464, 0, -0.57366, 0, 3, 0, 0.57366, 0, 2.94464, 4.76229, 0.78828, 28.1416)
+
+[node name="mangrove_tree6" parent="MangroveTrees" instance=ExtResource("5_g5flu")]
+transform = Transform3D(0.732782, 0, 2.4946, 0, 2.6, 0, -2.4946, 0, 0.732782, 0.301018, 0.383272, 28.7757)
+
+[node name="mangrove_tree7" parent="MangroveTrees" instance=ExtResource("5_g5flu")]
+transform = Transform3D(3.71635, 0, 1.47944, 0, 4, 0, -1.47944, 0, 3.71635, 7.87327, 1.01049, 24.9663)
+
+[node name="mangrove_tree8" parent="MangroveTrees" instance=ExtResource("5_g5flu")]
+transform = Transform3D(-1.89411, 0, 0.642151, 0, 2, 0, -0.642151, 0, -1.89411, 6.48428, 0.458247, 18.3778)
+
+[node name="mangrove_tree9" parent="MangroveTrees" instance=ExtResource("5_g5flu")]
+transform = Transform3D(1.98026, 0, 0.280282, 0, 2, 0, -0.280282, 0, 1.98026, 6.96806, 0.458247, 17.4565)
+
+[node name="mangrove_tree10" parent="MangroveTrees" instance=ExtResource("5_g5flu")]
+transform = Transform3D(1.09492, 0, -1.67366, 0, 2, 0, 1.67366, 0, 1.09492, 9.33323, 0.538737, 23.3354)
+
+[node name="mangrove_tree11" parent="MangroveTrees" instance=ExtResource("5_g5flu")]
+transform = Transform3D(2.97308, 0, 1.18355, 0, 3.2, 0, -1.18355, 0, 2.97308, 16.6952, 0.982594, 17.8855)
+
+[node name="mangrove_tree12" parent="MangroveTrees" instance=ExtResource("5_g5flu")]
+transform = Transform3D(0.882687, 0, -2.55164, 0, 2.7, 0, 2.55164, 0, 0.882687, 14.9269, 0.85311, 17.7586)

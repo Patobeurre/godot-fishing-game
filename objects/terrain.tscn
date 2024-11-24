@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3avs62j1llal"]
+
+[ext_resource type="PackedScene" uid="uid://cpx30mt3jhyyr" path="res://models/Islands/terrain.glb" id="1_bt7gf"]
+
+[node name="terrain" instance=ExtResource("1_bt7gf")]
+
+[node name="Plane" parent="." index="6"]
+visible = false
+
+[node name="StaticBody3D" parent="Plane" index="0"]
+collision_layer = 4

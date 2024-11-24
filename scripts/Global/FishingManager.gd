@@ -39,7 +39,6 @@ func set_current_catchable_area(area :CatchableArea):
 func perform_catch():
 	current_catchable_area.perform()
 
-
 func cancel():
 	SignalBus.cancel_fishing.emit()
 

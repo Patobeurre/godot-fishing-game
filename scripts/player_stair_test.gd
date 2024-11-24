@@ -79,7 +79,7 @@ var bobber = null
 @onready var safe_position_timer :Timer = $SafePositionTimer
 var safe_position :Vector3 = Vector3.ZERO
 
-var character_stats :CharacterStats
+var character_stats :CharacterStats = CharacterStats.new()
 
 @onready var area_info_ui :AreaInfoUI = $AreaInfoUI
 @onready var hud := $HUD
