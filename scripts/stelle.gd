@@ -1,9 +1,9 @@
 extends Node3D
 
 
-@onready var mesh = $stelle_beach_merged
 @onready var glimmers :GPUParticles3D = $Glimmers
 
+@export var mesh :MeshInstance3D
 @export var outline_shader :Material
 @export var correct_angle :float
 @export var activation_period :TimePeriod.ETimePeriod

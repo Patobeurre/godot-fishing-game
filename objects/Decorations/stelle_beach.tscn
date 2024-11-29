@@ -27,8 +27,9 @@ scale_max = 0.2
 
 [sub_resource type="QuadMesh" id="QuadMesh_d13ba"]
 
-[node name="stelle_beach" instance=ExtResource("1_uusw5")]
+[node name="stelle_beach" node_paths=PackedStringArray("mesh") instance=ExtResource("1_uusw5")]
 script = ExtResource("2_4itrw")
+mesh = NodePath("stelle_beach_merged")
 outline_shader = SubResource("ShaderMaterial_h7vrt")
 correct_angle = 240.0
 
