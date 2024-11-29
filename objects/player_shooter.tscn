@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=3 uid="uid://oimv067a34qr"]
+
+[ext_resource type="Script" path="res://scripts/player_shooter.gd" id="1_e2vt5"]
+[ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="5_r4pdn"]
+[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="6_tdugg"]
+[ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="18_q8nee"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
+radius = 0.3
+height = 1.19861
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_e2vt5")
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0392003, 0)
+shape = SubResource("CapsuleShape3D_gdq8c")
+
+[node name="Body" type="Node3D" parent="."]
+
+[node name="Head" type="Node3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="Camera" type="Camera3D" parent="Body/Head"]
+cull_mask = 1045501
+current = true
+fov = 50.0
+far = 100.0
+
+[node name="RayCast" type="RayCast3D" parent="Body/Head/Camera"]
+exclude_parent = false
+target_position = Vector3(0, 0, -50)
+
+[node name="HookSpawner" type="Node3D" parent="Body/Head/Camera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.292484, -0.165401, -0.240849)
+
+[node name="RayCastInteract" type="RayCast3D" parent="Body/Head/Camera"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+target_position = Vector3(0, -2, 0)
+collision_mask = 49
+
+[node name="Foot" type="Node3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.55, 0)
+
+[node name="RayCastFootstep" type="RayCast3D" parent="Body/Foot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.189051, 0)
+collision_mask = 64
+collide_with_areas = true
+
+[node name="SoundFootsteps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_r4pdn")
+volume_db = -20.0
+pitch_scale = 1.2
+autoplay = true
+
+[node name="DashCD" type="Timer" parent="."]
+process_callback = 0
+wait_time = 1.6
+one_shot = true
+
+[node name="DashDuration" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+
+[node name="FishingStateMachine" type="Node" parent="."]
+script = ExtResource("6_tdugg")
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/CenterContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("18_q8nee")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ShootCD" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="DashCD" to="." method="_on_dash_cd_timeout"]
+[connection signal="timeout" from="DashDuration" to="." method="_on_dash_duration_timeout"]

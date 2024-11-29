@@ -21,5 +21,5 @@ void vertex() {
 }
 
 void fragment() {
-	ALBEDO = outline_color.rgb;
+	ALBEDO = vec3(2,2,2);
 }

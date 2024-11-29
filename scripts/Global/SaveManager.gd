@@ -1,7 +1,7 @@
 extends Node3D
 
 
-@export var character :Character
+@export var character :Player
 
 var save_game_res :SaveGameStats
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://deqhnbp03hvqw"]
+[gd_scene load_steps=44 format=3 uid="uid://deqhnbp03hvqw"]
 
 [ext_resource type="Script" path="res://scripts/Global/SaveManager.gd" id="1_h358c"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_iqhaf"]
@@ -18,13 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://2s07dga841f4" path="res://scenes/UI/MerchantMenu.tscn" id="16_ayp74"]
 [ext_resource type="PackedScene" uid="uid://14nyo1d1mork" path="res://scenes/UI/Settings/settings_menu.tscn" id="17_teh18"]
 [ext_resource type="PackedScene" uid="uid://b3h8dbli33h2x" path="res://objects/Structures/test_house.tscn" id="18_45p4s"]
-[ext_resource type="Script" path="res://scripts/fishing_area.gd" id="19_348kd"]
 [ext_resource type="PackedScene" uid="uid://657bdl7aknok" path="res://objects/Decorations/mailbox.tscn" id="20_d03gf"]
-[ext_resource type="Resource" uid="uid://csju71d6rfls" path="res://scripts/Resources/FishingAreas/island_A_water.tres" id="20_gxfyh"]
-[ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="21_ctxr5"]
 [ext_resource type="PackedScene" uid="uid://dpvpje0opov81" path="res://objects/Decorations/dock.tscn" id="21_fy6e0"]
 [ext_resource type="AudioStream" uid="uid://dre45x7pkgmd0" path="res://sounds/ambient/nature_ocean_distant_waves_surf_light_breeze_trees_84763.mp3" id="22_mtkru"]
-[ext_resource type="PackedScene" uid="uid://r03nc1e8rsjx" path="res://models/Islands/island_water_deep.tscn" id="22_txpv3"]
 [ext_resource type="PackedScene" uid="uid://cmpyaw5yxt3rj" path="res://objects/Structures/oil_tank_rigidbody.tscn" id="23_uc0xf"]
 [ext_resource type="PackedScene" uid="uid://dahpw84nqrsxd" path="res://objects/SmallIsland.tscn" id="24_kkqss"]
 [ext_resource type="PackedScene" uid="uid://dv3vmywlgreuo" path="res://objects/Structures/merchant_boat.tscn" id="25_ea634"]
@@ -32,7 +28,16 @@
 [ext_resource type="PackedScene" uid="uid://cxn7ui1hlg4wb" path="res://objects/Riddles/sunflowers/pot_green.tscn" id="27_5gwjp"]
 [ext_resource type="PackedScene" uid="uid://d3avs62j1llal" path="res://objects/terrain.tscn" id="28_2oe2w"]
 [ext_resource type="PackedScene" uid="uid://ckoq1mw5irsq2" path="res://objects/Riddles/sunflowers/pot_purple.tscn" id="28_wff56"]
+[ext_resource type="PackedScene" uid="uid://bfx6epnty8fhg" path="res://objects/Decorations/oak.tscn" id="30_crdwr"]
+[ext_resource type="PackedScene" uid="uid://dt0c5ejymwkkd" path="res://objects/Decorations/oak_orange.tscn" id="31_gbmae"]
+[ext_resource type="PackedScene" uid="uid://c0htpimwul3ex" path="res://objects/Decorations/oak_w_hive.tscn" id="32_2rs6c"]
+[ext_resource type="PackedScene" uid="uid://bi3ihryowa2bv" path="res://objects/Decorations/pine.tscn" id="33_ilbrp"]
 [ext_resource type="PackedScene" uid="uid://cfol5m2msmymx" path="res://objects/Decorations/mangrove_tree.tscn" id="33_ryfee"]
+[ext_resource type="PackedScene" uid="uid://8y5x0u2e2nvo" path="res://objects/Decorations/rocks_pile.tscn" id="34_5ruqk"]
+[ext_resource type="PackedScene" uid="uid://br5lsiu77q2dv" path="res://objects/Decorations/fireplace.tscn" id="35_g5qhq"]
+[ext_resource type="PackedScene" uid="uid://c814n74rnu164" path="res://objects/Decorations/stelle_beach.tscn" id="36_7gm2s"]
+[ext_resource type="PackedScene" uid="uid://dfo6rjwsvceum" path="res://objects/Decorations/stelle_reef.tscn" id="37_hdi12"]
+[ext_resource type="PackedScene" uid="uid://cj5ta23ek4ni3" path="res://objects/Decorations/stelle_forest.tscn" id="38_tmcct"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rmnfe"]
 albedo_color = Color(0.878036, 0.868155, 0.689148, 1)
@@ -54,70 +59,6 @@ emission = Color(0.970076, 0.750323, 1, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_fw2m2"]
 radius = 3.0
 height = 6.0
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_kudf1"]
-noise_type = 3
-frequency = 0.001
-fractal_type = 2
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6irtd"]
-width = 1
-height = 1
-seamless = true
-as_normal_map = true
-noise = SubResource("FastNoiseLite_kudf1")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_em15s"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vukg6"]
-width = 1
-height = 1
-seamless = true
-as_normal_map = true
-noise = SubResource("FastNoiseLite_em15s")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_d38pm"]
-noise_type = 3
-frequency = 0.02
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5nj5m"]
-seamless = true
-noise = SubResource("FastNoiseLite_d38pm")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qo21j"]
-render_priority = 0
-shader = ExtResource("21_ctxr5")
-shader_parameter/albedo = Color(0, 0.33467, 0.491748, 1)
-shader_parameter/albedo2 = Color(0, 0.371098, 0.604246, 1)
-shader_parameter/metallic = 0.0
-shader_parameter/roughness = 0.8
-shader_parameter/wave_direction = Vector2(2, 0)
-shader_parameter/wave_direction2 = Vector2(0, 1)
-shader_parameter/time_scale = 0.025
-shader_parameter/noise_scale = 10.0
-shader_parameter/height_scale = 0.3
-shader_parameter/color_deep = Color(0.255622, 0.500334, 1, 1)
-shader_parameter/color_shallow = Color(0.422646, 0.886977, 1, 1)
-shader_parameter/beers_law = 1.5
-shader_parameter/depth_offset = 0.2
-shader_parameter/edge_scale = 1.0
-shader_parameter/near = 1.0
-shader_parameter/far = 100.0
-shader_parameter/edge_color = Color(0.446777, 0.446777, 0.446777, 1)
-shader_parameter/wave = SubResource("NoiseTexture2D_5nj5m")
-shader_parameter/texture_normal = SubResource("NoiseTexture2D_6irtd")
-shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_vukg6")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aw46j"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_xt6dl"]
-material = SubResource("StandardMaterial3D_aw46j")
-size = Vector2(500, 500)
-subdivide_width = 200
-subdivide_depth = 200
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ia2oh"]
-size = Vector3(288.224, 6.71576, 225.156)
 
 [node name="TestIsland" type="Node3D" node_paths=PackedStringArray("character")]
 script = ExtResource("1_h358c")
@@ -188,10 +129,10 @@ light_cull_mask = 4294967291
 transform = Transform3D(0.903088, 0, -0.429456, 0, 1, 0, 0.429456, 0, 0.903088, -5.94357, 2.69963, -3.5226)
 
 [node name="mailbox2" parent="." instance=ExtResource("20_d03gf")]
-transform = Transform3D(0.299812, 0, -0.0106111, 0, 0.3, 0, 0.0106111, 0, 0.299812, 14.1269, 0.762848, -12.4724)
+transform = Transform3D(0.28187, 0, -0.102709, 0, 0.3, 0, 0.102709, 0, 0.28187, 25.0761, 0.741717, -6.33817)
 
 [node name="dock" parent="." instance=ExtResource("21_fy6e0")]
-transform = Transform3D(0.378296, 0, 0.12997, 0, 0.4, 0, -0.12997, 0, 0.378296, 17.2968, 0.307227, -12.2917)
+transform = Transform3D(0.399403, 0, -0.0218405, 0, 0.4, 0, 0.0218405, 0, 0.399403, 28.132, 0.362753, -4.71458)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("22_mtkru")
@@ -202,16 +143,17 @@ autoplay = true
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 81.8746, 0.0236204, 34.6458)
 
 [node name="CenterRotate" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
 
 [node name="SmallIsland" parent="CenterRotate" node_paths=PackedStringArray("center_rotation") instance=ExtResource("24_kkqss")]
-transform = Transform3D(-0.448914, 0, 0.893575, 0, 1, 0, -0.893575, 0, -0.448914, -41.1676, 0, 8.7647)
+transform = Transform3D(-0.448914, 0, 0.893575, 0, 1, 0, -0.893575, 0, -0.448914, -49.1676, 0, 8.7647)
 center_rotation = NodePath("..")
 
 [node name="ShopSpawn" type="Node3D" parent="."]
-transform = Transform3D(0.313992, 0, -0.949425, 0, 1, 0, 0.949425, 0, 0.313992, 19.525, 0.436, -10.172)
+transform = Transform3D(0.286658, 0, -0.958033, 0, 1, 0, 0.958033, 0, 0.286658, 30.3029, 0.436, -1.84529)
 
 [node name="merchant_boat" parent="ShopSpawn" instance=ExtResource("25_ea634")]
-transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+transform = Transform3D(1.01925, 0, -0.413688, 0, 1.1, 0, 0.413688, 0, 1.01925, 0, 0, 0)
 
 [node name="SunFlowers" type="Node3D" parent="."]
 
@@ -226,35 +168,6 @@ transform = Transform3D(0.137064, 0, -0.266859, 0, 0.3, 0, 0.266859, 0, 0.137064
 
 [node name="terrain" parent="." instance=ExtResource("28_2oe2w")]
 transform = Transform3D(-2.59808, 0, 1.5, 0, 3, 0, -1.5, 0, -2.59808, 0, 0, 0)
-
-[node name="Water" type="Node3D" parent="."]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Water"]
-collision_layer = 4096
-collision_mask = 256
-script = ExtResource("19_348kd")
-fishTable = ExtResource("20_gxfyh")
-
-[node name="WaterSurface" type="MeshInstance3D" parent="Water/StaticBody3D"]
-transform = Transform3D(0.596641, 0, 0, 0, 0.5, 0, 0, 0, 0.448938, 0, 0, 0)
-material_override = SubResource("ShaderMaterial_qo21j")
-transparency = 0.65
-cast_shadow = 0
-mesh = SubResource("PlaneMesh_xt6dl")
-skeleton = NodePath("../../..")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Water/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93637, -3.33426, 0.665283)
-shape = SubResource("BoxShape3D_ia2oh")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Water"]
-transform = Transform3D(0.405, 0, 0, 0, 0.5, 0, 0, 0, 0.32, 0, -0.957544, 0)
-cast_shadow = 0
-mesh = SubResource("PlaneMesh_xt6dl")
-skeleton = NodePath("../..")
-
-[node name="island_water_deep" parent="Water" instance=ExtResource("22_txpv3")]
-transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -3.52783, -0.954984, 0.0301056)
 
 [node name="UI" type="Node" parent="."]
 
@@ -317,10 +230,10 @@ transform = Transform3D(0.732782, 0, 2.4946, 0, 2.6, 0, -2.4946, 0, 0.732782, 0.
 transform = Transform3D(3.71635, 0, 1.47944, 0, 4, 0, -1.47944, 0, 3.71635, 7.87327, 1.01049, 24.9663)
 
 [node name="mangrove_tree8" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
-transform = Transform3D(-1.89411, 0, 0.642151, 0, 2, 0, -0.642151, 0, -1.89411, 6.48428, 0.458247, 18.3778)
+transform = Transform3D(-1.89411, 0, 0.642151, 0, 2, 0, -0.642151, 0, -1.89411, 6.10379, 0.458247, 18.5975)
 
 [node name="mangrove_tree9" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
-transform = Transform3D(1.98026, 0, 0.280282, 0, 2, 0, -0.280282, 0, 1.98026, 6.96806, 0.458247, 17.4565)
+transform = Transform3D(1.98026, 0, 0.280282, 0, 2, 0, -0.280282, 0, 1.98026, 7.98617, 0.647331, 16.6444)
 
 [node name="mangrove_tree10" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
 transform = Transform3D(1.09492, 0, -1.67366, 0, 2, 0, 1.67366, 0, 1.09492, 9.33323, 0.538737, 23.3354)
@@ -330,3 +243,106 @@ transform = Transform3D(2.97308, 0, 1.18355, 0, 3.2, 0, -1.18355, 0, 2.97308, 16
 
 [node name="mangrove_tree12" parent="Decorations/Mangrove/MangroveTrees" instance=ExtResource("33_ryfee")]
 transform = Transform3D(0.882687, 0, -2.55164, 0, 2.7, 0, 2.55164, 0, 0.882687, 14.9269, 0.85311, 17.7586)
+
+[node name="Trees" type="Node3D" parent="Decorations"]
+
+[node name="Oaks" type="Node3D" parent="Decorations/Trees"]
+
+[node name="oak" parent="Decorations/Trees/Oaks" instance=ExtResource("30_crdwr")]
+transform = Transform3D(0.175875, 0, 0.0952262, 0, 0.2, 0, -0.0952262, 0, 0.175875, 23.1358, 0.621414, -6.96979)
+
+[node name="oak2" parent="Decorations/Trees/Oaks" instance=ExtResource("30_crdwr")]
+transform = Transform3D(-0.0966746, 0, 0.114691, 0, 0.15, 0, -0.114691, 0, -0.0966746, 20.5645, 0.621414, -6.19779)
+
+[node name="oak3" parent="Decorations/Trees/Oaks" instance=ExtResource("30_crdwr")]
+transform = Transform3D(0.155275, 0, 0.126054, 0.0179397, 0.197964, -0.0220985, -0.124771, 0.0284636, 0.153695, -1.55384, 2.38774, 19.2336)
+
+[node name="oak4" parent="Decorations/Trees/Oaks" instance=ExtResource("30_crdwr")]
+transform = Transform3D(-0.0223999, -0.0115713, 0.158001, 0.0247144, 0.157364, 0.0150284, -0.156485, 0.0265096, -0.0202434, 0.722857, 2.32001, 20.1754)
+
+[node name="oak5" parent="Decorations/Trees/Oaks" instance=ExtResource("30_crdwr")]
+transform = Transform3D(0.129548, -0.0161812, 0.0924965, 0.0281518, 0.15705, -0.0119544, -0.0895819, 0.0259538, 0.130006, 6.99673, 1.29735, 19.7397)
+
+[node name="oak6" parent="Decorations/Trees/Oaks" instance=ExtResource("30_crdwr")]
+transform = Transform3D(0.193185, 0, 0.0517638, 0, 0.2, 0, -0.0517638, 0, 0.193185, 0.966937, 2.28437, 16.8875)
+
+[node name="oak_orange" parent="Decorations/Trees/Oaks" instance=ExtResource("31_gbmae")]
+transform = Transform3D(0.0869362, 7.45223e-10, -0.180117, -0.00833394, 0.199786, -0.0040225, 0.179924, 0.00925392, 0.0868431, 4.21097, 2.12892, 18.0895)
+
+[node name="oak_orange2" parent="Decorations/Trees/Oaks" instance=ExtResource("31_gbmae")]
+transform = Transform3D(-0.134336, -0.00272994, 0.119777, -0.00203761, 0.179979, 0.00181679, -0.119791, 0, -0.134351, -2.16413, 2.79982, 14.9312)
+
+[node name="OakWHive" parent="Decorations/Trees/Oaks" instance=ExtResource("32_2rs6c")]
+transform = Transform3D(-0.119929, 0.0121644, -0.159591, 0.00730783, 0.19963, 0.00972463, 0.159887, 0, -0.120151, 7.46254, 1.7919, 16.9513)
+
+[node name="oak_orange3" parent="Decorations/Trees/Oaks" instance=ExtResource("31_gbmae")]
+transform = Transform3D(-0.0491957, 0, 0.152249, -0.00815385, 0.15977, -0.00263472, -0.152031, -0.00856896, -0.0491251, 2.81569, 2.32899, 14.0289)
+
+[node name="oak7" parent="Decorations/Trees/Oaks" instance=ExtResource("30_crdwr")]
+transform = Transform3D(0.111863, 0, -0.066232, 0, 0.13, 0, 0.066232, 0, 0.111863, 5.75797, 2.30437, 14.1357)
+
+[node name="oak8" parent="Decorations/Trees/Oaks" instance=ExtResource("30_crdwr")]
+transform = Transform3D(-0.0221518, 0, 0.128099, -0.00073332, 0.129998, -0.000126811, -0.128097, -0.000744204, -0.0221515, 0.471061, 2.73039, 12.2777)
+
+[node name="oak9" parent="Decorations/Trees/Oaks" instance=ExtResource("30_crdwr")]
+transform = Transform3D(0.0414701, 0.0181869, 0.143002, -0.00506544, 0.148893, -0.0174672, -0.144064, 0, 0.0417783, 10.3101, 1.64532, 15.5605)
+
+[node name="oak10" parent="Decorations/Trees/Oaks" instance=ExtResource("30_crdwr")]
+transform = Transform3D(0.144887, 0, -0.137868, 0.00371, 0.199928, 0.00389888, 0.137818, -0.00538195, 0.144835, 5.64956, 1.57688, -8.29572)
+
+[node name="Pines" type="Node3D" parent="Decorations/Trees"]
+
+[node name="pine" parent="Decorations/Trees/Pines" instance=ExtResource("33_ilbrp")]
+transform = Transform3D(0.298508, 0.0298845, 0, -0.029842, 0.298083, -0.0159936, -0.0015932, 0.015914, 0.299573, -9.83725, 9.35803, 2.58482)
+
+[node name="pine2" parent="Decorations/Trees/Pines" instance=ExtResource("33_ilbrp")]
+transform = Transform3D(0.241835, 0.0240514, 0.0586284, -0.0249037, 0.248756, 0.000676314, -0.0582715, -0.00649447, 0.243027, -9.22201, 9.30215, 0.32128)
+
+[node name="pine3" parent="Decorations/Trees/Pines" instance=ExtResource("33_ilbrp")]
+transform = Transform3D(0.195202, 0.0166219, 0.2272, -0.0069418, 0.299495, -0.0159468, -0.227701, 0.00511893, 0.195259, -15.422, 9.35981, 4.25549)
+
+[node name="pine4" parent="Decorations/Trees/Pines" instance=ExtResource("33_ilbrp")]
+transform = Transform3D(0.0982869, 0, -0.262183, 0, 0.28, 0, 0.262183, 0, 0.0982869, -10.1661, 6.07094, 5.5484)
+
+[node name="pine5" parent="Decorations/Trees/Pines" instance=ExtResource("33_ilbrp")]
+transform = Transform3D(-0.152858, 0, -0.128974, -0.002557, 0.199961, 0.00303051, 0.128949, 0.00396513, -0.152828, -10.0086, 6.07094, 7.29192)
+
+[node name="pine6" parent="Decorations/Trees/Pines" instance=ExtResource("33_ilbrp")]
+transform = Transform3D(-0.279999, 0, 0.000845417, 0, 0.28, 0, -0.000845417, 0, -0.279999, -13.7948, 6.07094, 6.34925)
+
+[node name="pine7" parent="Decorations/Trees/Pines" instance=ExtResource("33_ilbrp")]
+transform = Transform3D(-0.279999, 0, 0.000845417, -5.06983e-05, 0.279496, -0.0167911, -0.000843896, -0.0167912, -0.279495, -7.95172, 2.49515, 2.18891)
+
+[node name="pine8" parent="Decorations/Trees/Pines" instance=ExtResource("33_ilbrp")]
+transform = Transform3D(-0.177124, 0.00274046, 0.0928417, 0.000877887, 0.199953, -0.0042273, -0.0928779, -0.00333626, -0.177095, -8.60448, 2.91546, 8.1004)
+
+[node name="Rocks" type="Node3D" parent="Decorations"]
+
+[node name="rocks_pile" parent="Decorations/Rocks" instance=ExtResource("34_5ruqk")]
+transform = Transform3D(0.469385, 0, -0.172272, 0, 0.5, 0, 0.172272, 0, 0.469385, -9.6866, 2.46412, 3.808)
+
+[node name="rocks_pile2" parent="Decorations/Rocks" instance=ExtResource("34_5ruqk")]
+transform = Transform3D(0.26112, 0, 0.147704, 0, 0.3, 0, -0.147704, 0, 0.26112, -10.6836, 3.2045, 10.0605)
+
+[node name="rocks_pile3" parent="Decorations/Rocks" instance=ExtResource("34_5ruqk")]
+transform = Transform3D(0.367177, 0, 0.158686, -0.01176, 0.3989, 0.0272109, -0.15825, -0.0296434, 0.366167, -5.79927, 2.24148, -8.55763)
+
+[node name="rocks_pile4" parent="Decorations/Rocks" instance=ExtResource("34_5ruqk")]
+transform = Transform3D(0.491453, 0, -0.0920529, 0, 0.5, 0, 0.0920529, 0, 0.491453, -4.76697, 0.580605, -15.012)
+
+[node name="rocks_pile5" parent="Decorations/Rocks" instance=ExtResource("34_5ruqk")]
+transform = Transform3D(0.121024, 0, 0.689459, 0, 0.7, 0, -0.689459, 0, 0.121024, -3.02187, -0.485717, -11.3301)
+
+[node name="Fireplace" parent="Decorations" instance=ExtResource("35_g5qhq")]
+transform = Transform3D(0.698304, 0.0486955, -8.8512e-11, -0.0486648, 0.697864, 0.0248448, 0.00172833, -0.0247846, 0.699559, -5.30942, 2.64384, 5.42996)
+
+[node name="Stelles" type="Node3D" parent="Decorations"]
+
+[node name="stelle_beach" parent="Decorations/Stelles" instance=ExtResource("36_7gm2s")]
+transform = Transform3D(-0.168901, 0.0383733, 0.1, 0.0443097, 0.19503, 0, -0.097515, 0.0221549, -0.173205, 15.5401, 0.982279, 0)
+
+[node name="stelle_reef" parent="Decorations/Stelles" instance=ExtResource("37_hdi12")]
+transform = Transform3D(0.174415, -0.0276247, 0.0938943, 0.0312869, 0.197538, 0, -0.0927383, 0.0146883, 0.17659, -10.4442, 3.44333, 11.8301)
+
+[node name="stelle_forest" parent="Decorations/Stelles" instance=ExtResource("38_tmcct")]
+transform = Transform3D(-8.47516e-09, 2.14455e-09, 0.2, 0.0490615, 0.193889, 0, -0.193889, 0.0490615, -8.74228e-09, 3.3185, 2.48902, 19.1005)

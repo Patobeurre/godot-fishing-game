@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1kw47ja2t85e"]
+
+[ext_resource type="PackedScene" uid="uid://uuiuhl1tnd24" path="res://models/tile_center.tscn" id="1_apcfg"]
+[ext_resource type="PackedScene" uid="uid://oimv067a34qr" path="res://objects/player_shooter.tscn" id="2_fa7q8"]
+[ext_resource type="Resource" uid="uid://c0nhg67lt4noa" path="res://scripts/Resources/Catchables/Fishes/Whale.tres" id="3_5pvva"]
+
+[sub_resource type="Environment" id="Environment_l7gat"]
+ambient_light_source = 2
+ambient_light_color = Color(0.792862, 0.88788, 0.838931, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="tile_center" parent="." instance=ExtResource("1_apcfg")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -1, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_fa7q8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.119088, 0.349999, 0.105203)
+catchable = ExtResource("3_5pvva")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.795241, -0.400187, 0.455459, 0, 0.751218, 0.660054, -0.606294, -0.524902, 0.597399, 0, 3.60314, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_l7gat")

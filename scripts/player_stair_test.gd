@@ -1,5 +1,5 @@
 extends CharacterBody3D
-class_name Character
+class_name Player
 
 
 @export_subgroup("Properties")

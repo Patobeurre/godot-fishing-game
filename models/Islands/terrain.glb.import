@@ -33,20 +33,63 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:Plane": {
-"generate/physics": true,
-"physics/mask": 2,
-"physics/shape_type": 2
+"PATH:beach_collision": {
+"physics/layer": 4096,
+"physics/mask": 256,
+"physics/shape_type": 1
 },
 "PATH:bridge": {
 "generate/physics": true,
 "physics/shape_type": 2
 },
+"PATH:cliff_simple_005": {
+"generate/physics": true,
+"physics/layer": 4097,
+"physics/mask": 257
+},
+"PATH:cliff_simple_006": {
+"generate/physics": true,
+"physics/layer": 4097,
+"physics/mask": 257
+},
+"PATH:cliff_simple_007": {
+"generate/physics": true,
+"physics/layer": 4097,
+"physics/mask": 257
+},
+"PATH:cliff_simple_009": {
+"generate/physics": true,
+"physics/layer": 4097,
+"physics/mask": 257
+},
+"PATH:island_boundaries": {
+"generate/physics": true,
+"physics/layer": 4,
+"physics/mask": 2
+},
+"PATH:reed_collision": {
+"generate/physics": true,
+"physics/layer": 4096,
+"physics/mask": 256
+},
+"PATH:reed_collision_001": {
+"generate/physics": true,
+"physics/layer": 4096,
+"physics/mask": 256
+},
+"PATH:reef": {
+"generate/physics": true,
+"physics/layer": 4097,
+"physics/mask": 257,
+"physics/shape_type": 2
+},
 "PATH:terrain": {
 "generate/physics": true,
+"physics/layer": 4097,
+"physics/mask": 257,
 "physics/shape_type": 2
 }
 }
 }
 gltf/naming_version=1
-gltf/embedded_image_handling=1
+gltf/embedded_image_handling=3

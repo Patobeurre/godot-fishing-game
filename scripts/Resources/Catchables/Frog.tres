@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=5 format=3 uid="uid://dpudh0oxpgs8s"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_3m8cv"]
+[ext_resource type="Resource" uid="uid://catedw4i7v6px" path="res://scripts/Resources/Categories/Animals.tres" id="1_uub3v"]
+[ext_resource type="Texture2D" uid="uid://cavbtkuyqhatd" path="res://sprites/Catchables/frog.png" id="2_56lht"]
+[ext_resource type="PackedScene" uid="uid://dbo0xyu37tuoo" path="res://objects/Catchables/frog.tscn" id="4_430oy"]
+
+[resource]
+script = ExtResource("1_3m8cv")
+id = 56
+name = "F_FROG_NAME"
+description = "F_FROG_DESCR"
+notification_text = ""
+category = ExtResource("1_uub3v")
+tags = Array[int]([])
+image = ExtResource("2_56lht")
+scene = ExtResource("4_430oy")
+rarity = 30
+price = 0
+periods = Array[int]([0, 1, 2, 3])
+lures = Array[ExtResource("1_3m8cv")]([])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([4, 6])

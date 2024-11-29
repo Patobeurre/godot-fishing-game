@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://cg3ciblr8e33k"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_4vgie"]
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_e1i0h"]
+[ext_resource type="Texture2D" uid="uid://dlrq250xwplem" path="res://sprites/Catchables/Fishes/butterfly_fish.png" id="2_2ejat"]
+[ext_resource type="Resource" uid="uid://dcpvdafn7juyp" path="res://scripts/Resources/Catchables/Insects/Butterfly.tres" id="4_keam6"]
+[ext_resource type="PackedScene" uid="uid://dp8o18ss2dhn5" path="res://objects/Catchables/Fishes/butterfly_fish.tscn" id="5_w6221"]
+[ext_resource type="Texture2D" uid="uid://dcsxepah5xagv" path="res://sprites/Catchables/Fishes/butterflyfish_shadow.png" id="6_n4nyf"]
+
+[resource]
+script = ExtResource("1_4vgie")
+id = 54
+name = "F_BUTTERFLY_NAME"
+description = "F_BUTTERFLY_DESCR"
+notification_text = ""
+category = ExtResource("1_e1i0h")
+tags = Array[int]([0, 1])
+image = ExtResource("2_2ejat")
+shadow = ExtResource("6_n4nyf")
+scene = ExtResource("5_w6221")
+rarity = 30
+price = 68
+periods = Array[int]([2, 3])
+lures = Array[ExtResource("1_4vgie")]([ExtResource("4_keam6")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([])

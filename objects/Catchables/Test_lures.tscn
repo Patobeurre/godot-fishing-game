@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://d2cy4arr18ptt"]
+[gd_scene load_steps=54 format=3 uid="uid://d2cy4arr18ptt"]
 
 [ext_resource type="PackedScene" uid="uid://dmyqppx7y0tw7" path="res://objects/bobber.tscn" id="1_dkc2c"]
 [ext_resource type="PackedScene" uid="uid://0ontd173otm6" path="res://objects/Catchables/true_mussels.tscn" id="2_vjnp4"]
@@ -51,6 +51,8 @@
 [ext_resource type="PackedScene" uid="uid://d4j0bcir26pue" path="res://objects/Catchables/Fishes/tetrahedra.tscn" id="49_32uyh"]
 [ext_resource type="PackedScene" uid="uid://cbsjamylvqinu" path="res://objects/Catchables/flower.tscn" id="50_bigdk"]
 [ext_resource type="PackedScene" uid="uid://dnd21dd2s6v4g" path="res://objects/Catchables/Fishes/cubefish.tscn" id="51_aoy0e"]
+[ext_resource type="PackedScene" uid="uid://dgqrd87hyuj4l" path="res://objects/Catchables/Fishes/silurus.tscn" id="52_y7mkn"]
+[ext_resource type="PackedScene" uid="uid://dbo0xyu37tuoo" path="res://objects/Catchables/frog.tscn" id="53_ndece"]
 
 [node name="TestLures" type="Node3D"]
 
@@ -207,3 +209,9 @@ visible = false
 visible = false
 
 [node name="CubeFish" parent="." instance=ExtResource("51_aoy0e")]
+visible = false
+
+[node name="Silurus" parent="." instance=ExtResource("52_y7mkn")]
+visible = false
+
+[node name="Frog" parent="." instance=ExtResource("53_ndece")]

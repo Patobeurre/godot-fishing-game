@@ -13,6 +13,8 @@ FA_OAK_FOLIAGE,Chêne feuillage,Oak foliage
 FA_HIVE,Ruche,Hive
 FA_CAVE_LAKE,Lac souterrain,Cave lake
 FA_FLOWERS,Hautes herbes,High grass
+FA_SWAMP,Marais,Swamp
+FA_RIVER,Rivière,River
 ,,
 B_SIMPLE_NAME,Casier,Basket
 B_SIMPLE_DESCR,Un casier simple pour attraper des poissons communs,A simple basket to catch common fishes

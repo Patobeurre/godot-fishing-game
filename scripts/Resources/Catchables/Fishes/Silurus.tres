@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://d0owple0opvxl"]
+
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_dao18"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_yy7r6"]
+[ext_resource type="Texture2D" uid="uid://ctjospdiria5" path="res://sprites/Catchables/Fishes/silurus.png" id="2_0jmi3"]
+[ext_resource type="PackedScene" uid="uid://dgqrd87hyuj4l" path="res://objects/Catchables/Fishes/silurus.tscn" id="4_3r6hh"]
+[ext_resource type="Texture2D" uid="uid://c7vc3qwer7pjb" path="res://sprites/Catchables/Fishes/silurus_shadow.png" id="5_5eylh"]
+
+[resource]
+script = ExtResource("1_yy7r6")
+id = 55
+name = "F_SILURUS_NAME"
+description = "F_SILURUS_DESCR"
+notification_text = ""
+category = ExtResource("1_dao18")
+tags = Array[int]([0, 3])
+image = ExtResource("2_0jmi3")
+shadow = ExtResource("5_5eylh")
+scene = ExtResource("4_3r6hh")
+rarity = 30
+price = 0
+periods = Array[int]([0, 1, 2, 3])
+lures = Array[ExtResource("1_yy7r6")]([])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([1, 2])

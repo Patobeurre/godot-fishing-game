@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct1lelu0xh4t4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w13yc"]
+
+[node name="CatchableProjectile" type="RigidBody3D"]
+collision_layer = 256
+mass = 0.3
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_w13yc")

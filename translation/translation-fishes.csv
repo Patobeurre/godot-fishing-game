@@ -127,6 +127,14 @@ F_CUBE_NAME;Poisson anguleux;Angular fish
 F_CUBE_DESCR;Un poisson à la forme étrange…;A weird shaped fish…
 F_CUBE_IDENT_DESCR;Sa forme l’empêche de se mouvoir, mais lui apporte une protection efficace contre d’éventuels prédateurs : il est très difficile à ingérer sans douleur. \nVivant au grand large, il se nourrit de toute chose inanimée qui lui passe devant.;Its shape prevents it from moving, but provides effective protection against potential predators: it is very difficult to ingest without pain. \nLiving in the open sea, it feeds on anything inanimate that passes by.
 ;;
+F_BUTTERFLYFISH_NAME;Poisson-papillon;Butterfly fish
+F_BUTTERFLYFISH_DESCR;;
+F_BUTTERFLYFISH_IDENT_DESCR;;
+;;
+F_SILURUS_NAME;Silure;Silurus
+F_SILURUS_DESCR;;
+F_SILURUS_IDENT_DESCR;;
+;;
 F_ANEMONE_NAME;Anemone;Anemone
 F_ANEMONE_DESCR;Peut servir de refuge pour certains poissons.;Can serve as a refuge for certain fish.
 ;;
@@ -186,3 +194,6 @@ F_STICK_DESCR;;
 ;;
 F_FLOWER_NAME;Fleur;Flower
 F_FLOWER_DESCR;;
+;;
+F_FROG_NAME;Grenouille;Frog
+F_FROG_DESCR;;

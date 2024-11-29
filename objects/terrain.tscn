@@ -1,11 +1,273 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3avs62j1llal"]
+[gd_scene load_steps=34 format=3 uid="uid://d3avs62j1llal"]
 
 [ext_resource type="PackedScene" uid="uid://cpx30mt3jhyyr" path="res://models/Islands/terrain.glb" id="1_bt7gf"]
+[ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_gkuk2"]
+[ext_resource type="Resource" uid="uid://dsda8e73plwii" path="res://scripts/Resources/FishingAreas/island.tres" id="3_p6has"]
+[ext_resource type="Resource" uid="uid://c0g2s4k12jfwj" path="res://scripts/Resources/FishingAreas/beach.tres" id="4_6xb7w"]
+[ext_resource type="Resource" uid="uid://ckkxmebbhktu3" path="res://scripts/Resources/FishingAreas/reef.tres" id="4_rxx25"]
+[ext_resource type="Resource" uid="uid://cene322p62g3o" path="res://scripts/Resources/FishingAreas/swamp.tres" id="6_lfy6b"]
+[ext_resource type="Resource" uid="uid://csju71d6rfls" path="res://scripts/Resources/FishingAreas/island_A_water.tres" id="7_iw8m0"]
+[ext_resource type="Resource" uid="uid://b4lci13yv4xnb" path="res://scripts/Resources/FishingAreas/flowers.tres" id="7_xn0m2"]
+[ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="8_0tx2o"]
+[ext_resource type="PackedScene" uid="uid://r03nc1e8rsjx" path="res://models/Islands/island_water_deep.tscn" id="9_ifom8"]
+[ext_resource type="Resource" uid="uid://luwy0n0yhjw0" path="res://scripts/Resources/FishingAreas/beach_water.tres" id="10_tqybr"]
+[ext_resource type="Resource" uid="uid://bwyftdfcsih5o" path="res://scripts/Resources/FishingAreas/reef_water.tres" id="11_1iyd1"]
+[ext_resource type="Resource" uid="uid://xvgdh2dnb86p" path="res://scripts/Resources/FishingAreas/swamp_water.tres" id="11_2ix6o"]
+[ext_resource type="Resource" uid="uid://baoo6fgvpi464" path="res://scripts/Resources/FishingAreas/river_water.tres" id="12_ghyyl"]
+[ext_resource type="PackedScene" uid="uid://dqbthko1jthwh" path="res://objects/Decorations/shark_area.tscn" id="14_3g7qb"]
+[ext_resource type="Resource" uid="uid://bg5yivmx2fjd7" path="res://scripts/Resources/FishingAreas/shark_area.tres" id="15_2266b"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wbddo"]
+points = PackedVector3Array(0.315716, 0.151648, -0.0393221, 0.315716, -0.199415, -0.0393221, 0.200669, 0.151648, -0.287214, 0.28768, 0.151648, 0.391324, 0.200669, -0.199415, -0.287214, 0.28768, -0.199415, 0.391324, -0.0608646, 0.151648, -0.573917, 0.203673, 0.151648, 0.554335, -0.0608646, -0.199415, -0.573917, 0.203673, -0.199415, 0.554335, -0.499324, 0.151648, -0.703854, 0.000713944, 0.151648, 0.708065, -0.499324, -0.199415, -0.703854, 0.000713944, -0.199415, 0.708065, -0.707189, 0.151648, -0.723935, -0.468585, 0.151648, 1, -0.707189, -0.199415, -0.723935, -0.468585, -0.199415, 1, -0.679053, 0.151648, 0.984981, -0.679053, -0.199415, 0.984981)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1w4m1"]
+points = PackedVector3Array(0.24691, 0, -0.632733, 0.24691, 0.204446, -0.632733, 0.766118, 0, -0.418702, -0.855528, 0, 0.0515391, 0.766118, 0.204446, -0.418702, -0.855528, 0.204446, 0.0515391, 0.840003, 0, -0.145341, -0.867731, 0, 0.196737, 0.840003, 0.204446, -0.145341, -0.867731, 0.204446, 0.196737, 0.73419, 0, 0.0195562, -0.663625, 0, 0.364068, 0.73419, 0.204446, 0.0195562, -0.663625, 0.204446, 0.364068, 0.54212, 0, 0.285269, -0.486433, 0, 0.504282, 0.54212, 0.204446, 0.285269, -0.486433, 0.204446, 0.504282, 0.155807, 0, 0.541248, -0.166483, 0, 0.551098, 0.155807, 0.204446, 0.541248, -0.166483, 0.204446, 0.551098)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_r3se2"]
+points = PackedVector3Array(1, 1, -0.000195742, 1, -1, -0.000195742, 0.923845, 1, -0.382733, 0.923845, 1, 0.382537, 0.923845, -1, 0.382537, 0.923845, -1, -0.382733, 0.70693, 1, -0.707126, 0.70693, 1, 0.70693, 0.70693, -1, 0.70693, 0.70693, -1, -0.707126, 0.382537, 1, -0.924041, 0.382537, 1, 0.923845, 0.382537, -1, 0.923845, 0.382537, -1, -0.924041, -0.000195742, 1, -1, -0.000195742, 1, 1, -0.000195742, -1, 1, -0.000195742, -1, -1, -0.382733, 1, -0.924041, -0.382733, 1, 0.923845, -0.382733, -1, 0.923845, -0.382733, -1, -0.924041, -0.707126, 1, -0.707126, -0.707126, 1, 0.70693, -0.707126, -1, 0.70693, -0.707126, -1, -0.707126, -0.924041, 1, -0.382733, -0.924041, 1, 0.382537, -0.924041, -1, 0.382537, -0.924041, -1, -0.382733, -1, 1, -0.000195742, -1, -1, -0.000195742)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gohsx"]
+noise_type = 3
+frequency = 0.001
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6irtd"]
+width = 1
+height = 1
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_gohsx")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_404p0"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vukg6"]
+width = 1
+height = 1
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_404p0")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_j4axq"]
+noise_type = 3
+frequency = 0.02
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5nj5m"]
+seamless = true
+noise = SubResource("FastNoiseLite_j4axq")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g1cer"]
+render_priority = 0
+shader = ExtResource("8_0tx2o")
+shader_parameter/albedo = Color(0, 0.33467, 0.491748, 1)
+shader_parameter/albedo2 = Color(0, 0.371098, 0.604246, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/roughness = 0.8
+shader_parameter/wave_direction = Vector2(2, 0)
+shader_parameter/wave_direction2 = Vector2(0, 1)
+shader_parameter/time_scale = 0.025
+shader_parameter/noise_scale = 10.0
+shader_parameter/height_scale = 0.3
+shader_parameter/color_deep = Color(0.255622, 0.500334, 1, 1)
+shader_parameter/color_shallow = Color(0.422646, 0.886977, 1, 1)
+shader_parameter/beers_law = 1.5
+shader_parameter/depth_offset = 0.2
+shader_parameter/edge_scale = 1.0
+shader_parameter/near = 1.0
+shader_parameter/far = 100.0
+shader_parameter/edge_color = Color(0.446777, 0.446777, 0.446777, 1)
+shader_parameter/wave = SubResource("NoiseTexture2D_5nj5m")
+shader_parameter/texture_normal = SubResource("NoiseTexture2D_6irtd")
+shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_vukg6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aw46j"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_262th"]
+material = SubResource("StandardMaterial3D_aw46j")
+size = Vector2(500, 500)
+subdivide_width = 200
+subdivide_depth = 200
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rypct"]
+size = Vector3(288.224, 6.71576, 225.156)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dvs4l"]
+points = PackedVector3Array(0.315716, 0.151648, -0.0393221, 0.315716, -0.199415, -0.0393221, 0.200669, 0.151648, -0.287214, 0.28768, 0.151648, 0.391324, 0.200669, -0.199415, -0.287214, 0.28768, -0.199415, 0.391324, -0.0608646, 0.151648, -0.573917, 0.203673, 0.151648, 0.554335, -0.0608646, -0.199415, -0.573917, 0.203673, -0.199415, 0.554335, -0.499324, 0.151648, -0.703854, 0.000713944, 0.151648, 0.708065, -0.499324, -0.199415, -0.703854, 0.000713944, -0.199415, 0.708065, -0.707189, 0.151648, -0.723935, -0.468585, 0.151648, 1, -0.707189, -0.199415, -0.723935, -0.468585, -0.199415, 1, -0.679053, 0.151648, 0.984981, -0.679053, -0.199415, 0.984981)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fcsx7"]
+points = PackedVector3Array(0.24691, 0, -0.632733, 0.24691, 0.204446, -0.632733, 0.766118, 0, -0.418702, -0.855528, 0, 0.0515391, 0.766118, 0.204446, -0.418702, -0.855528, 0.204446, 0.0515391, 0.840003, 0, -0.145341, -0.867731, 0, 0.196737, 0.840003, 0.204446, -0.145341, -0.867731, 0.204446, 0.196737, 0.73419, 0, 0.0195562, -0.663625, 0, 0.364068, 0.73419, 0.204446, 0.0195562, -0.663625, 0.204446, 0.364068, 0.54212, 0, 0.285269, -0.486433, 0, 0.504282, 0.54212, 0.204446, 0.285269, -0.486433, 0.204446, 0.504282, 0.155807, 0, 0.541248, -0.166483, 0, 0.551098, 0.155807, 0.204446, 0.541248, -0.166483, 0.204446, 0.551098)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l5q3p"]
+points = PackedVector3Array(1, 1, -0.000195742, 1, -1, -0.000195742, 0.923845, 1, -0.382733, 0.923845, 1, 0.382537, 0.923845, -1, 0.382537, 0.923845, -1, -0.382733, 0.70693, 1, -0.707126, 0.70693, 1, 0.70693, 0.70693, -1, 0.70693, 0.70693, -1, -0.707126, 0.382537, 1, -0.924041, 0.382537, 1, 0.923845, 0.382537, -1, 0.923845, 0.382537, -1, -0.924041, -0.000195742, 1, -1, -0.000195742, 1, 1, -0.000195742, -1, 1, -0.000195742, -1, -1, -0.382733, 1, -0.924041, -0.382733, 1, 0.923845, -0.382733, -1, 0.923845, -0.382733, -1, -0.924041, -0.707126, 1, -0.707126, -0.707126, 1, 0.70693, -0.707126, -1, 0.70693, -0.707126, -1, -0.707126, -0.924041, 1, -0.382733, -0.924041, 1, 0.382537, -0.924041, -1, 0.382537, -0.924041, -1, -0.382733, -1, 1, -0.000195742, -1, -1, -0.000195742)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_m6khr"]
+points = PackedVector3Array(0.565615, -0.0699135, -0.479237, 0.565615, 0.230973, -0.479237, 0.722783, -0.0699135, -0.41649, 0.348749, -0.0699135, -0.41649, 0.348749, 0.230973, -0.41649, 0.722783, 0.230973, -0.41649, 0.703896, -0.0699135, -0.319034, -0.524953, -0.0699135, 0.086413, -0.524953, 0.230973, 0.086413, 0.703896, 0.230973, -0.319034, -0.757502, -0.0699135, 0.884624, -1, -0.0699135, 0.372375, -1, 0.230973, 0.372375, -0.757502, 0.230973, 0.884624, -1, -0.0699135, 0.673957, -1, 0.230973, 0.673957)
 
 [node name="terrain" instance=ExtResource("1_bt7gf")]
 
-[node name="Plane" parent="." index="6"]
+[node name="StaticBody3D" parent="terrain" index="0"]
+script = ExtResource("2_gkuk2")
+fishTable = ExtResource("3_p6has")
+
+[node name="StaticBody3D" parent="reef" index="0"]
+script = ExtResource("2_gkuk2")
+fishTable = ExtResource("4_rxx25")
+
+[node name="island_boundaries" parent="." index="7"]
 visible = false
 
-[node name="StaticBody3D" parent="Plane" index="0"]
-collision_layer = 4
+[node name="Areas" type="Node3D" parent="." index="8"]
+
+[node name="beach" type="Area3D" parent="Areas" index="0" node_paths=PackedStringArray("parent")]
+collision_layer = 4096
+collision_mask = 256
+script = ExtResource("2_gkuk2")
+fishTable = ExtResource("4_6xb7w")
+parent = NodePath("../../terrain/StaticBody3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/beach" index="0"]
+transform = Transform3D(4.4, 0, 0, 0, 4.4, 0, 0, 0, 4.4, -6, 0.39341, 1)
+shape = SubResource("ConvexPolygonShape3D_wbddo")
+
+[node name="swamp" type="Area3D" parent="Areas" index="1" node_paths=PackedStringArray("parent")]
+collision_layer = 4096
+collision_mask = 256
+script = ExtResource("2_gkuk2")
+fishTable = ExtResource("6_lfy6b")
+parent = NodePath("../../terrain/StaticBody3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/swamp" index="0"]
+transform = Transform3D(6.53872, 0, 0, 0, 6.53872, 0, 0, 0, 6.53872, 1.80207, -0.165606, 6.90258)
+shape = SubResource("ConvexPolygonShape3D_1w4m1")
+
+[node name="flowers" type="Area3D" parent="Areas" index="2" node_paths=PackedStringArray("parent")]
+collision_layer = 4096
+collision_mask = 256
+script = ExtResource("2_gkuk2")
+fishTable = ExtResource("7_xn0m2")
+parent = NodePath("../../terrain/StaticBody3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/flowers" index="0"]
+transform = Transform3D(1.01067, 0, -0.0374866, 0, 0.576654, 0, 0.0601357, 0, 0.630016, -2.94955, 0.499119, -1.70444)
+shape = SubResource("ConvexPolygonShape3D_r3se2")
+
+[node name="beach_collision" parent="." index="9"]
+visible = false
+
+[node name="swamp_collision" parent="." index="10"]
+visible = false
+
+[node name="reef_collision" parent="." index="11"]
+visible = false
+
+[node name="river_collision" parent="." index="12"]
+visible = false
+
+[node name="flowers_collision" parent="." index="13"]
+visible = false
+
+[node name="reed_collision" parent="." index="62"]
+visible = false
+
+[node name="reed_collision_001" parent="." index="63"]
+visible = false
+
+[node name="Water" type="Node3D" parent="." index="68"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.06, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Water" index="0"]
+collision_layer = 4096
+collision_mask = 256
+script = ExtResource("2_gkuk2")
+fishTable = ExtResource("7_iw8m0")
+
+[node name="WaterSurface" type="MeshInstance3D" parent="Water/StaticBody3D" index="0"]
+transform = Transform3D(0.596641, 0, 0, 0, 0.5, 0, 0, 0, 0.448938, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_g1cer")
+transparency = 0.65
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_262th")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Water/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93637, -3.33426, 0.665283)
+shape = SubResource("BoxShape3D_rypct")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Water" index="1"]
+transform = Transform3D(0.405, 0, 0, 0, 0.5, 0, 0, 0, 0.32, 0, -0.957544, 0)
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_262th")
+skeleton = NodePath("../..")
+
+[node name="island_water_deep" parent="Water" index="2" instance=ExtResource("9_ifom8")]
+transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -3.52783, -0.954984, 0.0301056)
+
+[node name="WaterAreas" type="Node3D" parent="Water" index="3"]
+
+[node name="beach_water" type="Area3D" parent="Water/WaterAreas" index="0" node_paths=PackedStringArray("parent")]
+collision_layer = 4096
+collision_mask = 256
+script = ExtResource("2_gkuk2")
+fishTable = ExtResource("10_tqybr")
+parent = NodePath("../../StaticBody3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Water/WaterAreas/beach_water" index="0"]
+transform = Transform3D(4.4, 0, 0, 0, 4.4, 0, 0, 0, 4.4, -6, 0.46341, 1)
+shape = SubResource("ConvexPolygonShape3D_dvs4l")
+
+[node name="swamp_water" type="Area3D" parent="Water/WaterAreas" index="1" node_paths=PackedStringArray("parent")]
+collision_layer = 4096
+collision_mask = 256
+script = ExtResource("2_gkuk2")
+fishTable = ExtResource("11_2ix6o")
+parent = NodePath("../../StaticBody3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Water/WaterAreas/swamp_water" index="0"]
+transform = Transform3D(6.53872, 0, 0, 0, 6.53872, 0, 0, 0, 6.53872, 1.80207, 0.07, 6.90258)
+shape = SubResource("ConvexPolygonShape3D_fcsx7")
+
+[node name="reef_water" type="Area3D" parent="Water/WaterAreas" index="2" node_paths=PackedStringArray("parent")]
+collision_layer = 4096
+collision_mask = 256
+script = ExtResource("2_gkuk2")
+fishTable = ExtResource("11_1iyd1")
+parent = NodePath("../../StaticBody3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Water/WaterAreas/reef_water" index="0"]
+transform = Transform3D(3.40515, 0, -0.555376, 0, 1.77412, 0, 0.682221, 0, 2.77203, 1.24103, 0.07, -7.16412)
+shape = SubResource("ConvexPolygonShape3D_l5q3p")
+
+[node name="river_water" type="Area3D" parent="Water/WaterAreas" index="3" node_paths=PackedStringArray("parent")]
+collision_layer = 4096
+collision_mask = 256
+script = ExtResource("2_gkuk2")
+fishTable = ExtResource("12_ghyyl")
+parent = NodePath("../../StaticBody3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Water/WaterAreas/river_water" index="0"]
+transform = Transform3D(6.95543, 0, 0, 0, 6.95543, 0, 0, 0, 6.95543, -0.396025, -0.402576, 5.05158)
+shape = SubResource("ConvexPolygonShape3D_m6khr")
+
+[node name="shark_area" type="Node3D" parent="Water/WaterAreas" index="4"]
+
+[node name="SharkArea" parent="Water/WaterAreas/shark_area" index="0" node_paths=PackedStringArray("orbit_center_global", "parent") instance=ExtResource("14_3g7qb")]
+transform = Transform3D(-0.487187, 0, -0.112467, 0, 0.5, 0, 0.112467, 0, -0.487187, 0.346, 0, -10.332)
+orbit_center_global = NodePath("..")
+fishTable = ExtResource("15_2266b")
+parent = NodePath("../../../StaticBody3D")
+
+[connection signal="area_entered" from="Areas/beach" to="Areas/beach" method="_on_area_entered"]
+[connection signal="area_exited" from="Areas/beach" to="Areas/beach" method="_on_area_exited"]
+[connection signal="area_entered" from="Areas/swamp" to="Areas/swamp" method="_on_area_entered"]
+[connection signal="area_exited" from="Areas/swamp" to="Areas/swamp" method="_on_area_exited"]
+[connection signal="area_entered" from="Areas/flowers" to="Areas/flowers" method="_on_area_entered"]
+[connection signal="area_exited" from="Areas/flowers" to="Areas/flowers" method="_on_area_exited"]
+[connection signal="area_entered" from="Water/WaterAreas/beach_water" to="Water/WaterAreas/beach_water" method="_on_area_entered"]
+[connection signal="area_exited" from="Water/WaterAreas/beach_water" to="Water/WaterAreas/beach_water" method="_on_area_exited"]
+[connection signal="area_entered" from="Water/WaterAreas/swamp_water" to="Water/WaterAreas/swamp_water" method="_on_area_entered"]
+[connection signal="area_exited" from="Water/WaterAreas/swamp_water" to="Water/WaterAreas/swamp_water" method="_on_area_exited"]
+[connection signal="area_entered" from="Water/WaterAreas/reef_water" to="Water/WaterAreas/reef_water" method="_on_area_entered"]
+[connection signal="area_exited" from="Water/WaterAreas/reef_water" to="Water/WaterAreas/reef_water" method="_on_area_exited"]
+[connection signal="area_entered" from="Water/WaterAreas/river_water" to="Water/WaterAreas/river_water" method="_on_area_entered"]
+[connection signal="area_exited" from="Water/WaterAreas/river_water" to="Water/WaterAreas/river_water" method="_on_area_exited"]
+[connection signal="area_entered" from="Water/WaterAreas/shark_area/SharkArea" to="Water/WaterAreas/shark_area/SharkArea" method="_on_area_entered"]
+[connection signal="area_exited" from="Water/WaterAreas/shark_area/SharkArea" to="Water/WaterAreas/shark_area/SharkArea" method="_on_area_exited"]
