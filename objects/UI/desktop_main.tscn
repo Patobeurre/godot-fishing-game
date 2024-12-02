@@ -127,5 +127,6 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cursor/Area2D"]
 shape = SubResource("CircleShape2D_qrpnc")
 
+[connection signal="gui_input" from="PanelContainer" to="PanelContainer" method="_on_gui_input"]
 [connection signal="area_shape_entered" from="PanelContainer/Area2D" to="PanelContainer" method="_on_area_2d_area_shape_entered"]
 [connection signal="area_shape_exited" from="PanelContainer/Area2D" to="PanelContainer" method="_on_area_2d_area_shape_exited"]

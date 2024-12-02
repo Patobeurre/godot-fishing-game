@@ -24,5 +24,5 @@ func init_window(window :WindowContentRes):
 	visible = true
 
 
-func on_close_btn_pressed():
+func _on_close_btn_pressed() -> void:
 	visible = false
