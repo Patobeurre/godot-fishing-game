@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://d0s8hb0tdrawb"]
+
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_3l6y5"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_q3mey"]
+[ext_resource type="Texture2D" uid="uid://bfbruvu36phlf" path="res://sprites/Catchables/Fishes/flowerfish.png" id="2_t2rwe"]
+[ext_resource type="PackedScene" uid="uid://drhkafcvf1r6s" path="res://objects/Catchables/Fishes/flowerfish.tscn" id="4_l4ou4"]
+[ext_resource type="Resource" uid="uid://clpf0htwtcdc4" path="res://scripts/Resources/Catchables/Insects/Bee.tres" id="5_1etmf"]
+[ext_resource type="Texture2D" uid="uid://cw7tkkxb1pgmj" path="res://sprites/Catchables/Fishes/flowerfish_shadow.png" id="5_fchr0"]
+[ext_resource type="Resource" uid="uid://dcpvdafn7juyp" path="res://scripts/Resources/Catchables/Insects/Butterfly.tres" id="6_ff8pw"]
+
+[resource]
+script = ExtResource("1_q3mey")
+id = 59
+name = "F_FLOWERFISH_NAME"
+description = "F_FLOWERFISH_DESCR"
+notification_text = ""
+category = ExtResource("1_3l6y5")
+tags = Array[int]([0, 1, 10])
+image = ExtResource("2_t2rwe")
+shadow = ExtResource("5_fchr0")
+scene = ExtResource("4_l4ou4")
+rarity = 15
+price = 86
+periods = Array[int]([0, 1, 2, 3])
+lures = Array[ExtResource("1_q3mey")]([ExtResource("5_1etmf"), ExtResource("6_ff8pw")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([10])

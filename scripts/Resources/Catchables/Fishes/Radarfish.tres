@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://bej7o5giqs7pv"]
+
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_jcfdj"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_o8epq"]
+[ext_resource type="Texture2D" uid="uid://b4ocoyslqwo1a" path="res://sprites/Catchables/Fishes/radarfish.png" id="2_rl7s1"]
+[ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="4_em03k"]
+[ext_resource type="Texture2D" uid="uid://bekv2tr3gdnen" path="res://sprites/Catchables/Fishes/radarfish_shadow.png" id="4_jep0j"]
+[ext_resource type="PackedScene" uid="uid://dg3a5x5pb0oii" path="res://objects/Catchables/Fishes/radar_fish.tscn" id="5_04gm1"]
+
+[resource]
+script = ExtResource("1_o8epq")
+id = 60
+name = "F_RADARFISH_NAME"
+description = "F_RADARFISH_DESCR"
+notification_text = ""
+category = ExtResource("1_jcfdj")
+tags = Array[int]([0, 1])
+image = ExtResource("2_rl7s1")
+shadow = ExtResource("4_jep0j")
+scene = ExtResource("5_04gm1")
+rarity = 30
+price = 33
+periods = Array[int]([3, 2])
+lures = Array[ExtResource("1_o8epq")]([ExtResource("4_em03k")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([6])

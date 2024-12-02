@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://d3avs62j1llal"]
+[gd_scene load_steps=36 format=3 uid="uid://d3avs62j1llal"]
 
 [ext_resource type="PackedScene" uid="uid://cpx30mt3jhyyr" path="res://models/Islands/terrain.glb" id="1_bt7gf"]
 [ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_gkuk2"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://csju71d6rfls" path="res://scripts/Resources/FishingAreas/island_A_water.tres" id="7_iw8m0"]
 [ext_resource type="Resource" uid="uid://b4lci13yv4xnb" path="res://scripts/Resources/FishingAreas/flowers.tres" id="7_xn0m2"]
 [ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="8_0tx2o"]
+[ext_resource type="PackedScene" uid="uid://dlxfixcjsen0x" path="res://objects/Decorations/reeds.tscn" id="8_if4ae"]
 [ext_resource type="PackedScene" uid="uid://r03nc1e8rsjx" path="res://models/Islands/island_water_deep.tscn" id="9_ifom8"]
 [ext_resource type="Resource" uid="uid://luwy0n0yhjw0" path="res://scripts/Resources/FishingAreas/beach_water.tres" id="10_tqybr"]
 [ext_resource type="Resource" uid="uid://bwyftdfcsih5o" path="res://scripts/Resources/FishingAreas/reef_water.tres" id="11_1iyd1"]
@@ -16,6 +17,7 @@
 [ext_resource type="Resource" uid="uid://baoo6fgvpi464" path="res://scripts/Resources/FishingAreas/river_water.tres" id="12_ghyyl"]
 [ext_resource type="PackedScene" uid="uid://dqbthko1jthwh" path="res://objects/Decorations/shark_area.tscn" id="14_3g7qb"]
 [ext_resource type="Resource" uid="uid://bg5yivmx2fjd7" path="res://scripts/Resources/FishingAreas/shark_area.tres" id="15_2266b"]
+[ext_resource type="PackedScene" uid="uid://cd176ki4hkpqi" path="res://objects/Structures/bridge.tscn" id="18_xrsdk"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wbddo"]
 points = PackedVector3Array(0.315716, 0.151648, -0.0393221, 0.315716, -0.199415, -0.0393221, 0.200669, 0.151648, -0.287214, 0.28768, 0.151648, 0.391324, 0.200669, -0.199415, -0.287214, 0.28768, -0.199415, 0.391324, -0.0608646, 0.151648, -0.573917, 0.203673, 0.151648, 0.554335, -0.0608646, -0.199415, -0.573917, 0.203673, -0.199415, 0.554335, -0.499324, 0.151648, -0.703854, 0.000713944, 0.151648, 0.708065, -0.499324, -0.199415, -0.703854, 0.000713944, -0.199415, 0.708065, -0.707189, 0.151648, -0.723935, -0.468585, 0.151648, 1, -0.707189, -0.199415, -0.723935, -0.468585, -0.199415, 1, -0.679053, 0.151648, 0.984981, -0.679053, -0.199415, 0.984981)
@@ -112,7 +114,10 @@ fishTable = ExtResource("3_p6has")
 script = ExtResource("2_gkuk2")
 fishTable = ExtResource("4_rxx25")
 
-[node name="island_boundaries" parent="." index="7"]
+[node name="island_boundaries" parent="." index="6"]
+visible = false
+
+[node name="beach_collision" parent="." index="7"]
 visible = false
 
 [node name="Areas" type="Node3D" parent="." index="8"]
@@ -150,25 +155,38 @@ parent = NodePath("../../terrain/StaticBody3D")
 transform = Transform3D(1.01067, 0, -0.0374866, 0, 0.576654, 0, 0.0601357, 0, 0.630016, -2.94955, 0.499119, -1.70444)
 shape = SubResource("ConvexPolygonShape3D_r3se2")
 
-[node name="beach_collision" parent="." index="9"]
+[node name="Reeds" type="Node3D" parent="Areas" index="3"]
+
+[node name="reeds" parent="Areas/Reeds" index="0" node_paths=PackedStringArray("parent") instance=ExtResource("8_if4ae")]
+transform = Transform3D(-0.74818, 0, 0.663495, 0, 1, 0, -0.663495, 0, -0.74818, 2.1998, 0.00691566, 5.8455)
+parent = NodePath("../../../terrain/StaticBody3D")
+
+[node name="reeds2" parent="Areas/Reeds" index="1" node_paths=PackedStringArray("parent") instance=ExtResource("8_if4ae")]
+transform = Transform3D(0.804013, 0, -0.594612, 0, 1, 0, 0.594612, 0, 0.804013, 3.41545, 0.0369307, 6.66224)
+parent = NodePath("../../../terrain/StaticBody3D")
+
+[node name="reeds3" parent="Areas/Reeds" index="2" node_paths=PackedStringArray("parent") instance=ExtResource("8_if4ae")]
+transform = Transform3D(-0.244546, 0, 0.969638, 0, 1, 0, -0.969638, 0, -0.244546, 2.52582, 0.053586, 7.69918)
+parent = NodePath("../../../terrain/StaticBody3D")
+
+[node name="reeds4" parent="Areas/Reeds" index="3" node_paths=PackedStringArray("parent") instance=ExtResource("8_if4ae")]
+transform = Transform3D(0.69689, 0, 0.717178, 0, 1, 0, -0.717178, 0, 0.69689, 1.2586, 0.0602043, 9.15237)
+parent = NodePath("../../../terrain/StaticBody3D")
+
+[node name="reeds5" parent="Areas/Reeds" index="4" node_paths=PackedStringArray("parent") instance=ExtResource("8_if4ae")]
+transform = Transform3D(0.715937, 0, -0.698165, 0, 1, 0, 0.698165, 0, 0.715937, -0.982694, 0.0416807, 9.12747)
+parent = NodePath("../../../terrain/StaticBody3D")
+
+[node name="swamp_collision" parent="." index="9"]
 visible = false
 
-[node name="swamp_collision" parent="." index="10"]
+[node name="reef_collision" parent="." index="10"]
 visible = false
 
-[node name="reef_collision" parent="." index="11"]
+[node name="river_collision" parent="." index="11"]
 visible = false
 
-[node name="river_collision" parent="." index="12"]
-visible = false
-
-[node name="flowers_collision" parent="." index="13"]
-visible = false
-
-[node name="reed_collision" parent="." index="62"]
-visible = false
-
-[node name="reed_collision_001" parent="." index="63"]
+[node name="flowers_collision" parent="." index="12"]
 visible = false
 
 [node name="Water" type="Node3D" parent="." index="68"]
@@ -254,6 +272,9 @@ transform = Transform3D(-0.487187, 0, -0.112467, 0, 0.5, 0, 0.112467, 0, -0.4871
 orbit_center_global = NodePath("..")
 fishTable = ExtResource("15_2266b")
 parent = NodePath("../../../StaticBody3D")
+
+[node name="bridge2" parent="." index="71" instance=ExtResource("18_xrsdk")]
+transform = Transform3D(0.0802135, 0.00899738, -0.114389, -0.0156056, 0.139127, 1.46414e-09, 0.113676, 0.0127508, 0.0807165, -0.416347, -0.357933, 4.88074)
 
 [connection signal="area_entered" from="Areas/beach" to="Areas/beach" method="_on_area_entered"]
 [connection signal="area_exited" from="Areas/beach" to="Areas/beach" method="_on_area_exited"]

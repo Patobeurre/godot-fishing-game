@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=5 format=3 uid="uid://clguwusxp7uun"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_wlix4"]
+[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="2_2w7uj"]
+[ext_resource type="Resource" uid="uid://joqtsvod4gx8" path="res://scripts/Resources/Catchables/Insects/Dragonfly.tres" id="2_ac6sn"]
+[ext_resource type="Resource" uid="uid://crid6n6jnhf6e" path="res://scripts/Resources/Catchables/Insects/Phasma.tres" id="3_vwrl5"]
+
+[resource]
+script = ExtResource("2_2w7uj")
+name = "FA_REED"
+type = 0
+waiting_time = 3.0
+catchables = Array[ExtResource("1_wlix4")]([ExtResource("2_ac6sn"), ExtResource("3_vwrl5")])
+default_catchables = Array[ExtResource("1_wlix4")]([])

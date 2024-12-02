@@ -21,4 +21,4 @@ price = 0
 periods = Array[int]([0, 1])
 lures = Array[ExtResource("1_ftmi8")]([ExtResource("4_diuy3")])
 lure_ids = Array[int]([])
-lure_tags = Array[int]([])
+lure_tags = Array[int]([10])

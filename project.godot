@@ -22,7 +22,7 @@ resources_spreadsheet_view/context_menu_on_leftclick=false
 
 config/name="Fishing Game"
 config/tags=PackedStringArray("starterkit")
-run/main_scene="res://scenes/island.tscn"
+run/main_scene="res://scenes/island_final.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0.92549, 0.92549, 0.960784, 1)
 boot_splash/image="res://splash-screen.png"

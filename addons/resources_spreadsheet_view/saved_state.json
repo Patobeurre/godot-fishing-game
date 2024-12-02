@@ -4,6 +4,10 @@
       "resource_local_to_scene": true,
       "resource_name": true
     },
+    "res://scripts/Resources/Baskets/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
     "res://scripts/Resources/Catchable/": {
       "resource_local_to_scene": true,
       "resource_name": true
@@ -46,7 +50,8 @@
     "res://scripts/Resources/Catchables/Birds/",
     "res://scripts/Resources/Documents/",
     "res://scripts/Resources/Document/",
-    "res://scripts/Resources/Catchable/"
+    "res://scripts/Resources/Catchable/",
+    "res://scripts/Resources/Baskets/"
   ],
   "table_functions": {
     "filter": [

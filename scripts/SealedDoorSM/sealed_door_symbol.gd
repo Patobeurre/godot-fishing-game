@@ -26,7 +26,7 @@ func lock_rotation(angle :float):
 
 
 func apply_rotation(angle :float):
-	parent_node.rotation.x = initial_rotation.x + angle * custom_modifier
+	parent_node.rotation.x = fmod(initial_rotation.x + angle * custom_modifier, deg_to_rad(360))
 
 
 func set_completed(parent :Node3D):

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://joqtsvod4gx8"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_0ogu0"]
+[ext_resource type="Resource" uid="uid://eqi3uvm17to0" path="res://scripts/Resources/Categories/Insects.tres" id="1_jdh1v"]
+[ext_resource type="Texture2D" uid="uid://bfs8quy0k4yp8" path="res://sprites/Catchables/dragonfly.png" id="2_2p34o"]
+[ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="4_kvs7e"]
+[ext_resource type="PackedScene" uid="uid://cyxfgm7h3nr82" path="res://objects/Catchables/dragonfly.tscn" id="5_1xhr6"]
+
+[resource]
+script = ExtResource("1_0ogu0")
+id = 57
+name = "F_DRAGONFLY_NAME"
+description = "F_DRAGONFLY_DESCR"
+notification_text = ""
+category = ExtResource("1_jdh1v")
+tags = Array[int]([4, 9])
+image = ExtResource("2_2p34o")
+scene = ExtResource("5_1xhr6")
+rarity = 30
+price = 0
+periods = Array[int]([0, 1, 2, 3])
+lures = Array[ExtResource("1_0ogu0")]([ExtResource("4_kvs7e")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([6])

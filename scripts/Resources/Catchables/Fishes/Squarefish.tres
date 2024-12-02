@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://dj6u6l0j4ux1c"]
+
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_8ehnm"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_o85jt"]
+[ext_resource type="Texture2D" uid="uid://byl1yakd57kli" path="res://sprites/Catchables/Fishes/squarefish.png" id="2_wbrcd"]
+[ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="4_hi08d"]
+[ext_resource type="PackedScene" uid="uid://be4d5ei83bfcv" path="res://objects/Catchables/Fishes/squarefish.tscn" id="5_uykwx"]
+[ext_resource type="Texture2D" uid="uid://buwk4g5dfeeuj" path="res://sprites/Catchables/Fishes/squarefish_shadow.png" id="6_i5at7"]
+
+[resource]
+script = ExtResource("1_o85jt")
+id = 58
+name = "F_SQUAREFISH_NAME"
+description = "F_SQUAREFISH_DESCR"
+notification_text = ""
+category = ExtResource("1_8ehnm")
+tags = Array[int]([0, 2])
+image = ExtResource("2_wbrcd")
+shadow = ExtResource("6_i5at7")
+scene = ExtResource("5_uykwx")
+rarity = 50
+price = 0
+periods = Array[int]([2, 3, 0])
+lures = Array[ExtResource("1_o85jt")]([ExtResource("4_hi08d")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([6, 4])

@@ -16,11 +16,11 @@ F_TINYJELLYFISH_DESCR;Une minuscule méduse.;A tiny jellyfish
 F_TINYJELLYFISH_IDENT_DESCR;Sa très petite taille en fait une proie de choix pour les grandes baleines.;Its very small size makes it a prime target for whales.
 ;;
 F_ANGLERFISH_NAME;Lotte de mer;Anglerfish
-F_ANGLERFISH_DESCR;Un poisson à l’apparence étrange. Possède une large mâchoire composée de nombreuses longues dents acérées.A weird looking fish. Has a wide jaw containing a huge amount of long and sharp teeths;
-F_ANGLERFISH_IDENT_DESCR;Exclusivement carnivore, ce poisson vie essentiellement seul.\nIl n’hésite pas à manger ses propres congénères;Exclusively carnivorous, this fish essentially lives alone.\nIt doesn't hesitate to eat its own congeners.
+F_ANGLERFISH_DESCR;Un poisson à l’apparence étrange. Possède une large mâchoire composée de nombreuses dents longues et acérées.;A weird looking fish. Has a wide jaw containing a huge amount of long and sharp teeths.
+F_ANGLERFISH_IDENT_DESCR;Exclusivement carnivore, ce poisson vit essentiellement seul.\nIl n’hésite pas à manger ses propres congénères;Exclusively carnivorous, this fish essentially lives alone.\nIt doesn't hesitate to eat its own congeners.
 ;;
 F_CLOWNFISH_NAME;Poisson clown;Clownfish
-F_CLOWNFISH_DESCR;Petit poisson à rayures oranges et blanches. N’ai pas particulièrement drôle…;Small fish with orange and white stripes. Isn’t particularily funny…
+F_CLOWNFISH_DESCR;Petit poisson à rayures oranges et blanches. N’est pas particulièrement drôle…;Small fish with orange and white stripes. Isn’t particularily funny…
 F_CLOWNFISH_IDENT_DESCR;Ce poisson coloré adore se cacher dans des anémones.;This colorful fish love hiding inside sea anemones.
 ;;
 F_COMMONFISH_NAME;Poisson commun;Common fish
@@ -32,7 +32,7 @@ F_EEL_DESCR;Serpente autour des formations rocheuses.;Wander near rock formation
 F_EEL_IDENT_DESCR;Ce poisson migrateur se reproduit au grand large. Au stade adulte il est lucifuge (repoussé par la lumière).;This migratory fish breeds in the open sea. As an adult, it is lucifugic (repelled by light).
 ;;
 F_PILCHARD_NAME;Sardine;Pilchard
-F_PILCHARD_DESCR;Un très petit poisson. Commun au large des côtes;A really small fish. Common off the coasts.
+F_PILCHARD_DESCR;Un très petit poisson. Commun au large des côtes.;A really small fish. Common off the coasts.
 F_PILCHARD_IDENT_DESCR;Ce très petit poisson se déplace en banc dans les eaux profondes. Peut être observé uniquement lorsque le soleil est levé.;This really small fish moves in shoals in deep waters. Can only be seen in daylight.
 ;;
 F_SHARK_NAME;Requin;Shark
@@ -57,7 +57,7 @@ F_SOLE_IDENT_DESCR;S’enfouie dans le sable et attend.;Buries in the sand and w
 ;;
 F_URCHIN_NAME;Oursin;Sea urchin
 F_URCHIN_DESCR;Une sphère recouverte de piquants.;A sphere covered with spikes.
-F_URCHIN_IDENT_DESCR;Bien que difficile à observée, cet animale possède une bouche… ainsi qu’un anus à l’opposé.;Although difficult to observe, this animal has a mouth... and an anus at the opposite.
+F_URCHIN_IDENT_DESCR;Bien que difficile à observer, cet animale possède une bouche… ainsi qu’un anus à l’opposé.;Although difficult to observe, this animal has a mouth... and an anus at the opposite.
 ;;
 F_PIKE_NAME;Brochet;Pike
 F_PIKE_DESCR;Carnivore se nourrissant d’insectes ou de poissons plus petits que lui.;Carnivore that eat fishes smaller than him,
@@ -96,7 +96,7 @@ F_SUNFISH_DESCR;Il brûle lentement ma peau;Burn slightly in my hands
 F_SUNFISH_IDENT_DESCR;Quand les deux amoureux contemple l’astre, contemple avec eux. Et voit par leur œil la beauté du monde.;When the two lovers contemplate the star, contemplate with them. And see throught their eye the beauty of the world,
 ;;
 F_HIDDENFISH_NAME;Poisson camouflage;Camouflaged fish
-F_HIDDENFISH_DESCR;Se cachant efficacement à l'intérieur d'une touffe d'algues.;Hidding efficiently inside clump of seaweed.
+F_HIDDENFISH_DESCR;Se cache à l'intérieur d'une touffe d'algues.;Hidding inside a clump of seaweed.
 F_HIDDENFISH_IDENT_DESCR;;
 ;;
 F_SHRIMP_NAME;Crevette;Shrimp
@@ -134,6 +134,18 @@ F_BUTTERFLYFISH_IDENT_DESCR;;
 F_SILURUS_NAME;Silure;Silurus
 F_SILURUS_DESCR;;
 F_SILURUS_IDENT_DESCR;;
+;;
+F_FLOWERFISH_NAME;Poisson fleur;Flower fish
+F_FLOWERFISH_DESCR;Un poisson à collerette en pétales de fleur.;A fish with a flower petal ruff.
+F_FLOWERFISH_IDENT_DESCR;;
+;;
+F_RADARFISH_NAME;Poisson radio;Radio fish
+F_RADARFISH_DESCR;Tire probablement son nom de sa nageoire dorsale en forme d’antenne.;Probably takes its name from its antenna-shaped dorsal fin.
+F_RADARFISH_IDENT_DESCR;;
+;;
+F_SAILFISH_NAME;Espadon;Sailfish
+F_SAILFISH_DESCr;;
+F_SAILFISH_IDENT_DESCR;;
 ;;
 F_ANEMONE_NAME;Anemone;Anemone
 F_ANEMONE_DESCR;Peut servir de refuge pour certains poissons.;Can serve as a refuge for certain fish.
@@ -197,3 +209,9 @@ F_FLOWER_DESCR;;
 ;;
 F_FROG_NAME;Grenouille;Frog
 F_FROG_DESCR;;
+;;
+F_DRAGONFLY_NAME;Libellule;Dragonfly
+F_DRAGONFLY_DESCR;;
+;;
+F_PHASMA_NAME;Phasme;Phasma
+F_PHASMA_DESCR;;

@@ -18,3 +18,4 @@ mono_crash.*.json
 build/
 # https://github.com/godotengine/godot/issues/82270
 *~*.TMP
+game_linux
