@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/UI/Components/CatchableItem.gd" id="1_4jl6m"]
 [ext_resource type="Texture2D" uid="uid://lkseiwb1yb1a" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-double.png" id="2_0uwnl"]
-[ext_resource type="Texture2D" uid="uid://cpxour8a7ihec" path="res://icon.png" id="2_wo6d6"]
+[ext_resource type="Texture2D" uid="uid://cra6bwu35rah3" path="res://sprites/Catchables/Fishes/octopus.png" id="3_al7v5"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1e6jx"]
 
@@ -78,7 +78,7 @@ custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
-texture = ExtResource("2_wo6d6")
+texture = ExtResource("3_al7v5")
 expand_mode = 2
 stretch_mode = 4
 

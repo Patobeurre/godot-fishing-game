@@ -3,7 +3,7 @@ class_name IdentifiedRes
 
 @export var catchable :IdentificationCatchable
 
-var unknown_picture := preload("res://sprites/Catchables/unknown.png")
+static var unknown_catchable :CatchableRes = preload("res://scripts/Resources/Catchables/Unknown.tres")
 
 @export var selected_catchable :CatchableRes = null
 @export var is_correctly_identified :bool = false
@@ -16,9 +16,9 @@ static func create(new_identification_catchable :IdentificationCatchable) -> Ide
 
 
 func get_picture() -> Texture2D:
-	if selected_catchable != null:
-		return selected_catchable.image
-	return unknown_picture
+	#if is_correctly_identified:
+	#	selected_catchable = catchable.matching_catchable
+	return selected_catchable.image
 
 
 func verify() -> bool:

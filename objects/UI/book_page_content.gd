@@ -32,6 +32,8 @@ func init(identified_catchable :IdentifiedRes, page_right :bool):
 
 
 func set_selected_catchable(catchable :CatchableRes) -> void:
+	if identification_catchable.is_correctly_identified:
+		return
 	identification_catchable.selected_catchable = catchable
 	picture.texture = catchable.image
 
@@ -42,4 +44,10 @@ func _on_identification_validated():
 
 
 func _on_btn_fish_image_pressed() -> void:
+	if identification_catchable.is_correctly_identified:
+		return
 	btn_fish_clicked.emit(self)
+
+
+func _on_texture_button_pressed() -> void:
+	set_selected_catchable(IdentifiedRes.unknown_catchable)
