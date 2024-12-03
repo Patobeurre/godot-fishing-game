@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=15 format=3 uid="uid://csju71d6rfls"]
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=16 format=3 uid="uid://csju71d6rfls"]
 
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="1_5n40q"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_g14b2"]
@@ -14,9 +14,11 @@
 [ext_resource type="Resource" uid="uid://b67rtymghjo5n" path="res://scripts/Resources/Catchables/Fishes/JellyFishRobe.tres" id="10_j1jwr"]
 [ext_resource type="Resource" uid="uid://dj6u6l0j4ux1c" path="res://scripts/Resources/Catchables/Fishes/Squarefish.tres" id="11_igtbr"]
 [ext_resource type="Resource" uid="uid://bej7o5giqs7pv" path="res://scripts/Resources/Catchables/Fishes/Radarfish.tres" id="12_f4jh7"]
+[ext_resource type="Resource" uid="uid://dwijteaf2p6at" path="res://scripts/Resources/Regions/Coast.tres" id="14_rfhp1"]
 
 [resource]
 script = ExtResource("1_5n40q")
+region = ExtResource("14_rfhp1")
 name = "FA_COAST"
 type = 1
 waiting_time = 3.0

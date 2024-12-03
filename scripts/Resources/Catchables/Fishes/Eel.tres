@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://c1af81d13ra1f"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://c1af81d13ra1f"]
 
 [ext_resource type="Texture2D" uid="uid://ktitycs2xjbd" path="res://sprites/Catchables/Fishes/eel.png" id="1_bct5f"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_dlws0"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_lq6ae"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="2_4h4if"]
 [ext_resource type="PackedScene" uid="uid://bnfmmuc36bstu" path="res://objects/Catchables/Fishes/eel.tscn" id="3_tksdn"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_mrh3q"]
+[ext_resource type="Resource" uid="uid://dkhuqkephtd2b" path="res://scripts/Resources/Regions/Reef.tres" id="6_dflvm"]
 [ext_resource type="Texture2D" uid="uid://bshv4iih1opr1" path="res://sprites/Catchables/Fishes/eel_shadow.png" id="6_h1d58"]
 
 [resource]
@@ -20,6 +22,7 @@ shadow = ExtResource("6_h1d58")
 scene = ExtResource("3_tksdn")
 rarity = 30
 price = 17
+regions = Array[ExtResource("5_mrh3q")]([ExtResource("6_dflvm")])
 periods = Array[int]([2, 3])
 lures = Array[ExtResource("1_dlws0")]([ExtResource("2_4h4if")])
 lure_ids = Array[int]([])

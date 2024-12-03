@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RegionRes" load_steps=2 format=3 uid="uid://css0sshg3r42c"]
+
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="1_kdrr0"]
+
+[resource]
+script = ExtResource("1_kdrr0")
+name = "FA_HIVE"
+color = Color(1, 1, 1, 1)

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=9 format=3 uid="uid://bwyftdfcsih5o"]
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=10 format=3 uid="uid://bwyftdfcsih5o"]
 
 [ext_resource type="Resource" uid="uid://c1af81d13ra1f" path="res://scripts/Resources/Catchables/Fishes/Eel.tres" id="1_0tjx7"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_7kfvn"]
@@ -7,10 +7,12 @@
 [ext_resource type="Resource" uid="uid://hgj47b8kfi7j" path="res://scripts/Resources/Catchables/Fishes/SeaUrchin.tres" id="5_qvj67"]
 [ext_resource type="Resource" uid="uid://b6hwf8hmftnpf" path="res://scripts/Resources/Catchables/Anemone.tres" id="6_s7fo1"]
 [ext_resource type="Resource" uid="uid://c0d4soyvubcj0" path="res://scripts/Resources/Catchables/Fishes/TrueMussels.tres" id="7_h1pt4"]
+[ext_resource type="Resource" uid="uid://dkhuqkephtd2b" path="res://scripts/Resources/Regions/Reef.tres" id="8_4k7xg"]
 [ext_resource type="Resource" uid="uid://ds8oniim37aio" path="res://scripts/Resources/Catchables/Fishes/ExplodingFish.tres" id="8_a4v8o"]
 
 [resource]
 script = ExtResource("2_hhjtk")
+region = ExtResource("8_4k7xg")
 name = "FA_REEF"
 type = 1
 waiting_time = 3.0

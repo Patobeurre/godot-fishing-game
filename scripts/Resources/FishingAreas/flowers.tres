@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=7 format=3 uid="uid://b4lci13yv4xnb"]
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=8 format=3 uid="uid://b4lci13yv4xnb"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_kl5l1"]
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="2_g7r0p"]
@@ -6,9 +6,11 @@
 [ext_resource type="Resource" uid="uid://dcpvdafn7juyp" path="res://scripts/Resources/Catchables/Insects/Butterfly.tres" id="3_0bmat"]
 [ext_resource type="Resource" uid="uid://bcpyooewpt3g4" path="res://scripts/Resources/Catchables/Insects/Beetle.tres" id="4_wwhrf"]
 [ext_resource type="Resource" uid="uid://crid6n6jnhf6e" path="res://scripts/Resources/Catchables/Insects/Phasma.tres" id="5_7hkrm"]
+[ext_resource type="Resource" uid="uid://bp5g8fihosob6" path="res://scripts/Resources/Regions/Flowers.tres" id="6_e35hd"]
 
 [resource]
 script = ExtResource("2_g7r0p")
+region = ExtResource("6_e35hd")
 name = "FA_FLOWERS"
 type = 0
 waiting_time = 3.0

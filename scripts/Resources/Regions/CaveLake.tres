@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RegionRes" load_steps=2 format=3 uid="uid://4365mtuujlmb"]
+
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="1_r6xho"]
+
+[resource]
+script = ExtResource("1_r6xho")
+name = "FA_CAVE_LAKE"
+color = Color(0.568973, 0.568973, 0.568973, 1)

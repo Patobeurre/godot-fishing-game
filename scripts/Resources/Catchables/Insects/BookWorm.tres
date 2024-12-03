@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://prfpa0vi0mta"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://prfpa0vi0mta"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_iyj20"]
 [ext_resource type="Resource" uid="uid://dsaa6q3411ycd" path="res://scripts/Resources/Categories/Secrets.tres" id="1_o4mia"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="2_8pqr8"]
 [ext_resource type="Texture2D" uid="uid://bpmiqeyy4bgqs" path="res://sprites/Catchables/bookworm.png" id="2_uy5g0"]
 [ext_resource type="PackedScene" uid="uid://d5vvou2r7k2j" path="res://objects/Catchables/bookworm.tscn" id="3_dei0y"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_mytvj"]
+[ext_resource type="Resource" uid="uid://daphulkiqldid" path="res://scripts/Resources/Regions/Bookshelve.tres" id="6_upycp"]
 
 [resource]
 script = ExtResource("1_iyj20")
@@ -18,6 +20,7 @@ image = ExtResource("2_uy5g0")
 scene = ExtResource("3_dei0y")
 rarity = 5
 price = 0
+regions = Array[ExtResource("5_mytvj")]([ExtResource("6_upycp")])
 periods = Array[int]([0, 1, 2, 3])
 lures = Array[ExtResource("1_iyj20")]([ExtResource("2_8pqr8")])
 lure_ids = Array[int]([])

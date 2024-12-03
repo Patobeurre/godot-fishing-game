@@ -6,13 +6,19 @@ enum EAreaType {
 	WATER,
 }
 
-@export var name :String
+@export var region :RegionRes
 @export var type :EAreaType
 @export var waiting_time :float = 3.0
 @export var catchables: Array[CatchableRes]
 @export var default_catchables: Array[CatchableRes]
 
 var modifier :FishingAreaModifierRes = FishingAreaModifierRes.new()
+
+
+func init():
+	var all_catchables = FishingManager.all_lures.catchables
+	var catchable_list = CatchableList.create(all_catchables).filter_by_regions([region])
+	catchables = catchable_list.list
 
 
 func pick_catchable(

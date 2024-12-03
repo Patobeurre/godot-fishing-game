@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=5 format=3 uid="uid://c0g2s4k12jfwj"]
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=6 format=3 uid="uid://c0g2s4k12jfwj"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_5730s"]
 [ext_resource type="Resource" uid="uid://ccluuofosbbi5" path="res://scripts/Resources/Catchables/Shell.tres" id="1_yni1i"]
 [ext_resource type="Resource" uid="uid://m3esr6ufsrya" path="res://scripts/Resources/Catchables/Fishes/HermitCrab.tres" id="2_3vuec"]
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="2_bdlb5"]
+[ext_resource type="Resource" uid="uid://dhld2ow8uhn80" path="res://scripts/Resources/Regions/BeachGround.tres" id="4_g57ca"]
 
 [resource]
 script = ExtResource("2_bdlb5")
+region = ExtResource("4_g57ca")
 name = "FA_BEACH"
 type = 0
 waiting_time = 3.0

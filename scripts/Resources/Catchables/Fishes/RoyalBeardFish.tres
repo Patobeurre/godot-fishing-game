@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://boh11y8ocee74"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://boh11y8ocee74"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_dwfd6"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_rp6xh"]
 [ext_resource type="Texture2D" uid="uid://c4p2le6dq82ww" path="res://sprites/Catchables/Fishes/royal_beard_fish.png" id="2_gj32u"]
 [ext_resource type="Resource" uid="uid://ddepi6wvt10p6" path="res://scripts/Resources/Catchables/SeaWeed.tres" id="4_jj6ev"]
 [ext_resource type="PackedScene" uid="uid://bsakck0gxgtpp" path="res://objects/Catchables/Fishes/royal_beard_fish.tscn" id="5_hrslw"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_s4a2d"]
+[ext_resource type="Resource" uid="uid://dwijteaf2p6at" path="res://scripts/Resources/Regions/Coast.tres" id="6_6ijj2"]
 [ext_resource type="Texture2D" uid="uid://b5v5uggmgqm8b" path="res://sprites/Catchables/Fishes/royalbeardfish_shadow.png" id="6_n20w7"]
 
 [resource]
@@ -20,6 +22,7 @@ shadow = ExtResource("6_n20w7")
 scene = ExtResource("5_hrslw")
 rarity = 5
 price = 268
+regions = Array[ExtResource("5_s4a2d")]([ExtResource("6_6ijj2")])
 periods = Array[int]([1, 3])
 lures = Array[ExtResource("1_dwfd6")]([ExtResource("4_jj6ev")])
 lure_ids = Array[int]([])

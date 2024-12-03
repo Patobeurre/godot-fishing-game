@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://b6l2br0ff8gre"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://b6l2br0ff8gre"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_72ody"]
 [ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="1_ndb30"]
@@ -6,6 +6,8 @@
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="3_nbn2e"]
 [ext_resource type="Resource" uid="uid://clpf0htwtcdc4" path="res://scripts/Resources/Catchables/Insects/Bee.tres" id="4_b7nal"]
 [ext_resource type="PackedScene" uid="uid://tgu31bycvvqw" path="res://objects/Catchables/honey.tscn" id="5_k064w"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="6_f18so"]
+[ext_resource type="Resource" uid="uid://css0sshg3r42c" path="res://scripts/Resources/Regions/Hive.tres" id="7_is6ba"]
 
 [resource]
 script = ExtResource("1_72ody")
@@ -19,6 +21,7 @@ image = ExtResource("2_yqdbj")
 scene = ExtResource("5_k064w")
 rarity = 5
 price = 0
+regions = Array[ExtResource("6_f18so")]([ExtResource("7_is6ba")])
 periods = Array[int]([0, 1, 2, 3])
 lures = Array[ExtResource("1_72ody")]([ExtResource("3_nbn2e"), ExtResource("4_b7nal")])
 lure_ids = Array[int]([])

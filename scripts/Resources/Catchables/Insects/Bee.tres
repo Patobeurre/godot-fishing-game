@@ -1,10 +1,13 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://clpf0htwtcdc4"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://clpf0htwtcdc4"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_3ctec"]
 [ext_resource type="Resource" uid="uid://eqi3uvm17to0" path="res://scripts/Resources/Categories/Insects.tres" id="1_bbx3w"]
 [ext_resource type="PackedScene" uid="uid://lpdm0sdbsxo8" path="res://objects/Catchables/bee.tscn" id="2_4xcy5"]
 [ext_resource type="Texture2D" uid="uid://w7gmxtdpixxj" path="res://sprites/Catchables/bee.png" id="2_6w621"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="3_oeule"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_1qvh7"]
+[ext_resource type="Resource" uid="uid://bp5g8fihosob6" path="res://scripts/Resources/Regions/Flowers.tres" id="6_wuega"]
+[ext_resource type="Resource" uid="uid://css0sshg3r42c" path="res://scripts/Resources/Regions/Hive.tres" id="7_tmb3c"]
 
 [resource]
 script = ExtResource("1_3ctec")
@@ -18,6 +21,7 @@ image = ExtResource("2_6w621")
 scene = ExtResource("2_4xcy5")
 rarity = 50
 price = 0
+regions = Array[ExtResource("5_1qvh7")]([ExtResource("6_wuega"), ExtResource("7_tmb3c")])
 periods = Array[int]([1, 0, 2])
 lures = Array[ExtResource("1_3ctec")]([ExtResource("3_oeule")])
 lure_ids = Array[int]([])

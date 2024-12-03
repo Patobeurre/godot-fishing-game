@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://bdnjdhsc78l1l"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://bdnjdhsc78l1l"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_dk3gw"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_tjuyr"]
 [ext_resource type="Texture2D" uid="uid://bv0osyiq5ma72" path="res://sprites/Catchables/Fishes/ray.png" id="2_deg1j"]
 [ext_resource type="PackedScene" uid="uid://lv6xerrtm24p" path="res://objects/Catchables/Fishes/ray.tscn" id="4_2wujb"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="4_ramhd"]
+[ext_resource type="Resource" uid="uid://b16jgklq2bpkk" path="res://scripts/Resources/Regions/Deep.tres" id="5_fnwlj"]
 [ext_resource type="Texture2D" uid="uid://dixh68t8epg0l" path="res://sprites/Catchables/Fishes/ray_shadow.png" id="5_od5nq"]
 
 [resource]
@@ -19,6 +21,7 @@ shadow = ExtResource("5_od5nq")
 scene = ExtResource("4_2wujb")
 rarity = 30
 price = 41
+regions = Array[ExtResource("4_ramhd")]([ExtResource("5_fnwlj")])
 periods = Array[int]([0, 1])
 lures = Array[ExtResource("1_dk3gw")]([])
 lure_ids = Array[int]([])

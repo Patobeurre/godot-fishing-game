@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RegionRes" load_steps=2 format=3 uid="uid://b16jgklq2bpkk"]
+
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="1_4rn3n"]
+
+[resource]
+script = ExtResource("1_4rn3n")
+name = "FA_DEEP"
+color = Color(0.00784314, 0.294118, 0.52549, 1)

@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=5 format=3 uid="uid://b6frau4btkggp"]
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=6 format=3 uid="uid://b6frau4btkggp"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_55017"]
 [ext_resource type="Resource" uid="uid://ot25y882xj1f" path="res://scripts/Resources/Catchables/Tree/Stick.tres" id="1_qwntf"]
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="2_ryrhr"]
 [ext_resource type="Resource" uid="uid://cx10cu2bnwcgp" path="res://scripts/Resources/Catchables/Tree/Squirel.tres" id="2_v5k1q"]
+[ext_resource type="Resource" uid="uid://dd6pn5lscucyo" path="res://scripts/Resources/Regions/Trunk.tres" id="4_fqx36"]
 
 [resource]
 script = ExtResource("2_ryrhr")
+region = ExtResource("4_fqx36")
 name = "FA_TRUNK"
 type = 0
 waiting_time = 3.0

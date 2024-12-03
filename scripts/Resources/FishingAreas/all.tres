@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=50 format=3 uid="uid://rrtvjxp4gxm"]
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=61 format=3 uid="uid://rrtvjxp4gxm"]
 
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="1_15s8k"]
 [ext_resource type="Resource" uid="uid://f0ooky57hn72" path="res://scripts/Resources/Catchables/Tree/Acorn.tres" id="1_f7ye5"]
@@ -49,11 +49,22 @@
 [ext_resource type="Resource" uid="uid://cjjmht2jv5pua" path="res://scripts/Resources/Catchables/Insects/Worm.tres" id="46_3vhrs"]
 [ext_resource type="Resource" uid="uid://cmy83gqx0obf7" path="res://scripts/Resources/Catchables/Birds/Owl.tres" id="47_28pa2"]
 [ext_resource type="Resource" uid="uid://cre4u8vky03vd" path="res://scripts/Resources/Catchables/Fishes/Tetrahedra.tres" id="48_yw0mj"]
+[ext_resource type="Resource" uid="uid://4gplno14hk82" path="res://scripts/Resources/Catchables/Fishes/CubeFish.tres" id="49_uo1h7"]
+[ext_resource type="Resource" uid="uid://d0s8hb0tdrawb" path="res://scripts/Resources/Catchables/Fishes/Flowerfish.tres" id="50_kdf0h"]
+[ext_resource type="Resource" uid="uid://bej7o5giqs7pv" path="res://scripts/Resources/Catchables/Fishes/Radarfish.tres" id="51_8a2nh"]
+[ext_resource type="Resource" uid="uid://b58c3eij4xuvh" path="res://scripts/Resources/Catchables/Fishes/Sailfish.tres" id="52_ocga3"]
+[ext_resource type="Resource" uid="uid://d0owple0opvxl" path="res://scripts/Resources/Catchables/Fishes/Silurus.tres" id="53_110fh"]
+[ext_resource type="Resource" uid="uid://dj6u6l0j4ux1c" path="res://scripts/Resources/Catchables/Fishes/Squarefish.tres" id="54_8f8j4"]
+[ext_resource type="Resource" uid="uid://joqtsvod4gx8" path="res://scripts/Resources/Catchables/Insects/Dragonfly.tres" id="55_rw47w"]
+[ext_resource type="Resource" uid="uid://crid6n6jnhf6e" path="res://scripts/Resources/Catchables/Insects/Phasma.tres" id="56_xychl"]
+[ext_resource type="Resource" uid="uid://b4kdes1c7wbcd" path="res://scripts/Resources/Catchables/Flower.tres" id="57_64ecy"]
+[ext_resource type="Resource" uid="uid://dpudh0oxpgs8s" path="res://scripts/Resources/Catchables/Frog.tres" id="58_cp1cv"]
+[ext_resource type="Resource" uid="uid://cg3ciblr8e33k" path="res://scripts/Resources/Catchables/Fishes/ButterflyFish.tres" id="59_43s1h"]
 
 [resource]
 script = ExtResource("1_15s8k")
 name = ""
 type = 0
 waiting_time = 3.0
-catchables = Array[ExtResource("7_nbig8")]([ExtResource("10_orxvh"), ExtResource("9_cn5cx"), ExtResource("10_iur7x"), ExtResource("11_ekaux"), ExtResource("12_lxyca"), ExtResource("13_48ymn"), ExtResource("14_3utbs"), ExtResource("15_6ttdi"), ExtResource("16_yykic"), ExtResource("17_ctjbu"), ExtResource("18_jjijm"), ExtResource("19_j8fw8"), ExtResource("20_i2lus"), ExtResource("21_tjtar"), ExtResource("22_sh5u6"), ExtResource("23_uuvrv"), ExtResource("24_1rmwa"), ExtResource("25_bo5wh"), ExtResource("26_lue84"), ExtResource("27_xd1jb"), ExtResource("28_p7i6w"), ExtResource("29_insch"), ExtResource("30_chj6n"), ExtResource("31_2mi00"), ExtResource("32_3b74e"), ExtResource("33_ehr33"), ExtResource("34_r8wr5"), ExtResource("29_275f3"), ExtResource("30_v0t77"), ExtResource("31_sqtue"), ExtResource("32_vc3yk"), ExtResource("33_xapho"), ExtResource("34_dtcst"), ExtResource("35_62cmh"), ExtResource("36_fsr3v"), ExtResource("1_f7ye5"), ExtResource("2_iw83r"), ExtResource("3_f0iho"), ExtResource("4_vfdm2"), ExtResource("5_n6vb3"), ExtResource("10_82gi1"), ExtResource("43_kc6l2"), ExtResource("44_g22ml"), ExtResource("45_qwvm8"), ExtResource("46_3vhrs"), ExtResource("47_28pa2"), ExtResource("48_yw0mj")])
+catchables = Array[ExtResource("7_nbig8")]([ExtResource("10_orxvh"), ExtResource("9_cn5cx"), ExtResource("10_iur7x"), ExtResource("11_ekaux"), ExtResource("12_lxyca"), ExtResource("13_48ymn"), ExtResource("14_3utbs"), ExtResource("15_6ttdi"), ExtResource("16_yykic"), ExtResource("17_ctjbu"), ExtResource("18_jjijm"), ExtResource("19_j8fw8"), ExtResource("20_i2lus"), ExtResource("21_tjtar"), ExtResource("22_sh5u6"), ExtResource("23_uuvrv"), ExtResource("24_1rmwa"), ExtResource("25_bo5wh"), ExtResource("26_lue84"), ExtResource("27_xd1jb"), ExtResource("28_p7i6w"), ExtResource("29_insch"), ExtResource("30_chj6n"), ExtResource("31_2mi00"), ExtResource("32_3b74e"), ExtResource("33_ehr33"), ExtResource("34_r8wr5"), ExtResource("29_275f3"), ExtResource("30_v0t77"), ExtResource("31_sqtue"), ExtResource("32_vc3yk"), ExtResource("33_xapho"), ExtResource("34_dtcst"), ExtResource("35_62cmh"), ExtResource("36_fsr3v"), ExtResource("1_f7ye5"), ExtResource("2_iw83r"), ExtResource("3_f0iho"), ExtResource("4_vfdm2"), ExtResource("5_n6vb3"), ExtResource("10_82gi1"), ExtResource("43_kc6l2"), ExtResource("44_g22ml"), ExtResource("45_qwvm8"), ExtResource("46_3vhrs"), ExtResource("47_28pa2"), ExtResource("48_yw0mj"), ExtResource("49_uo1h7"), ExtResource("50_kdf0h"), ExtResource("51_8a2nh"), ExtResource("52_ocga3"), ExtResource("53_110fh"), ExtResource("54_8f8j4"), ExtResource("55_rw47w"), ExtResource("56_xychl"), ExtResource("57_64ecy"), ExtResource("58_cp1cv"), ExtResource("59_43s1h")])
 default_catchables = Array[ExtResource("7_nbig8")]([])

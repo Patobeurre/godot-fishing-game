@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RegionRes" load_steps=2 format=3 uid="uid://dhld2ow8uhn80"]
+
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="1_g3rnf"]
+
+[resource]
+script = ExtResource("1_g3rnf")
+name = "FA_BEACH"
+color = Color(1, 1, 1, 1)

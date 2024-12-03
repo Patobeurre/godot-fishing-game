@@ -13,6 +13,7 @@ var modifier : FishingAreaModifierRes = null
 
 
 func _ready():
+	fishTable.init()
 	SignalBus.bobber_return_to_player.connect(_remove_sub_area)
 
 

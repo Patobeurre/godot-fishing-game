@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://3ovutb4lao07"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://3ovutb4lao07"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_avpj8"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_ivk3j"]
 [ext_resource type="PackedScene" uid="uid://sc84ulwrasjn" path="res://objects/Catchables/Fishes/anglerfish.tscn" id="2_a2fyf"]
 [ext_resource type="Texture2D" uid="uid://dca7i5545jy7j" path="res://sprites/Catchables/Fishes/anglerfish.png" id="2_ot4fq"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="4_wlbnx"]
+[ext_resource type="Resource" uid="uid://4365mtuujlmb" path="res://scripts/Resources/Regions/CaveLake.tres" id="5_5secu"]
 [ext_resource type="Texture2D" uid="uid://bfxxtd34advvq" path="res://sprites/Catchables/Fishes/anglerfish_shadow.png" id="5_hkko1"]
 
 [resource]
@@ -19,6 +21,7 @@ shadow = ExtResource("5_hkko1")
 scene = ExtResource("2_a2fyf")
 rarity = 30
 price = 64
+regions = Array[ExtResource("4_wlbnx")]([ExtResource("5_5secu")])
 periods = Array[int]([0, 1, 2, 3])
 lures = Array[ExtResource("1_ivk3j")]([])
 lure_ids = Array[int]([25])

@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://b44dgc5i6q2u1"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://b44dgc5i6q2u1"]
 
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="1_2y733"]
 [ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="1_5immf"]
 [ext_resource type="Texture2D" uid="uid://djwikv8j0s1ws" path="res://sprites/Catchables/leaf.png" id="1_akiod"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="2_6qfjg"]
 [ext_resource type="PackedScene" uid="uid://cowdm40mpv7ab" path="res://objects/Catchables/leaf.tscn" id="2_yucf6"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_hk3qv"]
+[ext_resource type="Resource" uid="uid://kkg23of4d7cf" path="res://scripts/Resources/Regions/Oak.tres" id="6_2tbum"]
 
 [resource]
 script = ExtResource("2_6qfjg")
@@ -18,6 +20,7 @@ image = ExtResource("1_akiod")
 scene = ExtResource("2_yucf6")
 rarity = 50
 price = 0
+regions = Array[ExtResource("5_hk3qv")]([ExtResource("6_2tbum")])
 periods = Array[int]([0, 1, 2, 3])
 lures = Array[ExtResource("2_6qfjg")]([ExtResource("1_2y733")])
 lure_ids = Array[int]([])

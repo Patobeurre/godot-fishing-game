@@ -38,7 +38,7 @@ func update():
 		lures.text += tr(lure.name) + ", "
 	locations.text = ""
 	for location in collected_catchable.areas_found_in:
-		locations.text += tr(location.name) + ", "
+		locations.text += tr(location.region.name) + ", "
 	for period in collected_catchable.periods:
 		var icon = day_night_icon_scene.instantiate()
 		periods_container.add_child(icon)

@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=5 format=3 uid="uid://bg5yivmx2fjd7"]
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=6 format=3 uid="uid://bg5yivmx2fjd7"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_a0u7p"]
 [ext_resource type="Resource" uid="uid://cdinhdv0bl53j" path="res://scripts/Resources/Catchables/Fishes/Shark.tres" id="2_onxxv"]
 [ext_resource type="Resource" uid="uid://bq7rfd0awtdhf" path="res://scripts/Resources/Catchables/Fishes/HammerShark.tres" id="3_xcpd0"]
+[ext_resource type="Resource" uid="uid://dlp3f2lo6klif" path="res://scripts/Resources/Regions/Shark.tres" id="4_0coy7"]
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="4_qcqvw"]
 
 [resource]
 script = ExtResource("4_qcqvw")
-name = ""
+region = ExtResource("4_0coy7")
+name = "FA_DEEP"
 type = 1
 waiting_time = 3.0
 catchables = Array[ExtResource("1_a0u7p")]([ExtResource("2_onxxv"), ExtResource("3_xcpd0")])

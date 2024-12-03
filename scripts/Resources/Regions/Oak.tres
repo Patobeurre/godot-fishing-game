@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RegionRes" load_steps=2 format=3 uid="uid://kkg23of4d7cf"]
+
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="1_0x0ei"]
+
+[resource]
+script = ExtResource("1_0x0ei")
+name = "FA_OAK_FOLLIAGE"
+color = Color(1, 1, 1, 1)

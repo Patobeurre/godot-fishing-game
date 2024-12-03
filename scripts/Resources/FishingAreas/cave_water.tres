@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=7 format=3 uid="uid://bxj0i587fl3c6"]
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=8 format=3 uid="uid://bxj0i587fl3c6"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_is3we"]
 [ext_resource type="Resource" uid="uid://3ovutb4lao07" path="res://scripts/Resources/Catchables/Fishes/Anglerfish.tres" id="2_53j1g"]
@@ -6,9 +6,11 @@
 [ext_resource type="Resource" uid="uid://cx5sdiudeae1t" path="res://scripts/Resources/Catchables/Fishes/MorayEel.tres" id="4_rfwp6"]
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="4_vbn1w"]
 [ext_resource type="Resource" uid="uid://b7skhevbmqmuu" path="res://scripts/Resources/Catchables/Pebble.tres" id="5_ne3ig"]
+[ext_resource type="Resource" uid="uid://4365mtuujlmb" path="res://scripts/Resources/Regions/CaveLake.tres" id="6_mw1f2"]
 
 [resource]
 script = ExtResource("4_vbn1w")
+region = ExtResource("6_mw1f2")
 name = "FA_CAVE_LAKE"
 type = 1
 waiting_time = 3.0

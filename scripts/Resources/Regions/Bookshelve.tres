@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RegionRes" load_steps=2 format=3 uid="uid://daphulkiqldid"]
+
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="1_sqd4v"]
+
+[resource]
+script = ExtResource("1_sqd4v")
+name = "FA_BOOKSHELVE"
+color = Color(1, 1, 1, 1)

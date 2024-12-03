@@ -15,6 +15,14 @@ func filter_by_tags(tag :CatchableRes.ELureTag) -> CatchableList:
 	return self
 
 
+func filter_by_regions(regions :Array[RegionRes]) -> CatchableList:
+	if regions == null:
+		return self
+	list = list.filter(func (item): return item.regions.any(
+		func (r): return regions.has(r)))
+	return self
+
+
 func filter_by_rarity(rarity :int, permissive :bool) -> CatchableList:
 	if list.is_empty():
 		return self

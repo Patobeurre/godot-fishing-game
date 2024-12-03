@@ -1,10 +1,13 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://cx5sdiudeae1t"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://cx5sdiudeae1t"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_1wk6n"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_vq4ty"]
 [ext_resource type="Texture2D" uid="uid://rqudyhyi7lua" path="res://sprites/Catchables/Fishes/moray_eel.png" id="2_mbrfi"]
 [ext_resource type="PackedScene" uid="uid://d28x74dk5ipyc" path="res://objects/Catchables/Fishes/moray_eel.tscn" id="3_j46fk"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="4_fk1hg"]
+[ext_resource type="Resource" uid="uid://dkhuqkephtd2b" path="res://scripts/Resources/Regions/Reef.tres" id="5_8u443"]
 [ext_resource type="Texture2D" uid="uid://jc36ovelqa66" path="res://sprites/Catchables/Fishes/morayeel_shadow.png" id="5_ivgia"]
+[ext_resource type="Resource" uid="uid://4365mtuujlmb" path="res://scripts/Resources/Regions/CaveLake.tres" id="6_i7jwi"]
 
 [resource]
 script = ExtResource("1_vq4ty")
@@ -19,6 +22,7 @@ shadow = ExtResource("5_ivgia")
 scene = ExtResource("3_j46fk")
 rarity = 30
 price = 38
+regions = Array[ExtResource("4_fk1hg")]([ExtResource("5_8u443"), ExtResource("6_i7jwi")])
 periods = Array[int]([0, 1, 2])
 lures = Array[ExtResource("1_vq4ty")]([])
 lure_ids = Array[int]([])

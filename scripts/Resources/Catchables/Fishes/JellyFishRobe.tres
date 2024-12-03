@@ -1,11 +1,14 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://b67rtymghjo5n"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=10 format=3 uid="uid://b67rtymghjo5n"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_5fy61"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_e5a1w"]
 [ext_resource type="Texture2D" uid="uid://lf30jy2y2sl7" path="res://sprites/Catchables/Fishes/jellyfish_robe.png" id="2_b1vnk"]
 [ext_resource type="Resource" uid="uid://c0d4soyvubcj0" path="res://scripts/Resources/Catchables/Fishes/TrueMussels.tres" id="4_grq7e"]
 [ext_resource type="PackedScene" uid="uid://ov6nyr54t5gr" path="res://objects/Catchables/Fishes/jellyfish_robe.tscn" id="4_s3ujp"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_fpplv"]
+[ext_resource type="Resource" uid="uid://dwijteaf2p6at" path="res://scripts/Resources/Regions/Coast.tres" id="6_031lk"]
 [ext_resource type="Texture2D" uid="uid://cged7fovbvt2p" path="res://sprites/Catchables/Fishes/jellyfishrobe_shadow.png" id="6_xsya1"]
+[ext_resource type="Resource" uid="uid://b16jgklq2bpkk" path="res://scripts/Resources/Regions/Deep.tres" id="7_n3flh"]
 
 [resource]
 script = ExtResource("1_e5a1w")
@@ -20,6 +23,7 @@ shadow = ExtResource("6_xsya1")
 scene = ExtResource("4_s3ujp")
 rarity = 30
 price = 45
+regions = Array[ExtResource("5_fpplv")]([ExtResource("6_031lk"), ExtResource("7_n3flh")])
 periods = Array[int]([3])
 lures = Array[ExtResource("1_e5a1w")]([ExtResource("4_grq7e")])
 lure_ids = Array[int]([])

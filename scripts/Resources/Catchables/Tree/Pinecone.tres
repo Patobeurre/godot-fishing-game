@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://bby1s0rugy260"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://bby1s0rugy260"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_8nfqb"]
 [ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="1_gr638"]
@@ -6,6 +6,8 @@
 [ext_resource type="Resource" uid="uid://cx10cu2bnwcgp" path="res://scripts/Resources/Catchables/Tree/Squirel.tres" id="2_cvsp4"]
 [ext_resource type="PackedScene" uid="uid://bvlhd76utxlsa" path="res://objects/Catchables/pinecone.tscn" id="2_gpgin"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="3_vooem"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="6_tr8yt"]
+[ext_resource type="Resource" uid="uid://gjt6uuwk05wv" path="res://scripts/Resources/Regions/Pine.tres" id="7_pu3i4"]
 
 [resource]
 script = ExtResource("1_8nfqb")
@@ -19,6 +21,7 @@ image = ExtResource("1_jib5m")
 scene = ExtResource("2_gpgin")
 rarity = 30
 price = 0
+regions = Array[ExtResource("6_tr8yt")]([ExtResource("7_pu3i4")])
 periods = Array[int]([0, 1, 2, 3])
 lures = Array[ExtResource("1_8nfqb")]([ExtResource("2_cvsp4"), ExtResource("3_vooem")])
 lure_ids = Array[int]([])

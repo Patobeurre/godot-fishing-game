@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://bcpyooewpt3g4"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=10 format=3 uid="uid://bcpyooewpt3g4"]
 
 [ext_resource type="Resource" uid="uid://eqi3uvm17to0" path="res://scripts/Resources/Categories/Insects.tres" id="1_gtbpy"]
 [ext_resource type="Texture2D" uid="uid://lueugsh6b6xw" path="res://sprites/Catchables/beetle.png" id="1_v7ge4"]
@@ -6,6 +6,9 @@
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="2_tj4gb"]
 [ext_resource type="PackedScene" uid="uid://duomkf5djv3gn" path="res://objects/Catchables/beetle.tscn" id="3_tdkou"]
 [ext_resource type="Resource" uid="uid://b44dgc5i6q2u1" path="res://scripts/Resources/Catchables/Tree/Leaf.tres" id="5_6a7u1"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="6_jlwvt"]
+[ext_resource type="Resource" uid="uid://j5t53js7cuyy" path="res://scripts/Resources/Regions/Grass.tres" id="7_u23m4"]
+[ext_resource type="Resource" uid="uid://bp5g8fihosob6" path="res://scripts/Resources/Regions/Flowers.tres" id="8_6clop"]
 
 [resource]
 script = ExtResource("1_ysf08")
@@ -19,6 +22,7 @@ image = ExtResource("1_v7ge4")
 scene = ExtResource("3_tdkou")
 rarity = 30
 price = 0
+regions = Array[ExtResource("6_jlwvt")]([ExtResource("7_u23m4"), ExtResource("8_6clop")])
 periods = Array[int]([0, 1])
 lures = Array[ExtResource("1_ysf08")]([ExtResource("2_tj4gb"), ExtResource("5_6a7u1")])
 lure_ids = Array[int]([])

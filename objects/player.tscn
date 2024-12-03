@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dl2ed4gkybggf"]
+[gd_scene load_steps=30 format=3 uid="uid://dl2ed4gkybggf"]
 
 [ext_resource type="Script" path="res://scripts/player_stair_test.gd" id="1_awcpd"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_fg077"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://xkew2pa6s43u" path="res://sprites/UI/livre.png" id="20_r8qkj"]
 [ext_resource type="Texture2D" uid="uid://cggdw3uay3xls" path="res://sprites/UI/I.png" id="21_5um6n"]
 [ext_resource type="PackedScene" uid="uid://djup3hpi0f343" path="res://objects/UI/hotkey_bar.tscn" id="23_qs3ip"]
+[ext_resource type="Texture2D" uid="uid://8ggihh27mlrr" path="res://sprites/blob_shadow.png" id="24_8nrjf"]
 [ext_resource type="Texture2D" uid="uid://376kuruoy34p" path="res://sprites/UI/clock/clock_background.png" id="24_k4pi3"]
 [ext_resource type="Texture2D" uid="uid://o1euhrx7dop7" path="res://sprites/UI/clock/clock_needle.png" id="25_otqmk"]
 
@@ -234,6 +235,11 @@ offset_top = -100.0
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="ClockShadowBackground" type="Sprite2D" parent="HUD/ClockContainer"]
+position = Vector2(1820, 110)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_8nrjf")
 
 [node name="ClockBackgrond" type="Sprite2D" parent="HUD/ClockContainer"]
 position = Vector2(1820, 110)

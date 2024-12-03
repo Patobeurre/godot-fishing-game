@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=6 format=3 uid="uid://dsda8e73plwii"]
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=7 format=3 uid="uid://dsda8e73plwii"]
 
 [ext_resource type="Resource" uid="uid://cjjmht2jv5pua" path="res://scripts/Resources/Catchables/Insects/Worm.tres" id="1_7b682"]
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="1_81q28"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_vsacu"]
 [ext_resource type="Resource" uid="uid://bcpyooewpt3g4" path="res://scripts/Resources/Catchables/Insects/Beetle.tres" id="2_h31sf"]
 [ext_resource type="Resource" uid="uid://d3c0hndjlsfts" path="res://scripts/Resources/Catchables/Snake.tres" id="4_1uwsr"]
+[ext_resource type="Resource" uid="uid://j5t53js7cuyy" path="res://scripts/Resources/Regions/Grass.tres" id="5_jfanm"]
 
 [resource]
 script = ExtResource("1_81q28")
+region = ExtResource("5_jfanm")
 name = "FA_GROUND"
 type = 0
 waiting_time = 3.0

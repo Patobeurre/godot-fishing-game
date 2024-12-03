@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RegionRes" load_steps=2 format=3 uid="uid://fwr3ntued7gc"]
+
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="1_6uvaq"]
+
+[resource]
+script = ExtResource("1_6uvaq")
+name = "FA_REEF_ROCKS"
+color = Color(1, 1, 1, 1)

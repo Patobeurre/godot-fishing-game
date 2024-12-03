@@ -1,15 +1,19 @@
-[gd_scene load_steps=123 format=4 uid="uid://bhftgu4ii2mh3"]
+[gd_scene load_steps=124 format=4 uid="uid://bhftgu4ii2mh3"]
 
 [ext_resource type="Script" path="res://scripts/fishing_area.gd" id="1_m2wpg"]
 [ext_resource type="Resource" uid="uid://prfpa0vi0mta" path="res://scripts/Resources/Catchables/Insects/BookWorm.tres" id="2_7hdol"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="2_jdjev"]
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="3_5o8es"]
+[ext_resource type="Resource" uid="uid://daphulkiqldid" path="res://scripts/Resources/Regions/Bookshelve.tres" id="3_rpvwm"]
 
 [sub_resource type="Resource" id="Resource_oggqp"]
 script = ExtResource("3_5o8es")
+region = ExtResource("3_rpvwm")
 name = ""
+type = 0
 waiting_time = 3.0
 catchables = Array[ExtResource("2_jdjev")]([])
+default_catchables = Array[ExtResource("2_jdjev")]([])
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ohl4q"]
 resource_name = "wood_dark.012"
@@ -3077,9 +3081,12 @@ points = PackedVector3Array(0.988587, 1, 1, 0.988814, -0.050734, 1, 0.99696, -0.
 
 [sub_resource type="Resource" id="Resource_nd6pb"]
 script = ExtResource("3_5o8es")
+region = ExtResource("3_rpvwm")
 name = "Bookshelve"
+type = 0
 waiting_time = 3.0
 catchables = Array[ExtResource("2_jdjev")]([ExtResource("2_7hdol")])
+default_catchables = Array[ExtResource("2_jdjev")]([])
 
 [node name="bookshelve" type="RigidBody3D"]
 collision_layer = 16

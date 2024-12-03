@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=5 format=3 uid="uid://cx10cu2bnwcgp"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://cx10cu2bnwcgp"]
 
 [ext_resource type="Resource" uid="uid://catedw4i7v6px" path="res://scripts/Resources/Categories/Animals.tres" id="1_5lxkf"]
 [ext_resource type="Texture2D" uid="uid://bm4i11qs0h1hs" path="res://sprites/Catchables/squirel.png" id="1_rk2xl"]
 [ext_resource type="PackedScene" uid="uid://dy1h3kahosysb" path="res://objects/Catchables/squirel.tscn" id="3_5o45t"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="3_gddwk"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="4_fby3d"]
+[ext_resource type="Resource" uid="uid://kkg23of4d7cf" path="res://scripts/Resources/Regions/Oak.tres" id="5_4dqs5"]
 
 [resource]
 script = ExtResource("3_gddwk")
@@ -17,6 +19,7 @@ image = ExtResource("1_rk2xl")
 scene = ExtResource("3_5o45t")
 rarity = 5
 price = 0
+regions = Array[ExtResource("4_fby3d")]([ExtResource("5_4dqs5")])
 periods = Array[int]([0, 1])
 lures = Array[ExtResource("3_gddwk")]([])
 lure_ids = Array[int]([])

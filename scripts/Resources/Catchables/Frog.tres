@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=5 format=3 uid="uid://dpudh0oxpgs8s"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://dpudh0oxpgs8s"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_3m8cv"]
 [ext_resource type="Resource" uid="uid://catedw4i7v6px" path="res://scripts/Resources/Categories/Animals.tres" id="1_uub3v"]
 [ext_resource type="Texture2D" uid="uid://cavbtkuyqhatd" path="res://sprites/Catchables/frog.png" id="2_56lht"]
 [ext_resource type="PackedScene" uid="uid://dbo0xyu37tuoo" path="res://objects/Catchables/frog.tscn" id="4_430oy"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="4_gvr5s"]
+[ext_resource type="Resource" uid="uid://5hdu1q8j5531" path="res://scripts/Resources/Regions/Swamp.tres" id="5_f3b58"]
+[ext_resource type="Resource" uid="uid://dve05j53bog0x" path="res://scripts/Resources/Regions/SwampGround.tres" id="6_c0vx1"]
 
 [resource]
 script = ExtResource("1_3m8cv")
@@ -17,6 +20,7 @@ image = ExtResource("2_56lht")
 scene = ExtResource("4_430oy")
 rarity = 30
 price = 0
+regions = Array[ExtResource("4_gvr5s")]([ExtResource("5_f3b58"), ExtResource("6_c0vx1")])
 periods = Array[int]([0, 1, 2, 3])
 lures = Array[ExtResource("1_3m8cv")]([])
 lure_ids = Array[int]([])

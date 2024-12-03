@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RegionRes" load_steps=2 format=3 uid="uid://by7fe0h0x5aa4"]
+
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="1_1lw5d"]
+
+[resource]
+script = ExtResource("1_1lw5d")
+name = "FA_REED"
+color = Color(1, 1, 1, 1)

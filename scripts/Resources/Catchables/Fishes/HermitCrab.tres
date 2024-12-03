@@ -1,11 +1,14 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://m3esr6ufsrya"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=10 format=3 uid="uid://m3esr6ufsrya"]
 
 [ext_resource type="Texture2D" uid="uid://csjkhvsbwgg1a" path="res://sprites/Catchables/Fishes/hermit_crab.png" id="1_3dakr"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_d82uc"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_vx1fj"]
 [ext_resource type="Resource" uid="uid://ccluuofosbbi5" path="res://scripts/Resources/Catchables/Shell.tres" id="2_5vosc"]
 [ext_resource type="PackedScene" uid="uid://sydd3xkoqodj" path="res://objects/Catchables/Fishes/hermit_crab.tscn" id="3_k0hn8"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_losr4"]
 [ext_resource type="Texture2D" uid="uid://c7slh2663o17m" path="res://sprites/Catchables/Fishes/hermitcrab_shadow.png" id="6_dotcq"]
+[ext_resource type="Resource" uid="uid://bwrdv60ecb3rv" path="res://scripts/Resources/Regions/Beach.tres" id="6_q14r2"]
+[ext_resource type="Resource" uid="uid://dhld2ow8uhn80" path="res://scripts/Resources/Regions/BeachGround.tres" id="7_abw2b"]
 
 [resource]
 script = ExtResource("1_vx1fj")
@@ -20,6 +23,7 @@ shadow = ExtResource("6_dotcq")
 scene = ExtResource("3_k0hn8")
 rarity = 15
 price = 30
+regions = Array[ExtResource("5_losr4")]([ExtResource("6_q14r2"), ExtResource("7_abw2b")])
 periods = Array[int]([0, 1, 2, 3])
 lures = Array[ExtResource("1_vx1fj")]([ExtResource("2_5vosc")])
 lure_ids = Array[int]([])

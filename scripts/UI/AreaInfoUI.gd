@@ -35,7 +35,7 @@ func clear_list():
 
 func activate(areaRes :FishingAreaRes):
 	populate_list(areaRes)
-	label.text = tr(areaRes.name)
+	label.text = tr(areaRes.region.name)
 	visible = true
 
 

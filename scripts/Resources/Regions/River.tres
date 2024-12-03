@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RegionRes" load_steps=2 format=3 uid="uid://dtv2pu6qgth1j"]
+
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="1_cdva0"]
+
+[resource]
+script = ExtResource("1_cdva0")
+name = "FA_RIVER"
+color = Color(0.266667, 0.933333, 0.733333, 1)

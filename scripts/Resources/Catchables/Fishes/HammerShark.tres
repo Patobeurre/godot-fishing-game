@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=6 format=3 uid="uid://bq7rfd0awtdhf"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://bq7rfd0awtdhf"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_lw7th"]
 [ext_resource type="Texture2D" uid="uid://blyd78etsuw4v" path="res://sprites/Catchables/Fishes/hammer_shark.png" id="1_olceu"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_sb8ta"]
 [ext_resource type="PackedScene" uid="uid://cx7yogcsge776" path="res://objects/Catchables/Fishes/hammer_shark.tscn" id="2_45qly"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="4_djm5i"]
 [ext_resource type="Texture2D" uid="uid://ci8ck021lpv7w" path="res://sprites/Catchables/Fishes/hammershark_shadow.png" id="5_3wsnd"]
+[ext_resource type="Resource" uid="uid://dlp3f2lo6klif" path="res://scripts/Resources/Regions/Shark.tres" id="5_b2xne"]
 
 [resource]
 script = ExtResource("1_lw7th")
@@ -19,6 +21,7 @@ shadow = ExtResource("5_3wsnd")
 scene = ExtResource("2_45qly")
 rarity = 15
 price = 65
+regions = Array[ExtResource("4_djm5i")]([ExtResource("5_b2xne")])
 periods = Array[int]([1, 3])
 lures = Array[ExtResource("1_lw7th")]([])
 lure_ids = Array[int]([])
