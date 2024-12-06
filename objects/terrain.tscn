@@ -68,7 +68,7 @@ shader_parameter/wave_direction = Vector2(2, 0)
 shader_parameter/wave_direction2 = Vector2(0, 1)
 shader_parameter/time_scale = 0.025
 shader_parameter/noise_scale = 10.0
-shader_parameter/height_scale = 0.3
+shader_parameter/height_scale = 0.2
 shader_parameter/color_deep = Color(0.255622, 0.500334, 1, 1)
 shader_parameter/color_shallow = Color(0.422646, 0.886977, 1, 1)
 shader_parameter/beers_law = 1.5
@@ -207,7 +207,7 @@ mesh = SubResource("PlaneMesh_262th")
 skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Water/StaticBody3D" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93637, -3.33426, 0.665283)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.936, -3.33, 0.665)
 shape = SubResource("BoxShape3D_rypct")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Water" index="1"]
