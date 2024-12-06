@@ -9,7 +9,6 @@
 [resource]
 script = ExtResource("2_od0iu")
 region = ExtResource("4_naekt")
-name = "FA_SWAMP"
 type = 1
 waiting_time = 3.0
 catchables = Array[ExtResource("1_2g3o2")]([ExtResource("2_kme3k")])

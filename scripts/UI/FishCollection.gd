@@ -1,7 +1,8 @@
 extends MainUI
 
 
-@onready var container = $HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/ScrollContainer/VBoxContainer
+@onready var container = $HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer
+@onready var filters_container = $HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer/FlowContainer
 @onready var fish_entry_scene :PackedScene = preload("res://objects/UI/FishEntry.tscn")
 @onready var category_container = $HSplitContainer/MarginContainer2/Categories
 @onready var remaining_fishes_label = $HSplitContainer/MarginContainer/NinePatchRect/RemainingFishesLabel
@@ -15,6 +16,9 @@ var nb_collected_by_category :int = 0
 func _on_ready():
 	for child in category_container.get_children():
 		child.visible = false
+	
+	for child :ButtonRegionFilter in filters_container.get_children():
+		child.toggled.connect(on_btn_region_filter_clicked)
 
 
 func _on_process(delta):
@@ -36,18 +40,34 @@ func populate():
 	for node in container.get_children():
 		container.remove_child(node)
 	
-	var catchables_of_category = FishingManager.get_all_collected_by_category(category_filter)
-	nb_collected_by_category = catchables_of_category.size()
+	var regions_filter :Array[RegionRes] = []
+	for child :ButtonRegionFilter in filters_container.get_children():
+		if child.button_pressed:
+			print(child.get_regions())
+		regions_filter.append_array(child.get_regions())
+	
+	#var catchables_of_category = FishingManager.get_all_collected_by_category(category_filter)
+	#nb_collected_by_category = catchables_of_category.size()
+	var collected_catchables = \
+		CollectedCatchableList.create(FishingManager.fishing_stats.catchables) \
+			.filter_by_category(category_filter)
+	
+	if category_filter == CategoryRes.ELureCategory.FISH:
+		collected_catchables = collected_catchables.filter_by_regions(regions_filter)
 	
 	_update_remaining_catchable()
 	
-	for catchable in catchables_of_category:
+	for catchable in collected_catchables.list:
 		var item = fish_entry_scene.instantiate() as CollectedItem
 		container.add_child(item)
 		item.init(catchable)
 	
+	filters_container.visible = (category_filter == CategoryRes.ELureCategory.FISH)
+	
 	if category_filter == CategoryRes.ELureCategory.FISH:
-		for catchable in FishingManager.get_all_remaining_fishes():
+		var remaining_catchables = CatchableList.create(FishingManager.get_all_remaining_fishes()) \
+			.filter_by_regions(regions_filter)
+		for catchable in remaining_catchables.list:
 			var item = fish_entry_scene.instantiate() as CollectedItem
 			container.add_child(item)
 			item.init_shadow(catchable)
@@ -88,6 +108,9 @@ func _on_deactivate():
 	SignalBus.enable_player_fishing.emit(true)
 	SignalBus.enable_player_movements.emit(true)
 
+
+func on_btn_region_filter_clicked(toggled :bool):
+	populate()
 
 
 func _on_btn_fishes_pressed():

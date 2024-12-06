@@ -6,3 +6,4 @@
 script = ExtResource("1_mfvew")
 name = "FA_REEF"
 color = Color(0.466667, 0.360784, 0.2, 1)
+text_color = Color(1, 1, 1, 1)

@@ -63,7 +63,7 @@ func get_waiting_time():
 
 
 func pick_catchable(fishTable: FishingAreaRes):
-	print("pick catchable from " + fishTable.name)
+	print("pick catchable from " + fishTable.region.name)
 	picked_catchable = null
 	var current_period = TimeManager.get_time_period()
 	var rarity = fishTable.get_rarity()

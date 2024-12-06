@@ -11,7 +11,6 @@
 [resource]
 script = ExtResource("2_g7r0p")
 region = ExtResource("6_e35hd")
-name = "FA_FLOWERS"
 type = 0
 waiting_time = 3.0
 catchables = Array[ExtResource("1_kl5l1")]([ExtResource("2_t3rr7"), ExtResource("3_0bmat"), ExtResource("4_wwhrf"), ExtResource("5_7hkrm")])

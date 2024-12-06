@@ -6,7 +6,6 @@
 
 [resource]
 script = ExtResource("3_1lvjh")
-name = "FA_JUMPING_FISH"
 type = 1
 waiting_time = 3.0
 catchables = Array[ExtResource("1_0e46k")]([ExtResource("2_fbgpp")])

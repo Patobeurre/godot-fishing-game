@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://u2so53vo6ln8"]
+[gd_scene load_steps=38 format=3 uid="uid://u2so53vo6ln8"]
 
 [ext_resource type="Script" path="res://scripts/UI/FishCollection.gd" id="1_vadpx"]
 [ext_resource type="PackedScene" uid="uid://dvudi6kooo44u" path="res://objects/UI/FishEntry.tscn" id="2_87y58"]
@@ -11,6 +11,25 @@
 [ext_resource type="Resource" uid="uid://eqi3uvm17to0" path="res://scripts/Resources/Categories/Insects.tres" id="6_8mn7x"]
 [ext_resource type="Resource" uid="uid://catedw4i7v6px" path="res://scripts/Resources/Categories/Animals.tres" id="7_il0o0"]
 [ext_resource type="Resource" uid="uid://dsaa6q3411ycd" path="res://scripts/Resources/Categories/Secrets.tres" id="8_ae5mx"]
+[ext_resource type="PackedScene" uid="uid://dgw7oq2r0wcu6" path="res://objects/UI/btn_region_filter.tscn" id="11_8ho8q"]
+[ext_resource type="Texture2D" uid="uid://cue0akjttcjio" path="res://sprites/UI/kenney_ui-pack/PNG/Grey/Double/button_rectangle_depth_gradient.png" id="11_qtxvw"]
+[ext_resource type="Texture2D" uid="uid://ch74gsei43q3c" path="res://sprites/UI/region buttons/btn_beach.png" id="12_paqtd"]
+[ext_resource type="Texture2D" uid="uid://v3hvpj7sfflg" path="res://sprites/UI/region buttons/btn_coast.png" id="13_3ide2"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="13_5u538"]
+[ext_resource type="Texture2D" uid="uid://0cy4sodedyhp" path="res://sprites/UI/region buttons/btn_deep.png" id="14_cv542"]
+[ext_resource type="Resource" uid="uid://bwrdv60ecb3rv" path="res://scripts/Resources/Regions/Beach.tres" id="14_qyc4h"]
+[ext_resource type="Texture2D" uid="uid://dnxf7ypexw6jf" path="res://sprites/UI/region buttons/btn_river.png" id="15_cut8s"]
+[ext_resource type="Resource" uid="uid://dhld2ow8uhn80" path="res://scripts/Resources/Regions/BeachGround.tres" id="15_sw881"]
+[ext_resource type="Texture2D" uid="uid://b5fv3m2p33rrh" path="res://sprites/UI/region buttons/btn_swamp.png" id="16_tl1np"]
+[ext_resource type="Texture2D" uid="uid://8m47wnchas8n" path="res://sprites/UI/region buttons/btn_reef.png" id="17_7r40o"]
+[ext_resource type="Resource" uid="uid://dwijteaf2p6at" path="res://scripts/Resources/Regions/Coast.tres" id="17_kbfr8"]
+[ext_resource type="Resource" uid="uid://b16jgklq2bpkk" path="res://scripts/Resources/Regions/Deep.tres" id="19_snwiw"]
+[ext_resource type="Resource" uid="uid://dlp3f2lo6klif" path="res://scripts/Resources/Regions/Shark.tres" id="20_5gxxt"]
+[ext_resource type="Resource" uid="uid://dtv2pu6qgth1j" path="res://scripts/Resources/Regions/River.tres" id="25_qo3sl"]
+[ext_resource type="Resource" uid="uid://5hdu1q8j5531" path="res://scripts/Resources/Regions/Swamp.tres" id="26_ynkoj"]
+[ext_resource type="Resource" uid="uid://dve05j53bog0x" path="res://scripts/Resources/Regions/SwampGround.tres" id="27_66vjw"]
+[ext_resource type="Resource" uid="uid://dkhuqkephtd2b" path="res://scripts/Resources/Regions/Reef.tres" id="27_dd0ud"]
+[ext_resource type="Resource" uid="uid://fwr3ntued7gc" path="res://scripts/Resources/Regions/ReefGround.tres" id="28_n05r7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5c7k5"]
 atlas = ExtResource("2_l2ux7")
@@ -263,27 +282,81 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="ScrollContainer" type="ScrollContainer" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer"]
-custom_minimum_size = Vector2(600, 0)
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer"]
 layout_mode = 2
+
+[node name="FlowContainer" type="FlowContainer" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 10
+alignment = 1
+vertical = true
+
+[node name="BtnAllFilter" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer/FlowContainer" instance=ExtResource("11_8ho8q")]
+layout_mode = 2
+texture = ExtResource("11_qtxvw")
+
+[node name="BtnBeachFilter" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer/FlowContainer" instance=ExtResource("11_8ho8q")]
+layout_mode = 2
+regions = Array[ExtResource("13_5u538")]([ExtResource("14_qyc4h"), ExtResource("15_sw881")])
+texture = ExtResource("12_paqtd")
+
+[node name="BtnCoastFilter" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer/FlowContainer" instance=ExtResource("11_8ho8q")]
+layout_mode = 2
+regions = Array[ExtResource("13_5u538")]([ExtResource("17_kbfr8")])
+texture = ExtResource("13_3ide2")
+default_text = ""
+
+[node name="BtnDeepFilter" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer/FlowContainer" instance=ExtResource("11_8ho8q")]
+layout_mode = 2
+regions = Array[ExtResource("13_5u538")]([ExtResource("19_snwiw"), ExtResource("20_5gxxt")])
+texture = ExtResource("14_cv542")
+text_color = Color(1, 1, 1, 1)
+default_text = ""
+
+[node name="BtnRiverFilter" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer/FlowContainer" instance=ExtResource("11_8ho8q")]
+layout_mode = 2
+regions = Array[ExtResource("13_5u538")]([ExtResource("25_qo3sl")])
+texture = ExtResource("15_cut8s")
+default_text = ""
+
+[node name="BtnSwampFilter" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer/FlowContainer" instance=ExtResource("11_8ho8q")]
+layout_mode = 2
+regions = Array[ExtResource("13_5u538")]([ExtResource("26_ynkoj"), ExtResource("27_66vjw")])
+texture = ExtResource("16_tl1np")
+text_color = Color(1, 1, 1, 1)
+default_text = ""
+
+[node name="BtnReefFilter" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer/FlowContainer" instance=ExtResource("11_8ho8q")]
+layout_mode = 2
+regions = Array[ExtResource("13_5u538")]([ExtResource("27_dd0ud"), ExtResource("28_n05r7")])
+texture = ExtResource("17_7r40o")
+text_color = Color(1, 1, 1, 1)
+default_text = ""
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+size_flags_vertical = 3
 theme = SubResource("Theme_2ayyg")
 horizontal_scroll_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="FishEntry" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_87y58")]
+[node name="FishEntry" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_87y58")]
 layout_mode = 2
 
-[node name="FishEntry2" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_87y58")]
+[node name="FishEntry2" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_87y58")]
 layout_mode = 2
 
-[node name="FishEntry3" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_87y58")]
+[node name="FishEntry3" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_87y58")]
 layout_mode = 2
 
-[node name="FishEntry4" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_87y58")]
+[node name="FishEntry4" parent="HSplitContainer/MarginContainer/VSplitContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_87y58")]
 layout_mode = 2
 
 [connection signal="pressed" from="HSplitContainer/MarginContainer2/Categories/BtnFishes" to="." method="_on_btn_fishes_pressed"]

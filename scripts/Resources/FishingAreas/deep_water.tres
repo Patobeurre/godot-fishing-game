@@ -18,7 +18,6 @@
 [resource]
 script = ExtResource("2_u228g")
 region = ExtResource("13_rs21j")
-name = "FA_DEEP"
 type = 1
 waiting_time = 3.0
 catchables = Array[ExtResource("1_57rtu")]([ExtResource("4_kct0i"), ExtResource("2_nxbdl"), ExtResource("3_hjill"), ExtResource("7_hc7po"), ExtResource("8_ibjr0"), ExtResource("7_mb20o"), ExtResource("8_6j2ae"), ExtResource("9_txr0g"), ExtResource("10_cw7af"), ExtResource("11_0a6nt"), ExtResource("12_nx60h")])

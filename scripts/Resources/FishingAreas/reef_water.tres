@@ -13,7 +13,6 @@
 [resource]
 script = ExtResource("2_hhjtk")
 region = ExtResource("8_4k7xg")
-name = "FA_REEF"
 type = 1
 waiting_time = 3.0
 catchables = Array[ExtResource("1_7kfvn")]([ExtResource("1_0tjx7"), ExtResource("3_800xe"), ExtResource("5_qvj67"), ExtResource("6_s7fo1"), ExtResource("7_h1pt4"), ExtResource("8_a4v8o")])

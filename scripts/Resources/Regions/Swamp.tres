@@ -6,3 +6,4 @@
 script = ExtResource("1_74xu8")
 name = "FA_SWAMP"
 color = Color(0.454902, 0.521569, 0, 1)
+text_color = Color(1, 1, 1, 1)

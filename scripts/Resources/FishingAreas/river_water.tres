@@ -12,7 +12,6 @@
 [resource]
 script = ExtResource("2_iuy0o")
 region = ExtResource("7_rl8lc")
-name = "FA_RIVER"
 type = 1
 waiting_time = 3.0
 catchables = Array[ExtResource("1_gtyq6")]([ExtResource("2_upd2l"), ExtResource("3_1h72n"), ExtResource("4_6xahx"), ExtResource("5_vsjqk"), ExtResource("6_110hc")])
