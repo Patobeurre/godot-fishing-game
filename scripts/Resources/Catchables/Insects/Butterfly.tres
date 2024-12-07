@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://dcpvdafn7juyp"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=10 format=3 uid="uid://dcpvdafn7juyp"]
 
 [ext_resource type="Resource" uid="uid://eqi3uvm17to0" path="res://scripts/Resources/Categories/Insects.tres" id="1_0dxk5"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_ftmi8"]
 [ext_resource type="Texture2D" uid="uid://7l6j406cwmmb" path="res://sprites/Catchables/butterfly.png" id="2_raic3"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="4_diuy3"]
+[ext_resource type="Resource" uid="uid://cbaiokykhuhmg" path="res://scripts/Resources/Catchables/Lizard.tres" id="4_qokto"]
 [ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_32di8"]
 [ext_resource type="PackedScene" uid="uid://c5gg6temsi7w5" path="res://objects/Catchables/butterfly.tscn" id="5_brfx4"]
+[ext_resource type="Resource" uid="uid://dpudh0oxpgs8s" path="res://scripts/Resources/Catchables/Frog.tres" id="5_o50y2"]
 [ext_resource type="Resource" uid="uid://bp5g8fihosob6" path="res://scripts/Resources/Regions/Flowers.tres" id="6_6wysv"]
 
 [resource]
@@ -22,6 +24,6 @@ rarity = 30
 price = 0
 regions = Array[ExtResource("5_32di8")]([ExtResource("6_6wysv")])
 periods = Array[int]([0, 1])
-lures = Array[ExtResource("1_ftmi8")]([ExtResource("4_diuy3")])
+lures = Array[ExtResource("1_ftmi8")]([ExtResource("4_qokto"), ExtResource("5_o50y2"), ExtResource("4_diuy3")])
 lure_ids = Array[int]([])
 lure_tags = Array[int]([10])

@@ -25,4 +25,4 @@ regions = Array[ExtResource("5_vi31f")]([ExtResource("6_21uhp"), ExtResource("7_
 periods = Array[int]([0, 1, 2, 3])
 lures = Array[ExtResource("1_ks7ap")]([ExtResource("4_2tfr1")])
 lure_ids = Array[int]([])
-lure_tags = Array[int]([6, 1, 2])
+lure_tags = Array[int]([6])
