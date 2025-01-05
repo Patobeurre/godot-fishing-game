@@ -15,6 +15,7 @@ dest_files=["res://.godot/imported/Handle.ttf-666dfecef7401de5b6b20324894e4403.f
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48

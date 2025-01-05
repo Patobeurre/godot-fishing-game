@@ -46,6 +46,11 @@ MailManager="*res://scripts/Global/MailManager.gd"
 ProgressVariables="*res://scripts/Global/ProgressVariables.gd"
 BasketManager="*res://scripts/Global/BasketManager.gd"
 
+[debug]
+
+settings/stdout/print_fps=true
+settings/stdout/print_gpu_profile=true
+
 [display]
 
 window/size/viewport_width=1920
@@ -53,6 +58,7 @@ window/size/viewport_height=1080
 window/size/window_width_override=1280
 window/size/window_height_override=700
 window/stretch/mode="viewport"
+window/ios/allow_high_refresh_rate=false
 
 [editor]
 
@@ -234,21 +240,26 @@ rendering/text_driver="ICU / HarfBuzz / Graphite (Built-in)"
 
 [physics]
 
-common/physics_ticks_per_second=200
 3d/physics_engine="JoltPhysics3D"
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
-textures/lossless_compression/force_png=true
-lights_and_shadows/directional_shadow/size=2048
+occlusion_culling/bvh_build_quality=0
+lights_and_shadows/directional_shadow/size=1024
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
 lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
-driver/depth_prepass/enable=false
-environment/ssao/quality=3
-environment/screen_space_reflection/roughness_quality=2
-occlusion_culling/use_occlusion_culling=true
+shading/overrides/force_lambert_over_burley=true
+textures/default_filters/anisotropic_filtering_level=0
+camera/depth_of_field/depth_of_field_bokeh_shape=0
+camera/depth_of_field/depth_of_field_bokeh_quality=0
+environment/ssao/quality=0
+environment/ssil/quality=0
+anti_aliasing/screen_space_roughness_limiter/enabled=false
+environment/glow/upscale_mode=0
+environment/screen_space_reflection/roughness_quality=0
+environment/subsurface_scattering/subsurface_scattering_quality=0
+global_illumination/sdfgi/frames_to_converge=2
+environment/volumetric_fog/use_filter=0
 mesh_lod/lod_change/threshold_pixels=3.0
 
 [shader_globals]

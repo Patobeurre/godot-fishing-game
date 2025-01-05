@@ -10,19 +10,16 @@ ground_curve = 0.171484
 sky_material = SubResource("ProceduralSkyMaterial_lg8b7")
 
 [resource]
-background_mode = 1
-background_color = Color(0.317743, 0.732115, 0.999999, 1)
-background_energy_multiplier = 0.25
+background_mode = 2
+background_color = Color(0.289298, 0.724131, 0.999999, 1)
+background_energy_multiplier = 0.6
 sky = SubResource("Sky_7bk1c")
 ambient_light_source = 2
-ambient_light_color = Color(0.123961, 0.541835, 0.707524, 1)
-ambient_light_energy = 0.8
-tonemap_mode = 2
-ssao_enabled = true
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.5
 ssao_radius = 0.45
 ssao_intensity = 1.0
 ssao_power = 5.0
-glow_enabled = true
 glow_levels/2 = 0.6
 glow_levels/3 = 0.6
 glow_levels/5 = 0.0
