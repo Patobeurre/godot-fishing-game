@@ -482,6 +482,9 @@ func zoom_camera(value :float, duration :float = 1.0):
 	
 	await tween.finished
 
+func zoom_progressive_camera(value :float):
+	camera.fov = INITIAL_FOV + value
+
 func reset_zoom_camera():
 	zoom_camera(INITIAL_FOV)
 

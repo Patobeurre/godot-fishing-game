@@ -6,6 +6,7 @@ extends StateMachineState
 @export var MIN_SPEED = 3
 @export var MAX_SPEED = 10
 @export var MAX_ELAPSED = 2
+@export var ZOOM_FACTOR = 5
 var speed :float = 0
 var elapsed :float = 0
 
@@ -41,6 +42,7 @@ func on_process(delta):
 func on_physics_process(delta):
 	if elapsed < MAX_ELAPSED:
 		elapsed += delta
+		controller.zoom_progressive_camera(-elapsed * ZOOM_FACTOR)
 
 
 # Called when there is an input event while this state is active.
@@ -53,4 +55,5 @@ func on_input(event: InputEvent):
 
 # Called when the state machine exits this state.
 func on_exit():
+	controller.reset_zoom_camera()
 	pass
