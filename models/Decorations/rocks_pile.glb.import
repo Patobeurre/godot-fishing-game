@@ -36,7 +36,7 @@ _subresources={
 "PATH:rocks_merged": {
 "generate/physics": true,
 "physics/layer": 4097,
-"physics/mask": 257,
+"physics/mask": 259,
 "physics/shape_type": 2
 }
 }

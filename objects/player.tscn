@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dl2ed4gkybggf"]
+[gd_scene load_steps=32 format=3 uid="uid://dl2ed4gkybggf"]
 
 [ext_resource type="Script" path="res://scripts/player_stair_test.gd" id="1_awcpd"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_fg077"]
@@ -32,6 +32,10 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
 radius = 0.3
 height = 1.19861
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k8iwq"]
+
+[sub_resource type="Curve3D" id="Curve3D_angxa"]
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
@@ -96,6 +100,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.292484, -0.165401, -0.24084
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 target_position = Vector3(0, -2, 0)
 collision_mask = 49
+
+[node name="FishingRode" type="Node3D" parent="Body"]
+top_level = true
+
+[node name="CSGRope" type="CSGPolygon3D" parent="Body/FishingRode"]
+polygon = PackedVector2Array(0, 0, 0, 0.005, 0.005, 0.005, 0.005, 0)
+mode = 2
+path_node = NodePath("../RopePath")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_k8iwq")
+
+[node name="RopePath" type="Path3D" parent="Body/FishingRode"]
+curve = SubResource("Curve3D_angxa")
 
 [node name="Foot" type="Node3D" parent="Body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.55, 0)

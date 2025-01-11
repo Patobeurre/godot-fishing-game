@@ -1,4 +1,5 @@
 extends RigidBody3D
+class_name Bobber
 
 
 @onready var lure_spawn :Node3D = $Node3D/LureSpawn
@@ -7,6 +8,7 @@ extends RigidBody3D
 @onready var collision_shape :CollisionShape3D = $CollisionShape3D
 @onready var mesh = $Node3D/bobber_merged
 @onready var billboard = $Billboard
+@onready var rope_point = $RopePoint
 @onready var animation_player :AnimationPlayer = $AnimationPlayer
 
 var local_collision_pos :Vector3 = Vector3.ZERO
@@ -46,6 +48,10 @@ func set_attached_lure(lure :CatchableRes):
 	var lureScene = lure.scene.instantiate()
 	lure_spawn.add_child(lureScene)
 	lureScene.global_position = lure_spawn.global_position
+
+
+func get_rope_point() -> Vector3:
+	return rope_point.global_position
 
 
 func _on_area_3d_player_body_entered(body):

@@ -12,6 +12,7 @@ static var unknown_catchable :CatchableRes = preload("res://scripts/Resources/Ca
 static func create(new_identification_catchable :IdentificationCatchable) -> IdentifiedRes:
 	var identified_catchable = IdentifiedRes.new()
 	identified_catchable.catchable = new_identification_catchable
+	identified_catchable.selected_catchable = unknown_catchable
 	return identified_catchable
 
 

@@ -76,7 +76,7 @@ transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -2.01171, 0.310571, 2.5
 
 [node name="bookshelve" parent="." index="18" instance=ExtResource("3_5xcf1")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.00801, 0.29784, 0.204633)
-mass = 80.0
+mass = 40.0
 
 [node name="map_frame" parent="." index="19" instance=ExtResource("4_o6kp1")]
 transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, 2.36388, 1.77737, 3.34916)

@@ -15,6 +15,7 @@ var elapsed :float = 0
 func on_enter():
 	print("fire state")
 	elapsed = 0
+	controller.remove_rope()
 
 
 func spawn_bobber():

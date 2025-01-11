@@ -22,7 +22,7 @@ func start_timer():
 
 # Called every frame when this state is active.
 func on_process(delta):
-	pass
+	controller.draw_rope()
 
 
 # Called every physics frame when this state is active.

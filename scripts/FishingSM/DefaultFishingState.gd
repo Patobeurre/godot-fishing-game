@@ -11,6 +11,7 @@ var is_preventing_input :bool = false
 func on_enter():
 	print("default state")
 	FishingManager.reset()
+	controller.remove_rope()
 
 
 func spawn_basket(type :BasketTypeRes.EBasketType):

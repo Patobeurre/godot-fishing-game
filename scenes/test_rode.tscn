@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvojrj742252m"]
+
+[ext_resource type="Script" path="res://scripts/test_rope/rope.gd" id="1_di0y7"]
+[ext_resource type="Script" path="res://scripts/test_rope/end.gd" id="1_lfq8j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1gga"]
+
+[sub_resource type="Curve3D" id="Curve3D_pmptf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfx86"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_o1iy3"]
+material = SubResource("StandardMaterial3D_qfx86")
+radius = 0.1
+height = 0.2
+
+[node name="TestRode" type="Node3D" node_paths=PackedStringArray("begin", "end", "path")]
+script = ExtResource("1_di0y7")
+begin = NodePath("Begin")
+end = NodePath("End")
+path = NodePath("Path3D")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+polygon = PackedVector2Array(0, 0, 0, 0.05, 0.05, 0.05, 0.05, 0)
+mode = 2
+path_node = NodePath("../Path3D")
+path_interval_type = 0
+path_interval = 0.15
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_s1gga")
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_pmptf")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+current = true
+
+[node name="Begin" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Begin"]
+mesh = SubResource("SphereMesh_o1iy3")
+
+[node name="End" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+script = ExtResource("1_lfq8j")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="End"]
+mesh = SubResource("SphereMesh_o1iy3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 6, 0)

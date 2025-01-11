@@ -63,7 +63,10 @@ signal health_updated
 var footstep_sounds_path :String = ""
 
 @onready var bobber_scene = preload("res://objects/bobber.tscn")
-var bobber = null
+var bobber :Bobber = null
+
+@onready var rope_CSG = $Body/FishingRode/CSGRope
+@onready var rope_path :Path3D = $Body/FishingRode/RopePath
 
 @onready var fishing_sm: FiniteStateMachine = $FishingStateMachine
 @onready var default_fishing_state: StateMachineState = $DefaultFishingState
@@ -471,6 +474,17 @@ func action_dash():
 		
 		dash_duration.start()
 		dash_cooldown.start()
+
+
+func draw_rope():
+	if bobber == null: return
+	
+	remove_rope()
+	rope_path.curve.add_point(hook_spawner.global_position + Vector3(0, 0.5, 0))
+	rope_path.curve.add_point(bobber.get_rope_point())
+
+func remove_rope():
+	rope_path.curve.clear_points()
 
 
 var INITIAL_FOV = 75

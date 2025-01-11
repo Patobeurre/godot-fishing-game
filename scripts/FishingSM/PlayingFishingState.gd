@@ -16,7 +16,7 @@ func on_enter():
 # Called every frame when this state is active.
 func on_process(delta):
 	controller.camera.fov += delta
-	pass
+	controller.draw_rope()
 
 
 # Called every physics frame when this state is active.

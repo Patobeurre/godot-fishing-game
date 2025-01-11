@@ -49,7 +49,6 @@ BasketManager="*res://scripts/Global/BasketManager.gd"
 [debug]
 
 settings/stdout/print_fps=true
-settings/stdout/print_gpu_profile=true
 
 [display]
 
@@ -240,26 +239,16 @@ rendering/text_driver="ICU / HarfBuzz / Graphite (Built-in)"
 
 [physics]
 
+common/physics_ticks_per_second=120
 3d/physics_engine="JoltPhysics3D"
 
 [rendering]
 
-occlusion_culling/bvh_build_quality=0
-lights_and_shadows/directional_shadow/size=1024
-lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
-lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 shading/overrides/force_lambert_over_burley=true
-textures/default_filters/anisotropic_filtering_level=0
-camera/depth_of_field/depth_of_field_bokeh_shape=0
-camera/depth_of_field/depth_of_field_bokeh_quality=0
-environment/ssao/quality=0
-environment/ssil/quality=0
 anti_aliasing/screen_space_roughness_limiter/enabled=false
-environment/glow/upscale_mode=0
-environment/screen_space_reflection/roughness_quality=0
-environment/subsurface_scattering/subsurface_scattering_quality=0
-global_illumination/sdfgi/frames_to_converge=2
-environment/volumetric_fog/use_filter=0
+occlusion_culling/use_occlusion_culling=true
 mesh_lod/lod_change/threshold_pixels=3.0
 
 [shader_globals]
