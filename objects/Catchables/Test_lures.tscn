@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://d2cy4arr18ptt"]
+[gd_scene load_steps=60 format=3 uid="uid://d2cy4arr18ptt"]
 
 [ext_resource type="PackedScene" uid="uid://dmyqppx7y0tw7" path="res://objects/bobber.tscn" id="1_dkc2c"]
 [ext_resource type="PackedScene" uid="uid://0ontd173otm6" path="res://objects/Catchables/true_mussels.tscn" id="2_vjnp4"]
@@ -58,6 +58,7 @@
 [ext_resource type="PackedScene" uid="uid://drhkafcvf1r6s" path="res://objects/Catchables/Fishes/flowerfish.tscn" id="56_l1p7u"]
 [ext_resource type="PackedScene" uid="uid://b5rkan0b6422b" path="res://objects/Catchables/Fishes/sailfish.tscn" id="57_74bjv"]
 [ext_resource type="PackedScene" uid="uid://jtcvc2isfoud" path="res://objects/Catchables/phasma.tscn" id="58_fe3pj"]
+[ext_resource type="PackedScene" uid="uid://yqtw373y7p74" path="res://objects/Catchables/Fishes/razorfish.tscn" id="59_yd41l"]
 
 [node name="TestLures" type="Node3D"]
 
@@ -236,3 +237,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.177243, 0)
 visible = false
 
 [node name="Phasma" parent="." instance=ExtResource("58_fe3pj")]
+visible = false
+
+[node name="Node3D" parent="." instance=ExtResource("59_yd41l")]

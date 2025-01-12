@@ -147,6 +147,10 @@ F_SAILFISH_NAME;Espadon;Sailfish
 F_SAILFISH_DESCr;;
 F_SAILFISH_IDENT_DESCR;;
 ;;
+F_RAZORFISH_NAME;Poisson rasoir;Razorfish
+F_RAZORFISH_DESCR;Un corps allongé et coupant comme des lames de rasoir.;An elongated, razor-sharp body.
+F_RAZORFISH_IDENT_DESCR;Poisson grégaire vivant en petit groupe ou large banc. \nSe tient verticalement la tête en bas et se cache dans des algues, coraux, ou même entre les épines des oursins !;A gregarious fish living in small groups or large shoals. \nIt stands vertically with its head down and hides in algae, coral or even between the spines of sea urchins !
+;;
 F_ANEMONE_NAME;Anemone;Anemone
 F_ANEMONE_DESCR;Peut servir de refuge pour certains poissons.;Can serve as a refuge for certain fish.
 ;;

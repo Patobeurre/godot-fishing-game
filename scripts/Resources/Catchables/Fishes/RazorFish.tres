@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=11 format=3 uid="uid://be7qy8t7n18bb"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_3bxo3"]
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_ojrv5"]
+[ext_resource type="Texture2D" uid="uid://7ui7ibblphcs" path="res://sprites/Catchables/Fishes/razorfish.png" id="2_fqemp"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="2_mjs7l"]
+[ext_resource type="Resource" uid="uid://ddepi6wvt10p6" path="res://scripts/Resources/Catchables/SeaWeed.tres" id="5_fw28h"]
+[ext_resource type="Resource" uid="uid://hgj47b8kfi7j" path="res://scripts/Resources/Catchables/Fishes/SeaUrchin.tres" id="6_ir6lc"]
+[ext_resource type="Resource" uid="uid://5hdu1q8j5531" path="res://scripts/Resources/Regions/Swamp.tres" id="6_k31pp"]
+[ext_resource type="Texture2D" uid="uid://de026tg5v4jdw" path="res://sprites/Catchables/Fishes/razorfish_shadow.png" id="7_cjiqp"]
+[ext_resource type="Resource" uid="uid://cxldl4urf7kh" path="res://scripts/Resources/Catchables/Coral.tres" id="7_mjbww"]
+[ext_resource type="PackedScene" uid="uid://yqtw373y7p74" path="res://objects/Catchables/Fishes/razorfish.tscn" id="8_4nxaq"]
+
+[resource]
+script = ExtResource("1_3bxo3")
+id = 63
+name = "F_RAZORFISH_NAME"
+description = "F_RAZORFISH_DESCR"
+notification_text = ""
+category = ExtResource("1_ojrv5")
+tags = Array[int]([1, 0, 11])
+image = ExtResource("2_fqemp")
+shadow = ExtResource("7_cjiqp")
+scene = ExtResource("8_4nxaq")
+rarity = 50
+price = 9
+regions = Array[ExtResource("2_mjs7l")]([ExtResource("6_k31pp")])
+periods = Array[int]([0, 1, 2, 3])
+lures = Array[ExtResource("1_3bxo3")]([ExtResource("5_fw28h"), ExtResource("6_ir6lc"), ExtResource("7_mjbww"), null])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([])
