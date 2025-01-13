@@ -1,7 +1,7 @@
 extends Node3D
 
 
-var children_scenes :Array
+var children_scenes :Array = []
 
 
 func _ready() -> void:

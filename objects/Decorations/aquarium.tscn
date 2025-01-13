@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://dlkks82dwpwbt"]
+[gd_scene load_steps=69 format=3 uid="uid://dlkks82dwpwbt"]
 
 [ext_resource type="PackedScene" uid="uid://dpj1l8s865bid" path="res://models/Structures/aquarium.glb" id="1_ify1k"]
 [ext_resource type="Script" path="res://scripts/Aquarium/aquarium.gd" id="2_lv4tf"]
@@ -57,6 +57,8 @@
 [ext_resource type="PackedScene" uid="uid://bv6df770xtu10" path="res://objects/Catchables/Fishes/hidden_fish_v2.tscn" id="51_w6eau"]
 [ext_resource type="Resource" uid="uid://lio1nhp8ucd2" path="res://scripts/Resources/Catchables/Fishes/HiddenFish.tres" id="52_kde51"]
 [ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="52_qfiu0"]
+[ext_resource type="PackedScene" uid="uid://yqtw373y7p74" path="res://objects/Catchables/Fishes/razorfish.tscn" id="55_ximse"]
+[ext_resource type="Resource" uid="uid://be7qy8t7n18bb" path="res://scripts/Resources/Catchables/Fishes/RazorFish.tres" id="56_sth15"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_cffoc"]
 noise_type = 3
@@ -320,6 +322,15 @@ script = ExtResource("2_mnper")
 transform = Transform3D(0.603914, 0, -1.03696, 0, 1.2, 0, 1.03696, 0, 0.603914, 0.0837858, -0.135948, -0.104211)
 visible = false
 script = ExtResource("5_wlgjx")
+
+[node name="RazorFish" type="Node3D" parent="Catchables" index="13"]
+script = ExtResource("2_mnper")
+
+[node name="razorfish" parent="Catchables/RazorFish" index="0" instance=ExtResource("55_ximse")]
+transform = Transform3D(0.890077, 0, -0.947504, 0, 1.3, 0, 0.947504, 0, 0.890077, -0.141767, -0.160026, 0.182515)
+visible = false
+catchable = ExtResource("56_sth15")
+animation_name = "idle"
 
 [node name="Cube_224" parent="." index="1"]
 transform = Transform3D(-0.624, 0, -9.70202e-07, 0, 0.6912, 0, 5.40541e-07, 0, -1.12, 0, 0, -1.7484e-08)
