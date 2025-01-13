@@ -26,6 +26,6 @@ rarity = 50
 price = 9
 regions = Array[ExtResource("2_mjs7l")]([ExtResource("6_k31pp")])
 periods = Array[int]([0, 1, 2, 3])
-lures = Array[ExtResource("1_3bxo3")]([ExtResource("5_fw28h"), ExtResource("6_ir6lc"), ExtResource("7_mjbww"), null])
+lures = Array[ExtResource("1_3bxo3")]([ExtResource("5_fw28h"), ExtResource("6_ir6lc"), ExtResource("7_mjbww")])
 lure_ids = Array[int]([])
 lure_tags = Array[int]([])
