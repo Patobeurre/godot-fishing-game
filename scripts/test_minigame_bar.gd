@@ -1,14 +1,21 @@
-extends Control
+extends Area2D
+class_name MinigameBar
 
 
 @export var minigame_anim_res :MinigameAnimRes
+@export var gradient :GradientTexture1D
+
+@onready var sprite :NinePatchRect = $NinePatchRect
+@onready var collision_shape :CollisionShape2D = $CollisionShape2D
 
 var initial_pos :Vector2
+var offset_x :int
 var elapsed :float = 0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	initial_pos = $Area2D/NinePatchRect.global_position
+	initial_pos = sprite.global_position
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,20 +30,37 @@ func _process(delta: float) -> void:
 
 func _update_size():
 	var cur_size_x = minigame_anim_res.sizeX.curve.sample(elapsed / minigame_anim_res.speed)
-	$Area2D/NinePatchRect.size.x = cur_size_x
-	$Area2D/NinePatchRect.global_position.x -= cur_size_x/2
-	$Area2D/CollisionShape2D.shape.extents = Vector2($Area2D/NinePatchRect.size.x/2, 20)
+	sprite.size.x = cur_size_x
+	sprite.global_position.x -= cur_size_x/2
+	collision_shape.shape.extents = Vector2(sprite.size.x/2, 20)
 
 
 func _update_position():
 	var pos = minigame_anim_res.positionX.curve.sample(elapsed / minigame_anim_res.speed)
-	$Area2D/NinePatchRect.global_position.x = initial_pos.x + pos
-	$Area2D/CollisionShape2D.global_position.x = initial_pos.x + pos
+	pos = pos / 100 * offset_x
+	pos = correct_position_x(pos)
+	sprite.global_position.x = initial_pos.x + pos
+	collision_shape.global_position.x = initial_pos.x + pos
 
 
-func _on_area_2d_2_area_entered(area: Area2D) -> void:
-	$Label.visible = true
+func correct_position_x(posX :float) -> float:
+	if (posX - sprite.size.x / 2) < -offset_x:
+		posX = -offset_x + sprite.size.x / 2
+	elif (posX + sprite.size.x / 2) > offset_x:
+		posX = offset_x - sprite.size.x / 2
+	return posX
 
 
-func _on_area_2d_2_area_exited(area: Area2D) -> void:
-	$Label.visible = false
+func modulate_color(score_ratio :float):
+	print(gradient.gradient.sample(score_ratio))
+	sprite.modulate = gradient.gradient.sample(score_ratio)
+
+
+func set_initial_pos(pos :Vector2, offset: int):
+	initial_pos = pos
+	offset_x = offset
+	position = pos
+
+
+func set_stats(stats :MinigameAnimRes):
+	minigame_anim_res = stats

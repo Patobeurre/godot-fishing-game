@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://f86v14046ito"]
+[gd_scene load_steps=12 format=3 uid="uid://f86v14046ito"]
 
 [ext_resource type="Texture2D" uid="uid://du5mfy6basyuo" path="res://sprites/fishing_game_ui.png" id="1_nt5yl"]
 [ext_resource type="Script" path="res://scripts/UI/MiniGameUI.gd" id="1_ss0vi"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://1qu0blhejsy1" path="res://sounds/FishEffectsComplete/reel.wav" id="7_c1vuo"]
 [ext_resource type="Script" path="res://scripts/MiniGameSM/MovingCursorState.gd" id="7_reox0"]
 [ext_resource type="Script" path="res://scripts/MiniGameSM/MovingDotsState.gd" id="8_43jrv"]
+[ext_resource type="Script" path="res://scripts/MiniGameSM/AnimatedBarState.gd" id="9_ydsev"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6p1df"]
 size = Vector2(16.6667, 58.3333)
@@ -113,6 +114,12 @@ stream = ExtResource("7_c1vuo")
 
 [node name="MovingCursorState" type="Node" parent="."]
 script = ExtResource("7_reox0")
+
+[node name="AnimatedBarState" type="Node" parent="."]
+script = ExtResource("9_ydsev")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AnimatedBarState"]
+stream = ExtResource("7_c1vuo")
 
 [node name="MovingDotsState" type="Node" parent="."]
 script = ExtResource("8_43jrv")

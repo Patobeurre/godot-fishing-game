@@ -13,6 +13,7 @@ extends MainUI
 @onready var moving_bar_state = $MovingBarState
 @onready var moving_cursor_state = $MovingCursorState
 @onready var moving_dots_state = $MovingDotsState
+@onready var animated_bar_state = $AnimatedBarState
 
 
 var catchable :CatchableRes = null
@@ -54,6 +55,9 @@ func load_minigame():
 	catchable = FishingManager.picked_catchable
 	
 	_remove_bars()
+	
+	minigame_sm.set_current_state(animated_bar_state)
+	return
 	
 	if catchable.tags.has(CatchableRes.ELureTag.MULTIPLE_LEGS):
 		minigame_sm.set_current_state(moving_dots_state)
