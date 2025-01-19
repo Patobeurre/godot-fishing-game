@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="MinigameAnimRes" load_steps=6 format=3 uid="uid://55fn1h8n1yfn"]
+
+[ext_resource type="Script" path="res://scripts/Resources/MiniGame/MiniGameAnim/minigame_anim_res.gd" id="1_vohyw"]
+
+[sub_resource type="Curve" id="Curve_y1p43"]
+min_value = -100.0
+max_value = 100.0
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.181159, 76.8546), 0.0, 0.0, 0, 0, Vector2(0.59058, -60.089), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_p0fg8"]
+curve = SubResource("Curve_y1p43")
+
+[sub_resource type="Curve" id="Curve_bjv1e"]
+min_value = 40.0
+max_value = 200.0
+_data = [Vector2(0, 40), 0.0, 0.0, 0, 0, Vector2(0.25, 111.014), 0.0, 0.0, 0, 0, Vector2(0.503472, 85.7465), 0.0, 0.0, 0, 0, Vector2(0.847222, 200), 0.0, 0.0, 0, 0, Vector2(1, 40), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_l0yhn"]
+curve = SubResource("Curve_bjv1e")
+
+[resource]
+script = ExtResource("1_vohyw")
+sizeX = SubResource("CurveTexture_l0yhn")
+positionX = SubResource("CurveTexture_p0fg8")
+speed = 5.0
