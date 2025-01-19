@@ -38,10 +38,6 @@ _subresources={
 "physics/mask": 256,
 "physics/shape_type": 1
 },
-"PATH:bridge": {
-"generate/physics": true,
-"physics/shape_type": 2
-},
 "PATH:cliff_simple_005": {
 "generate/physics": true,
 "physics/layer": 4097,
@@ -57,25 +53,14 @@ _subresources={
 "physics/layer": 4097,
 "physics/mask": 257
 },
-"PATH:cliff_simple_009": {
+"PATH:cliff_simple_011": {
 "generate/physics": true,
-"physics/layer": 4097,
-"physics/mask": 257
+"physics/shape_type": 2
 },
 "PATH:island_boundaries": {
 "generate/physics": true,
 "physics/layer": 4,
 "physics/mask": 2
-},
-"PATH:reed_collision": {
-"generate/physics": true,
-"physics/layer": 4096,
-"physics/mask": 256
-},
-"PATH:reed_collision_001": {
-"generate/physics": true,
-"physics/layer": 4096,
-"physics/mask": 256
 },
 "PATH:reef": {
 "generate/physics": true,
