@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://deqhnbp03hvqw"]
+[gd_scene load_steps=45 format=3 uid="uid://deqhnbp03hvqw"]
 
 [ext_resource type="Script" path="res://scripts/Global/SaveManager.gd" id="1_h358c"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_iqhaf"]
@@ -38,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://c814n74rnu164" path="res://objects/Decorations/stelle_beach.tscn" id="36_7gm2s"]
 [ext_resource type="PackedScene" uid="uid://dfo6rjwsvceum" path="res://objects/Decorations/stelle_reef.tscn" id="37_hdi12"]
 [ext_resource type="PackedScene" uid="uid://cj5ta23ek4ni3" path="res://objects/Decorations/stelle_forest.tscn" id="38_tmcct"]
+[ext_resource type="PackedScene" uid="uid://c41gmmgob4ekp" path="res://objects/Decorations/gravestone.tscn" id="39_5peg8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rmnfe"]
 albedo_color = Color(0.878036, 0.868155, 0.689148, 1)
@@ -346,3 +347,6 @@ transform = Transform3D(0.174415, -0.0276247, 0.0938943, 0.0312869, 0.197538, 0,
 
 [node name="stelle_forest" parent="Decorations/Stelles" instance=ExtResource("38_tmcct")]
 transform = Transform3D(-8.47516e-09, 2.14455e-09, 0.2, 0.0490615, 0.193889, 0, -0.193889, 0.0490615, -8.74228e-09, 3.3185, 2.48902, 19.1005)
+
+[node name="gravestone" parent="." instance=ExtResource("39_5peg8")]
+transform = Transform3D(0.4, 0, 0, 0, 0.399245, 0.0245727, 0, -0.0245727, 0.399245, 2, 1.90459, -6)

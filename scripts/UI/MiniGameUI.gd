@@ -56,8 +56,9 @@ func load_minigame():
 	
 	_remove_bars()
 	
-	minigame_sm.set_current_state(animated_bar_state)
-	return
+	if catchable.minigame_res != null:
+		minigame_sm.set_current_state(animated_bar_state)
+		return
 	
 	if catchable.tags.has(CatchableRes.ELureTag.MULTIPLE_LEGS):
 		minigame_sm.set_current_state(moving_dots_state)

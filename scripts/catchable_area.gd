@@ -50,9 +50,9 @@ func _remove_sub_area():
 	exit_sub_fishing_area(subFishingAreaEntered)
 
 func _on_area_entered(area):
-	print("enter area " + fishTable.region.name)
+	#print("enter area " + fishTable.region.name)
 	parent.enter_sub_fishing_area(self)
 
 func _on_area_exited(area):
-	print("exit area " + fishTable.region.name)
+	#print("exit area " + fishTable.region.name)
 	parent.exit_sub_fishing_area(self)

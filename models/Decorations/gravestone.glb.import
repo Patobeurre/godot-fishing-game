@@ -33,6 +33,12 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
+"PATH:dirt_001": {
+"generate/physics": true,
+"physics/layer": 4096,
+"physics/mask": 256,
+"physics/shape_type": 1
+},
 "PATH:grave_stone": {
 "generate/physics": true,
 "physics/mask": 259,

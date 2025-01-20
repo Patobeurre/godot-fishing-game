@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://c41gmmgob4ekp"]
+[gd_scene load_steps=4 format=3 uid="uid://c41gmmgob4ekp"]
 
 [ext_resource type="PackedScene" uid="uid://c6bpr3cl4ss7j" path="res://models/Decorations/gravestone.glb" id="1_kgi7t"]
+[ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_olfym"]
+[ext_resource type="Resource" uid="uid://dp4f2bmtoynnc" path="res://scripts/Resources/FishingAreas/grave_ground.tres" id="3_chfkp"]
 
 [node name="gravestone" instance=ExtResource("1_kgi7t")]
 
 [node name="grave_stone" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, -8.74228e-09, -1, 0, 0.2, -4.37114e-08, 0, 2.2, 0)
+
+[node name="StaticBody3D" parent="dirt_001" index="0"]
+script = ExtResource("2_olfym")
+fishTable = ExtResource("3_chfkp")

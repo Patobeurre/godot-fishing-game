@@ -12,8 +12,7 @@
 [resource]
 script = ExtResource("1_o14k0")
 id = 31
-name = "F_ANEMONE_NAME
-"
+name = "F_ANEMONE_NAME"
 description = "F_ANEMONE_DESCR"
 notification_text = ""
 category = ExtResource("1_bwl80")

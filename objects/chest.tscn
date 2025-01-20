@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://tx87nknr18ww"]
+[gd_scene load_steps=14 format=3 uid="uid://tx87nknr18ww"]
 
 [ext_resource type="PackedScene" uid="uid://djxobsr234p40" path="res://models/chest.glb" id="1_wccmy"]
 [ext_resource type="Script" path="res://scripts/chest.gd" id="2_044pl"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="6_7nwq4"]
 [ext_resource type="Resource" uid="uid://548cjswx7dc5" path="res://scripts/Resources/Documents/PhotoCaveEntrance.tres" id="6_41nii"]
 [ext_resource type="Script" path="res://scripts/Resources/all_documents.gd" id="7_07fq0"]
+[ext_resource type="PackedScene" uid="uid://bcqb7wdiymc5n" path="res://models/Decorations/dirt_chest.glb" id="10_gibag"]
 
 [sub_resource type="Resource" id="Resource_cy4me"]
 script = ExtResource("7_07fq0")
@@ -16,7 +17,6 @@ document_list = Array[ExtResource("5_4pthk")]([ExtResource("6_41nii")])
 
 [sub_resource type="Resource" id="Resource_6jth5"]
 script = ExtResource("6_7nwq4")
-name = ""
 type = 0
 waiting_time = 0.01
 catchables = Array[ExtResource("4_2bxtc")]([])
@@ -48,3 +48,6 @@ is_one_shot = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_169/StaticBody3D/StaticBody3D" index="0"]
 transform = Transform3D(-4.80825e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.80825e-08, 0, 0.10076, 0)
 shape = SubResource("ConvexPolygonShape3D_13mks")
+
+[node name="dirt_chest" parent="." index="2" instance=ExtResource("10_gibag")]
+transform = Transform3D(1, 0, 0, 0, 0.6, 0, 0, 0, 1, 0, 0.35852, -0.361907)

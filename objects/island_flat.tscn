@@ -1,10 +1,11 @@
-[gd_scene load_steps=35 format=3 uid="uid://dcf5g5ajwmrel"]
+[gd_scene load_steps=36 format=3 uid="uid://dcf5g5ajwmrel"]
 
 [ext_resource type="PackedScene" uid="uid://bogl3gpo24hue" path="res://models/Islands/island_flat.glb" id="1_ks6jh"]
 [ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_t1n5g"]
 [ext_resource type="Resource" uid="uid://dsda8e73plwii" path="res://scripts/Resources/FishingAreas/island.tres" id="3_ryn8y"]
 [ext_resource type="Resource" uid="uid://c0g2s4k12jfwj" path="res://scripts/Resources/FishingAreas/beach.tres" id="4_4u4ks"]
 [ext_resource type="PackedScene" uid="uid://bfx6epnty8fhg" path="res://objects/Decorations/oak.tscn" id="4_texjl"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="5_hf3hx"]
 [ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="6_3px18"]
 [ext_resource type="Resource" uid="uid://c0d4soyvubcj0" path="res://scripts/Resources/Catchables/Fishes/TrueMussels.tres" id="6_o5t8b"]
 [ext_resource type="PackedScene" uid="uid://8y5x0u2e2nvo" path="res://objects/Decorations/rocks_pile.tscn" id="7_p7qxd"]
@@ -23,15 +24,17 @@ points = PackedVector3Array(-0.660448, -0.962909, -1.04504, 0.954021, -0.594051,
 
 [sub_resource type="Resource" id="Resource_sgg3x"]
 script = ExtResource("6_3px18")
-name = ""
+type = 0
 waiting_time = 3.0
-catchables = Array[Resource("res://scripts/Resources/CatchableRes.gd")]([ExtResource("6_o5t8b")])
+catchables = Array[ExtResource("5_hf3hx")]([ExtResource("6_o5t8b")])
+default_catchables = Array[ExtResource("5_hf3hx")]([])
 
 [sub_resource type="Resource" id="Resource_7pmhu"]
 script = ExtResource("6_3px18")
-name = ""
+type = 0
 waiting_time = 0.01
-catchables = Array[Resource("res://scripts/Resources/CatchableRes.gd")]([])
+catchables = Array[ExtResource("5_hf3hx")]([])
+default_catchables = Array[ExtResource("5_hf3hx")]([])
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7ufqs"]
 height = 1.31576

@@ -38,6 +38,12 @@ _subresources={
 "physics/mask": 256,
 "physics/shape_type": 1
 },
+"PATH:cave_lake_collision": {
+"generate/physics": true,
+"physics/layer": 4,
+"physics/mask": 2,
+"physics/shape_type": 2
+},
 "PATH:cliff_simple_005": {
 "generate/physics": true,
 "physics/layer": 4097,

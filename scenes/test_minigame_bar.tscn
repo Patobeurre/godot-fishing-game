@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://nwm00beay2mr"]
 
-[ext_resource type="Script" path="res://scripts/test_minigame_bar.gd" id="1_ptbgx"]
-[ext_resource type="Resource" uid="uid://55fn1h8n1yfn" path="res://scripts/Resources/MiniGame/MiniGameAnim/test_anim.tres" id="2_lye3o"]
+[ext_resource type="Texture2D" uid="uid://du5mfy6basyuo" path="res://sprites/fishing_game_ui.png" id="1_on2de"]
+[ext_resource type="Resource" uid="uid://b883m0ds140s6" path="res://scripts/Resources/MiniGame/MiniGameAnim/hammershark.tres" id="3_o7poh"]
 [ext_resource type="PackedScene" uid="uid://dg7rnbgb0n7dq" path="res://objects/UI/minigame_bar.tscn" id="3_tvcna"]
 
 [node name="Control" type="Control"]
@@ -11,7 +11,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ptbgx")
-minigame_anim_res = ExtResource("2_lye3o")
+
+[node name="FishingGameUi" type="Sprite2D" parent="."]
+position = Vector2(640, 500)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_on2de")
 
 [node name="Area2D" parent="." instance=ExtResource("3_tvcna")]
+position = Vector2(660, 500)
+minigame_anim_res = ExtResource("3_o7poh")

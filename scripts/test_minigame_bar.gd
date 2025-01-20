@@ -8,14 +8,15 @@ class_name MinigameBar
 @onready var sprite :NinePatchRect = $NinePatchRect
 @onready var collision_shape :CollisionShape2D = $CollisionShape2D
 
-var initial_pos :Vector2
 var offset_x :int
+var initial_pos :Vector2
 var elapsed :float = 0
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	initial_pos = sprite.global_position
+	offset_x = 217
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -56,7 +57,8 @@ func modulate_color(score_ratio :float):
 	sprite.modulate = gradient.gradient.sample(score_ratio)
 
 
-func set_initial_pos(pos :Vector2, offset: int):
+func init(minigame_res :MinigameAnimRes, pos :Vector2, offset: int):
+	minigame_anim_res = minigame_res
 	initial_pos = pos
 	offset_x = offset
 	position = pos

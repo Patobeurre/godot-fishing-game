@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dg7rnbgb0n7dq"]
+[gd_scene load_steps=5 format=3 uid="uid://dg7rnbgb0n7dq"]
 
 [ext_resource type="Texture2D" uid="uid://dv6mohrvqtin0" path="res://sprites/fishing_game_bar.png" id="1_6ajvj"]
 [ext_resource type="Script" path="res://scripts/test_minigame_bar.gd" id="1_8pvwl"]
-[ext_resource type="Resource" uid="uid://55fn1h8n1yfn" path="res://scripts/Resources/MiniGame/MiniGameAnim/test_anim.tres" id="2_xgybl"]
 [ext_resource type="Texture2D" uid="uid://dl5d4i35uf8j5" path="res://materials/minigame_bar_gradient.tres" id="3_2ip4s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xoi5p"]
@@ -11,7 +10,6 @@ size = Vector2(37, 38)
 [node name="Area2D" type="Area2D"]
 collision_mask = 256
 script = ExtResource("1_8pvwl")
-minigame_anim_res = ExtResource("2_xgybl")
 gradient = ExtResource("3_2ip4s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

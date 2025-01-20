@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="MinigameAnimRes" load_steps=6 format=3 uid="uid://c73bx0k0oxtwx"]
+
+[ext_resource type="Script" path="res://scripts/Resources/MiniGame/MiniGameAnim/minigame_anim_res.gd" id="1_c4ts1"]
+
+[sub_resource type="Curve" id="Curve_n84ic"]
+min_value = -100.0
+max_value = 100.0
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(0.1, -30), 0.0, 0.0, 0, 0, Vector2(0.15, -30), 0.0, 0.0, 0, 0, Vector2(0.25, -60), 0.0, 0.0, 0, 0, Vector2(0.29, -60), 0.0, 0.0, 0, 0, Vector2(0.4, -100), 0.0, 0.0, 0, 0, Vector2(0.45, -100), 0.0, 0.0, 0, 0, Vector2(0.5, 0), 0.0, 0.0, 0, 0, Vector2(0.55, 100), 0.0, 0.0, 0, 0, Vector2(0.6, 100), 0.0, 0.0, 0, 0, Vector2(0.7, 60), 0.0, 0.0, 0, 0, Vector2(0.75, 60), 0.0, 0.0, 0, 0, Vector2(0.85, 30), 0.0, 0.0, 0, 0, Vector2(0.9, 30), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 15
+
+[sub_resource type="CurveTexture" id="CurveTexture_pt08q"]
+curve = SubResource("Curve_n84ic")
+
+[sub_resource type="Curve" id="Curve_kqbnf"]
+min_value = 40.0
+max_value = 200.0
+_data = [Vector2(0, 120), 0.0, 0.0, 0, 0, Vector2(0.1, 60), 0.0, 0.0, 0, 0, Vector2(0.15, 120), 0.0, 0.0, 0, 0, Vector2(0.25, 60), 0.0, 0.0, 0, 0, Vector2(0.3, 120), 0.0, 0.0, 0, 0, Vector2(0.4, 60), 0.0, 0.0, 0, 0, Vector2(0.45, 120), 0.0, 0.0, 0, 0, Vector2(0.55, 60), 0.0, 0.0, 0, 0, Vector2(0.6, 120), 0.0, 0.0, 0, 0, Vector2(0.7, 60), 0.0, 0.0, 0, 0, Vector2(0.75, 120), 0.0, 0.0, 0, 0, Vector2(0.85, 60), 0.0, 0.0, 0, 0, Vector2(0.9, 120), 0.0, 0.0, 0, 0, Vector2(1, 40), 0.0, 0.0, 0, 0]
+point_count = 14
+
+[sub_resource type="CurveTexture" id="CurveTexture_r1vm1"]
+curve = SubResource("Curve_kqbnf")
+
+[resource]
+script = ExtResource("1_c4ts1")
+sizeX = SubResource("CurveTexture_r1vm1")
+positionX = SubResource("CurveTexture_pt08q")
+speed = 8.0

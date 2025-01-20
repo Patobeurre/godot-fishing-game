@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dryr282rxffgl"]
+
+[ext_resource type="PackedScene" uid="uid://rmeelmp0qf87" path="res://models/Catchables/bone.glb" id="1_o22mx"]
+
+[node name="Bone" type="Node3D"]
+
+[node name="bone" parent="." instance=ExtResource("1_o22mx")]
+transform = Transform3D(0.114715, 0.141881, 0.0819152, 0, 0.1, -0.173205, -0.16383, 0.0993464, 0.0573576, 0, 0, 0)

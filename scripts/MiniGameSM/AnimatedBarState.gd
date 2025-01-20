@@ -47,8 +47,9 @@ func on_process(delta):
 func spawn_bar():
 	bar = bar_scene.instantiate()
 	controller.bars.add_child(bar)
-	bar.set_initial_pos(controller.bar_container.global_position, \
-	controller.bar_container.global_position.x - controller.min_cursor_pos)
+	bar.init(controller.catchable.minigame_res, \
+		controller.bar_container.global_position, \
+		controller.bar_container.global_position.x - controller.min_cursor_pos)
 
 
 func check_win():

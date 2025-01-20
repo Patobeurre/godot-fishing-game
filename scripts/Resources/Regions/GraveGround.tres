@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RegionRes" load_steps=2 format=3 uid="uid://btlaghw8pufur"]
+
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="1_vssil"]
+
+[resource]
+script = ExtResource("1_vssil")
+name = "FA_GRAVESTONE"
+color = Color(1, 1, 1, 1)
