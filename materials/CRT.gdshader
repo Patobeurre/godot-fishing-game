@@ -33,10 +33,10 @@ void fragment()
     col.g += 0.05*texture(screen_texture,0.75*vec2(x+-0.022, -0.02)+vec2(uv.x+0.000,uv.y-0.002)).y;
     col.b += 0.08*texture(screen_texture,0.75*vec2(x+-0.02, -0.018)+vec2(uv.x-0.002,uv.y+0.000)).z;
 
-    col = clamp(col*0.6+0.4*col*col*1.0,0.0,1.0);
+    col = clamp(col*0.6+0.6*col*col*1.0,0.0,1.0);
 
     float vig = (0.0 + 1.0*16.0*uv.x*uv.y*(1.0-uv.x)*(1.0-uv.y));
-	col *= vec3(pow(vig,0.3));
+	col *= vec3(pow(vig,0.25));
 
     col *= vec3(0.95,1.05,0.95);
 /*	col *= 2.8;

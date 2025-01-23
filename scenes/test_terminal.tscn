@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://6eipmys83e51"]
+[gd_scene load_steps=14 format=3 uid="uid://6eipmys83e51"]
 
 [ext_resource type="PackedScene" uid="uid://632hi1oildxm" path="res://scenes/Tile_center_scene.tscn" id="2_jahn7"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_oktt4"]
 [ext_resource type="Resource" uid="uid://c56y8pqoyk15f" path="res://weapons/blaster.tres" id="3_f8jux"]
+[ext_resource type="Script" path="res://scripts/weapon.gd" id="4_2dvok"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="4_dmln6"]
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="5_75hy6"]
 [ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="6_oc5p1"]
@@ -23,10 +24,9 @@ script = ExtResource("9_i0yod")
 
 [node name="TileCenterScene" parent="." instance=ExtResource("2_jahn7")]
 
-[node name="Player" parent="." node_paths=PackedStringArray("crosshair") instance=ExtResource("2_oktt4")]
+[node name="Player" parent="." instance=ExtResource("2_oktt4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158282, 4.32978, -0.509748)
-weapons = Array[Resource("res://scripts/weapon.gd")]([ExtResource("3_f8jux")])
-crosshair = NodePath("../HUD/Crosshair")
+weapons = Array[ExtResource("4_2dvok")]([ExtResource("3_f8jux")])
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource("4_dmln6")
