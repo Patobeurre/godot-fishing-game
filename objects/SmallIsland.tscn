@@ -117,4 +117,5 @@ transform = Transform3D(-1.2, 0, -1.04907e-07, 0, 1.2, 0, 1.04907e-07, 0, -1.2, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.40073, 0.606026)
 light_color = Color(1, 0.721843, 0.672512, 1)
 light_energy = 3.0
+light_specular = 0.0
 omni_range = 30.0

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmh3ov87aomtj"]
+
+[ext_resource type="PackedScene" uid="uid://dyetmm1q103hh" path="res://models/Catchables/amethyst_shard.glb" id="1_r4gky"]
+
+[node name="amethyst_shard" instance=ExtResource("1_r4gky")]
+
+[node name="shard" parent="." index="0"]
+transform = Transform3D(0.0229497, -0.00517509, 0.0186153, 0, 0.0289039, 0.00803531, -0.0193213, -0.00614693, 0.0221111, 0, -0.0852891, 0)

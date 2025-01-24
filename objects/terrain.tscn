@@ -1,10 +1,11 @@
-[gd_scene load_steps=46 format=3 uid="uid://d3avs62j1llal"]
+[gd_scene load_steps=47 format=3 uid="uid://d3avs62j1llal"]
 
 [ext_resource type="PackedScene" uid="uid://cpx30mt3jhyyr" path="res://models/Islands/terrain.glb" id="1_bt7gf"]
 [ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_gkuk2"]
 [ext_resource type="Resource" uid="uid://dsda8e73plwii" path="res://scripts/Resources/FishingAreas/island.tres" id="3_p6has"]
 [ext_resource type="Resource" uid="uid://c0g2s4k12jfwj" path="res://scripts/Resources/FishingAreas/beach.tres" id="4_6xb7w"]
 [ext_resource type="Resource" uid="uid://ckkxmebbhktu3" path="res://scripts/Resources/FishingAreas/reef.tres" id="4_rxx25"]
+[ext_resource type="PackedScene" uid="uid://dwlah6nb2rrxi" path="res://objects/Decorations/amethyst.tscn" id="5_ypi87"]
 [ext_resource type="Resource" uid="uid://cene322p62g3o" path="res://scripts/Resources/FishingAreas/swamp.tres" id="6_lfy6b"]
 [ext_resource type="Resource" uid="uid://csju71d6rfls" path="res://scripts/Resources/FishingAreas/island_A_water.tres" id="7_iw8m0"]
 [ext_resource type="Resource" uid="uid://b4lci13yv4xnb" path="res://scripts/Resources/FishingAreas/flowers.tres" id="7_xn0m2"]
@@ -143,6 +144,18 @@ transform = Transform3D(1.28, 0, -1.91028, 0, 2.74645, 0, 1.91028, 0, 1.28, 4.03
 
 [node name="cliff_simple_011" parent="." index="5"]
 transform = Transform3D(3.1801, 0, 1.90004, 0, 5.94256, 0, -1.90004, 0, 3.1801, 5.1483, -0.779858, -0.0820961)
+
+[node name="CaveLakeDecorations" type="Node3D" parent="cliff_simple_011" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0235908, 0.321704, -0.171327)
+
+[node name="Amethyst" parent="cliff_simple_011/CaveLakeDecorations" index="0" instance=ExtResource("5_ypi87")]
+transform = Transform3D(-0.171841, -0.0523372, -0.190503, -0.0916258, 0.157284, -0.028545, 0.186935, 0.0289812, -0.189112, 0.192099, -0.0286438, 0.0345786)
+
+[node name="Amethyst2" parent="cliff_simple_011/CaveLakeDecorations" index="1" instance=ExtResource("5_ypi87")]
+transform = Transform3D(-0.132649, -0.0556864, 0.19193, 0.00354441, 0.139786, 0.107958, -0.211876, 0.037202, -0.118355, 0.197719, -0.032878, 0.0820888)
+
+[node name="Amethyst3" parent="cliff_simple_011/CaveLakeDecorations" index="2" instance=ExtResource("5_ypi87")]
+transform = Transform3D(-0.0980712, 0.0533297, -0.236501, 0.243359, 0.0600558, -0.0660665, 0.0634662, -0.147874, -0.112124, -0.124254, -0.0179372, 0.30615)
 
 [node name="island_boundaries" parent="." index="6"]
 visible = false

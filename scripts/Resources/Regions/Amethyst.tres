@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RegionRes" load_steps=2 format=3 uid="uid://3ynda0fb5uq2"]
+
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="1_bphdh"]
+
+[resource]
+script = ExtResource("1_bphdh")
+name = "FA_AMETHYST"
+color = Color(0.862447, 0.499589, 0.965385, 1)

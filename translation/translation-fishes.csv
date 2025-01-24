@@ -155,6 +155,10 @@ F_ZOMBIEFISH_NAME;Poisson zombie;Zombie fish
 F_ZOMBIEFISH_DESCR;Il respire encore.;It’s still breathing.
 F_ZOMBIEFISH_IDENT_DESCR;;
 ;;
+F_JUMPINGFISH_NAME;Poisson sauteur;Jumping fish
+F_JUMPINGFISH_DECR;;
+F_JUMPINGFISH_IDENT_DESCR;;
+;;
 F_ANEMONE_NAME;Anemone;Anemone
 F_ANEMONE_DESCR;Peut servir de refuge pour certains poissons.;Can serve as a refuge for certain fish.
 ;;
@@ -226,3 +230,6 @@ F_PHASMA_DESCR;;
 ;;
 F_BONE_NAME;Os;Bone
 F_BONE_DESCR;;
+;;
+F_AMETHYSTSHARD_NAME;Morceau d’amethyste;Amethyst shard
+F_AMETHYSTSHARD_DESCR;;

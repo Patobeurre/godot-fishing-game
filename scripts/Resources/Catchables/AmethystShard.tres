@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://dt4amd4t2kcpj"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_c262h"]
+[ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="1_l3ykc"]
+[ext_resource type="Texture2D" uid="uid://cl44bb3ckr00w" path="res://sprites/Catchables/amethyst_shard.png" id="2_geaow"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="2_u1566"]
+[ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="4_1wf5e"]
+[ext_resource type="PackedScene" uid="uid://dmh3ov87aomtj" path="res://objects/Catchables/amethyst_shard.tscn" id="6_lrc3t"]
+
+[resource]
+script = ExtResource("1_c262h")
+id = 67
+name = "F_AMETHYSTSHARD_NAME"
+description = "F_AMETHYSTSHARD_DESCR"
+notification_text = ""
+category = ExtResource("1_l3ykc")
+tags = Array[int]([11])
+image = ExtResource("2_geaow")
+scene = ExtResource("6_lrc3t")
+rarity = 50
+price = 0
+regions = Array[ExtResource("2_u1566")]([])
+periods = Array[int]([0, 1, 2, 3])
+lures = Array[ExtResource("1_c262h")]([ExtResource("4_1wf5e")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([])
