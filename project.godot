@@ -46,10 +46,6 @@ MailManager="*res://scripts/Global/MailManager.gd"
 ProgressVariables="*res://scripts/Global/ProgressVariables.gd"
 BasketManager="*res://scripts/Global/BasketManager.gd"
 
-[debug]
-
-settings/stdout/print_fps=true
-
 [display]
 
 window/size/viewport_width=1920

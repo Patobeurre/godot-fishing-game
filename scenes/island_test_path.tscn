@@ -179,7 +179,6 @@ data = PackedVector3Array(-3.1014, 0, 2.6904, 3.4189, 0, 2.6904, 3.4189, 0, -0.0
 
 [sub_resource type="Resource" id="Resource_f88y3"]
 script = ExtResource("16_hbdwo")
-name = ""
 type = 0
 waiting_time = 0.01
 catchables = Array[ExtResource("11_rdjfq")]([])

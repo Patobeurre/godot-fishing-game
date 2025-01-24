@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://d3avs62j1llal"]
+[gd_scene load_steps=46 format=3 uid="uid://d3avs62j1llal"]
 
 [ext_resource type="PackedScene" uid="uid://cpx30mt3jhyyr" path="res://models/Islands/terrain.glb" id="1_bt7gf"]
 [ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_gkuk2"]
@@ -24,6 +24,7 @@
 [ext_resource type="Resource" uid="uid://bg5yivmx2fjd7" path="res://scripts/Resources/FishingAreas/shark_area.tres" id="15_2266b"]
 [ext_resource type="Resource" uid="uid://bxj0i587fl3c6" path="res://scripts/Resources/FishingAreas/cave_water.tres" id="18_qpcc6"]
 [ext_resource type="PackedScene" uid="uid://cd176ki4hkpqi" path="res://objects/Structures/bridge.tscn" id="18_xrsdk"]
+[ext_resource type="PackedScene" uid="uid://jexced442j3k" path="res://objects/jumping_fish_area.tscn" id="23_8dkbi"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wbddo"]
 points = PackedVector3Array(0.315716, 0.151648, -0.0393221, 0.315716, -0.199415, -0.0393221, 0.200669, 0.151648, -0.287214, 0.28768, 0.151648, 0.391324, 0.200669, -0.199415, -0.287214, 0.28768, -0.199415, 0.391324, -0.0608646, 0.151648, -0.573917, 0.203673, 0.151648, 0.554335, -0.0608646, -0.199415, -0.573917, 0.203673, -0.199415, 0.554335, -0.499324, 0.151648, -0.703854, 0.000713944, 0.151648, 0.708065, -0.499324, -0.199415, -0.703854, 0.000713944, -0.199415, 0.708065, -0.707189, 0.151648, -0.723935, -0.468585, 0.151648, 1, -0.707189, -0.199415, -0.723935, -0.468585, -0.199415, 1, -0.679053, 0.151648, 0.984981, -0.679053, -0.199415, 0.984981)
@@ -326,6 +327,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.33152)
 transform = Transform3D(-0.487187, 0, -0.112467, 0, 0.5, 0, 0.112467, 0, -0.487187, 0.346, 0, -11.5271)
 orbit_center_global = NodePath("..")
 fishTable = ExtResource("15_2266b")
+parent = NodePath("../../../StaticBody3D")
+
+[node name="jumpingfish_area" type="Node3D" parent="Water/WaterAreas" index="5"]
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 0, 0, 1)
+
+[node name="Area3D" parent="Water/WaterAreas/jumpingfish_area" index="0" node_paths=PackedStringArray("parent") instance=ExtResource("23_8dkbi")]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -10.0171, 0, 8.9407e-08)
 parent = NodePath("../../../StaticBody3D")
 
 [node name="CaveLake" type="StaticBody3D" parent="Water" index="4"]

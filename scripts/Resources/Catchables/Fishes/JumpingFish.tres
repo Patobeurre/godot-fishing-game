@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://cljeqb3r30d3k"]
+
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_oeorr"]
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_ys2ka"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="2_6qd38"]
+[ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="3_ykbdr"]
+[ext_resource type="PackedScene" uid="uid://ctmb0bsom34n3" path="res://objects/Catchables/Fishes/jumping_fish.tscn" id="5_jl0de"]
+[ext_resource type="Resource" uid="uid://8msj5pbhvtgo" path="res://scripts/Resources/Regions/Jumping.tres" id="5_u00ak"]
+
+[resource]
+script = ExtResource("1_oeorr")
+id = 66
+name = "F_JUMPINGFISH_NAME"
+description = "F_JUMPINGFISH_DESCR"
+notification_text = ""
+category = ExtResource("1_ys2ka")
+tags = Array[int]([0, 2])
+scene = ExtResource("5_jl0de")
+rarity = 50
+price = 10
+regions = Array[ExtResource("2_6qd38")]([ExtResource("5_u00ak")])
+periods = Array[int]([1])
+lures = Array[ExtResource("1_oeorr")]([ExtResource("3_ykbdr")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([4, 6])

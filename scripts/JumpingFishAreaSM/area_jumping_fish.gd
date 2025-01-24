@@ -2,17 +2,13 @@ extends CatchableArea
 class_name JumpingFishArea
 
 
-@export var radius :float = 2
+@export var radius :float = 1.0
 @export var scale_offset :float = 0.5
 @export var time_offset :float = 0.5
 
 @onready var jumpingfish_scene = preload("res://objects/Catchables/Fishes/jumping_fish.tscn")
 @onready var timer :Timer = $Timer
 
-#@onready var state_machine :FiniteStateMachine = $FiniteStateMachine
-#@onready var default_orbiting_state = $DefaultOrbitingState
-#@onready var catching_state = $CatchingState
-#@onready var retreive_position_state = $RetreivePositionState
 
 var body_entered :Node3D = null
 
@@ -23,7 +19,6 @@ var is_activated :bool = false
 func _ready():
 	SignalBus.savegame_loaded.connect(_on_savegame_loaded)
 	SignalBus.time_period_changed.connect(_on_time_period_changed)
-	#state_machine.set_current_state(default_orbiting_state)
 
 
 func get_fish_table():
@@ -39,7 +34,6 @@ func prepare():
 		return
 	
 	FishingManager.pick_catchable(fishTable)
-	#state_machine.set_current_state(catching_state)
 
 
 func _on_animation_finished(name :String):
@@ -55,7 +49,7 @@ func perform():
 		FishingManager.start_mini_game(FishingManager.picked_catchable)
 
 
-func on_finished(succeeded :bool):	
+func on_finished(succeeded :bool):
 	if subFishingAreaEntered != null:
 		subFishingAreaEntered.on_finished(succeeded)
 		return
@@ -93,6 +87,7 @@ func _get_random_time() -> float:
 func _spawn_fish():
 	var fish = jumpingfish_scene.instantiate()
 	add_child(fish)
+	fish.visible = false
 	fish.position = _get_random_position()
 	fish.scale = _get_random_scale()
 	fish.play_animation()
@@ -113,8 +108,10 @@ func _on_time_period_changed(period :TimePeriod.ETimePeriod):
 
 
 func _activate_area():
-	if is_activated: return
+	#if is_activated: return
+	get_parent_node_3d().global_rotation.y = deg_to_rad(randf()*360)
 	enable_collision(true)
+	timer.start()
 	is_activated = true
 
 
@@ -122,6 +119,7 @@ func _deactivate_area():
 	#state_machine.set_current_state(default_orbiting_state)
 	enable_collision(false)
 	if not is_activated: return
+	timer.stop()
 	is_activated = false
 
 

@@ -1,7 +1,7 @@
 extends Node3D
 
 
-@onready var animation_player := $AnimationPlayer
+@onready var animation_player := $fish/AnimationPlayer
 
 
 func _ready() -> void:
