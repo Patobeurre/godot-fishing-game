@@ -4,8 +4,8 @@
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_ys2ka"]
 [ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="2_6qd38"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="3_ykbdr"]
-[ext_resource type="PackedScene" uid="uid://ctmb0bsom34n3" path="res://objects/Catchables/Fishes/jumping_fish.tscn" id="5_jl0de"]
 [ext_resource type="Resource" uid="uid://8msj5pbhvtgo" path="res://scripts/Resources/Regions/Jumping.tres" id="5_u00ak"]
+[ext_resource type="PackedScene" uid="uid://ctmb0bsom34n3" path="res://objects/Catchables/Fishes/jumping_fish.tscn" id="6_1wj7p"]
 
 [resource]
 script = ExtResource("1_oeorr")
@@ -15,7 +15,7 @@ description = "F_JUMPINGFISH_DESCR"
 notification_text = ""
 category = ExtResource("1_ys2ka")
 tags = Array[int]([0, 2])
-scene = ExtResource("5_jl0de")
+scene = ExtResource("6_1wj7p")
 rarity = 50
 price = 10
 regions = Array[ExtResource("2_6qd38")]([ExtResource("5_u00ak")])
