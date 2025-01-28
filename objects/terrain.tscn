@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://d3avs62j1llal"]
+[gd_scene load_steps=41 format=3 uid="uid://d3avs62j1llal"]
 
 [ext_resource type="PackedScene" uid="uid://cpx30mt3jhyyr" path="res://models/Islands/terrain.glb" id="1_bt7gf"]
 [ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_gkuk2"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://bsnr85fbp84kw" path="res://objects/Decorations/stalactite_a.tscn" id="6_mirp5"]
 [ext_resource type="Resource" uid="uid://csju71d6rfls" path="res://scripts/Resources/FishingAreas/island_A_water.tres" id="7_iw8m0"]
 [ext_resource type="Resource" uid="uid://b4lci13yv4xnb" path="res://scripts/Resources/FishingAreas/flowers.tres" id="7_xn0m2"]
-[ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="8_0tx2o"]
 [ext_resource type="PackedScene" uid="uid://dlxfixcjsen0x" path="res://objects/Decorations/reeds.tscn" id="8_if4ae"]
 [ext_resource type="Script" path="res://scripts/chest_area.gd" id="9_hrdb2"]
 [ext_resource type="PackedScene" uid="uid://r03nc1e8rsjx" path="res://models/Islands/island_water_deep.tscn" id="9_ifom8"]
@@ -24,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://tx87nknr18ww" path="res://objects/chest.tscn" id="13_5o27c"]
 [ext_resource type="PackedScene" uid="uid://dqbthko1jthwh" path="res://objects/Decorations/shark_area.tscn" id="14_3g7qb"]
 [ext_resource type="Resource" uid="uid://bg5yivmx2fjd7" path="res://scripts/Resources/FishingAreas/shark_area.tres" id="15_2266b"]
+[ext_resource type="Material" uid="uid://cau55u8p1dgka" path="res://materials/water.tres" id="17_ffu61"]
 [ext_resource type="Resource" uid="uid://bxj0i587fl3c6" path="res://scripts/Resources/FishingAreas/cave_water.tres" id="18_qpcc6"]
 [ext_resource type="PackedScene" uid="uid://cd176ki4hkpqi" path="res://objects/Structures/bridge.tscn" id="18_xrsdk"]
 [ext_resource type="PackedScene" uid="uid://jexced442j3k" path="res://objects/jumping_fish_area.tscn" id="23_8dkbi"]
@@ -47,59 +47,6 @@ default_catchables = Array[ExtResource("11_bbipp")]([])
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_nh1jb"]
 height = 1.31576
 radius = 0.749134
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_gohsx"]
-noise_type = 3
-frequency = 0.001
-fractal_type = 2
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6irtd"]
-width = 1
-height = 1
-seamless = true
-as_normal_map = true
-noise = SubResource("FastNoiseLite_gohsx")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_404p0"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vukg6"]
-width = 1
-height = 1
-seamless = true
-as_normal_map = true
-noise = SubResource("FastNoiseLite_404p0")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_j4axq"]
-noise_type = 3
-frequency = 0.02
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5nj5m"]
-seamless = true
-noise = SubResource("FastNoiseLite_j4axq")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_g1cer"]
-render_priority = 0
-shader = ExtResource("8_0tx2o")
-shader_parameter/albedo = Color(2.40654e-07, 0.374318, 0.547378, 1)
-shader_parameter/albedo2 = Color(8.66354e-07, 0.324682, 0.532433, 1)
-shader_parameter/metallic = 0.0
-shader_parameter/roughness = 0.02
-shader_parameter/wave_direction = Vector2(2, 0)
-shader_parameter/wave_direction2 = Vector2(0, 1)
-shader_parameter/time_scale = 0.025
-shader_parameter/noise_scale = 10.0
-shader_parameter/height_scale = 0.15
-shader_parameter/color_deep = Color(0.000224289, 0.338479, 0.997562, 1)
-shader_parameter/color_shallow = Color(1.77121e-05, 0.836582, 0.980291, 1)
-shader_parameter/beers_law = 2.0
-shader_parameter/depth_offset = -0.75
-shader_parameter/edge_scale = 0.1
-shader_parameter/near = 1.0
-shader_parameter/far = 100.0
-shader_parameter/edge_color = Color(0.505344, 0.505344, 0.505344, 1)
-shader_parameter/wave = SubResource("NoiseTexture2D_5nj5m")
-shader_parameter/texture_normal = SubResource("NoiseTexture2D_6irtd")
-shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_vukg6")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aw46j"]
 
@@ -322,7 +269,7 @@ fishTable = ExtResource("7_iw8m0")
 
 [node name="WaterSurface" type="MeshInstance3D" parent="Water/StaticBody3D" index="0"]
 transform = Transform3D(0.596641, 0, 0, 0, 0.5, 0, 0, 0, 0.448938, 0, 0, 0)
-material_override = SubResource("ShaderMaterial_g1cer")
+material_override = ExtResource("17_ffu61")
 transparency = 0.1
 cast_shadow = 0
 mesh = SubResource("PlaneMesh_262th")
@@ -412,7 +359,7 @@ fishTable = ExtResource("18_qpcc6")
 
 [node name="WaterSurface" type="MeshInstance3D" parent="Water/CaveLake" index="0"]
 transform = Transform3D(0.596641, 0, 0, 0, 0.5, 0, 0, 0, 0.580084, 0, 0.0107977, -19.6298)
-material_override = SubResource("ShaderMaterial_g1cer")
+material_override = ExtResource("17_ffu61")
 transparency = 0.1
 cast_shadow = 0
 mesh = SubResource("PlaneMesh_262th")
