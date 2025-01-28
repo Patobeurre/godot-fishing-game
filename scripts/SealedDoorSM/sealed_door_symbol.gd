@@ -7,6 +7,10 @@ class_name RotatingSymbol
 @export var validation_angle :float = 0
 @export var angle_offset :float = 5
 
+@export_group("Boundaries")
+@export var min_angle :float = -360
+@export var max_angle :float = 360
+
 var parent_node
 var initial_rotation :Vector3
 var is_completed :bool = false
@@ -26,7 +30,9 @@ func lock_rotation(angle :float):
 
 
 func apply_rotation(angle :float):
-	parent_node.rotation.x = fmod(initial_rotation.x + angle * custom_modifier, deg_to_rad(360))
+	var new_angle = fmod(initial_rotation.x + angle * custom_modifier, deg_to_rad(360))
+	if new_angle > deg_to_rad(min_angle) and new_angle < deg_to_rad(max_angle):
+		parent_node.rotation.x = new_angle
 
 
 func set_completed(parent :Node3D):
@@ -36,7 +42,6 @@ func set_completed(parent :Node3D):
 
 func check_completion() -> bool:
 	var current_angle :int = rad_to_deg(parent_node.rotation.x)
-	print(current_angle)
 	
 	if range(validation_angle - angle_offset, validation_angle + angle_offset).has(current_angle):
 		is_completed = true

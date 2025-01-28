@@ -28,6 +28,10 @@ func check_variable(name :String, value) -> bool:
 	return stats.progress[name] == value
 
 
+func get_value(key :String) -> Variant:
+	return stats.progress[key]
+
+
 func set_stats(new_stats :ProgressVariablesStats):
 	stats = new_stats
 

@@ -11,4 +11,9 @@ class_name ProgressVariablesStats
 	"tetra_placed" : false,
 	"cube_placed" : false,
 	"sphere_placed" : false,
+	"radio_obtained" :false,
+	"electric_eel_obtained" :false,
+	
+	
+	"radio_angle" :0,
 }

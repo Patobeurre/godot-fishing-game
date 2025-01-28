@@ -18,7 +18,8 @@ func transition_camera(from :Camera3D, to :Camera3D, duration :float = 1.0):
 	camera_tmp.make_current()
 	
 	var tween = get_tree().create_tween().bind_node(camera_tmp).set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(camera_tmp, "global_transform", to.global_transform, duration)
+	tween.parallel().tween_property(camera_tmp, "global_transform", to.global_transform, duration)
+	tween.parallel().tween_property(camera_tmp, "fov", to.fov, duration)
 	tween.play()
 	
 	await tween.finished

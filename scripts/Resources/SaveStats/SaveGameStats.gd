@@ -11,6 +11,7 @@ const SAVE_GAME_PATH := "user://save"
 @export var progress_variables_stats :ProgressVariablesStats = ProgressVariablesStats.new()
 
 
+
 func write_savegame() -> void:
 	ResourceSaver.save(self, get_save_path())
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://d3avs62j1llal"]
+[gd_scene load_steps=48 format=3 uid="uid://d3avs62j1llal"]
 
 [ext_resource type="PackedScene" uid="uid://cpx30mt3jhyyr" path="res://models/Islands/terrain.glb" id="1_bt7gf"]
 [ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_gkuk2"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://ckkxmebbhktu3" path="res://scripts/Resources/FishingAreas/reef.tres" id="4_rxx25"]
 [ext_resource type="PackedScene" uid="uid://dwlah6nb2rrxi" path="res://objects/Decorations/amethyst.tscn" id="5_ypi87"]
 [ext_resource type="Resource" uid="uid://cene322p62g3o" path="res://scripts/Resources/FishingAreas/swamp.tres" id="6_lfy6b"]
+[ext_resource type="PackedScene" uid="uid://bsnr85fbp84kw" path="res://objects/Decorations/stalactite_a.tscn" id="6_mirp5"]
 [ext_resource type="Resource" uid="uid://csju71d6rfls" path="res://scripts/Resources/FishingAreas/island_A_water.tres" id="7_iw8m0"]
 [ext_resource type="Resource" uid="uid://b4lci13yv4xnb" path="res://scripts/Resources/FishingAreas/flowers.tres" id="7_xn0m2"]
 [ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="8_0tx2o"]
@@ -148,14 +149,67 @@ transform = Transform3D(3.1801, 0, 1.90004, 0, 5.94256, 0, -1.90004, 0, 3.1801, 
 [node name="CaveLakeDecorations" type="Node3D" parent="cliff_simple_011" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0235908, 0.321704, -0.171327)
 
-[node name="Amethyst" parent="cliff_simple_011/CaveLakeDecorations" index="0" instance=ExtResource("5_ypi87")]
+[node name="Node3D" type="Node3D" parent="cliff_simple_011/CaveLakeDecorations" index="0"]
+
+[node name="Amethyst" parent="cliff_simple_011/CaveLakeDecorations/Node3D" index="0" instance=ExtResource("5_ypi87")]
 transform = Transform3D(-0.171841, -0.0523372, -0.190503, -0.0916258, 0.157284, -0.028545, 0.186935, 0.0289812, -0.189112, 0.192099, -0.0286438, 0.0345786)
 
-[node name="Amethyst2" parent="cliff_simple_011/CaveLakeDecorations" index="1" instance=ExtResource("5_ypi87")]
+[node name="Amethyst2" parent="cliff_simple_011/CaveLakeDecorations/Node3D" index="1" instance=ExtResource("5_ypi87")]
 transform = Transform3D(-0.132649, -0.0556864, 0.19193, 0.00354441, 0.139786, 0.107958, -0.211876, 0.037202, -0.118355, 0.197719, -0.032878, 0.0820888)
 
-[node name="Amethyst3" parent="cliff_simple_011/CaveLakeDecorations" index="2" instance=ExtResource("5_ypi87")]
+[node name="Amethyst3" parent="cliff_simple_011/CaveLakeDecorations/Node3D" index="2" instance=ExtResource("5_ypi87")]
 transform = Transform3D(-0.0980712, 0.0533297, -0.236501, 0.243359, 0.0600558, -0.0660665, 0.0634662, -0.147874, -0.112124, -0.124254, -0.0179372, 0.30615)
+
+[node name="Amethyst4" parent="cliff_simple_011/CaveLakeDecorations/Node3D" index="3" instance=ExtResource("5_ypi87")]
+transform = Transform3D(-0.180785, 0.0483365, -0.0351973, 0.0685545, 0.0513578, -0.168638, -0.0511588, -0.10199, -0.1016, -0.14026, 0.0142238, 0.318373)
+
+[node name="Amethyst5" parent="cliff_simple_011/CaveLakeDecorations/Node3D" index="4" instance=ExtResource("5_ypi87")]
+transform = Transform3D(-0.186822, -0.0250556, 0.0588604, -0.0169776, 0.114883, 0.0733327, -0.0693503, 0.0393726, -0.176516, 0.107533, -0.00632855, -0.0913885)
+
+[node name="Stalactites" type="Node3D" parent="cliff_simple_011/CaveLakeDecorations" index="1"]
+
+[node name="up" type="Node3D" parent="cliff_simple_011/CaveLakeDecorations/Stalactites" index="0"]
+
+[node name="stalactite_A" parent="cliff_simple_011/CaveLakeDecorations/Stalactites/up" index="0" instance=ExtResource("6_mirp5")]
+transform = Transform3D(1.1, 0, -2.98023e-08, 0, 1.1, 0, 2.98023e-08, 0, 1.1, 0.111204, -0.0660984, 0.12094)
+
+[node name="stalactite_A2" parent="cliff_simple_011/CaveLakeDecorations/Stalactites/up" index="1" instance=ExtResource("6_mirp5")]
+transform = Transform3D(0.542388, 0, -1.3985, 0, 1.1, 0, 1.3985, 0, 0.542388, 0.131638, -0.045694, 0.174479)
+
+[node name="stalactite_A3" parent="cliff_simple_011/CaveLakeDecorations/Stalactites/up" index="2" instance=ExtResource("6_mirp5")]
+transform = Transform3D(0.127899, 0, 1.09254, 0, 0.5, 0, -1.09254, 0, 0.127899, 0.0729575, -0.0397105, 0.194607)
+
+[node name="stalactite_A4" parent="cliff_simple_011/CaveLakeDecorations/Stalactites/up" index="3" instance=ExtResource("6_mirp5")]
+transform = Transform3D(1.36532, 0, 0.621206, 0, 1.1, 0, -0.621206, 0, 1.36532, -0.223687, -0.0429577, 0.153473)
+
+[node name="stalactite_A5" parent="cliff_simple_011/CaveLakeDecorations/Stalactites/up" index="4" instance=ExtResource("6_mirp5")]
+transform = Transform3D(-0.80352, 0, 0.751237, 0, 0.5, 0, -0.751237, 0, -0.80352, -0.261806, -0.0397105, 0.114561)
+
+[node name="down" type="Node3D" parent="cliff_simple_011/CaveLakeDecorations/Stalactites" index="1"]
+
+[node name="stalactite_A" parent="cliff_simple_011/CaveLakeDecorations/Stalactites/down" index="0" instance=ExtResource("6_mirp5")]
+transform = Transform3D(0.521247, 4.93234e-08, 0.96866, -4.93234e-08, -1.1, 8.25526e-08, 0.96866, -8.25526e-08, -0.521247, -0.016094, 0.177605, 0.155602)
+
+[node name="stalactite_A2" parent="cliff_simple_011/CaveLakeDecorations/Stalactites/down" index="1" instance=ExtResource("6_mirp5")]
+transform = Transform3D(0.663405, -6.01033e-09, 1.23284, -2.11394e-07, -1.1, 1.05067e-07, 1.23284, -1.85382e-07, -0.663405, 0.000275016, 0.202878, 0.120426)
+
+[node name="stalactite_A5" parent="cliff_simple_011/CaveLakeDecorations/Stalactites/down" index="2" instance=ExtResource("6_mirp5")]
+transform = Transform3D(1.0423, -3.75239e-08, 0.351597, -9.39874e-08, -0.5, 2.03493e-08, 0.351597, -2.24197e-08, -1.0423, -0.246973, 0.142359, 0.143831)
+
+[node name="stalactite_A3" parent="cliff_simple_011/CaveLakeDecorations/Stalactites/down" index="3" instance=ExtResource("6_mirp5")]
+transform = Transform3D(0.663405, -6.01032e-09, 1.23284, -2.11394e-07, -1.1, 1.05067e-07, 1.23284, -1.85382e-07, -0.663405, -0.192641, 0.18196, 0.127564)
+
+[node name="stalactite_A4" parent="cliff_simple_011/CaveLakeDecorations/Stalactites/down" index="4" instance=ExtResource("6_mirp5")]
+transform = Transform3D(0.36203, -3.27835e-09, 0.672778, -1.15361e-07, -0.6, 5.73366e-08, 0.672778, -1.01117e-07, -0.36203, -0.200671, 0.170647, 0.165944)
+
+[node name="stalactite_A6" parent="cliff_simple_011/CaveLakeDecorations/Stalactites/down" index="5" instance=ExtResource("6_mirp5")]
+transform = Transform3D(-0.553227, 1.34913e-08, -0.950759, -9.39874e-08, -0.5, 2.03493e-08, -0.950759, 4.15773e-08, 0.553227, 0.00190771, 0.164066, -0.0474176)
+
+[node name="stalactite_A7" parent="cliff_simple_011/CaveLakeDecorations/Stalactites/down" index="6" instance=ExtResource("6_mirp5")]
+transform = Transform3D(0.267488, -1.00729e-07, -1.16981, -1.81195e-07, -0.943, 9.00574e-08, -1.16981, 1.23031e-07, -0.267488, -0.0497023, 0.175169, -0.0709347)
+
+[node name="stalactite_A8" parent="cliff_simple_011/CaveLakeDecorations/Stalactites/down" index="7" instance=ExtResource("6_mirp5")]
+transform = Transform3D(0.1703, -6.40905e-08, -0.744778, -1.15361e-07, -0.6, 5.73366e-08, -0.744778, 7.82809e-08, -0.1703, -0.018394, 0.178084, -0.0945416)
 
 [node name="island_boundaries" parent="." index="6"]
 visible = false
@@ -250,7 +304,7 @@ visible = false
 visible = false
 
 [node name="cave_lake_collision" parent="." index="13"]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 4.9433, 0.891382, -0.322394)
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 5.03923, 0.891382, -0.322394)
 visible = false
 
 [node name="shell" parent="." index="67"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsnr85fbp84kw"]
+
+[ext_resource type="PackedScene" uid="uid://djgi7dfraaa8a" path="res://models/Decorations/stalactite_A.glb" id="1_k1ltn"]
+
+[node name="stalactite_A" instance=ExtResource("1_k1ltn")]
+
+[node name="Cylinder_005" parent="." index="0"]
+transform = Transform3D(-0.00576315, -2.86958e-05, -0.0081722, -0.000332481, 0.00799412, 0.00019061, 0.00816551, 0.000305249, -0.00576011, 0, 0, 0)
