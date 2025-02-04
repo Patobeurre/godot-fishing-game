@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://dlkks82dwpwbt"]
+[gd_scene load_steps=71 format=3 uid="uid://dlkks82dwpwbt"]
 
 [ext_resource type="PackedScene" uid="uid://dpj1l8s865bid" path="res://models/Structures/aquarium.glb" id="1_ify1k"]
 [ext_resource type="Script" path="res://scripts/Aquarium/aquarium.gd" id="2_lv4tf"]
@@ -54,6 +54,8 @@
 [ext_resource type="Resource" uid="uid://crl02r3tu7cqn" path="res://scripts/Resources/Catchables/Fishes/Muskie.tres" id="46_7okg4"]
 [ext_resource type="Resource" uid="uid://6yh568jbps3l" path="res://scripts/Resources/Catchables/Fishes/ClownFish.tres" id="46_uu4h0"]
 [ext_resource type="PackedScene" uid="uid://dd0j7w4ovcvlw" path="res://objects/Catchables/seaweed.tscn" id="48_ckvyc"]
+[ext_resource type="PackedScene" uid="uid://b5rkan0b6422b" path="res://objects/Catchables/Fishes/sailfish.tscn" id="49_ev7qx"]
+[ext_resource type="Resource" uid="uid://b58c3eij4xuvh" path="res://scripts/Resources/Catchables/Fishes/Sailfish.tres" id="50_n8onp"]
 [ext_resource type="PackedScene" uid="uid://bv6df770xtu10" path="res://objects/Catchables/Fishes/hidden_fish_v2.tscn" id="51_w6eau"]
 [ext_resource type="Resource" uid="uid://lio1nhp8ucd2" path="res://scripts/Resources/Catchables/Fishes/HiddenFish.tres" id="52_kde51"]
 [ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="52_qfiu0"]
@@ -190,6 +192,12 @@ visible = false
 script = ExtResource("5_wlgjx")
 catchable = ExtResource("22_qk6o2")
 
+[node name="clown_fish" parent="Catchables/Anemone&Coral" index="2" instance=ExtResource("4_cp6n1")]
+transform = Transform3D(0.823404, 0, -0.567456, 0, 1, 0, 0.567456, 0, 0.823404, -0.180456, -0.128612, -0.456891)
+visible = false
+script = ExtResource("5_wlgjx")
+catchable = ExtResource("46_uu4h0")
+
 [node name="Crustacean" type="Node3D" parent="Catchables" index="3"]
 transform = Transform3D(0.968964, 0, -0.247202, 0, 1, 0, 0.247202, 0, 0.968964, 0.183274, 0, 0)
 script = ExtResource("2_mnper")
@@ -206,16 +214,16 @@ visible = false
 script = ExtResource("5_wlgjx")
 catchable = ExtResource("24_3ldmf")
 
-[node name="AttachToRock" type="Node3D" parent="Catchables" index="4"]
+[node name="AttachedToRock" type="Node3D" parent="Catchables" index="4"]
 script = ExtResource("2_mnper")
 
-[node name="true_mussels" parent="Catchables/AttachToRock" index="0" instance=ExtResource("13_7drh8")]
+[node name="true_mussels" parent="Catchables/AttachedToRock" index="0" instance=ExtResource("13_7drh8")]
 transform = Transform3D(0.682937, 0.1765, 0.970796, 0.269972, 1.10217, -0.390305, -0.949059, 0.440534, 0.587552, 0.00864032, -0.282134, 0.905881)
 visible = false
 script = ExtResource("5_wlgjx")
 catchable = ExtResource("26_4w2jx")
 
-[node name="sea_urchin" parent="Catchables/AttachToRock" index="1" instance=ExtResource("13_p561w")]
+[node name="sea_urchin" parent="Catchables/AttachedToRock" index="1" instance=ExtResource("13_p561w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0774499, -0.315896, 0.910822)
 visible = false
 script = ExtResource("5_wlgjx")
@@ -280,25 +288,21 @@ visible = false
 script = ExtResource("5_wlgjx")
 catchable = ExtResource("46_7okg4")
 
-[node name="Sole" type="Node3D" parent="Catchables" index="8"]
+[node name="Sole&Sailfish" type="Node3D" parent="Catchables" index="8"]
 script = ExtResource("2_mnper")
 
-[node name="sole" parent="Catchables/Sole" index="0" instance=ExtResource("15_2rai0")]
+[node name="sole" parent="Catchables/Sole&Sailfish" index="0" instance=ExtResource("15_2rai0")]
 transform = Transform3D(0.479233, 1.10936, -0.479233, -0.919239, -3.04422e-08, -0.919239, -0.784433, 0.677739, 0.784433, 0.131489, -0.419043, -0.735666)
 visible = false
 script = ExtResource("5_wlgjx")
 catchable = ExtResource("39_0elae")
 
-[node name="ClownFish" type="Node3D" parent="Catchables" index="9"]
-script = ExtResource("2_mnper")
-
-[node name="clown_fish" parent="Catchables/ClownFish" index="0" instance=ExtResource("4_cp6n1")]
-transform = Transform3D(0.823404, 0, -0.567456, 0, 1, 0, 0.567456, 0, 0.823404, -0.180456, -0.128612, -0.456891)
+[node name="Sailfish" parent="Catchables/Sole&Sailfish" index="1" instance=ExtResource("49_ev7qx")]
+transform = Transform3D(0.998398, 0, 0.0565882, 0, 1, 0, -0.0565882, 0, 0.998398, -0.173282, -0.273643, -0.914188)
 visible = false
-script = ExtResource("5_wlgjx")
-catchable = ExtResource("46_uu4h0")
+catchable = ExtResource("50_n8onp")
 
-[node name="HiddenFish" type="Node3D" parent="Catchables" index="10"]
+[node name="HiddenFish" type="Node3D" parent="Catchables" index="9"]
 script = ExtResource("2_mnper")
 
 [node name="hidden_fish2" parent="Catchables/HiddenFish" index="0" instance=ExtResource("51_w6eau")]
@@ -307,7 +311,7 @@ visible = false
 script = ExtResource("5_wlgjx")
 catchable = ExtResource("52_kde51")
 
-[node name="BeardFish" type="Node3D" parent="Catchables" index="11"]
+[node name="BeardFish" type="Node3D" parent="Catchables" index="10"]
 script = ExtResource("2_mnper")
 
 [node name="royal_beard_fish" parent="Catchables/BeardFish" index="0" instance=ExtResource("12_2f4jb")]
@@ -315,7 +319,7 @@ transform = Transform3D(-0.585269, 0, -0.810839, 0, 1, 0, 0.810839, 0, -0.585269
 visible = false
 script = ExtResource("5_wlgjx")
 
-[node name="Octopus" type="Node3D" parent="Catchables" index="12"]
+[node name="Octopus" type="Node3D" parent="Catchables" index="11"]
 script = ExtResource("2_mnper")
 
 [node name="octopus" parent="Catchables/Octopus" index="0" instance=ExtResource("11_7hh7t")]
@@ -323,7 +327,7 @@ transform = Transform3D(0.603914, 0, -1.03696, 0, 1.2, 0, 1.03696, 0, 0.603914, 
 visible = false
 script = ExtResource("5_wlgjx")
 
-[node name="RazorFish" type="Node3D" parent="Catchables" index="13"]
+[node name="RazorFish" type="Node3D" parent="Catchables" index="12"]
 script = ExtResource("2_mnper")
 
 [node name="razorfish" parent="Catchables/RazorFish" index="0" instance=ExtResource("55_ximse")]

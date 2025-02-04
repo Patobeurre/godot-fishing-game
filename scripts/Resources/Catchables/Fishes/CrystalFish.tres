@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=10 format=3 uid="uid://c4oknrpyr4xqj"]
+
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_3flsy"]
+[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_axy05"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="2_js7cc"]
+[ext_resource type="Texture2D" uid="uid://tfm54hufvrcw" path="res://sprites/Catchables/Fishes/crystalfish.png" id="2_rjkmp"]
+[ext_resource type="Resource" uid="uid://dt4amd4t2kcpj" path="res://scripts/Resources/Catchables/AmethystShard.tres" id="4_uc1pr"]
+[ext_resource type="Resource" uid="uid://4365mtuujlmb" path="res://scripts/Resources/Regions/CaveLake.tres" id="6_bj7rt"]
+[ext_resource type="PackedScene" uid="uid://g4spib10g3sd" path="res://objects/Catchables/Fishes/crystal_fish.tscn" id="7_0xqbf"]
+[ext_resource type="Resource" uid="uid://dtv2pu6qgth1j" path="res://scripts/Resources/Regions/River.tres" id="7_cv0jv"]
+[ext_resource type="Texture2D" uid="uid://bk6pt0nsdgob0" path="res://sprites/Catchables/Fishes/crystalfish_shadow.png" id="8_w7tbu"]
+
+[resource]
+script = ExtResource("1_axy05")
+id = 69
+name = "F_CRYSTALFISH_NAME"
+description = "F_CRYSTALFISH_DESCR"
+notification_text = ""
+category = ExtResource("1_3flsy")
+tags = Array[int]([0, 1])
+image = ExtResource("2_rjkmp")
+shadow = ExtResource("8_w7tbu")
+scene = ExtResource("7_0xqbf")
+rarity = 15
+price = 56
+regions = Array[ExtResource("2_js7cc")]([ExtResource("6_bj7rt"), ExtResource("7_cv0jv")])
+periods = Array[int]([0, 1, 2, 3])
+lures = Array[ExtResource("1_axy05")]([ExtResource("4_uc1pr")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([])

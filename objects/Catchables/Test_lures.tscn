@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://d2cy4arr18ptt"]
+[gd_scene load_steps=65 format=3 uid="uid://d2cy4arr18ptt"]
 
 [ext_resource type="PackedScene" uid="uid://dmyqppx7y0tw7" path="res://objects/bobber.tscn" id="1_dkc2c"]
 [ext_resource type="PackedScene" uid="uid://0ontd173otm6" path="res://objects/Catchables/true_mussels.tscn" id="2_vjnp4"]
@@ -63,6 +63,7 @@
 [ext_resource type="PackedScene" uid="uid://u5qqpadj35jr" path="res://objects/Catchables/Fishes/zombie_fish.tscn" id="61_nn6lx"]
 [ext_resource type="PackedScene" uid="uid://dmh3ov87aomtj" path="res://objects/Catchables/amethyst_shard.tscn" id="62_tan8j"]
 [ext_resource type="PackedScene" uid="uid://bdxjeoupsawec" path="res://objects/Catchables/Fishes/electric_eel.tscn" id="63_i8uxi"]
+[ext_resource type="PackedScene" uid="uid://g4spib10g3sd" path="res://objects/Catchables/Fishes/crystal_fish.tscn" id="64_a43yk"]
 
 [node name="TestLures" type="Node3D"]
 
@@ -255,3 +256,6 @@ visible = false
 visible = false
 
 [node name="ElectricEel" parent="." instance=ExtResource("63_i8uxi")]
+visible = false
+
+[node name="CrystalFish" parent="." instance=ExtResource("64_a43yk")]

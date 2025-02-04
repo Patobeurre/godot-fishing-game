@@ -159,6 +159,10 @@ F_JUMPINGFISH_NAME;Poisson sauteur;Jumping fish
 F_JUMPINGFISH_DECR;;
 F_JUMPINGFISH_IDENT_DESCR;;
 ;;
+F_CRYSTALFISH_NAME;Poisson cristal;Crystal fish
+F_CRYSTALFISH_DESCR;Ses écailles sont recouvertes de cristaux d’améthyste. Difficile de savoir si ils font parti intégrante de son corps ou s’ils se sont plantés là par hasard.;His scales are covered with amethyst crystals. It's hard to know whether they are an integral part of his body or just happened to be there.
+F_CRYSTALFISH_IDENT_DESCR;;
+;;
 F_ANEMONE_NAME;Anemone;Anemone
 F_ANEMONE_DESCR;Peut servir de refuge pour certains poissons.;Can serve as a refuge for certain fish.
 ;;

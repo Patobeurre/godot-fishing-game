@@ -63,6 +63,11 @@ _subresources={
 "generate/physics": true,
 "physics/shape_type": 2
 },
+"PATH:deep_collision": {
+"physics/layer": 4096,
+"physics/mask": 256,
+"physics/shape_type": 2
+},
 "PATH:island_boundaries": {
 "generate/physics": true,
 "physics/layer": 4,
