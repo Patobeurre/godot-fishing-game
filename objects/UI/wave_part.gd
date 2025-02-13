@@ -7,6 +7,7 @@ class_name WavePart
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Sprite2D.visible = false
 	animation_player.play("grow")
 
 

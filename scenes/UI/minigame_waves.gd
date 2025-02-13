@@ -45,13 +45,13 @@ func _ready() -> void:
 
 func init(catchable :CatchableRes):
 	if catchable != null:
-		catchable_img.texture = catchable.shadow
+		catchable_img.texture = catchable.image
+		catchable_img.modulate = Color.from_hsv(0, 0, 0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
-	print(score)
 	if _check_game_finished():
 		return
 	

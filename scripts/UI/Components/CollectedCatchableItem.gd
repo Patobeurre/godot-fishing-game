@@ -46,7 +46,8 @@ func update():
 
 
 func update_shadow():
-	image.texture = collected_catchable.catchable.shadow
+	image.texture = collected_catchable.catchable.image
+	image.modulate = Color.from_hsv(0, 0, 0)
 	name_label.text = "???"
 	description.text = "???"
 	rarity.text = ""
