@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://do2145b2aiegn"]
+
+[ext_resource type="Script" path="res://scenes/UI/minigame_spikes.gd" id="1_2ayay"]
+[ext_resource type="Texture2D" uid="uid://b5fi7vkkdvuoc" path="res://sprites/UI/Minigame/round_container.png" id="2_egxwl"]
+[ext_resource type="Texture2D" uid="uid://cwvl37r0okmxa" path="res://sprites/fishing_game_cursor.png" id="3_l8u3b"]
+[ext_resource type="Texture2D" uid="uid://bagbb478adkk3" path="res://sprites/Catchables/Fishes/pilchard_shadow.png" id="4_q5676"]
+[ext_resource type="Texture2D" uid="uid://dv6mohrvqtin0" path="res://sprites/fishing_game_bar.png" id="5_edr7t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0003"]
+size = Vector2(28, 16)
+
+[node name="MinigameWaves" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2ayay")
+cooldown = 3.0
+
+[node name="CursorContainer" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.509804)
+position = Vector2(947, 518)
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("2_egxwl")
+
+[node name="Spikes" type="Node2D" parent="."]
+
+[node name="Cursor" type="Node2D" parent="."]
+position = Vector2(947, 518)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cursor"]
+position = Vector2(250, 0)
+rotation = 1.5708
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_l8u3b")
+
+[node name="Area2D" type="Area2D" parent="Cursor"]
+collision_layer = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cursor/Area2D"]
+position = Vector2(237, 0)
+shape = SubResource("RectangleShape2D_f0003")
+
+[node name="Cooldown" type="Timer" parent="."]
+autostart = true
+
+[node name="CatchableImg" type="Sprite2D" parent="."]
+position = Vector2(947, 518)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_q5676")
+
+[node name="TimebarNode" type="Node2D" parent="."]
+
+[node name="BackgroundTimebar" type="Sprite2D" parent="TimebarNode"]
+modulate = Color(0, 0, 0, 0.509804)
+scale = Vector2(16, 1)
+texture = ExtResource("5_edr7t")
+region_enabled = true
+region_rect = Rect2(20, 10, 30, 20)
+
+[node name="Timebar" type="Sprite2D" parent="TimebarNode"]
+texture = ExtResource("5_edr7t")
+region_enabled = true
+region_rect = Rect2(20, 10, 30, 20)
+
+[node name="Timer" type="Timer" parent="TimebarNode"]
+
+[connection signal="area_entered" from="Cursor/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Cursor/Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_timer_timeout"]
