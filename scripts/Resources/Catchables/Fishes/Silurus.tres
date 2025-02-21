@@ -1,11 +1,10 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://d0owple0opvxl"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://d0owple0opvxl"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_dao18"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_yy7r6"]
 [ext_resource type="Texture2D" uid="uid://ctjospdiria5" path="res://sprites/Catchables/Fishes/silurus.png" id="2_0jmi3"]
 [ext_resource type="PackedScene" uid="uid://dgqrd87hyuj4l" path="res://objects/Catchables/Fishes/silurus.tscn" id="4_3r6hh"]
 [ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="4_5moy5"]
-[ext_resource type="Texture2D" uid="uid://c7vc3qwer7pjb" path="res://sprites/Catchables/Fishes/silurus_shadow.png" id="5_5eylh"]
 [ext_resource type="Resource" uid="uid://dtv2pu6qgth1j" path="res://scripts/Resources/Regions/River.tres" id="5_jlw1v"]
 
 [resource]
@@ -17,7 +16,6 @@ notification_text = ""
 category = ExtResource("1_dao18")
 tags = Array[int]([0, 3])
 image = ExtResource("2_0jmi3")
-shadow = ExtResource("5_5eylh")
 scene = ExtResource("4_3r6hh")
 rarity = 30
 price = 0

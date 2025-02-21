@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=10 format=3 uid="uid://d2eanu31fp0x0"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://d2eanu31fp0x0"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_dxu1y"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_fw1px"]
@@ -6,7 +6,6 @@
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="2_6pidu"]
 [ext_resource type="PackedScene" uid="uid://byxixi66f0aen" path="res://objects/Catchables/Fishes/commonfish.tscn" id="5_1gn0u"]
 [ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_no88b"]
-[ext_resource type="Texture2D" uid="uid://cvqqsj4cksu5y" path="res://sprites/Catchables/Fishes/commonfish_shadow.png" id="6_3k1ym"]
 [ext_resource type="Resource" uid="uid://dwijteaf2p6at" path="res://scripts/Resources/Regions/Coast.tres" id="6_jes6v"]
 [ext_resource type="Resource" uid="uid://dtv2pu6qgth1j" path="res://scripts/Resources/Regions/River.tres" id="7_r5xvi"]
 
@@ -19,7 +18,6 @@ notification_text = ""
 category = ExtResource("1_fw1px")
 tags = Array[int]([0, 1])
 image = ExtResource("1_xgro6")
-shadow = ExtResource("6_3k1ym")
 scene = ExtResource("5_1gn0u")
 rarity = 50
 price = 10

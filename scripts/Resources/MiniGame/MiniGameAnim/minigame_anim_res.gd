@@ -1,4 +1,4 @@
-extends Resource
+extends MiniGameGenericRes
 class_name MinigameAnimRes
 
 

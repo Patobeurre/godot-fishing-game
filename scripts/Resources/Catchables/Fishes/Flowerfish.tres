@@ -1,11 +1,10 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=11 format=3 uid="uid://d0s8hb0tdrawb"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=10 format=3 uid="uid://d0s8hb0tdrawb"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_3l6y5"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_q3mey"]
 [ext_resource type="Texture2D" uid="uid://bfbruvu36phlf" path="res://sprites/Catchables/Fishes/flowerfish.png" id="2_t2rwe"]
 [ext_resource type="PackedScene" uid="uid://drhkafcvf1r6s" path="res://objects/Catchables/Fishes/flowerfish.tscn" id="4_l4ou4"]
 [ext_resource type="Resource" uid="uid://clpf0htwtcdc4" path="res://scripts/Resources/Catchables/Insects/Bee.tres" id="5_1etmf"]
-[ext_resource type="Texture2D" uid="uid://cw7tkkxb1pgmj" path="res://sprites/Catchables/Fishes/flowerfish_shadow.png" id="5_fchr0"]
 [ext_resource type="Resource" uid="uid://dcpvdafn7juyp" path="res://scripts/Resources/Catchables/Insects/Butterfly.tres" id="6_ff8pw"]
 [ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="6_ty2uy"]
 [ext_resource type="Resource" uid="uid://dtv2pu6qgth1j" path="res://scripts/Resources/Regions/River.tres" id="7_w4emd"]
@@ -20,7 +19,6 @@ notification_text = ""
 category = ExtResource("1_3l6y5")
 tags = Array[int]([0, 1, 10])
 image = ExtResource("2_t2rwe")
-shadow = ExtResource("5_fchr0")
 scene = ExtResource("4_l4ou4")
 rarity = 15
 price = 86

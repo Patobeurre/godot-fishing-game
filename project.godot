@@ -237,6 +237,8 @@ rendering/text_driver="ICU / HarfBuzz / Graphite (Built-in)"
 
 common/physics_ticks_per_second=120
 3d/physics_engine="JoltPhysics3D"
+jolt_3d/collisions/areas_detect_static_bodies=true
+jolt_3d/continuous_cd/max_penetration=10.0
 
 [rendering]
 
@@ -244,6 +246,7 @@ renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 shading/overrides/force_lambert_over_burley=true
 anti_aliasing/screen_space_roughness_limiter/enabled=false
+anti_aliasing/quality/msaa_2d=2
 occlusion_culling/use_occlusion_culling=true
 mesh_lod/lod_change/threshold_pixels=3.0
 

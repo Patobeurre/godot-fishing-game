@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://c0nhg67lt4noa"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://c0nhg67lt4noa"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_gds6l"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_ra0br"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cuuyabi06oael" path="res://objects/Catchables/Fishes/whale.tscn" id="3_a4548"]
 [ext_resource type="Resource" uid="uid://duoe66f700yxp" path="res://scripts/Resources/Catchables/Fishes/JellyFishTiny.tres" id="3_jg6ww"]
 [ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_4a3l2"]
-[ext_resource type="Texture2D" uid="uid://dwq47yq0srv1i" path="res://sprites/Catchables/Fishes/whale_shadow.png" id="6_gyv5m"]
 [ext_resource type="Resource" uid="uid://b16jgklq2bpkk" path="res://scripts/Resources/Regions/Deep.tres" id="6_qg8hq"]
 
 [resource]
@@ -18,7 +17,6 @@ notification_text = ""
 category = ExtResource("1_gds6l")
 tags = Array[int]([0, 3])
 image = ExtResource("2_hcrov")
-shadow = ExtResource("6_gyv5m")
 scene = ExtResource("3_a4548")
 rarity = 15
 price = 145

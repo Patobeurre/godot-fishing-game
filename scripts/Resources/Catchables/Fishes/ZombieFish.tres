@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://l6ty2sg0k6wr"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://l6ty2sg0k6wr"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_qp0pe"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_yrd7e"]
@@ -7,7 +7,6 @@
 [ext_resource type="Resource" uid="uid://dl33kwjn4h4ug" path="res://scripts/Resources/Catchables/Bone.tres" id="4_378p4"]
 [ext_resource type="Resource" uid="uid://5hdu1q8j5531" path="res://scripts/Resources/Regions/Swamp.tres" id="6_y1ejp"]
 [ext_resource type="PackedScene" uid="uid://u5qqpadj35jr" path="res://objects/Catchables/Fishes/zombie_fish.tscn" id="7_1p8ax"]
-[ext_resource type="Texture2D" uid="uid://bkk861lu8w6nv" path="res://sprites/Catchables/Fishes/zombiefish_shadow.png" id="8_hbwui"]
 
 [resource]
 script = ExtResource("1_qp0pe")
@@ -18,7 +17,6 @@ notification_text = ""
 category = ExtResource("1_yrd7e")
 tags = Array[int]([0, 2])
 image = ExtResource("2_a3j7k")
-shadow = ExtResource("8_hbwui")
 scene = ExtResource("7_1p8ax")
 rarity = 15
 price = 1

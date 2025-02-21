@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://c1af81d13ra1f"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://c1af81d13ra1f"]
 
 [ext_resource type="Texture2D" uid="uid://ktitycs2xjbd" path="res://sprites/Catchables/Fishes/eel.png" id="1_bct5f"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_dlws0"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bnfmmuc36bstu" path="res://objects/Catchables/Fishes/eel.tscn" id="3_tksdn"]
 [ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_mrh3q"]
 [ext_resource type="Resource" uid="uid://dkhuqkephtd2b" path="res://scripts/Resources/Regions/Reef.tres" id="6_dflvm"]
-[ext_resource type="Texture2D" uid="uid://bshv4iih1opr1" path="res://sprites/Catchables/Fishes/eel_shadow.png" id="6_h1d58"]
 
 [resource]
 script = ExtResource("1_dlws0")
@@ -18,7 +17,6 @@ notification_text = ""
 category = ExtResource("1_lq6ae")
 tags = Array[int]([0, 2])
 image = ExtResource("1_bct5f")
-shadow = ExtResource("6_h1d58")
 scene = ExtResource("3_tksdn")
 rarity = 30
 price = 17

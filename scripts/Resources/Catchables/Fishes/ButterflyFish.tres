@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://cg3ciblr8e33k"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://cg3ciblr8e33k"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_4vgie"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_e1i0h"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_1dgg2"]
 [ext_resource type="PackedScene" uid="uid://dp8o18ss2dhn5" path="res://objects/Catchables/Fishes/butterfly_fish.tscn" id="5_w6221"]
 [ext_resource type="Resource" uid="uid://dwijteaf2p6at" path="res://scripts/Resources/Regions/Coast.tres" id="6_m5kug"]
-[ext_resource type="Texture2D" uid="uid://dcsxepah5xagv" path="res://sprites/Catchables/Fishes/butterflyfish_shadow.png" id="6_n4nyf"]
 
 [resource]
 script = ExtResource("1_4vgie")
@@ -18,7 +17,6 @@ notification_text = ""
 category = ExtResource("1_e1i0h")
 tags = Array[int]([0, 1])
 image = ExtResource("2_2ejat")
-shadow = ExtResource("6_n4nyf")
 scene = ExtResource("5_w6221")
 rarity = 30
 price = 68

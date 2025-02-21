@@ -104,10 +104,11 @@ func spawn_wave_part() -> void:
 	for i in range(15):
 		if indices.has(i):
 			continue
-		var obj = wave_part_scene.instantiate()
+		var obj :WavePart = wave_part_scene.instantiate()
 		wave_node.add_child(obj)
 		obj.global_position = wave_node.global_position
 		obj.rotation = deg_to_rad(i*24)
+		obj.play_grow_anim()
 	
 
 

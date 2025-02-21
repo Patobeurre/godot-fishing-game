@@ -24,9 +24,8 @@ enum ELureTag {
 @export var category: CategoryRes
 @export var tags: Array[ELureTag]
 @export var image: Texture2D
-@export var shadow: Texture2D
 @export var scene: PackedScene
-@export var minigame_res: MinigameAnimRes
+@export var minigame_res: MiniGameGenericRes
 @export var rarity: Rarity.ERarity
 @export var price: int
 @export var regions: Array[RegionRes]

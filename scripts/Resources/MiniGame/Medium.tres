@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="MiniGameRes" load_steps=2 format=3 uid="uid://0x72inthev6l"]
 
-[ext_resource type="Script" path="res://scripts/Resources/MiniGame/mini_game_res.gd" id="1_rmm6a"]
+[ext_resource type="Script" path="res://scripts/Resources/MiniGame/minigame_difficulty_res.gd" id="1_jnx4v"]
 
 [resource]
-script = ExtResource("1_rmm6a")
+script = ExtResource("1_jnx4v")
 max_score = 100.0
 acceleration_rate = 20.0
 deceleration_rate = 20.0

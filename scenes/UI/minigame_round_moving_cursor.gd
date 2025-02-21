@@ -1,7 +1,7 @@
 extends Control
-class_name MiniGameSpikes
+class_name MiniGameRoundMovingCursor
 
-@onready var spikes_node = $Spikes
+@onready var bars_node = $Bars
 @onready var cursor = $Cursor
 @onready var container = $CursorContainer
 @onready var timebar_node = $TimebarNode
@@ -10,21 +10,23 @@ class_name MiniGameSpikes
 @onready var timer_main = $TimebarNode/Timer
 @onready var catchable_img = $CatchableImg
 
-@onready var spike_scene = preload("res://objects/UI/spike.tscn")
+@onready var wave_part_scene = preload("res://objects/UI/wave_part.tscn")
 
-@export var cooldown :float = 2.0
+@export var cooldown :float = 2
+@export var cursor_speed :float = 2
 
 var width :float
 var height :float
 
 var score :float = 1
 var score_max :float = 100
-var score_step :float = 5
+var score_step :float = 10
 var score_fail_value :float = -30
 var is_win :bool = false
-var cursor_collision_enabled :bool = true
 
-var rotation_speed :float = 20
+var nb_bar_spawn :int = 3
+var is_cursor_inside_area = false
+var colliding_bar = null
 
 
 # Called when the node enters the scene tree for the first time.
@@ -33,7 +35,7 @@ func _ready() -> void:
 	height = size.y
 	
 	cursor.global_position = Vector2(width / 2, height / 2)
-	spikes_node.global_position = Vector2(width / 2, height / 2)
+	bars_node.global_position = Vector2(width / 2, height / 2)
 	catchable_img.global_position = Vector2(width / 2, height / 2)
 	container.global_position = Vector2(width / 2, height / 2)
 	timebar_node.global_position = Vector2(width / 2, 5*height / 6)
@@ -42,6 +44,10 @@ func _ready() -> void:
 	
 	timer_interval.start(cooldown)
 	timer_main.start(10)
+	
+	score_step = 100 / nb_bar_spawn
+	
+	spawn_bars()
 
 
 func init(catchable :CatchableRes):
@@ -56,10 +62,19 @@ func _process(delta: float) -> void:
 	if _check_game_finished():
 		return
 	
-	_move_cursor()
+	_move_cursor(delta)
 	
-	_update_score(score_step * delta)
 	timebar.scale.x = score * 16 / score_max
+	
+	if Input.is_action_just_pressed("mouse_left"):
+		if is_cursor_inside_area:
+			_remove_bar(colliding_bar)
+			_update_score(score_step)
+
+
+func _remove_bar(bar):
+	print(bar)
+	bars_node.remove_child(bar)
 
 
 func _check_game_finished():
@@ -78,7 +93,6 @@ func _check_game_finished():
 func end_game():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	SignalBus.end_minigame.emit(is_win)
-	pass
 
 
 func _update_score(value :float):
@@ -89,42 +103,37 @@ func _update_score(value :float):
 		score = score_max
 
 
-func _move_cursor() -> void:
-	var mouse_position = get_viewport().get_mouse_position()
-	cursor.look_at(mouse_position)
+func _move_cursor(delta :float) -> void:
+	cursor.rotate(delta * cursor_speed)
 
 
-func spawn_spikes() -> void:
+func spawn_bars() -> void:
 	var indices := []
-	while indices.size() < 3:
+	while indices.size() < nb_bar_spawn:
 		var rnd := randi_range(0, 14)
 		if not indices.has(rnd):
 			indices.append(rnd)
 	
-	spikes_node.rotation_degrees = randi_range(0, 360)
-	
 	for i in range(15):
 		if indices.has(i):
-			continue
-		var obj = spike_scene.instantiate()
-		spikes_node.add_child(obj)
-		obj.global_position = spikes_node.global_position
-		obj.rotation = deg_to_rad(i*24)
+			var obj = wave_part_scene.instantiate()
+			bars_node.add_child(obj)
+			obj.global_position = bars_node.global_position
+			obj.rotation = deg_to_rad(i*24)
+			obj.scale = Vector2(5.7,5.7)
 
 
 func _on_timer_timeout() -> void:
-	spawn_spikes()
-	cursor_collision_enabled = true
 	timer_interval.start(cooldown)
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("entered")
-	if not cursor_collision_enabled:
-		return
-	cursor_collision_enabled = false
-	_update_score(score_fail_value)
+	colliding_bar = area
+	is_cursor_inside_area = true
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	print("exited")
+	colliding_bar = null
+	is_cursor_inside_area = false

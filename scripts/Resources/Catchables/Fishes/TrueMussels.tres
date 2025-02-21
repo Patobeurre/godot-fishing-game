@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=11 format=3 uid="uid://c0d4soyvubcj0"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=10 format=3 uid="uid://c0d4soyvubcj0"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_t6n3g"]
 [ext_resource type="Texture2D" uid="uid://oicsgaiyryoo" path="res://sprites/Catchables/Fishes/true_mussel.png" id="2_ea68a"]
@@ -8,7 +8,6 @@
 [ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="6_aw3bq"]
 [ext_resource type="PackedScene" uid="uid://0ontd173otm6" path="res://objects/Catchables/true_mussels.tscn" id="6_p78d2"]
 [ext_resource type="Resource" uid="uid://dkhuqkephtd2b" path="res://scripts/Resources/Regions/Reef.tres" id="7_7spk4"]
-[ext_resource type="Texture2D" uid="uid://cwtjf5g3crsg2" path="res://sprites/Catchables/Fishes/truemussels_shadows.png" id="7_bcvk4"]
 [ext_resource type="Resource" uid="uid://fwr3ntued7gc" path="res://scripts/Resources/Regions/ReefGround.tres" id="8_ve7u8"]
 
 [resource]
@@ -20,7 +19,6 @@ notification_text = ""
 category = ExtResource("1_t6n3g")
 tags = Array[int]([5])
 image = ExtResource("2_ea68a")
-shadow = ExtResource("7_bcvk4")
 scene = ExtResource("6_p78d2")
 rarity = 30
 price = 7

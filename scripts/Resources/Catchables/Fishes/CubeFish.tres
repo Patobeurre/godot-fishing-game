@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://4gplno14hk82"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://4gplno14hk82"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_2mlqd"]
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_wdc2h"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dnd21dd2s6v4g" path="res://objects/Catchables/Fishes/cubefish.tscn" id="4_0m606"]
 [ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="4_ksa22"]
 [ext_resource type="Resource" uid="uid://b16jgklq2bpkk" path="res://scripts/Resources/Regions/Deep.tres" id="5_pysa6"]
-[ext_resource type="Texture2D" uid="uid://ctrspdqqiy6em" path="res://sprites/Catchables/Fishes/cubefish_shadow.png" id="5_ydh1g"]
 
 [resource]
 script = ExtResource("1_wdc2h")
@@ -17,7 +16,6 @@ notification_text = ""
 category = ExtResource("1_2mlqd")
 tags = Array[int]([0, 1])
 image = ExtResource("2_jxf8u")
-shadow = ExtResource("5_ydh1g")
 scene = ExtResource("4_0m606")
 rarity = 5
 price = 86

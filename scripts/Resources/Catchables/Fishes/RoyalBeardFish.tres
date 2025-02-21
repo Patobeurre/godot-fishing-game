@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://boh11y8ocee74"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://boh11y8ocee74"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_dwfd6"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_rp6xh"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bsakck0gxgtpp" path="res://objects/Catchables/Fishes/royal_beard_fish.tscn" id="5_hrslw"]
 [ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_s4a2d"]
 [ext_resource type="Resource" uid="uid://dwijteaf2p6at" path="res://scripts/Resources/Regions/Coast.tres" id="6_6ijj2"]
-[ext_resource type="Texture2D" uid="uid://b5v5uggmgqm8b" path="res://sprites/Catchables/Fishes/royalbeardfish_shadow.png" id="6_n20w7"]
 
 [resource]
 script = ExtResource("1_dwfd6")
@@ -18,7 +17,6 @@ notification_text = ""
 category = ExtResource("1_rp6xh")
 tags = Array[int]([0, 1])
 image = ExtResource("2_gj32u")
-shadow = ExtResource("6_n20w7")
 scene = ExtResource("5_hrslw")
 rarity = 5
 price = 268

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://cre4u8vky03vd"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://cre4u8vky03vd"]
 
 [ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_73wo1"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_uu1jh"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://d4j0bcir26pue" path="res://objects/Catchables/Fishes/tetrahedra.tscn" id="3_i46on"]
 [ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="4_wsyat"]
 [ext_resource type="Resource" uid="uid://bwrdv60ecb3rv" path="res://scripts/Resources/Regions/Beach.tres" id="5_6xda2"]
-[ext_resource type="Texture2D" uid="uid://bb6u8v2m6kl5l" path="res://sprites/Catchables/Fishes/tetrahedra_shadow.png" id="5_g887l"]
 
 [resource]
 script = ExtResource("1_73wo1")
@@ -17,7 +16,6 @@ notification_text = ""
 category = ExtResource("1_uu1jh")
 tags = Array[int]([0, 1])
 image = ExtResource("2_h83ld")
-shadow = ExtResource("5_g887l")
 scene = ExtResource("3_i46on")
 rarity = 5
 price = 82
