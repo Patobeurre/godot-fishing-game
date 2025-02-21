@@ -10,8 +10,8 @@ ground_curve = 0.171484
 sky_material = SubResource("ProceduralSkyMaterial_lg8b7")
 
 [resource]
-background_mode = 2
-background_color = Color(0.289298, 0.724131, 0.999999, 1)
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
 background_energy_multiplier = 0.6
 sky = SubResource("Sky_7bk1c")
 ambient_light_source = 2

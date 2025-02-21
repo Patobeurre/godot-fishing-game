@@ -33,8 +33,8 @@ func updateLightnings():
 	
 	var distance = sunMoonParent.global_position.distance_to(sunNode.global_position)
 	
-	sunLight.light_energy = min((sunPosition.y + sunLightOffset) / (distance), 0.8)
-	moonLight.light_energy = min((moonPosition.y + moonLightOffset) / (distance*2), 0.8)
+	sunLight.light_energy = min((sunPosition.y + sunLightOffset) / (distance), 2)
+	moonLight.light_energy = min((moonPosition.y + moonLightOffset) / (distance*2), 2)
 	
 	environment.background_color = sky_color_gradient.sample(TimeManager.get_time_ratio())
 	
