@@ -3,7 +3,7 @@ extends MainUI
 
 @onready var scene_node = $MiniGameScene
 
-@onready var default_minigame_scene :PackedScene = preload("res://scenes/UI/minigame_waves.tscn")
+@onready var default_minigame_scene :PackedScene = preload("res://scenes/UI/minigame_horizontal_bar.tscn")
 
 
 var catchable :CatchableRes = null

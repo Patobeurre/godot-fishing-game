@@ -53,7 +53,6 @@ func correct_position_x(posX :float) -> float:
 
 
 func modulate_color(score_ratio :float):
-	print(gradient.gradient.sample(score_ratio))
 	sprite.modulate = gradient.gradient.sample(score_ratio)
 
 

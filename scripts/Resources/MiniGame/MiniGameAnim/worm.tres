@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="MinigameAnimRes" load_steps=6 format=3 uid="uid://c73bx0k0oxtwx"]
+[gd_resource type="Resource" script_class="MinigameAnimRes" load_steps=7 format=3 uid="uid://c73bx0k0oxtwx"]
 
 [ext_resource type="Script" path="res://scripts/Resources/MiniGame/MiniGameAnim/minigame_anim_res.gd" id="1_c4ts1"]
+[ext_resource type="PackedScene" uid="uid://db6gty7peyktv" path="res://scenes/UI/minigame_horizontal_bar.tscn" id="1_p2e38"]
 
 [sub_resource type="Curve" id="Curve_n84ic"]
 min_value = -100.0
@@ -25,3 +26,4 @@ script = ExtResource("1_c4ts1")
 sizeX = SubResource("CurveTexture_r1vm1")
 positionX = SubResource("CurveTexture_pt08q")
 speed = 8.0
+minigame_scene = ExtResource("1_p2e38")

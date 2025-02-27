@@ -1,0 +1,131 @@
+[gd_scene load_steps=12 format=3 uid="uid://db6gty7peyktv"]
+
+[ext_resource type="Script" path="res://scenes/UI/minigame_horizontal_bar.gd" id="1_jj2g0"]
+[ext_resource type="Texture2D" uid="uid://du5mfy6basyuo" path="res://sprites/fishing_game_ui.png" id="2_jnt8u"]
+[ext_resource type="Texture2D" uid="uid://cwvl37r0okmxa" path="res://sprites/fishing_game_cursor.png" id="3_j1xr5"]
+[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_071jb"]
+[ext_resource type="Script" path="res://scripts/MiniGameSM/DefaultState.gd" id="5_emwdx"]
+[ext_resource type="Script" path="res://scripts/MiniGameSM/MovingBarState.gd" id="6_sxove"]
+[ext_resource type="AudioStream" uid="uid://1qu0blhejsy1" path="res://sounds/FishEffectsComplete/reel.wav" id="7_85e5k"]
+[ext_resource type="Script" path="res://scripts/MiniGameSM/MovingCursorState.gd" id="8_vtje5"]
+[ext_resource type="Script" path="res://scripts/MiniGameSM/AnimatedBarState.gd" id="9_roi2a"]
+[ext_resource type="Script" path="res://scripts/MiniGameSM/MovingDotsState.gd" id="10_cioyd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6p1df"]
+size = Vector2(16.6667, 58.3333)
+
+[node name="FishingMiniGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_jj2g0")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 200
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="FishingGameUi" type="TextureRect" parent="MarginContainer/CenterContainer/Control"]
+layout_mode = 2
+offset_left = -332.0
+offset_top = -30.0
+offset_right = 331.0
+offset_bottom = 29.0
+texture = ExtResource("2_jnt8u")
+
+[node name="Bars" type="Node2D" parent="MarginContainer/CenterContainer/Control"]
+position = Vector2(-960, -440)
+
+[node name="CenterContainer2" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="FishingGameCursor" type="TextureRect" parent="MarginContainer/CenterContainer2"]
+layout_mode = 2
+texture = ExtResource("3_j1xr5")
+
+[node name="Area2D" type="Area2D" parent="MarginContainer/CenterContainer2/FishingGameCursor"]
+collision_layer = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarginContainer/CenterContainer2/FishingGameCursor/Area2D"]
+position = Vector2(0, 0.833313)
+shape = SubResource("RectangleShape2D_6p1df")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FishingGameUi" type="Sprite2D" parent="AspectRatioContainer"]
+position = Vector2(640, 500)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_jnt8u")
+
+[node name="Bars" type="Node2D" parent="AspectRatioContainer"]
+
+[node name="FishingGameCursor" type="Sprite2D" parent="AspectRatioContainer"]
+position = Vector2(640, 500)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_j1xr5")
+
+[node name="Area2D" type="Area2D" parent="AspectRatioContainer/FishingGameCursor"]
+collision_layer = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AspectRatioContainer/FishingGameCursor/Area2D"]
+position = Vector2(0, 0.833313)
+shape = SubResource("RectangleShape2D_6p1df")
+
+[node name="LeftBoundary" type="Node2D" parent="AspectRatioContainer"]
+position = Vector2(485, 500)
+
+[node name="RightBoundary" type="Node2D" parent="AspectRatioContainer"]
+position = Vector2(795, 500)
+
+[node name="FiniteStateMachine" type="Node" parent="."]
+script = ExtResource("4_071jb")
+
+[node name="DefaultState" type="Node" parent="."]
+script = ExtResource("5_emwdx")
+
+[node name="MovingBarState" type="Node" parent="."]
+script = ExtResource("6_sxove")
+
+[node name="Timer" type="Timer" parent="MovingBarState"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MovingBarState"]
+stream = ExtResource("7_85e5k")
+
+[node name="MovingCursorState" type="Node" parent="."]
+script = ExtResource("8_vtje5")
+
+[node name="AnimatedBarState" type="Node" parent="."]
+script = ExtResource("9_roi2a")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AnimatedBarState"]
+stream = ExtResource("7_85e5k")
+
+[node name="MovingDotsState" type="Node" parent="."]
+script = ExtResource("10_cioyd")
+
+[connection signal="area_entered" from="MarginContainer/CenterContainer2/FishingGameCursor/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="MarginContainer/CenterContainer2/FishingGameCursor/Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="AspectRatioContainer/FishingGameCursor/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="AspectRatioContainer/FishingGameCursor/Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="timeout" from="MovingBarState/Timer" to="MovingBarState" method="_on_timer_timeout"]

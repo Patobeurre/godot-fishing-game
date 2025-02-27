@@ -30,6 +30,7 @@ func on_enter():
 # Called every frame when this state is active.
 func on_process(delta):
 	
+	print(input_mouse)
 	handle_mouse(delta)
 	
 	if check_win(): return
