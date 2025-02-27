@@ -60,7 +60,7 @@ func _process(delta: float) -> void:
 	_update_score(score_step * delta)
 	timebar.scale.x = score * 16 / score_max
 	
-	wave_node.rotate(deg_to_rad(rotation_speed*delta))
+	wave_node.rotate(deg_to_rad(rotation_speed * delta))
 
 
 func _check_game_finished():

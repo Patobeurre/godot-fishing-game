@@ -8,6 +8,7 @@ class_name WavePart
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$WavePartBackground.visible = false
 	pass
 
 
