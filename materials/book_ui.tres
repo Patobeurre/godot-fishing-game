@@ -1,0 +1,26 @@
+[gd_resource type="VisualShader" load_steps=2 format=3 uid="uid://bdhkrlpiwmrri"]
+
+[sub_resource type="VisualShaderNodeBooleanConstant" id="VisualShaderNodeBooleanConstant_tpl0g"]
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+
+
+
+void fragment() {
+// BooleanConstant:2
+	bool n_out2p0 = false;
+
+
+// Output:0
+	DEPTH = (n_out2p0 ? 1.0 : 0.0);
+
+
+}
+"
+graph_offset = Vector2(-156.508, 151.595)
+nodes/fragment/2/node = SubResource("VisualShaderNodeBooleanConstant_tpl0g")
+nodes/fragment/2/position = Vector2(80, 920)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 23)

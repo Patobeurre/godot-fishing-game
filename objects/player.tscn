@@ -1,10 +1,11 @@
-[gd_scene load_steps=32 format=3 uid="uid://dl2ed4gkybggf"]
+[gd_scene load_steps=33 format=3 uid="uid://dl2ed4gkybggf"]
 
 [ext_resource type="Script" path="res://scripts/player_stair_test.gd" id="1_awcpd"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_fg077"]
 [ext_resource type="Resource" uid="uid://cu2gtxlcmbb34" path="res://weapons/blaster-repeater.tres" id="2_ir7uk"]
 [ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_4ms7y"]
 [ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="4_m6ukc"]
+[ext_resource type="PackedScene" uid="uid://dbywdxl2pg0y3" path="res://objects/UI/Book/book_ui.tscn" id="5_dp482"]
 [ext_resource type="Script" path="res://scripts/FishingSM/DefaultFishingState.gd" id="5_g6r3q"]
 [ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="5_ics1s"]
 [ext_resource type="Script" path="res://scripts/FishingSM/FireFishingState.gd" id="6_j4o3f"]
@@ -100,6 +101,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.292484, -0.165401, -0.24084
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 target_position = Vector3(0, -2, 0)
 collision_mask = 49
+
+[node name="BookUI" parent="Body/Head/Camera" instance=ExtResource("5_dp482")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, -0.290005)
 
 [node name="FishingRode" type="Node3D" parent="Body"]
 top_level = true

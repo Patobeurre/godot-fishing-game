@@ -1,4 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://dbywdxl2pg0y3"]
+[gd_scene load_steps=9 format=4 uid="uid://dbywdxl2pg0y3"]
+
+[ext_resource type="Script" path="res://objects/UI/Book/book_ui.gd" id="1_3gq4p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vpw1w"]
 resource_name = "Material"
@@ -73,25 +75,45 @@ tracks/0/type = "rotation_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
 tracks/0/path = NodePath("Armature/Skeleton3D:page_left")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, -0.707107, 2.24764e-08, 4.21468e-07, 0.707107, 0.0333333, 1, -0.707107, 2.24764e-08, 4.21468e-07, 0.707107, 0.0666667, 1, -0.69664, 2.28043e-08, 4.1523e-07, 0.71742, 0.1, 1, -0.669655, 2.36069e-08, 3.99146e-07, 0.742672, 0.133333, 1, -0.622795, 2.48693e-08, 3.71215e-07, 0.782385, 0.166667, 1, -0.555989, 2.64206e-08, 3.31395e-07, 0.83119, 0.2, 1, -0.467963, 2.80913e-08, 2.78928e-07, 0.883748, 0.233333, 1, -0.369964, 2.95311e-08, 2.20516e-07, 0.929046, 0.266667, 1, -0.269402, 3.06113e-08, 1.60576e-07, 0.963028, 0.3, 1, -0.174262, 3.13001e-08, 1.03868e-07, 0.984699, 0.333333, 1, -0.0922669, 3.16509e-08, 5.49954e-08, 0.995734, 0.366667, 1, -0.0380627, 3.17635e-08, 2.26871e-08, 0.999275, 0.4, 1, -0.00979597, 3.1785e-08, 5.83883e-09, 0.999952, 0.416667, 1, 0, 3.17865e-08, 0, 1)
 tracks/1/type = "rotation_3d"
 tracks/1/imported = true
 tracks/1/enabled = true
 tracks/1/path = NodePath("Armature/Skeleton3D:page_right")
-tracks/1/interp = 1
+tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0, 1, 0.707107, 1.57009e-16, -9.35848e-24, 0.707107, 0.0333333, 1, 0.707107, 1.57009e-16, -9.35848e-24, 0.707107, 0.0666667, 1, 0.69664, 1.57948e-16, -3.74371e-24, 0.71742, 0.1, 1, 0.669655, 1.60158e-16, 0, 0.742672, 0.133333, 1, 0.622795, 1.63345e-16, 1.59501e-24, 0.782385, 0.166667, 1, 0.555989, 1.66663e-16, 7.96141e-24, 0.83119, 0.2, 1, 0.467963, 1.69191e-16, 4.55541e-24, 0.883748, 0.233333, 1, 0.369964, 1.6993e-16, 1.48191e-24, 0.929046, 0.266667, 1, 0.269402, 1.68725e-16, -6.76198e-25, 0.963028, 0.3, 1, 0.174262, 1.6594e-16, -1.35015e-24, 0.984699, 0.333333, 1, 0.0922669, 1.6234e-16, 0, 0.995734, 0.366667, 1, 0.0380627, 1.59371e-16, 0, 0.999275, 0.4, 1, 0.00979597, 6.34272e-17, 0, 0.999952, 0.416667, 1, 0, 0, 0, 1)
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, -2, 0, 0.4, 1, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_h0cj3"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -2, 0)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hauvt"]
 _data = {
-"ArmatureAction": SubResource("Animation_h4gmi")
+"ArmatureAction": SubResource("Animation_h4gmi"),
+"RESET": SubResource("Animation_h0cj3")
 }
 
 [node name="BookUI" type="Node3D"]
+script = ExtResource("1_3gq4p")
 
 [node name="book" type="Node3D" parent="."]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="Armature" type="Node3D" parent="book"]
 
@@ -108,7 +130,7 @@ bones/1/parent = 0
 bones/1/rest = Transform3D(1, 0, 6.3573e-08, 0, 1, 0, -6.3573e-08, 0, 1, 0, 0.15, 0)
 bones/1/enabled = true
 bones/1/position = Vector3(0, 0.15, 0)
-bones/1/rotation = Quaternion(-0.269402, 3.06113e-08, 1.60576e-07, 0.963028)
+bones/1/rotation = Quaternion(0, 3.17865e-08, 0, 1)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/name = "Bone.001"
 bones/2/parent = -1
@@ -122,7 +144,7 @@ bones/3/parent = 2
 bones/3/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
 bones/3/enabled = true
 bones/3/position = Vector3(0, 0.15, 0)
-bones/3/rotation = Quaternion(0.269402, 1.68725e-16, -6.76198e-25, 0.963028)
+bones/3/rotation = Quaternion(0, 0, 0, 1)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/name = "neutral_bone"
 bones/4/parent = -1
@@ -133,10 +155,14 @@ bones/4/rotation = Quaternion(-0.707107, 0, 0, 0.707107)
 bones/4/scale = Vector3(1, 1, 1)
 
 [node name="Cube" type="MeshInstance3D" parent="book/Armature/Skeleton3D"]
+sorting_offset = 100.0
+sorting_use_aabb_center = false
 mesh = SubResource("ArrayMesh_m2iab")
 skin = SubResource("Skin_dyqy4")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="book"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+root_node = NodePath("../book")
 libraries = {
 "": SubResource("AnimationLibrary_hauvt")
 }
