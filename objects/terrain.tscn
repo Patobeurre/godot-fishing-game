@@ -226,7 +226,7 @@ transform = Transform3D(0.715937, 0, -0.698165, 0, 1, 0, 0.698165, 0, 0.715937, 
 parent = NodePath("../../../terrain/StaticBody3D")
 
 [node name="Area3D2" type="Area3D" parent="Areas" index="4" node_paths=PackedStringArray("chest", "parent")]
-transform = Transform3D(-0.240989, 0, -0.178674, 0, 0.3, 0, 0.178674, 0, -0.240989, 1.39971, 0.899849, -3.30645)
+transform = Transform3D(-0.240989, 0, -0.178674, 0, 0.3, 0, 0.178674, 0, -0.240989, 1.39971, 0.901714, -3.30645)
 collision_layer = 4096
 collision_mask = 256
 script = ExtResource("9_hrdb2")

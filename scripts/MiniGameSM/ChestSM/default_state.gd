@@ -12,7 +12,7 @@ func on_enter() -> void:
 # Called every frame when this state is active.
 func on_process(delta: float) -> void:
 	if Input.is_action_just_pressed("mouse_left"):
-		controller.animate()
+		controller.step_inward()
 
 
 # Called every physics frame when this state is active.

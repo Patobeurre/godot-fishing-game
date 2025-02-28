@@ -20,6 +20,7 @@ class_name MiniGameRoundChest
 @onready var on_anomation_state = $OnAnimationState
 
 @onready var wave_part_scene = preload("res://objects/UI/wave_part.tscn")
+@onready var gradient := preload("res://materials/minigame_bar_gradient.tres")
 
 @export var cooldown :float = 2
 @export var cursor_speed :float = 2
@@ -30,11 +31,12 @@ var height :float
 var score :float = 1
 var score_max :float = 100
 var score_step :float = 10
-var score_fail_value :float = -30
+var score_fail_value :float = -20
 var is_win :bool = false
 
-var nb_bar_spawn :int = 10
+var nb_bar_spawn :int = 14
 var rotation_speed :float = 50
+var nb_layer :int = 3
 var is_cursor_inside_area = false
 var colliding_bar = null
 
@@ -55,12 +57,11 @@ func _ready() -> void:
 	timer_interval.start(cooldown)
 	timer_main.start(10)
 	
-	score_step = 100 / nb_bar_spawn
-	
 	spawn_bars(bars_outer)
 	spawn_bars(bars_middle)
 	spawn_bars(bars_inner)
 	
+	score = score_max - 1
 	state_machine.set_current_state(default_state)
 
 
@@ -79,7 +80,9 @@ func _process(delta: float) -> void:
 	_move_cursor()
 	_rotate_bars(delta)
 	
+	_update_score(-score_step * delta)
 	timebar.scale.x = score * 16 / score_max
+	modulate_color(score / score_max)
 
 
 func _rotate_bars(delta :float) -> void:
@@ -89,7 +92,7 @@ func _rotate_bars(delta :float) -> void:
 
 
 func _check_game_finished():
-	if score >= score_max:
+	if nb_layer == 0:
 		is_win = true
 		end_game()
 		return true
@@ -106,12 +109,14 @@ func end_game():
 	SignalBus.end_minigame.emit(is_win)
 
 
-func animate():
+func step_inward():
 	state_machine.set_current_state(on_anomation_state)
 	if is_cursor_inside_area:
 		_play_failure_animation()
+		_update_score(score_fail_value)
 	else:
 		_play_success_animation()
+		nb_layer -= 1
 
 
 func _play_failure_animation():
@@ -154,6 +159,11 @@ func _update_score(value :float):
 func _move_cursor() -> void:
 	var mouse_position = get_viewport().get_mouse_position()
 	cursor.look_at(mouse_position)
+
+
+func modulate_color(score_ratio :float):
+	print(score_ratio)
+	timebar.modulate = gradient.gradient.sample(score_ratio)
 
 
 func spawn_bars(parent :Node2D) -> void:
