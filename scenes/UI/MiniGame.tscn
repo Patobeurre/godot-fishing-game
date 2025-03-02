@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://b88kavwu3knbt"]
+[gd_scene load_steps=5 format=3 uid="uid://b88kavwu3knbt"]
 
 [ext_resource type="Script" path="res://scripts/UI/FishingMiniGameUI.gd" id="1_g5jmr"]
+[ext_resource type="Shader" path="res://materials/blurry.gdshader" id="2_urkin"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oybu7"]
+shader = ExtResource("2_urkin")
+shader_parameter/blur_radius = 8
+shader_parameter/Darkness = 0.0
+shader_parameter/R = 0.0
+shader_parameter/G = 0.0
+shader_parameter/B = 0.0
+shader_parameter/blur_strength = 2.0
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_dloxn"]
 
 [node name="MiniGameUI" type="Control"]
 layout_mode = 3
@@ -10,6 +22,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g5jmr")
+
+[node name="BlurBackgroundShader" type="TextureRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_oybu7")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_dloxn")
 
 [node name="MiniGameScene" type="Control" parent="."]
 layout_mode = 1
