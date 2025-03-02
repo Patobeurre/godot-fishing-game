@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://j06mqy7dikxo"]
+
+[ext_resource type="Texture2D" uid="uid://cooml6hlo0a7g" path="res://sprites/Catchables/Fishes/jellyfish.png" id="1_cfv8f"]
+[ext_resource type="Texture2D" uid="uid://bgkqwnurukqem" path="res://sprites/UI/day_night_cycle_icons.png" id="2_lx1le"]
+[ext_resource type="Theme" uid="uid://c10x1hpnodnbi" path="res://themes/Main_theme.tres" id="2_snls0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ye4mj"]
+atlas = ExtResource("2_lx1le")
+region = Rect2(100, 0, 100, 100)
+
+[node name="PanelContainer" type="Panel"]
+custom_minimum_size = Vector2(192, 224)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1728.0
+offset_bottom = -856.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VSplitContainer" type="VSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_cfv8f")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="RichTextLabel" type="Label" parent="MarginContainer/VSplitContainer"]
+layout_mode = 2
+theme = ExtResource("2_snls0")
+text = "NAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimedayIcon" type="TextureRect" parent="MarginContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_ye4mj")
+expand_mode = 2
+stretch_mode = 5

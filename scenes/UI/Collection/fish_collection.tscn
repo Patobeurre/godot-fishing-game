@@ -1,0 +1,168 @@
+[gd_scene load_steps=28 format=3 uid="uid://bw3te7q8uq7ya"]
+
+[ext_resource type="PackedScene" uid="uid://dgw7oq2r0wcu6" path="res://objects/UI/btn_region_filter.tscn" id="1_52cvp"]
+[ext_resource type="Texture2D" uid="uid://cue0akjttcjio" path="res://sprites/UI/kenney_ui-pack/PNG/Grey/Double/button_rectangle_depth_gradient.png" id="2_cfos2"]
+[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="3_3g5ca"]
+[ext_resource type="Resource" uid="uid://bwrdv60ecb3rv" path="res://scripts/Resources/Regions/Beach.tres" id="4_17rpd"]
+[ext_resource type="Resource" uid="uid://dhld2ow8uhn80" path="res://scripts/Resources/Regions/BeachGround.tres" id="5_ny3wb"]
+[ext_resource type="Texture2D" uid="uid://ch74gsei43q3c" path="res://sprites/UI/region buttons/btn_beach.png" id="6_xlkpe"]
+[ext_resource type="Resource" uid="uid://dwijteaf2p6at" path="res://scripts/Resources/Regions/Coast.tres" id="7_agp6x"]
+[ext_resource type="Texture2D" uid="uid://v3hvpj7sfflg" path="res://sprites/UI/region buttons/btn_coast.png" id="8_0yila"]
+[ext_resource type="Resource" uid="uid://b16jgklq2bpkk" path="res://scripts/Resources/Regions/Deep.tres" id="9_cxr2q"]
+[ext_resource type="Resource" uid="uid://dlp3f2lo6klif" path="res://scripts/Resources/Regions/Shark.tres" id="10_aqodr"]
+[ext_resource type="Texture2D" uid="uid://0cy4sodedyhp" path="res://sprites/UI/region buttons/btn_deep.png" id="11_iac1n"]
+[ext_resource type="Resource" uid="uid://dtv2pu6qgth1j" path="res://scripts/Resources/Regions/River.tres" id="12_rlwt1"]
+[ext_resource type="Texture2D" uid="uid://dnxf7ypexw6jf" path="res://sprites/UI/region buttons/btn_river.png" id="13_4mi40"]
+[ext_resource type="Resource" uid="uid://5hdu1q8j5531" path="res://scripts/Resources/Regions/Swamp.tres" id="14_irljc"]
+[ext_resource type="Resource" uid="uid://dve05j53bog0x" path="res://scripts/Resources/Regions/SwampGround.tres" id="15_g1fpo"]
+[ext_resource type="Texture2D" uid="uid://b5fv3m2p33rrh" path="res://sprites/UI/region buttons/btn_swamp.png" id="16_l0vvg"]
+[ext_resource type="Resource" uid="uid://dkhuqkephtd2b" path="res://scripts/Resources/Regions/Reef.tres" id="17_ivp1b"]
+[ext_resource type="Resource" uid="uid://fwr3ntued7gc" path="res://scripts/Resources/Regions/ReefGround.tres" id="18_phchx"]
+[ext_resource type="Texture2D" uid="uid://8m47wnchas8n" path="res://sprites/UI/region buttons/btn_reef.png" id="19_g4idr"]
+[ext_resource type="Texture2D" uid="uid://lkseiwb1yb1a" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-double.png" id="20_gxmfh"]
+[ext_resource type="PackedScene" uid="uid://j06mqy7dikxo" path="res://scenes/UI/Collection/fish_entry.tscn" id="21_s6wv6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wedsj"]
+content_margin_left = 32.0
+content_margin_right = 32.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvbu7"]
+atlas = ExtResource("20_gxmfh")
+region = Rect2(1120, 944, 32, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tgc8n"]
+texture = SubResource("AtlasTexture_jvbu7")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+expand_margin_left = 32.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fej6"]
+bg_color = Color(0, 0, 0, 0.521569)
+expand_margin_left = 32.0
+
+[sub_resource type="Theme" id="Theme_knhb1"]
+ScrollContainer/styles/panel = SubResource("StyleBoxEmpty_wedsj")
+VScrollBar/styles/grabber = SubResource("StyleBoxTexture_tgc8n")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_tgc8n")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_tgc8n")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_3fej6")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_3fej6")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4l0hd"]
+atlas = ExtResource("20_gxmfh")
+region = Rect2(768, 128, 128, 128)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="FlowContainer" type="FlowContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 10
+alignment = 1
+vertical = true
+
+[node name="BtnAllFilter" parent="MarginContainer/VBoxContainer/FlowContainer" instance=ExtResource("1_52cvp")]
+layout_mode = 2
+texture = ExtResource("2_cfos2")
+
+[node name="BtnBeachFilter" parent="MarginContainer/VBoxContainer/FlowContainer" instance=ExtResource("1_52cvp")]
+layout_mode = 2
+regions = Array[ExtResource("3_3g5ca")]([ExtResource("4_17rpd"), ExtResource("5_ny3wb")])
+texture = ExtResource("6_xlkpe")
+
+[node name="BtnCoastFilter" parent="MarginContainer/VBoxContainer/FlowContainer" instance=ExtResource("1_52cvp")]
+layout_mode = 2
+regions = Array[ExtResource("3_3g5ca")]([ExtResource("7_agp6x")])
+texture = ExtResource("8_0yila")
+default_text = ""
+
+[node name="BtnDeepFilter" parent="MarginContainer/VBoxContainer/FlowContainer" instance=ExtResource("1_52cvp")]
+layout_mode = 2
+regions = Array[ExtResource("3_3g5ca")]([ExtResource("9_cxr2q"), ExtResource("10_aqodr")])
+texture = ExtResource("11_iac1n")
+text_color = Color(1, 1, 1, 1)
+default_text = ""
+
+[node name="BtnRiverFilter" parent="MarginContainer/VBoxContainer/FlowContainer" instance=ExtResource("1_52cvp")]
+layout_mode = 2
+regions = Array[ExtResource("3_3g5ca")]([ExtResource("12_rlwt1")])
+texture = ExtResource("13_4mi40")
+default_text = ""
+
+[node name="BtnSwampFilter" parent="MarginContainer/VBoxContainer/FlowContainer" instance=ExtResource("1_52cvp")]
+layout_mode = 2
+regions = Array[ExtResource("3_3g5ca")]([ExtResource("14_irljc"), ExtResource("15_g1fpo")])
+texture = ExtResource("16_l0vvg")
+text_color = Color(1, 1, 1, 1)
+default_text = ""
+
+[node name="BtnReefFilter" parent="MarginContainer/VBoxContainer/FlowContainer" instance=ExtResource("1_52cvp")]
+layout_mode = 2
+regions = Array[ExtResource("3_3g5ca")]([ExtResource("17_ivp1b"), ExtResource("18_phchx")])
+texture = ExtResource("19_g4idr")
+text_color = Color(1, 1, 1, 1)
+default_text = ""
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_knhb1")
+horizontal_scroll_mode = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("AtlasTexture_4l0hd")
+region_rect = Rect2(16, 16, 96, 96)
+patch_margin_left = 64
+patch_margin_top = 64
+patch_margin_right = 64
+patch_margin_bottom = 64
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 8
+
+[node name="PanelContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("21_s6wv6")]
+layout_mode = 2
