@@ -343,8 +343,8 @@ func _input(event):
 func handle_menu_inputs(_event):
 	if not is_movement_enabled: return
 	
-	if Input.is_action_just_pressed("hotkey1"):
-		book_node.open_book()
+	#if Input.is_action_just_pressed("hotkey1"):
+	#	book_node.open_book()
 	
 	if Input.is_action_just_pressed("open_collection_menu"):
 		UiManager.open("FishCollection")
