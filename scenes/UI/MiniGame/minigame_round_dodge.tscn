@@ -34,7 +34,7 @@ position = Vector2(947, 518)
 physics_material_override = SubResource("PhysicsMaterial_7251g")
 gravity_scale = 0.0
 
-[node name="Cursor2" type="Sprite2D" parent="Center/Cursor"]
+[node name="Sprite" type="Sprite2D" parent="Center/Cursor"]
 scale = Vector2(0.421875, 0.421875)
 texture = ExtResource("6_6pnmn")
 
