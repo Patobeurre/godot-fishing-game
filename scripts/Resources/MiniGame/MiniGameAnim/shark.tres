@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="MinigameAnimRes" load_steps=7 format=3 uid="uid://dacf38jmvo3u5"]
 
 [ext_resource type="Script" path="res://scripts/Resources/MiniGame/MiniGameAnim/minigame_anim_res.gd" id="1_7bjqj"]
-[ext_resource type="PackedScene" uid="uid://db6gty7peyktv" path="res://scenes/UI/minigame_horizontal_bar.tscn" id="1_ypmi8"]
+[ext_resource type="PackedScene" uid="uid://db6gty7peyktv" path="res://scenes/UI/MiniGame/minigame_horizontal_bar.tscn" id="1_ypmi8"]
 
 [sub_resource type="Curve" id="Curve_n84ic"]
 min_value = -100.0

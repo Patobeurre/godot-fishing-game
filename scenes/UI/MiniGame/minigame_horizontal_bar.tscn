@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://db6gty7peyktv"]
 
-[ext_resource type="Script" path="res://scenes/UI/minigame_horizontal_bar.gd" id="1_jj2g0"]
+[ext_resource type="Script" path="res://scenes/UI/MiniGame/minigame_horizontal_bar.gd" id="1_jj2g0"]
 [ext_resource type="Texture2D" uid="uid://du5mfy6basyuo" path="res://sprites/fishing_game_ui.png" id="2_jnt8u"]
 [ext_resource type="Texture2D" uid="uid://cwvl37r0okmxa" path="res://sprites/fishing_game_cursor.png" id="3_j1xr5"]
 [ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_071jb"]

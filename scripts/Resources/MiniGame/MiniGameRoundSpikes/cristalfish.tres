@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="MiniGameSpikesRes" load_steps=4 format=3 uid="uid://diby7qwbw2360"]
 
-[ext_resource type="PackedScene" uid="uid://do2145b2aiegn" path="res://scenes/UI/minigame_spikes.tscn" id="1_xnkq8"]
+[ext_resource type="PackedScene" uid="uid://do2145b2aiegn" path="res://scenes/UI/MiniGame/minigame_spikes.tscn" id="1_xnkq8"]
 [ext_resource type="Script" path="res://scripts/Resources/MiniGame/MiniGameRoundSpikes/minigame_spikes.gd" id="1_xxc63"]
 [ext_resource type="Texture2D" uid="uid://dccqfa6lh2r8d" path="res://sprites/UI/Minigame/amethyst_shard.png" id="2_0hcvn"]
 
