@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://ug82iwvm6vr"]
 
 [ext_resource type="PackedScene" uid="uid://cf2vdkl28dunc" path="res://models/Decorations/desk.glb" id="1_fehh8"]
-[ext_resource type="Script" path="res://scripts/Interactable.gd" id="2_6fflh"]
-[ext_resource type="Script" path="res://scripts/desk.gd" id="2_phekl"]
+[ext_resource type="Script" uid="uid://bnuniyrqoyyvp" path="res://scripts/Interactable.gd" id="2_6fflh"]
+[ext_resource type="Script" uid="uid://cilld2e5ecsrc" path="res://scripts/desk.gd" id="2_phekl"]
 [ext_resource type="PackedScene" uid="uid://bj3p382eqnc25" path="res://objects/identification_book.tscn" id="4_imch5"]
-[ext_resource type="Script" path="res://scripts/SealedDoorSM/sealed_door_symbol.gd" id="5_peeyc"]
-[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="6_igiv4"]
-[ext_resource type="Script" path="res://scripts/SealedDoorSM/default_state.gd" id="7_85rmj"]
-[ext_resource type="Script" path="res://scripts/SealedDoorSM/dragged_state.gd" id="8_tusxu"]
-[ext_resource type="Script" path="res://scripts/SealedDoorSM/completed_state.gd" id="9_1hmjc"]
-[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/state_machine_state.gd" id="10_e0qmu"]
+[ext_resource type="Script" uid="uid://bfdxtwgi6518g" path="res://scripts/SealedDoorSM/sealed_door_symbol.gd" id="5_peeyc"]
+[ext_resource type="Script" uid="uid://bxhxf8txsoe2d" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="6_igiv4"]
+[ext_resource type="Script" uid="uid://dcof8jq8jhle3" path="res://scripts/SealedDoorSM/default_state.gd" id="7_85rmj"]
+[ext_resource type="Script" uid="uid://ccl2fsvlepfft" path="res://scripts/SealedDoorSM/dragged_state.gd" id="8_tusxu"]
+[ext_resource type="Script" uid="uid://c4s48jjainlfo" path="res://scripts/SealedDoorSM/completed_state.gd" id="9_1hmjc"]
+[ext_resource type="Script" uid="uid://dfjquyg4ldf1s" path="res://addons/finite_state_machine/scripts/state_machine_state.gd" id="10_e0qmu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u5ir3"]
 size = Vector3(0.329132, 2.37158, 2.11719)

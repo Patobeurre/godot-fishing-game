@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c04t1xnc857u8"]
 
 [ext_resource type="Shader" uid="uid://c30ubrkd880mj" path="res://objects/enemies/bullet.tres" id="1_f8hmx"]
-[ext_resource type="Script" path="res://objects/enemies/bullet.gd" id="1_sqpi1"]
+[ext_resource type="Script" uid="uid://dcas62gjh8l2p" path="res://objects/enemies/bullet.gd" id="1_sqpi1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nnte0"]
 render_priority = 0

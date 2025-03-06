@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://dj6u6l0j4ux1c"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_8ehnm"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_o85jt"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_o85jt"]
 [ext_resource type="Texture2D" uid="uid://byl1yakd57kli" path="res://sprites/Catchables/Fishes/squarefish.png" id="2_wbrcd"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="4_hi08d"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_3sa48"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="5_3sa48"]
 [ext_resource type="PackedScene" uid="uid://be4d5ei83bfcv" path="res://objects/Catchables/Fishes/squarefish.tscn" id="5_uykwx"]
 [ext_resource type="Resource" uid="uid://b16jgklq2bpkk" path="res://scripts/Resources/Regions/Deep.tres" id="6_hp10d"]
 

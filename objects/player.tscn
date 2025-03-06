@@ -1,26 +1,26 @@
 [gd_scene load_steps=33 format=3 uid="uid://dl2ed4gkybggf"]
 
-[ext_resource type="Script" path="res://scripts/player_stair_test.gd" id="1_awcpd"]
-[ext_resource type="Script" path="res://scripts/weapon.gd" id="2_fg077"]
+[ext_resource type="Script" uid="uid://b23bbe4crl58k" path="res://scripts/player_stair_test.gd" id="1_awcpd"]
+[ext_resource type="Script" uid="uid://qbib3sntukhp" path="res://scripts/weapon.gd" id="2_fg077"]
 [ext_resource type="Resource" uid="uid://cu2gtxlcmbb34" path="res://weapons/blaster-repeater.tres" id="2_ir7uk"]
-[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_4ms7y"]
+[ext_resource type="Script" uid="uid://bxhxf8txsoe2d" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_4ms7y"]
 [ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="4_m6ukc"]
 [ext_resource type="PackedScene" uid="uid://dbywdxl2pg0y3" path="res://objects/UI/Book/book_ui.tscn" id="5_dp482"]
-[ext_resource type="Script" path="res://scripts/FishingSM/DefaultFishingState.gd" id="5_g6r3q"]
+[ext_resource type="Script" uid="uid://cf3klbmngq4te" path="res://scripts/FishingSM/DefaultFishingState.gd" id="5_g6r3q"]
 [ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="5_ics1s"]
-[ext_resource type="Script" path="res://scripts/FishingSM/FireFishingState.gd" id="6_j4o3f"]
-[ext_resource type="Script" path="res://scripts/FishingSM/WaitingFishingState.gd" id="7_codwq"]
-[ext_resource type="Script" path="res://scripts/FishingSM/ThrowFishingState.gd" id="7_w6l6i"]
-[ext_resource type="Script" path="res://scripts/FishingSM/CatchFishingState.gd" id="8_mvy4j"]
-[ext_resource type="Script" path="res://scripts/FishingSM/RetreiveFishingState.gd" id="9_40ij0"]
-[ext_resource type="Script" path="res://scripts/FishingSM/PlayingFishingState.gd" id="12_py8p8"]
-[ext_resource type="Script" path="res://scripts/FishingSM/DisabledState.gd" id="13_p57dx"]
-[ext_resource type="Script" path="res://scripts/UI/AreaInfoUI.gd" id="14_mbniq"]
-[ext_resource type="Script" path="res://scripts/FishingSM/AreaInfoFishingState.gd" id="14_sxfw8"]
+[ext_resource type="Script" uid="uid://dw4qyuxyqll07" path="res://scripts/FishingSM/FireFishingState.gd" id="6_j4o3f"]
+[ext_resource type="Script" uid="uid://bianwp061iv1f" path="res://scripts/FishingSM/WaitingFishingState.gd" id="7_codwq"]
+[ext_resource type="Script" uid="uid://bkfjjx51u08t" path="res://scripts/FishingSM/ThrowFishingState.gd" id="7_w6l6i"]
+[ext_resource type="Script" uid="uid://cgo36t8cvlugp" path="res://scripts/FishingSM/CatchFishingState.gd" id="8_mvy4j"]
+[ext_resource type="Script" uid="uid://cbk5rxh4rfy2o" path="res://scripts/FishingSM/RetreiveFishingState.gd" id="9_40ij0"]
+[ext_resource type="Script" uid="uid://ckmuuioi6o444" path="res://scripts/FishingSM/PlayingFishingState.gd" id="12_py8p8"]
+[ext_resource type="Script" uid="uid://c0o03wavvps8o" path="res://scripts/FishingSM/DisabledState.gd" id="13_p57dx"]
+[ext_resource type="Script" uid="uid://cybfkm6rxmybf" path="res://scripts/UI/AreaInfoUI.gd" id="14_mbniq"]
+[ext_resource type="Script" uid="uid://8hgk4q67b6ac" path="res://scripts/FishingSM/AreaInfoFishingState.gd" id="14_sxfw8"]
 [ext_resource type="PackedScene" uid="uid://c5xb58gno5o6x" path="res://objects/UI/AreaInfoEntry.tscn" id="15_usy7x"]
-[ext_resource type="Script" path="res://scripts/in_menu_state.gd" id="16_2w7jl"]
+[ext_resource type="Script" uid="uid://3kfueab4epvp" path="res://scripts/in_menu_state.gd" id="16_2w7jl"]
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="16_n382o"]
-[ext_resource type="Script" path="res://scripts/UI/hud.gd" id="17_xafxl"]
+[ext_resource type="Script" uid="uid://ctmhkdfkgagc1" path="res://scripts/UI/hud.gd" id="17_xafxl"]
 [ext_resource type="Texture2D" uid="uid://dpue75ipy7nid" path="res://sprites/UI/book.png" id="18_ibvvf"]
 [ext_resource type="Texture2D" uid="uid://dc4jgdvefokog" path="res://sprites/UI/TAB.png" id="19_tjo8l"]
 [ext_resource type="Texture2D" uid="uid://xkew2pa6s43u" path="res://sprites/UI/livre.png" id="20_r8qkj"]
@@ -39,7 +39,6 @@ height = 1.19861
 [sub_resource type="Curve3D" id="Curve3D_angxa"]
 
 [node name="Player" type="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_awcpd")
@@ -117,6 +116,7 @@ path_interval_type = 0
 path_interval = 1.0
 path_simplify_angle = 0.0
 path_rotation = 2
+path_rotation_accurate = false
 path_local = false
 path_continuous_u = true
 path_u_distance = 1.0

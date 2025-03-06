@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=5 format=3 uid="uid://byqduaysqjavb"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_5cece"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_5cece"]
 [ext_resource type="Resource" uid="uid://bspir8uukoq7r" path="res://scripts/Resources/Categories/None.tres" id="1_iosha"]
 [ext_resource type="Resource" uid="uid://bfdc1w53gq812" path="res://scripts/Resources/MiniGame/MiniGameChest/chest_minigame.tres" id="3_niu1n"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="4_8n8mu"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="4_8n8mu"]
 
 [resource]
 script = ExtResource("1_5cece")

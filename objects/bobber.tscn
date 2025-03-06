@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=4 uid="uid://dmyqppx7y0tw7"]
 
-[ext_resource type="Script" path="res://scripts/bobber.gd" id="1_6fbch"]
+[ext_resource type="Script" uid="uid://byas6r16ekjte" path="res://scripts/bobber.gd" id="1_6fbch"]
 [ext_resource type="Shader" uid="uid://c52n5cpdlsqf2" path="res://materials/bilboard.tres" id="2_4ca3n"]
 [ext_resource type="Texture2D" uid="uid://b0lrujkw80knu" path="res://sprites/catch_texture.png" id="3_12fqs"]
 
@@ -107,8 +107,8 @@ shadow_mesh = SubResource("ArrayMesh_iti55")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l4xp6"]
 render_priority = 0
 shader = ExtResource("2_4ca3n")
-shader_parameter/NoDepth = true
 shader_parameter/Texture2DParameter = ExtResource("3_12fqs")
+shader_parameter/NoDepth = true
 
 [sub_resource type="QuadMesh" id="QuadMesh_cigvi"]
 lightmap_size_hint = Vector2i(4, 3)
@@ -153,8 +153,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_204ng"]
 _data = {
-"RESET": SubResource("Animation_bpb52"),
-"billboard": SubResource("Animation_4wl55")
+&"RESET": SubResource("Animation_bpb52"),
+&"billboard": SubResource("Animation_4wl55")
 }
 
 [node name="bobber" type="RigidBody3D"]

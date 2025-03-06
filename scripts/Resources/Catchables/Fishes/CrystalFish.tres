@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=10 format=3 uid="uid://c4oknrpyr4xqj"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_3flsy"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_axy05"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="2_js7cc"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_axy05"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="2_js7cc"]
 [ext_resource type="Texture2D" uid="uid://tfm54hufvrcw" path="res://sprites/Catchables/Fishes/crystalfish.png" id="2_rjkmp"]
 [ext_resource type="Resource" uid="uid://dt4amd4t2kcpj" path="res://scripts/Resources/Catchables/AmethystShard.tres" id="4_uc1pr"]
 [ext_resource type="Resource" uid="uid://diby7qwbw2360" path="res://scripts/Resources/MiniGame/MiniGameRoundSpikes/cristalfish.tres" id="5_vjmb7"]

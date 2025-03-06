@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cgmbjt1oeqvsw"]
 
-[ext_resource type="Script" path="res://objects/UI/sell_fish_entry.gd" id="1_ldtlp"]
+[ext_resource type="Script" uid="uid://cvxhvg5yedhqb" path="res://objects/UI/sell_fish_entry.gd" id="1_ldtlp"]
 [ext_resource type="Texture2D" uid="uid://dwnons7hqfqhm" path="res://sprites/Catchables/Fishes/common_fish.png" id="1_w6ree"]
 
 [node name="Panel" type="PanelContainer"]

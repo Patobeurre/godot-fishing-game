@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=3 format=3 uid="uid://m68dn84bt35g"]
 
-[ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_3a27h"]
+[ext_resource type="Script" uid="uid://5572njcfs6rk" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_3a27h"]
 [ext_resource type="Resource" uid="uid://b67rtymghjo5n" path="res://scripts/Resources/Catchables/Fishes/JellyFishRobe.tres" id="1_vr7s7"]
 
 [resource]

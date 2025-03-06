@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://crid6n6jnhf6e"]
 
 [ext_resource type="Resource" uid="uid://eqi3uvm17to0" path="res://scripts/Resources/Categories/Insects.tres" id="1_2ngv7"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_ks7ap"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_ks7ap"]
 [ext_resource type="Texture2D" uid="uid://sbyitpaejkc3" path="res://sprites/Catchables/phasma.png" id="2_8wwbm"]
 [ext_resource type="Resource" uid="uid://ot25y882xj1f" path="res://scripts/Resources/Catchables/Tree/Stick.tres" id="4_2tfr1"]
 [ext_resource type="PackedScene" uid="uid://jtcvc2isfoud" path="res://objects/Catchables/phasma.tscn" id="5_sqncd"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_vi31f"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="5_vi31f"]
 [ext_resource type="Resource" uid="uid://dd6pn5lscucyo" path="res://scripts/Resources/Regions/Trunk.tres" id="6_21uhp"]
 [ext_resource type="Resource" uid="uid://by7fe0h0x5aa4" path="res://scripts/Resources/Regions/Reed.tres" id="7_j0gus"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://14nyo1d1mork"]
 
-[ext_resource type="Script" path="res://scripts/UI/Settings/settings.gd" id="1_0qmrq"]
+[ext_resource type="Script" uid="uid://ln8c6jdcg477" path="res://scripts/UI/Settings/settings.gd" id="1_0qmrq"]
 [ext_resource type="Theme" uid="uid://pvryohfa8txv" path="res://sprites/UI/kenney_ui-pack-adventure/theme.tres" id="1_tp14f"]
 [ext_resource type="Texture2D" uid="uid://cxmisowwarf6q" path="res://sprites/UI/kenney_ui-pack-adventure/PNG/Default/panel_brown_dark.png" id="3_xrmkf"]
 [ext_resource type="PackedScene" uid="uid://bebxclus3je58" path="res://scenes/UI/Settings/custom_button.tscn" id="4_hlb0n"]

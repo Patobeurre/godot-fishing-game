@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="FishingAreaRes" load_steps=6 format=3 uid="uid://dkp5120ceyl7j"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_qyx8y"]
-[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="1_r7omm"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_qyx8y"]
+[ext_resource type="Script" uid="uid://bd05gpo7c08r0" path="res://scripts/Resources/FishingAreaRes.gd" id="1_r7omm"]
 [ext_resource type="Resource" uid="uid://clpf0htwtcdc4" path="res://scripts/Resources/Catchables/Insects/Bee.tres" id="1_s147f"]
 [ext_resource type="Resource" uid="uid://b6l2br0ff8gre" path="res://scripts/Resources/Catchables/Honey.tres" id="2_16j82"]
 [ext_resource type="Resource" uid="uid://css0sshg3r42c" path="res://scripts/Resources/Regions/Hive.tres" id="4_lcads"]

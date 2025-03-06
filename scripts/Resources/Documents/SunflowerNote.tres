@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="LetterRes" load_steps=3 format=3 uid="uid://d1ogbambho8mr"]
 
-[ext_resource type="Script" path="res://scripts/Resources/Documents/Letter.gd" id="1_0mggl"]
+[ext_resource type="Script" uid="uid://cpbvu2fpgq2lx" path="res://scripts/Resources/Documents/Letter.gd" id="1_0mggl"]
 [ext_resource type="PackedScene" uid="uid://b6qea5cm4ewui" path="res://objects/UI/DocumentLetter.tscn" id="1_l475h"]
 
 [resource]

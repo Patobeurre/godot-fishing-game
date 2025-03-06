@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://snu48fhdllig"]
 
 [ext_resource type="PackedScene" uid="uid://badi24rrp3en7" path="res://models/Decorations/sunflower_riddle/sunflower_frame.glb" id="1_6d0e6"]
-[ext_resource type="Script" path="res://scripts/SealedDoorSM/sealed_door_symbol.gd" id="2_2tydl"]
-[ext_resource type="Script" path="res://scripts/Riddles/sunflower_frame.gd" id="2_cohgd"]
-[ext_resource type="Script" path="res://scripts/Interactable.gd" id="3_w3byu"]
-[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_rcdje"]
-[ext_resource type="Script" path="res://scripts/SealedDoorSM/default_state.gd" id="5_vc2sm"]
-[ext_resource type="Script" path="res://scripts/SealedDoorSM/dragged_state.gd" id="6_l7mj4"]
-[ext_resource type="Script" path="res://scripts/SealedDoorSM/completed_state.gd" id="7_4bj63"]
+[ext_resource type="Script" uid="uid://bfdxtwgi6518g" path="res://scripts/SealedDoorSM/sealed_door_symbol.gd" id="2_2tydl"]
+[ext_resource type="Script" uid="uid://bigas7si1i8n3" path="res://scripts/Riddles/sunflower_frame.gd" id="2_cohgd"]
+[ext_resource type="Script" uid="uid://bnuniyrqoyyvp" path="res://scripts/Interactable.gd" id="3_w3byu"]
+[ext_resource type="Script" uid="uid://bxhxf8txsoe2d" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_rcdje"]
+[ext_resource type="Script" uid="uid://dcof8jq8jhle3" path="res://scripts/SealedDoorSM/default_state.gd" id="5_vc2sm"]
+[ext_resource type="Script" uid="uid://ccl2fsvlepfft" path="res://scripts/SealedDoorSM/dragged_state.gd" id="6_l7mj4"]
+[ext_resource type="Script" uid="uid://c4s48jjainlfo" path="res://scripts/SealedDoorSM/completed_state.gd" id="7_4bj63"]
 
 [node name="sunflower_frame" instance=ExtResource("1_6d0e6")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)

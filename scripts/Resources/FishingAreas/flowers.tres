@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="FishingAreaRes" load_steps=8 format=3 uid="uid://b4lci13yv4xnb"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_kl5l1"]
-[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="2_g7r0p"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_kl5l1"]
+[ext_resource type="Script" uid="uid://bd05gpo7c08r0" path="res://scripts/Resources/FishingAreaRes.gd" id="2_g7r0p"]
 [ext_resource type="Resource" uid="uid://b4kdes1c7wbcd" path="res://scripts/Resources/Catchables/Flower.tres" id="2_t3rr7"]
 [ext_resource type="Resource" uid="uid://dcpvdafn7juyp" path="res://scripts/Resources/Catchables/Insects/Butterfly.tres" id="3_0bmat"]
 [ext_resource type="Resource" uid="uid://bcpyooewpt3g4" path="res://scripts/Resources/Catchables/Insects/Beetle.tres" id="4_wwhrf"]

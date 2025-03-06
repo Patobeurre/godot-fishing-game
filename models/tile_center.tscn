@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://uuiuhl1tnd24"]
 
 [ext_resource type="PackedScene" uid="uid://b2158wingfo7f" path="res://models/tile_center.glb" id="1_m4j4g"]
-[ext_resource type="Shader" path="res://materials/outline.gdshader" id="2_byym4"]
+[ext_resource type="Shader" uid="uid://dkwuliel1xyoe" path="res://materials/outline.gdshader" id="2_byym4"]
 [ext_resource type="Material" uid="uid://b6l8i5v3dexay" path="res://materials/base_surface.tres" id="2_m8mht"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_71m5v"]

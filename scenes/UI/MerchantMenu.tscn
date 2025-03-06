@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://2s07dga841f4"]
 
-[ext_resource type="Script" path="res://scripts/UI/MerchantMenu.gd" id="1_05alv"]
+[ext_resource type="Script" uid="uid://c5ny68w0blgob" path="res://scripts/UI/MerchantMenu.gd" id="1_05alv"]
 [ext_resource type="Texture2D" uid="uid://d0vhrkrd8i2uf" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-default.png" id="2_lvlfm"]
 [ext_resource type="Texture2D" uid="uid://lkseiwb1yb1a" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-double.png" id="3_b64ku"]
 

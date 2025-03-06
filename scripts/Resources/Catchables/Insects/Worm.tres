@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://bgteon31d08fe" path="res://sprites/Catchables/worm.png" id="1_7sqh5"]
 [ext_resource type="Resource" uid="uid://eqi3uvm17to0" path="res://scripts/Resources/Categories/Insects.tres" id="1_nuawj"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_qa6ou"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_qa6ou"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="2_ugdw2"]
 [ext_resource type="PackedScene" uid="uid://d2fd3poip6bnf" path="res://objects/Catchables/worm.tscn" id="3_nk6yx"]
 [ext_resource type="Resource" uid="uid://c73bx0k0oxtwx" path="res://scripts/Resources/MiniGame/MiniGameAnim/worm.tres" id="5_82rga"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_eunqj"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="5_eunqj"]
 [ext_resource type="Resource" uid="uid://j5t53js7cuyy" path="res://scripts/Resources/Regions/Grass.tres" id="6_0egsg"]
 
 [resource]

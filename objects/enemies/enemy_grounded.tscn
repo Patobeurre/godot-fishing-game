@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://bly5wbmxjnxgx"]
 
-[ext_resource type="Script" path="res://scripts/enemy_ground.gd" id="1_1i0uf"]
+[ext_resource type="Script" uid="uid://blfabyfx52cyk" path="res://scripts/enemy_ground.gd" id="1_1i0uf"]
 [ext_resource type="PackedScene" uid="uid://bysppry1gbbdi" path="res://objects/enemies/enemy_ground.tscn" id="1_cwl1a"]
 [ext_resource type="Material" uid="uid://mi4biohw11xn" path="res://materials/digit.tres" id="2_cem0g"]
-[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_ra88p"]
-[ext_resource type="Script" path="res://scripts/EnnemySM/FollowState.gd" id="5_ascmo"]
-[ext_resource type="Script" path="res://scripts/EnnemySM/AttackState.gd" id="6_7evbb"]
-[ext_resource type="Script" path="res://scripts/EnnemySM/DefaultState.gd" id="7_3fc7d"]
+[ext_resource type="Script" uid="uid://bxhxf8txsoe2d" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_ra88p"]
+[ext_resource type="Script" uid="uid://d4auhhxta0ull" path="res://scripts/EnnemySM/FollowState.gd" id="5_ascmo"]
+[ext_resource type="Script" uid="uid://v6fc575hwxf1" path="res://scripts/EnnemySM/AttackState.gd" id="6_7evbb"]
+[ext_resource type="Script" uid="uid://bwx01uddtjgcj" path="res://scripts/EnnemySM/DefaultState.gd" id="7_3fc7d"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vc5lv"]
 radius = 0.209817

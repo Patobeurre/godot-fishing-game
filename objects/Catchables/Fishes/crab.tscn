@@ -1,5 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://h3ab1cw2eivy"]
 
-[ext_resource type="PackedScene" uid="uid://dwwhcaq2jmb4s" path="res://models/Catchables/Fishes/crab.fbx" id="1_bwqfm"]
+[sub_resource type="Resource" id="Resource_pi4vh"]
+metadata/__load_path__ = "res://models/Catchables/Fishes/crab.fbx"
 
-[node name="crab" instance=ExtResource("1_bwqfm")]
+[node name="crab"]

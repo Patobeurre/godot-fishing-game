@@ -1,11 +1,11 @@
 [gd_scene load_steps=46 format=3 uid="uid://deqhnbp03hvqw"]
 
-[ext_resource type="Script" path="res://scripts/Global/SaveManager.gd" id="1_h358c"]
+[ext_resource type="Script" uid="uid://djf38n2lcwea1" path="res://scripts/Global/SaveManager.gd" id="1_h358c"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_iqhaf"]
-[ext_resource type="Script" path="res://scripts/weapon.gd" id="3_madii"]
+[ext_resource type="Script" uid="uid://qbib3sntukhp" path="res://scripts/weapon.gd" id="3_madii"]
 [ext_resource type="Resource" uid="uid://c56y8pqoyk15f" path="res://weapons/blaster.tres" id="4_6nvj3"]
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="5_0cdmg"]
-[ext_resource type="Script" path="res://scripts/Global/DayNightController.gd" id="6_b15dy"]
+[ext_resource type="Script" uid="uid://cikbc5j0cnmsl" path="res://scripts/Global/DayNightController.gd" id="6_b15dy"]
 [ext_resource type="Gradient" uid="uid://crcfh5wou42yc" path="res://scripts/Resources/SkyGradientColors.tres" id="7_rcwhr"]
 [ext_resource type="PackedScene" uid="uid://dvixv20hvw8h3" path="res://scenes/UI/TimeChanger.tscn" id="8_m4l16"]
 [ext_resource type="PackedScene" uid="uid://f86v14046ito" path="res://scenes/UI/FishingMiniGame.tscn" id="9_he07t"]
@@ -67,10 +67,10 @@ script = ExtResource("1_h358c")
 character = NodePath("Player")
 
 [node name="PlayerPos" type="Node3D" parent="."]
-transform = Transform3D(-0.34366, 0, 0.939094, 0, 1, 0, -0.939094, 0, -0.34366, 7.825, 1.181, -0.695)
+transform = Transform3D(-0.34366, 0, 0.939094, 0, 1, 0, -0.939094, 0, -0.34366, 24.825, 1.84691, -4.695)
 
 [node name="Player" parent="." instance=ExtResource("2_iqhaf")]
-transform = Transform3D(-0.43823, 0, 0.898863, 0, 1, 0, -0.898863, 0, -0.43823, 17.9111, 0.68726, -12.7492)
+transform = Transform3D(-0.43823, 0, 0.898863, 0, 1, 0, -0.898863, 0, -0.43823, 17.9111, 1.68726, -12.7492)
 collision_mask = 21
 push_force = 8.0
 weapons = Array[ExtResource("3_madii")]([ExtResource("4_6nvj3")])

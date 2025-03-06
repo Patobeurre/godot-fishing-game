@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=4 uid="uid://dbywdxl2pg0y3"]
 
-[ext_resource type="Script" path="res://objects/UI/Book/book_ui.gd" id="1_3gq4p"]
+[ext_resource type="Script" uid="uid://bnoa6megvagta" path="res://objects/UI/Book/book_ui.gd" id="1_3gq4p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vpw1w"]
 resource_name = "Material"
@@ -105,8 +105,8 @@ tracks/0/keys = PackedFloat32Array(0, 1, 0, -2, 0)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hauvt"]
 _data = {
-"ArmatureAction": SubResource("Animation_h4gmi"),
-"RESET": SubResource("Animation_h0cj3")
+&"ArmatureAction": SubResource("Animation_h4gmi"),
+&"RESET": SubResource("Animation_h0cj3")
 }
 
 [node name="BookUI" type="Node3D"]
@@ -164,5 +164,5 @@ skin = SubResource("Skin_dyqy4")
 reset_on_save = false
 root_node = NodePath("../book")
 libraries = {
-"": SubResource("AnimationLibrary_hauvt")
+&"": SubResource("AnimationLibrary_hauvt")
 }

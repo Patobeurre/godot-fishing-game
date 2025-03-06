@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://csjkhvsbwgg1a" path="res://sprites/Catchables/Fishes/hermit_crab.png" id="1_3dakr"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_d82uc"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_vx1fj"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_vx1fj"]
 [ext_resource type="Resource" uid="uid://ccluuofosbbi5" path="res://scripts/Resources/Catchables/Shell.tres" id="2_5vosc"]
 [ext_resource type="PackedScene" uid="uid://sydd3xkoqodj" path="res://objects/Catchables/Fishes/hermit_crab.tscn" id="3_k0hn8"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_losr4"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="5_losr4"]
 [ext_resource type="Resource" uid="uid://bwrdv60ecb3rv" path="res://scripts/Resources/Regions/Beach.tres" id="6_q14r2"]
 [ext_resource type="Resource" uid="uid://dhld2ow8uhn80" path="res://scripts/Resources/Regions/BeachGround.tres" id="7_abw2b"]
 

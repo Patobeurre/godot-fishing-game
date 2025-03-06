@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbc8iqfb4asqb"]
 
 [ext_resource type="PackedScene" uid="uid://dwphok8t6byre" path="res://models/riddles/crystal_riddle.fbx" id="1_mduov"]
-[ext_resource type="Script" path="res://scripts/crystal_riddle.gd" id="2_1nel8"]
-[ext_resource type="Script" path="res://scripts/Riddles/runes.gd" id="3_3ssvm"]
+[ext_resource type="Script" uid="uid://cyb6u7c1i8uwy" path="res://scripts/crystal_riddle.gd" id="2_1nel8"]
+[ext_resource type="Script" uid="uid://un1s7aoj3ie4" path="res://scripts/Riddles/runes.gd" id="3_3ssvm"]
 
 [node name="crystal_riddle" instance=ExtResource("1_mduov")]
 script = ExtResource("2_1nel8")

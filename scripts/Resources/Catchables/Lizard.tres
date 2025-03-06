@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://cbaiokykhuhmg"]
 
 [ext_resource type="Resource" uid="uid://catedw4i7v6px" path="res://scripts/Resources/Categories/Animals.tres" id="1_bjjj5"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_uw5h1"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_uw5h1"]
 [ext_resource type="Texture2D" uid="uid://bhopyvr6qshx4" path="res://sprites/Catchables/lizard.png" id="2_jnjpk"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="4_6j5dx"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="4_6j5dx"]
 [ext_resource type="PackedScene" uid="uid://bskjo5nspsyq" path="res://objects/Catchables/lizard.tscn" id="4_h4tk5"]
 [ext_resource type="Resource" uid="uid://derwi0tvimf3f" path="res://scripts/Resources/Regions/Rocks.tres" id="5_hy1by"]
 

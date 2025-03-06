@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://e13xdcwcibc3"]
 
-[ext_resource type="Script" path="res://objects/UI/buy_basket_entry.gd" id="1_dwjb2"]
+[ext_resource type="Script" uid="uid://b4qytevwiuyab" path="res://objects/UI/buy_basket_entry.gd" id="1_dwjb2"]
 [ext_resource type="Texture2D" uid="uid://dnwkudatwj6u5" path="res://sprites/simple_basket.png" id="1_npr3k"]
 
 [node name="PanelContainer" type="PanelContainer"]

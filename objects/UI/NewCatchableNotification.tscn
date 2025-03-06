@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b5anvnexsv82j"]
 
-[ext_resource type="Script" path="res://scripts/UI/Components/CatchableNotification.gd" id="1_37ari"]
+[ext_resource type="Script" uid="uid://dyguljc7ka5go" path="res://scripts/UI/Components/CatchableNotification.gd" id="1_37ari"]
 [ext_resource type="Texture2D" uid="uid://bu8l0k82mtflf" path="res://sprites/star.png" id="2_yg610"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q615l"]

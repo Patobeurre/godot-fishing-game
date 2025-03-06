@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dg7rnbgb0n7dq"]
 
 [ext_resource type="Texture2D" uid="uid://dv6mohrvqtin0" path="res://sprites/fishing_game_bar.png" id="1_6ajvj"]
-[ext_resource type="Script" path="res://scripts/test_minigame_bar.gd" id="1_8pvwl"]
+[ext_resource type="Script" uid="uid://c5rm143ex3kh2" path="res://scripts/test_minigame_bar.gd" id="1_8pvwl"]
 [ext_resource type="Texture2D" uid="uid://dl5d4i35uf8j5" path="res://materials/minigame_bar_gradient.tres" id="3_2ip4s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xoi5p"]

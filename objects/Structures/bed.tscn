@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://jpcqna82x0yo"]
 
 [ext_resource type="PackedScene" uid="uid://nsrgjj6r4op1" path="res://models/Decorations/bed.glb" id="1_y17hi"]
-[ext_resource type="Script" path="res://scripts/Interactable.gd" id="2_lkr33"]
-[ext_resource type="Script" path="res://scripts/bed.gd" id="2_u8yuc"]
+[ext_resource type="Script" uid="uid://bnuniyrqoyyvp" path="res://scripts/Interactable.gd" id="2_lkr33"]
+[ext_resource type="Script" uid="uid://ch08gpqyohhjo" path="res://scripts/bed.gd" id="2_u8yuc"]
 
 [node name="bed" instance=ExtResource("1_y17hi")]
 script = ExtResource("2_u8yuc")

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c28du1hwaqeda" path="res://models/Structures/oil_tank.glb" id="1_1xt0l"]
 
 [sub_resource type="Curve" id="Curve_0nrre"]
-max_value = 4.0
+_limits = [0.0, 4.0, 0.0, 1.0]
 _data = [Vector2(0, 1.67033), 0.0, 0.0, 0, 0, Vector2(0.403587, 2.68132), 0.0, 0.0, 0, 0, Vector2(0.753363, 4), 0.0, 0.0, 0, 0, Vector2(1, 0.967033), 0.0, 0.0, 0, 0]
 point_count = 4
 

@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://cg3ciblr8e33k"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_4vgie"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_4vgie"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_e1i0h"]
 [ext_resource type="Texture2D" uid="uid://dlrq250xwplem" path="res://sprites/Catchables/Fishes/butterfly_fish.png" id="2_2ejat"]
 [ext_resource type="Resource" uid="uid://dcpvdafn7juyp" path="res://scripts/Resources/Catchables/Insects/Butterfly.tres" id="4_keam6"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_1dgg2"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="5_1dgg2"]
 [ext_resource type="PackedScene" uid="uid://dp8o18ss2dhn5" path="res://objects/Catchables/Fishes/butterfly_fish.tscn" id="5_w6221"]
 [ext_resource type="Resource" uid="uid://dwijteaf2p6at" path="res://scripts/Resources/Regions/Coast.tres" id="6_m5kug"]
 

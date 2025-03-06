@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="FishingAreaRes" load_steps=5 format=3 uid="uid://dp4f2bmtoynnc"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_bvd1f"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_bvd1f"]
 [ext_resource type="Resource" uid="uid://dl33kwjn4h4ug" path="res://scripts/Resources/Catchables/Bone.tres" id="2_ugcoo"]
 [ext_resource type="Resource" uid="uid://btlaghw8pufur" path="res://scripts/Resources/Regions/GraveGround.tres" id="3_cbeuv"]
-[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="4_m4c4l"]
+[ext_resource type="Script" uid="uid://bd05gpo7c08r0" path="res://scripts/Resources/FishingAreaRes.gd" id="4_m4c4l"]
 
 [resource]
 script = ExtResource("4_m4c4l")

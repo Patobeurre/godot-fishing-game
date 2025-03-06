@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://dv3vmywlgreuo"]
 
 [ext_resource type="PackedScene" uid="uid://cdbolgwoj630c" path="res://models/Structures/merchant_boat.glb" id="1_wt07k"]
-[ext_resource type="Script" path="res://scripts/merchant_boat.gd" id="2_5a31o"]
-[ext_resource type="Script" path="res://scripts/Interactable.gd" id="2_o8sql"]
+[ext_resource type="Script" uid="uid://c2sgoy4s3omgg" path="res://scripts/merchant_boat.gd" id="2_5a31o"]
+[ext_resource type="Script" uid="uid://bnuniyrqoyyvp" path="res://scripts/Interactable.gd" id="2_o8sql"]
 [ext_resource type="Texture2D" uid="uid://bi12gu8vqkeyg" path="res://sprites/coins.png" id="4_sv0nv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mfsky"]
@@ -101,9 +101,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3iu2t"]
 _data = {
-"RESET": SubResource("Animation_a5nui"),
-"appear": SubResource("Animation_5ipyp"),
-"disappear": SubResource("Animation_oxju7")
+&"RESET": SubResource("Animation_a5nui"),
+&"appear": SubResource("Animation_5ipyp"),
+&"disappear": SubResource("Animation_oxju7")
 }
 
 [node name="merchant_boat" instance=ExtResource("1_wt07k")]

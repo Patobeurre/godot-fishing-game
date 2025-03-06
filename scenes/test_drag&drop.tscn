@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://l10vodvfwbn3"]
 
 [ext_resource type="PackedScene" uid="uid://632hi1oildxm" path="res://scenes/Tile_center_scene.tscn" id="2_d0yyu"]
-[ext_resource type="Script" path="res://scripts/hud.gd" id="5_sagce"]
+[ext_resource type="Script" uid="uid://f12vlpqfe2st" path="res://scripts/hud.gd" id="5_sagce"]
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="6_hm6hh"]
-[ext_resource type="Script" path="res://addons/DragDrop3D/Draggable.gd" id="6_rmtk4"]
+[ext_resource type="Script" uid="uid://ciblkkaj62onn" path="res://addons/DragDrop3D/Draggable.gd" id="6_rmtk4"]
 [ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="7_fmdk6"]
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="10_u6ks1"]
 

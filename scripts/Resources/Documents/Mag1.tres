@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://blt56u874p24s" path="res://sprites/Documents/Fishing Mag/1.png" id="1_cjujp"]
 [ext_resource type="PackedScene" uid="uid://b0ogy101lbpfp" path="res://objects/UI/DocumentFlyer.tscn" id="2_ey3yg"]
-[ext_resource type="Script" path="res://scripts/Resources/Documents/Flyer.gd" id="3_pctga"]
+[ext_resource type="Script" uid="uid://ywmjw2olp4yf" path="res://scripts/Resources/Documents/Flyer.gd" id="3_pctga"]
 
 [resource]
 script = ExtResource("3_pctga")

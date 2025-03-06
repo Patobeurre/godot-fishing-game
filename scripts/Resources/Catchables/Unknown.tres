@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=4 format=3 uid="uid://d4b4iafq1r6d0"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=5 format=3 uid="uid://d4b4iafq1r6d0"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_0k37k"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_uldcd"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_uldcd"]
 [ext_resource type="Texture2D" uid="uid://donufe4h2gbxw" path="res://sprites/UI/ensemble-vide.png" id="2_22kr1"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="4_tt20g"]
 
 [resource]
 script = ExtResource("1_uldcd")
@@ -15,6 +16,7 @@ tags = Array[int]([])
 image = ExtResource("2_22kr1")
 rarity = 0
 price = 0
+regions = Array[ExtResource("4_tt20g")]([])
 periods = Array[int]([])
 lures = Array[ExtResource("1_uldcd")]([])
 lure_ids = Array[int]([])

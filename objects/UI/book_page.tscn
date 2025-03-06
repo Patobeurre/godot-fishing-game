@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://c3gj6w6ybputg"]
 
-[ext_resource type="Script" path="res://objects/UI/book_page_content.gd" id="1_ho80q"]
+[ext_resource type="Script" uid="uid://hbxaosqrd0in" path="res://objects/UI/book_page_content.gd" id="1_ho80q"]
 [ext_resource type="Texture2D" uid="uid://c88orwk43qerc" path="res://sprites/UI/identification_picture_empty.png" id="2_3xqpy"]
 [ext_resource type="Texture2D" uid="uid://c2nepnanarbi6" path="res://sprites/UI/identification_picture_frame.png" id="2_wfds3"]
 [ext_resource type="Texture2D" uid="uid://dwnons7hqfqhm" path="res://sprites/Catchables/Fishes/common_fish.png" id="3_jokxw"]

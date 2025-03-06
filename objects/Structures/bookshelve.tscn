@@ -1,15 +1,14 @@
 [gd_scene load_steps=124 format=4 uid="uid://bhftgu4ii2mh3"]
 
-[ext_resource type="Script" path="res://scripts/fishing_area.gd" id="1_m2wpg"]
+[ext_resource type="Script" uid="uid://cg4o8uo73nag3" path="res://scripts/fishing_area.gd" id="1_m2wpg"]
 [ext_resource type="Resource" uid="uid://prfpa0vi0mta" path="res://scripts/Resources/Catchables/Insects/BookWorm.tres" id="2_7hdol"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="2_jdjev"]
-[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="3_5o8es"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="2_jdjev"]
+[ext_resource type="Script" uid="uid://bd05gpo7c08r0" path="res://scripts/Resources/FishingAreaRes.gd" id="3_5o8es"]
 [ext_resource type="Resource" uid="uid://daphulkiqldid" path="res://scripts/Resources/Regions/Bookshelve.tres" id="3_rpvwm"]
 
 [sub_resource type="Resource" id="Resource_oggqp"]
 script = ExtResource("3_5o8es")
 region = ExtResource("3_rpvwm")
-name = ""
 type = 0
 waiting_time = 3.0
 catchables = Array[ExtResource("2_jdjev")]([])
@@ -3076,13 +3075,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_44lta")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nnrv0"]
-points = PackedVector3Array(0.988587, 1, 1, 0.988814, -0.050734, 1, 0.99696, -0.014574, -1, -1, 0.995162, -0.988162, -1, 0.995162, 0.995162, -1, -0.988162, 0.995162, 0.99696, -1, -1, -1, -0.988162, -0.988162, 0.988587, 1, -0.993, 0.988814, -0.993, 1, -1.36002, -0.423902, -0.498137, -1.21124, 0.728243, -0.126361, -1.36002, -0.535355, -0.423902, 1, -0.0146211, 0.570571)
+[sub_resource type="BoxShape3D" id="BoxShape3D_xgsye"]
+size = Vector3(0.303589, 1.79884, 1.20236)
 
 [sub_resource type="Resource" id="Resource_nd6pb"]
 script = ExtResource("3_5o8es")
 region = ExtResource("3_rpvwm")
-name = "Bookshelve"
 type = 0
 waiting_time = 3.0
 catchables = Array[ExtResource("2_jdjev")]([ExtResource("2_7hdol")])
@@ -3105,8 +3103,8 @@ mesh = SubResource("ArrayMesh_dst28")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-4.23195e-08, 0, 0.6, 0, 0.9, 0, -0.15, 0, -1.69278e-07, 0, 0.910881, 0)
-shape = SubResource("ConvexPolygonShape3D_nnrv0")
+transform = Transform3D(-2.8213e-07, 0, 1, 0, 1, 0, -1, 0, -2.8213e-07, 0.00143127, 0.918371, -0.000671387)
+shape = SubResource("BoxShape3D_xgsye")
 
 [node name="Area3D" type="Area3D" parent="." node_paths=PackedStringArray("parent")]
 collision_layer = 4096
@@ -3116,9 +3114,9 @@ fishTable = SubResource("Resource_nd6pb")
 is_one_shot = true
 parent = NodePath("..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(-5.50153e-08, 0, 0.66, 0, 0.9, 0, -0.195, 0, -1.86206e-07, 0, 0.910881, 0)
-shape = SubResource("ConvexPolygonShape3D_nnrv0")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(-2.8213e-07, 0, 1, 0, 1, 0, -1, 0, -2.8213e-07, 0.00143127, 0.918371, -0.000671387)
+shape = SubResource("BoxShape3D_xgsye")
 
 [connection signal="area_entered" from="Area3D" to="Area3D" method="_on_area_entered"]
 [connection signal="area_exited" from="Area3D" to="Area3D" method="_on_area_exited"]

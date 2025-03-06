@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://ccluuofosbbi5"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_i47no"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_i47no"]
 [ext_resource type="Texture2D" uid="uid://cdr5vcp6233fw" path="res://sprites/Catchables/shell.png" id="1_k4j0n"]
 [ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="1_no2at"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="2_4uf3p"]
 [ext_resource type="PackedScene" uid="uid://dws6xxw4qydik" path="res://objects/Catchables/shell.tscn" id="3_ik20j"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_qckb3"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="5_qckb3"]
 [ext_resource type="Resource" uid="uid://dhld2ow8uhn80" path="res://scripts/Resources/Regions/BeachGround.tres" id="6_gs8n6"]
 
 [resource]

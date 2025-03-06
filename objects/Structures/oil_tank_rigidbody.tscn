@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cmpyaw5yxt3rj"]
 
-[ext_resource type="Script" path="res://scripts/oil_tank.gd" id="1_2u0qf"]
+[ext_resource type="Script" uid="uid://bp4xhjl04m7rp" path="res://scripts/oil_tank.gd" id="1_2u0qf"]
 [ext_resource type="PackedScene" uid="uid://458ch0fetad6" path="res://objects/Structures/oil_tank.tscn" id="1_7ffub"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6j2aa"]

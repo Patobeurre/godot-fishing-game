@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://632hi1oildxm"]
 
-[ext_resource type="Script" path="res://scripts/Tile.gd" id="1_8kb67"]
+[ext_resource type="Script" uid="uid://cvgbeudd7okys" path="res://scripts/Tile.gd" id="1_8kb67"]
 [ext_resource type="PackedScene" uid="uid://bc38f8x45kglo" path="res://models/Decorations/path_rocks.glb" id="3_628p1"]
 [ext_resource type="PackedScene" uid="uid://dphlxn03hhh1k" path="res://objects/Tiles/Base meshes/tile_base_fountain.tscn" id="4_1p2j2"]
 [ext_resource type="PackedScene" uid="uid://cqg071ykeo6d5" path="res://models/Decorations/bush_straight.glb" id="4_d8cla"]

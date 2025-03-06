@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://7dtt4lrqv2bn"]
 
 [ext_resource type="Texture2D" uid="uid://d3jtjl81kb80f" path="res://sprites/hit_debug.png" id="1_g36ma"]
-[ext_resource type="Script" path="res://sprites/hit_debug.gd" id="2_irreu"]
+[ext_resource type="Script" uid="uid://b2deljrj3v83q" path="res://sprites/hit_debug.gd" id="2_irreu"]
 
 [node name="HitDebug" type="Sprite3D"]
 billboard = 1

@@ -1,20 +1,20 @@
 [gd_scene load_steps=18 format=3 uid="uid://ia0ln5qh1cxr"]
 
 [ext_resource type="Texture2D" uid="uid://bqrqrntcjgd5q" path="res://materials/GAP_Fire_Textures/Flare00.PNG" id="1_bcqt3"]
-[ext_resource type="Script" path="res://materials/blast.gd" id="1_kdknc"]
+[ext_resource type="Script" uid="uid://vcv3e2xfn02w" path="res://materials/blast.gd" id="1_kdknc"]
 
 [sub_resource type="Curve" id="Curve_0p7ge"]
-max_value = 5.0
+_limits = [0.0, 5.0, 0.0, 1.0]
 _data = [Vector2(0, 2.03297), 0.0, 0.0, 0, 0, Vector2(0.497758, 5), 0.0, 0.0, 0, 0, Vector2(1, 1.04396), 0.0, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="Curve" id="Curve_u3y05"]
-max_value = 5.0
+_limits = [0.0, 5.0, 0.0, 1.0]
 _data = [Vector2(0, 2.03297), 0.0, 0.0, 0, 0, Vector2(0.502242, 5), 0.0, 0.0, 0, 0, Vector2(1, 1.04396), 0.0, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="Curve" id="Curve_mpjln"]
-max_value = 5.0
+_limits = [0.0, 5.0, 0.0, 1.0]
 _data = [Vector2(0, 2.03297), 0.0, 0.0, 0, 0, Vector2(0.493274, 5), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 3
 

@@ -1,13 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://dxvvlck8lej3f"]
+[gd_scene load_steps=18 format=3 uid="uid://dxvvlck8lej3f"]
 
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_q8fpv"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_elriq"]
-[ext_resource type="Script" path="res://scripts/hud.gd" id="3_s8mkj"]
+[ext_resource type="Script" uid="uid://qbib3sntukhp" path="res://scripts/weapon.gd" id="2_trceg"]
+[ext_resource type="Script" uid="uid://f12vlpqfe2st" path="res://scripts/hud.gd" id="3_s8mkj"]
 [ext_resource type="Resource" uid="uid://c56y8pqoyk15f" path="res://weapons/blaster.tres" id="3_vbaye"]
 [ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="3_w27de"]
 [ext_resource type="Resource" uid="uid://cu2gtxlcmbb34" path="res://weapons/blaster-repeater.tres" id="4_n3adj"]
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="6_luhjm"]
-[ext_resource type="Script" path="res://scripts/ennemies_agent.gd" id="7_2xxl4"]
+[ext_resource type="Script" uid="uid://cs1g8srocyig" path="res://scripts/ennemies_agent.gd" id="7_2xxl4"]
 [ext_resource type="PackedScene" uid="uid://d2g78tpqbyf5g" path="res://objects/enemy.tscn" id="8_7ty2f"]
 [ext_resource type="PackedScene" uid="uid://uuiuhl1tnd24" path="res://models/tile_center.tscn" id="12_2ivth"]
 [ext_resource type="PackedScene" uid="uid://blclbjg7bi6bp" path="res://models/tile_center_wireframe.tscn" id="12_rehpf"]
@@ -32,7 +33,7 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 
 [node name="Player" parent="." node_paths=PackedStringArray("crosshair") instance=ExtResource("2_elriq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.24947, 5.35085, 4.37957)
-weapons = Array[Resource("res://scripts/weapon.gd")]([ExtResource("3_vbaye"), ExtResource("4_n3adj")])
+weapons = Array[ExtResource("2_trceg")]([ExtResource("3_vbaye"), ExtResource("4_n3adj")])
 crosshair = NodePath("../HUD/Crosshair")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]

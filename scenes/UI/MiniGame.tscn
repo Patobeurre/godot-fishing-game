@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b88kavwu3knbt"]
 
-[ext_resource type="Script" path="res://scripts/UI/FishingMiniGameUI.gd" id="1_g5jmr"]
-[ext_resource type="Shader" path="res://materials/blurry.gdshader" id="2_urkin"]
+[ext_resource type="Script" uid="uid://dg6dcsrhv5wvx" path="res://scripts/UI/FishingMiniGameUI.gd" id="1_g5jmr"]
+[ext_resource type="Shader" uid="uid://bsw3rg83fygfg" path="res://materials/blurry.gdshader" id="2_urkin"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oybu7"]
 shader = ExtResource("2_urkin")

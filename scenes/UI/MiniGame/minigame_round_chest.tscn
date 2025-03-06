@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://bs1oooukq4ki7"]
 
-[ext_resource type="Script" path="res://scenes/UI/MiniGame/minigame_round_chest.gd" id="1_f8s1c"]
+[ext_resource type="Script" uid="uid://6fh34jc8snwf" path="res://scenes/UI/MiniGame/minigame_round_chest.gd" id="1_f8s1c"]
 [ext_resource type="Texture2D" uid="uid://yeonmnvlpp60" path="res://sprites/UI/Minigame/key_hole.png" id="2_f08r7"]
 [ext_resource type="Texture2D" uid="uid://b5fi7vkkdvuoc" path="res://sprites/UI/Minigame/round_container.png" id="2_wx4aq"]
 [ext_resource type="Texture2D" uid="uid://cja3gugnjwadf" path="res://sprites/UI/Minigame/key.png" id="3_r7w83"]
 [ext_resource type="Texture2D" uid="uid://dv6mohrvqtin0" path="res://sprites/fishing_game_bar.png" id="5_fxjhd"]
-[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="6_v3hr0"]
-[ext_resource type="Script" path="res://scripts/MiniGameSM/ChestSM/default_state.gd" id="7_r7tnh"]
-[ext_resource type="Script" path="res://scripts/MiniGameSM/ChestSM/on_animation_state.gd" id="8_mra0s"]
+[ext_resource type="Script" uid="uid://bxhxf8txsoe2d" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="6_v3hr0"]
+[ext_resource type="Script" uid="uid://b455sxq1f7g4d" path="res://scripts/MiniGameSM/ChestSM/default_state.gd" id="7_r7tnh"]
+[ext_resource type="Script" uid="uid://kydtlkss5mhy" path="res://scripts/MiniGameSM/ChestSM/on_animation_state.gd" id="8_mra0s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f0003"]
 size = Vector2(49.1666, 26)

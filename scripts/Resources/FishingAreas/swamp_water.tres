@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="FishingAreaRes" load_steps=6 format=3 uid="uid://xvgdh2dnb86p"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_2g3o2"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_2g3o2"]
 [ext_resource type="Resource" uid="uid://0p05cl1jeynr" path="res://scripts/Resources/Catchables/Fishes/SmallFish.tres" id="2_kme3k"]
-[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="2_od0iu"]
+[ext_resource type="Script" uid="uid://bd05gpo7c08r0" path="res://scripts/Resources/FishingAreaRes.gd" id="2_od0iu"]
 [ext_resource type="Resource" uid="uid://ot25y882xj1f" path="res://scripts/Resources/Catchables/Tree/Stick.tres" id="3_8ji1u"]
 [ext_resource type="Resource" uid="uid://5hdu1q8j5531" path="res://scripts/Resources/Regions/Swamp.tres" id="4_naekt"]
 

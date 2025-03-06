@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bfx6epnty8fhg"]
 
 [ext_resource type="PackedScene" uid="uid://cm0le5b2va0g4" path="res://models/Decorations/oak.glb" id="1_i38hj"]
-[ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_p181s"]
+[ext_resource type="Script" uid="uid://cg4o8uo73nag3" path="res://scripts/fishing_area.gd" id="2_p181s"]
 [ext_resource type="Resource" uid="uid://sr6j6sdqibtl" path="res://scripts/Resources/FishingAreas/oak_foliage.tres" id="3_rvnlo"]
 [ext_resource type="Resource" uid="uid://b6frau4btkggp" path="res://scripts/Resources/FishingAreas/oak_trunk.tres" id="4_ox1qw"]
 

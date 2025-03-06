@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=3 format=3 uid="uid://cd6t38lg7vmoq"]
 
 [ext_resource type="Resource" uid="uid://c1af81d13ra1f" path="res://scripts/Resources/Catchables/Fishes/Eel.tres" id="1_430vi"]
-[ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_w71sp"]
+[ext_resource type="Script" uid="uid://5572njcfs6rk" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_w71sp"]
 
 [resource]
 script = ExtResource("1_w71sp")

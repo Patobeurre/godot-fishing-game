@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dgw7oq2r0wcu6" path="res://objects/UI/btn_region_filter.tscn" id="1_52cvp"]
 [ext_resource type="Texture2D" uid="uid://cue0akjttcjio" path="res://sprites/UI/kenney_ui-pack/PNG/Grey/Double/button_rectangle_depth_gradient.png" id="2_cfos2"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="3_3g5ca"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="3_3g5ca"]
 [ext_resource type="Resource" uid="uid://bwrdv60ecb3rv" path="res://scripts/Resources/Regions/Beach.tres" id="4_17rpd"]
 [ext_resource type="Resource" uid="uid://dhld2ow8uhn80" path="res://scripts/Resources/Regions/BeachGround.tres" id="5_ny3wb"]
 [ext_resource type="Texture2D" uid="uid://ch74gsei43q3c" path="res://sprites/UI/region buttons/btn_beach.png" id="6_xlkpe"]

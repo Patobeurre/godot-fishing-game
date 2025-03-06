@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://bej7o5giqs7pv"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_jcfdj"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_o8epq"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_o8epq"]
 [ext_resource type="Texture2D" uid="uid://b4ocoyslqwo1a" path="res://sprites/Catchables/Fishes/radarfish.png" id="2_rl7s1"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="4_em03k"]
 [ext_resource type="PackedScene" uid="uid://dg3a5x5pb0oii" path="res://objects/Catchables/Fishes/radar_fish.tscn" id="5_04gm1"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_8irqr"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="5_8irqr"]
 [ext_resource type="Resource" uid="uid://dtv2pu6qgth1j" path="res://scripts/Resources/Regions/River.tres" id="6_oniwb"]
 
 [resource]

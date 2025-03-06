@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bvojrj742252m"]
 
-[ext_resource type="Script" path="res://scripts/test_rope/rope.gd" id="1_di0y7"]
-[ext_resource type="Script" path="res://scripts/test_rope/end.gd" id="1_lfq8j"]
+[ext_resource type="Script" uid="uid://7fp1rjuvlv3" path="res://scripts/test_rope/rope.gd" id="1_di0y7"]
+[ext_resource type="Script" uid="uid://k7uu8d035juc" path="res://scripts/test_rope/end.gd" id="1_lfq8j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1gga"]
 

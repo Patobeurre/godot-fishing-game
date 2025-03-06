@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://hgj47b8kfi7j"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_avhfx"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_mavdq"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_mavdq"]
 [ext_resource type="Texture2D" uid="uid://oyyac0dido4o" path="res://sprites/Catchables/Fishes/sea_urchin.png" id="2_q2p02"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="3_48cbk"]
 [ext_resource type="PackedScene" uid="uid://co0wky0yojob1" path="res://objects/Catchables/Fishes/sea_urchin.tscn" id="4_3xh74"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_kbblq"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="5_kbblq"]
 [ext_resource type="Resource" uid="uid://dkhuqkephtd2b" path="res://scripts/Resources/Regions/Reef.tres" id="6_rbw4r"]
 [ext_resource type="Resource" uid="uid://fwr3ntued7gc" path="res://scripts/Resources/Regions/ReefGround.tres" id="7_w6gic"]
 

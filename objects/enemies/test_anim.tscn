@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://cgtnphnrnow2r"]
 
 [ext_resource type="PackedScene" uid="uid://cj51g6iwjr8fm" path="res://objects/enemies/test_anim.glb" id="1_7u08g"]
-[ext_resource type="Script" path="res://objects/enemies/head.gd" id="2_3g5pb"]
-[ext_resource type="Script" path="res://objects/enemies/bodyshot.gd" id="2_bwwxj"]
+[ext_resource type="Script" uid="uid://boaugljyrmpr2" path="res://objects/enemies/head.gd" id="2_3g5pb"]
+[ext_resource type="Script" uid="uid://dg81gvq52cyah" path="res://objects/enemies/bodyshot.gd" id="2_bwwxj"]
 [ext_resource type="Material" uid="uid://b6l8i5v3dexay" path="res://materials/base_surface.tres" id="2_m4br1"]
 [ext_resource type="Material" uid="uid://mi4biohw11xn" path="res://materials/digit.tres" id="4_55ktm"]
 

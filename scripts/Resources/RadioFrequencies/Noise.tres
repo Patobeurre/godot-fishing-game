@@ -1,8 +1,7 @@
 [gd_resource type="CurveTexture" load_steps=2 format=3 uid="uid://dkk665x7yqg1q"]
 
 [sub_resource type="Curve" id="Curve_cj1cv"]
-min_value = -80.0
-max_value = -10.0
+_limits = [-80.0, -10.0, 0.0, 1.0]
 _data = [Vector2(0, -80), 0.0, 0.0, 0, 0, Vector2(0.05, -20), 0.0, 0.0, 0, 0, Vector2(0.26, -40), -425.478, -425.478, 0, 0, Vector2(0.300429, -80), 0.0, 0.0, 0, 0, Vector2(0.34, -40), 670.607, 670.607, 0, 0, Vector2(0.46, -40), -614.348, -614.348, 0, 0, Vector2(0.5, -80), 0.0, 0.0, 0, 0, Vector2(0.54, -40), 496.323, 496.323, 0, 0, Vector2(0.65, -20), 0.0, 0.0, 0, 0, Vector2(1, -20), 0.0, 0.0, 0, 0]
 point_count = 10
 

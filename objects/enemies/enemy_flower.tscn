@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://i8r3w3yug1n4"]
 
 [ext_resource type="PackedScene" uid="uid://cgtnphnrnow2r" path="res://objects/enemies/test_anim.tscn" id="1_cpxps"]
-[ext_resource type="Script" path="res://scripts/enemy_flower.gd" id="1_y1f5t"]
+[ext_resource type="Script" uid="uid://dg6gaq6lwlsb" path="res://scripts/enemy_flower.gd" id="1_y1f5t"]
 [ext_resource type="Material" uid="uid://mi4biohw11xn" path="res://materials/digit.tres" id="3_16uc4"]
-[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_vks5n"]
-[ext_resource type="Script" path="res://scripts/EnnemySM/DefaultState.gd" id="5_e5mpk"]
-[ext_resource type="Script" path="res://scripts/EnnemySM/AttackShootState.gd" id="6_6cbm0"]
+[ext_resource type="Script" uid="uid://bxhxf8txsoe2d" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_vks5n"]
+[ext_resource type="Script" uid="uid://bwx01uddtjgcj" path="res://scripts/EnnemySM/DefaultState.gd" id="5_e5mpk"]
+[ext_resource type="Script" uid="uid://bgrm2qx22p76u" path="res://scripts/EnnemySM/AttackShootState.gd" id="6_6cbm0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hsmtb"]
 size = Vector3(0.359131, 1, 0.370392)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dsifrnd61vw21"]
 
 [ext_resource type="PackedScene" uid="uid://cln8081qccp3f" path="res://models/Structures/skyscraper_floor.glb" id="1_0wbdn"]
-[ext_resource type="Script" path="res://scripts/City/skyscraper_floor.gd" id="2_guj85"]
+[ext_resource type="Script" uid="uid://ltlw0io4jn6" path="res://scripts/City/skyscraper_floor.gd" id="2_guj85"]
 
 [node name="skyscraper_floor" instance=ExtResource("1_0wbdn")]
 script = ExtResource("2_guj85")

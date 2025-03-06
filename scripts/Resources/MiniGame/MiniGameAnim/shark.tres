@@ -1,11 +1,10 @@
 [gd_resource type="Resource" script_class="MinigameAnimRes" load_steps=7 format=3 uid="uid://dacf38jmvo3u5"]
 
-[ext_resource type="Script" path="res://scripts/Resources/MiniGame/MiniGameAnim/minigame_anim_res.gd" id="1_7bjqj"]
+[ext_resource type="Script" uid="uid://kbyvhowjyvsf" path="res://scripts/Resources/MiniGame/MiniGameAnim/minigame_anim_res.gd" id="1_7bjqj"]
 [ext_resource type="PackedScene" uid="uid://db6gty7peyktv" path="res://scenes/UI/MiniGame/minigame_horizontal_bar.tscn" id="1_ypmi8"]
 
 [sub_resource type="Curve" id="Curve_n84ic"]
-min_value = -100.0
-max_value = 100.0
+_limits = [-100.0, 100.0, 0.0, 1.0]
 _data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(0.166667, -100), 0.0, 0.0, 0, 0, Vector2(0.224638, -58.1602), 0.0, 0.0, 0, 0, Vector2(0.278986, -58.1602), 0.0, 0.0, 0, 0, Vector2(0.344203, -100), 0.0, 0.0, 0, 0, Vector2(0.431159, -100), 0.0, 0.0, 0, 0, Vector2(0.608696, 100), 0.0, 0.0, 0, 0, Vector2(0.67029, 59.4956), 0.0, 0.0, 0, 0, Vector2(0.73913, 59.4956), 0.0, 0.0, 0, 0, Vector2(0.793478, 100), 0.0, 0.0, 0, 0, Vector2(0.855072, 100), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 12
 
@@ -13,8 +12,7 @@ point_count = 12
 curve = SubResource("Curve_n84ic")
 
 [sub_resource type="Curve" id="Curve_kqbnf"]
-min_value = 40.0
-max_value = 200.0
+_limits = [0.99, 200.0, 0.0, 1.0]
 _data = [Vector2(0, 100), 0.0, 0.0, 0, 0, Vector2(0.1, 75), 0.0, 0.0, 0, 0, Vector2(0.25, 40), 0.0, 0.0, 0, 0, Vector2(0.45, 100), 0.0, 0.0, 0, 0, Vector2(0.55, 75), 0.0, 0.0, 0, 0, Vector2(0.7, 40), 0.0, 0.0, 0, 0, Vector2(0.95, 100), 0.0, 0.0, 0, 0]
 point_count = 7
 

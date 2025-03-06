@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://duregve5lp1xp"]
 
 [ext_resource type="PackedScene" uid="uid://vdy8loabq7mv" path="res://models/Structures/sealed_door.glb" id="1_jhj68"]
-[ext_resource type="Script" path="res://scripts/SealedDoorSM/sealed_door.gd" id="2_1lpk4"]
-[ext_resource type="Script" path="res://scripts/SealedDoorSM/sealed_door_symbol.gd" id="3_1756q"]
-[ext_resource type="Script" path="res://scripts/Interactable.gd" id="3_ujtc5"]
-[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_om7b5"]
-[ext_resource type="Script" path="res://scripts/SealedDoorSM/default_state.gd" id="5_b4cdj"]
-[ext_resource type="Script" path="res://scripts/SealedDoorSM/dragged_state.gd" id="6_sfaui"]
+[ext_resource type="Script" uid="uid://6gwt4mp32hob" path="res://scripts/SealedDoorSM/sealed_door.gd" id="2_1lpk4"]
+[ext_resource type="Script" uid="uid://bfdxtwgi6518g" path="res://scripts/SealedDoorSM/sealed_door_symbol.gd" id="3_1756q"]
+[ext_resource type="Script" uid="uid://bnuniyrqoyyvp" path="res://scripts/Interactable.gd" id="3_ujtc5"]
+[ext_resource type="Script" uid="uid://bxhxf8txsoe2d" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_om7b5"]
+[ext_resource type="Script" uid="uid://dcof8jq8jhle3" path="res://scripts/SealedDoorSM/default_state.gd" id="5_b4cdj"]
+[ext_resource type="Script" uid="uid://ccl2fsvlepfft" path="res://scripts/SealedDoorSM/dragged_state.gd" id="6_sfaui"]
 
 [node name="sealed_door" instance=ExtResource("1_jhj68")]
 transform = Transform3D(0.6, 0, 8.94072e-08, 0, 0.6, 0, -8.94072e-08, 0, 0.6, 0, 0, 0)

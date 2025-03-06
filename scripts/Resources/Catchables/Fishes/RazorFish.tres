@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=10 format=3 uid="uid://be7qy8t7n18bb"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_3bxo3"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_3bxo3"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_ojrv5"]
 [ext_resource type="Texture2D" uid="uid://7ui7ibblphcs" path="res://sprites/Catchables/Fishes/razorfish.png" id="2_fqemp"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="2_mjs7l"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="2_mjs7l"]
 [ext_resource type="Resource" uid="uid://ddepi6wvt10p6" path="res://scripts/Resources/Catchables/SeaWeed.tres" id="5_fw28h"]
 [ext_resource type="Resource" uid="uid://hgj47b8kfi7j" path="res://scripts/Resources/Catchables/Fishes/SeaUrchin.tres" id="6_ir6lc"]
 [ext_resource type="Resource" uid="uid://5hdu1q8j5531" path="res://scripts/Resources/Regions/Swamp.tres" id="6_k31pp"]

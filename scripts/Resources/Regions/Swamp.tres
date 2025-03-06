@@ -1,9 +1,8 @@
 [gd_resource type="Resource" script_class="RegionRes" load_steps=2 format=3 uid="uid://5hdu1q8j5531"]
 
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="1_74xu8"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="1_74xu8"]
 
 [resource]
 script = ExtResource("1_74xu8")
 name = "FA_SWAMP"
 color = Color(0.454902, 0.521569, 0, 1)
-text_color = Color(1, 1, 1, 1)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ded1b5nlt5x52"]
 
 [ext_resource type="Texture2D" uid="uid://cl0p7puv65ied" path="res://sprites/wave_part.png" id="1_mkhwa"]
-[ext_resource type="Script" path="res://objects/UI/wave_part.gd" id="1_ww7s6"]
+[ext_resource type="Script" uid="uid://tiw517pkdsmk" path="res://objects/UI/wave_part.gd" id="1_ww7s6"]
 
 [sub_resource type="Animation" id="Animation_4ssha"]
 length = 0.001
@@ -179,8 +179,8 @@ tracks/6/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nr3l6"]
 _data = {
-"RESET": SubResource("Animation_4ssha"),
-"grow": SubResource("Animation_dyh6d")
+&"RESET": SubResource("Animation_4ssha"),
+&"grow": SubResource("Animation_dyh6d")
 }
 
 [node name="WavePart" type="Area2D"]

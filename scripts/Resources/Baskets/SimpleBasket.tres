@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="BasketTypeRes" load_steps=4 format=3 uid="uid://bgtvhe3m28kdr"]
 
 [ext_resource type="Texture2D" uid="uid://dnwkudatwj6u5" path="res://sprites/simple_basket.png" id="1_1y0mi"]
-[ext_resource type="Script" path="res://scripts/Resources/Baskets/basket_type_res.gd" id="1_2ahbg"]
+[ext_resource type="Script" uid="uid://cy7mess8hjicf" path="res://scripts/Resources/Baskets/basket_type_res.gd" id="1_2ahbg"]
 [ext_resource type="PackedScene" uid="uid://btnlscykas6ss" path="res://objects/Baskets/basket.tscn" id="2_wc3n0"]
 
 [resource]

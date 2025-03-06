@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://db6gty7peyktv"]
 
-[ext_resource type="Script" path="res://scenes/UI/MiniGame/minigame_horizontal_bar.gd" id="1_jj2g0"]
+[ext_resource type="Script" uid="uid://dykumllfs5e3b" path="res://scenes/UI/MiniGame/minigame_horizontal_bar.gd" id="1_jj2g0"]
 [ext_resource type="Texture2D" uid="uid://du5mfy6basyuo" path="res://sprites/fishing_game_ui.png" id="2_jnt8u"]
 [ext_resource type="Texture2D" uid="uid://cwvl37r0okmxa" path="res://sprites/fishing_game_cursor.png" id="3_j1xr5"]
-[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_071jb"]
-[ext_resource type="Script" path="res://scripts/MiniGameSM/DefaultState.gd" id="5_emwdx"]
-[ext_resource type="Script" path="res://scripts/MiniGameSM/MovingBarState.gd" id="6_sxove"]
+[ext_resource type="Script" uid="uid://bxhxf8txsoe2d" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_071jb"]
+[ext_resource type="Script" uid="uid://bi0t6a674odr2" path="res://scripts/MiniGameSM/DefaultState.gd" id="5_emwdx"]
+[ext_resource type="Script" uid="uid://df1o31i10vgvr" path="res://scripts/MiniGameSM/MovingBarState.gd" id="6_sxove"]
 [ext_resource type="AudioStream" uid="uid://1qu0blhejsy1" path="res://sounds/FishEffectsComplete/reel.wav" id="7_85e5k"]
-[ext_resource type="Script" path="res://scripts/MiniGameSM/MovingCursorState.gd" id="8_vtje5"]
-[ext_resource type="Script" path="res://scripts/MiniGameSM/AnimatedBarState.gd" id="9_roi2a"]
-[ext_resource type="Script" path="res://scripts/MiniGameSM/MovingDotsState.gd" id="10_cioyd"]
+[ext_resource type="Script" uid="uid://c5y4q58pbpmc3" path="res://scripts/MiniGameSM/MovingCursorState.gd" id="8_vtje5"]
+[ext_resource type="Script" uid="uid://dg10wxytu0u0g" path="res://scripts/MiniGameSM/AnimatedBarState.gd" id="9_roi2a"]
+[ext_resource type="Script" uid="uid://b8ye4t3ycgrgw" path="res://scripts/MiniGameSM/MovingDotsState.gd" id="10_cioyd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6p1df"]
 size = Vector2(16.6667, 58.3333)

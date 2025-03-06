@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://ddepi6wvt10p6"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_dgct0"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_dgct0"]
 [ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="1_xl4j7"]
 [ext_resource type="Texture2D" uid="uid://day6ycfq8rn1v" path="res://sprites/Catchables/Fishes/seaweed.png" id="2_3j22u"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="3_6afsa"]
 [ext_resource type="PackedScene" uid="uid://dd0j7w4ovcvlw" path="res://objects/Catchables/seaweed.tscn" id="4_ww7t5"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_77foo"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="5_77foo"]
 [ext_resource type="Resource" uid="uid://bwrdv60ecb3rv" path="res://scripts/Resources/Regions/Beach.tres" id="6_oepgh"]
 
 [resource]

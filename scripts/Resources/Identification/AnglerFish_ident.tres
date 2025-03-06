@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=3 format=3 uid="uid://bbo73vrpgv0wm"]
 
 [ext_resource type="Resource" uid="uid://3ovutb4lao07" path="res://scripts/Resources/Catchables/Fishes/Anglerfish.tres" id="1_0ax2j"]
-[ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="2_dwdxs"]
+[ext_resource type="Script" uid="uid://5572njcfs6rk" path="res://scripts/Resources/IdentificationCatchable.gd" id="2_dwdxs"]
 
 [resource]
 script = ExtResource("2_dwdxs")

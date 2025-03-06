@@ -1,19 +1,18 @@
 [gd_scene load_steps=17 format=3 uid="uid://dqbthko1jthwh"]
 
-[ext_resource type="Script" path="res://scripts/SharkAreaSM/shark_area.gd" id="1_7gpjf"]
+[ext_resource type="Script" uid="uid://cwd2mlpets8pw" path="res://scripts/SharkAreaSM/shark_area.gd" id="1_7gpjf"]
 [ext_resource type="PackedScene" uid="uid://c58bkyjaals63" path="res://models/Decorations/shark_dorsal.glb" id="1_kstmr"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="2_anaco"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="2_anaco"]
 [ext_resource type="Resource" uid="uid://cdinhdv0bl53j" path="res://scripts/Resources/Catchables/Fishes/Shark.tres" id="3_1kpb3"]
 [ext_resource type="Resource" uid="uid://bq7rfd0awtdhf" path="res://scripts/Resources/Catchables/Fishes/HammerShark.tres" id="4_rgpdx"]
-[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="5_bmlv8"]
-[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="7_4ep7s"]
-[ext_resource type="Script" path="res://scripts/SharkAreaSM/catching_state.gd" id="9_h0m2g"]
-[ext_resource type="Script" path="res://scripts/SharkAreaSM/retreive_position_state.gd" id="10_ff3eu"]
-[ext_resource type="Script" path="res://scripts/SharkAreaSM/default_orbiting_state.gd" id="12_qtqvx"]
+[ext_resource type="Script" uid="uid://bd05gpo7c08r0" path="res://scripts/Resources/FishingAreaRes.gd" id="5_bmlv8"]
+[ext_resource type="Script" uid="uid://bxhxf8txsoe2d" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="7_4ep7s"]
+[ext_resource type="Script" uid="uid://ce6wuw0wv0b8m" path="res://scripts/SharkAreaSM/catching_state.gd" id="9_h0m2g"]
+[ext_resource type="Script" uid="uid://cod2uh8j3tbvj" path="res://scripts/SharkAreaSM/retreive_position_state.gd" id="10_ff3eu"]
+[ext_resource type="Script" uid="uid://b85tbttwgr0nj" path="res://scripts/SharkAreaSM/default_orbiting_state.gd" id="12_qtqvx"]
 
 [sub_resource type="Resource" id="Resource_s21m3"]
 script = ExtResource("5_bmlv8")
-name = ""
 type = 1
 waiting_time = 3.0
 catchables = Array[ExtResource("2_anaco")]([ExtResource("3_1kpb3"), ExtResource("4_rgpdx")])
@@ -47,9 +46,9 @@ resource_name = "sunk"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2fcv2"]
 _data = {
-"RESET": SubResource("Animation_8m1n1"),
-"emerge": SubResource("Animation_1f5kg"),
-"sunk": SubResource("Animation_buqpl")
+&"RESET": SubResource("Animation_8m1n1"),
+&"emerge": SubResource("Animation_1f5kg"),
+&"sunk": SubResource("Animation_buqpl")
 }
 
 [node name="Node3D" type="Area3D"]

@@ -1,11 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://hj2sqxyfeimm"]
+[gd_scene load_steps=11 format=3 uid="uid://hj2sqxyfeimm"]
 
-[ext_resource type="Script" path="res://scripts/map_genenartion.gd" id="1_glyg1"]
+[ext_resource type="Script" uid="uid://h1iis08nd1ub" path="res://scripts/map_genenartion.gd" id="1_glyg1"]
 [ext_resource type="PackedScene" uid="uid://blclbjg7bi6bp" path="res://models/tile_center_wireframe.tscn" id="2_5e70e"]
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="3_fyd38"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="4_sxlg7"]
 [ext_resource type="Resource" uid="uid://cu2gtxlcmbb34" path="res://weapons/blaster-repeater.tres" id="5_6mryh"]
-[ext_resource type="Script" path="res://scripts/hud.gd" id="6_bhs1i"]
+[ext_resource type="Script" uid="uid://qbib3sntukhp" path="res://scripts/weapon.gd" id="5_pny2a"]
+[ext_resource type="Script" uid="uid://f12vlpqfe2st" path="res://scripts/hud.gd" id="6_bhs1i"]
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="7_mi1eo"]
 [ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="8_y847g"]
 
@@ -28,7 +29,7 @@ environment = ExtResource("3_fyd38")
 [node name="Player" parent="." node_paths=PackedStringArray("crosshair") instance=ExtResource("4_sxlg7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 20, 100)
 movement_speed = 20
-weapons = Array[Resource("res://scripts/weapon.gd")]([ExtResource("5_6mryh")])
+weapons = Array[ExtResource("5_pny2a")]([ExtResource("5_6mryh")])
 crosshair = NodePath("../HUD/Crosshair")
 
 [node name="HUD" type="CanvasLayer" parent="."]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://oimv067a34qr"]
 
-[ext_resource type="Script" path="res://scripts/player_shooter.gd" id="1_e2vt5"]
+[ext_resource type="Script" uid="uid://ch8ou4ke3e5mq" path="res://scripts/player_shooter.gd" id="1_e2vt5"]
 [ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="5_r4pdn"]
-[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="6_tdugg"]
+[ext_resource type="Script" uid="uid://bxhxf8txsoe2d" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="6_tdugg"]
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="18_q8nee"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]

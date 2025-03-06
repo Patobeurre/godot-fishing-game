@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://dvixv20hvw8h3"]
 
-[ext_resource type="Script" path="res://scripts/UI/TimeChanger.gd" id="1_7cw6t"]
+[ext_resource type="Script" uid="uid://c62qk7x5n8t7t" path="res://scripts/UI/TimeChanger.gd" id="1_7cw6t"]
 [ext_resource type="Texture2D" uid="uid://8ggihh27mlrr" path="res://sprites/blob_shadow.png" id="2_8gjxc"]
 [ext_resource type="Texture2D" uid="uid://376kuruoy34p" path="res://sprites/UI/clock/clock_background.png" id="2_l43bl"]
 [ext_resource type="Texture2D" uid="uid://o1euhrx7dop7" path="res://sprites/UI/clock/clock_needle.png" id="3_it2gh"]
-[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_s4gue"]
-[ext_resource type="Script" path="res://scripts/SealedDoorSM/default_state.gd" id="5_yrlca"]
-[ext_resource type="Script" path="res://scripts/SealedDoorSM/dragged_state.gd" id="6_41i7l"]
-[ext_resource type="Script" path="res://scripts/UI/passing_time_state.gd" id="8_ndvdc"]
+[ext_resource type="Script" uid="uid://bxhxf8txsoe2d" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_s4gue"]
+[ext_resource type="Script" uid="uid://dcof8jq8jhle3" path="res://scripts/SealedDoorSM/default_state.gd" id="5_yrlca"]
+[ext_resource type="Script" uid="uid://ccl2fsvlepfft" path="res://scripts/SealedDoorSM/dragged_state.gd" id="6_41i7l"]
+[ext_resource type="Script" uid="uid://3vutsd3mtvsp" path="res://scripts/UI/passing_time_state.gd" id="8_ndvdc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nksjp"]
 size = Vector2(143, 49.9997)

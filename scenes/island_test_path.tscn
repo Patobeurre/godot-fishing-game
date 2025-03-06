@@ -1,7 +1,7 @@
 [gd_scene load_steps=66 format=3 uid="uid://bljwxjxf7scis"]
 
 [ext_resource type="PackedScene" uid="uid://cpyj3we54n0w4" path="res://models/Islands/island_test_path.glb" id="1_ag4d6"]
-[ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_ugmgj"]
+[ext_resource type="Script" uid="uid://cg4o8uo73nag3" path="res://scripts/fishing_area.gd" id="2_ugmgj"]
 [ext_resource type="Resource" uid="uid://c0g2s4k12jfwj" path="res://scripts/Resources/FishingAreas/beach.tres" id="3_kyywm"]
 [ext_resource type="Resource" uid="uid://dsda8e73plwii" path="res://scripts/Resources/FishingAreas/island.tres" id="3_v4p8q"]
 [ext_resource type="Resource" uid="uid://ckkxmebbhktu3" path="res://scripts/Resources/FishingAreas/reef.tres" id="4_nv7ce"]
@@ -9,22 +9,22 @@
 [ext_resource type="PackedScene" uid="uid://bfx6epnty8fhg" path="res://objects/Decorations/oak.tscn" id="7_2jady"]
 [ext_resource type="Resource" uid="uid://csju71d6rfls" path="res://scripts/Resources/FishingAreas/island_A_water.tres" id="8_s215w"]
 [ext_resource type="PackedScene" uid="uid://dt0c5ejymwkkd" path="res://objects/Decorations/oak_orange.tscn" id="9_6h1bf"]
-[ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="9_nclmy"]
+[ext_resource type="Shader" uid="uid://0ai04pklsvpi" path="res://materials/stylized_water.gdshader" id="9_nclmy"]
 [ext_resource type="PackedScene" uid="uid://bi3ihryowa2bv" path="res://objects/Decorations/pine.tscn" id="10_cqvxh"]
 [ext_resource type="PackedScene" uid="uid://r03nc1e8rsjx" path="res://models/Islands/island_water_deep.tscn" id="10_h7v4t"]
 [ext_resource type="PackedScene" uid="uid://b6d1eg7ckaf5o" path="res://objects/terminal_w_screen.tscn" id="11_8kt3m"]
 [ext_resource type="Resource" uid="uid://luwy0n0yhjw0" path="res://scripts/Resources/FishingAreas/beach_water.tres" id="11_fmtda"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="11_rdjfq"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="11_rdjfq"]
 [ext_resource type="PackedScene" uid="uid://5wsxsmap8wpb" path="res://objects/Decorations/twin_trees.tscn" id="12_1f1s5"]
 [ext_resource type="Resource" uid="uid://bwyftdfcsih5o" path="res://scripts/Resources/FishingAreas/reef_water.tres" id="12_eoqe2"]
 [ext_resource type="PackedScene" uid="uid://cj5ta23ek4ni3" path="res://objects/Decorations/stelle_forest.tscn" id="13_gdiaa"]
 [ext_resource type="Resource" uid="uid://dpdrl0ohcty7k" path="res://scripts/Resources/FishingAreas/deep_water.tres" id="13_rsfs4"]
-[ext_resource type="Script" path="res://scripts/chest_area.gd" id="14_s0t0q"]
+[ext_resource type="Script" uid="uid://cqbuvhd5wr5iy" path="res://scripts/chest_area.gd" id="14_s0t0q"]
 [ext_resource type="PackedScene" uid="uid://dfo6rjwsvceum" path="res://objects/Decorations/stelle_reef.tscn" id="14_s4qx7"]
 [ext_resource type="PackedScene" uid="uid://c814n74rnu164" path="res://objects/Decorations/stelle_beach.tscn" id="15_5wqmp"]
 [ext_resource type="Resource" uid="uid://byqduaysqjavb" path="res://scripts/Resources/Catchables/Chest/chest.tres" id="15_u7t32"]
 [ext_resource type="Resource" uid="uid://bxj0i587fl3c6" path="res://scripts/Resources/FishingAreas/cave_water.tres" id="16_c6dmk"]
-[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="16_hbdwo"]
+[ext_resource type="Script" uid="uid://bd05gpo7c08r0" path="res://scripts/Resources/FishingAreaRes.gd" id="16_hbdwo"]
 [ext_resource type="PackedScene" uid="uid://by6sfo8rs3lt0" path="res://objects/Decorations/roots.tscn" id="17_30266"]
 [ext_resource type="PackedScene" uid="uid://tx87nknr18ww" path="res://objects/chest.tscn" id="17_o656k"]
 [ext_resource type="PackedScene" uid="uid://batlao0a2j2mi" path="res://objects/Decorations/weeping_sole.tscn" id="18_n46hk"]
@@ -36,7 +36,7 @@
 [ext_resource type="AudioStream" uid="uid://clto7prcddqvr" path="res://sounds/ambient/nature_ocean_waves_gentle_lap_beach.mp3" id="26_2emjj"]
 [ext_resource type="AudioStream" uid="uid://b8gj5ncbhekta" path="res://sounds/ambient/water_ocean_waves_calm_onto_stoney_beach_and_rocks_001.mp3" id="27_on43m"]
 [ext_resource type="PackedScene" uid="uid://17pakbt4asjj" path="res://objects/Decorations/area_jumping_fish.tscn" id="30_clu7f"]
-[ext_resource type="Script" path="res://scripts/audio_sounds_node.gd" id="31_ebkd6"]
+[ext_resource type="Script" uid="uid://1snwmbd4ity" path="res://scripts/audio_sounds_node.gd" id="31_ebkd6"]
 [ext_resource type="PackedScene" uid="uid://duregve5lp1xp" path="res://objects/Structures/sealed_door.tscn" id="32_08t1t"]
 [ext_resource type="Resource" uid="uid://b4lci13yv4xnb" path="res://scripts/Resources/FishingAreas/flowers.tres" id="38_t2sh7"]
 
@@ -79,6 +79,9 @@ shader_parameter/albedo = Color(0, 0.33467, 0.491748, 1)
 shader_parameter/albedo2 = Color(0, 0.371098, 0.604246, 1)
 shader_parameter/metallic = 0.0
 shader_parameter/roughness = 0.8
+shader_parameter/wave = SubResource("NoiseTexture2D_ul6qt")
+shader_parameter/texture_normal = SubResource("NoiseTexture2D_548kj")
+shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_357dy")
 shader_parameter/wave_direction = Vector2(2, 0)
 shader_parameter/wave_direction2 = Vector2(0, 1)
 shader_parameter/time_scale = 0.025
@@ -92,9 +95,6 @@ shader_parameter/edge_scale = 1.0
 shader_parameter/near = 1.0
 shader_parameter/far = 100.0
 shader_parameter/edge_color = Color(0.446777, 0.446777, 0.446777, 1)
-shader_parameter/wave = SubResource("NoiseTexture2D_ul6qt")
-shader_parameter/texture_normal = SubResource("NoiseTexture2D_548kj")
-shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_357dy")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vppok"]
 
@@ -143,6 +143,9 @@ shader_parameter/albedo = Color(0, 0.33467, 0.491748, 1)
 shader_parameter/albedo2 = Color(0, 0.475, 0.765, 1)
 shader_parameter/metallic = 0.0
 shader_parameter/roughness = 0.6
+shader_parameter/wave = SubResource("NoiseTexture2D_px0xn")
+shader_parameter/texture_normal = SubResource("NoiseTexture2D_nd7ey")
+shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_r2iru")
 shader_parameter/wave_direction = Vector2(2, 0)
 shader_parameter/wave_direction2 = Vector2(0, 1)
 shader_parameter/time_scale = 0.025
@@ -156,9 +159,6 @@ shader_parameter/edge_scale = 1.0
 shader_parameter/near = 1.0
 shader_parameter/far = 100.0
 shader_parameter/edge_color = Color(1, 1, 1, 1)
-shader_parameter/wave = SubResource("NoiseTexture2D_px0xn")
-shader_parameter/texture_normal = SubResource("NoiseTexture2D_nd7ey")
-shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_r2iru")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c07bj"]
 

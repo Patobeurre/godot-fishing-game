@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b064rfbut6nh7"]
 
-[ext_resource type="Script" path="res://scenes/UI/MiniGame/minigame_round_dodge.gd" id="1_52b4c"]
+[ext_resource type="Script" uid="uid://cv0xkvjhdb0j" path="res://scenes/UI/MiniGame/minigame_round_dodge.gd" id="1_52b4c"]
 [ext_resource type="Texture2D" uid="uid://b5fi7vkkdvuoc" path="res://sprites/UI/Minigame/round_container.png" id="2_e0yrx"]
 [ext_resource type="Texture2D" uid="uid://71aersvtbqry" path="res://sprites/Catchables/Fishes/sailfish.png" id="4_3736m"]
 [ext_resource type="Texture2D" uid="uid://dv6mohrvqtin0" path="res://sprites/fishing_game_bar.png" id="5_225hx"]

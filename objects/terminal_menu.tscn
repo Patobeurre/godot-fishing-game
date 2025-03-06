@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://dsv8attwh05bo"]
 
 [ext_resource type="PackedScene" uid="uid://u4w5m3it5vpr" path="res://models/terminal_w_screen.glb" id="1_aoaj3"]
-[ext_resource type="Script" path="res://scripts/terminal.gd" id="2_d7qlu"]
-[ext_resource type="Shader" path="res://materials/outline.gdshader" id="3_6vbbu"]
+[ext_resource type="Script" uid="uid://b7jdgcgwiiar1" path="res://scripts/terminal.gd" id="2_d7qlu"]
+[ext_resource type="Shader" uid="uid://dkwuliel1xyoe" path="res://materials/outline.gdshader" id="3_6vbbu"]
 [ext_resource type="PackedScene" uid="uid://d2qjlgo2edf63" path="res://objects/UI/desktop_main.tscn" id="4_8c7f4"]
 [ext_resource type="Texture2D" uid="uid://brj07ig4vjc2q" path="res://sprites/cursor_terminal.png" id="5_7nlji"]
 [ext_resource type="PackedScene" uid="uid://b6pgo241fg7pc" path="res://objects/UI/Computer/window.tscn" id="5_q375s"]
-[ext_resource type="Shader" path="res://materials/CRT.gdshader" id="6_37e0x"]
+[ext_resource type="Shader" uid="uid://cy13piga0wv5n" path="res://materials/CRT.gdshader" id="6_37e0x"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bj66r"]
 render_priority = 0

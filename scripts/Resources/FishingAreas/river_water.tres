@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="FishingAreaRes" load_steps=9 format=3 uid="uid://baoo6fgvpi464"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_gtyq6"]
-[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="2_iuy0o"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_gtyq6"]
+[ext_resource type="Script" uid="uid://bd05gpo7c08r0" path="res://scripts/Resources/FishingAreaRes.gd" id="2_iuy0o"]
 [ext_resource type="Resource" uid="uid://0p05cl1jeynr" path="res://scripts/Resources/Catchables/Fishes/SmallFish.tres" id="2_upd2l"]
 [ext_resource type="Resource" uid="uid://d0owple0opvxl" path="res://scripts/Resources/Catchables/Fishes/Silurus.tres" id="3_1h72n"]
 [ext_resource type="Resource" uid="uid://d0s8hb0tdrawb" path="res://scripts/Resources/Catchables/Fishes/Flowerfish.tres" id="4_6xahx"]

@@ -1,19 +1,19 @@
 [gd_scene load_steps=36 format=3 uid="uid://dcf5g5ajwmrel"]
 
 [ext_resource type="PackedScene" uid="uid://bogl3gpo24hue" path="res://models/Islands/island_flat.glb" id="1_ks6jh"]
-[ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_t1n5g"]
+[ext_resource type="Script" uid="uid://cg4o8uo73nag3" path="res://scripts/fishing_area.gd" id="2_t1n5g"]
 [ext_resource type="Resource" uid="uid://dsda8e73plwii" path="res://scripts/Resources/FishingAreas/island.tres" id="3_ryn8y"]
 [ext_resource type="Resource" uid="uid://c0g2s4k12jfwj" path="res://scripts/Resources/FishingAreas/beach.tres" id="4_4u4ks"]
 [ext_resource type="PackedScene" uid="uid://bfx6epnty8fhg" path="res://objects/Decorations/oak.tscn" id="4_texjl"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="5_hf3hx"]
-[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="6_3px18"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="5_hf3hx"]
+[ext_resource type="Script" uid="uid://bd05gpo7c08r0" path="res://scripts/Resources/FishingAreaRes.gd" id="6_3px18"]
 [ext_resource type="Resource" uid="uid://c0d4soyvubcj0" path="res://scripts/Resources/Catchables/Fishes/TrueMussels.tres" id="6_o5t8b"]
 [ext_resource type="PackedScene" uid="uid://8y5x0u2e2nvo" path="res://objects/Decorations/rocks_pile.tscn" id="7_p7qxd"]
-[ext_resource type="Script" path="res://scripts/chest_area.gd" id="8_3mm7w"]
+[ext_resource type="Script" uid="uid://cqbuvhd5wr5iy" path="res://scripts/chest_area.gd" id="8_3mm7w"]
 [ext_resource type="Resource" uid="uid://byqduaysqjavb" path="res://scripts/Resources/Catchables/Chest/chest.tres" id="9_krerj"]
 [ext_resource type="PackedScene" uid="uid://tx87nknr18ww" path="res://objects/chest.tscn" id="10_l0yyn"]
 [ext_resource type="Resource" uid="uid://csju71d6rfls" path="res://scripts/Resources/FishingAreas/island_A_water.tres" id="12_awca4"]
-[ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="13_arici"]
+[ext_resource type="Shader" uid="uid://0ai04pklsvpi" path="res://materials/stylized_water.gdshader" id="13_arici"]
 [ext_resource type="PackedScene" uid="uid://r03nc1e8rsjx" path="res://models/Islands/island_water_deep.tscn" id="14_xjgoh"]
 [ext_resource type="Resource" uid="uid://luwy0n0yhjw0" path="res://scripts/Resources/FishingAreas/beach_water.tres" id="15_8xcoo"]
 [ext_resource type="Resource" uid="uid://bwyftdfcsih5o" path="res://scripts/Resources/FishingAreas/reef_water.tres" id="18_j6lcy"]
@@ -76,6 +76,9 @@ shader_parameter/albedo = Color(0, 0.33467, 0.491748, 1)
 shader_parameter/albedo2 = Color(0, 0.475, 0.765, 1)
 shader_parameter/metallic = 0.0
 shader_parameter/roughness = 0.6
+shader_parameter/wave = SubResource("NoiseTexture2D_v8dhg")
+shader_parameter/texture_normal = SubResource("NoiseTexture2D_4ed86")
+shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_agf4k")
 shader_parameter/wave_direction = Vector2(2, 0)
 shader_parameter/wave_direction2 = Vector2(0, 1)
 shader_parameter/time_scale = 0.025
@@ -89,9 +92,6 @@ shader_parameter/edge_scale = 1.0
 shader_parameter/near = 1.0
 shader_parameter/far = 100.0
 shader_parameter/edge_color = Color(1, 1, 1, 1)
-shader_parameter/wave = SubResource("NoiseTexture2D_v8dhg")
-shader_parameter/texture_normal = SubResource("NoiseTexture2D_4ed86")
-shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_agf4k")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gj6hc"]
 

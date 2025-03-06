@@ -15,7 +15,7 @@ tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.0333333, 1, 0, 0.00830255, 0
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_shg5g"]
 _data = {
-"elevation": SubResource("Animation_wsoec")
+&"elevation": SubResource("Animation_wsoec")
 }
 
 [node name="tile_fountain" instance=ExtResource("1_mvkpe")]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://fk7torkrtd4v"]
 
-[ext_resource type="Script" path="res://objects/UI/new_catchable_notification_v2.gd" id="1_cu802"]
+[ext_resource type="Script" uid="uid://daf7d23or5vf6" path="res://objects/UI/new_catchable_notification_v2.gd" id="1_cu802"]
 [ext_resource type="Texture2D" uid="uid://bu8l0k82mtflf" path="res://sprites/star.png" id="1_lt2in"]
 [ext_resource type="Texture2D" uid="uid://8ggihh27mlrr" path="res://sprites/blob_shadow.png" id="2_d0bho"]
 [ext_resource type="Texture2D" uid="uid://cra6bwu35rah3" path="res://sprites/Catchables/Fishes/octopus.png" id="2_yqrh1"]

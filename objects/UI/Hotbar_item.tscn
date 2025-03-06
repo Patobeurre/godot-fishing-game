@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bqs1313ryotje"]
 
-[ext_resource type="Script" path="res://scripts/UI/Components/hotbar_item.gd" id="1_q3t1q"]
+[ext_resource type="Script" uid="uid://cd7ncn378tyrj" path="res://scripts/UI/Components/hotbar_item.gd" id="1_q3t1q"]
 [ext_resource type="Texture2D" uid="uid://lkseiwb1yb1a" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-double.png" id="1_rgt15"]
 [ext_resource type="Texture2D" uid="uid://dnwkudatwj6u5" path="res://sprites/simple_basket.png" id="2_hb8fl"]
 

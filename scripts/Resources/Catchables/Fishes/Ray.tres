@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://bdnjdhsc78l1l"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_dk3gw"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_dk3gw"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_tjuyr"]
 [ext_resource type="Texture2D" uid="uid://bv0osyiq5ma72" path="res://sprites/Catchables/Fishes/ray.png" id="2_deg1j"]
 [ext_resource type="PackedScene" uid="uid://lv6xerrtm24p" path="res://objects/Catchables/Fishes/ray.tscn" id="4_2wujb"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="4_ramhd"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="4_ramhd"]
 [ext_resource type="Resource" uid="uid://b16jgklq2bpkk" path="res://scripts/Resources/Regions/Deep.tres" id="5_fnwlj"]
 
 [resource]

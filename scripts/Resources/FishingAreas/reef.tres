@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="FishingAreaRes" load_steps=7 format=3 uid="uid://ckkxmebbhktu3"]
 
 [ext_resource type="Resource" uid="uid://c0d4soyvubcj0" path="res://scripts/Resources/Catchables/Fishes/TrueMussels.tres" id="1_l43c7"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_rlpfi"]
-[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="2_cja6n"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_rlpfi"]
+[ext_resource type="Script" uid="uid://bd05gpo7c08r0" path="res://scripts/Resources/FishingAreaRes.gd" id="2_cja6n"]
 [ext_resource type="Resource" uid="uid://b6hwf8hmftnpf" path="res://scripts/Resources/Catchables/Anemone.tres" id="2_gbggg"]
 [ext_resource type="Resource" uid="uid://hgj47b8kfi7j" path="res://scripts/Resources/Catchables/Fishes/SeaUrchin.tres" id="4_tc14i"]
 [ext_resource type="Resource" uid="uid://fwr3ntued7gc" path="res://scripts/Resources/Regions/ReefGround.tres" id="5_w3tfd"]

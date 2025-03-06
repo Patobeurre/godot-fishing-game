@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://q70sttoqflew"]
 
-[ext_resource type="Script" path="res://objects/enemies/bodyshot.gd" id="3_fc7qb"]
+[ext_resource type="Script" uid="uid://dg81gvq52cyah" path="res://objects/enemies/bodyshot.gd" id="3_fc7qb"]
 [ext_resource type="Material" uid="uid://mi4biohw11xn" path="res://materials/digit.tres" id="3_fg7tb"]
-[ext_resource type="Script" path="res://objects/enemies/head.gd" id="5_phvwc"]
+[ext_resource type="Script" uid="uid://boaugljyrmpr2" path="res://objects/enemies/head.gd" id="5_phvwc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_5xbg2"]
 

@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://c1af81d13ra1f"]
 
 [ext_resource type="Texture2D" uid="uid://ktitycs2xjbd" path="res://sprites/Catchables/Fishes/eel.png" id="1_bct5f"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_dlws0"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_dlws0"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_lq6ae"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="2_4h4if"]
 [ext_resource type="PackedScene" uid="uid://bnfmmuc36bstu" path="res://objects/Catchables/Fishes/eel.tscn" id="3_tksdn"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_mrh3q"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="5_mrh3q"]
 [ext_resource type="Resource" uid="uid://dkhuqkephtd2b" path="res://scripts/Resources/Regions/Reef.tres" id="6_dflvm"]
 
 [resource]

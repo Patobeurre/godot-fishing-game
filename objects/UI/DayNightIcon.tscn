@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://lpgi0l7bbas2"]
 
 [ext_resource type="Texture2D" uid="uid://bgkqwnurukqem" path="res://sprites/UI/day_night_cycle_icons.png" id="1_t8yvv"]
-[ext_resource type="Script" path="res://objects/UI/day_night_icon.gd" id="2_bulsc"]
+[ext_resource type="Script" uid="uid://qsyvdsqpgvvm" path="res://objects/UI/day_night_icon.gd" id="2_bulsc"]
 
 [node name="NinePatchRect" type="NinePatchRect"]
 custom_minimum_size = Vector2(30, 30)

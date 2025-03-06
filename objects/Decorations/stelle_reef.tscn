@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://dfo6rjwsvceum"]
 
 [ext_resource type="PackedScene" uid="uid://dkd0d4pvs7024" path="res://models/Decorations/stelle_reef.glb" id="1_gxq0k"]
-[ext_resource type="Script" path="res://scripts/stelle.gd" id="2_81a2j"]
-[ext_resource type="Shader" path="res://materials/outline.gdshader" id="3_rscua"]
+[ext_resource type="Script" uid="uid://bosw8njmt78b1" path="res://scripts/stelle.gd" id="2_81a2j"]
+[ext_resource type="Shader" uid="uid://dkwuliel1xyoe" path="res://materials/outline.gdshader" id="3_rscua"]
 [ext_resource type="Shader" uid="uid://mcfmtr4scwpq" path="res://materials/fire_shader.tres" id="4_pswus"]
 [ext_resource type="Texture2D" uid="uid://bqrqrntcjgd5q" path="res://materials/GAP_Fire_Textures/Flare00.PNG" id="5_ea7jg"]
 
@@ -13,10 +13,10 @@ shader = ExtResource("3_rscua")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_41oia"]
 render_priority = 0
 shader = ExtResource("4_pswus")
+shader_parameter/Texture2DParameter = ExtResource("5_ea7jg")
 shader_parameter/DissolveTiling = Vector2(1, 1)
 shader_parameter/DissolveSpeed = Vector2(0, 0)
 shader_parameter/DissolveAmount = 0.1
-shader_parameter/Texture2DParameter = ExtResource("5_ea7jg")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_f1don"]
 emission_shape = 1

@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://ds8oniim37aio"]
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_ogs10"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_qmdo2"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_qmdo2"]
 [ext_resource type="Texture2D" uid="uid://dqhlsag4ferkm" path="res://sprites/Catchables/Fishes/bombfish.png" id="2_mm7gk"]
 [ext_resource type="PackedScene" uid="uid://ctnvtno1easny" path="res://objects/Catchables/Fishes/exploding_fish.tscn" id="3_07jya"]
 [ext_resource type="Resource" uid="uid://b7skhevbmqmuu" path="res://scripts/Resources/Catchables/Pebble.tres" id="4_ox2xp"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_uskj0"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="5_uskj0"]
 [ext_resource type="Resource" uid="uid://dkhuqkephtd2b" path="res://scripts/Resources/Regions/Reef.tres" id="6_xld8e"]
 
 [resource]

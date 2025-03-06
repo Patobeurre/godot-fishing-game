@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://dbcx1cd8ip7yu"]
 
 [ext_resource type="PackedScene" uid="uid://crx04463dftqv" path="res://models/basket_medium.glb" id="1_4jfeu"]
-[ext_resource type="Script" path="res://scripts/basket.gd" id="2_hndqe"]
-[ext_resource type="Script" path="res://scripts/Interactable.gd" id="3_gupcc"]
+[ext_resource type="Script" uid="uid://ckxpstq2e1aad" path="res://scripts/basket.gd" id="2_hndqe"]
+[ext_resource type="Script" uid="uid://bnuniyrqoyyvp" path="res://scripts/Interactable.gd" id="3_gupcc"]
 [ext_resource type="Shader" uid="uid://c52n5cpdlsqf2" path="res://materials/bilboard.tres" id="4_8xjf1"]
 [ext_resource type="Texture2D" uid="uid://b0lrujkw80knu" path="res://sprites/catch_texture.png" id="5_jh7ml"]
 
@@ -16,6 +16,7 @@ points = PackedVector3Array(1, 1, 0.521336, 0.999804, 0.450049, 0.528944, 1, 0.8
 render_priority = 0
 shader = ExtResource("4_8xjf1")
 shader_parameter/Texture2DParameter = ExtResource("5_jh7ml")
+shader_parameter/NoDepth = false
 
 [sub_resource type="QuadMesh" id="QuadMesh_t0ptr"]
 lightmap_size_hint = Vector2i(4, 3)
@@ -67,8 +68,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n5cj3"]
 _data = {
-"RESET": SubResource("Animation_fcuif"),
-"billboard": SubResource("Animation_dc0ey")
+&"RESET": SubResource("Animation_fcuif"),
+&"billboard": SubResource("Animation_dc0ey")
 }
 
 [node name="basket_medium" instance=ExtResource("1_4jfeu")]

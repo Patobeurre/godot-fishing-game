@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cfol5m2msmymx"]
 
 [ext_resource type="PackedScene" uid="uid://d05lqdx5i4p8k" path="res://models/Decorations/mangrove_tree.glb" id="1_hvmno"]
-[ext_resource type="Script" path="res://scripts/fishing_area.gd" id="2_d2juf"]
+[ext_resource type="Script" uid="uid://cg4o8uo73nag3" path="res://scripts/fishing_area.gd" id="2_d2juf"]
 [ext_resource type="Resource" uid="uid://b6frau4btkggp" path="res://scripts/Resources/FishingAreas/oak_trunk.tres" id="3_cq836"]
 [ext_resource type="Resource" uid="uid://sr6j6sdqibtl" path="res://scripts/Resources/FishingAreas/oak_foliage.tres" id="4_8juda"]
 

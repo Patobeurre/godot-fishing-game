@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="FishingAreaRes" load_steps=12 format=3 uid="uid://luwy0n0yhjw0"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_bfp5d"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_bfp5d"]
 [ext_resource type="Resource" uid="uid://ckn0dd4qsktng" path="res://scripts/Resources/Catchables/Fishes/Sole.tres" id="1_j6f7q"]
 [ext_resource type="Resource" uid="uid://d2eanu31fp0x0" path="res://scripts/Resources/Catchables/Fishes/CommonFish.tres" id="2_dglp3"]
 [ext_resource type="Resource" uid="uid://0p05cl1jeynr" path="res://scripts/Resources/Catchables/Fishes/SmallFish.tres" id="3_kurre"]
-[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="4_ahlbq"]
+[ext_resource type="Script" uid="uid://bd05gpo7c08r0" path="res://scripts/Resources/FishingAreaRes.gd" id="4_ahlbq"]
 [ext_resource type="Resource" uid="uid://m3esr6ufsrya" path="res://scripts/Resources/Catchables/Fishes/HermitCrab.tres" id="4_lk623"]
 [ext_resource type="Resource" uid="uid://ddepi6wvt10p6" path="res://scripts/Resources/Catchables/SeaWeed.tres" id="6_t0ihl"]
 [ext_resource type="Resource" uid="uid://ccluuofosbbi5" path="res://scripts/Resources/Catchables/Shell.tres" id="7_hasvr"]

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://dl33kwjn4h4ug"]
 
 [ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="1_5g7nj"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_gx1h5"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_gx1h5"]
 [ext_resource type="Texture2D" uid="uid://dv7x7u01dmar2" path="res://sprites/Catchables/bone.png" id="2_3511w"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="2_l6xle"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="2_l6xle"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="4_s3v2h"]
 [ext_resource type="PackedScene" uid="uid://dryr282rxffgl" path="res://objects/Catchables/bone.tscn" id="5_dbj6n"]
 [ext_resource type="Resource" uid="uid://btlaghw8pufur" path="res://scripts/Resources/Regions/GraveGround.tres" id="6_ky0l0"]

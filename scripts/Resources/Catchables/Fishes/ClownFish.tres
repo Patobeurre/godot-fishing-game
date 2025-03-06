@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=10 format=3 uid="uid://6yh568jbps3l"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_0f58p"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_0f58p"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_eaj3s"]
 [ext_resource type="Texture2D" uid="uid://b7e1hu5dj2kyx" path="res://sprites/Catchables/Fishes/clownfish.png" id="2_r07rk"]
 [ext_resource type="Resource" uid="uid://b6hwf8hmftnpf" path="res://scripts/Resources/Catchables/Anemone.tres" id="3_r6dme"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="4_qys45"]
 [ext_resource type="PackedScene" uid="uid://dtexun5ww3d2k" path="res://objects/Catchables/Fishes/clown_fish.tscn" id="5_74mx1"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="6_pwm2l"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="6_pwm2l"]
 [ext_resource type="Resource" uid="uid://dkhuqkephtd2b" path="res://scripts/Resources/Regions/Reef.tres" id="7_nr0mf"]
 [ext_resource type="Resource" uid="uid://dwijteaf2p6at" path="res://scripts/Resources/Regions/Coast.tres" id="8_kxsvs"]
 

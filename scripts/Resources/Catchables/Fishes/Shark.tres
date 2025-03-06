@@ -2,9 +2,9 @@
 
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_7gyve"]
 [ext_resource type="Texture2D" uid="uid://b6s3ye63l28em" path="res://sprites/Catchables/Fishes/shark.png" id="1_gnjcs"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_nos2u"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_nos2u"]
 [ext_resource type="PackedScene" uid="uid://72tnl0umfs1r" path="res://objects/Catchables/Fishes/shark.tscn" id="2_m6x0l"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="4_dbopr"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="4_dbopr"]
 [ext_resource type="Resource" uid="uid://dacf38jmvo3u5" path="res://scripts/Resources/MiniGame/MiniGameAnim/shark.tres" id="4_jpp2k"]
 [ext_resource type="Resource" uid="uid://dlp3f2lo6klif" path="res://scripts/Resources/Regions/Shark.tres" id="5_5x5pf"]
 

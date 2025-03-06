@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=10 format=3 uid="uid://b4kdes1c7wbcd"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_puopm"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_puopm"]
 [ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="1_ukb8m"]
 [ext_resource type="Texture2D" uid="uid://bd6syyxo841jg" path="res://sprites/Catchables/flower.png" id="2_1erj4"]
 [ext_resource type="Resource" uid="uid://clpf0htwtcdc4" path="res://scripts/Resources/Catchables/Insects/Bee.tres" id="3_2a8eg"]
 [ext_resource type="Resource" uid="uid://dcpvdafn7juyp" path="res://scripts/Resources/Catchables/Insects/Butterfly.tres" id="4_xbfsj"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="6_4oxc4"]
 [ext_resource type="PackedScene" uid="uid://cbsjamylvqinu" path="res://objects/Catchables/flower.tscn" id="6_48d5f"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="7_idtoc"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="7_idtoc"]
 [ext_resource type="Resource" uid="uid://bp5g8fihosob6" path="res://scripts/Resources/Regions/Flowers.tres" id="8_0bvtl"]
 
 [resource]

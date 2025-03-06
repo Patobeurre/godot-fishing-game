@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cxyg0pmqu6sbf"]
 
-[ext_resource type="Script" path="res://scripts/City/city.gd" id="1_iq1r5"]
+[ext_resource type="Script" uid="uid://dg2p8g0rf4rnu" path="res://scripts/City/city.gd" id="1_iq1r5"]
 [ext_resource type="PackedScene" uid="uid://bcx7famjo1lr1" path="res://objects/Structures/Skyscraper.tscn" id="1_kvg4i"]
 
 [node name="City" type="Node3D"]

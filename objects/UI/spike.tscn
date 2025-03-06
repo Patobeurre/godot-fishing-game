@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bqr1fgq46yv30"]
 
-[ext_resource type="Script" path="res://objects/UI/spike.gd" id="1_nk7hn"]
+[ext_resource type="Script" uid="uid://bvamyo6yokhc4" path="res://objects/UI/spike.gd" id="1_nk7hn"]
 [ext_resource type="Texture2D" uid="uid://bhrk7wphcmdc6" path="res://sprites/UI/mask_dark.png" id="2_3ea7p"]
 [ext_resource type="Texture2D" uid="uid://dccqfa6lh2r8d" path="res://sprites/UI/Minigame/amethyst_shard.png" id="3_bmqox"]
 
@@ -136,8 +136,8 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4qhgx"]
 _data = {
-"RESET": SubResource("Animation_hpwnj"),
-"move_spike": SubResource("Animation_jphct")
+&"RESET": SubResource("Animation_hpwnj"),
+&"move_spike": SubResource("Animation_jphct")
 }
 
 [node name="Spike" type="Node2D"]

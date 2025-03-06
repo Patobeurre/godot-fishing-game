@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=3 format=3 uid="uid://b6d0x1ipbejk4"]
 
-[ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_n0wsm"]
+[ext_resource type="Script" uid="uid://5572njcfs6rk" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_n0wsm"]
 [ext_resource type="Resource" uid="uid://bm5o061am665" path="res://scripts/Resources/Catchables/Fishes/Pilchard.tres" id="1_sk7e6"]
 
 [resource]

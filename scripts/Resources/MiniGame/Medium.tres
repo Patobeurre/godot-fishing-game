@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="MiniGameRes" load_steps=2 format=3 uid="uid://0x72inthev6l"]
 
-[ext_resource type="Script" path="res://scripts/Resources/MiniGame/minigame_difficulty_res.gd" id="1_jnx4v"]
+[ext_resource type="Script" uid="uid://cam6ab0mllhbh" path="res://scripts/Resources/MiniGame/minigame_difficulty_res.gd" id="1_jnx4v"]
 
 [resource]
 script = ExtResource("1_jnx4v")

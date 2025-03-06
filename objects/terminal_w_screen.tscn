@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://u4w5m3it5vpr" path="res://models/terminal_w_screen.glb" id="1_h5vuh"]
 [ext_resource type="FontFile" uid="uid://bhx0bwnbe77ci" path="res://fonts/Modeseven-L3n5.ttf" id="2_mfid3"]
-[ext_resource type="Script" path="res://scripts/island_terminal.gd" id="2_qg4x0"]
-[ext_resource type="Shader" path="res://materials/CRT.gdshader" id="3_ugwvq"]
-[ext_resource type="Script" path="res://scripts/Interactable.gd" id="4_fsi3j"]
+[ext_resource type="Script" uid="uid://cbvsey6e6vuoi" path="res://scripts/island_terminal.gd" id="2_qg4x0"]
+[ext_resource type="Shader" uid="uid://cy13piga0wv5n" path="res://materials/CRT.gdshader" id="3_ugwvq"]
+[ext_resource type="Script" uid="uid://bnuniyrqoyyvp" path="res://scripts/Interactable.gd" id="4_fsi3j"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_xv2cq"]
 viewport_path = NodePath("SubViewport")

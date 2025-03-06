@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="FishingAreaRes" load_steps=7 format=3 uid="uid://23idyr7476yr"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_k1uum"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_k1uum"]
 [ext_resource type="Resource" uid="uid://bby1s0rugy260" path="res://scripts/Resources/Catchables/Tree/Pinecone.tres" id="2_54qgl"]
 [ext_resource type="Resource" uid="uid://ot25y882xj1f" path="res://scripts/Resources/Catchables/Tree/Stick.tres" id="3_88245"]
 [ext_resource type="Resource" uid="uid://cx10cu2bnwcgp" path="res://scripts/Resources/Catchables/Tree/Squirel.tres" id="4_yophl"]
-[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="5_7onki"]
+[ext_resource type="Script" uid="uid://bd05gpo7c08r0" path="res://scripts/Resources/FishingAreaRes.gd" id="5_7onki"]
 [ext_resource type="Resource" uid="uid://gjt6uuwk05wv" path="res://scripts/Resources/Regions/Pine.tres" id="5_k7wfw"]
 
 [resource]

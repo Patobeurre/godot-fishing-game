@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="FlyerRes" load_steps=4 format=3 uid="uid://c1tgk0rtylpqb"]
 
 [ext_resource type="Texture2D" uid="uid://d1ovn82noy314" path="res://sprites/Documents/pub_immobilier.png" id="1_6e0hk"]
-[ext_resource type="Script" path="res://scripts/Resources/Documents/Flyer.gd" id="1_asur2"]
+[ext_resource type="Script" uid="uid://ywmjw2olp4yf" path="res://scripts/Resources/Documents/Flyer.gd" id="1_asur2"]
 [ext_resource type="PackedScene" uid="uid://b0ogy101lbpfp" path="res://objects/UI/DocumentFlyer.tscn" id="2_5ip4q"]
 
 [resource]

@@ -1,14 +1,14 @@
 [gd_scene load_steps=18 format=3 uid="uid://blclbjg7bi6bp"]
 
 [ext_resource type="PackedScene" uid="uid://b2158wingfo7f" path="res://models/tile_center.glb" id="1_nlreo"]
-[ext_resource type="Shader" path="res://materials/wireframe.gdshader" id="2_iydst"]
-[ext_resource type="Script" path="res://models/tile_center_wireframe.gd" id="2_pmwhd"]
-[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_sg5vr"]
-[ext_resource type="Script" path="res://scripts/TileSM/DefaultState.gd" id="5_iy600"]
-[ext_resource type="Script" path="res://scripts/TileSM/CompletedState.gd" id="6_3kk0i"]
-[ext_resource type="Shader" path="res://materials/kinetic_pupils.gdshader" id="7_b382f"]
+[ext_resource type="Shader" uid="uid://dosl2afe6yx0j" path="res://materials/wireframe.gdshader" id="2_iydst"]
+[ext_resource type="Script" uid="uid://dnulrspgyf614" path="res://models/tile_center_wireframe.gd" id="2_pmwhd"]
+[ext_resource type="Script" uid="uid://bxhxf8txsoe2d" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_sg5vr"]
+[ext_resource type="Script" uid="uid://cpovosha42t7q" path="res://scripts/TileSM/DefaultState.gd" id="5_iy600"]
+[ext_resource type="Script" uid="uid://dpacw60l4xajn" path="res://scripts/TileSM/CompletedState.gd" id="6_3kk0i"]
+[ext_resource type="Shader" uid="uid://2851a42xr83x" path="res://materials/kinetic_pupils.gdshader" id="7_b382f"]
 [ext_resource type="PackedScene" uid="uid://cr5ar4w70tct6" path="res://scenes/digit_counter_node.tscn" id="8_hyngx"]
-[ext_resource type="Script" path="res://scripts/counters.gd" id="8_njci2"]
+[ext_resource type="Script" uid="uid://d377xadljhw1q" path="res://scripts/counters.gd" id="8_njci2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tsn46"]
 render_priority = 0

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://bj3p382eqnc25"]
 
 [ext_resource type="PackedScene" uid="uid://7ewtcufxb5fd" path="res://models/Decorations/identification_book.glb" id="1_l66o3"]
-[ext_resource type="Script" path="res://scripts/Interactable.gd" id="2_durpi"]
-[ext_resource type="Script" path="res://scripts/identification_book.gd" id="2_fhci8"]
+[ext_resource type="Script" uid="uid://bnuniyrqoyyvp" path="res://scripts/Interactable.gd" id="2_durpi"]
+[ext_resource type="Script" uid="uid://cd8ld7h752m4f" path="res://scripts/identification_book.gd" id="2_fhci8"]
 
 [node name="identification_book" instance=ExtResource("1_l66o3")]
 script = ExtResource("2_fhci8")

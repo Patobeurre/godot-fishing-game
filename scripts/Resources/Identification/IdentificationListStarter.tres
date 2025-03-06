@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="IdentificationList" load_steps=20 format=3 uid="uid://c5c2ib36j572a"]
 
-[ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_p3i1o"]
-[ext_resource type="Script" path="res://scripts/Resources/IdentificationList.gd" id="2_5bvt1"]
+[ext_resource type="Script" uid="uid://5572njcfs6rk" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_p3i1o"]
+[ext_resource type="Script" uid="uid://cx53la2ynmfgw" path="res://scripts/Resources/IdentificationList.gd" id="2_5bvt1"]
 [ext_resource type="Resource" uid="uid://bbo73vrpgv0wm" path="res://scripts/Resources/Identification/AnglerFish_ident.tres" id="2_psmfy"]
 [ext_resource type="Resource" uid="uid://17aidk77sqot" path="res://scripts/Resources/Identification/ClownFish_ident.tres" id="3_nuqlw"]
 [ext_resource type="Resource" uid="uid://q0nfk0g5488" path="res://scripts/Resources/Identification/CommonFish_ident.tres" id="4_pegb1"]

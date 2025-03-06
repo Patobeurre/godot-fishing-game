@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://7m0oyqb331r5"]
 
-[ext_resource type="Script" path="res://scripts/UI/Components/CatchableItem.gd" id="1_4jl6m"]
+[ext_resource type="Script" uid="uid://ddsr1xxm1y4kx" path="res://scripts/UI/Components/CatchableItem.gd" id="1_4jl6m"]
 [ext_resource type="Texture2D" uid="uid://lkseiwb1yb1a" path="res://sprites/UI/kenney_ui-pack-adventure/Spritesheet/spritesheet-double.png" id="2_0uwnl"]
 [ext_resource type="Texture2D" uid="uid://cra6bwu35rah3" path="res://sprites/Catchables/Fishes/octopus.png" id="3_al7v5"]
 

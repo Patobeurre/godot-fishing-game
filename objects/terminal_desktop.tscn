@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://bmxy01yjt70hx"]
 
 [ext_resource type="PackedScene" uid="uid://u4w5m3it5vpr" path="res://models/terminal_w_screen.glb" id="1_fsdlu"]
-[ext_resource type="Script" path="res://scripts/terminal.gd" id="2_8jwuu"]
-[ext_resource type="Shader" path="res://materials/outline.gdshader" id="3_i64vt"]
+[ext_resource type="Script" uid="uid://b7jdgcgwiiar1" path="res://scripts/terminal.gd" id="2_8jwuu"]
+[ext_resource type="Shader" uid="uid://dkwuliel1xyoe" path="res://materials/outline.gdshader" id="3_i64vt"]
 [ext_resource type="FontFile" uid="uid://bhx0bwnbe77ci" path="res://fonts/Modeseven-L3n5.ttf" id="4_b2wdm"]
 [ext_resource type="Texture2D" uid="uid://brj07ig4vjc2q" path="res://sprites/cursor_terminal.png" id="5_sclf2"]
-[ext_resource type="Shader" path="res://materials/CRT.gdshader" id="5_ur2f4"]
+[ext_resource type="Shader" uid="uid://cy13piga0wv5n" path="res://materials/CRT.gdshader" id="5_ur2f4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bj66r"]
 render_priority = 0

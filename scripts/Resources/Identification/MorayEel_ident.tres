@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=3 format=3 uid="uid://bghfn7jj74m74"]
 
-[ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_nomuy"]
+[ext_resource type="Script" uid="uid://5572njcfs6rk" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_nomuy"]
 [ext_resource type="Resource" uid="uid://cx5sdiudeae1t" path="res://scripts/Resources/Catchables/Fishes/MorayEel.tres" id="1_vnrm5"]
 
 [resource]

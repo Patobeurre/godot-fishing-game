@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://dxnjoy2abw8rg" path="res://models/enemy_ground.glb" id="1_7xp6v"]
 [ext_resource type="Material" uid="uid://b6l8i5v3dexay" path="res://materials/base_surface.tres" id="3_a6msh"]
-[ext_resource type="Script" path="res://objects/enemies/bodyshot.gd" id="3_lcd0j"]
-[ext_resource type="Script" path="res://objects/enemies/head.gd" id="3_v1kvk"]
+[ext_resource type="Script" uid="uid://dg81gvq52cyah" path="res://objects/enemies/bodyshot.gd" id="3_lcd0j"]
+[ext_resource type="Script" uid="uid://boaugljyrmpr2" path="res://objects/enemies/head.gd" id="3_v1kvk"]
 [ext_resource type="Material" uid="uid://mi4biohw11xn" path="res://materials/digit.tres" id="4_8huie"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6e2hs"]

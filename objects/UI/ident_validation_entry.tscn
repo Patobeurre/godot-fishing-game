@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bwpkxnq2by1ql"]
 
-[ext_resource type="Script" path="res://scripts/UI/Components/ident_validation_entry.gd" id="1_r0uam"]
+[ext_resource type="Script" uid="uid://bxihfpru65h6k" path="res://scripts/UI/Components/ident_validation_entry.gd" id="1_r0uam"]
 [ext_resource type="Texture2D" uid="uid://cra6bwu35rah3" path="res://sprites/Catchables/Fishes/octopus.png" id="1_u8fbp"]
 
 [node name="HBoxContainer" type="HBoxContainer"]

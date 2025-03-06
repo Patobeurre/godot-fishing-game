@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://ds0clkn0j8opl"]
 
-[ext_resource type="Script" path="res://scripts/fishing_area.gd" id="1_3bwpl"]
+[ext_resource type="Script" uid="uid://cg4o8uo73nag3" path="res://scripts/fishing_area.gd" id="1_3bwpl"]
 [ext_resource type="Resource" uid="uid://csju71d6rfls" path="res://scripts/Resources/FishingAreas/island_A_water.tres" id="2_hr583"]
-[ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="3_2hp5v"]
+[ext_resource type="Shader" uid="uid://0ai04pklsvpi" path="res://materials/stylized_water.gdshader" id="3_2hp5v"]
 [ext_resource type="PackedScene" uid="uid://r03nc1e8rsjx" path="res://models/Islands/island_water_deep.tscn" id="4_lkk7p"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_feswd"]
@@ -41,6 +41,9 @@ shader_parameter/albedo = Color(0, 0.33467, 0.491748, 1)
 shader_parameter/albedo2 = Color(0, 0.475, 0.765, 1)
 shader_parameter/metallic = 0.0
 shader_parameter/roughness = 0.6
+shader_parameter/wave = SubResource("NoiseTexture2D_rs3ak")
+shader_parameter/texture_normal = SubResource("NoiseTexture2D_473c0")
+shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_wamqa")
 shader_parameter/wave_direction = Vector2(2, 0)
 shader_parameter/wave_direction2 = Vector2(0, 1)
 shader_parameter/time_scale = 0.025
@@ -54,9 +57,6 @@ shader_parameter/edge_scale = 1.0
 shader_parameter/near = 1.0
 shader_parameter/far = 100.0
 shader_parameter/edge_color = Color(1, 1, 1, 1)
-shader_parameter/wave = SubResource("NoiseTexture2D_rs3ak")
-shader_parameter/texture_normal = SubResource("NoiseTexture2D_473c0")
-shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_wamqa")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cxmay"]
 

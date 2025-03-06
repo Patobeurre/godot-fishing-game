@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://bm5o061am665"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_1bo17"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_1bo17"]
 [ext_resource type="Texture2D" uid="uid://dfpo70coavqrx" path="res://sprites/Catchables/Fishes/pilchard.png" id="1_mhj16"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_myciu"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="2_tbyv1"]
 [ext_resource type="PackedScene" uid="uid://dsbrgvalqqpsk" path="res://objects/Catchables/Fishes/pilchard.tscn" id="3_j2y2r"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_4atu5"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="5_4atu5"]
 [ext_resource type="Resource" uid="uid://b16jgklq2bpkk" path="res://scripts/Resources/Regions/Deep.tres" id="6_0xw8h"]
 
 [resource]

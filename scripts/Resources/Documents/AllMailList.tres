@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="DocumentList" load_steps=8 format=3 uid="uid://qxf3v1qqjnw4"]
 
-[ext_resource type="Script" path="res://scripts/Resources/Documents/document.gd" id="1_2y5c5"]
-[ext_resource type="Script" path="res://scripts/Resources/all_documents.gd" id="1_4i1ue"]
+[ext_resource type="Script" uid="uid://cu2shmeyvafnx" path="res://scripts/Resources/Documents/document.gd" id="1_2y5c5"]
+[ext_resource type="Script" uid="uid://b8gd0ckxnrlp7" path="res://scripts/Resources/all_documents.gd" id="1_4i1ue"]
 [ext_resource type="Resource" uid="uid://bo50jorenpkf2" path="res://scripts/Resources/Documents/IntroLetter.tres" id="2_7u6pm"]
 [ext_resource type="Resource" uid="uid://hkf52pgr842j" path="res://scripts/Resources/Documents/Mag1.tres" id="3_2bh8p"]
 [ext_resource type="Resource" uid="uid://csb2wkhc88ges" path="res://scripts/Resources/Documents/NewProductFlyer.tres" id="3_pktf2"]

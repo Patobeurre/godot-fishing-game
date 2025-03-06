@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dgw7oq2r0wcu6"]
 
 [ext_resource type="Texture2D" uid="uid://cue0akjttcjio" path="res://sprites/UI/kenney_ui-pack/PNG/Grey/Double/button_rectangle_depth_gradient.png" id="1_7bf2y"]
-[ext_resource type="Script" path="res://objects/UI/btn_region_filter.gd" id="2_oevip"]
+[ext_resource type="Script" uid="uid://crg8f7m40imyq" path="res://objects/UI/btn_region_filter.gd" id="2_oevip"]
 
 [node name="TextureButton" type="TextureButton"]
 custom_minimum_size = Vector2(150, 50)

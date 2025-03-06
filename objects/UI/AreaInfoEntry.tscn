@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c5xb58gno5o6x"]
 
-[ext_resource type="Script" path="res://scripts/UI/Components/AreaInfoEntry.gd" id="1_sgigx"]
+[ext_resource type="Script" uid="uid://d18lxva3o6d2" path="res://scripts/UI/Components/AreaInfoEntry.gd" id="1_sgigx"]
 [ext_resource type="Texture2D" uid="uid://jr4cc0bo5pnd" path="res://sprites/unknown.png" id="2_6mfe8"]
 
 [node name="Panel" type="Panel"]

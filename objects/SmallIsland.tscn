@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dahpw84nqrsxd"]
 
-[ext_resource type="Script" path="res://scripts/small_island.gd" id="1_8l05j"]
+[ext_resource type="Script" uid="uid://csosu28cy0eql" path="res://scripts/small_island.gd" id="1_8l05j"]
 [ext_resource type="PackedScene" uid="uid://bfn5mamim21hs" path="res://objects/Structures/small_island.tscn" id="1_71ihr"]
 [ext_resource type="PackedScene" uid="uid://bi3ihryowa2bv" path="res://objects/Decorations/pine.tscn" id="2_pknhw"]
 [ext_resource type="PackedScene" uid="uid://8y5x0u2e2nvo" path="res://objects/Decorations/rocks_pile.tscn" id="3_5txt6"]

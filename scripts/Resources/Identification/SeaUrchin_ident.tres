@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="IdentificationCatchable" load_steps=3 format=3 uid="uid://xcmwrcwyu4s7"]
 
-[ext_resource type="Script" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_e7po8"]
+[ext_resource type="Script" uid="uid://5572njcfs6rk" path="res://scripts/Resources/IdentificationCatchable.gd" id="1_e7po8"]
 [ext_resource type="Resource" uid="uid://hgj47b8kfi7j" path="res://scripts/Resources/Catchables/Fishes/SeaUrchin.tres" id="1_nva4i"]
 
 [resource]

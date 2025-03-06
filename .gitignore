@@ -19,3 +19,7 @@ build/
 # https://github.com/godotengine/godot/issues/82270
 *~*.TMP
 game_linux
+game.exe
+game.exe
+game.pck
+game.console.exe

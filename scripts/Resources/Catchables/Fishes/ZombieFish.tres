@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://l6ty2sg0k6wr"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_qp0pe"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_qp0pe"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_yrd7e"]
 [ext_resource type="Texture2D" uid="uid://cb7p5ushyk3hc" path="res://sprites/Catchables/Fishes/zombiefish.png" id="2_a3j7k"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="2_xptow"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="2_xptow"]
 [ext_resource type="Resource" uid="uid://dl33kwjn4h4ug" path="res://scripts/Resources/Catchables/Bone.tres" id="4_378p4"]
 [ext_resource type="Resource" uid="uid://5hdu1q8j5531" path="res://scripts/Resources/Regions/Swamp.tres" id="6_y1ejp"]
 [ext_resource type="PackedScene" uid="uid://u5qqpadj35jr" path="res://objects/Catchables/Fishes/zombie_fish.tscn" id="7_1p8ax"]

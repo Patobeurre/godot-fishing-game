@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="MinigameAnimRes" load_steps=6 format=3 uid="uid://55fn1h8n1yfn"]
 
-[ext_resource type="Script" path="res://scripts/Resources/MiniGame/MiniGameAnim/minigame_anim_res.gd" id="1_vohyw"]
+[ext_resource type="Script" uid="uid://kbyvhowjyvsf" path="res://scripts/Resources/MiniGame/MiniGameAnim/minigame_anim_res.gd" id="1_vohyw"]
 
 [sub_resource type="Curve" id="Curve_y1p43"]
-min_value = -100.0
-max_value = 100.0
+_limits = [-100.0, 100.0, 0.0, 1.0]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.182836, 100), 0.0, 0.0, 0, 0, Vector2(0.619403, -100), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 4
 
@@ -12,8 +11,7 @@ point_count = 4
 curve = SubResource("Curve_y1p43")
 
 [sub_resource type="Curve" id="Curve_bjv1e"]
-min_value = 40.0
-max_value = 200.0
+_limits = [0.99, 200.0, 0.0, 1.0]
 _data = [Vector2(0, 40), 0.0, 0.0, 0, 0, Vector2(0.25, 111.014), 0.0, 0.0, 0, 0, Vector2(0.503472, 85.7465), 0.0, 0.0, 0, 0, Vector2(0.847222, 200), 0.0, 0.0, 0, 0, Vector2(1, 40), 0.0, 0.0, 0, 0]
 point_count = 5
 

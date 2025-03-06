@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://b6hwf8hmftnpf"]
 
 [ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="1_bwl80"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_o14k0"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_o14k0"]
 [ext_resource type="Texture2D" uid="uid://d358tvl40vxof" path="res://sprites/Catchables/anemone.png" id="2_3nxba"]
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="3_krs1b"]
 [ext_resource type="PackedScene" uid="uid://dakyhjkvbh4yq" path="res://objects/Catchables/anemone.tscn" id="4_k6pko"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_inklu"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="5_inklu"]
 [ext_resource type="Resource" uid="uid://dkhuqkephtd2b" path="res://scripts/Resources/Regions/Reef.tres" id="6_jsid5"]
 [ext_resource type="Resource" uid="uid://fwr3ntued7gc" path="res://scripts/Resources/Regions/ReefGround.tres" id="7_tp684"]
 

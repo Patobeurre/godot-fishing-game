@@ -1,11 +1,11 @@
 [gd_scene load_steps=26 format=3 uid="uid://5wsxsmap8wpb"]
 
 [ext_resource type="PackedScene" uid="uid://dsmmf7ie3vkc0" path="res://models/Decorations/twin_trees.glb" id="1_tm2yw"]
-[ext_resource type="Script" path="res://objects/Decorations/twin_trees.gd" id="2_obffp"]
-[ext_resource type="Script" path="res://scripts/fishing_area.gd" id="3_y483n"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="4_ji70b"]
+[ext_resource type="Script" uid="uid://bitd7tdp5210m" path="res://objects/Decorations/twin_trees.gd" id="2_obffp"]
+[ext_resource type="Script" uid="uid://cg4o8uo73nag3" path="res://scripts/fishing_area.gd" id="3_y483n"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="4_ji70b"]
 [ext_resource type="Resource" uid="uid://d2eanu31fp0x0" path="res://scripts/Resources/Catchables/Fishes/CommonFish.tres" id="5_7cd7m"]
-[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="6_gfbjt"]
+[ext_resource type="Script" uid="uid://bd05gpo7c08r0" path="res://scripts/Resources/FishingAreaRes.gd" id="6_gfbjt"]
 [ext_resource type="Shader" uid="uid://mcfmtr4scwpq" path="res://materials/fire_shader.tres" id="7_aoyb4"]
 [ext_resource type="Texture2D" uid="uid://bp5gw5mgprb0f" path="res://materials/GAP_Fire_Textures/Voronoi01.png" id="8_pqs2u"]
 [ext_resource type="Texture2D" uid="uid://bviyiiar7pp3c" path="res://materials/GAP_Fire_Textures/Flame02.png" id="9_b1d3o"]
@@ -31,7 +31,6 @@ height = 2.0
 
 [sub_resource type="Resource" id="Resource_04bmj"]
 script = ExtResource("6_gfbjt")
-name = "Sun"
 type = 0
 waiting_time = 3.0
 catchables = Array[ExtResource("4_ji70b")]([ExtResource("5_7cd7m")])
@@ -43,11 +42,11 @@ data = PackedVector3Array(0, 1, 0, 0, 1, 0, 0, 0.9955, 0.0951, 0, 1, 0, 0.0093, 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pcav8"]
 render_priority = 0
 shader = ExtResource("7_aoyb4")
+shader_parameter/Texture2DParameter = ExtResource("9_b1d3o")
 shader_parameter/DissolveTiling = Vector2(1, 1)
 shader_parameter/DissolveSpeed = Vector2(0, 0)
-shader_parameter/DissolveAmount = 0.1
-shader_parameter/Texture2DParameter = ExtResource("9_b1d3o")
 shader_parameter/DissolveTexture = ExtResource("8_pqs2u")
+shader_parameter/DissolveAmount = 0.1
 
 [sub_resource type="Curve" id="Curve_leuwi"]
 _data = [Vector2(0.0044843, 0.175824), 0.0, 0.0, 0, 0, Vector2(0.246637, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0924736, 0.0, 0, 0]
@@ -142,9 +141,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rxxud"]
 _data = {
-"RESET": SubResource("Animation_7ybvj"),
-"sun_appear": SubResource("Animation_wa067"),
-"sun_disappear": SubResource("Animation_ylgep")
+&"RESET": SubResource("Animation_7ybvj"),
+&"sun_appear": SubResource("Animation_wa067"),
+&"sun_disappear": SubResource("Animation_ylgep")
 }
 
 [node name="twin_trees" instance=ExtResource("1_tm2yw")]

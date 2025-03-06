@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://jexced442j3k"]
 
-[ext_resource type="Script" path="res://scripts/JumpingFishAreaSM/area_jumping_fish.gd" id="1_bih31"]
+[ext_resource type="Script" uid="uid://bsaha026ei2yy" path="res://scripts/JumpingFishAreaSM/area_jumping_fish.gd" id="1_bih31"]
 [ext_resource type="Resource" uid="uid://knyj2kthccft" path="res://scripts/Resources/FishingAreas/jumping_fish_area.tres" id="2_lqys3"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_a7al6"]

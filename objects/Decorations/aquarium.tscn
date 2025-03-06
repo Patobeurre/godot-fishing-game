@@ -1,15 +1,15 @@
 [gd_scene load_steps=71 format=3 uid="uid://dlkks82dwpwbt"]
 
 [ext_resource type="PackedScene" uid="uid://dpj1l8s865bid" path="res://models/Structures/aquarium.glb" id="1_ify1k"]
-[ext_resource type="Script" path="res://scripts/Aquarium/aquarium.gd" id="2_lv4tf"]
-[ext_resource type="Script" path="res://scripts/Aquarium/site.gd" id="2_mnper"]
-[ext_resource type="Script" path="res://scripts/Interactable.gd" id="2_p6dib"]
+[ext_resource type="Script" uid="uid://ydlen7kwxuv7" path="res://scripts/Aquarium/aquarium.gd" id="2_lv4tf"]
+[ext_resource type="Script" uid="uid://do6chyaioprug" path="res://scripts/Aquarium/site.gd" id="2_mnper"]
+[ext_resource type="Script" uid="uid://bnuniyrqoyyvp" path="res://scripts/Interactable.gd" id="2_p6dib"]
 [ext_resource type="PackedScene" uid="uid://sc84ulwrasjn" path="res://objects/Catchables/Fishes/anglerfish.tscn" id="2_v24tt"]
 [ext_resource type="PackedScene" uid="uid://bnfmmuc36bstu" path="res://objects/Catchables/Fishes/eel.tscn" id="3_e78la"]
 [ext_resource type="PackedScene" uid="uid://dakyhjkvbh4yq" path="res://objects/Catchables/anemone.tscn" id="3_lb1ln"]
 [ext_resource type="PackedScene" uid="uid://dtexun5ww3d2k" path="res://objects/Catchables/Fishes/clown_fish.tscn" id="4_cp6n1"]
 [ext_resource type="PackedScene" uid="uid://sydd3xkoqodj" path="res://objects/Catchables/Fishes/hermit_crab.tscn" id="5_200ku"]
-[ext_resource type="Script" path="res://scripts/Aquarium/fish.gd" id="5_wlgjx"]
+[ext_resource type="Script" uid="uid://dqi5a0txo2iho" path="res://scripts/Aquarium/fish.gd" id="5_wlgjx"]
 [ext_resource type="Resource" uid="uid://3ovutb4lao07" path="res://scripts/Resources/Catchables/Fishes/Anglerfish.tres" id="6_u0cnc"]
 [ext_resource type="PackedScene" uid="uid://bnypgplnop4a8" path="res://objects/Catchables/Fishes/jellyfish.tscn" id="7_gad3d"]
 [ext_resource type="Resource" uid="uid://c1af81d13ra1f" path="res://scripts/Resources/Catchables/Fishes/Eel.tres" id="8_avgcf"]
@@ -58,7 +58,7 @@
 [ext_resource type="Resource" uid="uid://b58c3eij4xuvh" path="res://scripts/Resources/Catchables/Fishes/Sailfish.tres" id="50_n8onp"]
 [ext_resource type="PackedScene" uid="uid://bv6df770xtu10" path="res://objects/Catchables/Fishes/hidden_fish_v2.tscn" id="51_w6eau"]
 [ext_resource type="Resource" uid="uid://lio1nhp8ucd2" path="res://scripts/Resources/Catchables/Fishes/HiddenFish.tres" id="52_kde51"]
-[ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="52_qfiu0"]
+[ext_resource type="Shader" uid="uid://0ai04pklsvpi" path="res://materials/stylized_water.gdshader" id="52_qfiu0"]
 [ext_resource type="PackedScene" uid="uid://yqtw373y7p74" path="res://objects/Catchables/Fishes/razorfish.tscn" id="55_ximse"]
 [ext_resource type="Resource" uid="uid://be7qy8t7n18bb" path="res://scripts/Resources/Catchables/Fishes/RazorFish.tres" id="56_sth15"]
 
@@ -98,6 +98,9 @@ shader_parameter/albedo = Color(0, 0.33467, 0.491748, 1)
 shader_parameter/albedo2 = Color(0, 0.371098, 0.604246, 1)
 shader_parameter/metallic = 0.0
 shader_parameter/roughness = 0.8
+shader_parameter/wave = SubResource("NoiseTexture2D_hwj1l")
+shader_parameter/texture_normal = SubResource("NoiseTexture2D_eng4h")
+shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_r2xuf")
 shader_parameter/wave_direction = Vector2(2, 0)
 shader_parameter/wave_direction2 = Vector2(0, 1)
 shader_parameter/time_scale = 0.015
@@ -111,9 +114,6 @@ shader_parameter/edge_scale = 1.0
 shader_parameter/near = 1.0
 shader_parameter/far = 100.0
 shader_parameter/edge_color = Color(0.446777, 0.446777, 0.446777, 1)
-shader_parameter/wave = SubResource("NoiseTexture2D_hwj1l")
-shader_parameter/texture_normal = SubResource("NoiseTexture2D_eng4h")
-shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_r2xuf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dwrxe"]
 

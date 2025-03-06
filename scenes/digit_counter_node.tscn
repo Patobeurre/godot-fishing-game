@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://cr5ar4w70tct6"]
 
-[ext_resource type="Script" path="res://scripts/digit_counter.gd" id="1_gp3kg"]
+[ext_resource type="Script" uid="uid://4iwhltg5i5lw" path="res://scripts/digit_counter.gd" id="1_gp3kg"]
 [ext_resource type="PackedScene" uid="uid://bq26rsfes86p5" path="res://models/digits/0.tscn" id="2_mmrnk"]
 [ext_resource type="PackedScene" uid="uid://b8j2f68ik6s5u" path="res://models/digits/1.tscn" id="3_rurf3"]
 [ext_resource type="PackedScene" uid="uid://c1nmf5bc3aqqy" path="res://models/digits/2.tscn" id="4_idomp"]

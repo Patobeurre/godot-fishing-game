@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://bq7rfd0awtdhf"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_lw7th"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_lw7th"]
 [ext_resource type="Texture2D" uid="uid://blyd78etsuw4v" path="res://sprites/Catchables/Fishes/hammer_shark.png" id="1_olceu"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_sb8ta"]
 [ext_resource type="PackedScene" uid="uid://cx7yogcsge776" path="res://objects/Catchables/Fishes/hammer_shark.tscn" id="2_45qly"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="4_djm5i"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="4_djm5i"]
 [ext_resource type="Resource" uid="uid://b883m0ds140s6" path="res://scripts/Resources/MiniGame/MiniGameAnim/hammershark.tres" id="4_l0sqc"]
 [ext_resource type="Resource" uid="uid://dlp3f2lo6klif" path="res://scripts/Resources/Regions/Shark.tres" id="5_b2xne"]
 

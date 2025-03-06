@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="FlyerRes" load_steps=4 format=3 uid="uid://csb2wkhc88ges"]
 
-[ext_resource type="Script" path="res://scripts/Resources/Documents/Flyer.gd" id="1_6d7ab"]
+[ext_resource type="Script" uid="uid://ywmjw2olp4yf" path="res://scripts/Resources/Documents/Flyer.gd" id="1_6d7ab"]
 [ext_resource type="Texture2D" uid="uid://dxm4uf205pca5" path="res://sprites/Documents/pub_aspirateur.png" id="1_k2ej4"]
 [ext_resource type="PackedScene" uid="uid://b0ogy101lbpfp" path="res://objects/UI/DocumentFlyer.tscn" id="2_4jn2s"]
 

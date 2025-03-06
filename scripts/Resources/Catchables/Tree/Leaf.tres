@@ -3,9 +3,9 @@
 [ext_resource type="Resource" uid="uid://bn2lquxvu2uek" path="res://scripts/Resources/Catchables/Lure.tres" id="1_2y733"]
 [ext_resource type="Resource" uid="uid://cccm3f18x2on5" path="res://scripts/Resources/Categories/Nature.tres" id="1_5immf"]
 [ext_resource type="Texture2D" uid="uid://djwikv8j0s1ws" path="res://sprites/Catchables/leaf.png" id="1_akiod"]
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="2_6qfjg"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="2_6qfjg"]
 [ext_resource type="PackedScene" uid="uid://cowdm40mpv7ab" path="res://objects/Catchables/leaf.tscn" id="2_yucf6"]
-[ext_resource type="Script" path="res://scripts/Resources/RegionRes.gd" id="5_hk3qv"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="5_hk3qv"]
 [ext_resource type="Resource" uid="uid://kkg23of4d7cf" path="res://scripts/Resources/Regions/Oak.tres" id="6_2tbum"]
 
 [resource]

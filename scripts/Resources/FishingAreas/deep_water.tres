@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="FishingAreaRes" load_steps=15 format=3 uid="uid://dpdrl0ohcty7k"]
 
-[ext_resource type="Script" path="res://scripts/Resources/CatchableRes.gd" id="1_57rtu"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_57rtu"]
 [ext_resource type="Resource" uid="uid://l45j43d051lt" path="res://scripts/Resources/Catchables/Fishes/Squid.tres" id="2_nxbdl"]
-[ext_resource type="Script" path="res://scripts/Resources/FishingAreaRes.gd" id="2_u228g"]
+[ext_resource type="Script" uid="uid://bd05gpo7c08r0" path="res://scripts/Resources/FishingAreaRes.gd" id="2_u228g"]
 [ext_resource type="Resource" uid="uid://d2eanu31fp0x0" path="res://scripts/Resources/Catchables/Fishes/CommonFish.tres" id="3_hjill"]
 [ext_resource type="Resource" uid="uid://bm5o061am665" path="res://scripts/Resources/Catchables/Fishes/Pilchard.tres" id="4_kct0i"]
 [ext_resource type="Resource" uid="uid://c0nhg67lt4noa" path="res://scripts/Resources/Catchables/Fishes/Whale.tres" id="7_hc7po"]

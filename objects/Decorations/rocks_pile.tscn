@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://8y5x0u2e2nvo"]
 
 [ext_resource type="PackedScene" uid="uid://bjrwelsuv7og5" path="res://models/Decorations/rocks_pile.glb" id="1_0vo3d"]
-[ext_resource type="Script" path="res://scripts/rocks_pile.gd" id="2_eryut"]
-[ext_resource type="Script" path="res://scripts/exploding_fishing_area.gd" id="2_x81t3"]
+[ext_resource type="Script" uid="uid://cukqn32ir7o2t" path="res://scripts/rocks_pile.gd" id="2_eryut"]
+[ext_resource type="Script" uid="uid://ctagngpvpqhuu" path="res://scripts/exploding_fishing_area.gd" id="2_x81t3"]
 [ext_resource type="Resource" uid="uid://8fnb78cij2um" path="res://scripts/Resources/FishingAreas/rocks.tres" id="3_2g2dn"]
 [ext_resource type="Resource" uid="uid://ds8oniim37aio" path="res://scripts/Resources/Catchables/Fishes/ExplodingFish.tres" id="3_e1ayd"]
 [ext_resource type="PackedScene" uid="uid://ia0ln5qh1cxr" path="res://materials/blast.tscn" id="6_q6vfn"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d3avs62j1llal" path="res://objects/terrain.tscn" id="1_noune"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_kn71f"]
-[ext_resource type="Shader" path="res://materials/stylized_water.gdshader" id="3_ouj2p"]
+[ext_resource type="Shader" uid="uid://0ai04pklsvpi" path="res://materials/stylized_water.gdshader" id="3_ouj2p"]
 [ext_resource type="PackedScene" uid="uid://b3h8dbli33h2x" path="res://objects/Structures/test_house.tscn" id="4_j5q5u"]
 [ext_resource type="PackedScene" uid="uid://cfol5m2msmymx" path="res://objects/Decorations/mangrove_tree.tscn" id="5_g5flu"]
 
@@ -53,6 +53,9 @@ shader_parameter/albedo = Color(0, 0.33467, 0.491748, 1)
 shader_parameter/albedo2 = Color(0, 0.371098, 0.604246, 1)
 shader_parameter/metallic = 0.0
 shader_parameter/roughness = 0.8
+shader_parameter/wave = SubResource("NoiseTexture2D_n7mtk")
+shader_parameter/texture_normal = SubResource("NoiseTexture2D_og5bs")
+shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_4bjeq")
 shader_parameter/wave_direction = Vector2(2, 0)
 shader_parameter/wave_direction2 = Vector2(0, 1)
 shader_parameter/time_scale = 0.025
@@ -66,9 +69,6 @@ shader_parameter/edge_scale = 1.0
 shader_parameter/near = 1.0
 shader_parameter/far = 100.0
 shader_parameter/edge_color = Color(0.446777, 0.446777, 0.446777, 1)
-shader_parameter/wave = SubResource("NoiseTexture2D_n7mtk")
-shader_parameter/texture_normal = SubResource("NoiseTexture2D_og5bs")
-shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_4bjeq")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qhyd"]
 
