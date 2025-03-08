@@ -4,11 +4,19 @@ class_name MiniGameRoundDodge
 @onready var cursor = $Center/Cursor
 @onready var center = $Center
 @onready var container = $CursorContainer
+
+@onready var left_spawner = $Spawners/LeftSpawner
+@onready var right_spawner = $Spawners/RightSpawner
+
 @onready var timebar_node = $TimebarNode
 @onready var timebar = $TimebarNode/Timebar
 @onready var timer_interval = $Cooldown
 @onready var timer_main = $TimebarNode/Timer
 
+@onready var catchable_dodge_scene := preload("res://scenes/UI/MiniGame/MinigameDodgeCatchable.tscn")
+@onready var gradient := preload("res://materials/minigame_bar_gradient.tres")
+
+@export var minigame_res :MiniGameGenericRes
 @export var cooldown :float = 2
 @export var cursor_speed :float = 2
 @export var cursor_area_radius :float = 220
@@ -22,10 +30,8 @@ var score_step :float = 10
 var score_fail_value :float = -30
 var is_win :bool = false
 
-var nb_bar_spawn :int = 3
 var is_cursor_inside_area = false
-var colliding_bar = null
-
+var spawn_left :bool = true
 var input_mouse := Vector2.ZERO
 var mouse_sensitivity = 500
 
@@ -44,17 +50,15 @@ func _ready() -> void:
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
+	score = score_max - 1
+	
 	timer_interval.start(cooldown)
 	timer_main.start(10)
-	
-	score_step = 100 / nb_bar_spawn
-	
-	spawn_bars()
 
 
 func init(catchable :CatchableRes):
 	if catchable != null:
-		pass
+		minigame_res = catchable.minigame_res
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -65,12 +69,13 @@ func _process(delta: float) -> void:
 	
 	_move_cursor(delta)
 	
+	_update_score(-score_step * delta)
 	timebar.scale.x = score * 16 / score_max
+	#modulate_color(score / score_max)
 	
 	if Input.is_action_just_pressed("mouse_left"):
 		if is_cursor_inside_area:
 			_update_score(score_step)
-	
 
 
 func _input(event):
@@ -79,7 +84,8 @@ func _input(event):
 
 
 func _move_cursor(delta :float) -> void:
-	cursor.move_and_collide(input_mouse * cursor_speed * mouse_sensitivity)	
+	cursor.position += input_mouse * mouse_sensitivity * cursor_speed
+	#cursor.move_and_collide(input_mouse * cursor_speed * mouse_sensitivity)
 	cursor.position = cursor.position.limit_length(cursor_area_radius)
 	
 	input_mouse = Vector2.ZERO
@@ -87,11 +93,11 @@ func _move_cursor(delta :float) -> void:
 
 func _check_game_finished():
 	if score >= score_max:
-		is_win = true
+		is_win = false
 		end_game()
 		return true
 	elif score <= 0:
-		is_win = false
+		is_win = true
 		end_game()
 		return true
 	
@@ -111,21 +117,33 @@ func _update_score(value :float):
 		score = score_max
 
 
-func spawn_bars() -> void:
-	pass
+func modulate_color(score_ratio :float):
+	print(score_ratio)
+	timebar.modulate = gradient.gradient.sample(score_ratio)
+
+
+func spawn_catchable():
+	var catchable_scene = catchable_dodge_scene.instantiate()
+	var is_reversed :bool = false
+	if spawn_left:
+		left_spawner.add_child(catchable_scene)
+	else:
+		right_spawner.add_child(catchable_scene)
+		is_reversed = true
+	spawn_left = !spawn_left
+	catchable_scene.init(minigame_res, cursor, is_reversed)
 
 
 func _on_timer_timeout() -> void:
+	spawn_catchable()
 	timer_interval.start(cooldown)
 
 
-func _on_area_2d_area_entered(area: Area2D) -> void:
+func _on_cursor_area_entered(area: Area2D) -> void:
 	print("entered")
-	colliding_bar = area
+	_update_score(-score_fail_value)
 	is_cursor_inside_area = true
 
-
-func _on_area_2d_area_exited(area: Area2D) -> void:
+func _on_cursor_area_exited(area: Area2D) -> void:
 	print("exited")
-	colliding_bar = null
 	is_cursor_inside_area = false

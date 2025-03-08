@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://dnqn1qyi2ahrr"]
+
+[ext_resource type="Script" uid="uid://cjhhf6no1erfd" path="res://scenes/UI/MiniGame/minigame_dodge_catchable.gd" id="1_r41c7"]
+[ext_resource type="Texture2D" uid="uid://71aersvtbqry" path="res://sprites/Catchables/Fishes/sailfish.png" id="2_elqj3"]
+[ext_resource type="Script" uid="uid://bxhxf8txsoe2d" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="3_k4ilt"]
+[ext_resource type="Script" uid="uid://dhi5of8n17m7i" path="res://scenes/UI/MiniGame/dodge_catchable_default_state.gd" id="4_q8avl"]
+[ext_resource type="Script" uid="uid://byrys41xfaimq" path="res://scenes/UI/MiniGame/dodge_catchable_move_state.gd" id="5_q8avl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q8avl"]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_r41c7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_elqj3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_q8avl")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="FiniteStateMachine" type="Node" parent="."]
+script = ExtResource("3_k4ilt")
+metadata/_custom_type_script = "uid://bxhxf8txsoe2d"
+
+[node name="StateDefault" type="Node" parent="."]
+script = ExtResource("4_q8avl")
+metadata/_custom_type_script = "uid://dfjquyg4ldf1s"
+
+[node name="Timer" type="Timer" parent="StateDefault"]
+wait_time = 3.0
+
+[node name="StateMove" type="Node" parent="."]
+script = ExtResource("5_q8avl")
+metadata/_custom_type_script = "uid://dfjquyg4ldf1s"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+
+[connection signal="timeout" from="StateDefault/Timer" to="StateDefault" method="_on_timer_timeout"]
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]

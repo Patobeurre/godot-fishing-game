@@ -1,13 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b064rfbut6nh7"]
+[gd_scene load_steps=7 format=3 uid="uid://b064rfbut6nh7"]
 
 [ext_resource type="Script" uid="uid://cv0xkvjhdb0j" path="res://scenes/UI/MiniGame/minigame_round_dodge.gd" id="1_52b4c"]
 [ext_resource type="Texture2D" uid="uid://b5fi7vkkdvuoc" path="res://sprites/UI/Minigame/round_container.png" id="2_e0yrx"]
-[ext_resource type="Texture2D" uid="uid://71aersvtbqry" path="res://sprites/Catchables/Fishes/sailfish.png" id="4_3736m"]
+[ext_resource type="Resource" uid="uid://c470qebppmjlu" path="res://scripts/Resources/MiniGame/MiniGameRoundDodge/sailfish_minigame.tres" id="2_gk1gj"]
 [ext_resource type="Texture2D" uid="uid://dv6mohrvqtin0" path="res://sprites/fishing_game_bar.png" id="5_225hx"]
 [ext_resource type="Texture2D" uid="uid://ce3lgq7foiusl" path="res://sprites/crosshair-repeater.png" id="6_6pnmn"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7251g"]
-friction = 0.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kb23d"]
 radius = 17.2627
@@ -20,6 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_52b4c")
+minigame_res = ExtResource("2_gk1gj")
 
 [node name="CursorContainer" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.509804)
@@ -27,12 +25,18 @@ position = Vector2(947, 518)
 scale = Vector2(0.58, 0.58)
 texture = ExtResource("2_e0yrx")
 
+[node name="Spawners" type="Node2D" parent="."]
+
+[node name="LeftSpawner" type="Node2D" parent="Spawners"]
+position = Vector2(480, 540)
+
+[node name="RightSpawner" type="Node2D" parent="Spawners"]
+position = Vector2(1440, 540)
+
 [node name="Center" type="Node2D" parent="."]
 
-[node name="Cursor" type="RigidBody2D" parent="Center"]
+[node name="Cursor" type="Area2D" parent="Center"]
 position = Vector2(947, 518)
-physics_material_override = SubResource("PhysicsMaterial_7251g")
-gravity_scale = 0.0
 
 [node name="Sprite" type="Sprite2D" parent="Center/Cursor"]
 scale = Vector2(0.421875, 0.421875)
@@ -43,15 +47,6 @@ shape = SubResource("CircleShape2D_kb23d")
 
 [node name="Cooldown" type="Timer" parent="."]
 autostart = true
-
-[node name="CatchableImg" type="Sprite2D" parent="."]
-visible = false
-modulate = Color(0, 0, 0, 1)
-position = Vector2(1474, 363)
-scale = Vector2(0.742, 0.5)
-texture = ExtResource("4_3736m")
-flip_h = true
-flip_v = true
 
 [node name="TimebarNode" type="Node2D" parent="."]
 
@@ -69,14 +64,6 @@ region_rect = Rect2(20, 10, 30, 20)
 
 [node name="Timer" type="Timer" parent="TimebarNode"]
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(400, 300)
-gravity_scale = 0.0
-
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
-texture = ExtResource("4_3736m")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
-polygon = PackedVector2Array(90, -139.8, 90, -137.6, 53.9, -129, 50.4, -129, 16, -106.1, -14.4, -99, -17.6, -99, -28, -54.2, -28, -50.5, -36, -27.3, -36, -24.7, -44, -14.7, -44, -14, -60.7, -1, -62.8, -1, -88, 23.1, -88, 23.7, -104, 30.7, -104, 31.3, -125, 35.3, -125, 36.2, -219.3, 51, -225.7, 51, -231.7, 56, -233.2, 56, -234.3, 58.2, -230, 64, -207.9, 64, -136.8, 56, -135.7, 56, -132, 63.4, -132, 65.8, -65, 73.7, -65, 75.3, -20.8, 70, -16.4, 70, -10, 86.4, -10, 89.1, 8, 101.1, 8, 104, 19, 99.3, 19, 95.4, 11.1, 83, 9.5, 70.6, 20, 81.8, 20, 82.9, 49, 106.9, 49, 108.2, 87.5, 129, 90.6, 129, 97, 125.1, 97, 121.1, 56.8, 84, 55.9, 84, 43.9, 70, 43.2, 70, 38, 58.6, 38, 57.7, 116.4, 43, 117, 43, 128, 57.6, 128, 59.9, 139.2, 70, 142.5, 70, 147, 53.3, 147, 47.6, 155, 35.6, 164, 29.1, 164, 28.4, 193, 20, 202, 30.7, 202, 32.9, 224.2, 53, 229.8, 53, 233, 49.8, 233, 46.7, 221.5, 9, 221, -5.60001, 232, -54.8, 232, -58.8, 228.8, -62, 225.2, -62, 217.3, -55, 215.8, -55, 204.9, -36, 203.7, -36, 192, -8.39999, 173.1, -11, 169, -11, 150, -35, 138, -71.3, 138, -74.4, 125, -102.4, 125, -104.7, 103, -132.7, 103, -135.4)
-
+[connection signal="area_entered" from="Center/Cursor" to="." method="_on_cursor_area_entered"]
+[connection signal="area_exited" from="Center/Cursor" to="." method="_on_cursor_area_exited"]
 [connection signal="timeout" from="Cooldown" to="." method="_on_timer_timeout"]
