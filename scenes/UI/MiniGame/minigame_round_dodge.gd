@@ -16,10 +16,11 @@ class_name MiniGameRoundDodge
 @onready var catchable_dodge_scene := preload("res://scenes/UI/MiniGame/MinigameDodgeCatchable.tscn")
 @onready var gradient := preload("res://materials/minigame_bar_gradient.tres")
 
-@export var minigame_res :MiniGameGenericRes
+var minigame_res :MiniGameGenericRes
 @export var cooldown :float = 2
 @export var cursor_speed :float = 2
 @export var cursor_area_radius :float = 220
+@export var spawn_max_offset_y = 200
 
 var width :float
 var height :float
@@ -43,8 +44,8 @@ func _ready() -> void:
 	
 	var center_pos = Vector2(width / 2, height / 2)
 	
-	cursor.global_position = center_pos
 	center.global_position = center_pos
+	cursor.global_position = center_pos
 	container.global_position = center_pos
 	timebar_node.global_position = Vector2(width / 2, 5*height / 6)
 	
@@ -125,12 +126,15 @@ func modulate_color(score_ratio :float):
 func spawn_catchable():
 	var catchable_scene = catchable_dodge_scene.instantiate()
 	var is_reversed :bool = false
+	
 	if spawn_left:
 		left_spawner.add_child(catchable_scene)
 	else:
 		right_spawner.add_child(catchable_scene)
 		is_reversed = true
 	spawn_left = !spawn_left
+	
+	catchable_scene.position.y += randi_range(-spawn_max_offset_y, spawn_max_offset_y)
 	catchable_scene.init(minigame_res, cursor, is_reversed)
 
 

@@ -7,11 +7,11 @@ extends RigidBody2D
 @export var speed :float = 6
 
 @onready var sprite := $Sprite2D
-@onready var collider := $CollisionPolygon2D
-
 @onready var state_machine := $FiniteStateMachine
 @onready var default_state := $StateDefault
 @onready var move_state := $StateMove
+
+var collider :CollisionPolygon2D
 
 
 func _ready() -> void:

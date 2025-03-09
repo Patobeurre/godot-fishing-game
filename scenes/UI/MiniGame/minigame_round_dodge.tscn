@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b064rfbut6nh7"]
+[gd_scene load_steps=6 format=3 uid="uid://b064rfbut6nh7"]
 
 [ext_resource type="Script" uid="uid://cv0xkvjhdb0j" path="res://scenes/UI/MiniGame/minigame_round_dodge.gd" id="1_52b4c"]
 [ext_resource type="Texture2D" uid="uid://b5fi7vkkdvuoc" path="res://sprites/UI/Minigame/round_container.png" id="2_e0yrx"]
-[ext_resource type="Resource" uid="uid://c470qebppmjlu" path="res://scripts/Resources/MiniGame/MiniGameRoundDodge/sailfish_minigame.tres" id="2_gk1gj"]
 [ext_resource type="Texture2D" uid="uid://dv6mohrvqtin0" path="res://sprites/fishing_game_bar.png" id="5_225hx"]
 [ext_resource type="Texture2D" uid="uid://ce3lgq7foiusl" path="res://sprites/crosshair-repeater.png" id="6_6pnmn"]
 
@@ -17,7 +16,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_52b4c")
-minigame_res = ExtResource("2_gk1gj")
 
 [node name="CursorContainer" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.509804)
@@ -37,6 +35,8 @@ position = Vector2(1440, 540)
 
 [node name="Cursor" type="Area2D" parent="Center"]
 position = Vector2(947, 518)
+collision_layer = 2
+collision_mask = 2
 
 [node name="Sprite" type="Sprite2D" parent="Center/Cursor"]
 scale = Vector2(0.421875, 0.421875)

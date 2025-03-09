@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=8 format=3 uid="uid://btttncot63v31"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=9 format=3 uid="uid://btttncot63v31"]
 
 [ext_resource type="Texture2D" uid="uid://b4yfgmnag1afs" path="res://sprites/Catchables/Fishes/pike.png" id="1_fgdvl"]
 [ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_qccg5"]
 [ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_y31sx"]
 [ext_resource type="PackedScene" uid="uid://cit17jjrveyip" path="res://objects/Catchables/Fishes/pike.tscn" id="3_8ibe2"]
 [ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="4_c1jlh"]
+[ext_resource type="Resource" uid="uid://cq3rapk17c16s" path="res://scripts/Resources/MiniGame/MiniGameRoundDodge/pike_minigame.tres" id="4_l6gy1"]
 [ext_resource type="Resource" uid="uid://dtv2pu6qgth1j" path="res://scripts/Resources/Regions/River.tres" id="5_b24xv"]
 [ext_resource type="Resource" uid="uid://dwijteaf2p6at" path="res://scripts/Resources/Regions/Coast.tres" id="6_64tr5"]
 
@@ -18,6 +19,7 @@ category = ExtResource("1_y31sx")
 tags = Array[int]([0, 2])
 image = ExtResource("1_fgdvl")
 scene = ExtResource("3_8ibe2")
+minigame_res = ExtResource("4_l6gy1")
 rarity = 30
 price = 25
 regions = Array[ExtResource("4_c1jlh")]([ExtResource("5_b24xv"), ExtResource("6_64tr5")])

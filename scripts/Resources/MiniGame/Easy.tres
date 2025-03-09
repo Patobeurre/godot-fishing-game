@@ -15,3 +15,5 @@ nb_bar_to_spawn = 3
 dot_initial_offset = 200.0
 dot_speed = 100.0
 dot_speed_offset = 10.0
+spawn_cd = 3.0
+catchable_speed = 6.0

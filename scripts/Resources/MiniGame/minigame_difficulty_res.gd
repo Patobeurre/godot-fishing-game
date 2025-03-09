@@ -19,3 +19,7 @@ class_name MiniGameRes
 @export var dot_initial_offset :float= 200.0
 @export var dot_speed :float = 10.0
 @export var dot_speed_offset :float = 3.0
+
+@export_group("Round Dodge")
+@export var spawn_cd :float = 2.0
+@export var catchable_speed :float = 5.0
