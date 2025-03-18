@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://8y5x0u2e2nvo"]
+[gd_scene load_steps=9 format=3 uid="uid://8y5x0u2e2nvo"]
 
 [ext_resource type="PackedScene" uid="uid://bjrwelsuv7og5" path="res://models/Decorations/rocks_pile.glb" id="1_0vo3d"]
 [ext_resource type="Script" uid="uid://cukqn32ir7o2t" path="res://scripts/rocks_pile.gd" id="2_eryut"]
@@ -6,15 +6,31 @@
 [ext_resource type="Resource" uid="uid://8fnb78cij2um" path="res://scripts/Resources/FishingAreas/rocks.tres" id="3_2g2dn"]
 [ext_resource type="Resource" uid="uid://ds8oniim37aio" path="res://scripts/Resources/Catchables/Fishes/ExplodingFish.tres" id="3_e1ayd"]
 [ext_resource type="PackedScene" uid="uid://ia0ln5qh1cxr" path="res://materials/blast.tscn" id="6_q6vfn"]
+[ext_resource type="PackedScene" uid="uid://ceeij6pc0stqt" path="res://objects/VisibleNotifier.tscn" id="7_5c7mr"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5c7mr"]
+points = PackedVector3Array(-1.08213, -1.78517, -0.461303, 0.873704, -1.06507, -0.580147, 1.25321, -1.06507, 0.10841, 2.31572, -0.819624, 1.87177, 2.31572, -0.819624, 2.28847, 2.10593, -0.819624, 2.57741, 0.0704424, -0.898317, 3.35213, -2.04938, -1.71397, -0.257781, -1.77711, -1.2237, -2.26774, 0.980424, -0.456139, -1.01393, -0.726052, -0.446147, -3.04469, -0.566753, -0.390562, -2.98676, -0.513653, -0.164477, -3.28015, 1.59888, -0.456139, 0.10841, 2.3834, -0.506103, 1.66454, 2.35164, -0.631636, 2.3984, 2.22202, -0.631636, 2.57741, 0.364052, -0.627889, 3.85425, 0.126145, -0.77091, 3.66559, -2.14829, -1.3049, 0.173775, -2.47938, -1.36673, -1.37344, -0.1102, -0.647874, 3.57868, -1.51005, -0.280018, -3.37746, -1.37314, -0.295631, -3.43614, -1.33618, -0.343097, -3.37894, 1.35733, 1.69292, -0.65294, -0.618291, -0.00771654, -3.35369, -0.524586, 0.00290072, -3.30095, 1.45468, 1.69292, -0.476158, 2.31624, -0.0108392, 1.74921, 2.36726, -0.212567, 2.12357, 1.42813, 2.09512, -0.366226, 2.31624, 0.0747234, 2.21791, 2.05127, -0.00396919, 2.70146, 0.27295, 0.214621, 4.12685, -2.36173, -0.842732, 0.225027, -2.93489, -0.378696, -1.26499, -0.441813, 0.72987, 3.61953, -2.29509, -0.218188, 0.574877, -1.54337, -0.0845355, -3.36706, -1.3216, -0.109517, -3.46139, 1.27039, 2.09512, -0.65294, -1.30026, 3.49972, -1.55839, -0.895242, 4.19297, -0.906228, 1.3365, 2.35806, -0.410051, 1.16055, 2.6772, 0.545165, 0.573327, 1.22951, 3.39596, 1.21781, 2.67158, -0.0624292, 0.447345, 0.985309, 3.67599, -2.65742, 2.23939, 0.204229, -2.39557, 2.9495, -1.33556, -1.58762, 2.78525, 1.31543, -2.25136, 2.61287, 0.812566, -1.60324, 4.51024, 0.00144982, -2.21492, 2.98635, -1.56507, -2.04573, 3.55468, -1.40166, -2.05042, 3.89694, -1.12461, -1.59907, 4.26542, -0.872803, -1.07016, 4.59518, -0.275607, 0.829455, 2.97198, -0.164933, 0.92316, 3.02382, 0.317874, -0.861404, 4.38221, 0.263651, -2.46637, 3.10564, -0.101797, -2.33778, 3.49473, -1.02953, -1.28776, 4.5246, -0.403366)
 
 [node name="rocks_pile" instance=ExtResource("1_0vo3d")]
 script = ExtResource("2_eryut")
 
 [node name="StaticBody3D" parent="rocks_merged" index="0"]
-collision_layer = 12545
+collision_layer = 12288
+collision_mask = 256
 script = ExtResource("2_x81t3")
 interaction_catchable = ExtResource("3_e1ayd")
 fishTable = ExtResource("3_2g2dn")
 
+[node name="StaticBody3D2" type="StaticBody3D" parent="rocks_merged" index="1"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rocks_merged/StaticBody3D2" index="0"]
+shape = SubResource("ConvexPolygonShape3D_5c7mr")
+
 [node name="ExplosionBlast" parent="." index="1" instance=ExtResource("6_q6vfn")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.335294, 1, 0.386446)
+
+[node name="Node3D" parent="." index="2" instance=ExtResource("7_5c7mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.995754, 0.187326)
+aabb = AABB(-2.74113, -2.42914, -3, 5.48226, 4.85827, 6)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bi3ihryowa2bv"]
+[gd_scene load_steps=6 format=3 uid="uid://bi3ihryowa2bv"]
 
 [ext_resource type="PackedScene" uid="uid://hcdel44hpcnk" path="res://models/Decorations/pine.glb" id="1_f0h1f"]
 [ext_resource type="Script" uid="uid://cg4o8uo73nag3" path="res://scripts/fishing_area.gd" id="2_oyse8"]
 [ext_resource type="Resource" uid="uid://23idyr7476yr" path="res://scripts/Resources/FishingAreas/pine.tres" id="3_6tpv3"]
+[ext_resource type="PackedScene" uid="uid://ceeij6pc0stqt" path="res://objects/VisibleNotifier.tscn" id="5_wf5eu"]
 [ext_resource type="Resource" uid="uid://b6frau4btkggp" path="res://scripts/Resources/FishingAreas/oak_trunk.tres" id="8_6wm1j"]
 
 [node name="pine" instance=ExtResource("1_f0h1f")]
@@ -15,3 +16,8 @@ fishTable = ExtResource("3_6tpv3")
 [node name="StaticBody3D" parent="Cylinder_026" index="0"]
 script = ExtResource("2_oyse8")
 fishTable = ExtResource("8_6wm1j")
+
+[node name="Node3D" parent="." index="2" node_paths=PackedStringArray("node") instance=ExtResource("5_wf5eu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+aabb = AABB(-4, -7, -4, 8, 14, 8)
+node = NodePath("..")

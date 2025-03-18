@@ -45,6 +45,7 @@ TimeManager="*res://scripts/Global/TimeManager.gd"
 MailManager="*res://scripts/Global/MailManager.gd"
 ProgressVariables="*res://scripts/Global/ProgressVariables.gd"
 BasketManager="*res://scripts/Global/BasketManager.gd"
+Utilities="*res://scripts/Global/Utilities.gd"
 
 [display]
 
@@ -222,7 +223,7 @@ rendering/text_driver="ICU / HarfBuzz / Graphite (Built-in)"
 
 3d_physics/layer_1="Wall"
 3d_physics/layer_2="Player"
-3d_physics/layer_3="Trigger"
+3d_physics/layer_3="Wall2"
 3d_physics/layer_4="DamageArea"
 3d_physics/layer_5="Items"
 3d_physics/layer_6="Interact"
@@ -235,7 +236,7 @@ rendering/text_driver="ICU / HarfBuzz / Graphite (Built-in)"
 
 [physics]
 
-common/physics_ticks_per_second=120
+common/physics_ticks_per_second=240
 jolt_3d/collisions/areas_detect_static_bodies=true
 jolt_3d/continuous_cd/max_penetration=10.0
 

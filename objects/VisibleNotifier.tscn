@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceeij6pc0stqt"]
+
+[ext_resource type="Script" uid="uid://hf1l2es0u2vf" path="res://scripts/visible_notifier.gd" id="1_0sc7v"]
+
+[node name="Node3D" type="VisibleOnScreenNotifier3D"]
+script = ExtResource("1_0sc7v")
+
+[connection signal="screen_entered" from="." to="." method="_on_screen_entered"]
+[connection signal="screen_exited" from="." to="." method="_on_screen_exited"]

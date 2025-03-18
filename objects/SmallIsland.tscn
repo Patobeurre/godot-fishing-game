@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dahpw84nqrsxd"]
+[gd_scene load_steps=7 format=3 uid="uid://dahpw84nqrsxd"]
 
 [ext_resource type="Script" uid="uid://csosu28cy0eql" path="res://scripts/small_island.gd" id="1_8l05j"]
 [ext_resource type="PackedScene" uid="uid://bfn5mamim21hs" path="res://objects/Structures/small_island.tscn" id="1_71ihr"]
 [ext_resource type="PackedScene" uid="uid://bi3ihryowa2bv" path="res://objects/Decorations/pine.tscn" id="2_pknhw"]
 [ext_resource type="PackedScene" uid="uid://8y5x0u2e2nvo" path="res://objects/Decorations/rocks_pile.tscn" id="3_5txt6"]
 [ext_resource type="PackedScene" uid="uid://cxyg0pmqu6sbf" path="res://objects/Structures/City.tscn" id="4_10ydm"]
+[ext_resource type="PackedScene" uid="uid://ceeij6pc0stqt" path="res://objects/VisibleNotifier.tscn" id="6_lp7fk"]
 
 [node name="SmallIsland" type="Node3D"]
 script = ExtResource("1_8l05j")
@@ -119,3 +120,8 @@ light_color = Color(1, 0.721843, 0.672512, 1)
 light_energy = 3.0
 light_specular = 0.0
 omni_range = 30.0
+
+[node name="Node3D" parent="." node_paths=PackedStringArray("node") instance=ExtResource("6_lp7fk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.441545)
+aabb = AABB(-10, -4, -8, 20, 8, 16)
+node = NodePath("..")

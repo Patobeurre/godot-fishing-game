@@ -163,7 +163,7 @@ collision_mask = 4113
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
-mass = 0.3
+mass = 0.1
 contact_monitor = true
 max_contacts_reported = 1
 script = ExtResource("1_6fbch")
@@ -219,7 +219,7 @@ light_cull_mask = 4293918724
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_204ng")
+&"": SubResource("AnimationLibrary_204ng")
 }
 
 [node name="RopePoint" type="Node3D" parent="."]

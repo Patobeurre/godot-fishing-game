@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://dlkks82dwpwbt"]
+[gd_scene load_steps=72 format=3 uid="uid://dlkks82dwpwbt"]
 
 [ext_resource type="PackedScene" uid="uid://dpj1l8s865bid" path="res://models/Structures/aquarium.glb" id="1_ify1k"]
 [ext_resource type="Script" uid="uid://ydlen7kwxuv7" path="res://scripts/Aquarium/aquarium.gd" id="2_lv4tf"]
@@ -61,6 +61,7 @@
 [ext_resource type="Shader" uid="uid://0ai04pklsvpi" path="res://materials/stylized_water.gdshader" id="52_qfiu0"]
 [ext_resource type="PackedScene" uid="uid://yqtw373y7p74" path="res://objects/Catchables/Fishes/razorfish.tscn" id="55_ximse"]
 [ext_resource type="Resource" uid="uid://be7qy8t7n18bb" path="res://scripts/Resources/Catchables/Fishes/RazorFish.tres" id="56_sth15"]
+[ext_resource type="PackedScene" uid="uid://ceeij6pc0stqt" path="res://objects/VisibleNotifier.tscn" id="62_ld3l8"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_cffoc"]
 noise_type = 3
@@ -370,3 +371,8 @@ transparency = 0.65
 cast_shadow = 0
 mesh = SubResource("PlaneMesh_fb5us")
 skeleton = NodePath("../../..")
+
+[node name="Node3D2" parent="." index="6" node_paths=PackedStringArray("node") instance=ExtResource("62_ld3l8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.329127, 0)
+aabb = AABB(-0.724582, -1, -1.20991, 1.44916, 2, 2.41982)
+node = NodePath("..")

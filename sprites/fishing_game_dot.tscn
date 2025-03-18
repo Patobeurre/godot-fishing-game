@@ -7,7 +7,6 @@
 radius = 18.1108
 
 [node name="FishingGameDot" type="Sprite2D"]
-position = Vector2(580, 499)
 texture = ExtResource("1_ai8rj")
 script = ExtResource("2_kucv7")
 

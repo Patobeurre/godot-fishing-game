@@ -173,7 +173,6 @@ script = ExtResource("5_g6r3q")
 [node name="FireFishingState" type="Node" parent="."]
 script = ExtResource("6_j4o3f")
 MIN_SPEED = 2
-MAX_SPEED = 5
 
 [node name="ThrowFishingState" type="Node" parent="."]
 script = ExtResource("7_w6l6i")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7ypwv6eb2jgw"]
+[gd_scene load_steps=7 format=3 uid="uid://c7ypwv6eb2jgw"]
 
 [ext_resource type="PackedScene" uid="uid://bxvv5ubkh10vp" path="res://models/bobber.glb" id="1_r66k0"]
 [ext_resource type="Script" uid="uid://cbyf8cevbyb1p" path="res://scripts/fishing_gear.gd" id="1_yaurb"]
 [ext_resource type="Script" uid="uid://bnuniyrqoyyvp" path="res://scripts/Interactable.gd" id="2_5ykev"]
+[ext_resource type="PackedScene" uid="uid://ceeij6pc0stqt" path="res://objects/VisibleNotifier.tscn" id="4_g7gy3"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_hqj45"]
 top_radius = 0.2
@@ -31,3 +32,8 @@ interact_text = "Pick up"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_4xjmu")
+
+[node name="Node3D" parent="." node_paths=PackedStringArray("node") instance=ExtResource("4_g7gy3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.259147, 0.960429, 0)
+aabb = AABB(-0.491536, -1, -0.514539, 0.983072, 2, 1.02908)
+node = NodePath("..")
