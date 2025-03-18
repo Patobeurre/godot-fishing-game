@@ -6,7 +6,7 @@ extends StateMachineState
 @export var MIN_SPEED = 3
 @export var MAX_SPEED = 10
 @export var MAX_ELAPSED = 2
-@export var ZOOM_FACTOR = 5
+@export var ZOOM_FACTOR = 8
 var speed :float = 0
 var elapsed :float = 0
 

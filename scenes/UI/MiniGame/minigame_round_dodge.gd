@@ -53,7 +53,7 @@ func _ready() -> void:
 	
 	score = score_max - 1
 	
-	timer_interval.start(cooldown)
+	timer_interval.start(0.1)
 	timer_main.start(10)
 
 

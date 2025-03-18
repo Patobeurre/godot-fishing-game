@@ -16,6 +16,7 @@ var collider :CollisionPolygon2D
 
 func _ready() -> void:
 	visible = false
+	scale = scale/2
 
 func setup_sprite():
 	sprite.texture = minigame_res.minigame_sprite

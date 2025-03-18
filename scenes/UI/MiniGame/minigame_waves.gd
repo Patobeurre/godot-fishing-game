@@ -12,7 +12,7 @@ class_name MiniGameWaves
 
 @onready var wave_part_scene = preload("res://objects/UI/wave_part.tscn")
 
-@export var cooldown :float = 2
+@export var minigame_res :MiniGameRes
 
 var width :float
 var height :float
@@ -22,8 +22,6 @@ var score_max :float = 100
 var score_step :float = 10
 var score_fail_value :float = -30
 var is_win :bool = false
-
-var rotation_speed :float = 20
 
 
 # Called when the node enters the scene tree for the first time.
@@ -39,7 +37,7 @@ func _ready() -> void:
 	
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
-	timer_interval.start(cooldown)
+	timer_interval.start(2)
 	timer_main.start(10)
 
 
@@ -47,6 +45,7 @@ func init(catchable :CatchableRes):
 	if catchable != null:
 		catchable_img.texture = catchable.image
 		catchable_img.modulate = Color.from_hsv(0, 0, 0)
+		minigame_res = catchable.get_minigame_difficulty(catchable.rarity)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -60,7 +59,7 @@ func _process(delta: float) -> void:
 	_update_score(score_step * delta)
 	timebar.scale.x = score * 16 / score_max
 	
-	wave_node.rotate(deg_to_rad(rotation_speed * delta))
+	wave_node.rotate(deg_to_rad(minigame_res.rotation_speed * delta))
 
 
 func _check_game_finished():
@@ -96,7 +95,7 @@ func _move_cursor() -> void:
 
 func spawn_wave_part() -> void:
 	var indices := []
-	while indices.size() < 3:
+	while indices.size() < minigame_res.holes_number:
 		var rnd := randi_range(0, 14)
 		if not indices.has(rnd):
 			indices.append(rnd)
@@ -114,7 +113,7 @@ func spawn_wave_part() -> void:
 
 func _on_timer_timeout() -> void:
 	spawn_wave_part()
-	timer_interval.start(cooldown)
+	timer_interval.start(minigame_res.wave_cd)
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

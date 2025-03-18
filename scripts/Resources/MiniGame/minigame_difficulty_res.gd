@@ -16,9 +16,14 @@ class_name MiniGameRes
 @export var nb_bar_to_spawn :int = 3
 
 @export_group("Moving dots")
-@export var dot_initial_offset :float= 200.0
+@export var dot_initial_offset :float = 200.0
 @export var dot_speed :float = 10.0
 @export var dot_speed_offset :float = 3.0
+
+@export_group("Round Waves")
+@export var wave_cd :float = 2
+@export var holes_number :int = 3
+@export var rotation_speed :float = 0
 
 @export_group("Round Dodge")
 @export var spawn_cd :float = 2.0

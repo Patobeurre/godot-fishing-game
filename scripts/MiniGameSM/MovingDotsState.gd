@@ -65,6 +65,7 @@ func on_process(delta :float):
 			dot.queue_free()
 			bar_counter -= 1
 			var current_score = (stats.max_score / stats.nb_bar_to_spawn) * (stats.nb_bar_to_spawn - bar_counter)
+			_update_score(stats.deceleration_rate)
 			SignalBus.minigame_score_updated.emit(current_score)
 			Audio.play(
 				"sounds/FishEffectsComplete/zapsplat_sport_fishing_reel_wind_clicks_spool_002_78261.mp3, \
@@ -72,12 +73,12 @@ func on_process(delta :float):
 				sounds/FishEffectsComplete/zapsplat_sport_fishing_reel_wind_clicks_spool_short_hard_002_78263.mp3"
 			)
 		else:
-			score -= stats.miss_deceleration_rate		
+			_update_score(-stats.miss_deceleration_rate)
 	else:
 		_move_dots(delta)
 	
 	is_click_performed = false
-	score -= stats.deceleration_rate * delta
+	_update_score(-stats.deceleration_rate * delta)
 
 func end_game():
 	SignalBus.end_minigame.emit(is_win)
@@ -104,6 +105,14 @@ func _move_dots(delta :float) -> void:
 		dot.global_position.x = dot_new_pos_x
 		
 		dot.modulate.a = score / stats.max_score
+
+
+func _update_score(value :float):
+	score += value
+	if score < 0:
+		score = 0
+	if score > stats.max_score:
+		score = stats.max_score
 
 
 func handle_mouse(delta :float):
