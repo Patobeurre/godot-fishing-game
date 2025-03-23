@@ -31,6 +31,7 @@ signal fish_selled(CollectedCatchable)
 signal money_changed(int)
 
 signal player_pos_update(Vector3)
+signal player_enter_ladder(bool)
 
 signal enable_player_movements(bool)
 signal enable_player_camera(bool)

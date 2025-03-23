@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1v3p364oyv0p"]
+
+[ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="1_mf38l"]
+[ext_resource type="Script" uid="uid://qbib3sntukhp" path="res://scripts/weapon.gd" id="2_nuk1l"]
+[ext_resource type="PackedScene" uid="uid://dy5d6k3gi6ja1" path="res://objects/Decorations/Platforms/vine_ladder.tscn" id="3_nuk1l"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nmehx"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nuk1l"]
+points = PackedVector3Array(-50, -0.5, -50, -50, 0.5, -50, 50, -0.5, -50, -50, -0.5, 50, -50, 0.5, 50, 50, 0.5, -50, 50, -0.5, 50, 50, 0.5, 50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nuk1l"]
+size = Vector3(1, 2, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6o2f4"]
+points = PackedVector3Array(-0.5, -1, -0.5, -0.5, -1, 0.5, -0.5, 1, -0.5, 0.5, -1, -0.5, 0.5, -1, 0.5, -0.5, 1, 0.5, 0.5, 1, -0.5, 0.5, 1, 0.5)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_mf38l")]
+STEP_HEIGHT = 0.2
+push_force = 80.0
+weapons = Array[ExtResource("2_nuk1l")]([])
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+mesh = SubResource("BoxMesh_nmehx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_nuk1l")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.779119, -0.430838, 0.455359, 0, 0.726395, 0.687278, -0.626876, -0.535471, 0.565948, 0, 30.8208, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.8, 0, 0, 0, 1, 0, 1.2, -3.72179)
+mesh = SubResource("BoxMesh_nuk1l")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_6o2f4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -7.86805e-08, -1, 0, 1.8, -4.37114e-08, 1, 2.2, -3.72179)
+mesh = SubResource("BoxMesh_nuk1l")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_6o2f4")
+
+[node name="VineLadder" parent="." instance=ExtResource("3_nuk1l")]
+transform = Transform3D(-8.74326e-08, 0, -1.5375, 0, 2.00023, 0, 2.00023, 0, -6.72064e-08, -0.0230358, 1, -3.19082)

@@ -4,7 +4,7 @@ extends Node
 const NEW_DAY_TIME :float = 600
 const rateOfTime :float = 100 / 60
 
-var time_stats :TimeStats
+var time_stats :TimeStats = TimeStats.new()
 
 var is_running = true
 

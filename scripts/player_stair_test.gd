@@ -7,6 +7,8 @@ class_name Player
 @export var jump_strength = 8
 @export var dash_speed = 30
 @export var zoom_value = 10
+@export var ladder_climb_speed = 4
+@export var ladder_gravity = 2
 
 @export var STEP_HEIGHT: float = 0.2
 
@@ -96,6 +98,7 @@ var is_dashing :bool = false
 var is_dash_enabled :bool = true
 var is_climbing_step :bool = false
 var is_interacting :bool = false
+var is_on_ladder :bool = false
 
 var is_movement_enabled :bool = true
 var is_camera_enabled :bool = true
@@ -180,6 +183,8 @@ func _ready():
 	SignalBus.enable_player_fishing.connect(enable_fishing_controls)
 	SignalBus.enable_player_hud.connect(enable_hud)
 	
+	SignalBus.player_enter_ladder.connect(_on_enter_ladder)
+	
 	SignalBus.interact_request.connect(_on_interact_requested)
 	SignalBus.end_camera_interaction.connect(_on_end_camera_interaction)
 	CameraTransition.end_camera_transition.connect(_on_end_camera_transition)
@@ -221,6 +226,12 @@ func _physics_process(delta):
 		
 		if is_dashing:
 			movement_velocity = movement_velocity.lerp(dash_speed * direction_dash, delta * 10)
+		elif is_on_ladder:
+			movement_velocity = movement_velocity.lerp(movement_speed * direction * 0.5, delta * 10)
+			if Input.is_action_pressed("move_forward"):
+				movement_velocity.y = ladder_climb_speed
+			else:
+				movement_velocity.y = -ladder_gravity
 		else:
 			handle_gravity(delta)
 			movement_velocity = movement_velocity.lerp(movement_speed * direction, delta * 10)
@@ -401,7 +412,7 @@ func handle_controls(_delta):
 	
 	var input := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	direction = (body.global_transform.basis * Vector3(input.x, 0, input.y)).normalized()
-	
+
 	#movement_velocity = Vector3(input.x, 0, input.y).normalized() * movement_speed
 	
 	#action_zoom()
@@ -441,7 +452,6 @@ func handle_gravity(delta):
 	gravity += 20 * delta
 	
 	if gravity > 0 and is_on_floor():
-		
 		jump_single = true
 		gravity = 0
 
@@ -550,6 +560,10 @@ func _on_end_camera_transition():
 	if in_interaction_state.is_current_state():
 		return
 	enable_player(true)
+
+
+func _on_enter_ladder(entered :bool) -> void:
+	is_on_ladder = entered
 
 
 func enable_player(enabled :bool) -> void:

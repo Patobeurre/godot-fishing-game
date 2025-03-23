@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://d3avs62j1llal"]
+[gd_scene load_steps=48 format=3 uid="uid://d3avs62j1llal"]
 
 [ext_resource type="PackedScene" uid="uid://cpx30mt3jhyyr" path="res://models/Islands/terrain.glb" id="1_bt7gf"]
 [ext_resource type="Script" uid="uid://cg4o8uo73nag3" path="res://scripts/fishing_area.gd" id="2_gkuk2"]
@@ -28,6 +28,11 @@
 [ext_resource type="PackedScene" uid="uid://cd176ki4hkpqi" path="res://objects/Structures/bridge.tscn" id="18_xrsdk"]
 [ext_resource type="PackedScene" uid="uid://jexced442j3k" path="res://objects/jumping_fish_area.tscn" id="23_8dkbi"]
 [ext_resource type="Resource" uid="uid://dpdrl0ohcty7k" path="res://scripts/Resources/FishingAreas/deep_water.tres" id="26_xqykc"]
+[ext_resource type="PackedScene" uid="uid://dy5d6k3gi6ja1" path="res://objects/Decorations/Platforms/vine_ladder.tscn" id="29_x8oy7"]
+[ext_resource type="PackedScene" uid="uid://wb3t3i3bq6wu" path="res://objects/Decorations/Platforms/roots_platform.tscn" id="30_wluqd"]
+[ext_resource type="PackedScene" uid="uid://ljii6o8he6j1" path="res://objects/Decorations/Platforms/roots_platform_2.tscn" id="31_tkagr"]
+[ext_resource type="PackedScene" uid="uid://bijyf1qdex5qp" path="res://objects/Decorations/Platforms/roots_platform_3.tscn" id="32_7psut"]
+[ext_resource type="PackedScene" uid="uid://b6d1eg7ckaf5o" path="res://objects/terminal_w_screen.tscn" id="32_dhdfk"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wbddo"]
 points = PackedVector3Array(0.315716, 0.151648, -0.0393221, 0.315716, -0.199415, -0.0393221, 0.200669, 0.151648, -0.287214, 0.28768, 0.151648, 0.391324, 0.200669, -0.199415, -0.287214, 0.28768, -0.199415, 0.391324, -0.0608646, 0.151648, -0.573917, 0.203673, 0.151648, 0.554335, -0.0608646, -0.199415, -0.573917, 0.203673, -0.199415, 0.554335, -0.499324, 0.151648, -0.703854, 0.000713944, 0.151648, 0.708065, -0.499324, -0.199415, -0.703854, 0.000713944, -0.199415, 0.708065, -0.707189, 0.151648, -0.723935, -0.468585, 0.151648, 1, -0.707189, -0.199415, -0.723935, -0.468585, -0.199415, 1, -0.679053, 0.151648, 0.984981, -0.679053, -0.199415, 0.984981)
@@ -162,10 +167,7 @@ transform = Transform3D(0.267488, -1.00729e-07, -1.16981, -1.81195e-07, -0.943, 
 [node name="stalactite_A8" parent="cliff_simple_011/CaveLakeDecorations/Stalactites/down" index="7" instance=ExtResource("6_mirp5")]
 transform = Transform3D(0.1703, -6.40905e-08, -0.744778, -1.15361e-07, -0.6, 5.73366e-08, -0.744778, 7.82809e-08, -0.1703, -0.018394, 0.178084, -0.0945416)
 
-[node name="island_boundaries" parent="." index="6"]
-visible = false
-
-[node name="beach_collision" parent="." index="7"]
+[node name="island_boundaries" parent="." index="7"]
 visible = false
 
 [node name="Areas" type="Node3D" parent="." index="8"]
@@ -242,23 +244,26 @@ shape = SubResource("CylinderShape3D_nh1jb")
 [node name="chest" parent="Areas/Area3D2" index="1" instance=ExtResource("13_5o27c")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 
-[node name="swamp_collision" parent="." index="9"]
+[node name="beach_collision" parent="." index="9"]
 visible = false
 
-[node name="reef_collision" parent="." index="10"]
+[node name="swamp_collision" parent="." index="10"]
 visible = false
 
-[node name="river_collision" parent="." index="11"]
+[node name="reef_collision" parent="." index="11"]
 visible = false
 
-[node name="flowers_collision" parent="." index="12"]
+[node name="river_collision" parent="." index="12"]
 visible = false
 
-[node name="cave_lake_collision" parent="." index="13"]
+[node name="flowers_collision" parent="." index="13"]
+visible = false
+
+[node name="cave_lake_collision" parent="." index="14"]
 transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 5.03923, 0.891382, -0.322394)
 visible = false
 
-[node name="deep_collision" parent="." index="14"]
+[node name="deep_collision" parent="." index="15"]
 visible = false
 
 [node name="Water" type="Node3D" parent="." index="68"]
@@ -384,11 +389,43 @@ skeleton = NodePath("../../..")
 transform = Transform3D(0.596641, 0, 0, 0, 0.5, 0, 0, 0, 0.448938, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_fr58h")
 
-[node name="shell" parent="." index="69"]
-transform = Transform3D(0.0190557, 1.17802e-09, -0.0351693, 0.00924985, 0.0385917, 0.00501182, 0.0339311, -0.0105204, 0.0183848, -5.98552, 0.0515174, -0.114977)
-
 [node name="bridge2" parent="." index="71" instance=ExtResource("18_xrsdk")]
 transform = Transform3D(0.0802135, 0.00899738, -0.114389, -0.0156056, 0.139127, 1.46414e-09, 0.113676, 0.0127508, 0.0807165, -0.416347, -0.357933, 4.88074)
+
+[node name="shell" parent="." index="72"]
+transform = Transform3D(0.0190557, 1.17802e-09, -0.0351693, 0.00924985, 0.0385917, 0.00501182, 0.0339311, -0.0105204, 0.0183848, -5.98552, 0.0515174, -0.114977)
+
+[node name="Parkour" type="Node3D" parent="." index="76"]
+
+[node name="VineLadder" parent="Parkour" index="0" instance=ExtResource("29_x8oy7")]
+transform = Transform3D(0.997375, 0, -0.0418292, 0, 0.563903, 0, 0.0724027, 0, 0.576214, 7.18773, 0.958918, 0.0361497)
+
+[node name="Roots" parent="Parkour" index="1" instance=ExtResource("30_wluqd")]
+transform = Transform3D(-0.126159, 0, 0.491812, 0, 0.7, 0, -0.688537, 0, -0.0901137, 7.15099, 1.52027, 0.344732)
+
+[node name="RootsPlatform2" parent="Parkour" index="2" instance=ExtResource("31_tkagr")]
+transform = Transform3D(0.485586, 0, -0.11919, 0.0278993, 0.486109, 0.113663, 0.115879, -0.117037, 0.472096, 6.81116, 1.63414, 1.48556)
+
+[node name="VineLadder2" parent="Parkour" index="3" instance=ExtResource("29_x8oy7")]
+transform = Transform3D(0.990875, 0, -0.0778679, 0, 0.563903, 0, 0.134782, 0, 0.572459, 7.2213, 3.09996, 0.0158601)
+
+[node name="roots_platform3" parent="Parkour" index="4" instance=ExtResource("32_7psut")]
+transform = Transform3D(0.889964, 0.095993, -0.445813, -0.0549999, 0.993052, 0.10403, 0.452702, -0.0680635, 0.88906, 6.92738, 2.37885, 1.20303)
+
+[node name="RootsPlatform3" parent="Parkour" index="5" instance=ExtResource("31_tkagr")]
+transform = Transform3D(0.22822, -0.0915413, -0.435357, 0.0585029, -0.478875, 0.13136, -0.441014, -0.110897, -0.207868, 6.93641, 2.85094, 0.448843)
+
+[node name="RootsPlatform4" parent="Parkour" index="6" instance=ExtResource("31_tkagr")]
+transform = Transform3D(0.493248, 0.0160334, -0.0803109, -0.0447458, 0.463428, -0.182296, 0.0685913, 0.187021, 0.458605, 6.94148, 3.29621, 0.753498)
+
+[node name="roots_platform4" parent="Parkour" index="7" instance=ExtResource("32_7psut")]
+transform = Transform3D(0.954107, -0.0588282, 0.293631, -0.0153642, -0.98884, -0.148188, 0.299071, 0.136876, -0.944363, 6.7175, 3.5641, 1.42183)
+
+[node name="VineLadder3" parent="Parkour" index="8" instance=ExtResource("29_x8oy7")]
+transform = Transform3D(0.499697, 0, -0.50043, 0, 0.563903, 0, 0.8662, 0, 0.28869, 6.66786, 4.14521, 2.06866)
+
+[node name="terminal_w_screen" parent="." index="77" instance=ExtResource("32_dhdfk")]
+transform = Transform3D(0.0677965, 0, 0.292239, 0, 0.3, 0, -0.292239, 0, 0.0677965, 5.62963, 4.72909, -0.113614)
 
 [connection signal="area_entered" from="Areas/beach" to="Areas/beach" method="_on_area_entered"]
 [connection signal="area_exited" from="Areas/beach" to="Areas/beach" method="_on_area_exited"]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bijyf1qdex5qp"]
+
+[ext_resource type="PackedScene" uid="uid://bm526nwpr6tde" path="res://models/Decorations/roots_platform3.glb" id="1_l02cf"]
+
+[node name="roots_platform3" instance=ExtResource("1_l02cf")]

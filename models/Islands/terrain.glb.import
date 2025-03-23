@@ -64,6 +64,10 @@ _subresources={
 "generate/physics": true,
 "physics/shape_type": 2
 },
+"PATH:cliff_simple_012": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
 "PATH:deep_collision": {
 "physics/layer": 4096,
 "physics/mask": 256,

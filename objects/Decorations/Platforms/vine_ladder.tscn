@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy5d6k3gi6ja1"]
+
+[ext_resource type="PackedScene" uid="uid://dkib3c7k6m0tj" path="res://models/Decorations/vines.glb" id="1_sht13"]
+[ext_resource type="Script" uid="uid://ndfmj5jvqwpx" path="res://scripts/ladder.gd" id="2_3so24"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xm0sm"]
+size = Vector3(0.108475, 1.65552, 0.605179)
+
+[node name="VineLadder" type="Node3D"]
+
+[node name="vines" parent="." instance=ExtResource("1_sht13")]
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 512
+collision_mask = 2
+script = ExtResource("2_3so24")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0220871, 0.130497, -0.0118637)
+shape = SubResource("BoxShape3D_xm0sm")
+
+[connection signal="area_entered" from="Area3D" to="Area3D" method="_on_area_entered"]
+[connection signal="area_exited" from="Area3D" to="Area3D" method="_on_area_exited"]
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

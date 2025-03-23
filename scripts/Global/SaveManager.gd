@@ -27,4 +27,5 @@ func _create_or_load_save() -> void:
 	FishingManager.set_stats(save_game_res.fishing_stats)
 	BasketManager.set_stats(save_game_res.basket_stats)
 	character.set_stats(save_game_res.character_stats)
+	character.enable_player(false)
 	SignalBus.savegame_loaded.emit()
