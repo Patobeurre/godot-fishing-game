@@ -20,9 +20,9 @@ resources_spreadsheet_view/context_menu_on_leftclick=false
 
 [application]
 
-config/name="Fishing Game"
+config/name="Just A Fishing Game"
 config/tags=PackedStringArray("starterkit")
-run/main_scene="res://scenes/island_final.tscn"
+run/main_scene="uid://dspewm732uj1c"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0.92549, 0.92549, 0.960784, 1)
 boot_splash/image="res://splash-screen.png"

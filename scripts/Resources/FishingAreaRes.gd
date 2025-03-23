@@ -52,9 +52,9 @@ func get_waiting_time() -> float:
 	return waiting_time * modifier.waiting_time_factor
 
 
-func get_rarity(min :int = 0, max :int = 100) -> int:
+func get_rarity(rarity_min :int = 0, rarity_max :int = 100) -> int:
 	var rng = RandomNumberGenerator.new()
-	var randomNumber = rng.randi_range(min, max) * modifier.rarity_factor
-	if randomNumber < min:
-		randomNumber = min
+	var randomNumber = rng.randi_range(rarity_min, rarity_max) * modifier.rarity_factor
+	if randomNumber < rarity_min:
+		randomNumber = rarity_min
 	return Rarity.get_rarity(randomNumber)

@@ -22,6 +22,8 @@ func open(id :String):
 		return
 	
 	for ui in registered_uis:
+		if ui == null:
+			continue
 		if ui.unique_id == id:
 			current_ui = ui
 			current_ui.activate()
@@ -41,10 +43,12 @@ func close(id :String):
 
 
 func register_new_ui(ui :MainUI):
+	print("register " + ui.unique_id)
 	if not registered_uis.has(ui):
 		registered_uis.append(ui)
 
 func unregister_new_ui(ui :MainUI):
+	print("unregister " + ui.unique_id)
 	var index = registered_uis.find(ui)
 	if index >= 0:
 		registered_uis.remove_at(index)

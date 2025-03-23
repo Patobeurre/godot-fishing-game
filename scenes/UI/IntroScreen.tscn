@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://dspewm732uj1c"]
+
+[ext_resource type="Script" uid="uid://114ev8hyh4gi" path="res://scenes/UI/intro_screen.gd" id="1_6bmox"]
+[ext_resource type="Texture2D" uid="uid://dsx6b6i3cvtng" path="res://sprites/SaltyProd_splash_screen.jpg" id="1_401bw"]
+[ext_resource type="FontFile" uid="uid://dhs4ylcj4ar6s" path="res://fonts/SaltyWould.ttf" id="3_6bmox"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_401bw"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_0jrux"]
+resource_name = "reveal_splash_screen"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DarkMask:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_401bw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DarkMask:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6bmox"]
+_data = {
+&"RESET": SubResource("Animation_401bw"),
+&"reveal_splash_screen": SubResource("Animation_0jrux")
+}
+
+[node name="IntroSaltiProd" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6bmox")
+
+[node name="SaltyProdSplashScreen" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_401bw")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 538.0
+offset_right = 1329.0
+offset_bottom = 852.0
+theme_override_fonts/normal_font = ExtResource("3_6bmox")
+theme_override_font_sizes/normal_font_size = 300
+text = "SaltiProd"
+fit_content = true
+autowrap_mode = 0
+
+[node name="DarkMask" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = -66.0
+offset_top = -69.0
+offset_right = 1989.0
+offset_bottom = 1148.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_401bw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6bmox")
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

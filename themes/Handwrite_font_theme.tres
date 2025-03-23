@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bbhf8pjialv1y"]
+
+[ext_resource type="FontFile" uid="uid://biyspyodr6adl" path="res://fonts/Tox Typewriter.ttf" id="1_l8y2b"]
+
+[resource]
+default_font = ExtResource("1_l8y2b")
+default_font_size = 45

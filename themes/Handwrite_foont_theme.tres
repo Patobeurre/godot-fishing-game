@@ -1,7 +1,0 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bbhf8pjialv1y"]
-
-[ext_resource type="FontFile" uid="uid://dfqxox6g2ulmf" path="res://fonts/autumn_in_september/Autumn in September.ttf" id="1_njbf4"]
-
-[resource]
-default_font = ExtResource("1_njbf4")
-default_font_size = 45

@@ -29,5 +29,6 @@ func _on_area_2d_area_shape_exited(area_rid, area, area_shape_index, local_shape
 
 
 func _on_gui_input(event: InputEvent) -> void:
+	print(event)
 	if event.is_action_pressed("mouse_left"):
 		item_clicked.emit(res.content)

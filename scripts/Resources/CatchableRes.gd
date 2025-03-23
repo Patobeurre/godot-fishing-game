@@ -39,12 +39,12 @@ func is_fish() -> bool:
 	return tags.has(ELureTag.FISH)
 
 
-static func get_minigame_difficulty(rarity :Rarity.ERarity) -> MiniGameRes:
-	if rarity == Rarity.ERarity.UNCOMMON:
+static func get_minigame_difficulty(mg_rarity :Rarity.ERarity) -> MiniGameRes:
+	if mg_rarity == Rarity.ERarity.UNCOMMON:
 		return preload("res://scripts/Resources/MiniGame/Medium.tres")
-	elif rarity == Rarity.ERarity.RARE:
+	elif mg_rarity == Rarity.ERarity.RARE:
 		return preload("res://scripts/Resources/MiniGame/Hard.tres")
-	elif rarity == Rarity.ERarity.LEGENDARY:
+	elif mg_rarity == Rarity.ERarity.LEGENDARY:
 		return preload("res://scripts/Resources/MiniGame/Extrem.tres")
 		
 	return preload("res://scripts/Resources/MiniGame/Easy.tres")

@@ -52,8 +52,8 @@ func _remove_bars():
 		bars.remove_child(child)
 
 
-func init(catchable :CatchableRes):
-	self.catchable = catchable
+func init(init_catchable :CatchableRes):
+	self.catchable = init_catchable
 	
 	_remove_bars()
 	

@@ -17,6 +17,7 @@ func play_animation():
 	animation_player.play(animation_name)
 
 
-func _on_animation_finished(name :String) -> void:
+func _on_animation_finished(anim_name :String) -> void:
+	print(anim_name)
 	animation_player.animation_finished.disconnect(_on_animation_finished)
 	queue_free()

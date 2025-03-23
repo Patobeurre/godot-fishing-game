@@ -118,6 +118,7 @@ offset_left = 150.0
 offset_top = 150.0
 offset_right = 160.0
 offset_bottom = 166.0
+mouse_filter = 2
 texture = ExtResource("9_87ay7")
 
 [node name="Area2D" type="Area2D" parent="Cursor"]
