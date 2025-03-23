@@ -434,13 +434,16 @@ func handle_controls(_delta):
 			is_jumping = true
 			is_in_air = false
 		
-		if jump_single or jump_double:
-			Audio.play("sounds/jump_a.ogg, sounds/jump_b.ogg, sounds/jump_c.ogg")
+		if jump_single:
+			Audio.play("sounds/jump/jump_1.ogg,
+						sounds/jump/jump_2.ogg,
+						sounds/jump/jump_3.ogg,
+						sounds/jump/jump_4.ogg,
+						sounds/jump/jump_5.ogg")
 		
-		if jump_double:
-			
-			gravity = -jump_strength
-			jump_double = false
+		#if jump_double:
+		#	gravity = -jump_strength
+		#	jump_double = false
 			
 		if(jump_single): action_jump()
 	

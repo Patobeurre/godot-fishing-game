@@ -47,5 +47,7 @@ signal end_interaction()
 signal ui_opened
 signal ui_closed
 
+signal title_menu_play
+
 signal save_requested
 signal savegame_loaded
