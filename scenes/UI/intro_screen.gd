@@ -14,4 +14,4 @@ func _ready() -> void:
 func _on_timer_timeout() -> void:
 	animation_player.play_backwards("reveal_splash_screen")
 	await animation_player.animation_finished
-	Global.goto_scene("res://scenes/island_final.tscn")
+	Global.goto_scene("res://scenes/UI/LoadingScreen.tscn")
