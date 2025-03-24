@@ -110,7 +110,6 @@ visible = false
 light_color = Color(1, 0.938811, 0.584199, 1)
 light_energy = -0.9
 light_cull_mask = 4294967291
-shadow_enabled = true
 shadow_bias = 0.0
 
 [node name="Moon" type="Node3D" parent="WorldEnvironment/Sun&Moon"]

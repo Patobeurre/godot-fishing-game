@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://p7eh6ae65qu" path="res://sprites/folder.png" id="1_bakrh"]
 [ext_resource type="Script" uid="uid://bra12fkg6oqe2" path="res://objects/UI/desktop_icon.gd" id="2_klb34"]
 [ext_resource type="Texture2D" uid="uid://dhqhplo8i2lrx" path="res://sprites/file.png" id="2_ve7u0"]
-[ext_resource type="PackedScene" uid="uid://g3b7dqstwc11" path="res://objects/UI/riddle.tscn" id="3_8o1jt"]
+[ext_resource type="PackedScene" uid="uid://buquhpc3lyuk0" path="res://scenes/UI/ImageCode.tscn" id="3_00rte"]
 [ext_resource type="Script" uid="uid://bf4ajf12j6e3e" path="res://scripts/UI/Components/content_desktop.gd" id="3_vf5d3"]
 [ext_resource type="Script" uid="uid://cgsr6rbgsvss0" path="res://scripts/UI/Components/icon_desktop.gd" id="4_tcjen"]
 [ext_resource type="PackedScene" uid="uid://mb27qmslhd63" path="res://objects/UI/desktop_window.tscn" id="6_llkfl"]
@@ -15,7 +15,7 @@
 [sub_resource type="Resource" id="Resource_s5mwb"]
 script = ExtResource("3_vf5d3")
 title = "simu.exe"
-content = ExtResource("3_8o1jt")
+content = ExtResource("3_00rte")
 
 [sub_resource type="Resource" id="Resource_p2x6e"]
 script = ExtResource("4_tcjen")

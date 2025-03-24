@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4f1djmsmg3yy"]
+
+[ext_resource type="Script" uid="uid://cpvu7dn4r44q3" path="res://scenes/UI/loading_screen.gd" id="1_74fen"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtcj2"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_74fen"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lopin"]
+gradient = SubResource("Gradient_74fen")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0.799145)
+
+[node name="LoadingScreen" type="Control"]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_74fen")
+cooldown = 1.5
+
+[node name="Background" type="PanelContainer" parent="."]
+offset_left = -61.0
+offset_top = -57.0
+offset_right = 1994.0
+offset_bottom = 1160.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xtcj2")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_bottom = 50
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+clip_children = 1
+layout_mode = 2
+texture = SubResource("GradientTexture2D_lopin")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TextureRect"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
