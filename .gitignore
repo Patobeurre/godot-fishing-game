@@ -18,7 +18,3 @@ mono_crash.*.json
 build/
 # https://github.com/godotengine/godot/issues/82270
 *~*.TMP
-game.exe
-game.pck
-game.console.exe
-game.console.exe
