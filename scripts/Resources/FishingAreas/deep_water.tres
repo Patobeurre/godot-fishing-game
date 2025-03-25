@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=15 format=3 uid="uid://dpdrl0ohcty7k"]
+[gd_resource type="Resource" script_class="FishingAreaRes" load_steps=16 format=3 uid="uid://dpdrl0ohcty7k"]
 
 [ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_57rtu"]
 [ext_resource type="Resource" uid="uid://l45j43d051lt" path="res://scripts/Resources/Catchables/Fishes/Squid.tres" id="2_nxbdl"]
@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://bmwupnkufkp8y" path="res://scripts/Resources/Catchables/Fishes/RayVariant.tres" id="10_cw7af"]
 [ext_resource type="Resource" uid="uid://4gplno14hk82" path="res://scripts/Resources/Catchables/Fishes/CubeFish.tres" id="11_0a6nt"]
 [ext_resource type="Resource" uid="uid://b58c3eij4xuvh" path="res://scripts/Resources/Catchables/Fishes/Sailfish.tres" id="12_nx60h"]
+[ext_resource type="Resource" uid="uid://cqcwt6kyunxem" path="res://scripts/Resources/Catchables/Fishes/MahiMahi.tres" id="13_2jjls"]
 [ext_resource type="Resource" uid="uid://b16jgklq2bpkk" path="res://scripts/Resources/Regions/Deep.tres" id="13_rs21j"]
 
 [resource]
@@ -20,5 +21,5 @@ script = ExtResource("2_u228g")
 region = ExtResource("13_rs21j")
 type = 1
 waiting_time = 3.0
-catchables = Array[ExtResource("1_57rtu")]([ExtResource("4_kct0i"), ExtResource("2_nxbdl"), ExtResource("3_hjill"), ExtResource("7_hc7po"), ExtResource("8_ibjr0"), ExtResource("7_mb20o"), ExtResource("8_6j2ae"), ExtResource("9_txr0g"), ExtResource("10_cw7af"), ExtResource("11_0a6nt"), ExtResource("12_nx60h")])
+catchables = Array[ExtResource("1_57rtu")]([ExtResource("4_kct0i"), ExtResource("2_nxbdl"), ExtResource("3_hjill"), ExtResource("7_hc7po"), ExtResource("8_ibjr0"), ExtResource("7_mb20o"), ExtResource("8_6j2ae"), ExtResource("9_txr0g"), ExtResource("10_cw7af"), ExtResource("11_0a6nt"), ExtResource("12_nx60h"), ExtResource("13_2jjls")])
 default_catchables = Array[ExtResource("1_57rtu")]([ExtResource("8_6j2ae")])

@@ -25,6 +25,7 @@ script = ExtResource("1_74fen")
 cooldown = 1.5
 
 [node name="Background" type="PanelContainer" parent="."]
+layout_mode = 0
 offset_left = -61.0
 offset_top = -57.0
 offset_right = 1994.0

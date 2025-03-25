@@ -167,6 +167,10 @@ F_ELECTRICEEL_NAME;Anguille électrique;Electric eel
 F_ELECTRICEEL_DESCR;;
 F_ELECTRICEEL_IDENT_DESCR;;
 ;;
+F_MAHIMAHI_NAME;Mahi mahi;Mahi mahi
+F_MAHIMAHI_DESCR;;
+F_MAHIMAHI_IDENT_DESCR;;
+;;
 F_ANEMONE_NAME;Anemone;Anemone
 F_ANEMONE_DESCR;Peut servir de refuge pour certains poissons.;Can serve as a refuge for certain fish.
 ;;
