@@ -5,6 +5,7 @@ extends MainUI
 
 @onready var default_minigame_scene :PackedScene = preload("res://scenes/UI/MiniGame/minigame_horizontal_bar.tscn")
 @onready var wave_minigame_scene :PackedScene = preload("res://scenes/UI/MiniGame/minigame_waves.tscn")
+@onready var moving_cursor_minigame_scene :PackedScene = preload("res://scenes/UI/MiniGame/minigame_round_moving_cursor.tscn")
 
 
 var catchable :CatchableRes = null
@@ -35,9 +36,11 @@ func load_minigame():
 	var minigame_scene = default_minigame_scene.instantiate()
 	if catchable.minigame_res != null:
 		minigame_scene = catchable.minigame_res.minigame_scene.instantiate()
-	elif catchable.tags.has(catchable.ELureTag.FISH) and \
-		not catchable.tags.has(catchable.ELureTag.MULTIPLE_LEGS):
-		minigame_scene = wave_minigame_scene.instantiate()
+	elif catchable.tags.has(catchable.ELureTag.FISH):
+		if catchable.tags.has(catchable.ELureTag.STATIC):
+			minigame_scene = moving_cursor_minigame_scene.instantiate()
+		elif not catchable.tags.has(catchable.ELureTag.MULTIPLE_LEGS):
+			minigame_scene = wave_minigame_scene.instantiate()
 	
 	scene_node.add_child(minigame_scene)
 	minigame_scene.init(catchable)

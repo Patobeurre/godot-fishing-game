@@ -28,3 +28,8 @@ class_name MiniGameRes
 @export_group("Round Dodge")
 @export var spawn_cd :float = 2.0
 @export var catchable_speed :float = 5.0
+
+@export_group("Round Moving Cursor")
+@export var round_nb_bar_to_spawn :int = 3
+@export var round_cursor_speed :float = 2.0
+@export var round_max_time :float = 10

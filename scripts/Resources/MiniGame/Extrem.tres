@@ -20,3 +20,6 @@ holes_number = 2
 rotation_speed = 30.0
 spawn_cd = 1.6
 catchable_speed = 9.0
+round_nb_bar_to_spawn = 6
+round_cursor_speed = 2.5
+round_max_time = 10.0

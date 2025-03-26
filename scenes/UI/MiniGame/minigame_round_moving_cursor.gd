@@ -12,6 +12,7 @@ class_name MiniGameRoundMovingCursor
 
 @onready var wave_part_scene = preload("res://objects/UI/wave_part.tscn")
 
+@export var minigame_res :MiniGameRes
 @export var cooldown :float = 2
 @export var cursor_speed :float = 2
 
@@ -23,6 +24,7 @@ var score_max :float = 100
 var score_step :float = 10
 var score_fail_value :float = -30
 var is_win :bool = false
+
 
 var nb_bar_spawn :int = 3
 var is_cursor_inside_area = false
@@ -43,17 +45,16 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
 	timer_interval.start(cooldown)
-	timer_main.start(10)
-	
-	score_step = 100 / nb_bar_spawn
-	
-	spawn_bars()
 
 
 func init(catchable :CatchableRes):
 	if catchable != null:
 		catchable_img.texture = catchable.image
 		catchable_img.modulate = Color.from_hsv(0, 0, 0)
+		minigame_res = catchable.get_minigame_difficulty(catchable.rarity)
+		timer_main.start(minigame_res.round_max_time)
+		score_step = 100 / minigame_res.round_nb_bar_to_spawn
+		spawn_bars()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -73,7 +74,6 @@ func _process(delta: float) -> void:
 
 
 func _remove_bar(bar):
-	print(bar)
 	bars_node.remove_child(bar)
 
 
@@ -104,12 +104,12 @@ func _update_score(value :float):
 
 
 func _move_cursor(delta :float) -> void:
-	cursor.rotate(delta * cursor_speed)
+	cursor.rotate(delta * minigame_res.round_cursor_speed)
 
 
 func spawn_bars() -> void:
 	var indices := []
-	while indices.size() < nb_bar_spawn:
+	while indices.size() < minigame_res.round_nb_bar_to_spawn:
 		var rnd := randi_range(0, 14)
 		if not indices.has(rnd):
 			indices.append(rnd)
