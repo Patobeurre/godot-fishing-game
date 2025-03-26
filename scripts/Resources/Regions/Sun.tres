@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RegionRes" load_steps=2 format=3 uid="uid://cqu45vyjtaob0"]
+
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="1_jf7ht"]
+
+[resource]
+script = ExtResource("1_jf7ht")
+name = "Sun"
+color = Color(0.988235, 0.733333, 0.203922, 1)
+metadata/_custom_type_script = "uid://bj6hqw6pe0bcf"

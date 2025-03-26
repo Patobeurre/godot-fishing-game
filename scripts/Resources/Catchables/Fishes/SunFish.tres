@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=7 format=3 uid="uid://cr1d4rrnw2quv"]
+
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_m5flh"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_nkx2h"]
+[ext_resource type="Texture2D" uid="uid://drfj5pxctpgqy" path="res://sprites/Catchables/Fishes/sunfish.png" id="2_0l5b6"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="2_m5flh"]
+[ext_resource type="Resource" uid="uid://cqu45vyjtaob0" path="res://scripts/Resources/Regions/Sun.tres" id="5_vybpc"]
+[ext_resource type="PackedScene" uid="uid://k2lpf1bgc7yg" path="res://objects/Catchables/Fishes/sunfish.tscn" id="6_o8a8p"]
+
+[resource]
+script = ExtResource("1_nkx2h")
+id = 72
+name = "F_SUNFISH_NAME"
+description = "F_SUNFISH_DESCR"
+notification_text = ""
+category = ExtResource("1_m5flh")
+tags = Array[int]([0, 2])
+image = ExtResource("2_0l5b6")
+scene = ExtResource("6_o8a8p")
+rarity = 5
+price = 1000
+regions = Array[ExtResource("2_m5flh")]([ExtResource("5_vybpc")])
+periods = Array[int]([0, 1, 2, 3])
+lures = Array[ExtResource("1_nkx2h")]([])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([0, 11, 6, 4, 5, 7, 9, 10])
+metadata/_custom_type_script = "uid://bvlemvvbdnswd"

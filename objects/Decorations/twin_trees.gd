@@ -46,9 +46,9 @@ func enable_trigger_area(enabled :bool):
 
 func make_sun_disappear():
 	if FishingManager.current_catchable_area != null:
-		if FishingManager.current_catchable_area.fishTable.name == "Sun":
+		if FishingManager.current_catchable_area.fishTable.region.name == "Sun":
 			FishingManager.cancel()
-			
+	
 	#animation_player.play("sun_disappear")
 	
 	sun_particules.emitting = false
