@@ -366,6 +366,14 @@ light_energy = 0.4
 light_specular = 1.0
 shadow_enabled = true
 
+[node name="OmniLight3D2" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(0.809509, 3.49943e-08, 0.587107, 0, -1, 5.96046e-08, 0.587107, -4.82505e-08, -0.809509, -9.80974, 9.22706, -13.2816)
+light_color = Color(1, 1, 0.827451, 1)
+light_energy = 0.2
+light_specular = 0.1
+shadow_enabled = true
+spot_range = 26.0847
+
 [node name="MainMenu" type="Node3D" parent="." node_paths=PackedStringArray("player")]
 transform = Transform3D(0.994694, 0, -0.102879, 0, 1, 0, 0.102879, 0, 0.994694, 0, 0, 0)
 script = ExtResource("41_3kdtu")
@@ -376,3 +384,5 @@ transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 13, 13, 24
 current = true
 
 [node name="Control" parent="MainMenu" instance=ExtResource("42_i5j4e")]
+
+[node name="Clouds" type="Node3D" parent="."]

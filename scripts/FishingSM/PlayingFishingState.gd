@@ -10,7 +10,6 @@ const MAX_ZOOM :float = 15
 # Called when the state machine enters this state.
 func on_enter():
 	print("playing state")
-	#SignalBus.start_minigame.emit(FishingManager.picked_catchable)
 
 
 # Called every frame when this state is active.

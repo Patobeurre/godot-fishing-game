@@ -13,6 +13,15 @@ var catchable :CatchableRes = null
 func _on_ready():
 	pass
 
+
+func _on_input(event :InputEvent):
+	if not is_activated: return
+	
+	if event.is_action_pressed("mouse_right"):
+		UiManager.close(unique_id)
+		SignalBus.end_minigame.emit(false)
+
+
 func _remove_minigame_scene():
 	for child in scene_node.get_children():
 		scene_node.remove_child(child)
@@ -42,6 +51,7 @@ func _on_activate():
 
 func _on_deactivate():
 	_remove_minigame_scene()
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	SignalBus.enable_player_camera.emit(true)
 	SignalBus.enable_player_fishing.emit(true)
 	SignalBus.enable_player_movements.emit(true)

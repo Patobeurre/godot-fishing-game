@@ -348,6 +348,7 @@ func _input(event):
 		rotation_target.y -= event.relative.x / mouse_sensitivity
 		rotation_target.x -= event.relative.y / mouse_sensitivity
 	
+	#fishing_sm.current_state.on_input(event)
 	handle_menu_inputs(event)
 
 

@@ -97,7 +97,7 @@ fishTable = ExtResource("4_rxx25")
 transform = Transform3D(-2.75049, 0, 0.807729, 0, 2.86664, 0, -0.807729, 0, -2.75049, 4.48093, 0, -2.92571)
 
 [node name="cliff_simple_006" parent="." index="4"]
-transform = Transform3D(1.28, 0, -1.91028, 0, 2.74645, 0, 1.91028, 0, 1.28, 4.03677, -0.136164, 2.13777)
+transform = Transform3D(1.28, 0, -1.91028, 0, 2.74645, 0, 1.91028, 0, 1.28, 4.03677, -0.211563, 2.13777)
 
 [node name="cliff_simple_011" parent="." index="5"]
 transform = Transform3D(3.1801, 0, 1.90004, 0, 5.94256, 0, -1.90004, 0, 3.1801, 5.1483, -0.779858, -0.0820961)
