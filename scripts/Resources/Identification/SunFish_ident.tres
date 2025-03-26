@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_81lcm")
 matching_catchable = ExtResource("1_mskcj")
-name = "F_SUNFISH_NAME"
+name = "???"
 size = "?"
 habitat = "?"
 description = "F_SUNFISH_IDENT_DESCR"

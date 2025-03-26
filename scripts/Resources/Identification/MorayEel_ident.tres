@@ -9,4 +9,4 @@ matching_catchable = ExtResource("1_vnrm5")
 name = "Serpilia undulactyla"
 size = "F_SIZE_BIG"
 habitat = "FA_REEF_CAVES"
-description = "F_MORRAYEEL_IDENT_DESCR"
+description = "F_MORAYEEL_IDENT_DESCR"

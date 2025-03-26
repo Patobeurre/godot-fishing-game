@@ -25,7 +25,7 @@ F_CLOWNFISH_IDENT_DESCR;Ce poisson coloré adore se cacher dans des anémones.;T
 ;;
 F_COMMONFISH_NAME;Poisson commun;Common fish
 F_COMMONFISH_DESCR;Peu être trouvé à n’importe quelle période de la journée.;Can be found at any time of the day.
-F_COMMONFISH_IDENT_DESCR;;
+F_COMMONFISH_IDENT_DESCR;Un poisson allongé d’une banalité effarante.;An elongated fish of’a frightening banality.
 ;;
 F_EEL_NAME;Anguille;Eel
 F_EEL_DESCR;Serpente autour des formations rocheuses.;Wander near rock formations.
@@ -109,7 +109,7 @@ F_OCTOPUS_IDENT_DESCR;;
 ;;
 F_ROYALBEARDFISH_NAME;Poisson royal à barbe;Royal beard fish
 F_ROYALBEARDFISH_DESCR;Une aura de pouvoir et de détermination émane de ce poisson.;An aura of power and determination emanates from this fish.
-F_ROYALBEARDFISH_IDENT_DESCR;;
+F_ROYALBEARDFISH_IDENT_DESCR;Le roi des océans… autoproclamé. Semble être le chef de file d’une organisation piscicole d’amateur d’algue.;King of the oceans... self-proclaimed. Seems to be the leader of an algae-loving fish farming organization.
 ;;
 F_MUSKIE_NAME;Maskinongé;Muskie
 F_MUSKIE_DESCR;Un corps allongé.;An elongated body.

@@ -2,8 +2,6 @@ extends Node3D
 
 
 @onready var viewport :SubViewport = $SubViewport
-#@onready var rich_text = $SubViewport/ScrollContainer/Control/RichTextLabel
-@onready var mouse_cursor :TextureRect = $SubViewport/Cursor
 
 var screen_size :Vector2
 var viewport_size :Vector2
@@ -19,10 +17,7 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("interact"):
 		pass
-	
-	if mouse_cursor != null:
-		var mouse_position := get_viewport().get_mouse_position()
-		mouse_cursor.set_position(mouse_position * viewport_size / screen_size)
+
 
 func _input(ev):
 	if ev is InputEventKey:
