@@ -45,6 +45,10 @@ func pick_catchable(
 			return default_catchables.pick_random()
 		return null
 	
+	for catchable in list.get_catchables():
+		if not FishingManager.is_catchable_collected(catchable):
+			return catchable
+	
 	return list.pick_random()
 
 

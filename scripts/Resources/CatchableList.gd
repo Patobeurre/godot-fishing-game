@@ -28,13 +28,11 @@ func filter_by_rarity(rarity :int, permissive :bool) -> CatchableList:
 		return self
 	
 	var tmp_list = list.filter(func (item):
-		return item.rarity == rarity)
-	
-	if tmp_list.is_empty():
-		tmp_list = list.filter(func (item):
-			return item.rarity > rarity)
+		return item.rarity >= rarity)
 	
 	if not tmp_list.is_empty() or not permissive:
+		tmp_list.sort_custom(func (a, b):
+			return a.rarity < b.rarity)
 		list = tmp_list
 		return self
 	
@@ -59,6 +57,9 @@ func is_empty() -> bool:
 
 func pick_random() -> CatchableRes:
 	return list.pick_random()
+
+func get_catchables() -> Array[CatchableRes]:
+	return list
 
 
 static func create(catchables :Array[CatchableRes]) -> CatchableList:

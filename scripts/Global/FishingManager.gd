@@ -199,3 +199,7 @@ func get_catchable_by_id(id :int):
 		return catchable.id == id)
 	if not matching_lures.is_empty():
 		return matching_lures.front()
+
+
+func is_catchable_collected(catchable :CatchableRes) -> bool:
+	return fishing_stats.contains(catchable)

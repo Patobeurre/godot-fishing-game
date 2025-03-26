@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=13 format=3 uid="uid://n8qq25vkjihs"]
+
+[ext_resource type="Resource" uid="uid://b5wtl8mej3vkw" path="res://scripts/Resources/Categories/Fishes.tres" id="1_k8xii"]
+[ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_ykhwc"]
+[ext_resource type="Texture2D" uid="uid://c0u884gym3pj" path="res://sprites/Catchables/Fishes/starfish.png" id="2_gr57e"]
+[ext_resource type="Script" uid="uid://bj6hqw6pe0bcf" path="res://scripts/Resources/RegionRes.gd" id="2_kkjny"]
+[ext_resource type="Resource" uid="uid://ctotryrf5kh4e" path="res://scripts/Resources/Catchables/Fishes/JellyFish.tres" id="4_ewrvs"]
+[ext_resource type="Resource" uid="uid://b67rtymghjo5n" path="res://scripts/Resources/Catchables/Fishes/JellyFishRobe.tres" id="5_jevrr"]
+[ext_resource type="Resource" uid="uid://l45j43d051lt" path="res://scripts/Resources/Catchables/Fishes/Squid.tres" id="6_7ob8u"]
+[ext_resource type="Resource" uid="uid://drwlqix3iakro" path="res://scripts/Resources/Catchables/Fishes/Octopus.tres" id="7_al67c"]
+[ext_resource type="Resource" uid="uid://m3esr6ufsrya" path="res://scripts/Resources/Catchables/Fishes/HermitCrab.tres" id="8_kvs8l"]
+[ext_resource type="Resource" uid="uid://bwrdv60ecb3rv" path="res://scripts/Resources/Regions/Beach.tres" id="10_11jlg"]
+[ext_resource type="Resource" uid="uid://dhld2ow8uhn80" path="res://scripts/Resources/Regions/BeachGround.tres" id="11_uxdia"]
+[ext_resource type="PackedScene" uid="uid://dto2dm7giixmc" path="res://objects/Catchables/Fishes/starfish.tscn" id="12_m3vuq"]
+
+[resource]
+script = ExtResource("1_ykhwc")
+id = 71
+name = "F_STARFISH_NAME"
+description = "F_STARFISH_DESCR"
+notification_text = ""
+category = ExtResource("1_k8xii")
+tags = Array[int]([0, 11])
+image = ExtResource("2_gr57e")
+scene = ExtResource("12_m3vuq")
+rarity = 15
+price = 12
+regions = Array[ExtResource("2_kkjny")]([ExtResource("10_11jlg"), ExtResource("11_uxdia")])
+periods = Array[int]([0, 1, 2, 3])
+lures = Array[ExtResource("1_ykhwc")]([ExtResource("4_ewrvs"), ExtResource("5_jevrr"), ExtResource("6_7ob8u"), ExtResource("7_al67c"), ExtResource("8_kvs8l")])
+lure_ids = Array[int]([])
+lure_tags = Array[int]([])
+metadata/_custom_type_script = "uid://bvlemvvbdnswd"

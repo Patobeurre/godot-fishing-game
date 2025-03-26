@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dto2dm7giixmc"]
+
+[ext_resource type="PackedScene" uid="uid://dqjypr2anb5om" path="res://models/Catchables/Fishes/starfish.glb" id="1_1ya1i"]
+
+[node name="StarFish" type="Node3D"]
+
+[node name="starfish" parent="." instance=ExtResource("1_1ya1i")]
+transform = Transform3D(-0.0433013, 0.0241481, 0.00647048, 5.65364e-10, 0.012941, -0.0482963, -0.025, -0.0418258, -0.0112072, 0, -0.051951, -0.00805116)
