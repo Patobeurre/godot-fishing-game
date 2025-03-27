@@ -75,7 +75,7 @@ func _on_body_entered(body):
 	linear_velocity = Vector3.ZERO
 	gravity_scale = 0
 	if body.has_method("get_fish_table"):
-		reparent(body)
+		#reparent(body)
 		SignalBus.bobber_enter_fishing_area.emit(body as CatchableArea)
 	else:
 		SignalBus.bobber_collide_wall.emit()

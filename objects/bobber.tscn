@@ -108,7 +108,6 @@ shadow_mesh = SubResource("ArrayMesh_iti55")
 render_priority = 0
 shader = ExtResource("2_4ca3n")
 shader_parameter/Texture2DParameter = ExtResource("3_12fqs")
-shader_parameter/NoDepth = true
 
 [sub_resource type="QuadMesh" id="QuadMesh_cigvi"]
 lightmap_size_hint = Vector2i(4, 3)
