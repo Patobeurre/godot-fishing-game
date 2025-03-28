@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CatchableRes" load_steps=10 format=3 uid="uid://dcpvdafn7juyp"]
+[gd_resource type="Resource" script_class="CatchableRes" load_steps=11 format=3 uid="uid://dcpvdafn7juyp"]
 
 [ext_resource type="Resource" uid="uid://eqi3uvm17to0" path="res://scripts/Resources/Categories/Insects.tres" id="1_0dxk5"]
 [ext_resource type="Script" uid="uid://bvlemvvbdnswd" path="res://scripts/Resources/CatchableRes.gd" id="1_ftmi8"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c5gg6temsi7w5" path="res://objects/Catchables/butterfly.tscn" id="5_brfx4"]
 [ext_resource type="Resource" uid="uid://dpudh0oxpgs8s" path="res://scripts/Resources/Catchables/Frog.tres" id="5_o50y2"]
 [ext_resource type="Resource" uid="uid://bp5g8fihosob6" path="res://scripts/Resources/Regions/Flowers.tres" id="6_6wysv"]
+[ext_resource type="Resource" uid="uid://c6uqlk4dkpapi" path="res://scripts/Resources/MiniGame/MiniGameRoundFollow/butterfly_minigame.tres" id="7_y1wnu"]
 
 [resource]
 script = ExtResource("1_ftmi8")
@@ -20,6 +21,7 @@ category = ExtResource("1_0dxk5")
 tags = Array[int]([4, 9])
 image = ExtResource("2_raic3")
 scene = ExtResource("5_brfx4")
+minigame_res = ExtResource("7_y1wnu")
 rarity = 30
 price = 0
 regions = Array[ExtResource("5_32di8")]([ExtResource("6_6wysv")])

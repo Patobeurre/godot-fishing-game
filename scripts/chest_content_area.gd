@@ -1,21 +1,34 @@
 extends CatchableArea
 
 @export var key_catchable :CatchableRes
+@export var chest_minigame :CatchableRes
 @export var content_document :DocumentList
 
 
 func prepare():
-	if FishingManager.fishing_stats.current_lure == key_catchable:
-		FishingManager.picked_catchable = key_catchable
-	else:
-		FishingManager.cancel()
+	FishingManager.picked_catchable = chest_minigame
 
 
 func perform():
-	if FishingManager.fishing_stats.current_lure == key_catchable:
-		FishingManager.cancel()
-		on_finished(true)
-		
+	#if FishingManager.fishing_stats.current_lure == key_catchable:
+	#	FishingManager.cancel()
+	#	on_finished(true)
+	#	
+	#	Audio.play("sounds/insert_key_chest.ogg")
+	#	SignalBus.update_document_list.emit(content_document)
+	#	
+	#	await get_tree().create_timer(1).timeout
+	#	
+	#	#UiManager.open("Documents")
+	#	MailManager.add_documents_to_inventory(content_document)
+	#	SignalBus.show_documents_request.emit(content_document)
+	#FishingManager.cancel()
+	
+	FishingManager.start_mini_game(chest_minigame)
+
+
+func on_finished(succeeded :bool):
+	if succeeded:
 		Audio.play("sounds/insert_key_chest.ogg")
 		SignalBus.update_document_list.emit(content_document)
 		
@@ -24,12 +37,7 @@ func perform():
 		#UiManager.open("Documents")
 		MailManager.add_documents_to_inventory(content_document)
 		SignalBus.show_documents_request.emit(content_document)
-	
-	FishingManager.cancel()
-
-
-func on_finished(succeeded :bool):
-	if succeeded:
+		
 		if is_one_shot:
 			disable_collision()
 

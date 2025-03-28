@@ -10,12 +10,12 @@ func prepare():
 
 
 func perform():
-	FishingManager.start_mini_game(chest_minigame)
+	FishingManager.cancel()
+	chest.init()
 
 
 func on_finished(succeeded :bool):
 	if succeeded:
-		chest.init()
 		if is_one_shot:
 			disable_collision()
 

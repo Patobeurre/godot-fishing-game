@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://deqhnbp03hvqw"]
+[gd_scene load_steps=50 format=3 uid="uid://deqhnbp03hvqw"]
 
 [ext_resource type="Script" uid="uid://djf38n2lcwea1" path="res://scripts/Global/SaveManager.gd" id="1_h358c"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_iqhaf"]
@@ -40,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://dfo6rjwsvceum" path="res://objects/Decorations/stelle_reef.tscn" id="37_hdi12"]
 [ext_resource type="PackedScene" uid="uid://cj5ta23ek4ni3" path="res://objects/Decorations/stelle_forest.tscn" id="38_tmcct"]
 [ext_resource type="PackedScene" uid="uid://c41gmmgob4ekp" path="res://objects/Decorations/gravestone.tscn" id="39_5peg8"]
+[ext_resource type="PackedScene" uid="uid://1d26kh3wjujg" path="res://objects/Decorations/mushroom_brown.tscn" id="40_dtora"]
 [ext_resource type="Script" uid="uid://3np1s1wdnp18" path="res://scenes/UI/main_menu.gd" id="41_3kdtu"]
 [ext_resource type="PackedScene" uid="uid://ctpiisch41ih6" path="res://scenes/UI/MainTitle.tscn" id="42_i5j4e"]
 [ext_resource type="PackedScene" uid="uid://5wsxsmap8wpb" path="res://objects/Decorations/twin_trees.tscn" id="43_wk2p0"]
@@ -111,6 +112,7 @@ visible = false
 light_color = Color(1, 0.938811, 0.584199, 1)
 light_energy = -0.9
 light_cull_mask = 4294967291
+shadow_enabled = true
 shadow_bias = 0.0
 
 [node name="Moon" type="Node3D" parent="WorldEnvironment/Sun&Moon"]
@@ -127,6 +129,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 
 light_color = Color(0.716018, 0.603813, 1, 1)
 light_energy = 0.105
 light_cull_mask = 4294967291
+shadow_enabled = true
 
 [node name="AmbientLights" type="Node3D" parent="WorldEnvironment"]
 
@@ -355,8 +358,37 @@ transform = Transform3D(0.174415, -0.0276247, 0.0938943, 0.0312869, 0.197538, 0,
 [node name="stelle_forest" parent="Decorations/Stelles" instance=ExtResource("38_tmcct")]
 transform = Transform3D(-8.47516e-09, 2.14455e-09, 0.2, 0.0490615, 0.193889, 0, -0.193889, 0.0490615, -8.74228e-09, 3.3185, 2.48902, 19.1005)
 
+[node name="Mountain_top" type="Node3D" parent="Decorations"]
+
+[node name="oak3" parent="Decorations/Mountain_top" instance=ExtResource("30_crdwr")]
+transform = Transform3D(0.155275, 0, 0.126054, 0.0179397, 0.197964, -0.0220985, -0.124771, 0.0284636, 0.153695, -18.9334, 14.073, -1.31658)
+
+[node name="oak4" parent="Decorations/Mountain_top" instance=ExtResource("30_crdwr")]
+transform = Transform3D(-0.0223999, -0.0115713, 0.158001, 0.0247144, 0.157364, 0.0150284, -0.156485, 0.0265096, -0.0202434, -16.6567, 14.0052, -0.801868)
+
+[node name="oak5" parent="Decorations/Mountain_top" instance=ExtResource("30_crdwr")]
+transform = Transform3D(0.129355, 0.00460223, 0.0940549, -0.0099308, 0.159585, 0.00584932, -0.0936423, -0.0105667, 0.129304, -10.3828, 13.9913, -5.37449)
+
+[node name="oak6" parent="Decorations/Mountain_top" instance=ExtResource("30_crdwr")]
+transform = Transform3D(0.193185, 0, 0.0517638, 0, 0.2, 0, -0.0517638, 0, 0.193185, -15.0821, 13.9696, -4.08977)
+
+[node name="pine" parent="Decorations/Mountain_top" instance=ExtResource("33_ilbrp")]
+transform = Transform3D(0.298508, 0.0298845, 0, -0.029842, 0.298083, -0.0159936, -0.0015932, 0.015914, 0.299573, -4.37264, 8.47564, -9.48788)
+
+[node name="pine2" parent="Decorations/Mountain_top" instance=ExtResource("33_ilbrp")]
+transform = Transform3D(0.181891, -0.00583964, 0.171411, -0.000841525, 0.249822, 0.00940392, -0.171508, -0.00741892, 0.181741, -4.23747, 8.29627, -13.7453)
+
+[node name="pine3" parent="Decorations/Mountain_top" instance=ExtResource("33_ilbrp")]
+transform = Transform3D(0.159054, 0.0185614, 0.150856, -0.0179702, 0.219118, -0.00801372, -0.150927, -0.00652865, 0.159932, -2.80567, 8.29627, -12.1289)
+
+[node name="mushroom_brown" parent="Decorations/Mountain_top" instance=ExtResource("40_dtora")]
+transform = Transform3D(0.430198, -0.0496244, 0.249935, 0, 0.490427, 0.097374, -0.254814, -0.0837801, 0.421961, -6.06514, 8.30185, -9)
+
+[node name="mushroom_brown2" parent="Decorations/Mountain_top" instance=ExtResource("40_dtora")]
+transform = Transform3D(0.206678, 0.0342271, -0.28038, 0.0124418, 0.345981, 0.0514066, 0.282187, -0.0403229, 0.203088, -5.5615, 8.30185, -10.032)
+
 [node name="gravestone" parent="." instance=ExtResource("39_5peg8")]
-transform = Transform3D(-0.117269, 0.023493, -0.381702, 0, 0.399245, 0.0245727, 0.382424, 0.00720404, -0.117048, -4.00227, 8.28927, -11.4264)
+transform = Transform3D(-0.117269, 0.023493, -0.381702, 0, 0.399245, 0.0245727, 0.382424, 0.00720404, -0.117048, -4.20138, 8.28927, -11.4264)
 
 [node name="Lights" type="Node3D" parent="."]
 

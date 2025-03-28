@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://boabxq7056y1e"]
+
+[ext_resource type="Script" uid="uid://ll7llvfg2is" path="res://scenes/UI/MiniGame/minigame_round_follow.gd" id="1_6ie43"]
+[ext_resource type="Resource" uid="uid://dcpvdafn7juyp" path="res://scripts/Resources/Catchables/Insects/Butterfly.tres" id="2_84vlv"]
+[ext_resource type="Texture2D" uid="uid://b5fi7vkkdvuoc" path="res://sprites/UI/Minigame/round_container.png" id="2_hp8q3"]
+[ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="3_84vlv"]
+[ext_resource type="Texture2D" uid="uid://dv6mohrvqtin0" path="res://sprites/fishing_game_bar.png" id="4_1upyj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kb23d"]
+radius = 17.2627
+
+[node name="MinigameRoundFollow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6ie43")
+catchable = ExtResource("2_84vlv")
+
+[node name="CursorContainer" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.509804)
+position = Vector2(947, 518)
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("2_hp8q3")
+
+[node name="Center" type="Node2D" parent="."]
+
+[node name="Cursor" type="Area2D" parent="Center"]
+position = Vector2(947, 518)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Sprite" type="Sprite2D" parent="Center/Cursor"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_84vlv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Center/Cursor"]
+shape = SubResource("CircleShape2D_kb23d")
+
+[node name="Cooldown" type="Timer" parent="."]
+autostart = true
+
+[node name="TimebarNode" type="Node2D" parent="."]
+
+[node name="BackgroundTimebar" type="Sprite2D" parent="TimebarNode"]
+modulate = Color(0, 0, 0, 0.509804)
+scale = Vector2(16, 1)
+texture = ExtResource("4_1upyj")
+region_enabled = true
+region_rect = Rect2(20, 10, 30, 20)
+
+[node name="Timebar" type="Sprite2D" parent="TimebarNode"]
+texture = ExtResource("4_1upyj")
+region_enabled = true
+region_rect = Rect2(20, 10, 30, 20)
+
+[node name="Timer" type="Timer" parent="TimebarNode"]
+
+[connection signal="area_entered" from="Center/Cursor" to="." method="_on_cursor_area_entered"]
+[connection signal="area_exited" from="Center/Cursor" to="." method="_on_cursor_area_exited"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_timer_timeout"]

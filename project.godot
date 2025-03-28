@@ -244,7 +244,11 @@ jolt_3d/continuous_cd/max_penetration=10.0
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=3
 shading/overrides/force_lambert_over_burley=true
+anti_aliasing/quality/msaa_2d=1
+anti_aliasing/quality/msaa_3d=1
 anti_aliasing/screen_space_roughness_limiter/enabled=false
 occlusion_culling/use_occlusion_culling=true
 mesh_lod/lod_change/threshold_pixels=3.0

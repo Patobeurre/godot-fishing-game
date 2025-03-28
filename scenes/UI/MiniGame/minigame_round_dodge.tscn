@@ -8,7 +8,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_kb23d"]
 radius = 17.2627
 
-[node name="MinigameRoundMovingCursor" type="Control"]
+[node name="MinigameRoundDodge" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
